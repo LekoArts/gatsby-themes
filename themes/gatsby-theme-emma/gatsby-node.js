@@ -1,7 +1,7 @@
-const fs = require('fs')
-const kebabCase = require('lodash.kebabcase')
+const fs = require(`fs`)
+const kebabCase = require(`lodash.kebabcase`)
 
-const projectsPath = 'projects'
+const projectsPath = `projects`
 
 exports.onPreBootstrap = ({ reporter }) => {
   if (!fs.existsSync(projectsPath)) {
@@ -27,34 +27,34 @@ exports.sourceNodes = ({ actions }) => {
 }
 
 exports.createResolvers = ({ createResolvers }) => {
-  const basePath = '/'
+  const basePath = `/`
 
   const slugify = str => {
     const slug = kebabCase(str)
 
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, '/')
+    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
   }
 
   createResolvers({
     Project: {
       slug: {
-        resolve: source => slugify(source.title)
-      }
-    }
+        resolve: source => slugify(source.title),
+      },
+    },
   })
 }
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
   const { createNode, createParentChildLink } = actions
 
-  if (node.internal.type !== 'Mdx') {
+  if (node.internal.type !== `Mdx`) {
     return
   }
 
   const fileNode = getNode(node.parent)
   const source = fileNode.sourceInstanceName
 
-  if (node.internal.type === 'Mdx' && source === projectsPath) {
+  if (node.internal.type === `Mdx` && source === projectsPath) {
     const fieldData = {
       title: node.frontmatter.title,
       client: node.frontmatter.client,
@@ -70,11 +70,11 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       parent: node.id,
       children: [],
       internal: {
-        type: 'Project',
+        type: `Project`,
         contentDigest: createContentDigest(fieldData),
         content: JSON.stringify(fieldData),
-        description: 'Projects'
-      }
+        description: `Projects`,
+      },
     })
 
     createParentChildLink({ parent: fileNode, child: node })
@@ -82,17 +82,17 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 }
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const basePath = '/'
+  const basePath = `/`
   const { createPage } = actions
 
   createPage({
     path: basePath,
-    component: require.resolve('./src/templates/projects.tsx')
+    component: require.resolve(`./src/templates/projects.tsx`),
   })
 
   const result = await graphql(`
     query {
-      allProject(sort: {fields: date, order: DESC}) {
+      allProject(sort: { fields: date, order: DESC }) {
         nodes {
           slug
         }
@@ -101,7 +101,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   `)
 
   if (result.errors) {
-    reporter.panic('There was an error loading your projects', result.errors)
+    reporter.panic(`There was an error loading your projects`, result.errors)
     return
   }
 
@@ -110,10 +110,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   projects.forEach(project => {
     createPage({
       path: project.slug,
-      component: require.resolve('./src/templates/project.tsx'),
+      component: require.resolve(`./src/templates/project.tsx`),
       context: {
         slug: project.slug,
-      }
+      },
     })
   })
 }
