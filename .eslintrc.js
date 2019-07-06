@@ -20,9 +20,6 @@ module.exports = {
     jest: true,
     node: true,
   },
-  globals: {
-    cy: true,
-  },
   rules: {
     "no-unused-vars": [
       1,
