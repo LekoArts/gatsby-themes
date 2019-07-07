@@ -1,9 +1,9 @@
 const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
 
-const projectsPath = `projects`
+exports.onPreBootstrap = ({ reporter }, themeOptions) => {
+  const projectsPath = themeOptions.projectsPath || `projects`
 
-exports.onPreBootstrap = ({ reporter }) => {
   if (!fs.existsSync(projectsPath)) {
     reporter.info(`creating the "${projectsPath}" directory`)
     fs.mkdirSync(projectsPath)
@@ -26,8 +26,8 @@ exports.sourceNodes = ({ actions }) => {
   `)
 }
 
-exports.createResolvers = ({ createResolvers }) => {
-  const basePath = `/`
+exports.createResolvers = ({ createResolvers }, themeOptions) => {
+  const basePath = themeOptions.basePath || `/`
 
   const slugify = str => {
     const slug = kebabCase(str)
@@ -44,8 +44,10 @@ exports.createResolvers = ({ createResolvers }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
+exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
+
+  const projectsPath = themeOptions.projectsPath || `projects`
 
   if (node.internal.type !== `Mdx`) {
     return
@@ -81,8 +83,15 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   }
 }
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
+exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
+
+  const basePath = themeOptions.basePath || `/`
+
+  createPage({
+    path: basePath,
+    component: require.resolve(`./src/templates/index.tsx`),
+  })
 
   const result = await graphql(`
     query {
