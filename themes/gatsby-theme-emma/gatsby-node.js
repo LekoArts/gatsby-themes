@@ -82,13 +82,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 }
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const basePath = `/`
   const { createPage } = actions
-
-  createPage({
-    path: basePath,
-    component: require.resolve(`./src/templates/projects.tsx`),
-  })
 
   const result = await graphql(`
     query {

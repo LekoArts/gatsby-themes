@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "gatsby-themes",
+  "name": "@lekoarts/gatsby-themes",
   "description": "My open-source collection of Gatsby themes",
   "author": "LekoArts <hello@lekoarts.de>",
   "workspaces": [
@@ -8,7 +8,7 @@
     "examples/*"
   ],
   "scripts": {
-    "dev:emma": "yarn workspace gatsby-theme-emma develop",
+    "dev:emma": "yarn workspace @lekoarts/gatsby-theme-emma develop",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
     "format": "prettier \"{examples,themes}/**/*.md\" --write"
