@@ -8,7 +8,7 @@
     "examples/*"
   ],
   "scripts": {
-    "dev:emma": "yarn workspace @lekoarts/gatsby-theme-emma develop",
+    "dev:emma": "yarn workspace emma develop",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
     "format": "prettier \"{examples,themes}/**/*.md\" --write"
