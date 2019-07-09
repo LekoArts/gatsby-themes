@@ -9,6 +9,11 @@ export default {
   },
   styles: {
     ...tailwind.styles,
+    root: {
+      ...tailwind.styles.root,
+      color: `text`,
+      backgroundColor: `background`,
+    },
     Footer: {
       textAlign: `center`,
       display: `block`,

@@ -1,3 +1,3 @@
-# gatsby-theme-emma
+# @lekoarts/gatsby-theme-emma
 
 WIP

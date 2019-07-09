@@ -4,13 +4,14 @@ import Layout from "../components/layout"
 
 const Projects = () => (
   <Layout>
-    <Styled.p
+    <Styled.h1
       css={css({
         color: `primary`,
       })}
     >
-      <Styled.h1>TODO build the projects page</Styled.h1>
-    </Styled.p>
+      TODO build the projects page
+    </Styled.h1>
+    <p>this is a test</p>
   </Layout>
 )
 
