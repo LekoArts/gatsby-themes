@@ -10,20 +10,53 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   }
 }
 
-exports.sourceNodes = ({ actions }) => {
+const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+  const type = info.schema.getType(`Mdx`)
+  const mdxNode = context.nodeModel.getNodeById({
+    id: source.parent,
+  })
+  const resolver = type.getFields()[fieldName].resolve
+  const result = await resolver(mdxNode, args, context, {
+    fieldName,
+  })
+  return result
+}
+
+exports.sourceNodes = ({ actions, schema }) => {
   const { createTypes } = actions
 
-  createTypes(`
-    type Project implements Node @dontInfer {
-      slug: String!
-      title: String!
-      client: String!
-      service: String!
-      color: String!
-      date: Date! @dateformat
-      cover: File! @fileByRelativePath
-    }
-  `)
+  createTypes(
+    schema.buildObjectType({
+      name: `Project`,
+      fields: {
+        slug: { type: `String!` },
+        title: { type: `String!` },
+        client: { type: `String!` },
+        service: { type: `String!` },
+        color: { type: `String!` },
+        date: { type: `Date!`, extensions: { dateformat: {} } },
+        cover: { type: `File!`, extensions: { fileByRelativePath: {} } },
+        excerpt: {
+          type: `String!`,
+          args: {
+            pruneLength: {
+              type: `Int`,
+              defaultValue: 140,
+            },
+          },
+          resolve: mdxResolverPassthrough(`excerpt`),
+        },
+        body: {
+          type: `String!`,
+          resolve: mdxResolverPassthrough(`body`),
+        },
+      },
+      interfaces: [`Node`],
+      extensions: {
+        infer: false,
+      },
+    })
+  )
 }
 
 exports.createResolvers = ({ createResolvers }, themeOptions) => {
