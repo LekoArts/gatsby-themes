@@ -1,10 +1,17 @@
-module.exports = ({ projectsPath = `projects`, basePath = `/` }) => ({
+module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/pages`, basePath = `/` }) => ({
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
+        name: projectsPath,
         path: projectsPath,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: pagesPath,
+        path: pagesPath,
       },
     },
     `gatsby-plugin-mdx`,

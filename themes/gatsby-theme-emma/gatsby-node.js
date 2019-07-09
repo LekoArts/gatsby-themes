@@ -1,13 +1,26 @@
 const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
+const mkdirp = require(`mkdirp`)
+const path = require(`path`)
 
-exports.onPreBootstrap = ({ reporter }, themeOptions) => {
-  const projectsPath = themeOptions.projectsPath || `projects`
+const standardProjectsPath = `content/projects`
+const standardPagesPath = `content/pages`
+const standardBasePath = `/`
 
-  if (!fs.existsSync(projectsPath)) {
-    reporter.info(`creating the "${projectsPath}" directory`)
-    fs.mkdirSync(projectsPath)
-  }
+exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
+  const { program } = store.getState()
+
+  const projectsPath = themeOptions.projectsPath || standardProjectsPath
+  const pagesPath = themeOptions.pagesPath || standardPagesPath
+
+  const dirs = [path.join(program.directory, projectsPath), path.join(program.directory, pagesPath)]
+
+  dirs.forEach(dir => {
+    if (!fs.existsSync(dir)) {
+      reporter.info(`Creating the "${dir}" directory`)
+      mkdirp.sync(dir)
+    }
+  })
 }
 
 const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
@@ -25,7 +38,7 @@ const mdxResolverPassthrough = fieldName => async (source, args, context, info) 
 exports.sourceNodes = ({ actions, schema }) => {
   const { createTypes } = actions
 
-  createTypes(
+  const typeDefs = [
     schema.buildObjectType({
       name: `Project`,
       fields: {
@@ -55,12 +68,40 @@ exports.sourceNodes = ({ actions, schema }) => {
       extensions: {
         infer: false,
       },
-    })
-  )
+    }),
+    schema.buildObjectType({
+      name: `Page`,
+      fields: {
+        slug: { type: `String!` },
+        title: { type: `String!` },
+        cover: { type: `File!`, extensions: { fileByRelativePath: {} } },
+        excerpt: {
+          type: `String!`,
+          args: {
+            pruneLength: {
+              type: `Int`,
+              defaultValue: 140,
+            },
+          },
+          resolve: mdxResolverPassthrough(`excerpt`),
+        },
+        body: {
+          type: `String!`,
+          resolve: mdxResolverPassthrough(`body`),
+        },
+      },
+      interfaces: [`Node`],
+      extensions: {
+        infer: false,
+      },
+    }),
+  ]
+
+  createTypes(typeDefs)
 }
 
 exports.createResolvers = ({ createResolvers }, themeOptions) => {
-  const basePath = themeOptions.basePath || `/`
+  const basePath = themeOptions.basePath || standardBasePath
 
   const slugify = str => {
     const slug = kebabCase(str)
@@ -80,7 +121,8 @@ exports.createResolvers = ({ createResolvers }, themeOptions) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
-  const projectsPath = themeOptions.projectsPath || `projects`
+  const projectsPath = themeOptions.projectsPath || standardProjectsPath
+  const pagesPath = themeOptions.pagesPath || standardPagesPath
 
   if (node.internal.type !== `Mdx`) {
     return
@@ -89,6 +131,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   const fileNode = getNode(node.parent)
   const source = fileNode.sourceInstanceName
 
+  // Check for "projects" and create the "Project" type
   if (node.internal.type === `Mdx` && source === projectsPath) {
     const fieldData = {
       title: node.frontmatter.title,
@@ -114,12 +157,36 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
     createParentChildLink({ parent: fileNode, child: node })
   }
+
+  // Check for "pages" and create the "Page" type
+  if (node.internal.type === `Mdx` && source === pagesPath) {
+    const fieldData = {
+      title: node.frontmatter.title,
+      slug: node.frontmatter.slug,
+      cover: node.frontmatter.cover,
+    }
+
+    createNode({
+      ...fieldData,
+      id: createNodeId(`${node.id} >>> Page`),
+      parent: node.id,
+      children: [],
+      internal: {
+        type: `Page`,
+        contentDigest: createContentDigest(fieldData),
+        content: JSON.stringify(fieldData),
+        description: `Pages`,
+      },
+    })
+
+    createParentChildLink({ parent: fileNode, child: node })
+  }
 }
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const basePath = themeOptions.basePath || `/`
+  const basePath = themeOptions.basePath || standardBasePath
 
   createPage({
     path: basePath,

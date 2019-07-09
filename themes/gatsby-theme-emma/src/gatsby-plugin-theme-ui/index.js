@@ -7,4 +7,16 @@ export default {
     primary: tailwind.colors.pink[6],
     secondary: tailwind.colors.indigo[6],
   },
+  styles: {
+    ...tailwind.styles,
+    Footer: {
+      textAlign: `center`,
+      display: `block`,
+      color: `textMuted`,
+      paddingLeft: 3,
+      paddingRight: 3,
+      paddingTop: 4,
+      paddingBottom: 4,
+    },
+  },
 }
