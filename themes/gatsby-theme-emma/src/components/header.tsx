@@ -21,16 +21,18 @@ const Header = ({ meta, nav }: MetaType) => {
     setColorMode(isDark ? `light` : `dark`)
   }
 
+  const navEmpty = nav.length > 0
+
   return (
     <ThemeHeader>
-      <Navigation nav={nav} />
+      {navEmpty && <Navigation nav={nav} />}
       <div
         css={css({
           fontWeight: `bold`,
           fontSize: 4,
           display: `flex`,
-          flex: [`1 0 100%`, 1],
-          justifyContent: `center`,
+          flex: navEmpty ? [`1 0 100%`, 1] : 1,
+          justifyContent: navEmpty ? `center` : `flex-start`,
           order: [1, 2],
         })}
       >

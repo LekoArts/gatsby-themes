@@ -200,6 +200,11 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           slug
         }
       }
+      allPage {
+        nodes {
+          slug
+        }
+      }
     }
   `)
 
@@ -219,4 +224,18 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       },
     })
   })
+
+  const pages = result.data.allPage.nodes
+
+  if (pages.length > 0) {
+    pages.forEach(page => {
+      createPage({
+        path: page.slug,
+        component: require.resolve(`./src/templates/page.tsx`),
+        context: {
+          slug: page.slug,
+        },
+      })
+    })
+  }
 }
