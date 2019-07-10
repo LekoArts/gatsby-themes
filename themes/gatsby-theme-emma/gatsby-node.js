@@ -72,11 +72,11 @@ exports.sourceNodes = ({ actions, schema }) => {
     schema.buildObjectType({
       name: `Page`,
       fields: {
-        slug: { type: `String!` },
-        title: { type: `String!` },
-        cover: { type: `File!`, extensions: { fileByRelativePath: {} } },
+        slug: { type: `String` },
+        title: { type: `String` },
+        cover: { type: `File`, extensions: { fileByRelativePath: {} } },
         excerpt: {
-          type: `String!`,
+          type: `String`,
           args: {
             pruneLength: {
               type: `Int`,
@@ -86,7 +86,7 @@ exports.sourceNodes = ({ actions, schema }) => {
           resolve: mdxResolverPassthrough(`excerpt`),
         },
         body: {
-          type: `String!`,
+          type: `String`,
           resolve: mdxResolverPassthrough(`body`),
         },
       },
