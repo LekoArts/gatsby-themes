@@ -1,5 +1,6 @@
 import React from "react"
+import Layout from "../components/layout"
 
-const ProjectTemplate = () => <p>TODO build the page page</p>
+const ProjectTemplate = () => <Layout>TODO build the page page</Layout>
 
 export default ProjectTemplate

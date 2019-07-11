@@ -6,9 +6,9 @@ import useNavigation from "../hooks/use-navigation"
 import Footer from "./footer"
 import Header from "./header"
 
-type LayoutProps = { children: React.ReactNode }
+type LayoutProps = { children: React.ReactNode; className?: string }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, className }: LayoutProps) => {
   const meta = useSiteMetadata()
   const nav = useNavigation()
 
@@ -35,7 +35,7 @@ const Layout = ({ children }: LayoutProps) => {
         })}
       />
       <Header meta={meta} nav={nav} />
-      <Main>{children}</Main>
+      <Main className={className}>{children}</Main>
       <Footer />
     </Styled.root>
   )

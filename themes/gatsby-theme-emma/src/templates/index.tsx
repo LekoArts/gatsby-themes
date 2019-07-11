@@ -1,18 +1,68 @@
-import { css, Styled } from "theme-ui"
 import React from "react"
+import { css } from "theme-ui"
+import { useTrail } from "react-spring"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import { ChildImageSharp } from "../types"
+import ProjectItem from "../components/project-item"
 
-const Projects = () => (
-  <Layout>
-    <Styled.h1
+type Props = {
+  data: {
+    allProject: {
+      nodes: {
+        color: string
+        slug: string
+        service: string
+        client: string
+        cover: ChildImageSharp
+      }[]
+    }
+  }
+}
+
+const Projects = ({
+  data: {
+    allProject: { nodes },
+  },
+}: Props) => {
+  const trail = useTrail(nodes.length, {
+    from: { height: `0%` },
+    to: { height: `100%` },
+  })
+
+  return (
+    <Layout
       css={css({
-        color: `primary`,
+        display: `grid`,
+        gridTemplateColumns: `repeat(auto-fit, minmax(280px, 1fr))`,
+        width: `100%`,
       })}
     >
-      TODO build the projects page
-    </Styled.h1>
-    <p>this is a test</p>
-  </Layout>
-)
+      {trail.map((style, index) => (
+        <ProjectItem style={style} node={nodes[index]} key={nodes[index].slug} />
+      ))}
+    </Layout>
+  )
+}
 
 export default Projects
+
+export const pageQuery = graphql`
+  query {
+    allProject {
+      nodes {
+        color
+        slug
+        service
+        client
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 850, quality: 90, traceSVG: { color: "#f3f3f3" }) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`

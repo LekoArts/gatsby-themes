@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react"
-import { Header as ThemeHeader, css, jsx, useColorMode } from "theme-ui"
+import { Header as ThemeHeader, css, jsx, useColorMode, Styled } from "theme-ui"
+import { Link } from "gatsby"
 import Navigation from "./navigation"
 import SocialLinks from "./social-links"
 
@@ -36,7 +37,14 @@ const Header = ({ meta, nav }: MetaType) => {
           order: [1, 2],
         })}
       >
-        {meta.siteTitle}
+        <Styled.a
+          aria-label={`${meta.siteTitle}, Back to homepage`}
+          as={Link}
+          css={css({ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } })}
+          to="/"
+        >
+          {meta.siteTitle}
+        </Styled.a>
       </div>
       <div
         css={css({
