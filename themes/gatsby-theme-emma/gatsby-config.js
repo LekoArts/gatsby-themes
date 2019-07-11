@@ -24,10 +24,26 @@ module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/page
         path: pagesPath,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 820,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
   ],
