@@ -6,12 +6,12 @@ export default {
   useCustomProperties: true,
   colors: {
     ...tailwind.colors,
-    primary: tailwind.colors.pink[6],
+    primary: tailwind.colors.pink[7],
     secondary: tailwind.colors.indigo[6],
     modes: {
       dark: {
         text: tailwind.colors.white,
-        primary: tailwind.colors.pink[5],
+        primary: tailwind.colors.pink[4],
         background: tailwind.colors.gray[8],
         textMuted: tailwind.colors.gray[5],
       },
