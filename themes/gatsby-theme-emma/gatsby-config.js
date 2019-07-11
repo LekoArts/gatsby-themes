@@ -5,6 +5,7 @@ module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/page
     siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
     siteUrl: `https://emma.lekoarts.de`,
     siteDescription: `Minimalistic bright portfolio with full-width grid and large images`,
+    siteLanguage: `en`,
     basePath,
     projectsPath,
     pagesPath,
