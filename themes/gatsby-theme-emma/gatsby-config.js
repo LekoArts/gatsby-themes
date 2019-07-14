@@ -6,6 +6,8 @@ module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/page
     siteUrl: `https://emma.lekoarts.de`,
     siteDescription: `Minimalistic bright portfolio with full-width grid and large images`,
     siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@lekoarts_de`,
     basePath,
     projectsPath,
     pagesPath,

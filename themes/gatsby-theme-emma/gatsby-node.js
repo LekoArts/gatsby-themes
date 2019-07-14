@@ -54,7 +54,7 @@ exports.sourceNodes = ({ actions, schema }) => {
           args: {
             pruneLength: {
               type: `Int`,
-              defaultValue: 140,
+              defaultValue: 160,
             },
           },
           resolve: mdxResolverPassthrough(`excerpt`),
@@ -80,7 +80,7 @@ exports.sourceNodes = ({ actions, schema }) => {
           args: {
             pruneLength: {
               type: `Int`,
-              defaultValue: 140,
+              defaultValue: 160,
             },
           },
           resolve: mdxResolverPassthrough(`excerpt`),

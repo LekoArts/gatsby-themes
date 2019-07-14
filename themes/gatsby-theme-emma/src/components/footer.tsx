@@ -1,18 +1,19 @@
 import React from "react"
-import { Footer as ThemeFooter, Styled } from "theme-ui"
+import { Footer as ThemeFooter, Styled, Flex, css } from "theme-ui"
 
 const Footer = () => (
   <ThemeFooter>
-    Copyright &copy; 2019. All right reserved. Pictures by Unsplash.{` `}
-    <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma">
-      Theme Source on GitHub
-    </Styled.a>
-    {` `}
-    {` by `}
-    {` `}
-    <Styled.a href="https://www.lekoarts.de/en">LekoArts</Styled.a>.
-    <br />
-    <Styled.a href="https://github.com/LekoArts/gatsby-starter-portfolio-emma">Starter Example</Styled.a>
+    Copyright &copy; {new Date().getFullYear()}. All rights reserved. <br />
+    <Flex css={css({ justifyContent: `center`, alignItems: `center`, mt: 3 })}>
+      <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
+      {` `}
+      <Styled.a
+        css={css({ color: `text`, fontWeight: `semibold`, ml: 2 })}
+        href="https://github.com/LekoArts/gatsby-themes"
+      >
+        Theme by LekoArts
+      </Styled.a>
+    </Flex>
   </ThemeFooter>
 )
 

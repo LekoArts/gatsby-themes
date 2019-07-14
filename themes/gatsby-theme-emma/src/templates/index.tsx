@@ -49,7 +49,7 @@ export default Projects
 
 export const pageQuery = graphql`
   query {
-    allProject {
+    allProject(sort: { fields: date, order: DESC }) {
       nodes {
         color
         slug

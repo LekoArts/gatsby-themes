@@ -57,7 +57,7 @@ const Header = ({ meta, nav }: MetaType) => {
               color: `primary`,
             },
             "&:not(:first-of-type)": {
-              marginLeft: 2,
+              ml: 2,
             },
           },
           justifyContent: `flex-end`,

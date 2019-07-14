@@ -46,6 +46,7 @@ module.exports = {
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-non-null-assertion": 0,
     "no-console": 0,
     "spaced-comment": 0,
     "no-use-before-define": 0,

@@ -10,5 +10,8 @@ export type ChildImageSharp = {
       srcWebp: string
       srcSetWebp: string
     }
+    resize?: {
+      src: string
+    }
   }
 }
