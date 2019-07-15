@@ -9,7 +9,7 @@ const Footer = () => (
       {` `}
       <Styled.a
         css={css({ color: `text`, fontWeight: `semibold`, ml: 2 })}
-        href="https://github.com/LekoArts/gatsby-themes"
+        href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma"
       >
         Theme by LekoArts
       </Styled.a>

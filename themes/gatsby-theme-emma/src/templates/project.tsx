@@ -70,6 +70,12 @@ const ProjectTemplate = ({ data: { project } }: Props) => {
         description={project.excerpt}
         pathname={project.slug}
         image={project.cover.childImageSharp.resize!.src}
+        meta={[
+          { name: `twitter:label1`, value: `Client` },
+          { name: `twitter:label2`, value: `Date` },
+          { name: `twitter:data1`, value: project.client },
+          { name: `twitter:data2`, value: project.date },
+        ]}
       />
       <Hero image={project.cover.childImageSharp.fluid} color={project.color}>
         <Flex
@@ -90,9 +96,9 @@ const ProjectTemplate = ({ data: { project } }: Props) => {
           </animated.div>
           <animated.div style={infoProps}>
             <Flex css={css({ mt: 4, mb: [2, 4], flexWrap: `wrap` })}>
-              {[`Client`, `Date`, `Service`].map(i => (
-                <Item key={i} name={i} content={project.client} />
-              ))}
+              <Item name="Client" content={project.client} />
+              <Item name="Date" content={project.date} />
+              <Item name="Service" content={project.service} />
             </Flex>
           </animated.div>
         </Flex>
