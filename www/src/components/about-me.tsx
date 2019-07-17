@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { Container, jsx, Styled, Box, Flex } from "theme-ui"
+import { TwitterShareButton } from "react-share"
 import { Circle, Donut } from "./shapes"
 import { down, upWide } from "../styles/animations"
 import Logo from "../icons/logo"
@@ -116,14 +117,20 @@ const AboutMe = () => (
             mt: 4,
             flexWrap: `wrap`,
             a: { mt: 3, textAlign: `center` },
+            div: { mt: 3 },
             flexDirection: [`column`, `row`],
           }}
         >
-          <a href="https://www.test.de" sx={{ variant: `buttons.outline` }}>
+          <TwitterShareButton
+            url="https://themes.lekoarts.de"
+            via="lekoarts_de"
+            title="Checkout these awesome free & open source @gatsbyjs themes!"
+            sx={{ variant: `buttons.outline` }}
+          >
             Share on Twitter
-          </a>
+          </TwitterShareButton>
           {` `}
-          <a href="https://www.test.de" sx={{ variant: `buttons.outline` }}>
+          <a href="#" sx={{ variant: `buttons.outline` }}>
             Newsletter Signup
           </a>
           {` `}
