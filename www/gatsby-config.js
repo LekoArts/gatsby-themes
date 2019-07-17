@@ -60,6 +60,6 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-webpack-bundle-analyser-v2`,
+    // `gatsby-plugin-webpack-bundle-analyser-v2`,
   ],
 }

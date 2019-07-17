@@ -40,6 +40,16 @@ module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/page
             },
           },
         ],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 820,
+              quality: 90,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
       },
     },
     `gatsby-plugin-react-helmet`,
