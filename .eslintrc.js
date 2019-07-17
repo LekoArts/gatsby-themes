@@ -21,10 +21,10 @@ module.exports = {
     node: true,
   },
   rules: {
-    "no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       1,
       {
-        argsIgnorePattern: "res|next|stage|^err|on|config"
+        argsIgnorePattern: "res|next|stage|^err|on|config|e"
       }
     ],
     "arrow-body-style": [2, "as-needed"],

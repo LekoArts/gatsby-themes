@@ -7,7 +7,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { ChildImageSharp } from "../types"
 import Hero from "../components/hero"
-import "./project.css"
 
 type Props = {
   data: {
