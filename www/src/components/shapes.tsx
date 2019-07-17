@@ -3,11 +3,11 @@ import React from "react"
 import { jsx } from "theme-ui"
 
 type CircleProps = {
-  size: string
+  size: string | string[]
   color: string
-  top: string
-  left?: string
-  right?: string
+  top: string | string[]
+  left?: string | string[]
+  right?: string | string[]
   className?: string
 }
 
@@ -29,12 +29,12 @@ const Circle = ({ size, color, top, left, right, className }: CircleProps) => (
 )
 
 type DonutProps = {
-  size: string
+  size: string | string[]
   color: string
-  width: string
-  top: string
-  left?: string
-  right?: string
+  width: string | string[]
+  top: string | string[]
+  left?: string | string[]
+  right?: string | string[]
   className?: string
 }
 

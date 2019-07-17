@@ -27,6 +27,7 @@ const Layout = ({ children, className }: LayoutProps) => (
           fontFamily: `body`,
           lineHeight: `body`,
           fontWeight: `body`,
+          overflowX: `hidden`,
         },
         "::selection": {
           backgroundColor: `primary`,

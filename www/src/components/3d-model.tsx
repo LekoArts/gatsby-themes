@@ -28,7 +28,15 @@ const RectAreaLightDecl = ({
 )
 
 const ThreeDModel = () => (
-  <div sx={{ width: `550px`, height: `400px`, marginRight: `-2rem`, position: `relative` }}>
+  <div
+    sx={{
+      width: `550px`,
+      height: `400px`,
+      marginRight: `-2rem`,
+      position: `relative`,
+      "&:hover": { cursor: `grab` },
+    }}
+  >
     <Canvas
       orthographic
       camera={{ position: [0, 0, 150], zoom: 3.5 }}

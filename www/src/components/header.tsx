@@ -8,7 +8,7 @@ const Header = () => (
     <Container sx={{ pb: 0 }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <Flex>
-          <Logo hidden={false} sx={{ width: 12, height: 12 }} />
+          <Logo sx={{ width: 12, height: 12 }} />
           <Box
             aria-hidden="true"
             focusable="false"

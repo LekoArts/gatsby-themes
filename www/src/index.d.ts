@@ -1,2 +1,3 @@
 declare module 'theme-ui'
-declare module '*.gltf'
+declare module 'react-responsive'
+declare module '*.svg'

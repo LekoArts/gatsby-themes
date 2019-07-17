@@ -30,6 +30,7 @@ export default {
     body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
     heading: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   },
+  breakpoints: [`600px`, `900px`, `1200px`, `1800px`],
   styles: {
     ...tailwind.styles,
     Footer: {
@@ -89,10 +90,13 @@ export default {
       ...sharedButtonStyles,
       borderRadius: `full`,
       backgroundImage: t => `linear-gradient(45deg, ${t.colors.indigo[6]}, ${t.colors.indigo[4]})`,
-      fontSize: 2,
+      fontSize: [1, 2],
       px: 4,
       py: `0.6rem`,
       boxShadow: t => `0px 10px 15px ${t.colors.indigo[2]}`,
+      "&:hover": {
+        transform: `translateY(-1px)`,
+      },
     },
     secondary: {
       ...sharedButtonStyles,
@@ -126,6 +130,9 @@ export default {
       fontWeight: `medium`,
       px: 4,
       py: `0.7rem`,
+      "&:hover": {
+        transform: `translateY(-1px)`,
+      },
     },
     white: {
       ...sharedButtonStyles,
@@ -136,6 +143,9 @@ export default {
       py: `0.7rem`,
       backgroundColor: `white`,
       color: `primary`,
+      "&:hover": {
+        transform: `translateY(-1px)`,
+      },
     },
   },
   inputs: {
