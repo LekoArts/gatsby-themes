@@ -1,6 +1,6 @@
 import React from "react"
 import { Global } from "@emotion/core"
-import { Main, css, Styled, Footer, Container } from "theme-ui"
+import { Main, css, Styled, Footer } from "theme-ui"
 import "typeface-ibm-plex-sans"
 import SEO from "./seo"
 import Header from "./header"

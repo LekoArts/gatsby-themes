@@ -6,7 +6,7 @@ import Logo from "../icons/logo"
 const Header = () => (
   <ThemeHeader>
     <Container sx={{ pb: 0 }}>
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+      <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexDirection: [`column`, `row`] }}>
         <Flex>
           <a
             aria-label="Link to the theme creator's website"
@@ -25,7 +25,7 @@ const Header = () => (
             <Box sx={{ color: `dark` }}>by LekoArts</Box>
           </Flex>
         </Flex>
-        <a href="https://github.com/LekoArts/gatsby-themes" sx={{ variant: `buttons.secondary` }}>
+        <a href="https://github.com/LekoArts/gatsby-themes" sx={{ variant: `buttons.secondary`, mt: [4, 0] }}>
           GitHub
         </a>
       </Flex>

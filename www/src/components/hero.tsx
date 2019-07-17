@@ -27,9 +27,9 @@ const Hero = () => {
                 Get notified whenever I publish something new
               </Box>
               <Box>
-                <input type="text" sx={{ variant: `inputs.primary` }} placeholder="Enter your email" />
+                <input type="email" sx={{ variant: `inputs.primary`, mr: 2, my: 2, width: `100%`, maxWidth: `350px` }} placeholder="Enter your email" />
                 {` `}
-                <button type="button" sx={{ variant: `buttons.newsletter`, ml: 2 }}>
+                <button type="button" sx={{ variant: `buttons.newsletter` }}>
                   Subscribe
                 </button>
               </Box>
@@ -39,8 +39,14 @@ const Hero = () => {
         </Flex>
       </Container>
       <div data-name="shapes">
-        <Circle size="210px" color="orange" top="170px" left={[`-185px`, `-185px`, `-185px`, `-120px`]} sx={{ display: [`none`, `none`, `none`, `block`] }} />
-        <Circle size="35px" color="blue" top="130px" left="40px" />
+        <Circle
+          size="210px"
+          color="orange"
+          top="170px"
+          left={[`-185px`, `-185px`, `-185px`, `-120px`]}
+          sx={{ display: [`none`, `none`, `none`, `block`] }}
+        />
+        <Circle size="35px" color="blue" top={[`165px`, `130px`]} left={[`-5px`, `40px`]} />
         <Circle size="120px" color="pink" top="620px" right={[`-80px`, `50px`, `90px`]} />
         <Circle
           size="40px"
@@ -49,12 +55,19 @@ const Hero = () => {
           right={[`30px`, `210px`, `250px`]}
           sx={{ animation: `${up} 6s ease-in-out infinite alternate` }}
         />
-        <Donut size="30px" color="green" width="5px" top="465px" left={[`-15px`, `-5px`, `-5px`, `20px`]} sx={{ display: [`none`, `none`, `none`, `block`] }} />
+        <Donut
+          size="30px"
+          color="green"
+          width="5px"
+          top="465px"
+          left={[`-15px`, `-5px`, `-5px`, `20px`]}
+          sx={{ display: [`none`, `none`, `none`, `block`] }}
+        />
         <Donut
           size={[`130px`, `130px`, `230px`]}
           color="purple"
           width={[`20px`, `20px`, `50px`]}
-          top={[`580px`, `668px`]}
+          top={[`700px`, `668px`]}
           left={[`-75px`, `-75px`, `-102px`]}
           sx={{ animation: `${down} 10s ease-in-out infinite alternate` }}
         />
