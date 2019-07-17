@@ -10,9 +10,10 @@
   "scripts": {
     "dev:emma": "yarn workspace emma develop",
     "build:emma": "yarn workspace emma build",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint './themes/**/*' './examples/**/*'",
     "lint:fix": "yarn lint --fix",
-    "format": "prettier \"{examples,themes}/**/*.md\" --write"
+    "format": "prettier \"{examples,themes}/**/*.md\" --write",
+    "format:mdx": "prettier --parser mdx \"{examples,themes}/**/*.mdx\" --write"
   },
   "devDependencies": {
     "@types/node": "^12.0.12",
