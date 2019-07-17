@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, css, keyframes } from "@emotion/core"
+import { keyframes } from "@emotion/core"
 
 export const down = keyframes`
   from {
@@ -28,5 +27,15 @@ export const downWide = keyframes`
 
   to {
     transform: translate3d(0,200px,0);
+  }
+`
+
+export const upWide = keyframes`
+  from {
+    transform: translate3d(0,0,0);
+  }
+
+  to {
+    transform: translate3d(0,-150px,0);
   }
 `

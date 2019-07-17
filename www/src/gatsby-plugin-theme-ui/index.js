@@ -6,6 +6,7 @@ const sharedButtonStyles = {
   cursor: `pointer`,
   fontFamily: `body`,
   fontWeight: `medium`,
+  transition: `all 0.3s ease-in-out`,
 }
 
 const sharedHeadingStyles = {
@@ -31,6 +32,10 @@ export default {
     heading: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   },
   breakpoints: [`600px`, `900px`, `1200px`, `1800px`],
+  radii: {
+    ...tailwind.radii,
+    xl: `1rem`,
+  },
   styles: {
     ...tailwind.styles,
     Footer: {
@@ -127,20 +132,21 @@ export default {
       borderStyle: `solid`,
       borderRadius: `full`,
       fontSize: 1,
-      fontWeight: `medium`,
+      fontWeight: `semibold`,
       px: 4,
       py: `0.7rem`,
       "&:hover": {
-        transform: `translateY(-1px)`,
+        backgroundColor: `white`,
+        color: `primary`,
       },
     },
     white: {
       ...sharedButtonStyles,
       borderRadius: `full`,
       fontSize: 1,
-      fontWeight: `medium`,
+      fontWeight: `semibold`,
       px: 4,
-      py: `0.7rem`,
+      py: `0.75rem`,
       backgroundColor: `white`,
       color: `primary`,
       "&:hover": {
@@ -188,7 +194,10 @@ export default {
       backgroundImage: t => `linear-gradient(225deg, ${t.colors.green[3]}, ${t.colors.green[5]})`,
     },
     indigo: {
-      backgroundImage: t => `linear-gradient(72deg, ${t.colors.indigo[6]}, ${t.colors.indigo[4]})`,
+      backgroundImage: t => `linear-gradient(72deg, ${t.colors.indigo[7]}, ${t.colors.indigo[5]})`,
+    },
+    darkIndigo: {
+      backgroundImage: t => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
     },
   },
 }

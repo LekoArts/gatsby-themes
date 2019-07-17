@@ -8,7 +8,13 @@ const Header = () => (
     <Container sx={{ pb: 0 }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <Flex>
-          <Logo sx={{ width: 12, height: 12 }} />
+          <a
+            aria-label="Link to the theme creator's website"
+            sx={{ color: `text`, "&:hover": { color: `primary` } }}
+            href="http://www.lekoarts.de/en"
+          >
+            <Logo sx={{ width: 12, height: 12 }} />
+          </a>
           <Box
             aria-hidden="true"
             focusable="false"
@@ -19,7 +25,7 @@ const Header = () => (
             <Box sx={{ color: `dark` }}>by LekoArts</Box>
           </Flex>
         </Flex>
-        <a href="https://www.test.de" sx={{ variant: `buttons.secondary` }}>
+        <a href="https://github.com/LekoArts/gatsby-themes" sx={{ variant: `buttons.secondary` }}>
           GitHub
         </a>
       </Flex>

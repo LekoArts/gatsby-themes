@@ -12,11 +12,11 @@ const Hero = () => {
 
   return (
     <React.Fragment>
-      <Container sx={{ my: [5, 6], mb: [6, 7] }}>
+      <Container as="section" data-name="hero" sx={{ my: [5, 6], mb: [6, 7] }}>
         <Flex sx={{ justifyContent: `space-between` }}>
           <Box>
             <Box sx={{ maxWidth: `490px` }}>
-              <Styled.h1>Free & Open-Source Gatsby Themes</Styled.h1>
+              <Styled.h1>Free & Open Source Gatsby Themes</Styled.h1>
               <Styled.p sx={{ color: `dark` }}>
                 Get <span sx={{ fontWeight: `bold` }}>high-quality</span> and{` `}
                 <span sx={{ fontWeight: `bold` }}>customizable</span> Gatsby themes to quickly bootstrap your website
@@ -38,18 +38,18 @@ const Hero = () => {
           {isBigScreen && <ThreeDModel />}
         </Flex>
       </Container>
-      <div data-name="Shapes">
-        <Circle size="210px" color="orange" top="170px" left={[`-185px`, `-185px`, `-185px`, `-120px`]} />
+      <div data-name="shapes">
+        <Circle size="210px" color="orange" top="170px" left={[`-185px`, `-185px`, `-185px`, `-120px`]} sx={{ display: [`none`, `none`, `none`, `block`] }} />
         <Circle size="35px" color="blue" top="130px" left="40px" />
         <Circle size="120px" color="pink" top="620px" right={[`-80px`, `50px`, `90px`]} />
         <Circle
           size="40px"
-          color="purple"
+          color="green"
           top="750px"
           right={[`30px`, `210px`, `250px`]}
           sx={{ animation: `${up} 6s ease-in-out infinite alternate` }}
         />
-        <Donut size="30px" color="green" width="5px" top="465px" left={[`-15px`, `-5px`, `-5px`, `20px`]} />
+        <Donut size="30px" color="green" width="5px" top="465px" left={[`-15px`, `-5px`, `-5px`, `20px`]} sx={{ display: [`none`, `none`, `none`, `block`] }} />
         <Donut
           size={[`130px`, `130px`, `230px`]}
           color="purple"

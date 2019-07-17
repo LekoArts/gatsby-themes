@@ -5,9 +5,9 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteTitle: `Gatsby Themes by LekoArts`,
-    siteTitleAlt: `Free & Open-Source Gatsby Themes by LekoArts`,
+    siteTitleAlt: `Free & Open Source Gatsby Themes by LekoArts`,
     siteUrl: `https://themes.lekoarts.de`,
-    siteDescription: `Get high-quality and customizable Gatsby themes to quickly bootstrap your next site! These professionally created open-source themes let you convert visitors to customers and grow your business.`,
+    siteDescription: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
@@ -37,9 +37,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Free & Open-Source Gatsby Themes by LekoArts`,
+        name: `Free & Open Source Gatsby Themes by LekoArts`,
         short_name: `GatsbyThemes`,
-        description: `Get high-quality and customizable Gatsby themes to quickly bootstrap your next site! These professionally created open-source themes let you convert visitors to customers and grow your business.`,
+        description: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#5A67D8`,

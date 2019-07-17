@@ -27,6 +27,43 @@ type Props = {
   }
 }
 
+const cardStyle = {
+  position: `relative`,
+  borderRadius: `lg`,
+  transition: `all 0.3s ease-in-out`,
+  display: `block`,
+  boxShadow: [`md`, `md`, `lg`],
+  zIndex: 2,
+  "&:hover": {
+    transform: `translateY(-4px)`,
+    boxShadow: [`lg`, `lg`, `xl`],
+    "[data-name='card-overlay']": {
+      opacity: 1,
+    },
+  },
+  ".gatsby-image-wrapper": {
+    borderRadius: `lg`,
+  },
+  "[data-name='card-overlay']": {
+    position: `absolute`,
+    borderRadius: `lg`,
+    top: 0,
+    right: 0,
+    left: 0,
+    bottom: 0,
+    zIndex: 10,
+    backgroundColor: `rgba(90, 103, 216, 0.9)`,
+    color: `white`,
+    fontFamily: `body`,
+    fontSize: 4,
+    display: `flex`,
+    justifyContent: `center`,
+    alignItems: `center`,
+    transition: `all 0.3s ease-in-out`,
+    opacity: 0,
+  },
+}
+
 const Listing = () => {
   const {
     allThemesYaml: { nodes: themes },
@@ -89,43 +126,10 @@ const Listing = () => {
               })}
               <a
                 href={theme.preview}
+                rel="noopener noreferrer"
+                target="_blank"
                 aria-label={`Visit a preview of theme ${theme.title}`}
-                sx={{
-                  position: `relative`,
-                  borderRadius: `lg`,
-                  transition: `all 0.3s ease-in-out`,
-                  display: `block`,
-                  boxShadow: [`md`, `md`, `lg`],
-                  zIndex: 2,
-                  "&:hover": {
-                    transform: `translateY(-4px)`,
-                    boxShadow: [`lg`, `lg`, `xl`],
-                    "[data-name='card-overlay']": {
-                      opacity: 1,
-                    },
-                  },
-                  ".gatsby-image-wrapper": {
-                    borderRadius: `lg`,
-                  },
-                  "[data-name='card-overlay']": {
-                    position: `absolute`,
-                    borderRadius: `lg`,
-                    top: 0,
-                    right: 0,
-                    left: 0,
-                    bottom: 0,
-                    zIndex: 10,
-                    backgroundColor: `rgba(90, 103, 216, 0.9)`,
-                    color: `white`,
-                    fontFamily: `body`,
-                    fontSize: 4,
-                    display: `flex`,
-                    justifyContent: `center`,
-                    alignItems: `center`,
-                    transition: `all 0.3s ease-in-out`,
-                    opacity: 0,
-                  },
-                }}
+                sx={cardStyle}
               >
                 <div data-name="card-overlay" aria-hidden>
                   <div sx={{ display: `flex`, alignItems: `center` }}>
@@ -145,7 +149,14 @@ const Listing = () => {
           </Box>
         )
       })}
-      <p sx={{ mt: 6 }}>More Themes are coming soon ...</p>
+      <p sx={{ mt: 6, fontSize: [1, 2, 2, 3], textAlign: `center` }}>
+        <span sx={{ fontWeight: `bold` }}>More Themes are coming soon ...</span> <br /> In the meantime you can have a
+        look at my already existing{` `}
+        <Styled.a href="https://github.com/LekoArts?utf8=%E2%9C%93&tab=repositories&q=gatsby&type=public&language=">
+          open source Gatsby projects
+        </Styled.a>
+        !
+      </p>
     </Container>
   )
 }

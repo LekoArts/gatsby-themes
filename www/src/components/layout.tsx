@@ -63,7 +63,7 @@ const Layout = ({ children, className }: LayoutProps) => (
         Privacy
       </Styled.a>
       .<br />
-      This website is open-source on{` `}
+      This website is open source on{` `}
       <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/www">GitHub</Styled.a>.
     </Footer>
   </>

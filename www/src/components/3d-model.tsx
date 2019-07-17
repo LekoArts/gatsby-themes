@@ -1,4 +1,6 @@
 /** @jsx jsx */
+/* eslint-disable no-return-assign */
+/* eslint-disable no-sequences */
 import * as THREE from "three"
 import React from "react"
 import { jsx } from "theme-ui"
@@ -27,6 +29,14 @@ const RectAreaLightDecl = ({
   />
 )
 
+const sharedDiskStyles = {
+  position: `absolute`,
+  left: `50%`,
+  top: `50%`,
+  transform: `translate(-50%, -50%) scaleY(0.5)`,
+  borderRadius: `full`,
+}
+
 const ThreeDModel = () => (
   <div
     sx={{
@@ -40,7 +50,7 @@ const ThreeDModel = () => (
     <Canvas
       orthographic
       camera={{ position: [0, 0, 150], zoom: 3.5 }}
-      onCreated={({ gl }) => ((gl.shadowMap.enabled = true), (gl.shadowMap.type = THREE.PCFSoftShadowMap))}
+      onCreated={({ gl }: any) => ((gl.shadowMap.enabled = true), (gl.shadowMap.type = THREE.PCFSoftShadowMap))}
       title="Spin the Model"
       aria-hidden="true"
       focusable="false"
@@ -68,54 +78,38 @@ const ThreeDModel = () => (
     <div sx={{ position: `absolute`, top: 0, left: 0, right: 0, bottom: 0 }}>
       <div
         sx={{
-          position: `absolute`,
+          ...sharedDiskStyles,
           width: `150px`,
           height: `150px`,
-          background: t => t.colors.gray[5],
+          background: (t: { colors: { [key: string]: any[] } }) => t.colors.gray[5],
           zIndex: 4,
-          left: `50%`,
-          top: `50%`,
-          transform: `translate(-50%, -50%) scaleY(0.5)`,
-          borderRadius: `full`,
         }}
       />
       <div
         sx={{
-          position: `absolute`,
+          ...sharedDiskStyles,
           width: `200px`,
           height: `200px`,
-          background: t => t.colors.gray[4],
+          background: (t: { colors: { [key: string]: any[] } }) => t.colors.gray[4],
           zIndex: 3,
-          left: `50%`,
-          top: `50%`,
-          transform: `translate(-50%, -50%) scaleY(0.5)`,
-          borderRadius: `full`,
         }}
       />
       <div
         sx={{
-          position: `absolute`,
+          ...sharedDiskStyles,
           width: `450px`,
           height: `450px`,
-          background: t => t.colors.gray[3],
+          background: (t: { colors: { [key: string]: any[] } }) => t.colors.gray[3],
           zIndex: 2,
-          left: `50%`,
-          top: `50%`,
-          transform: `translate(-50%, -50%) scaleY(0.5)`,
-          borderRadius: `full`,
         }}
       />
       <div
         sx={{
-          position: `absolute`,
+          ...sharedDiskStyles,
           width: `500px`,
           height: `500px`,
-          background: t => t.colors.gray[2],
+          background: (t: { colors: { [key: string]: any[] } }) => t.colors.gray[2],
           zIndex: 1,
-          left: `50%`,
-          top: `50%`,
-          transform: `translate(-50%, -50%) scaleY(0.5)`,
-          borderRadius: `full`,
         }}
       />
     </div>
