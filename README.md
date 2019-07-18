@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.lekoarts.de/en">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/lekoarts-monogram.png" width="80" />
+    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/lekoarts-monogram.svg" width="80" />
   </a>
 </p>
 <h1 align="center">
