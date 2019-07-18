@@ -60,7 +60,7 @@ gatsby new gatsby-starter-portfolio-emma
 | `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                    |
 | `mdx`          | `true`              | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass  `false` to turn this off) |
 
-The usage of `/content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
+The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
 #### Example usage
 
@@ -107,4 +107,29 @@ module.exports = {
     author: `@lekoarts_de`,
   },
 }
+```
+
+### Formats
+
+Projects need the following frontmatter:
+
+```md
+---
+client: "LekoArts"
+title: "Theme"
+cover: "./image.jpg"
+date: "2019-06-10"
+service: "Theme"
+color: "#8e9d31"
+---
+```
+
+Pages need the following frontmatter:
+
+```md
+---
+title: "Name"
+slug: "/name"
+cover: "./name.jpg"
+---
 ```
