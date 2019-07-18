@@ -5,6 +5,12 @@
   "loglevel": "success",
   "packages": ["themes/*"],
   "registry": "https://registry.npmjs.org/",
+  "ignoreChanges": [
+    "CHANGELOG.md",
+    "**/__tests__/**",
+    "**/__mocks__/**",
+    "examples/**/*"
+  ],
   "command": {
     "publish": {
       "allowBranch": "master",
