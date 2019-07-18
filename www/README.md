@@ -15,6 +15,9 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
+  <a href="https://app.netlify.com/sites/gatsby-themes-by-lekoarts/deploys">
+      <img src="https://api.netlify.com/api/v1/badges/4cdd4d69-0aa6-4f52-8c35-920842d12938/deploy-status" alt="Netlify Status" />
+    </a>
 </p>
 
 Showcase of the available themes I made 😊 New entries go into `data/themes.yaml` alongside a screenshot of the site at 1440x900px.

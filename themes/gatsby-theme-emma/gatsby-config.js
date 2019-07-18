@@ -1,4 +1,4 @@
-module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/pages`, basePath = `/` }) => ({
+module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/pages`, basePath = `/`, mdx = true }) => ({
   siteMetadata: {
     siteTitle: `Emma`,
     siteTitleAlt: `Emma - @lekoarts/gatsby-theme-emma`,
@@ -27,7 +27,7 @@ module.exports = ({ projectsPath = `content/projects`, pagesPath = `content/page
         path: pagesPath,
       },
     },
-    {
+    mdx && {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [

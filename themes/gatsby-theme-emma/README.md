@@ -1,3 +1,110 @@
-# @lekoarts/gatsby-theme-emma
+<p align="center">
+  <a href="https://themes.lekoarts.de">
+    <img alt="Gatsby Theme" src="https://img.lekoarts.de/gatsby/gatsby-themes-illustration.png" />
+  </a>
+</p>
+<h1 align="center">
+  @lekoarts/gatsby-theme-emma
+</h1>
 
-WIP
+<p align="center">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-emma is released under the MIT license." />
+  </a>
+  <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-emma">
+    <img src="https://img.shields.io/npm/v/@lekoarts/gatsby-theme-emma.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-emma?minimal=true">
+    <img src="https://img.shields.io/npm/dm/@lekoarts/gatsby-theme-emma.svg" alt="Downloads per month on npm." />
+  </a>
+  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-emma?minimal=true">
+    <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-emma.svg" alt="Total downloads on npm." />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
+      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+    </a>
+</p>
+
+Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images. Especially designers and/or photographers will love this theme! Built with [MDX](https://mdxjs.com/) and [Theme UI](https://theme-ui.com/).
+
+## Features
+
+- MDX
+- Theme UI-based theming
+- react-spring page animations
+- Optional MDX pages which automatically get added to the navigation
+
+## Installation
+
+```sh
+npm install @lekoarts/gatsby-theme-emma
+```
+
+### Install as a starter
+
+This will generate a new site that pre-configures use of the theme including example content.
+
+```sh
+gatsby new gatsby-starter-portfolio-emma
+```
+
+## Usage
+
+### Theme options
+
+| Key            | Default Value       | Description                                                                                                |
+|----------------|---------------------|------------------------------------------------------------------------------------------------------------|
+| `basePath`     | `/`                 | Root url for the theme                                                                                     |
+| `projectsPath` | `content/projects` | Location of projects                                                                                       |
+| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                    |
+| `mdx`          | `true`              | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass  `false` to turn this off) |
+
+The usage of `/content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
+
+#### Example usage
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `@lekoarts/gatsby-theme-emma`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/sideproject`,
+        // projectsPath defaults to `content/projects`
+        projectsPath: `content/cool-projects`,
+      },
+    },
+  ],
+}
+```
+
+#### Additional configuration
+
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+
+```js
+// gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    // Used for the title template on pages other than the index site
+    siteTitle: `Emma`,
+    // Default title of the page
+    siteTitleAlt: `Emma - @lekoarts/gatsby-theme-emma`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://emma.lekoarts.de`,
+    // Used for SEO
+    siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
+  },
+}
+```

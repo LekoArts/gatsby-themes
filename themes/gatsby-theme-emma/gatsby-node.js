@@ -190,7 +190,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   createPage({
     path: basePath,
-    component: require.resolve(`./src/templates/index.tsx`),
+    component: require.resolve(`./src/templates/projects.tsx`),
   })
 
   const result = await graphql(`
@@ -209,7 +209,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   `)
 
   if (result.errors) {
-    reporter.panic(`There was an error loading your projects`, result.errors)
+    reporter.panic(`There was an error loading your projects or pages`, result.errors)
     return
   }
 

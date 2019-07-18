@@ -64,6 +64,10 @@ const SEO = ({ description, meta, pathname, image }: Props) => {
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
+      <meta name="twitter:label1" value="Support" />
+      <meta name="twitter:label2" value="Author's Homepage" />
+      <meta name="twitter:data1" value="https://www.patreon.com/lekoarts" />
+      <meta name="twitter:data2" value="https://www.lekoarts.de/en" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

@@ -32,7 +32,7 @@ const AboutMe = () => (
           photographers. I myself learned so much with free and open source content that I wanted to contribute back.
           Since the starters are a huge success it’s only logical to convert those to Gatsby themes! Of course more
           themes will follow in the future. My Gatsby themes are created with{` `}
-          <Styled.a href="https://theme-ui.com/">theme-ui</Styled.a> — which makes them really customizable{` `}
+          <Styled.a href="https://theme-ui.com/">Theme UI</Styled.a> — which makes them really customizable{` `}
           <span role="img" aria-label="Party Popper">
             🎉
           </span>
