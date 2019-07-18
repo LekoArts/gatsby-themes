@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: `https://themes.lekoarts.de`,
     siteDescription: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
     siteLanguage: `en`,
-    siteImage: `/banner.jpg`,
+    siteImage: `/banner.png`,
     author: `@lekoarts_de`,
   },
   plugins: [

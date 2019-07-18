@@ -24,7 +24,7 @@ const AboutMe = () => (
         </Styled.p>
         <Styled.p>
           You can find me on my <Styled.a href="https://www.lekoarts.de/en">homepage</Styled.a> where I blog about
-          front-end development. I also like to create 3D art or other experiments which you can find on{` `}
+          front-end development and design. I also like to create 3D art or other experiments which you can find on{` `}
           <Styled.a href="https://www.instagram.com/lekoarts.de">Instagram</Styled.a>.
         </Styled.p>
         <Styled.p>
@@ -129,10 +129,6 @@ const AboutMe = () => (
           >
             Share on Twitter
           </TwitterShareButton>
-          {` `}
-          <a href="#" sx={{ variant: `buttons.outline` }}>
-            Newsletter Signup
-          </a>
           {` `}
           <a href="https://www.patreon.com/lekoarts" sx={{ variant: `buttons.white` }}>
             Patreon

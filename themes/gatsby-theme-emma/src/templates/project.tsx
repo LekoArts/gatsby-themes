@@ -69,13 +69,12 @@ const ProjectTemplate = ({ data: { project } }: Props) => {
         description={project.excerpt}
         pathname={project.slug}
         image={project.cover.childImageSharp.resize!.src}
-        meta={[
-          { name: `twitter:label1`, value: `Client` },
-          { name: `twitter:label2`, value: `Date` },
-          { name: `twitter:data1`, value: project.client },
-          { name: `twitter:data2`, value: project.date },
-        ]}
-      />
+      >
+        <meta name="twitter:label1" value="Client" />
+        <meta name="twitter:label2" value="Date" />
+        <meta name="twitter:data1" value={project.client} />
+        <meta name="twitter:data2" value={project.date} />
+      </SEO>
       <Hero image={project.cover.childImageSharp.fluid} color={project.color}>
         <Flex
           css={css({

@@ -3,7 +3,6 @@ import Helmet from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 const defaultProps = {
-  title: ``,
   description: false,
   meta: [],
   pathname: false,
@@ -11,7 +10,6 @@ const defaultProps = {
 }
 
 type Props = {
-  title?: string
   description?: string
   meta?:
     | {
@@ -29,11 +27,10 @@ type Props = {
   image?: string
 }
 
-const SEO = ({ title, description, meta, pathname, image }: Props) => {
+const SEO = ({ description, meta, pathname, image }: Props) => {
   const site = useSiteMetadata()
 
   const {
-    siteTitle,
     siteTitleAlt: defaultTitle,
     siteUrl,
     siteDescription: defaultDescription,
@@ -43,80 +40,30 @@ const SEO = ({ title, description, meta, pathname, image }: Props) => {
   } = site
 
   const seo = {
-    title: title || defaultTitle,
+    title: defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
   }
   return (
-    <Helmet
-      htmlAttributes={{ lang: siteLanguage }}
-      title={title}
-      defaultTitle={defaultTitle}
-      titleTemplate={`%s | ${siteTitle}`}
-      meta={[
-        {
-          name: `description`,
-          content: seo.description,
-        },
-        {
-          name: `image`,
-          content: seo.image,
-        },
-        {
-          property: `og:title`,
-          content: seo.title,
-        },
-        {
-          property: `og:url`,
-          content: seo.url,
-        },
-        {
-          property: `og:description`,
-          content: seo.description,
-        },
-        {
-          property: `og:image`,
-          content: seo.image,
-        },
-        {
-          property: `og:image:alt`,
-          content: seo.description,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          property: `twitter:url`,
-          content: seo.url,
-        },
-        {
-          name: `twitter:description`,
-          content: seo.description,
-        },
-        {
-          property: `twitter:image`,
-          content: seo.image,
-        },
-        {
-          property: `twitter:image:alt`,
-          content: seo.description,
-        },
-      ].concat(meta)}
-    >
+    <Helmet meta={meta}>
+      <html lang={siteLanguage} />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:type" content="website" />
+      <meta property="og:image:alt" content={seo.description} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:url" content={seo.url} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:image:alt" content={seo.description} />
+      <meta name="twitter:creator" content={author} />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

@@ -44,3 +44,5 @@ Commit your changes to a feature branch of your fork and open up a PR against th
 ## 🎓 Learning Gatsby Themes
 
 - [Gatsbyjs.org > Gatsby Themes](https://www.gatsbyjs.org/docs/themes/)
+- [Building a Theme](https://www.newsletter2go.com/login/)
+- [Free egghead.io "Gatsby Theme Authoring" course](https://egghead.io/courses/gatsby-theme-authoring)
