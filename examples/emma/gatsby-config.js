@@ -3,6 +3,9 @@ require(`dotenv`).config({
 })
 
 module.exports = {
+  siteMetadata: {
+    siteTitleAlt: `Emma - Gatsby Starter Portfolio`,
+  },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emma`,
