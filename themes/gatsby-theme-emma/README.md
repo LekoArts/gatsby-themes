@@ -53,12 +53,12 @@ gatsby new gatsby-starter-portfolio-emma
 
 ### Theme options
 
-| Key            | Default Value       | Description                                                                                                |
-|----------------|---------------------|------------------------------------------------------------------------------------------------------------|
-| `basePath`     | `/`                 | Root url for the theme                                                                                     |
-| `projectsPath` | `content/projects` | Location of projects                                                                                       |
-| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                    |
-| `mdx`          | `true`              | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass  `false` to turn this off) |
+| Key            | Default Value      | Description                                                                                               |
+| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
+| `basePath`     | `/`                | Root url for the theme                                                                                    |
+| `projectsPath` | `content/projects` | Location of projects                                                                                      |
+| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
+| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
 
 The usage of `content/projects` is mandatory. Have a look at the [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/emma) on how to create entries.
 
@@ -76,11 +76,11 @@ module.exports = {
         // basePath defaults to `/`
         basePath: `/sideproject`,
         // projectsPath defaults to `content/projects`
-        projectsPath: `content/cool-projects`,
-      },
-    },
-  ],
-}
+        projectsPath: `content/cool-projects`
+      }
+    }
+  ]
+};
 ```
 
 #### Additional configuration
@@ -106,9 +106,9 @@ module.exports = {
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@lekoarts_de`,
-  },
-}
+    author: `@lekoarts_de`
+  }
+};
 ```
 
 ### Formats
