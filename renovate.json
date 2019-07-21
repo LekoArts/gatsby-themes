@@ -4,24 +4,24 @@
   ],
   "packageRules": [
     {
-      "packagePatterns": ["^eslint", "@typescript-eslint", "prettier"],
-      "groupName": "Linting & Formatting"
-    },
-    {
-      "packagePatterns": ["typescript", "@types"],
-      "groupName": "TypeScript"
+      "packagePatterns": ["^eslint", "@typescript-eslint", "prettier", "typescript", "@types"],
+      "groupName": "Linting & Formatting + TypeScript"
     },
     {
       "packagePatterns": ["gatsby"],
-      "groupName": "gatsby"
+      "groupName": "Gatsby"
     },
     {
       "packagePatterns": ["@mdx-js"],
-      "groupName": "@mdx-js"
+      "groupName": "MDX"
     },
     {
       "packageNames": ["react", "react-dom"],
-      "groupName": "react"
+      "groupName": "React"
+    },
+    {
+      "packagePatterns": ["theme-ui", "@theme-ui"],
+      "groupName": "Theme UI"
     }
   ],
   "labels": ["renovate"],
