@@ -43,10 +43,10 @@ npm install @lekoarts/gatsby-theme-emma
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme including example content.
+This will generate a new site (with the folder name "emma") that pre-configures use of the theme including example content.
 
 ```sh
-gatsby new gatsby-starter-portfolio-emma
+gatsby new emma LekoArts/gatsby-starter-portfolio-emma
 ```
 
 ## Usage
