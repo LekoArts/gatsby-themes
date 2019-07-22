@@ -131,6 +131,7 @@ export default {
       borderColor: `white`,
       borderStyle: `solid`,
       borderRadius: `full`,
+      textAlign: `center`,
       fontSize: 1,
       fontWeight: `semibold`,
       px: 4,

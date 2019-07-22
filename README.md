@@ -41,8 +41,12 @@ In the case of `examples/emma` this command would be `yarn workspace emma develo
 
 Commit your changes to a feature branch of your fork and open up a PR against this repository.
 
+## 🤩 Newsletter
+
+If you want to receive monthly updates on my themes and all things related to Gatsby themes (relevant blog posts from me and other people) you can [subscribe to my newsletter](https://leko.io/newsletter-themes).
+
 ## 🎓 Learning Gatsby Themes
 
-- [Gatsbyjs.org > Gatsby Themes](https://www.gatsbyjs.org/docs/themes/)
-- [Building a Theme](https://www.newsletter2go.com/login/)
+- [Gatsbyjs.org - Gatsby Themes](https://www.gatsbyjs.org/docs/themes/)
+- [Building a Theme](https://www.gatsbyjs.org/tutorial/building-a-theme)
 - [Free egghead.io "Gatsby Theme Authoring" course](https://egghead.io/courses/gatsby-theme-authoring)

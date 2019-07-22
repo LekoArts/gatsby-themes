@@ -129,11 +129,12 @@ const AboutMe = () => (
           >
             Share on Twitter
           </TwitterShareButton>
-          {` `}
+          <a href="https://leko.io/newsletter-themes" sx={{ variant: `buttons.outline` }}>
+            Newsletter
+          </a>
           <a href="https://www.patreon.com/lekoarts" sx={{ variant: `buttons.white` }}>
             Patreon
           </a>
-          {` `}
           <a href="https://ko-fi.com/N4N0W91I" sx={{ variant: `buttons.white` }}>
             Buy me a tea
           </a>

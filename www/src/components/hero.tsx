@@ -22,18 +22,17 @@ const Hero = () => {
                 <span sx={{ fontWeight: `bold` }}>customizable</span> Gatsby themes to quickly bootstrap your website
               </Styled.p>
             </Box>
-            <Flex sx={{ mt: 5, flexDirection: `column` }}>
-              <Box sx={{ fontSize: 1, fontWeight: `semibold`, mb: 2 }}>
-                Get notified whenever I publish something new
-              </Box>
-              <Box>
-                <input type="email" sx={{ variant: `inputs.primary`, mr: 2, my: 2, width: `100%`, maxWidth: `350px` }} placeholder="Enter your email" />
-                {` `}
-                <button type="button" sx={{ variant: `buttons.newsletter` }}>
-                  Subscribe
-                </button>
-              </Box>
-            </Flex>
+            <Box sx={{ mt: 5 }}>
+              <Box sx={{ fontSize: 1, fontWeight: `semibold`, mb: 2 }}>Get monthly information about Gatsby Themes</Box>
+              <a
+                href="https://leko.io/newsletter-themes"
+                rel="noopener noreferrer"
+                target="_blank"
+                sx={{ variant: `buttons.newsletter`, mt: 2, display: `inline-block` }}
+              >
+                Subscribe to the newsletter
+              </a>
+            </Box>
           </Box>
           {isBigScreen && <ThreeDModel />}
         </Flex>
