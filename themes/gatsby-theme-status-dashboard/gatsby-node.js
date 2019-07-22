@@ -1,5 +1,3 @@
-const standardBasePath = `/`
-
 exports.onPreBootstrap = ({ reporter }) => {
   if (!process.env.NETLIFY_ACCESS_KEY || !process.env.CIRCLECI_KEY) {
     reporter.panicOnBuild(`
@@ -15,27 +13,4 @@ exports.onPreBootstrap = ({ reporter }) => {
       https://www.netlify.com/docs/continuous-deployment/#environment-variables
     `)
   }
-}
-
-exports.sourceNodes = ({ actions }) => {
-  actions.createTypes(`
-    type CircleCiProjects implements Node @infer {
-      vcs_url: String!
-    }
-    
-    type CircleCiMe implements Node @infer {
-      num_projects_followed: Int!
-    }
-    
-    type NetlifySites implements Node @infer {
-      netlify_id: Int!
-      name: String!
-      url: String!
-      build_settings: BuildSettings
-    }
-    
-    type BuildSettings @infer {
-      repo_url: String!
-    }
-  `)
 }

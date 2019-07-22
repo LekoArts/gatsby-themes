@@ -1,52 +1,38 @@
 <p align="center">
-  <a href="https://emma.lekoarts.de">
+  <a href="https://status.lekoarts.de">
     <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-site-illustration.png" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby Starter Portfolio: Emma
+  Gatsby Status Dashboard
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-starter-portfolio-emma/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby Starter Portfolio: Emma is released under the MIT license." />
+  <a href="https://github.com/LekoArts/gatsby-status-dashboard/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Gatsby Status Dashboard is released under the MIT license." />
   </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="https://app.netlify.com/sites/portfolio-emma/deploys">
-      <img src="https://api.netlify.com/api/v1/badges/5a4f3e8c-82cb-411d-89f1-fcfde2d3cf80/deploy-status" alt="Netlify Status" />
-    </a>
 </p>
 
-Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images. Using the Gatsby Theme [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma).
+Showing the statuses of Netlify deploys & CircleCI tests. Using the Gatsby Theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard). Made with [gatsby-source-netlify](https://github.com/LekoArts/gatsby-source-netlify) and [gatsby-source-circleci](https://github.com/LekoArts/gatsby-source-circleci).
 
-[**Demo Website**](https://emma.lekoarts.de)
+[**Demo Website**](https://status.lekoarts.de)
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
-## ✨ Features
-
-- MDX
-- react-spring page animations
-- Optional MDX pages which automatically get added to the navigation
-- Fully customizable through the usage of Gatsby Themes (and Theme UI)
-- Light Mode / Dark Mode
-- Google Analytics Support
-- SEO (Sitemap, OpenGraph tags, Twitter tags)
-- Offline Support & WebApp Manifest
-
 ## 🚀 Getting Started
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-portfolio-emma) [![Edit gatsby-starter-portfolio-emma](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LekoArts/gatsby-starter-portfolio-emma/tree/master/)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-status-dashboard)
 
 1. **Create a Gatsby site.**
 
 Use the Gatsby CLI to create a new site, specifying this project
 
 ```sh
-gatsby new project-name https://github.com/LekoArts/gatsby-starter-portfolio-emma
+gatsby new project-name https://github.com/LekoArts/gatsby-status-dashboard
 ```
 
 2. **Start developing.**
@@ -66,29 +52,9 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 
 ## 📝 Using and modifying this starter
 
-This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma).
+This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard).
 
 Please have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI.
-
-### Adding a new project
-
-1. Create a new folder inside `content/projects`
-1. Create a new `index.mdx` file, and add the frontmatter (have a look at the already existing files for reference)
-1. Add an image to the created folder (from step 1)
-1. Reference this image as your `cover` in the frontmatter
-1. Write your content below the frontmatter
-
-### Adding a new page
-
-1. Create a new folder inside `content/pages`
-1. Create a new `index.mdx` file, and add the frontmatter
-1. Add an image to the created folder (from step 1)
-1. Reference this image as your `cover` in the frontmatter
-1. Write your content below the frontmatter
-
-### Change your `static` folder
-
-The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
 
 ## 🎓 Learning Gatsby
 
