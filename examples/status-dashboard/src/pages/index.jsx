@@ -3,6 +3,7 @@ import { Global, css } from "@emotion/core"
 import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 import Grid from "@lekoarts/gatsby-theme-status-dashboard/src/components/grid"
+import Info from "@lekoarts/gatsby-theme-status-dashboard/src/components/info"
 
 const Index = ({
   data: {
@@ -80,6 +81,7 @@ const Index = ({
       >
         {siteDescription}
       </p>
+      <Info />
       <Grid />
     </main>
   )
