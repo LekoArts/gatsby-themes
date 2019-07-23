@@ -4,45 +4,18 @@ export default {
   ...tailwind,
   colors: {
     ...tailwind.colors,
-    primary: tailwind.colors.pink[7],
-    secondary: tailwind.colors.indigo[6],
+    primary: tailwind.colors.blue[6],
+    secondary: tailwind.colors.orange[6],
+    muted: tailwind.colors.gray[5],
   },
   styles: {
     ...tailwind.styles,
-    p: {
-      fontSize: [1, 2],
-      letterSpacing: `-0.003em`,
-      lineHeight: `body`,
-      "--baseline-multiplier": 0.179,
-      "--x-height-multiplier": 0.35,
-    },
-    h1: {
-      ...tailwind.styles.h1,
-      fontSize: [5, 6],
-      mt: 2,
-    },
-    h2: {
-      ...tailwind.styles.h2,
-      fontSize: [4, 5],
-      mt: 2,
-    },
-    h3: {
-      ...tailwind.styles.h3,
-      fontSize: [3, 4],
-      mt: 3,
-    },
-    h4: {
-      ...tailwind.styles.h4,
-      fontSize: [2, 3],
-    },
-    h5: {
-      ...tailwind.styles.h5,
-      fontSize: [1, 2],
-    },
-    h6: {
-      ...tailwind.styles.h6,
-      fontSize: 1,
-      mb: 2,
+    a: {
+      color: `grayDark`,
+      textDecoration: `none`,
+      "&:hover": {
+        color: `primary`,
+      },
     },
   },
 }
