@@ -11,14 +11,7 @@ const Item = ({ input, icon }: { input: string; icon: React.ReactNode }) => (
     {icon}
     <div
       sx={{
-        boxShadow: `default`,
-        background: `white`,
-        px: 3,
-        py: 2,
-        borderRadius: `lg`,
-        ml: 2,
-        fontSize: 0,
-        fontWeight: `semibold`,
+        variant: `cards.label`,
       }}
     >
       {input}
@@ -36,20 +29,7 @@ const Info = () => {
     <Flex
       sx={{
         flexDirection: [`column`, `column`, `row`],
-        svg: {
-          width: [6, 6, 8],
-          borderRadius: `full`,
-          p: 2,
-          background: `white`,
-          ".primary": {
-            fill: `currentColor`,
-            color: `primary`,
-          },
-          ".secondary": {
-            fill: `currentColor`,
-            color: `blue.8`,
-          },
-        },
+        variant: `cards.icon`,
       }}
     >
       <Item input={`${netlify} Websites`} icon={<Package />} />

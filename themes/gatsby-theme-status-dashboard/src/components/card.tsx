@@ -18,24 +18,23 @@ type Props = {
 }
 
 const Card = ({ site, isOnCircleCI, GH_POSTFIX }: Props) => (
-  <div key={site.netlify_id} sx={{ p: 3, background: `white`, borderRadius: `lg`, boxShadow: `default` }}>
+  <div key={site.netlify_id} sx={{ variant: `cards.dashboard` }}>
     <div data-name="card-top" sx={{ display: `flex`, justifyContent: `space-between`, alignItems: `center` }}>
-      <Styled.a sx={{ textTransform: `uppercase`, fontWeight: `semibold`, fontSize: 0, color: `textMuted`, letterSpacing: `wide` }} href={site.url}>{site.name}</Styled.a>
+      <Styled.a href={site.url}>{site.name}</Styled.a>
       <div
         sx={{
           svg: { fill: `currentColor` },
-          a: { color: `muted`, "&:hover": { color: `primary` } },
           "a:last-of-type": {
             ml: 2,
           },
         }}
       >
         {isOnCircleCI && (
-          <Styled.a href={`https://circleci.com/gh/${GH_POSTFIX}`}>
+          <Styled.a aria-label={`View ${site.name} on CircleCI`} href={`https://circleci.com/gh/${GH_POSTFIX}`}>
             <CircleCI />
           </Styled.a>
         )}
-        <Styled.a href={site.build_settings.repo_url}>
+        <Styled.a aria-label={`View ${site.name} source on GitHub`} href={site.build_settings.repo_url}>
           <GitHub />
         </Styled.a>
       </div>

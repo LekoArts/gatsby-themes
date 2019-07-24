@@ -11,7 +11,7 @@ const Grid = () => {
   const { circleci } = useCircleCi()
 
   return (
-    <div sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `1fr`, `1fr 1fr`], gridGap: [3, 3, 4] }}>
+    <div sx={{ variant: `grids.dashboard` }}>
       {netlify.map(site => {
         const GH_URL = replaceWords(site.build_settings.repo_url)
         const GH_POSTFIX = GH_URL.replace(`https://github.com/`, ``)
