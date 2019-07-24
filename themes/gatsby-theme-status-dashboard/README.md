@@ -51,7 +51,7 @@ npm install @lekoarts/gatsby-theme-status-dashboard
 This will generate a new site that pre-configures use of the theme. Perfect for a single-page usage (e.g. `https://status.your-domain.tld`).
 
 ```sh
-gatsby new LekoArts/gatsby-status-dashboard
+gatsby new status-dashboard LekoArts/gatsby-status-dashboard
 ```
 
 ## Usage
