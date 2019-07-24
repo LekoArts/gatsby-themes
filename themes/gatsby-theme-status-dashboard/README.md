@@ -26,40 +26,39 @@
     </a>
 </p>
 
-WIP
+Show the live statuses of your Netlify and CircleCI builds on your website! Easily integrate the customizable components into your site and adapt them to your theme (utilizing Theme UI).
+
+[**Demo Website**](https://status.lekoarts.de)
 
 ## Features
 
-- WIP
+- Use the theme's components `<Info />` and `<Grid />` to display:
+  - The number of Netlify sites and CircleCI projects you have
+  - All public Netlify sites you have in a grid including statuses of CircleCI if configured in the repository
+- Theme UI-based theming
+- Uses the status badges meaning the statuses are live and don't need a re-build
 
 ## Installation
 
 ```sh
-npm install @lekoarts/gatsby-theme-emma
+npm install @lekoarts/gatsby-theme-status-dashboard
 ```
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme including example content.
+This will generate a new site that pre-configures use of the theme. Perfect for a single-page usage (e.g. `https://status.your-domain.tld`).
 
 ```sh
-gatsby new gatsby-starter-portfolio-emma
+gatsby new LekoArts/gatsby-status-dashboard
 ```
 
 ## Usage
 
 ### Theme options
 
-| Key            | Default Value      | Description                                                                                               |
-| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `basePath`     | `/`                | Root url for the theme                                                                                    |
-| `projectsPath` | `content/projects` | Location of projects                                                                                      |
-| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
-| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
-
-The usage of `content/projects` is mandatory. Have a look at the [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/emma) on how to create entries.
-
-The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
+| Key              | Default Value | Description                                                                                                                           |
+| ---------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `netlifyOptions` | `{}`          | Pass options to `gatsby-source-netlify` ([Read the plugin's documentation](https://github.com/LekoArts/gatsby-source-netlify#options) |
 
 #### Example usage
 
@@ -68,67 +67,60 @@ The usage of `content/pages` is optional. If no page/MDX file is found the navig
 module.exports = {
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-emma`,
+      resolve: `@lekoarts/gatsby-theme-status-dashboard`,
       options: {
-        // basePath defaults to `/`
-        basePath: `/sideproject`,
-        // projectsPath defaults to `content/projects`
-        projectsPath: `content/cool-projects`
+        // netlifyOptions defaults to `{}`
+        netlifyOptions: {
+          userAgent: `netlify/js-client`
+        }
       }
     }
   ]
 };
 ```
 
-#### Additional configuration
+### Environment variables
 
-In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+You **must** have two environment variables configured in your project as the theme relies on them: `NETLIFY_ACCESS_KEY` and `CIRCLECI_KEY`. Otherwise the theme can't access information from the source plugins.
 
-```js
-// gatsby-config.js
-module.exports = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Emma`,
-    // Default title of the page
-    siteTitleAlt: `Emma - @lekoarts/gatsby-theme-emma`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://emma.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Twitter Handle
-    author: `@lekoarts_de`
-  }
+You can read [`gatsby-source-netlify`'s documentation](https://github.com/LekoArts/gatsby-source-netlify#prerequisites) and [`gatsby-source-circleci`'s documentation](https://github.com/LekoArts/gatsby-source-circleci#prerequisites) to learn how to obtain your API keys.
+
+Gatsby also has [official documentation](https://www.gatsbyjs.org/docs/environment-variables/) on environment variables.
+
+Lastly you should have a look at the [example site](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard) if you need further help.
+
+### Components
+
+This theme doesn't setup an individual page but rather exposes two React components:
+
+- `Info`: Displays the number of Netlify websites and CircleCI projects (e.g. "18 Websites" and "7 CircleCI Projects")
+
+- `Grid`: Displays the sites in a card grid (using CSS Grid). The individual cards contain the name of the site, links to GitHub and CircleCI, and displays the Netlify deploy status & optionally the CircleCI status
+
+#### Usage
+
+Import the components into your file and use them like normal React components (see [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard/src/pages/index.jsx)):
+
+```jsx
+import React from "react";
+
+import Grid from "@lekoarts/gatsby-theme-status-dashboard/src/components/grid";
+import Info from "@lekoarts/gatsby-theme-status-dashboard/src/components/info";
+
+const Index = () => {
+  return (
+    <main>
+      <Info />
+      <Grid />
+    </main>
+  );
 };
+
+export default Index;
 ```
 
-### Formats
+### Formatters
 
-Projects need the following frontmatter:
+The Netlify API doesn't update the paths to GitHub when you e.g. change your username (it'll keep the one from the time you created the Netlify project). As the theme will use the GitHub URLs from Netlify projects to check against CircleCI (to see if it can find CircleCI projects with the same GitHub URL), they need to be the same.
 
-```md
----
-client: "LekoArts"
-title: "Theme"
-cover: "./image.jpg"
-date: "2019-06-10"
-service: "Theme"
-color: "#8e9d31"
----
-```
-
-Pages need the following frontmatter:
-
-```md
----
-title: "Name"
-slug: "/name"
-cover: "./name.jpg"
----
-```
+Hence this theme allows to shadow a `formatters` file. It'll be used to replace words in the URL, e.g. replace `LeKoArts` with `LekoArts`. You can find the file in `src/utils`.

@@ -17,7 +17,7 @@
   </a>
 </p>
 
-Showing the statuses of Netlify deploys & CircleCI tests. Using the Gatsby Theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard). Made with [gatsby-source-netlify](https://github.com/LekoArts/gatsby-source-netlify) and [gatsby-source-circleci](https://github.com/LekoArts/gatsby-source-circleci).
+Showing the statuses of Netlify deploys & CircleCI projects. Using the Gatsby Theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard). Made with [gatsby-source-netlify](https://github.com/LekoArts/gatsby-source-netlify) and [gatsby-source-circleci](https://github.com/LekoArts/gatsby-source-circleci).
 
 [**Demo Website**](https://status.lekoarts.de)
 
