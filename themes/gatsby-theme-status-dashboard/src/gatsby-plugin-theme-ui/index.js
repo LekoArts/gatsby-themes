@@ -6,7 +6,8 @@ export default {
     ...tailwind.colors,
     primary: tailwind.colors.blue[6],
     secondary: tailwind.colors.orange[6],
-    muted: tailwind.colors.gray[5],
+    muted: tailwind.colors.gray[6],
+    textMuted: `#69778c`,
   },
   styles: {
     ...tailwind.styles,
