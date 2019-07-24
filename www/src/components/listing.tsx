@@ -165,7 +165,7 @@ export default Listing
 
 const ListingQuery = graphql`
   query {
-    allThemesYaml(sort: { fields: title, order: DESC }) {
+    allThemesYaml(sort: { fields: title, order: ASC }) {
       nodes {
         title
         url

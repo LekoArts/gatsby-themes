@@ -21,3 +21,26 @@
       opacity: 1,
     },
   ]
+- title: "Status Dashboard"
+  url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard"
+  preview: "https://status.lekoarts.de"
+  description: "Show the live statuses of your Netlify and CircleCI builds on your website by using the customizable components"
+  image: "./status-dashboard.png"
+  shapes: [
+    {
+      type: "circle",
+      color: "orange",
+      size: ["120px", "220px"],
+      xOffset: ["-20px"],
+      yOffset: ["100px", "180px"],
+      opacity: 1,
+    },
+    {
+      type: "circle",
+      color: "gray",
+      size: ["50px", "100px"],
+      xOffset: ["-40px"],
+      yOffset: ["-60px"],
+      opacity: 1,
+    },
+  ]
