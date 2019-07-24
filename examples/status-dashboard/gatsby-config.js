@@ -15,9 +15,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Status Dashboard - Netlify & CircleCI`,
+        name: process.env.SITE_URL,
         short_name: `Status`,
-        description: `Status Dashboard showing the statuses of my Netlify deploys & CircleCI tests`,
+        description: process.env.SITE_DESCRIPTION,
         start_url: `/`,
         background_color: `#f0f2fd`,
         theme_color: `#3490dc`,
