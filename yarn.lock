@@ -7131,9 +7131,9 @@ gatsby-remark-images@^3.1.4:
     unist-util-visit-parents "^2.0.1"
 
 gatsby-source-circleci@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-circleci/-/gatsby-source-circleci-1.0.2.tgz#b3d1877a7383b96b20ecaf9e84937339645c6822"
-  integrity sha512-jH/+8E2CnQZM3ac3V0VUbLWvevHeFddSfs5TJ6b2U0Qii/9nk+FuxWjL6oyLqklwf/fbzEgOPfWYZRnuLDHBDA==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-circleci/-/gatsby-source-circleci-1.0.3.tgz#79525d037b64b62ea0a8b59bfed9298ed43ae82d"
+  integrity sha512-bvQDaLFTOC06+MScjxovrl3hqum8do4zpMFojW0HeOq7irI3i9Eau7Gl12rkaK5I1Ll/bYnMWhWIIbEtwyrR6A==
   dependencies:
     circleci-api "^3.3.4"
 
@@ -7158,9 +7158,9 @@ gatsby-source-filesystem@^2.1.2:
     xstate "^3.1.0"
 
 gatsby-source-netlify@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-netlify/-/gatsby-source-netlify-1.0.2.tgz#579ddd5145f1468b0f2f1161aeb7c27ae1325375"
-  integrity sha512-uzdJSxW/hmHmAEQebN5vJAhV3QAayvwncjAtBHT3r7fKM37sxf+GSoCgWcYxkrwUOFh6jV7CPhOI88Sh9O3elA==
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-netlify/-/gatsby-source-netlify-1.0.3.tgz#712f2ce182d0fd4a4925094bfc54bab96f51ec02"
+  integrity sha512-Qv5nc06ochmNegS7IMn0jCnHxUKJUj9+ncKWi2SdbzzJz9sfeH/jEhvaD/48RxWmtgsakrMDF1wkRbGTjEFnwA==
   dependencies:
     "@babel/runtime" "^7.4.5"
     netlify "^2.4.6"
@@ -9636,10 +9636,15 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0:
+lodash@^4.11.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.14"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
   integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
+
+lodash@^4.17.14:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log-update@^3.0.0:
   version "3.2.0"
@@ -10368,9 +10373,9 @@ neo-async@^2.5.0, neo-async@^2.6.0:
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
 netlify@^2.4.6:
-  version "2.4.6"
-  resolved "https://registry.yarnpkg.com/netlify/-/netlify-2.4.6.tgz#8f974d184e77d30d59fc89e02b7a03711cfc9df3"
-  integrity sha512-p/Uad5WxS6q+QeJwxGT8P2GPL8x7oUYJSaimsmRYHTuP+qMyvS0ff5jufd41WT9P+lyT9CaFjcH5UgPOcW/6CA==
+  version "2.4.7"
+  resolved "https://registry.yarnpkg.com/netlify/-/netlify-2.4.7.tgz#c567a8da287aee53cd2d5e64caac587c50d4efa6"
+  integrity sha512-6UkqQM8Qmr0Nm5gExNDgEzzUydZHImhPGKf1EZ0n5eodG6mw7dvoXDAJtTHy9HXbEuhZvgkYPv0rOX6KgkrXHQ==
   dependencies:
     "@netlify/open-api" "^0.9.0"
     "@netlify/zip-it-and-ship-it" "^0.3.1"
@@ -12621,9 +12626,9 @@ regenerator-runtime@^0.11.0:
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
 
 regenerator-runtime@^0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.2.tgz#32e59c9a6fb9b1a4aff09b4930ca2d4477343447"
-  integrity sha512-S/TQAZJO+D3m9xeN1WTI8dLKBBiRgXBlTJvbWjCThHWZj9EvHK70Ff50/tYj2J/fvBY6JtFVwRuazHN2E7M9BA==
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.3.tgz#7cf6a77d8f5c6f60eb73c5fc1955b2ceb01e6bf5"
+  integrity sha512-naKIZz2GQ8JWh///G7L3X6LaQUAMp2lvb1rvwwsURe/VXwD6VMfr+/1NuNw3ag8v2kY1aQ/go5SNn79O9JU7yw==
 
 regenerator-transform@^0.14.0:
   version "0.14.0"
