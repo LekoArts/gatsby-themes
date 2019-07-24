@@ -30,6 +30,8 @@ Show the live statuses of your Netlify and CircleCI builds on your website! Easi
 
 [**Demo Website**](https://status.lekoarts.de)
 
+Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+
 ## Features
 
 - Use the theme's components `<Info />` and `<Grid />` to display:
