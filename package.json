@@ -10,6 +10,8 @@
   "scripts": {
     "dev:emma": "yarn workspace emma develop",
     "build:emma": "yarn workspace emma build",
+    "dev:status-dashboard": "yarn workspace status-dashboard develop",
+    "build:status-dashboard": "yarn workspace status-dashboard build",
     "lint": "eslint './themes/**/*' './examples/**/*'",
     "lint:fix": "yarn lint --fix",
     "format": "prettier \"{examples,themes}/**/*.md\" --write",

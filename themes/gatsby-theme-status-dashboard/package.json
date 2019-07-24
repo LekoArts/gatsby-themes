@@ -1,0 +1,52 @@
+{
+  "name": "@lekoarts/gatsby-theme-status-dashboard",
+  "version": "0.0.1",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Show the live statuses of your Netlify and CircleCI builds on your website! Easily integrate the customizable components into your site and adapt them to your theme (utilizing Theme UI).",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@mdx-js/react": "^1.0.21",
+    "@theme-ui/presets": "^0.2.5",
+    "gatsby-plugin-theme-ui": "^0.2.6",
+    "gatsby-plugin-typescript": "^2.1.0",
+    "gatsby-source-circleci": "^1.0.2",
+    "gatsby-source-netlify": "^1.0.2",
+    "theme-ui": "^0.2.6"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-status-dashboard"
+  }
+}
