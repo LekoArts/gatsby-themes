@@ -1,7 +1,9 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":disablePeerDependencies"
   ],
+  "includePaths": ["examples/**", "themes/**", "www"],
   "packageRules": [
     {
       "packagePatterns": ["^eslint", "@typescript-eslint", "prettier", "typescript", "@types"],
@@ -30,5 +32,5 @@
   "rangeStrategy": "bump",
   "bumpVersion": null,
   "semanticCommits": true,
-  "schedule": "before 8am on Monday"
+  "schedule": ["before 8am on Monday"]
 }
