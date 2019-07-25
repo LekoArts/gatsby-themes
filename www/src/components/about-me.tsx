@@ -38,6 +38,13 @@ const AboutMe = () => (
           </span>
           .
         </Styled.p>
+        <Styled.p>
+          If you're interested in how I built this site you should definitely read my blogpost{` `}
+          <Styled.a href="https://www.lekoarts.de/en/blog/how-i-used-theme-ui-to-build-my-gatsby-themes-library">
+            "How I used Theme UI to build my Gatsby Themes library"
+          </Styled.a>
+          .
+        </Styled.p>
       </div>
     </Container>
     <Circle size={[`200px`, `200px`, `300px`]} color="red" top="-75px" right="-75px" />
