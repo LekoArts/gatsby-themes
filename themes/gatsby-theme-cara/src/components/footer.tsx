@@ -1,7 +1,7 @@
 import React from "react"
 import { Footer as ThemeFooter, Styled, Flex, css } from "theme-ui"
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <ThemeFooter>
     Copyright &copy; {new Date().getFullYear()}. All rights reserved. <br />
     <Flex css={css({ justifyContent: `center`, alignItems: `center`, mt: 3 })}>

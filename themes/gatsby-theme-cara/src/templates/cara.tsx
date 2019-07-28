@@ -1,24 +1,25 @@
-/** @jsx jsx */
 import React from "react"
-import { jsx } from "theme-ui"
-import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons.cjs"
+import { useThemeUI } from "theme-ui"
+import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from "../components/layout"
-import Intro from "../sections/intro.mdx"
 import Footer from "../components/footer"
-import { Divider } from "../elements/dividers"
+import Hero from "../components/hero"
+import Projects from "../components/projects"
 
-const Cara: React.FC = () => (
-  <Layout>
-    <div sx={{ p: { fontSize: [2, 2, 3] } }}>
-      <Intro />
-    </div>
-    <Parallax pages={1}>
-      <ParallaxLayer>
-        <Divider>test123</Divider>
-      </ParallaxLayer>
-    </Parallax>
-    <Footer />
-  </Layout>
-)
+const Cara: React.FC = () => {
+  const { theme } = useThemeUI()
+
+  const { colors } = theme
+
+  return (
+    <Layout>
+      <Parallax pages={3}>
+        <Hero colors={colors} />
+        <Projects colors={colors} />
+      </Parallax>
+      <Footer />
+    </Layout>
+  )
+}
 
 export default Cara

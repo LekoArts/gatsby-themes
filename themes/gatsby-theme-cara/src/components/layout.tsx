@@ -5,7 +5,7 @@ import SEO from "./seo"
 
 type LayoutProps = { children?: React.ReactNode; className?: string }
 
-const Layout: React.FC = ({ children, className }: LayoutProps) => (
+const Layout: React.FC<LayoutProps> = ({ children, className }) => (
   <Styled.root>
     <Global
       styles={css({
