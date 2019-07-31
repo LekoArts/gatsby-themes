@@ -1,0 +1,58 @@
+{
+  "name": "@lekoarts/gatsby-theme-cara",
+  "version": "0.0.1",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "gatsby": "^2.13.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@mdx-js/mdx": "^1.0.21",
+    "@mdx-js/react": "^1.0.21",
+    "@theme-ui/presets": "^0.2.5",
+    "gatsby-plugin-emotion": "^4.1.0",
+    "gatsby-plugin-mdx": "^1.0.7",
+    "gatsby-plugin-react-helmet": "^3.1.1",
+    "gatsby-plugin-theme-ui": "^0.2.6",
+    "gatsby-plugin-typescript": "^2.1.0",
+    "gatsby-source-filesystem": "^2.1.2",
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
+    "theme-ui": "^0.2.6"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-cara"
+  }
+}
