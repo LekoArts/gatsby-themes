@@ -10,6 +10,7 @@ const bigHeadingStyle = {
   fontFamily: `heading`,
   fontWeight: `heading`,
   lineHeight: `heading`,
+  letterSpacing: `wide`,
   my: 0,
   textAlign: `center`,
   position: `relative`,
