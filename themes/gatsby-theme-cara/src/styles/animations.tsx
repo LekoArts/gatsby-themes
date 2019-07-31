@@ -1,15 +1,6 @@
 import { keyframes, css } from "@emotion/core"
 import styled from "@emotion/styled"
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
-
 const wave = keyframes`
   0% {
     d: path("M 0 100 Q 250 50 400 200 Q 550 350 800 300 L 800 0 L 0 0 L 0 100 Z");
@@ -68,8 +59,4 @@ export const UpDownWide = styled.div`
 
 export const waveAnimation = (length: string) => css`
   animation: ${wave} ${length} linear infinite alternate;
-`
-
-export const rotateAnimation = (length: string) => css`
-  animation: ${rotate} ${length} linear infinite;
 `

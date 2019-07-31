@@ -6,14 +6,14 @@ type DividerProps = {
   speed: number
   offset: number
   children?: React.ReactNode
-  bg: string
-  fill: string
-  clipPath: string
+  bg?: string
+  fill?: string
+  clipPath?: string
   className?: string
   factor?: number
 }
 
-const Divider: React.FC<DividerProps> = ({ speed, offset, factor, bg, fill, clipPath, children, className }) => (
+const Divider = ({ speed, offset, factor, bg, fill, clipPath, children, className }: DividerProps) => (
   <ParallaxLayer
     css={css({
       position: `absolute`,

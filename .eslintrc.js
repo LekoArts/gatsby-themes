@@ -63,6 +63,7 @@ module.exports = {
     "react/no-danger": 0,
     "react/display-name": 1,
     "react/react-in-jsx-scope": 0,
+    "react/jsx-uses-react": 1,
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
     "react/prop-types": 0,
@@ -76,7 +77,10 @@ module.exports = {
     "react-hooks/exhaustive-deps": "warn",
     quotes: [
       2,
-      "backtick"
+      "backtick",
+      {
+        "avoidEscape": true
+      }
     ],
     indent: ["error", 2, { SwitchCase: 1 }],
     "prettier/prettier": [

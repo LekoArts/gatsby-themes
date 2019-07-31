@@ -2,22 +2,24 @@ import React from "react"
 import { useThemeUI } from "theme-ui"
 import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from "../components/layout"
-import Footer from "../components/footer"
 import Hero from "../components/hero"
 import Projects from "../components/projects"
+import About from "../components/about"
+import Contact from "../components/contact"
 
-const Cara: React.FC = () => {
-  const { theme } = useThemeUI()
+const Cara = () => {
+  const { theme, colorMode } = useThemeUI()
 
-  const { colors } = theme
+  const colors = colorMode === `light` ? theme.colors : theme.colors.modes.dark
 
   return (
     <Layout>
-      <Parallax pages={3}>
-        <Hero colors={colors} />
-        <Projects colors={colors} />
+      <Parallax pages={5}>
+        <Hero colors={colors} offset={0} />
+        <Projects colors={colors} offset={1} />
+        <About colors={colors} offset={3} />
+        <Contact colors={colors} offset={4} />
       </Parallax>
-      <Footer />
     </Layout>
   )
 }

@@ -5,8 +5,8 @@ import { hidden } from "../styles/utils"
 type WrapperProps = {
   hiddenMobile?: boolean
   stroke?: string
-  svgWidth: number
   fill?: string
+  svgWidth: number
   left: string
   top: string
 }
@@ -15,9 +15,9 @@ const Wrapper = styled(`svg`)<WrapperProps>`
   position: absolute;
   stroke: currentColor;
   ${props => props.hiddenMobile && hidden};
-  color: ${props => (props.stroke ? props.stroke : `transparent`)};
+  color: ${props => props.stroke};
   width: ${props => props.theme.sizes[props.svgWidth]};
-  fill: ${props => (props.fill ? props.fill : `none`)};
+  fill: ${props => props.fill};
   left: ${props => props.left};
   top: ${props => props.top};
 `
@@ -86,7 +86,9 @@ const icons = {
   },
 }
 
-type IconType = `triangle` | `circle` | `arrowUp` | `upDown` | `box` | `hexa` | `cross`
+// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
+// eslint-disable-next-line
+type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | "cross"
 
 type SVGProps = {
   stroke?: string
@@ -96,6 +98,12 @@ type SVGProps = {
   left: string
   top: string
   hiddenMobile?: boolean
+}
+
+const defaultProps = {
+  stroke: `transparent`,
+  hiddenMobile: false,
+  fill: `none`,
 }
 
 const SVG = ({ stroke, fill, width, icon, left, top, hiddenMobile }: SVGProps) => (
@@ -113,3 +121,5 @@ const SVG = ({ stroke, fill, width, icon, left, top, hiddenMobile }: SVGProps) =
 )
 
 export default SVG
+
+SVG.defaultProps = defaultProps
