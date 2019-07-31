@@ -37,6 +37,7 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 - Theme UI-based theming
 - react-spring parallax effect
 - CSS Animations on Shapes
+- Light/Dark mode
 
 ## Installation
 
@@ -103,4 +104,30 @@ module.exports = {
     author: `@lekoarts_de`
   }
 };
+```
+
+### Editing the content
+
+The content of the page is managed by `.mdx` files inside the theme's `sections` folder. You can edit the files by shadowing them in your site.
+
+These files are available: `intro.mdx`, `projects.mdx`, `about.mdx`, `contact.mdx`
+
+See the [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/cara/src/@lekoarts/gatsby-theme-cara/sections) that shadows via `src/@lekoarts/gatsby-theme-cara/sections/intro.mdx`:
+
+```md
+# Hi, I'm Jane Doe
+
+I'm creating noice web experiences for the next generation of consumer-facing companies
+```
+
+> The other headings should be `<h2>` headings!
+
+You also have access to the `<ProjectCard />` component/shortcode which is used in the `projects.mdx` section. The component takes the props `title` (string), `link` (string), `bg` (string) and `children` (React.ReactNode). You would use it like that:
+
+```md
+## Projects
+
+<ProjectCard title="Freiheit" link="https://www.behance.net/gallery/58937147/Freiheit" bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)">
+This project is my entry to Adobe's #ChallengeYourPerspective contest.
+</ProjectCard>
 ```
