@@ -41,18 +41,18 @@ const Contact = ({ offset }: { offset: number }) => (
     </Content>
     <Divider speed={0.1} offset={offset}>
       <UpDown>
-        <SVG icon="upDown" hiddenMobile width={8} fill="iconDarkest" left="70%" top="20%" />
-        <SVG icon="triangle" width={8} stroke="iconDarkest" left="25%" top="5%" />
+        <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
+        <SVG icon="triangle" width={8} stroke color="icon_darkest" left="25%" top="5%" />
       </UpDown>
       <UpDownWide>
-        <SVG icon="triangle" width={12} stroke="iconBrightest" left="95%" top="50%" />
-        <SVG icon="circle" width={6} fill="iconBrightest" left="85%" top="15%" />
-        <SVG icon="upDown" hiddenMobile width={8} fill="iconDarkest" left="45%" top="10%" />
+        <SVG icon="triangle" width={12} stroke color="icon_brightest" left="95%" top="50%" />
+        <SVG icon="circle" width={6} color="icon_brightest" left="85%" top="15%" />
+        <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="45%" top="10%" />
       </UpDownWide>
-      <SVG icon="circle" width={6} fill="iconBrightest" left="4%" top="20%" />
-      <SVG icon="circle" width={12} fill="iconDarkest" left="70%" top="60%" />
-      <SVG icon="box" width={12} fill="iconDarkest" left="20%" top="30%" />
-      <SVG icon="hexa" width={8} stroke="iconDarkest" left="80%" top="70%" />
+      <SVG icon="circle" width={6} color="icon_brightest" left="4%" top="20%" />
+      <SVG icon="circle" width={12} color="icon_darkest" left="70%" top="60%" />
+      <SVG icon="box" width={12} color="icon_darkest" left="20%" top="30%" />
+      <SVG icon="hexa" width={8} stroke color="icon_darkest" left="80%" top="70%" />
     </Divider>
   </div>
 )
