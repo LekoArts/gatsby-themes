@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@0.0.3...@lekoarts/gatsby-theme-cara@0.0.4) (2019-07-31)
+
+
+### Bug Fixes
+
+* Remove white-space from Footer component ([2fa77a1](https://github.com/LekoArts/gatsby-themes/commit/2fa77a1))
+* **gatsby-theme-cara:** Colors in Contact section ([6d2d5dd](https://github.com/LekoArts/gatsby-themes/commit/6d2d5dd))
+
+
+
+
+
 ## [0.0.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@0.0.2...@lekoarts/gatsby-theme-cara@0.0.3) (2019-07-31)
 
 

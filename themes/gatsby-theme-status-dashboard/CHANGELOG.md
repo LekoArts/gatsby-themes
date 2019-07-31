@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@0.0.5...@lekoarts/gatsby-theme-status-dashboard@0.0.6) (2019-07-31)
+
+
+### Features
+
+* **gatsby-theme-status-dashboard:** Re-Export components for easier use ([e06c1cd](https://github.com/LekoArts/gatsby-themes/commit/e06c1cd))
+
+
+
+
+
 ## [0.0.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@0.0.4...@lekoarts/gatsby-theme-status-dashboard@0.0.5) (2019-07-31)
 
 

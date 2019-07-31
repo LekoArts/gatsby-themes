@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.8...@lekoarts/gatsby-theme-emma@0.0.9) (2019-07-31)
+
+
+### Bug Fixes
+
+* Remove white-space from Footer component ([2fa77a1](https://github.com/LekoArts/gatsby-themes/commit/2fa77a1))
+
+
+
+
+
 ## [0.0.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.7...@lekoarts/gatsby-theme-emma@0.0.8) (2019-07-31)
 
 
