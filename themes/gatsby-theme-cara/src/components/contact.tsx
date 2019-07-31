@@ -16,12 +16,12 @@ const InnerWave = styled.div`
   }
 `
 
-const Contact = ({ colors, offset }: { colors: { [key: string]: string }; offset: number }) => (
+const Contact = ({ offset }: { offset: number }) => (
   <div>
-    <Divider fill={colors.divider} speed={0.2} offset={offset}>
+    <Divider fill="divider" speed={0.2} offset={offset}>
       <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
         <InnerWave sx={{ position: `relative`, height: `full`, svg: { width: `100%`, height: `40vh` } }}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 338.05" preserveAspectRatio="none">
+          <svg xmlns="http://www.w3.org/2000/svg" id="contact-wave" viewBox="0 0 800 338.05" preserveAspectRatio="none">
             <path>
               <animate
                 attributeName="d"
@@ -42,18 +42,18 @@ const Contact = ({ colors, offset }: { colors: { [key: string]: string }; offset
     </Content>
     <Divider speed={0.1} offset={offset}>
       <UpDown>
-        <SVG icon="upDown" hiddenMobile width={8} fill={colors.iconDarkest} left="70%" top="20%" />
-        <SVG icon="triangle" width={8} stroke={colors.iconDarkest} left="25%" top="5%" />
+        <SVG icon="upDown" hiddenMobile width={8} fill="iconDarkest" left="70%" top="20%" />
+        <SVG icon="triangle" width={8} stroke="iconDarkest" left="25%" top="5%" />
       </UpDown>
       <UpDownWide>
-        <SVG icon="triangle" width={12} stroke={colors.iconBrightest} left="95%" top="50%" />
-        <SVG icon="circle" width={6} fill={colors.iconBrightest} left="85%" top="15%" />
-        <SVG icon="upDown" hiddenMobile width={8} fill={colors.iconDarkest} left="45%" top="10%" />
+        <SVG icon="triangle" width={12} stroke="iconBrightest" left="95%" top="50%" />
+        <SVG icon="circle" width={6} fill="iconBrightest" left="85%" top="15%" />
+        <SVG icon="upDown" hiddenMobile width={8} fill="iconDarkest" left="45%" top="10%" />
       </UpDownWide>
-      <SVG icon="circle" width={6} fill={colors.iconBrightest} left="4%" top="20%" />
-      <SVG icon="circle" width={12} fill={colors.iconDarkest} left="70%" top="60%" />
-      <SVG icon="box" width={12} fill={colors.iconDarkest} left="20%" top="30%" />
-      <SVG icon="hexa" width={8} stroke={colors.iconDarkest} left="80%" top="70%" />
+      <SVG icon="circle" width={6} fill="iconBrightest" left="4%" top="20%" />
+      <SVG icon="circle" width={12} fill="iconDarkest" left="70%" top="60%" />
+      <SVG icon="box" width={12} fill="iconDarkest" left="20%" top="30%" />
+      <SVG icon="hexa" width={8} stroke="iconDarkest" left="80%" top="70%" />
     </Divider>
   </div>
 )

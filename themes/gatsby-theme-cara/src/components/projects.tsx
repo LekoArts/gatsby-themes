@@ -8,7 +8,7 @@ import SVG from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 import ProjectsMDX from "../sections/projects.mdx"
 
-const Projects = ({ colors, offset }: { colors: { [key: string]: string }; offset: number }) => (
+const Projects = ({ offset }: { offset: number }) => (
   <div>
     <Divider
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
@@ -33,25 +33,25 @@ const Projects = ({ colors, offset }: { colors: { [key: string]: string }; offse
     </Content>
     <Divider speed={0.1} offset={offset} factor={2}>
       <UpDown>
-        <SVG icon="box" width={6} fill={colors.iconBrightest} left="85%" top="75%" />
-        <SVG icon="upDown" width={8} fill={colors.teal[5]} left="70%" top="20%" />
-        <SVG icon="triangle" width={8} stroke={colors.orange[5]} left="25%" top="5%" />
-        <SVG icon="circle" hiddenMobile width={24} fill={colors.iconBrightest} left="17%" top="60%" />
+        <SVG icon="box" width={6} color="icon_brightest" left="85%" top="75%" />
+        <SVG icon="upDown" width={8} color="icon_teal" left="70%" top="20%" />
+        <SVG icon="triangle" width={8} stroke color="icon_orange" left="25%" top="5%" />
+        <SVG icon="circle" hiddenMobile width={24} color="icon_brightest" left="17%" top="60%" />
       </UpDown>
       <UpDownWide>
-        <SVG icon="arrowUp" hiddenMobile width={16} fill={colors.green[5]} left="20%" top="90%" />
-        <SVG icon="triangle" width={12} stroke={colors.iconBrightest} left="90%" top="30%" />
-        <SVG icon="circle" width={16} fill={colors.yellow[5]} left="70%" top="90%" />
-        <SVG icon="triangle" hiddenMobile width={16} stroke={colors.teal[5]} left="18%" top="75%" />
-        <SVG icon="circle" width={6} fill={colors.iconBrightest} left="75%" top="10%" />
-        <SVG icon="upDown" hiddenMobile width={8} fill={colors.green[5]} left="45%" top="10%" />
+        <SVG icon="arrowUp" hiddenMobile width={16} color="icon_green" left="20%" top="90%" />
+        <SVG icon="triangle" width={12} stroke color="icon_brightest" left="90%" top="30%" />
+        <SVG icon="circle" width={16} color="icon_yellow" left="70%" top="90%" />
+        <SVG icon="triangle" hiddenMobile width={16} stroke color="icon_teal" left="18%" top="75%" />
+        <SVG icon="circle" width={6} color="icon_brightest" left="75%" top="10%" />
+        <SVG icon="upDown" hiddenMobile width={8} color="icon_green" left="45%" top="10%" />
       </UpDownWide>
-      <SVG icon="circle" hiddenMobile width={6} fill={colors.iconBrightest} left="4%" top="20%" />
-      <SVG icon="circle" width={12} fill={colors.pink[5]} left="80%" top="60%" />
-      <SVG icon="box" width={6} fill={colors.orange[5]} left="10%" top="10%" />
-      <SVG icon="box" width={12} fill={colors.yellow[5]} left="29%" top="26%" />
-      <SVG icon="hexa" width={16} stroke={colors.red[5]} left="75%" top="30%" />
-      <SVG icon="hexa" width={8} stroke={colors.yellow[5]} left="80%" top="70%" />
+      <SVG icon="circle" hiddenMobile width={6} color="icon_brightest" left="4%" top="20%" />
+      <SVG icon="circle" width={12} color="icon_pink" left="80%" top="60%" />
+      <SVG icon="box" width={6} color="icon_orange" left="10%" top="10%" />
+      <SVG icon="box" width={12} color="icon_yellow" left="29%" top="26%" />
+      <SVG icon="hexa" width={16} stroke color="icon_red" left="75%" top="30%" />
+      <SVG icon="hexa" width={8} stroke color="icon_yellow" left="80%" top="70%" />
     </Divider>
   </div>
 )

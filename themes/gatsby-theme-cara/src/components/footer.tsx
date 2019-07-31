@@ -17,7 +17,7 @@ const Footer = () => {
         type="button"
         aria-label="Toggle dark mode"
       >
-        {isDark ? `Dark` : `Light`}
+        {isDark ? `Light` : `Dark`}
       </button>
       Copyright &copy; {new Date().getFullYear()}. All rights reserved. <br />
       <Flex css={css({ justifyContent: `center`, alignItems: `center`, mt: 3 })}>

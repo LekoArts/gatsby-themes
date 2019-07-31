@@ -20,8 +20,10 @@ const Divider = ({ speed, offset, factor, bg, fill, clipPath, children, classNam
       width: `full`,
       height: `full`,
       background: bg,
-      svg: {
-        fill,
+      backgroundColor: bg,
+      "#contact-wave": {
+        color: fill,
+        fill: `currentColor`,
       },
       clipPath,
     })}

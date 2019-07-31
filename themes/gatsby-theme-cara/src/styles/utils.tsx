@@ -1,3 +1,1 @@
-import { css } from "theme-ui"
-
-export const hidden = css({ display: [`none`, `none`, `block`] })
+export const hidden = [`none`, `none`, `block`]
