@@ -3,7 +3,7 @@ import { Footer as ThemeFooter, Styled, Flex, css } from "theme-ui"
 
 const Footer = () => (
   <ThemeFooter>
-    Copyright &copy; {new Date().getFullYear()}. All rights reserved. <br />
+    Copyright &copy; {new Date().getFullYear()}. All rights reserved.<br />
     <Flex css={css({ justifyContent: `center`, alignItems: `center`, mt: 3 })}>
       <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
       {` `}
