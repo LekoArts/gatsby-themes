@@ -2,8 +2,7 @@ import React from "react"
 import { Global, css } from "@emotion/core"
 import { graphql } from "gatsby"
 import Helmet from "react-helmet"
-import Grid from "@lekoarts/gatsby-theme-status-dashboard/src/components/grid"
-import Info from "@lekoarts/gatsby-theme-status-dashboard/src/components/info"
+import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard"
 
 const Index = ({
   data: {

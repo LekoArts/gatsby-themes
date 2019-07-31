@@ -106,8 +106,7 @@ Import the components into your file and use them like normal React components (
 ```jsx
 import React from "react";
 
-import Grid from "@lekoarts/gatsby-theme-status-dashboard/src/components/grid";
-import Info from "@lekoarts/gatsby-theme-status-dashboard/src/components/info";
+import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard";
 
 const Index = () => {
   return (

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx, Styled } from "theme-ui"
 import CircleCI from "../icons/circle-ci"
 import GitHub from "../icons/github"

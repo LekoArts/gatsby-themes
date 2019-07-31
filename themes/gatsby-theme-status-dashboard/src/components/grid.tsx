@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import useNetlify from "../hooks/use-netlify"
 import useCircleCi from "../hooks/use-circle-ci"

@@ -10,7 +10,8 @@
   "scripts": {
     "cara": "yarn workspace cara",
     "emma": "yarn workspace emma",
-    "dashboard": "yarn workspace dashboard",
+    "dashboard": "yarn workspace status-dashboard",
+    "tsc": "tsc",
     "lint": "eslint './themes/**/*' './examples/**/*'",
     "lint:fix": "yarn lint --fix",
     "format": "prettier \"{examples,themes}/**/*.md\" --write",
