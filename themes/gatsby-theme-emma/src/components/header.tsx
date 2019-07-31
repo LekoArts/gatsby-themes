@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { Header as ThemeHeader, css, jsx, useColorMode, Styled } from "theme-ui"
 import { Link } from "gatsby"
 import Navigation from "./navigation"
