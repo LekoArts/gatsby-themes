@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { Footer as ThemeFooter, Styled, Flex, css, useColorMode, jsx } from "theme-ui"
 
 const Footer = () => {
@@ -25,7 +24,7 @@ const Footer = () => {
         {` `}
         <Styled.a
           css={css({ color: `text`, fontWeight: `semibold`, ml: 2 })}
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma"
+          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara"
         >
           Theme by LekoArts
         </Styled.a>

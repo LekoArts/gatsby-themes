@@ -2,9 +2,10 @@ import React from "react"
 import ProjectCard from "../components/project-card"
 
 export default {
-  ProjectCard: props => (
-    <ProjectCard link={props.link} title={props.title} bg={props.bg}>
-      {props.children}
+  // eslint-disable-next-line react/display-name
+  ProjectCard: ({ link, title, bg, children }) => (
+    <ProjectCard link={link} title={title} bg={bg}>
+      {children}
     </ProjectCard>
   ),
 }
