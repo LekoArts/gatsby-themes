@@ -22,8 +22,8 @@ const Projects = ({ colors, offset }: { colors: { [key: string]: string }; offse
         <div
           sx={{
             display: `grid`,
-            gridGap: 5,
-            gridTemplateColumns: `repeat(2, 1fr)`,
+            gridGap: [4, 4, 4, 5],
+            gridTemplateColumns: [`1fr`, `1fr`, `repeat(2, 1fr)`],
             h2: { gridColumn: `-1/1`, color: `white !important` },
           }}
         >
@@ -46,7 +46,7 @@ const Projects = ({ colors, offset }: { colors: { [key: string]: string }; offse
         <SVG icon="circle" width={6} fill={colors.iconBrightest} left="75%" top="10%" />
         <SVG icon="upDown" hiddenMobile width={8} fill={colors.green[5]} left="45%" top="10%" />
       </UpDownWide>
-      <SVG icon="circle" width={6} fill={colors.iconBrightest} left="4%" top="20%" />
+      <SVG icon="circle" hiddenMobile width={6} fill={colors.iconBrightest} left="4%" top="20%" />
       <SVG icon="circle" width={12} fill={colors.pink[5]} left="80%" top="60%" />
       <SVG icon="box" width={6} fill={colors.orange[5]} left="10%" top="10%" />
       <SVG icon="box" width={12} fill={colors.yellow[5]} left="29%" top="26%" />
