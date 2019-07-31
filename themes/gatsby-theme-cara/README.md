@@ -57,9 +57,9 @@ gatsby new cara LekoArts/gatsby-starter-portfolio-cara
 
 ### Theme options
 
-| Key            | Default Value      | Description                                                                                               |
-| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `basePath`     | `/`                | Root url for the theme                                                                                    |
+| Key        | Default Value | Description            |
+| ---------- | ------------- | ---------------------- |
+| `basePath` | `/`           | Root url for the theme |
 
 #### Example usage
 
@@ -71,7 +71,7 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-cara`,
       options: {
         // basePath defaults to `/`
-        basePath: `/sideproject`,
+        basePath: `/sideproject`
       }
     }
   ]
