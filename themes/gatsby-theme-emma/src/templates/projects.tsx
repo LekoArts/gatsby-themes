@@ -12,6 +12,7 @@ type Props = {
       nodes: {
         color: string
         slug: string
+        title: string
         service: string
         client: string
         cover: ChildImageSharp
@@ -55,6 +56,7 @@ export const pageQuery = graphql`
         slug
         service
         client
+        title
         cover {
           childImageSharp {
             fluid(maxWidth: 850, quality: 90, traceSVG: { color: "#e6e6e6" }) {

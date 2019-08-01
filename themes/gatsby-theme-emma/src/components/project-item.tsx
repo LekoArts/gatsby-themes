@@ -71,7 +71,7 @@ const ProjectItem = ({ node, style }: Props) => (
       >
         <Img fluid={node.cover.childImageSharp.fluid} />
       </div>
-      <Link to={node.slug}>
+      <Link to={node.slug} aria-label={`View detail page of ${node.title}`}>
         <img
           alt=""
           src={node.cover.childImageSharp.fluid.tracedSVG}
