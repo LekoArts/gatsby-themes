@@ -28,7 +28,7 @@
 
 Show the live statuses of your Netlify and CircleCI builds on your website! Easily integrate the customizable components into your site and adapt them to your theme (utilizing Theme UI).
 
-[**Demo Website**](https://status.lekoarts.de)
+[**Demo Website**](https://status.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-status-dashboard))
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
@@ -53,6 +53,8 @@ This will generate a new site that pre-configures use of the theme. Perfect for 
 ```sh
 gatsby new status-dashboard LekoArts/gatsby-status-dashboard
 ```
+
+[**View the starter's code**](https://github.com/LekoArts/gatsby-status-dashboard)
 
 ## Usage
 
