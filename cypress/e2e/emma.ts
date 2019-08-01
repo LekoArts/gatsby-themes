@@ -39,7 +39,7 @@ describe(`gatsby-theme-emma`, () => {
       .getByText(/10.06.2019/i)
       .getByText(/witchcraft/i)
   })
-  it('should link and display the about page', () => {
+  it(`should link and display the about page`, () => {
     cy.getByText(/about/i)
       .click()
       .waitForRouteChange()

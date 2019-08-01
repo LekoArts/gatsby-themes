@@ -91,10 +91,18 @@ jobs:
       - e2e-test:
           example-name: emma
 
+  e2e-test-cara:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: cara
+
 workflows:
   version: 2
   lint-test:
     jobs:
       - lint
       - e2e-test-emma:
+          <<: *e2e-test-workflow
+      - e2e-test-cara:
           <<: *e2e-test-workflow
