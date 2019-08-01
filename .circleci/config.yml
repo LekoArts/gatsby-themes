@@ -63,7 +63,6 @@ commands:
           name: Execute E2E script
           command: |
             chmod +x ./scripts/e2e-build.sh
-            git update-index --chmod=+x ./scripts/e2e-build.sh
             sh ./scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
