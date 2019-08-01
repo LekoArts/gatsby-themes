@@ -44,6 +44,20 @@ In the case of `examples/emma` this command would be `yarn workspace emma develo
 
 Commit your changes to a feature branch of your fork and open up a PR against this repository.
 
+### Testing
+
+#### Cypress
+
+The Cypress tests are written in TypeScript, too, and hence need to be compiled before usage. Run the following script for development:
+
+```sh
+bash ./scripts/e2e-dev.sh "example-name"
+```
+
+In the case of `examples/emma` the "example-name" would be "emma".
+
+The script starts `tsc` in _watch_ mode (for the files in `cypress/e2e`) and outputs them to `cypress/e2e/build` + starts `start-server-and-test` with Gatsby's development server and Cypress. Once the Cypress GUI opens select the fitting test (the others won't work, only the respective test + `smoke.js`!).
+
 ## 🤩 Newsletter
 
 If you want to receive monthly updates on my themes and all things related to Gatsby themes (relevant blog posts from me and other people) you can [subscribe to my newsletter](https://leko.io/newsletter-themes).
