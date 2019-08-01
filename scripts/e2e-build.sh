@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 EXAMPLE_NAME=$1
 
