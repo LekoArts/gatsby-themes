@@ -61,8 +61,8 @@ commands:
       - <<: *save_cache
       - run: sudo chmod +x ./scripts/e2e-build.sh
       - run:
-          - name: Execute test script
-          - command: ./scripts/e2e-build.sh "<< parameters.example-name >>"
+          name: Execute test script
+          command: ./scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:
