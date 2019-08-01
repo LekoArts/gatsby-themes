@@ -20,7 +20,7 @@ aliases:
     restore_cache:
       name: Restore Yarn Package Cache
       keys:
-        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
   install_node_modules: &install_node_modules
     run:
@@ -30,7 +30,7 @@ aliases:
   save_cache: &save_cache
     save_cache:
       name: Save Yarn Package Cache
-      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
       paths:
         - /home/circleci/.cache
 
@@ -61,9 +61,7 @@ commands:
       - <<: *save_cache
       - run:
           name: Execute E2E script
-          command: |
-            chmod +x ./scripts/e2e-build.sh
-            sh ./scripts/e2e-build.sh "<< parameters.example-name >>"
+          command: bash ./scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:
