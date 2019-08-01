@@ -52,7 +52,7 @@ aliases:
 commands:
   e2e-test:
     parameters:
-      name:
+      example-name:
         type: string
     steps:
       - checkout
@@ -87,7 +87,7 @@ jobs:
     <<: *e2e-executor
     steps:
       - e2e-test:
-          name: emma
+          example-name: emma
 
 workflows:
   version: 2
