@@ -12,7 +12,7 @@ executors:
 aliases:
   e2e-executor: &e2e-executor
     docker:
-      - image: cypress/browsers:node12.6.0-chrome75
+      - image: cypress/browsers:chrome69
         environment:
           TERM: xterm
 
@@ -68,8 +68,8 @@ commands:
       - run:
           name: Execute E2E script
           command: |
-            chmod +x ./scripts/e2e-build.sh
-            sh ./scripts/e2e-build.sh "<< parameters.example-name >>"
+            chmod +x scripts/e2e-build.sh
+            scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:

@@ -1,4 +1,10 @@
 #!/bin/bash
+
+if [ -z "$BASH_VERSION" ]
+then
+    exec bash "$0" "$@"
+fi
+
 EXAMPLE_NAME=$1
 
 command -v sudo && # The default node executor does need that
