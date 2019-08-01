@@ -14,6 +14,7 @@
     "tsc": "tsc",
     "lint": "eslint './themes/**/*' './examples/**/*'",
     "lint:fix": "yarn lint --fix",
+    "lint:ci": "yarn lint --format junit -o results/eslint/result.xml",
     "format": "prettier \"{examples,themes}/**/*.md\" --write",
     "format:mdx": "prettier --parser mdx \"{examples,themes}/**/*.mdx\" --write",
     "lerna": "lerna"

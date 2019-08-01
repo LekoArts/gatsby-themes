@@ -11,6 +11,9 @@
   <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-themes is released under the MIT license." />
   </a>
+  <a href="https://circleci.com/gh/LekoArts/gatsby-themes">
+    <img src="https://circleci.com/gh/LekoArts/gatsby-themes.svg?style=svg" alt="CircleCI Status" />
+  </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
