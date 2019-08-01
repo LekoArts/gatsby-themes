@@ -60,8 +60,16 @@ commands:
       - <<: *install_node_modules
       - <<: *save_cache
       - run:
+          name: Debug 1
+          command: pwd
+      - run:
+          name: Debug 2
+          command: ls -1a
+      - run:
           name: Execute E2E script
-          command: bash ./scripts/e2e-build.sh "<< parameters.example-name >>"
+          command: |
+            chmod +x ./scripts/e2e-build.sh
+            sh ./scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:

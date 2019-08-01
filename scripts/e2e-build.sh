@@ -1,5 +1,4 @@
 #!/bin/bash
-
 EXAMPLE_NAME=$1
 
 command -v sudo && # The default node executor does need that
