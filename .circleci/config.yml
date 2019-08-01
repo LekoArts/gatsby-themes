@@ -62,8 +62,9 @@ commands:
       - run:
           name: Execute E2E script
           command: |
-            chmod 755 scripts/e2e-build.sh
-            ./scripts/e2e-build.sh "<< parameters.example-name >>"
+            chmod +x ./scripts/e2e-build.sh
+            git update-index --chmod=+x ./scripts/e2e-build.sh
+            sh ./scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:
