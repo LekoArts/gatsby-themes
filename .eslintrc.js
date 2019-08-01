@@ -13,12 +13,17 @@ module.exports = {
     sourceType: 'module', // Allows for the use of imports
     ecmaFeatures: {
       jsx: true,
-    }
+    },
+    project: './tsconfig.json'
   },
   env: {
     browser: true,
     jest: true,
     node: true,
+  },
+  globals: {
+    cy: true,
+    Cypress: true,
   },
   rules: {
     "@typescript-eslint/no-unused-vars": [
