@@ -59,11 +59,10 @@ commands:
       - <<: *restore_cache
       - <<: *install_node_modules
       - <<: *save_cache
+      - run: sudo chmod +x ./scripts/e2e-build.sh
       - run:
           - name: Execute test script
-          - command: |
-              sudo chmod +x ./scripts/e2e-build.sh
-              ./scripts/e2e-build.sh "<< parameters.example-name >>"
+          - command: ./scripts/e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:
