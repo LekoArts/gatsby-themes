@@ -10,6 +10,12 @@ executors:
           TERM: xterm
 
 aliases:
+  e2e-executor: &e2e-executor
+    docker:
+      - image: cypress/browsers:chrome69
+        environment:
+          TERM: xterm
+
   restore_cache: &restore_cache
     restore_cache:
       name: Restore Yarn Package Cache
@@ -36,6 +42,31 @@ aliases:
     store_artifacts:
       path: results
 
+  e2e-test-workflow: &e2e-test-workflow
+    filters:
+      branches:
+        ignore:
+          - /docs.+/
+          - /www.+/
+
+commands:
+  e2e-test:
+    parameters:
+      name:
+        type: string
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - run: bash ./scripts/e2e-build.sh "<< parameters.name >>"
+      - <<: *store_results
+      - <<: *store_results_artifacts
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
+
 version: 2.1
 
 jobs:
@@ -52,8 +83,16 @@ jobs:
       - <<: *store_results
       - <<: *store_results_artifacts
 
+  e2e-test-emma:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          name: emma
+
 workflows:
   version: 2
   lint-test:
     jobs:
       - lint
+      - e2e-test-emma:
+          <<: *e2e-test-workflow
