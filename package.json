@@ -8,16 +8,20 @@
     "examples/*"
   ],
   "scripts": {
-    "cara": "yarn workspace cara",
-    "emma": "yarn workspace emma",
-    "dashboard": "yarn workspace status-dashboard",
     "tsc": "tsc",
+    "type-check": "tsc --noEmit",
+    "tsc:compile": "tsc --project cypress/tsconfig.json",
+    "tsc:compile:watch": "tsc --watch --project cypress/tsconfig.json",
     "lint": "eslint './themes/**/*' './examples/**/*'",
     "lint:fix": "yarn lint --fix",
     "lint:ci": "yarn lint --format junit -o results/eslint/result.xml",
     "format": "prettier \"{examples,themes}/**/*.md\" --write",
     "format:mdx": "prettier --parser mdx \"{examples,themes}/**/*.mdx\" --write",
-    "lerna": "lerna"
+    "lerna": "lerna",
+    "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/cypress/result.xml'",
+    "cy:open": "cypress open",
+    "ssat": "start-server-and-test",
+    "concurrently": "concurrently"
   },
   "husky": {
     "hooks": {
@@ -25,12 +29,17 @@
     }
   },
   "devDependencies": {
+    "@testing-library/cypress": "^4.0.5",
+    "@types/jest": "^24.0.16",
     "@types/node": "^12.0.12",
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.4",
     "@types/react-helmet": "^5.0.8",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
+    "cypress": "^3.4.1",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
@@ -39,10 +48,12 @@
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "gatsby-cypress": "^0.2.3",
     "husky": "^3.0.2",
     "lerna": "^3.15.0",
     "lint-staged": "^9.2.1",
     "prettier": "^1.18.2",
+    "start-server-and-test": "^1.9.1",
     "typescript": "^3.5.2"
   }
 }

@@ -7,6 +7,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
     "clean": "gatsby clean"
   },
@@ -22,5 +24,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
