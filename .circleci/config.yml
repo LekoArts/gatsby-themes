@@ -65,7 +65,9 @@ commands:
           command: cd scripts && ls -l e2e-build.sh
       - run:
           name: Execute E2E script
-          command: sh ./scripts/e2e-build.sh "<< parameters.example-name >>"
+          command: |
+            cd scripts && ls -l e2e-build.sh
+            bash ./e2e-build.sh "<< parameters.example-name >>"
       - <<: *store_results
       - <<: *store_results_artifacts
       - store_artifacts:
