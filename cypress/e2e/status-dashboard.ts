@@ -7,7 +7,9 @@ describe(`gatsby-theme-status-dashboard`, () => {
     cy.visit(`/`).waitForRouteChange()
   })
   it(`should render the title`, () => {
-    cy.getByText(/status dashboard - lekoarts/i)
+    cy.get(`h1`).within(() => {
+      cy.getByText(/status dashboard - lekoarts/i)
+    })
   })
   it(`should render the description`, () => {
     cy.getByText(/showing the statuses of my netlify deploys & circleci tests./i)
