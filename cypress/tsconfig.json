@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../node_modules",
+    "outDir": "e2e/build",
+    "strict": true,
+    "sourceMap": false,
+    "target": "es5",
+    "lib": ["es2015", "es2017", "dom"],
+    "types": ["cypress", "@testing-library/cypress/typings"]
+  },
+  "include": ["**/*.ts", "support/*.ts", "../node_modules/cypress"]
+}

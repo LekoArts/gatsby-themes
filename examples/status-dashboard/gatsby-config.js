@@ -4,9 +4,9 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: process.env.SITE_URL,
-    siteName: process.env.SITE_TITLE,
-    siteDescription: process.env.SITE_DESCRIPTION,
+    siteUrl: process.env.SITE_URL || `https://status.lekoarts.de`,
+    siteName: process.env.SITE_TITLE || `Status Dashboard - LekoArts`,
+    siteDescription: process.env.SITE_DESCRIPTION || `Showing the statuses of my Netlify deploys & CircleCI tests.`,
   },
   plugins: [
     `@lekoarts/gatsby-theme-status-dashboard`,

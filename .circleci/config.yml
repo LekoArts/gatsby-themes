@@ -10,11 +10,17 @@ executors:
           TERM: xterm
 
 aliases:
+  e2e-executor: &e2e-executor
+    docker:
+      - image: cypress/browsers:chrome69
+        environment:
+          TERM: xterm
+
   restore_cache: &restore_cache
     restore_cache:
       name: Restore Yarn Package Cache
       keys:
-        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+        - v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
   install_node_modules: &install_node_modules
     run:
@@ -24,7 +30,7 @@ aliases:
   save_cache: &save_cache
     save_cache:
       name: Save Yarn Package Cache
-      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}-{{ checksum ".circleci/config.yml" }}
+      key: v{{ .Environment.versionCache }}-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
       paths:
         - /home/circleci/.cache
 
@@ -35,6 +41,33 @@ aliases:
   store_results_artifacts: &store_results_artifacts
     store_artifacts:
       path: results
+
+  e2e-test-workflow: &e2e-test-workflow
+    filters:
+      branches:
+        ignore:
+          - /docs.+/
+          - /www.+/
+
+commands:
+  e2e-test:
+    parameters:
+      example-name:
+        type: string
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - run:
+          name: Execute E2E script
+          command: bash ./scripts/e2e-build.sh "<< parameters.example-name >>"
+      - <<: *store_results
+      - <<: *store_results_artifacts
+      - store_artifacts:
+          path: cypress/videos
+      - store_artifacts:
+          path: cypress/screenshots
 
 version: 2.1
 
@@ -52,8 +85,32 @@ jobs:
       - <<: *store_results
       - <<: *store_results_artifacts
 
+  e2e-test-emma:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: emma
+
+  e2e-test-cara:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: cara
+
+  e2e-test-status-dashboard:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: status-dashboard
+
 workflows:
   version: 2
   lint-test:
     jobs:
       - lint
+      - e2e-test-emma:
+          <<: *e2e-test-workflow
+      - e2e-test-cara:
+          <<: *e2e-test-workflow
+      - e2e-test-status-dashboard:
+          <<: *e2e-test-workflow

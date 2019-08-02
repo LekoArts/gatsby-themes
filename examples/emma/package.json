@@ -7,7 +7,10 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
+    "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
@@ -20,5 +23,8 @@
     "gatsby-plugin-sitemap": "^2.2.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
