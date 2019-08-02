@@ -97,6 +97,12 @@ jobs:
       - e2e-test:
           example-name: cara
 
+  e2e-test-status-dashboard:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: status-dashboard
+
 workflows:
   version: 2
   lint-test:
@@ -105,4 +111,6 @@ workflows:
       - e2e-test-emma:
           <<: *e2e-test-workflow
       - e2e-test-cara:
+          <<: *e2e-test-workflow
+      - e2e-test-status-dashboard:
           <<: *e2e-test-workflow
