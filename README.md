@@ -58,7 +58,9 @@ In the case of `examples/emma` the "example-name" would be "emma".
 
 The script starts `tsc` in _watch_ mode (for the files in `cypress/e2e`) and outputs them to `cypress/e2e/build` + starts `start-server-and-test` with Gatsby's development server and Cypress. Once the Cypress GUI opens select the fitting test (the others won't work, only the respective test + `smoke.js`!).
 
-CircleCI will run the `e2e-build.sh` script — you can use it to run the tests headless
+CircleCI will run the `e2e-build.sh` script — you can use it to run the tests headless.
+
+You can skip the e2e tests if you use `docs` or `www` in your branch name, e.g. `docs/improve-readme` or `www/add-new-entry`.
 
 ## 🤩 Newsletter
 
