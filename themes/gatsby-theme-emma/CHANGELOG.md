@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.9...@lekoarts/gatsby-theme-emma@0.0.10) (2019-08-02)
+
+
+### Features
+
+* Add Cypress ([#16](https://github.com/LekoArts/gatsby-themes/issues/16)) ([ca0ed29](https://github.com/LekoArts/gatsby-themes/commit/ca0ed29)), closes [#10](https://github.com/LekoArts/gatsby-themes/issues/10)
+
+
+
+
+
 ## [0.0.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.8...@lekoarts/gatsby-theme-emma@0.0.9) (2019-07-31)
 
 
