@@ -15,3 +15,15 @@ assignees: ''
 
   Before opening a new issue, please search existing issues:  https://github.com/LekoArts/gatsby-themes/issues
 -->
+
+## Summary
+
+Brief description of the theme that should be added.
+
+## Motivation
+
+Why should this theme be added?
+
+## Notes
+
+Anything to look out for, anything to consider when creating the theme.
