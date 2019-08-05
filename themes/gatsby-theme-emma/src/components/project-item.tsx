@@ -1,5 +1,5 @@
-import React from "react"
-import { css } from "theme-ui"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { animated } from "react-spring"
@@ -18,18 +18,18 @@ type Props = {
 
 const ProjectItem = ({ node, style }: Props) => (
   <animated.div
-    css={css({
+    sx={{
       position: `relative`,
       "&:before": {
         content: `""`,
         display: `block`,
         paddingTop: `100%`,
       },
-    })}
+    }}
     style={style}
   >
     <div
-      css={css({
+      sx={{
         left: 0,
         height: `100%`,
         position: `absolute`,
@@ -53,10 +53,10 @@ const ProjectItem = ({ node, style }: Props) => (
             textDecoration: `none`,
           },
         },
-      })}
+      }}
     >
       <div
-        css={css({
+        sx={{
           "> div": {
             height: `100%`,
             left: 0,
@@ -67,7 +67,7 @@ const ProjectItem = ({ node, style }: Props) => (
               position: `static !important`,
             },
           },
-        })}
+        }}
       >
         <Img fluid={node.cover.childImageSharp.fluid} />
       </div>
@@ -75,7 +75,7 @@ const ProjectItem = ({ node, style }: Props) => (
         <img
           alt=""
           src={node.cover.childImageSharp.fluid.tracedSVG}
-          css={css({
+          sx={{
             position: `absolute`,
             top: 0,
             left: 0,
@@ -87,10 +87,10 @@ const ProjectItem = ({ node, style }: Props) => (
             zIndex: -1,
             opacity: 0.08,
             objectFit: `cover`,
-          })}
+          }}
         />
         <div
-          css={css({
+          sx={{
             backgroundColor: node.color,
             height: `100%`,
             left: 0,
@@ -98,10 +98,10 @@ const ProjectItem = ({ node, style }: Props) => (
             top: 0,
             width: `100%`,
             zIndex: -2,
-          })}
+          }}
         />
-        <div css={css({ fontSize: 5, fontWeight: `bold` })}>{node.client}</div>
-        <div css={css({ fontSize: 2 })}>{node.service}</div>
+        <div sx={{ fontSize: 5, fontWeight: `bold` }}>{node.client}</div>
+        <div sx={{ fontSize: 2 }}>{node.service}</div>
       </Link>
     </div>
   </animated.div>

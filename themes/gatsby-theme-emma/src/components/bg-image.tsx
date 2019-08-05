@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import React from "react"
-import { css, useThemeUI } from "theme-ui"
+import { jsx, useThemeUI } from "theme-ui"
 import { rgba } from "polished"
 import theme from "../gatsby-plugin-theme-ui"
 
@@ -13,7 +14,7 @@ const BGImage = ({ children, color, slim }: Props) => {
 
   return (
     <div
-      css={css({
+      sx={{
         width: `100%`,
         height: slim ? [`400px`, `500px`] : [`500px`, `600px`, `700px`, `40vw`],
         maxHeight: `1200px`,
@@ -51,7 +52,7 @@ const BGImage = ({ children, color, slim }: Props) => {
           background: `linear-gradient(to bottom, ${shade} 0%, ${bg} 100%),
       linear-gradient(135deg, ${shade} 40%, ${bg} 100%), linear-gradient(-135deg, ${shade} 40%, ${bg} 100%)`,
         },
-      })}
+      }}
     >
       {children}
     </div>

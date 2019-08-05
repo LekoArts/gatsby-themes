@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Header as ThemeHeader, css, jsx, useColorMode, Styled } from "theme-ui"
+import { Header as ThemeHeader, jsx, useColorMode, Styled } from "theme-ui"
 import { Link } from "gatsby"
 import Navigation from "./navigation"
 import SocialLinks from "./social-links"
@@ -27,26 +27,26 @@ const Header = ({ meta, nav }: MetaType) => {
     <ThemeHeader>
       {!navEmpty && <Navigation nav={nav} />}
       <div
-        css={css({
+        sx={{
           fontWeight: `bold`,
           fontSize: 4,
           display: `flex`,
           flex: navEmpty ? 1 : [`1 0 100%`, 1],
           justifyContent: navEmpty ? `flex-start` : `center`,
           order: [1, 2],
-        })}
+        }}
       >
         <Styled.a
           aria-label={`${meta.siteTitle}, Back to homepage`}
           as={Link}
-          css={css({ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } })}
+          sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
           to="/"
         >
           {meta.siteTitle}
         </Styled.a>
       </div>
       <div
-        css={css({
+        sx={{
           a: {
             fontSize: 4,
             color: `text`,
@@ -63,7 +63,7 @@ const Header = ({ meta, nav }: MetaType) => {
           flex: 1,
           display: `flex`,
           order: 3,
-        })}
+        }}
       >
         <SocialLinks />
         <button

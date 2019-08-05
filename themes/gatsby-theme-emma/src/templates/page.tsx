@@ -1,7 +1,7 @@
-import React from "react"
+/** @jsx jsx */
 import { graphql } from "gatsby"
 import { animated, useSpring, config } from "react-spring"
-import { Container, Styled, css, Flex } from "theme-ui"
+import { Container, Styled, jsx, Flex } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -33,7 +33,7 @@ const PageTemplate = ({ data: { page } }: Props) => {
       <SEO title={page.title} description={page.excerpt} pathname={page.slug} />
       <Hero image={page.cover.childImageSharp.fluid} slim>
         <Flex
-          css={css({
+          sx={{
             position: `absolute`,
             bottom: 0,
             left: 0,
@@ -43,7 +43,7 @@ const PageTemplate = ({ data: { page } }: Props) => {
             padding: 4,
             zIndex: 2,
             flexDirection: `column`,
-          })}
+          }}
         >
           <animated.div style={titleProps}>
             <Styled.h1>{page.title}</Styled.h1>
