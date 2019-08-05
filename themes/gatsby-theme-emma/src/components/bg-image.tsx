@@ -1,11 +1,12 @@
 import React from "react"
 import { css, useThemeUI } from "theme-ui"
 import { rgba } from "polished"
+import theme from "../gatsby-plugin-theme-ui"
 
 type Props = { children: React.ReactNode; color?: string; slim: boolean }
 
 const BGImage = ({ children, color, slim }: Props) => {
-  const { theme, colorMode } = useThemeUI()
+  const { colorMode } = useThemeUI()
 
   const bg = colorMode === `light` ? theme.colors.background : theme.colors.modes.dark.background
   const shade = rgba(bg, 0.4)
