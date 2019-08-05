@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.11...@lekoarts/gatsby-theme-emma@0.0.12) (2019-08-05)
+
+
+### Bug Fixes
+
+* **gatsby-theme-emma:** Accessing theme value + sx prop ([#23](https://github.com/LekoArts/gatsby-themes/issues/23)) ([0d3fe60](https://github.com/LekoArts/gatsby-themes/commit/0d3fe60)), closes [system-ui/theme-ui#259](https://github.com/system-ui/theme-ui/issues/259)
+
+
+
+
+
 ## [0.0.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.10...@lekoarts/gatsby-theme-emma@0.0.11) (2019-08-05)
 
 
