@@ -19,7 +19,7 @@
     "lerna": "lerna",
     "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/cypress/result.xml'",
     "cy:open": "cypress open",
-    "ssat": "start-server-and-test",
+    "start-server-and-test": "start-server-and-test",
     "concurrently": "concurrently"
   },
   "husky": {
