@@ -1,0 +1,17 @@
+module.exports = themeOptions => ({
+  siteMetadata: {
+    siteTitle: `{{readme-name}}`,
+    siteTitleAlt: `{{readme-name}} - @lekoarts/gatsby-theme-{{kebabCase name}}`,
+    siteHeadline: `{{readme-name}} - Gatsby Theme from @lekoarts`,
+    siteUrl: `https://{{kebabCase name}}.lekoarts.de`,
+    siteDescription: `Stub description for {{kebabCase name}}`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@lekoarts_de`,
+    basePath,
+  },
+  plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-theme-ui`,
+  ],
+})

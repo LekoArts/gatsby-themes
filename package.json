@@ -17,6 +17,7 @@
     "lint:ci": "yarn lint --format junit -o results/eslint/result.xml",
     "format": "prettier \"**/*.{md,mdx,json}\" --write",
     "lerna": "lerna",
+    "plop": "plop",
     "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/cypress/result.xml'",
     "cy:open": "cypress open",
     "start-server-and-test": "start-server-and-test",
@@ -51,6 +52,7 @@
     "husky": "^3.0.2",
     "lerna": "^3.15.0",
     "lint-staged": "^9.2.1",
+    "plop": "^2.4.0",
     "prettier": "^1.18.2",
     "start-server-and-test": "^1.9.1",
     "typescript": "^3.5.2"
