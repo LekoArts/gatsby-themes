@@ -1,5 +1,5 @@
-import React from "react"
-import { css } from "theme-ui"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import { useTrail } from "react-spring"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
@@ -33,11 +33,11 @@ const Projects = ({
 
   return (
     <Layout
-      css={css({
+      sx={{
         display: `grid`,
         gridTemplateColumns: `repeat(auto-fit, minmax(280px, 1fr))`,
         width: `100%`,
-      })}
+      }}
     >
       {trail.map((style, index) => (
         <ProjectItem style={style} node={nodes[index]} key={nodes[index].slug} />

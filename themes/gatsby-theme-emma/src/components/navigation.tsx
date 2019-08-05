@@ -1,6 +1,6 @@
-import React from "react"
+/** @jsx jsx */
 import { Link } from "gatsby"
-import { css, Styled, Flex } from "theme-ui"
+import { jsx, Styled, Flex } from "theme-ui"
 
 type Props = {
   nav: {
@@ -12,17 +12,17 @@ type Props = {
 const Navigation = ({ nav }: Props) => (
   <Flex
     as="nav"
-    css={css({
+    sx={{
       flex: 1,
       justifyContent: `flex-start`,
       order: [2, 1],
-    })}
+    }}
     aria-label="Primary Navigation"
   >
     {nav.map(n => (
       <Styled.a
         as={Link}
-        css={css({ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } })}
+        sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
         key={n.slug}
         to={n.slug}
       >

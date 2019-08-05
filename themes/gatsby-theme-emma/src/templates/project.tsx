@@ -1,7 +1,7 @@
-import React from "react"
+/** @jsx jsx */
 import { graphql } from "gatsby"
 import { animated, useSpring, config } from "react-spring"
-import { Container, Styled, css, Flex } from "theme-ui"
+import { Container, Styled, jsx, Flex } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -31,25 +31,25 @@ type ItemProps = {
 
 const Item = ({ name, content }: ItemProps) => (
   <Flex
-    css={css({
+    sx={{
       flexDirection: `column`,
       "&:not(:last-of-type)": {
         mr: 5,
       },
       mb: 2,
-    })}
+    }}
   >
     <div
-      css={css({
+      sx={{
         textTransform: `uppercase`,
         color: `primary`,
         letterSpacing: `wider`,
         fontWeight: `semibold`,
-      })}
+      }}
     >
       {name}
     </div>
-    <div css={css({ fontSize: 2 })}>{content}</div>
+    <div sx={{ fontSize: 2 }}>{content}</div>
   </Flex>
 )
 
@@ -77,7 +77,7 @@ const ProjectTemplate = ({ data: { project } }: Props) => {
       </SEO>
       <Hero image={project.cover.childImageSharp.fluid} color={project.color}>
         <Flex
-          css={css({
+          sx={{
             position: `absolute`,
             bottom: 0,
             left: 0,
@@ -87,13 +87,13 @@ const ProjectTemplate = ({ data: { project } }: Props) => {
             padding: 4,
             zIndex: 2,
             flexDirection: `column`,
-          })}
+          }}
         >
           <animated.div style={titleProps}>
             <Styled.h1>{project.title}</Styled.h1>
           </animated.div>
           <animated.div style={infoProps}>
-            <Flex css={css({ mt: 4, mb: [2, 4], flexWrap: `wrap` })}>
+            <Flex sx={{ mt: 4, mb: [2, 4], flexWrap: `wrap` }}>
               <Item name="Client" content={project.client} />
               <Item name="Date" content={project.date} />
               <Item name="Service" content={project.service} />
