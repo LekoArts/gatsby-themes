@@ -1,5 +1,4 @@
 module.exports = {
-  "*.{js,jsx}": [`eslint './themes/**/*' './examples/**/*'`],
-  "*.mdx": [`prettier --parser mdx "{examples,themes}/**/*.mdx" --write`],
-  "*.md": [`prettier "{examples,themes}/**/*.md" --write`, `git add`],
+  "*.{js,jsx,ts,tsx}": [`eslint . --ignore-path .gitignore --ignore-path .prettierignore`, `git add`],
+  "*.{md,mdx,json}": [`prettier "**/*.{md,mdx,json}" --write`, `git add`],
 }

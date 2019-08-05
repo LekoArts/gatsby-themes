@@ -1,12 +1,15 @@
 {
-  "extends": [
-    "config:base",
-    ":disablePeerDependencies"
-  ],
+  "extends": ["config:base", ":disablePeerDependencies"],
   "includePaths": ["examples/**", "themes/**", "www"],
   "packageRules": [
     {
-      "packagePatterns": ["^eslint", "@typescript-eslint", "prettier", "typescript", "@types"],
+      "packagePatterns": [
+        "^eslint",
+        "@typescript-eslint",
+        "prettier",
+        "typescript",
+        "@types"
+      ],
       "groupName": "Linting & Formatting + TypeScript"
     },
     {
