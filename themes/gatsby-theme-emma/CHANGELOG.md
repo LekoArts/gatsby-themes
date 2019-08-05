@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.10...@lekoarts/gatsby-theme-emma@0.0.11) (2019-08-05)
+
+
+### Bug Fixes
+
+* **deps:** update emotion monorepo to ^10.0.15 ([#20](https://github.com/LekoArts/gatsby-themes/issues/20)) ([a7ac838](https://github.com/LekoArts/gatsby-themes/commit/a7ac838))
+* **deps:** update mdx to ^1.1.5 ([#21](https://github.com/LekoArts/gatsby-themes/issues/21)) ([d35c4d2](https://github.com/LekoArts/gatsby-themes/commit/d35c4d2))
+
+
+
+
+
 ## [0.0.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.9...@lekoarts/gatsby-theme-emma@0.0.10) (2019-08-02)
 
 
