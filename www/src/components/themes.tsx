@@ -38,7 +38,7 @@ const Themes = () => {
       <div sx={{ backgroundColor: `backgroundThemes` }}>
         <Listing />
       </div>
-      <Curved sx={{ transform: `matrix(1, 0, 0, -1, 0, 0)` }} />
+      <Curved sx={{ transform: `matrix(1, 0, 0, -1, 0, 0)`, position: `relative`, top: `-1px` }} />
     </section>
   )
 }
