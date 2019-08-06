@@ -11,7 +11,7 @@ const Hero = () => {
   const isBigScreen = useMediaQuery({ minWidth: `1100px` })
 
   return (
-    <React.Fragment>
+    <div>
       <Container as="section" data-name="hero" sx={{ my: [5, 6], mb: [6, 7] }}>
         <Flex sx={{ justifyContent: `space-between` }}>
           <Box>
@@ -72,7 +72,7 @@ const Hero = () => {
         />
         <CircleGrid color="indigo" size={175} top="220px" right={[`-180px`, `-120px`, `-120px`, `-70px`]} />
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 

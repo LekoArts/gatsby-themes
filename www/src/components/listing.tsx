@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from "react"
-import { Flex, Box, jsx, Styled, Container } from "theme-ui"
+import { Flex, Box, jsx, Styled, Container, useColorMode } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import { ChildImageSharp } from "../types"
@@ -69,6 +68,21 @@ const Listing = () => {
     allThemesYaml: { nodes: themes },
   } = useStaticQuery<Props>(ListingQuery)
 
+  const [mode] = useColorMode()
+
+  let buttonStyles = {}
+  let overlayStyles = {}
+
+  if (mode === `strangerThings`) {
+    buttonStyles = {
+      background: `black`,
+      border: `2px solid #E7251D`,
+    }
+    overlayStyles = {
+      backgroundColor: `rgba(231, 37, 29, 0.9)`,
+    }
+  }
+
   return (
     <Container sx={{ py: 4 }}>
       {themes.map((theme, index) => {
@@ -81,7 +95,7 @@ const Listing = () => {
               py: [5, 5, 6],
               display: `grid`,
               gridTemplateColumns: [`1fr`, `1fr`, `1fr 1fr`],
-              gridGap: [3, 4, 5, 6],
+              gridGap: [3, 4, 5],
               alignItems: `flex-start`,
             }}
           >
@@ -129,7 +143,13 @@ const Listing = () => {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-label={`Visit a preview of theme ${theme.title}`}
-                sx={cardStyle}
+                sx={{
+                  ...cardStyle,
+                  "[data-name='card-overlay']": {
+                    ...cardStyle[`[data-name='card-overlay']`],
+                    ...overlayStyles,
+                  },
+                }}
               >
                 <div data-name="card-overlay" aria-hidden>
                   <div sx={{ display: `flex`, alignItems: `center` }}>
@@ -142,7 +162,7 @@ const Listing = () => {
             <Flex sx={{ flexDirection: `column`, alignItems: `flex-start`, order: isEven ? 2 : [2, 2, 1] }}>
               <Styled.h1 as="h3">{theme.title}</Styled.h1>
               <Styled.p>{theme.description}</Styled.p>
-              <a href={theme.url} sx={{ variant: `buttons.primary`, mt: 3 }}>
+              <a href={theme.url} sx={{ variant: `buttons.primary`, mt: 3, ...buttonStyles }}>
                 Get the Theme
               </a>
             </Flex>

@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import React from "react"
-import { jsx } from "theme-ui"
-import Curved from "../../assets/curved.svg"
+import { jsx, useColorMode } from "theme-ui"
+import Curved from "../icons/curved"
 import Listing from "./listing"
 
 const bigHeadingStyle = {
@@ -17,21 +16,31 @@ const bigHeadingStyle = {
   bottom: [`2vw`, `3vw`, `3vw`, `4vw`],
 }
 
-const Themes = () => (
-  <section data-name="themes">
-    <div sx={{ position: `relative` }}>
-      <h2 sx={bigHeadingStyle}>Themes</h2>
-      <img
-        src={Curved}
-        alt=""
-        sx={{ position: `absolute`, bottom: 0, left: 0, right: 0, width: `100%`, height: `auto` }}
-      />
-    </div>
-    <div sx={{ backgroundColor: `white` }}>
-      <Listing />
-    </div>
-    <img src={Curved} alt="" sx={{ width: `100%`, height: `auto`, transform: `matrix(1, 0, 0, -1, 0, 0)` }} />
-  </section>
-)
+const Themes = () => {
+  const [mode] = useColorMode()
+
+  const isStrange = mode === `strangerThings`
+
+  return (
+    <section data-name="themes">
+      <div sx={{ position: `relative` }}>
+        <h2
+          sx={{
+            ...bigHeadingStyle,
+            transform: isStrange ? `matrix(1, 0, 0, -1, 0, 0)` : `none`,
+            textShadow: `none !important`,
+          }}
+        >
+          Themes
+        </h2>
+        <Curved sx={{ position: `absolute`, bottom: `-1px`, left: 0, right: 0 }} />
+      </div>
+      <div sx={{ backgroundColor: `backgroundThemes` }}>
+        <Listing />
+      </div>
+      <Curved sx={{ transform: `matrix(1, 0, 0, -1, 0, 0)` }} />
+    </section>
+  )
+}
 
 export default Themes

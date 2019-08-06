@@ -10,22 +10,70 @@ const sharedButtonStyles = {
 }
 
 const sharedHeadingStyles = {
-  color: `grayDark`,
+  color: `heading`,
 }
 
 export default {
   ...tailwind,
+  initialColorMode: `light`,
+  useCustomProperties: true,
   colors: {
     ...tailwind.colors,
     primary: tailwind.colors.indigo[6],
+    shadow: tailwind.colors.indigo[2],
     secondary: tailwind.colors.orange[5],
     background: tailwind.colors.gray[1],
+    backgroundThemes: tailwind.colors.white,
     textMuted: `#667488`,
     text: tailwind.colors.gray[8],
     grayDark: tailwind.colors.gray[9],
+    heading: tailwind.colors.gray[9],
     dark: tailwind.colors.gray[7],
     muted: tailwind.colors.gray[5],
     light: tailwind.colors.gray[3],
+    model: {
+      one: tailwind.colors.gray[2],
+      two: tailwind.colors.gray[3],
+      three: tailwind.colors.gray[4],
+      four: tailwind.colors.gray[5],
+    },
+    modes: {
+      dark: {
+        primary: tailwind.colors.indigo[5],
+        shadow: tailwind.colors.indigo[8],
+        background: tailwind.colors.gray[9],
+        backgroundThemes: tailwind.colors.gray[8],
+        textMuted: `#7a889c`,
+        text: tailwind.colors.gray[3],
+        grayDark: tailwind.colors.gray[1],
+        heading: tailwind.colors.gray[2],
+        dark: tailwind.colors.gray[5],
+        light: tailwind.colors.gray[7],
+        model: {
+          one: tailwind.colors.gray[8],
+          two: tailwind.colors.gray[7],
+          three: tailwind.colors.gray[6],
+          four: tailwind.colors.gray[5],
+        },
+      },
+      strangerThings: {
+        primary: `#E7251D`,
+        background: `#000114`,
+        shadow: `#710B25`,
+        textMuted: `#94a3b7`,
+        backgroundThemes: `#000114`,
+        text: `white`,
+        dark: tailwind.colors.gray[4],
+        heading: `#E7251D`,
+        light: `#1d0e0e`,
+        model: {
+          one: `#000109`,
+          two: `#000134`,
+          three: `#000138`,
+          four: `#000182`,
+        },
+      },
+    },
   },
   fonts: {
     body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
@@ -98,9 +146,10 @@ export default {
       fontSize: [1, 2],
       px: 4,
       py: `0.6rem`,
-      boxShadow: t => `0px 10px 15px ${t.colors.indigo[2]}`,
+      boxShadow: t => `0px 10px 15px ${t.colors.shadow}`,
       "&:hover": {
-        transform: `translateY(-1px)`,
+        transform: `translateY(-2px)`,
+        boxShadow: t => `0px 20px 25px ${t.colors.shadow}`,
       },
     },
     secondary: {
@@ -123,6 +172,9 @@ export default {
       backgroundColor: `primary`,
       fontSize: 1,
       boxShadow: `default`,
+      "&:hover": {
+        transform: `translateY(-1px)`,
+      },
     },
     outline: {
       ...sharedButtonStyles,
@@ -152,6 +204,18 @@ export default {
       color: `primary`,
       "&:hover": {
         transform: `translateY(-1px)`,
+      },
+    },
+    transparent: {
+      color: `inherit`,
+      bg: `transparent`,
+      transition: `all 0.3s ease-in-out`,
+      border: `none`,
+      "&:hover, &:focus": {
+        color: `primary`,
+        outline: `none`,
+        boxShadow: `0 0 0 2px`,
+        cursor: `pointer`,
       },
     },
   },
@@ -199,6 +263,9 @@ export default {
     },
     darkIndigo: {
       backgroundImage: t => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
+    },
+    strangerThings: {
+      backgroundImage: `radial-gradient(#BA230D, #520506)`,
     },
   },
 }

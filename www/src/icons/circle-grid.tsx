@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { useThemeUI, jsx } from "theme-ui"
 
 type Props = {
