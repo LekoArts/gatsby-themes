@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@0.0.8...@lekoarts/gatsby-theme-status-dashboard@0.0.9) (2019-08-06)
+
+
+### Bug Fixes
+
+* Type errors, typings ([07429da](https://github.com/LekoArts/gatsby-themes/commit/07429da))
+
+
+
+
+
 ## [0.0.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@0.0.7...@lekoarts/gatsby-theme-status-dashboard@0.0.8) (2019-08-05)
 
 

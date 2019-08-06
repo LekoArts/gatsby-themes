@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.13](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.12...@lekoarts/gatsby-theme-emma@0.0.13) (2019-08-06)
+
+
+### Bug Fixes
+
+* Type errors, typings ([07429da](https://github.com/LekoArts/gatsby-themes/commit/07429da))
+
+
+
+
+
 ## [0.0.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.11...@lekoarts/gatsby-theme-emma@0.0.12) (2019-08-05)
 
 

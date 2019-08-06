@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@0.0.6...@lekoarts/gatsby-theme-cara@0.0.7) (2019-08-06)
+
+
+### Bug Fixes
+
+* Type errors, typings ([07429da](https://github.com/LekoArts/gatsby-themes/commit/07429da))
+
+
+
+
+
 ## [0.0.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@0.0.5...@lekoarts/gatsby-theme-cara@0.0.6) (2019-08-05)
 
 
