@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { Container, jsx, Styled, Box, Flex } from "theme-ui"
 import { TwitterShareButton } from "react-share"
 import { Circle, Donut } from "./shapes"

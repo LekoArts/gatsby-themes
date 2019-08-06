@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { Container, Header as ThemeHeader, jsx, Flex, Box } from "theme-ui"
 import Logo from "../icons/logo"
 

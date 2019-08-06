@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { Flex, Box, jsx, Styled, Container } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
@@ -81,7 +80,7 @@ const Listing = () => {
               py: [5, 5, 6],
               display: `grid`,
               gridTemplateColumns: [`1fr`, `1fr`, `1fr 1fr`],
-              gridGap: [3, 4, 5, 6],
+              gridGap: [3, 4, 5],
               alignItems: `flex-start`,
             }}
           >
