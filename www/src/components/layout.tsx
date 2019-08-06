@@ -17,7 +17,12 @@ const Layout = ({ children, className }: LayoutProps) => {
     headingStyles = {
       "h1, h2, h3": {
         fontFamily: `Benguiat Bold !important`,
-        textShadow: `0px 0px 20px rgba(231,37,29,0.6)`,
+        textShadow: `-0.05rem -0.05rem 1px #ed2b12,
+        0.05rem -0.05rem 1px #ed2b12,
+        -0.05rem 0.05rem 1px #ed2b12,
+        0.05rem 0.05rem 1px #ed2b12,
+        0 0 15px #630100,
+        0 0 20px #450100`,
       },
     }
   }

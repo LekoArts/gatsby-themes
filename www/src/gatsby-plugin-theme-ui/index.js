@@ -64,7 +64,7 @@ export default {
         backgroundThemes: `#000114`,
         text: `white`,
         dark: tailwind.colors.gray[4],
-        heading: `#E7251D`,
+        heading: `#000114`,
         light: `#842626`,
         model: {
           one: `#000114`,

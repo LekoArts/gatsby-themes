@@ -5,7 +5,6 @@ import Listing from "./listing"
 
 const bigHeadingStyle = {
   fontSize: [`72px`, `96px`, `144px`],
-  color: `light`,
   fontFamily: `heading`,
   fontWeight: `heading`,
   lineHeight: `heading`,
@@ -28,7 +27,7 @@ const Themes = () => {
           sx={{
             ...bigHeadingStyle,
             transform: isStrange ? `matrix(1, 0, 0, -1, 0, 0)` : `none`,
-            textShadow: `none !important`,
+            color: isStrange ? `#000114` : `light`,
           }}
         >
           Themes
