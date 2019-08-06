@@ -101,6 +101,7 @@ export default {
       boxShadow: t => `0px 10px 15px ${t.colors.indigo[2]}`,
       "&:hover": {
         transform: `translateY(-1px)`,
+        boxShadow: t => `0px 20px 25px ${t.colors.indigo[2]}`,
       },
     },
     secondary: {
@@ -123,6 +124,9 @@ export default {
       backgroundColor: `primary`,
       fontSize: 1,
       boxShadow: `default`,
+      "&:hover": {
+        transform: `translateY(-1px)`,
+      },
     },
     outline: {
       ...sharedButtonStyles,
