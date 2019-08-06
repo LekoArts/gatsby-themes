@@ -4,7 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"
 
 extend({ OrbitControls })
 
-const Controls = props => {
+const Controls = (props: any) => {
   const { camera, canvas } = useThree()
   const ref = useRef()
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Footer as ThemeFooter, Styled, Flex, css, useColorMode, jsx } from "theme-ui"
+import { Footer as ThemeFooter, Styled, Flex, useColorMode, jsx } from "theme-ui"
 
 const Footer = () => {
   const [colorMode, setColorMode] = useColorMode()
@@ -20,11 +20,11 @@ const Footer = () => {
       </button>
       Copyright &copy; {new Date().getFullYear()}. All rights reserved.
       <br />
-      <Flex css={css({ justifyContent: `center`, alignItems: `center`, mt: 3 })}>
+      <Flex sx={{ justifyContent: `center`, alignItems: `center`, mt: 3 }}>
         <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
         {` `}
         <Styled.a
-          css={css({ color: `text`, fontWeight: `semibold`, ml: 2 })}
+          sx={{ color: `text`, fontWeight: `semibold`, ml: 2 }}
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara"
         >
           Theme by LekoArts

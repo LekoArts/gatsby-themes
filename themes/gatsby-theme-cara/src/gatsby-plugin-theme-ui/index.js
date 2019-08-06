@@ -161,4 +161,11 @@ export default {
       ml: 3,
     },
   },
+  texts: {
+    bigger: {
+      p: {
+        fontSize: [2, 3, 4],
+      },
+    },
+  },
 }

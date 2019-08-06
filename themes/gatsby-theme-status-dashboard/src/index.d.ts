@@ -1,1 +1,1 @@
-declare module 'theme-ui'
+// noop

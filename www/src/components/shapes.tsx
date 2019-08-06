@@ -44,7 +44,7 @@ const Donut = ({ size, color, width, top, left, right, className }: DonutProps) 
       height: size,
       width: size,
       backgroundColor: `transparent`,
-      border: t => t.colors[color][5],
+      border: (t: { colors: { [x: string]: any[] } }) => t.colors[color][5],
       borderWidth: width,
       borderStyle: `solid`,
       borderRadius: `full`,

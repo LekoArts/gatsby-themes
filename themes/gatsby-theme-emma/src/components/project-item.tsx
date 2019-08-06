@@ -8,6 +8,7 @@ import { ChildImageSharp } from "../types"
 type Props = {
   node: {
     color: string
+    title: string
     slug: string
     service: string
     client: string

@@ -37,7 +37,7 @@ const Hero = ({ offset }: { offset: number }) => (
       <SVG icon="hexa" width={16} stroke color="icon_darker" left="10%" top="50%" />
       <SVG icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
     </Divider>
-    <Content sx={{ p: { fontSize: [2, 3, 4] } }} speed={0.4} offset={offset}>
+    <Content sx={{ variant: `texts.bigger` }} speed={0.4} offset={offset}>
       <Inner>
         <Intro />
       </Inner>

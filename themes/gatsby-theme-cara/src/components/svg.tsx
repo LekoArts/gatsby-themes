@@ -73,7 +73,7 @@ type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | 
 
 type SVGProps = {
   stroke?: boolean
-  color?: string
+  color?: string | number | any
   width: number
   icon: IconType
   left: string
