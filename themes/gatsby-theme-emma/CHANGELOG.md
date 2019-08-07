@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.14](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.13...@lekoarts/gatsby-theme-emma@0.0.14) (2019-08-07)
+
+
+### Features
+
+* **gatsby-theme-emma:** missing projects don't break site anymore ([#29](https://github.com/LekoArts/gatsby-themes/issues/29)) ([61ad308](https://github.com/LekoArts/gatsby-themes/commit/61ad308))
+
+
+
+
+
 ## [0.0.13](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.12...@lekoarts/gatsby-theme-emma@0.0.13) (2019-08-06)
 
 
