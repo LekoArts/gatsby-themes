@@ -66,8 +66,6 @@ gatsby new emma LekoArts/gatsby-starter-portfolio-emma
 | `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
 | `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
 
-The usage of `content/projects` is mandatory. Have a look at the [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/emma) on how to create entries.
-
 The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
 #### Example usage
