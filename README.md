@@ -71,6 +71,13 @@ If you want to receive monthly updates on my themes and all things related to Ga
 
 ## 🎓 Learning Gatsby Themes
 
+### Articles from lekoarts.de
+
+- [How I used Theme UI to build my Gatsby Themes library](https://www.lekoarts.de/en/blog/how-i-used-theme-ui-to-build-my-gatsby-themes-library)
+- [Setting up a Gatsby Themes workspace with TypeScript, ESLint & Cypress](https://www.lekoarts.de/en/blog/setting-up-a-gatsby-themes-workspace-with-typescript-eslint-and-cypress)
+
+### Official resources
+
 - [Gatsbyjs.org - Gatsby Themes](https://www.gatsbyjs.org/docs/themes/)
 - [Building a Theme](https://www.gatsbyjs.org/tutorial/building-a-theme)
 - [Free egghead.io "Gatsby Theme Authoring" course](https://egghead.io/courses/gatsby-theme-authoring)
