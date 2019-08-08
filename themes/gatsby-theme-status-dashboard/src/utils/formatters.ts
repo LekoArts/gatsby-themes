@@ -1,3 +1,3 @@
-const formatters = [[`LeKoArts`, `LekoArts`]]
+const formatters = [{ LeKoArts: `LekoArts` }]
 
 export default formatters

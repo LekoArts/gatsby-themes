@@ -48,6 +48,8 @@ aliases:
         ignore:
           - /docs.+/
           - /www.+/
+    requires:
+      - unit_tests
 
 commands:
   e2e-test:
@@ -85,6 +87,21 @@ jobs:
       - <<: *store_results
       - <<: *store_results_artifacts
 
+  unit_tests:
+    executor: node
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+      - run:
+          name: Run Unit tests
+          command: yarn test:ci
+          environment:
+            JEST_JUNIT_OUTPUT: "results/jest/result.xml"
+      - <<: *store_results
+      - <<: *store_results_artifacts
+
   e2e-test-emma:
     <<: *e2e-executor
     steps:
@@ -108,6 +125,7 @@ workflows:
   lint-test:
     jobs:
       - lint
+      - unit_tests
       - e2e-test-emma:
           <<: *e2e-test-workflow
       - e2e-test-cara:
