@@ -1,13 +1,12 @@
-import formatters from "./formatters"
+import defaultFormatters from "./formatters"
 
-function replaceWords(input: string): string {
-  let modified: string
-
-  formatters.forEach(pair => {
-    modified = input.split(pair[0]).join(pair[1])
-  })
-
-  return modified
-}
+/**
+ * Replace single words in a string with different ones. Helpful for GitHub URLs with old usernames
+ * @param {string} input
+ * @param {Array.<Object>} [formatters]
+ * @return {string} Sanitized string
+ */
+const replaceWords = (input: string, formatters: { [key: string]: string }[] = defaultFormatters): string =>
+  formatters.reduce((f, s) => `${f}`.replace(Object.keys(s)[0], s[Object.keys(s)[0]]), input)
 
 export default replaceWords
