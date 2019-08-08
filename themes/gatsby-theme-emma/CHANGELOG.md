@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.15](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.14...@lekoarts/gatsby-theme-emma@0.0.15) (2019-08-08)
+
+
+### Bug Fixes
+
+* **gatsby-theme-emma:** Use theme from context again as bug with custom properties was fixed ([a7dd5f4](https://github.com/LekoArts/gatsby-themes/commit/a7dd5f4))
+
+
+
+
+
 ## [0.0.14](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.13...@lekoarts/gatsby-theme-emma@0.0.14) (2019-08-07)
 
 

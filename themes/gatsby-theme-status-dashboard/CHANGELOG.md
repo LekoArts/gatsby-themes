@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@0.0.9...@lekoarts/gatsby-theme-status-dashboard@0.0.10) (2019-08-08)
+
+
+### Features
+
+* Add jest ([#30](https://github.com/LekoArts/gatsby-themes/issues/30)) ([717e86d](https://github.com/LekoArts/gatsby-themes/commit/717e86d)), closes [#11](https://github.com/LekoArts/gatsby-themes/issues/11)
+
+
+
+
+
 ## [0.0.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@0.0.8...@lekoarts/gatsby-theme-status-dashboard@0.0.9) (2019-08-06)
 
 
