@@ -59,9 +59,9 @@ export default {
       strangerThings: {
         primary: `#E7251D`,
         background: `#000114`,
-        shadow: `#710B25`,
+        shadow: `#3d1023`,
         textMuted: `#94a3b7`,
-        backgroundThemes: `#000114`,
+        backgroundThemes: `transparent`,
         text: `white`,
         dark: tailwind.colors.gray[4],
         heading: `#000114`,
