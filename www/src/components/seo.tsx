@@ -7,6 +7,7 @@ const defaultProps = {
   meta: [],
   pathname: false,
   image: false,
+  title: false,
 }
 
 type Props = {
@@ -25,9 +26,10 @@ type Props = {
     | any
   pathname?: string
   image?: string
+  title?: string
 }
 
-const SEO = ({ description, meta, pathname, image }: Props) => {
+const SEO = ({ description, meta, pathname, image, title }: Props) => {
   const site = useSiteMetadata()
 
   const {
@@ -40,7 +42,7 @@ const SEO = ({ description, meta, pathname, image }: Props) => {
   } = site
 
   const seo = {
-    title: defaultTitle,
+    title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,

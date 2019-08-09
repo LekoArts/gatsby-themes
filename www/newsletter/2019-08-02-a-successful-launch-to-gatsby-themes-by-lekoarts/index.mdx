@@ -1,0 +1,58 @@
+---
+title: 'A successful launch to "Gatsby Themes by LekoArts"'
+date: 2019-08-02
+info: "Launch of the website, new themes and future plans for this repository"
+---
+
+# A successful launch to "Gatsby Themes by LekoArts" 🎉
+
+Hi!
+
+The last days were exiting and I'm really happy that the site and themes got so much attention on various platforms. With this project numerous "firsts" were involved (e.g. the 3D part) including this newsletter! Yeah, you heard right – this will be my first newsletter ever written and sent out.
+
+In this issue I want to talk about the launch of my website, a new theme I added, some future plans for the repository/site and at the end various community resources.
+
+I'll try to always include content from the community besides my own content :) Now have fun reading!
+
+## Launch of themes.lekoarts.de
+
+Both [mine](http://p.amxe.net/yh7n10br--evviai6r-18hb) and [Paul Henschel's](http://p.amxe.net/yh7n10br--igd3s5af-iwz) tweet got attention to the site and if you're interested in how I built it, here are some resources:
+
+- I wrote about using Theme UI with the site: [How I used Theme UI to build my Gatsby Themes library](http://p.amxe.net/yh7n10br--o4ixo2om-1cmm)
+- The site lives inside the linked monorepo's ["www"](http://p.amxe.net/yh7n10br--q1lil8j6-18xn) folder and is a regular Gatsby site. The "netlify.toml" file in the root tells Netlify to go to the mentioned path and execute the build command.
+- The awesome 3D model is realized with [react-three-fiber](http://p.amxe.net/yh7n10br--u7k6hu1u-1dv5) and a [codesandbox](http://p.amxe.net/yh7n10br--xssv7n7b-1bis) is also available!
+
+By the way, if you're new to React or Gatsby (or know someone who wants to build themes now) I'll tell you: You can learn React with Gatsby and eventually build themes yourself! I wrote about how [Gatsby scales with your expertise and scope](http://p.amxe.net/yh7n10br--4vrwyq3a-75k).
+
+## A new theme: Cara
+
+I ported my very popular Gatsby starter called "Cara" to a theme. The [starter](http://p.amxe.net/yh7n10br--9re4fzdy-r27) was using styled-component + TailwindCSS Babel macro before the switch, now the styles are powered by Theme UI.
+
+Some things stayed the same, some things changed in the process of converting the starter to a theme:
+
+- You can see a preview on [cara.lekoarts.de](http://p.amxe.net/yh7n10br--b7o960dv-qvv) and experience react-spring's parallax effects
+- As mentioned above the styles are now fully driven by Theme UI which also allowed a light/dark mode toggle switch
+- The individual sections of the page are written in MDX, so if you use the theme in your site you only have to edit those
+- The overall look of the site was kept the same
+
+If you're now interested in the theme you can head over to the [repository](http://p.amxe.net/yh7n10br--ek1b5bf7-xrn) to see how you can install and use it 😊
+
+## Future plans
+
+I intend to port all my remaining starters (which you can see in this – now deprecated – [overview](http://p.amxe.net/yh7n10br--kbg7b41z-jvu)) over to a theme and of course improve some things in the process. They'll all be styled with Theme UI and for example the Prismic.io starters will receive some extra love as they're very popular, too. In fact, using Gatsby themes for those is a really good use-case as the i18n version of the Prismic starter is a copy of the original one with only some small additions. Sub-theming, yeah!
+
+If you want to help maintain the themes you can have a look at the [open issues](http://p.amxe.net/yh7n10br--mp8opu3a-19a4) on the repository or bring in your own ideas. I'd highly appreciate that :)
+
+## #Community
+
+As promised I also want to highlight some resources from the community:
+
+- The Gatsby Theme Jam is over and wooow ... 🤯 A lot of entries came in. Have a look at the [showcase](http://p.amxe.net/yh7n10br--q1m3tdki-17rx) to see some really neat ideas. I personally really like the [Novela](http://p.amxe.net/yh7n10br--s4l07r36-u8t) theme.
+- Checkout [Jason Lengstorf's YouTube channel](http://p.amxe.net/yh7n10br--y0p0wtdj-jh1). He has videos on creating the Theme Jam showcase website and a lot of themes content in general
+- A short [egghead.io video](http://p.amxe.net/yh7n10br--4zpdyp3q-1421) by Amberley Romo explaining how to use the theme workspace starter
+
+I hope you enjoyed the first issue of my newsletter (and I didn't do too bad :3) and found the information helpful 🤓  
+I'd be interested in knowing from you: How much experience do you have with Gatsby – are you a beginner or proficient with Gatsby? Have you tried themes yet and what are you interested in?
+
+See you in a month 👋🏻
+Lennart

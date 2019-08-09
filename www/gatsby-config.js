@@ -21,13 +21,33 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `newsletter`,
+        path: `${__dirname}/newsletter`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
         anonymize: true,
       },
     },
-    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
+        // TODO: Remove once this is fixed
+        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
+      },
+    },
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        typeName: `Themes`,
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,

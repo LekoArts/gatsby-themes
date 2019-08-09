@@ -261,6 +261,9 @@ export default {
     indigo: {
       backgroundImage: t => `linear-gradient(72deg, ${t.colors.indigo[7]}, ${t.colors.indigo[5]})`,
     },
+    teal: {
+      backgroundImage: t => `linear-gradient(72deg, ${t.colors.teal[7]}, ${t.colors.teal[5]})`,
+    },
     darkIndigo: {
       backgroundImage: t => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
     },

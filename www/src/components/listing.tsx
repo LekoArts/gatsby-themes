@@ -7,7 +7,7 @@ import { Circle, Donut } from "./shapes"
 import iconExternal from "../icons/icon-external-window.svg"
 
 type Props = {
-  allThemesYaml: {
+  allThemes: {
     nodes: {
       title: string
       url: string
@@ -65,7 +65,7 @@ const cardStyle = {
 
 const Listing = () => {
   const {
-    allThemesYaml: { nodes: themes },
+    allThemes: { nodes: themes },
   } = useStaticQuery<Props>(ListingQuery)
 
   const [mode] = useColorMode()
@@ -185,7 +185,7 @@ export default Listing
 
 const ListingQuery = graphql`
   query {
-    allThemesYaml(sort: { fields: title, order: ASC }) {
+    allThemes(sort: { fields: title, order: ASC }) {
       nodes {
         title
         url
