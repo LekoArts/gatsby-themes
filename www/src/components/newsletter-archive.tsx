@@ -1,15 +1,15 @@
 /** @jsx jsx */
 import { Container, Styled, jsx, Flex } from "theme-ui"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 type NewsletterQueryProps = {
   newsletter: {
     totalCount: number
     nodes: {
       title: string
-      link: string
+      slug: string
       date: string
-      excerpt: string
+      info: string
     }[]
   }
 }
@@ -17,13 +17,13 @@ type NewsletterQueryProps = {
 const NewsletterArchive = () => {
   const { newsletter } = useStaticQuery<NewsletterQueryProps>(graphql`
     query {
-      newsletter: allNewsletterYaml(sort: { fields: date, order: DESC }) {
+      newsletter: allNewsletter(sort: { fields: date, order: ASC }) {
         totalCount
         nodes {
+          slug
           title
-          link
+          info
           date(formatString: "MMMM D, YYYY")
-          excerpt
         }
       }
     }
@@ -63,7 +63,8 @@ const NewsletterArchive = () => {
                 }}
               >
                 <Styled.a
-                  href={entry.link}
+                  as={Link}
+                  to={entry.slug}
                   sx={{
                     fontWeight: `semibold`,
                     mr: 3,
@@ -77,7 +78,7 @@ const NewsletterArchive = () => {
                 <div sx={{ mr: 3, display: [`none`, `block`], color: `primary` }}>•</div>
                 <div sx={{ fontSize: 1, fontStyle: [`italic`, `normal`], color: `text` }}>{entry.date}</div>
               </Flex>
-              <div sx={{ fontSize: 1 }}>{entry.excerpt}</div>
+              <div sx={{ fontSize: 1 }}>{entry.info}</div>
             </div>
           ))}
         </div>
