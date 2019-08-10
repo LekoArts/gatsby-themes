@@ -22,11 +22,14 @@ type NewsletterTemplateProps = {
 }
 
 const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) => (
-  <Layout>
+  <Layout newsletter>
     <SEO
       title={`${newsletter.title} | Gatsby Themes by LekoArts`}
       description={newsletter.excerpt}
       pathname={newsletter.slug}
+      datePublished={newsletter.date}
+      info={newsletter.info}
+      newsletter
     />
     <Container>
       <Styled.a
@@ -65,7 +68,22 @@ const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) =
           newsletter to receive new ones directly to your inbox!
         </div>
       </Styled.a>
-      <MDXRenderer>{newsletter.body}</MDXRenderer>
+      <div className="newsletter-speakable">
+        <MDXRenderer>{newsletter.body}</MDXRenderer>
+      </div>
+      <div
+        sx={{
+          fontSize: 0,
+          borderTopWidth: `1px`,
+          borderTopStyle: `solid`,
+          borderTopColor: `light`,
+          mt: 5,
+          pt: 3,
+          color: `textMuted`,
+        }}
+      >
+        Originally published on {newsletter.date}
+      </div>
       <Flex
         sx={{
           flexDirection: `column`,

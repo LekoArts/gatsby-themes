@@ -6,9 +6,9 @@ import "../fonts/benguiat.css"
 import SEO from "./seo"
 import Header from "./header"
 
-type LayoutProps = { children: React.ReactNode; className?: string }
+type LayoutProps = { children: React.ReactNode; className?: string; newsletter?: boolean }
 
-const Layout = ({ children, className }: LayoutProps) => {
+const Layout = ({ children, className, newsletter }: LayoutProps) => {
   const [mode] = useColorMode()
 
   let headingStyles = {}
@@ -67,7 +67,7 @@ const Layout = ({ children, className }: LayoutProps) => {
           ...headingStyles,
         })}
       />
-      <SEO />
+      {!newsletter && <SEO />}
       <Header />
       <Main className={className}>{children}</Main>
       <Footer>
