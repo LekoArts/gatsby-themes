@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
+import useBuildTime from "../hooks/use-build-time"
 
 const defaultProps = {
   description: false,
@@ -8,6 +9,9 @@ const defaultProps = {
   pathname: false,
   image: false,
   title: false,
+  newsletter: false,
+  datePublished: false,
+  info: false,
 }
 
 type Props = {
@@ -27,15 +31,21 @@ type Props = {
   pathname?: string
   image?: string
   title?: string
+  newsletter?: boolean
+  datePublished?: string
+  info?: string
 }
 
-const SEO = ({ description, meta, pathname, image, title }: Props) => {
+const SEO = ({ description, meta, pathname, image, title, newsletter, datePublished, info }: Props) => {
   const site = useSiteMetadata()
+  const buildTime = useBuildTime()
 
   const {
+    siteTitle,
     siteTitleAlt: defaultTitle,
     siteUrl,
     siteDescription: defaultDescription,
+    siteHeadline,
     siteLanguage,
     siteImage: defaultImage,
     author,
@@ -47,6 +57,138 @@ const SEO = ({ description, meta, pathname, image, title }: Props) => {
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
   }
+
+  const schemaHomepage = {
+    "@context": `http://schema.org`,
+    "@type": `WebPage`,
+    author: {
+      "@id": `${siteUrl}/#identity`,
+    },
+    copyrightHolder: {
+      "@id": `${siteUrl}/#identity`,
+    },
+    copyrightYear: `2019-07-17T23:33:12-05:00`,
+    creator: {
+      "@id": `${siteUrl}/#creator`,
+    },
+    dateModified: buildTime,
+    datePublished: `2019-07-17T23:33:12-05:00`,
+    description: defaultDescription,
+    headline: siteHeadline,
+    image: {
+      "@type": `ImageObject`,
+      url: seo.image,
+    },
+    inLanguage: `en`,
+    mainEntityOfPage: siteUrl,
+    name: defaultTitle,
+    publisher: {
+      "@id": `${siteUrl}/#creator`,
+    },
+    url: siteUrl,
+  }
+
+  const orgaCreator = (input: string) => ({
+    "@context": `http://schema.org`,
+    "@id": `${siteUrl}/#${input}`,
+    "@type": `Organization`,
+    address: {
+      "@type": `PostalAddress`,
+      addressCountry: `DE`,
+      addressLocality: ``,
+      postalCode: ``,
+    },
+    name: defaultTitle,
+    alternateName: siteTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    email: `hello@lekoarts.de`,
+    founder: `LekoArts`,
+    foundingDate: `2017-12-08`,
+    foundingLocation: `Germany`,
+    image: {
+      "@type": `ImageObject`,
+      url: `${siteUrl}/social/avatar.png`,
+      height: `512`,
+      width: `512`,
+    },
+    logo: {
+      "@type": `ImageObject`,
+      url: `${siteUrl}/social/avatar_small.png`,
+      height: `60`,
+      width: `60`,
+    },
+    sameAs: [
+      `https://github.com/LekoArts`,
+      `https://www.instagram.com/lekoarts.de`,
+      `https://www.behance.net/lekoarts`,
+      `https://dribbble.com/LekoArts`,
+      `https://youtube.de/LekoArtsDE`,
+      `https://twitter.com/lekoarts_de`,
+    ],
+  })
+
+  const schemaNewsletter = {
+    "@context": `http://schema.org`,
+    "@type": `Article`,
+    articleSection: `Newsletter`,
+    author: {
+      "@id": `${siteUrl}/#identity`,
+    },
+    copyrightHolder: {
+      "@id": `${siteUrl}/#identity`,
+    },
+    copyrightYear: `2019`,
+    creator: {
+      "@id": `${siteUrl}/#creator`,
+    },
+    dateModified: buildTime,
+    datePublished,
+    description: seo.description,
+    genre: `Technology`,
+    headline: info,
+    image: {
+      "@type": `ImageObject`,
+      url: seo.image,
+    },
+    inLanguage: `en`,
+    mainEntityOfPage: seo.url,
+    name: seo.title,
+    publisher: {
+      "@id": `${siteUrl}/#creator`,
+    },
+    speakable: {
+      "@type": `SpeakableSpecification`,
+      cssSelector: [`.newsletter-speakable`],
+    },
+    url: seo.url,
+  }
+
+  const breadcrumbs = {
+    "@context": `http://schema.org`,
+    "@type": `BreadcrumbList`,
+    description: `Breadcrumbs list`,
+    itemListElement: [
+      {
+        "@type": `ListItem`,
+        item: {
+          "@id": siteUrl,
+          name: `Homepage`,
+        },
+        position: 1,
+      },
+      {
+        "@type": `ListItem`,
+        item: {
+          "@id": seo.url,
+          name: seo.title,
+        },
+        position: 2,
+      },
+    ],
+    name: `Breadcrumbs`,
+  }
+
   return (
     <Helmet meta={meta}>
       <html lang={siteLanguage} />
@@ -75,6 +217,15 @@ const SEO = ({ description, meta, pathname, image, title }: Props) => {
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a67d8" />
       <meta name="msapplication-TileColor" content="#f7fafc" />
+      {newsletter && <meta name="article:published_time" content={datePublished} />}
+      <script type="application/ld+json">{JSON.stringify(orgaCreator(`identity`))}</script>
+      <script type="application/ld+json">{JSON.stringify(orgaCreator(`creator`))}</script>
+      {newsletter ? (
+        <script type="application/ld+json">{JSON.stringify(schemaNewsletter)}</script>
+      ) : (
+        <script type="application/ld+json">{JSON.stringify(schemaHomepage)}</script>
+      )}
+      {newsletter && <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>}
     </Helmet>
   )
 }

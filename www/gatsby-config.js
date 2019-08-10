@@ -8,6 +8,7 @@ module.exports = {
     siteTitleAlt: `Free & Open Source Gatsby Themes by LekoArts`,
     siteUrl: `https://themes.lekoarts.de`,
     siteDescription: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
+    siteHeadline: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website`,
     siteLanguage: `en`,
     siteImage: `/banner.png`,
     author: `@lekoarts_de`,

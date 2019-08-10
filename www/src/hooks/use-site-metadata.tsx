@@ -17,6 +17,7 @@ const useSiteMetadata = () => {
           siteTitleAlt
           siteUrl
           siteDescription
+          siteHeadline
           siteLanguage
           siteImage
           author
