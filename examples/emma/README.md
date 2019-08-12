@@ -70,15 +70,34 @@ This starter creates a new Gatsby site that installs and configures the theme [`
 
 Please have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI.
 
-### Adding a new project
+### Adding content
+
+#### Adding a new project
+
+New projects will be shown on the index page of this theme and can be added by creating MDX files inside `content/projects`. General setup:
 
 1. Create a new folder inside `content/projects`
-1. Create a new `index.mdx` file, and add the frontmatter (have a look at the already existing files for reference)
+1. Create a new `index.mdx` file, and add the frontmatter
 1. Add an image to the created folder (from step 1)
 1. Reference this image as your `cover` in the frontmatter
 1. Write your content below the frontmatter
 
-### Adding a new page
+**Frontmatter reference:**
+
+```md
+---
+client: "LekoArts"
+title: "Theme"
+cover: "./image.jpg"
+date: "2019-06-10"
+service: "Theme"
+color: "#8e9d31"
+---
+```
+
+#### Adding a new page
+
+Additional pages will be shown in the navigation (left side) and allow you to display content other than projects, e.g. a "Contact" or "About Me" page. General setup:
 
 1. Create a new folder inside `content/pages`
 1. Create a new `index.mdx` file, and add the frontmatter
@@ -86,9 +105,23 @@ Please have a look at the theme's README and files to see what options are avail
 1. Reference this image as your `cover` in the frontmatter
 1. Write your content below the frontmatter
 
+**Frontmatter reference:**
+
+```md
+---
+title: "Name"
+slug: "/name"
+cover: "./name.jpg"
+---
+```
+
 ### Change your `static` folder
 
 The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
+
+### Modifying components & this starter
+
+Please have a look at [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma)'s README to see how you can change/shadow components. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma/` to shadow/override files.
 
 ## 🎓 Learning Gatsby
 
@@ -103,3 +136,11 @@ Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's webs
 - **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Reference Guides_ and _Gatsby API_ sections in the sidebar.
+
+## 🌟Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
+
+If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)
