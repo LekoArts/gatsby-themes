@@ -11,5 +11,10 @@
     "skipLibCheck": true,
     "esModuleInterop": true
   },
-  "include": ["./themes/*/src/**/*", "./www/src/**/*", "./examples/*/src/**/*"]
+  "include": [
+    "./themes/**/src/**/*",
+    "./www/src/**/*",
+    "./examples/**/src/**/*"
+  ],
+  "exclude": ["node_modules", "themes/**/node_modules"]
 }
