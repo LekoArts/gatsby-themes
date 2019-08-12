@@ -2163,7 +2163,7 @@
     unist-builder "1.0.4"
     unist-util-visit "2.0.0"
 
-"@mdx-js/react@^1.2.2":
+"@mdx-js/react@^1.1.5", "@mdx-js/react@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.2.2.tgz#563ad016e3b49a7478c9848e39c66637443dca1c"
   integrity sha512-vmbZ8AttReR6krZjHBYsF+pN9Cikd/QpBUeP14inqwBKMXHYdOEdYzfm5uer3tkl3iwhxKWAVLxHTh8fwICEZw==
@@ -2439,7 +2439,7 @@
   resolved "https://registry.yarnpkg.com/@theme-ui/preset-tosh/-/preset-tosh-0.2.29.tgz#26edc35ae321f05d62bb7eef3cbbc56e33fbac13"
   integrity sha512-4HSdziukKqCC0tR3VfHun8pTnLOQYXFYeP8MWjvjLaIHEd/E1p0rwunGg5LX22/Tj4ri5UUWadAxOvkDn+U+wQ==
 
-"@theme-ui/presets@^0.2.30":
+"@theme-ui/presets@^0.2.15", "@theme-ui/presets@^0.2.30":
   version "0.2.30"
   resolved "https://registry.yarnpkg.com/@theme-ui/presets/-/presets-0.2.30.tgz#4bec0548c83079bc98d7881c1908b7acf3b96f21"
   integrity sha512-mAffgfANul5IWm87bJopdN+zJgSn1Ngf86aiaYihFr0gvgARRQZUa7e7ukQb6pUczD9mNVth0eDhVak20QpCZw==
@@ -8008,6 +8008,11 @@ gatsby-plugin-sitemap@^2.2.3:
     minimatch "^3.0.4"
     pify "^3.0.0"
     sitemap "^1.12.0"
+
+gatsby-plugin-theme-ui@^0.2.18:
+  version "0.2.33"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.2.33.tgz#655dc5630aaa026ac06c7eaba26099e9cd41ddf9"
+  integrity sha512-X1xjej0lp1AFeL5nAZOYz45NqZ85ofx5Eg1V7Vb/S7yB4WTjv3JCKcxIbaQgCewqA9swujpdxMG0bPQ62Xr29g==
 
 gatsby-plugin-theme-ui@^0.2.29:
   version "0.2.29"
@@ -16480,6 +16485,16 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+theme-ui@^0.2.21:
+  version "0.2.33"
+  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.2.33.tgz#610a0b7dc323f3bb2f2130e35cd5bc9c9e2f7d7e"
+  integrity sha512-JbMW96T7vkytFp5i+N1HNm7iYQKyY7I+/dkCU71Vo3K36CT1OLapVTRa89ZWCEZpou8E8fSd4Veg+Q4p3N9/Gg==
+  dependencies:
+    "@emotion/is-prop-valid" "^0.8.1"
+    "@styled-system/css" "^5.0.16"
+    deepmerge "^4.0.0"
+    react "^16.8.0"
 
 theme-ui@^0.2.31:
   version "0.2.31"
