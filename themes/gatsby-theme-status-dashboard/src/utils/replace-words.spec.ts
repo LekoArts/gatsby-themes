@@ -1,4 +1,4 @@
-import replaceWords from "../replace-words"
+import replaceWords from "./replace-words"
 
 describe(`replaceWords`, () => {
   test(`should only replace the chosen word`, () => {
