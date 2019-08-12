@@ -1,6 +1,11 @@
+const glob = require(`glob`)
+
+const pkgs = glob.sync(`./themes/*`).map(p => p.replace(/^\./, `<rootDir>`))
+
 module.exports = {
   preset: `ts-jest`,
   verbose: true,
+  roots: [...pkgs],
   moduleNameMapper: {
     ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/jest/__mocks__/file-mock.js`,
   },
