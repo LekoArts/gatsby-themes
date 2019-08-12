@@ -20,12 +20,11 @@ const RGBToCMYK = (R: number, G: number, B: number): { C: number; M: number; Y: 
   }
 
   if (r === 0 && g === 0 && b === 0) {
-    k = 1
     return {
       C: 0,
       M: 0,
       Y: 0,
-      K: 1,
+      K: 100,
     }
   }
 
