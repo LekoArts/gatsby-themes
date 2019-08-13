@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
 
@@ -38,6 +37,9 @@ const ColorSwatch = ({ color, name, minimal }: ColorSwatchProps) => {
       <div
         sx={{
           backgroundColor: hex,
+          boxShadow: hex === `#ffffff` ? `inset 0 0 0 1px #a0aec0` : `none`,
+          borderTopLeftRadius: `lg`,
+          borderTopRightRadius: `lg`,
           display: `flex`,
           height: `125px`,
           alignItems: `flex-end`,
@@ -80,18 +82,16 @@ const ColorSwatch = ({ color, name, minimal }: ColorSwatchProps) => {
           {hex}
         </div>
         {!minimal && (
-          <React.Fragment>
-            <div sx={{ ...swatchContentStyles }}>
-              <span>RGB</span>
-              {RGB}
-            </div>
-            {specimensOptions.CMYK && (
-              <div sx={{ ...swatchContentStyles }}>
-                <span>CMYK</span>
-                {CMYK}
-              </div>
-            )}
-          </React.Fragment>
+          <div sx={{ ...swatchContentStyles }}>
+            <span>RGB</span>
+            {RGB}
+          </div>
+        )}
+        {!minimal && specimensOptions.CMYK && (
+          <div sx={{ ...swatchContentStyles }}>
+            <span>CMYK</span>
+            {CMYK}
+          </div>
         )}
       </div>
     </div>
