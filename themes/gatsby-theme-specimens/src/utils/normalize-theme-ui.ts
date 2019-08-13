@@ -1,7 +1,14 @@
-import { get } from "theme-ui"
+import { get } from "@styled-system/css"
 
-const normalizeThemeUI = ({ colors, omit = [`modes`, `transparent`] }) => {
-  const arr = []
+type normalizeProps = {
+  colors: {
+    [key: string]: string | (string | null)[] | any
+  }
+  omit?: string[]
+}
+
+const normalizeThemeUI = ({ colors, omit = [`modes`, `transparent`] }: normalizeProps) => {
+  const arr: { name: string; color: string }[] = []
 
   Object.entries(colors)
     .sort(([_, colorA]) => (typeof colorA === `string` ? -1 : 1))

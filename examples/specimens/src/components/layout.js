@@ -13,13 +13,15 @@ const Layout = ({ children }) => (
           color: #fff;
           background-color: #3490dc;
         }
+        html {
+          font-size: 18px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+            "Helvetica Neue", sans-serif;
+        }
         body {
           border: 0;
           margin: 0;
           padding: 0;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-            "Helvetica Neue", sans-serif;
-          font-size: 18px;
           color: #24242d;
           background: #fff;
         }

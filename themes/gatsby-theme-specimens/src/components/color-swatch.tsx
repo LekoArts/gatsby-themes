@@ -10,10 +10,10 @@ const swatchContentStyles = {
   fontSize: 1,
   mt: 1,
   span: {
-    color: `gray.7`,
+    color: `gray.6`,
     letterSpacing: `wide`,
     fontWeight: `medium`,
-    fontSize: `0.75rem`,
+    fontSize: `0.7rem`,
     mb: 2,
     textTransform: `uppercase`,
   },
@@ -23,9 +23,10 @@ type ColorSwatchProps = {
   color: string
   name?: string
   minimal?: boolean
+  className?: string
 }
 
-const ColorSwatch = ({ color, name, minimal }: ColorSwatchProps) => {
+const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
   const { hex, RGB, CMYK, ratings, specimensOptions } = useColorUtils(color)
 
   return (
@@ -33,6 +34,7 @@ const ColorSwatch = ({ color, name, minimal }: ColorSwatchProps) => {
       sx={{
         variant: `swatches.default`,
       }}
+      className={className}
     >
       <div
         sx={{
@@ -70,7 +72,7 @@ const ColorSwatch = ({ color, name, minimal }: ColorSwatchProps) => {
           </div>
         ))}
       </div>
-      <div sx={{ p: 3, display: `flex`, flexWrap: `wrap`, backgroundColor: `gray.1` }}>
+      <div sx={{ p: 3, pb: 1, display: `flex`, flexWrap: `wrap`, backgroundColor: `gray.1` }}>
         {name && (
           <div sx={{ ...swatchContentStyles }}>
             <span>Name</span>

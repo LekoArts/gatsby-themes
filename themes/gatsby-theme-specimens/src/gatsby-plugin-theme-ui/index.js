@@ -11,6 +11,7 @@ export const commonAlertStyles = {
   gridTemplateColumns: `35px 1fr`,
   gridColumnGap: 3,
   alignItems: `center`,
+  fontSize: 1,
   svg: {
     width: 8,
     height: 8,
@@ -99,8 +100,8 @@ export default {
   swatches: {
     default: {
       display: `inline-block`,
-      flexBasis: `250px`,
-      maxWidth: `250px`,
+      flexBasis: `275px`,
+      maxWidth: `275px`,
       width: `100%`,
       borderRadius: `lg`,
       overflow: `hidden`,
