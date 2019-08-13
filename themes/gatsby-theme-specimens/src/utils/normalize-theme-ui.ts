@@ -7,6 +7,11 @@ type normalizeProps = {
   omit?: string[]
 }
 
+/**
+ * Normalize a Theme UI theme file to use with "@lekoarts/gatsby-theme-specimens"
+ * @param colors {Object}
+ * @param omit {Array.<string>}
+ */
 const normalizeThemeUI = ({ colors, omit = [`modes`, `transparent`] }: normalizeProps) => {
   const arr: { name: string; color: string }[] = []
 

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
+import useSpecimensOptions from "../hooks/useSpecimensOptions"
 
 const swatchContentStyles = {
   flexBasis: `50%`,
@@ -27,7 +28,8 @@ type ColorSwatchProps = {
 }
 
 const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
-  const { hex, RGB, CMYK, ratings, specimensOptions } = useColorUtils(color)
+  const { hex, RGB, CMYK, ratings } = useColorUtils(color)
+  const specimensOptions = useSpecimensOptions()
 
   return (
     <div
