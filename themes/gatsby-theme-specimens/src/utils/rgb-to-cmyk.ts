@@ -1,5 +1,13 @@
 /* eslint-disable no-restricted-globals */
 
+/**
+ * Convert RGB values to CMYK
+ * @param R {number}
+ * @param G {number}
+ * @param B {number}
+ * @return { C: string, M: string, Y: string, K: string }
+ * @example RGBToCMYK(255, 255, 255)
+ */
 const RGBToCMYK = (R: number, G: number, B: number): { C: number; M: number; Y: number; K: number } | undefined => {
   let c
   let m

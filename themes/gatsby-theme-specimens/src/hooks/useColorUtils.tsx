@@ -1,37 +1,11 @@
-import { useStaticQuery, graphql } from "gatsby"
 import { meetsContrastGuidelines } from "polished"
 import chroma from "chroma-js"
 import RGBToCMYK from "../utils/rgb-to-cmyk"
-
-// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
-// eslint-disable-next-line
-type ContrastTypes = 'AA' | 'AAA'
-
-type specimensOptionsType = {
-  site: {
-    siteMetadata: {
-      specimensOptions: {
-        contrastGuidelines: ContrastTypes
-      }
-    }
-  }
-}
+import useSpecimensOptions from "./useSpecimensOptions"
 
 const useColorUtils = color => {
-  const data = useStaticQuery<specimensOptionsType>(graphql`
-    query {
-      site {
-        siteMetadata {
-          specimensOptions {
-            contrastGuidelines
-            CMYK
-          }
-        }
-      }
-    }
-  `)
+  const specimensOptions = useSpecimensOptions()
 
-  const { specimensOptions } = data.site.siteMetadata
   const white = meetsContrastGuidelines(color, `#fff`)
   const black = meetsContrastGuidelines(color, `#000`)
 
@@ -63,7 +37,6 @@ const useColorUtils = color => {
     RGB,
     CMYK,
     ratings,
-    specimensOptions,
   }
 }
 
