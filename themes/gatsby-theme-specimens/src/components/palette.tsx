@@ -1,4 +1,5 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"
 
@@ -19,59 +20,79 @@ type PaletteProps = {
   prefix?: string
 }
 
-const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = `` }: PaletteProps) => (
-  <div>
-    {colors.map(({ name, color }) => {
-      if (!color) return false
+const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = `` }: PaletteProps) => {
+  let wrapperStyles = {}
 
-      if (single && Array.isArray(color)) {
-        return false
-      }
+  if (mode === `list`) {
+    wrapperStyles = {
+      display: `grid`,
+      overflow: `hidden`,
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      "> div": {
+        mb: 0,
+        borderRadius: 0,
+        boxShadow: `none`,
+      },
+      "> div:not(:last-child)": {
+        borderBottomWidth: `1px`,
+        borderBottomStyle: `solid`,
+        borderBottomColor: `gray.3`,
+      },
+    }
+  } else {
+    wrapperStyles = {
+      display: `grid`,
+      gridTemplateColumns: `repeat(auto-fit,minmax(265px,1fr))`,
+      gridGap: 3,
+      "> div": {
+        mb: 0,
+        mr: 0,
+      },
+    }
+  }
 
-      if (Array.isArray(color)) {
-        const arr = []
-
-        color.forEach((colorValue, index) => {
-          if (colorValue == null) return false
-
-          arr.push({
-            name: join(name, index),
-            color: colorValue,
-          })
-        })
-        const inverted = arr.reverse()
-
-        return <Palette colors={inverted} key={name} minimal={minimal} mode={mode} prefix={prefix} />
-      }
-
-      if (mode === `swatch`) {
-        return <ColorSwatch color={color} name={name} key={name} minimal={minimal} />
-      }
-
-      return <ColorRow color={color} name={name} prefix={prefix} />
-    })}
-  </div>
-)
-
-export default Palette
-
-/**
- * {Object.entries(colors)
-      .map(([key, color]) => {
+  return (
+    <div sx={{ ...wrapperStyles }}>
+      {colors.map(({ name, color }) => {
         if (!color) return false
-        const id = join(name, key)
+
         if (single && Array.isArray(color)) {
           return false
         }
+
         if (Array.isArray(color)) {
-          return <Palette {...props} key={key} name={id} colors={color} omit={omit} array />
+          const arr = []
+
+          color.forEach((colorValue, index) => {
+            if (colorValue == null) return false
+
+            arr.push({
+              name: join(name, index),
+              color: colorValue,
+            })
+          })
+          const inverted = arr.reverse()
+
+          return <Palette colors={inverted} key={name} minimal={minimal} mode={mode} prefix={prefix} />
         }
-        const finalColor = array ? get(colors, key) : get(colors, id)
 
         if (mode === `swatch`) {
-          return <ColorSwatch name={id} color={finalColor} minimal={minimal} />
+          return (
+            <ColorSwatch
+              color={color}
+              name={name}
+              key={name}
+              minimal={minimal}
+              sx={{ variant: `swatches.default`, flexBasis: `100%`, maxWidth: `100%`, display: `block` }}
+            />
+          )
         }
 
-        return <ColorRow color={finalColor} />
+        return <ColorRow color={color} name={name} prefix={prefix} key={name} />
       })}
- */
+    </div>
+  )
+}
+
+export default Palette
