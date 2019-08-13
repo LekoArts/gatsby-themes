@@ -9,8 +9,12 @@ module.exports = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-specimens`,
-      options: {},
+      options: {
+        CMYK: true,
+      },
     },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

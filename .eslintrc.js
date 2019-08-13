@@ -29,7 +29,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": [
       1,
       {
-        argsIgnorePattern: "res|next|stage|^err|on|config|e"
+        argsIgnorePattern: "res|next|stage|^err|on|config|e|_"
       }
     ],
     "arrow-body-style": [2, "as-needed"],
