@@ -1,6 +1,6 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { Alert, ColorSwatch, Palette } from "@lekoarts/gatsby-theme-specimens"
+import { Alert, ColorSwatch, Palette, normalizeThemeUI } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
 import { colors } from "../../theme"
 
@@ -25,8 +25,10 @@ const Index = () => (
       <ColorSwatch color="#2d3748" name="Blueish" />
       <ColorSwatch color="#fff" />
       <ColorSwatch color="#667eea" name="Swift" />
-      <h2>Color Swatches - Grid</h2>
-      <Palette colors={colors} single />
+      <h2>Palette: Color Swatches</h2>
+      <Palette colors={normalizeThemeUI({ colors })} single minimal mode="swatch" />
+      <h2>Palette: Color Rows</h2>
+      <Palette colors={normalizeThemeUI({ colors: colors.indigo })} prefix="Indigo - " />
     </main>
   </Layout>
 )

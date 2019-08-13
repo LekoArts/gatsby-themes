@@ -1,5 +1,10 @@
 import React from "react"
 
-const ColorRow = ({ color }) => <div>{color}</div>
+const ColorRow = ({ color, name, prefix }) => (
+  <div>
+    {prefix}
+    {name}, {color}
+  </div>
+)
 
 export default ColorRow

@@ -1,35 +1,64 @@
 import React from "react"
-import { get } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"
 
 const join = (...args) => args.filter(Boolean).join(`.`)
 
+// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
+// eslint-disable-next-line
+type ModeTypes = 'list' | 'swatch'
+
 type PaletteProps = {
-  colors: { [key: string]: any } | string[]
-  name: string
-  omit: string[]
-  array: boolean
-  single: boolean
-  minimal: boolean
-  [key: string]: any
+  colors: {
+    name: string
+    color: string
+  }[]
+  mode?: ModeTypes
+  single?: boolean
+  minimal?: boolean
+  prefix?: string
 }
 
-const Palette = ({
-  colors,
-  name,
-  mode = `list`,
-  omit = [`modes`, `transparent`],
-  array,
-  single = false,
-  minimal = false,
-  ...props
-}: PaletteProps) => (
+const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = `` }: PaletteProps) => (
   <div>
-    {Object.entries(colors)
-      .sort(([_, colorA]) => (typeof colorA === `string` ? -1 : 1))
+    {colors.map(({ name, color }) => {
+      if (!color) return false
+
+      if (single && Array.isArray(color)) {
+        return false
+      }
+
+      if (Array.isArray(color)) {
+        const arr = []
+
+        color.forEach((colorValue, index) => {
+          if (colorValue == null) return false
+
+          arr.push({
+            name: join(name, index),
+            color: colorValue,
+          })
+        })
+        const inverted = arr.reverse()
+
+        return <Palette colors={inverted} key={name} minimal={minimal} mode={mode} prefix={prefix} />
+      }
+
+      if (mode === `swatch`) {
+        return <ColorSwatch color={color} name={name} key={name} minimal={minimal} />
+      }
+
+      return <ColorRow color={color} name={name} prefix={prefix} />
+    })}
+  </div>
+)
+
+export default Palette
+
+/**
+ * {Object.entries(colors)
       .map(([key, color]) => {
-        if (!color || omit.includes(key)) return false
+        if (!color) return false
         const id = join(name, key)
         if (single && Array.isArray(color)) {
           return false
@@ -45,7 +74,4 @@ const Palette = ({
 
         return <ColorRow color={finalColor} />
       })}
-  </div>
-)
-
-export default Palette
+ */
