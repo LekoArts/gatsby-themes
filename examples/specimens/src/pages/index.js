@@ -33,7 +33,7 @@ const Index = () => (
       <Palette colors={normalizeThemeUI({ colors: colors.indigo })} prefix="Indigo - " />
       <h2>Typography</h2>
       {console.log(styles)}
-      {console.log(filterStyles({ input: styles, allowed: [`h1, h2, h3, h4, h5, h6`] }))}
+      {console.log(filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] }))}
     </main>
   </Layout>
 )
