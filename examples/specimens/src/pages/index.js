@@ -39,6 +39,7 @@ const Index = () => (
       <Palette colors={normalizeThemeUI({ colors })} single minimal mode="swatch" />
       <h2>Palette: Color Rows</h2>
       <Palette colors={normalizeThemeUI({ colors: colors.indigo })} prefix="Indigo - " />
+      {console.log(styles)}
       <h2>Typography</h2>
       <Typography
         styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}
