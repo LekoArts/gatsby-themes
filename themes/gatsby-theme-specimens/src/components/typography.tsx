@@ -42,32 +42,6 @@ const infoStyles = {
   },
 }
 
-const codeStyles = {
-  "code, pre": {
-    fontFamily: `Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace`,
-    lineHeight: 1.375,
-    direction: `ltr`,
-    textAlign: `left`,
-    whiteSpace: `pre`,
-    wordSpacing: `normal`,
-    wordBreak: `normal`,
-    hyphens: `none`,
-    backgroundColor: `#f5f7ff`,
-    color: `#5e6687`,
-    padding: 2,
-    borderRadius: `default`,
-    ".token.string": {
-      color: `#22a2c9`,
-    },
-    ".token.punctuation": {
-      color: `#5e6687`,
-    },
-    ".token.operator, .token.boolean, .token.number": {
-      color: `#c76b29`,
-    },
-  },
-}
-
 const Typography = ({ styles, theme }: TypographyProps) => {
   const specimensConfig = useSpecimensConfig()
 
@@ -135,11 +109,11 @@ const Typography = ({ styles, theme }: TypographyProps) => {
             {specimensConfig.codeExample && (
               <div
                 sx={{
-                  mt: 4,
+                  variant: `codeStyles.default`,
+                  mt: 3,
                   fontSize: 0,
                   width: `100%`,
                   overflow: `auto`,
-                  ...codeStyles,
                 }}
               >
                 <pre sx={{ my: 0 }}>
