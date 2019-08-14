@@ -1,4 +1,4 @@
-module.exports = ({ contrastGuidelines = `AA`, CMYK = true }) => ({
+module.exports = () => ({
   siteMetadata: {
     siteTitle: `Specimens for Design Systems`,
     siteTitleAlt: `Specimens for Design Systems - @lekoarts/gatsby-theme-specimens`,
@@ -8,10 +8,6 @@ module.exports = ({ contrastGuidelines = `AA`, CMYK = true }) => ({
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
-    specimensOptions: {
-      contrastGuidelines,
-      CMYK,
-    },
   },
   plugins: [`gatsby-plugin-typescript`, `gatsby-plugin-theme-ui`],
 })

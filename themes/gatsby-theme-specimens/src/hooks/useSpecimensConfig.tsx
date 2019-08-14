@@ -5,30 +5,23 @@ import { useStaticQuery, graphql } from "gatsby"
 type ContrastTypes = 'AA' | 'AAA'
 
 type specimensOptionsType = {
-  site: {
-    siteMetadata: {
-      specimensOptions: {
-        contrastGuidelines: ContrastTypes
-      }
-    }
+  specimensConfig: {
+    contrastGuidelines: ContrastTypes
+    CMYK: boolean
   }
 }
 
-const useSpecimensOptions = () => {
+const useSpecimensConfig = () => {
   const data = useStaticQuery<specimensOptionsType>(graphql`
     query {
-      site {
-        siteMetadata {
-          specimensOptions {
-            contrastGuidelines
-            CMYK
-          }
-        }
+      specimensConfig(id: { eq: "@lekoarts/gatsby-theme-specimens-config" }) {
+        contrastGuidelines
+        CMYK
       }
     }
   `)
 
-  return data.site.siteMetadata.specimensOptions
+  return data.specimensConfig
 }
 
-export default useSpecimensOptions
+export default useSpecimensConfig
