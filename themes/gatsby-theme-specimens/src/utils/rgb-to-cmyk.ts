@@ -8,7 +8,7 @@
  * @return { C: string, M: string, Y: string, K: string }
  * @example RGBToCMYK(255, 255, 255)
  */
-const RGBToCMYK = (R: number, G: number, B: number): { C: number; M: number; Y: number; K: number } | undefined => {
+const RGBToCMYK = (R: number, G: number, B: number): { C: number; M: number; Y: number; K: number } | boolean => {
   let c
   let m
   let y
@@ -20,11 +20,11 @@ const RGBToCMYK = (R: number, G: number, B: number): { C: number; M: number; Y: 
 
   if (r == null || g == null || b == null || isNaN(r) || isNaN(g) || isNaN(b)) {
     console.warn(`Please enter numeric RGB values!`)
-    return
+    return false
   }
   if (r < 0 || g < 0 || b < 0 || r > 255 || g > 255 || b > 255) {
     console.warn(`RGB values must be in the range 0 to 255.`)
-    return
+    return false
   }
 
   if (r === 0 && g === 0 && b === 0) {

@@ -1,6 +1,6 @@
 import RGBToCMYK from "../rgb-to-cmyk"
 
-jest.spyOn(global.console, `warn`).mockImplementation(() => {})
+// lines  22,23,26,27
 
 describe(`rgb-to-cymk`, () => {
   test(`should convert white correctly`, () => {
@@ -12,5 +12,25 @@ describe(`rgb-to-cymk`, () => {
   test(`should convert RGB color (84,142,204) correctly`, () => {
     // Used https://www.rapidtables.com/convert/color/rgb-to-cmyk.html to convert
     expect(RGBToCMYK(84, 142, 204)).toStrictEqual({ C: 59, M: 30, Y: 0, K: 20 })
+  })
+  test(`should warn for invalid RGB color (non-numeric value)`, () => {
+    const warn = jest.spyOn(global.console, `warn`).mockImplementation(() => {})
+    // @ts-ignore
+    RGBToCMYK(`84`, `test`, 204)
+    // @ts-ignore
+    expect(RGBToCMYK(`84`, `test`, 204)).toEqual(false)
+    expect(warn).toHaveBeenCalledWith(`Please enter numeric RGB values!`)
+
+    warn.mockRestore()
+  })
+  test(`should warn for invalid RGB color (value outside of 0 & 255)`, () => {
+    const warn = jest.spyOn(global.console, `warn`).mockImplementation(() => {})
+    // @ts-ignore
+    RGBToCMYK(-5, 300, 204)
+    // @ts-ignore
+    expect(RGBToCMYK(-5, 300, 204)).toEqual(false)
+    expect(warn).toHaveBeenCalledWith(`RGB values must be in the range 0 to 255.`)
+
+    warn.mockRestore()
   })
 })
