@@ -10,6 +10,7 @@ import {
   Typography,
   Audio,
   Video,
+  Download,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
 import { colors, styles, theme } from "../../theme"
@@ -55,6 +56,13 @@ const Index = () => (
       <Audio src="sounds/through_the_gate.mp3" />
       <h2>Video</h2>
       <Video name="LekoArts Intro" src="videos/intro.mp4" poster="videos/intro_poster.jpg" />
+      <h2>Download</h2>
+      <Download
+        name="Gatsby Themes Wallpaper"
+        notes="Use for Social Media previews"
+        src="downloads/gatsby-themes-wallpaper.jpg"
+      />
+      <Download name="Logo" bg="black" src="downloads/logo.png" />
     </main>
   </Layout>
 )

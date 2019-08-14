@@ -185,4 +185,25 @@ export default {
       },
     },
   },
+  download: {
+    default: {
+      backgroundColor: `elementBG`,
+      display: `block`,
+      textDecoration: `none`,
+      color: `text`,
+      p: [3, 4],
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      mb: 3,
+      svg: { width: [6, 8], height: [6, 8], mr: 3 },
+      ".primary": {
+        fill: `currentColor`,
+        color: `indigo.6`,
+      },
+      ".secondary": {
+        fill: `currentColor`,
+        color: `indigo.3`,
+      },
+    },
+  },
 }
