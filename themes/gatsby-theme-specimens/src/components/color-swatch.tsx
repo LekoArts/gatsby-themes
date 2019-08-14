@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
-import useSpecimensOptions from "../hooks/useSpecimensOptions"
+import useSpecimensConfig from "../hooks/useSpecimensConfig"
 
 const swatchContentStyles = {
   flexBasis: `50%`,
@@ -29,7 +29,7 @@ type ColorSwatchProps = {
 
 const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
   const { hex, RGB, CMYK, ratings } = useColorUtils(color)
-  const specimensOptions = useSpecimensOptions()
+  const specimensOptions = useSpecimensConfig()
 
   return (
     <div
@@ -57,7 +57,12 @@ const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
             key={`${rating.color}-${rating.size}-${rating.value}`}
             sx={{ display: `flex`, flexDirection: `column`, margin: `0 3px`, width: `50px` }}
           >
-            <div sx={{ textAlign: `center`, color: rating.color, fontSize: rating.size }}>A</div>
+            <div
+              title={`${rating.title} (${rating.color}): ${rating.value ? `Pass` : `Fail`}`}
+              sx={{ textAlign: `center`, color: rating.color, fontSize: rating.size }}
+            >
+              A
+            </div>
             <div
               sx={{
                 textAlign: `center`,

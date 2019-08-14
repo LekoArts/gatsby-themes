@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
-import useSpecimensOptions from "../hooks/useSpecimensOptions"
+import useSpecimensConfig from "../hooks/useSpecimensConfig"
 
 type ColorRowProps = {
   color: string
@@ -22,7 +22,7 @@ const infoItemStyles = {
 
 const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
   const { hex, RGB, CMYK } = useColorUtils(color)
-  const specimensOptions = useSpecimensOptions()
+  const specimensOptions = useSpecimensConfig()
 
   return (
     <div
