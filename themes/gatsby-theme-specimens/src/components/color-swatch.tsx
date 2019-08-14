@@ -82,7 +82,7 @@ const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
           </div>
         ))}
       </div>
-      <div sx={{ p: 3, pb: 1, display: `flex`, flexWrap: `wrap`, backgroundColor: `gray.1` }}>
+      <div sx={{ p: 3, pb: 1, display: `flex`, flexWrap: `wrap`, backgroundColor: `elementBG` }}>
         {name && (
           <div sx={{ ...swatchContentStyles }}>
             <span>Name</span>

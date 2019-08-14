@@ -32,7 +32,16 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
       }}
     >
       <div sx={{ display: `flex`, alignItems: `center`, my: 2 }}>
-        <div sx={{ backgroundColor: color, borderRadius: `lg`, height: 12, width: 12, mr: 3 }} />
+        <div
+          sx={{
+            backgroundColor: color,
+            borderRadius: `full`,
+            height: 12,
+            width: 12,
+            mr: 3,
+            boxShadow: `0 10px 15px -3px rgba(${RGB}, 0.3), 0 4px 6px -2px rgba(${RGB}, 0.15)`,
+          }}
+        />
         <div sx={{ fontSize: 1 }}>{`${prefix}${name}`}</div>
       </div>
       <div sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 1fr)`], gridGap: 2 }}>

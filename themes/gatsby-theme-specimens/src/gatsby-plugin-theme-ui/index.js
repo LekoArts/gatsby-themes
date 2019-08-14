@@ -34,6 +34,7 @@ export default {
     info: tailwind.colors.blue[4],
     warning: tailwind.colors.yellow[3],
     danger: tailwind.colors.red[3],
+    elementBG: tailwind.colors.gray[1],
   },
   alerts: {
     success: {
@@ -113,7 +114,7 @@ export default {
   rows: {
     default: {
       boxShadow: `default`,
-      backgroundColor: `gray.1`,
+      backgroundColor: `elementBG`,
       p: 3,
       mb: 3,
       borderRadius: `lg`,
@@ -147,6 +148,24 @@ export default {
         ".token.operator, .token.boolean, .token.number": {
           color: `#c76b29`,
         },
+      },
+    },
+  },
+  audio: {
+    default: {
+      backgroundColor: `elementBG`,
+      p: 4,
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      mb: 3,
+      svg: { width: 8, height: 8, mr: 3 },
+      ".primary": {
+        fill: `currentColor`,
+        color: `indigo.6`,
+      },
+      ".secondary": {
+        fill: `currentColor`,
+        color: `indigo.3`,
       },
     },
   },

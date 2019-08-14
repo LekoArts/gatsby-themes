@@ -67,6 +67,9 @@ const Typography = ({ styles, theme }: TypographyProps) => {
               borderBottomStyle: `solid`,
               mb: 4,
               pb: 4,
+              "&:last-child": {
+                borderBottom: `none`,
+              },
             }}
           >
             <div
@@ -121,16 +124,18 @@ const Typography = ({ styles, theme }: TypographyProps) => {
                     <span className="token punctuation">{`{`}</span>
                     <span className="token punctuation" /> fontSize<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token number">2</span>
+                    <span className="token number">{heading.size}</span>
                     <span className="token punctuation">,</span> fontWeight<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token string">"heading"</span>
+                    <span className="token string">"{heading.weight}"</span>
                     <span className="token punctuation">,</span> lineHeight<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token string">"heading"</span>
+                    <span className="token string">"{heading.lineHeight}"</span>
                     <span className="token punctuation">,</span> fontFamily<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token string">"heading"</span> <span className="token punctuation">{`}`}</span>
+                    <span className="token string">"{heading.fontFamily}"</span>
+                    {` `}
+                    <span className="token punctuation">{`}`}</span>
                   </code>
                 </pre>
               </div>
