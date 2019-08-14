@@ -101,9 +101,7 @@ export default {
   swatches: {
     default: {
       display: `inline-block`,
-      flexBasis: `275px`,
-      maxWidth: `275px`,
-      width: `100%`,
+      width: [`100%`, `265px`, `275px`],
       borderRadius: `lg`,
       overflow: `hidden`,
       boxShadow: `default`,
@@ -154,11 +152,29 @@ export default {
   audio: {
     default: {
       backgroundColor: `elementBG`,
-      p: 4,
+      p: [3, 4],
       borderRadius: `lg`,
       boxShadow: `default`,
       mb: 3,
-      svg: { width: 8, height: 8, mr: 3 },
+      svg: { width: [6, 8], height: [6, 8], mr: 3 },
+      ".primary": {
+        fill: `currentColor`,
+        color: `indigo.6`,
+      },
+      ".secondary": {
+        fill: `currentColor`,
+        color: `indigo.3`,
+      },
+    },
+  },
+  video: {
+    default: {
+      backgroundColor: `elementBG`,
+      p: [3, 4],
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      mb: 3,
+      svg: { width: [6, 8], height: [6, 8], mr: 3 },
       ".primary": {
         fill: `currentColor`,
         color: `indigo.6`,

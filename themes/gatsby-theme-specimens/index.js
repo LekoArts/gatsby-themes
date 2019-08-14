@@ -6,5 +6,6 @@ import filterStyles from "./src/utils/filter-styles"
 import normalizeThemeUI from "./src/utils/normalize-theme-ui"
 import Palette from "./src/components/palette"
 import Typography from "./src/components/typography"
+import Video from "./src/components/video"
 
-export { Audio, Alert, ColorRow, ColorSwatch, filterStyles, normalizeThemeUI, Palette, Typography }
+export { Audio, Alert, ColorRow, ColorSwatch, filterStyles, normalizeThemeUI, Palette, Typography, Video }
