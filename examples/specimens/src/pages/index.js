@@ -8,6 +8,7 @@ import {
   normalizeThemeUI,
   filterStyles,
   Typography,
+  Audio,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
 import { colors, styles, theme } from "../../theme"
@@ -39,12 +40,18 @@ const Index = () => (
       <Palette colors={normalizeThemeUI({ colors })} single minimal mode="swatch" />
       <h2>Palette: Color Rows</h2>
       <Palette colors={normalizeThemeUI({ colors: colors.indigo })} prefix="Indigo - " />
-      {console.log(styles)}
       <h2>Typography</h2>
       <Typography
         styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}
         theme={theme}
       />
+      <h2>Audio</h2>
+      <Audio
+        src="sounds/through_the_gate.mp3"
+        name="Through the Gate"
+        desc="Hundreds of years in the future, in a colonized Solar System, police detective Josephus Miller, born on Ceres in the asteroid belt, is sent to find a missing young woman, Juliette 'Julie' Andromeda Mao. James Holden, Executive Officer of the ice hauler Canterbury, is involved in a tragic incident that threatens to destabilize the uneasy peace between Earth, Mars and the Belt."
+      />
+      <Audio src="sounds/through_the_gate.mp3" />
     </main>
   </Layout>
 )

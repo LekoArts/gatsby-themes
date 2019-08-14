@@ -1,9 +1,10 @@
+import Audio from "./src/components/audio"
 import Alert from "./src/components/alert"
-import ColorSwatch from "./src/components/color-swatch"
 import ColorRow from "./src/components/color-row"
-import Palette from "./src/components/palette"
-import normalizeThemeUI from "./src/utils/normalize-theme-ui"
+import ColorSwatch from "./src/components/color-swatch"
 import filterStyles from "./src/utils/filter-styles"
+import normalizeThemeUI from "./src/utils/normalize-theme-ui"
+import Palette from "./src/components/palette"
 import Typography from "./src/components/typography"
 
-export { Alert, ColorSwatch, ColorRow, Palette, normalizeThemeUI, filterStyles, Typography }
+export { Audio, Alert, ColorRow, ColorSwatch, filterStyles, normalizeThemeUI, Palette, Typography }
