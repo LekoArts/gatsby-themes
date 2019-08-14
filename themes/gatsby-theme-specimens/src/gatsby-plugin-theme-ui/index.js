@@ -110,4 +110,44 @@ export default {
       mb: 3,
     },
   },
+  rows: {
+    default: {
+      boxShadow: `default`,
+      backgroundColor: `gray.1`,
+      p: 3,
+      mb: 3,
+      borderRadius: `lg`,
+      display: `flex`,
+      flexWrap: `wrap`,
+      justifyContent: `space-between`,
+      alignItems: `center`,
+    },
+  },
+  codeStyles: {
+    default: {
+      "code, pre": {
+        fontFamily: `Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace`,
+        lineHeight: 1.375,
+        direction: `ltr`,
+        textAlign: `left`,
+        whiteSpace: `pre`,
+        wordSpacing: `normal`,
+        wordBreak: `normal`,
+        hyphens: `none`,
+        backgroundColor: `#f5f7ff`,
+        color: `#5e6687`,
+        padding: 2,
+        borderRadius: `default`,
+        ".token.string": {
+          color: `#22a2c9`,
+        },
+        ".token.punctuation": {
+          color: `#5e6687`,
+        },
+        ".token.operator, .token.boolean, .token.number": {
+          color: `#c76b29`,
+        },
+      },
+    },
+  },
 }

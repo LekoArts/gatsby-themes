@@ -28,15 +28,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
   return (
     <div
       sx={{
-        boxShadow: `default`,
-        backgroundColor: `gray.1`,
-        p: 3,
-        mb: 3,
-        borderRadius: `lg`,
-        display: `flex`,
-        flexWrap: `wrap`,
-        justifyContent: `space-between`,
-        alignItems: `center`,
+        variant: `rows.default`,
       }}
     >
       <div sx={{ display: `flex`, alignItems: `center`, my: 2 }}>
