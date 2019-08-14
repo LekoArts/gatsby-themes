@@ -9,6 +9,7 @@ import {
   filterStyles,
   Typography,
   Audio,
+  Video,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
 import { colors, styles, theme } from "../../theme"
@@ -52,6 +53,8 @@ const Index = () => (
         desc="Hundreds of years in the future, in a colonized Solar System, police detective Josephus Miller, born on Ceres in the asteroid belt, is sent to find a missing young woman, Juliette 'Julie' Andromeda Mao. James Holden, Executive Officer of the ice hauler Canterbury, is involved in a tragic incident that threatens to destabilize the uneasy peace between Earth, Mars and the Belt."
       />
       <Audio src="sounds/through_the_gate.mp3" />
+      <h2>Video</h2>
+      <Video name="LekoArts Intro" src="videos/intro.mp4" poster="videos/intro_poster.jpg" />
     </main>
   </Layout>
 )
