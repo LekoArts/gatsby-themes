@@ -1,5 +1,7 @@
 type filterStylesType = {
-  input: any
+  input: {
+    [key: string]: any
+  }
   allowed: string[]
 }
 
