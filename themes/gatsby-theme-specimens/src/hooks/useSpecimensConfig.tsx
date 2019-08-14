@@ -8,6 +8,7 @@ type specimensOptionsType = {
   specimensConfig: {
     contrastGuidelines: ContrastTypes
     CMYK: boolean
+    codeExample: boolean
   }
 }
 
@@ -17,6 +18,7 @@ const useSpecimensConfig = () => {
       specimensConfig(id: { eq: "@lekoarts/gatsby-theme-specimens-config" }) {
         contrastGuidelines
         CMYK
+        codeExample
       }
     }
   `)

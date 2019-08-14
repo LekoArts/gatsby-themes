@@ -13,9 +13,10 @@ const infoItemStyles = {
   "span:first-of-type": {
     backgroundColor: `gray.3`,
     color: `gray.7`,
-    fontSize: `0.7rem`,
-    padding: `3px 5px`,
+    fontSize: `0.65rem`,
+    padding: `3px 6px`,
     borderRadius: `default`,
+    letterSpacing: `wider`,
     mr: 2,
   },
 }

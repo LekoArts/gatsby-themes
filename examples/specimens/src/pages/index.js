@@ -1,8 +1,16 @@
 import React from "react"
 import { css } from "@emotion/core"
-import { Alert, ColorSwatch, ColorRow, Palette, normalizeThemeUI, filterStyles } from "@lekoarts/gatsby-theme-specimens"
+import {
+  Alert,
+  ColorSwatch,
+  ColorRow,
+  Palette,
+  normalizeThemeUI,
+  filterStyles,
+  Typography,
+} from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
-import { colors, styles } from "../../theme"
+import { colors, styles, theme } from "../../theme"
 
 const Index = () => (
   <Layout>
@@ -28,12 +36,14 @@ const Index = () => (
       <h2>Color Rows</h2>
       <ColorRow color="#000" name="Blackness" prefix="Dark - " />
       <h2>Palette: Color Swatches</h2>
-      <Palette colors={normalizeThemeUI({ colors })} single mode="swatch" />
+      <Palette colors={normalizeThemeUI({ colors })} single minimal mode="swatch" />
       <h2>Palette: Color Rows</h2>
       <Palette colors={normalizeThemeUI({ colors: colors.indigo })} prefix="Indigo - " />
       <h2>Typography</h2>
-      {console.log(styles)}
-      {console.log(filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] }))}
+      <Typography
+        styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}
+        theme={theme}
+      />
     </main>
   </Layout>
 )

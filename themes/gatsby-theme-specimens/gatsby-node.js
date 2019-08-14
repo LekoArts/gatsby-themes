@@ -4,17 +4,22 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(`
     type SpecimensConfig implements Node {
       contrastGuidelines: String
-      CMYK: String
+      CMYK: Boolean
+      codeExample: Boolean
     }
   `)
 }
 
-exports.sourceNodes = ({ actions, createContentDigest }, { contrastGuidelines = `AA`, CMYK = true }) => {
+exports.sourceNodes = (
+  { actions, createContentDigest },
+  { contrastGuidelines = `AA`, CMYK = true, codeExample = true }
+) => {
   const { createNode } = actions
 
   const specimensConfig = {
     contrastGuidelines,
     CMYK,
+    codeExample,
   }
 
   createNode({
