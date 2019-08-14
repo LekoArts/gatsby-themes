@@ -28,10 +28,19 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
   return (
     <div
       sx={{
+        boxShadow: `default`,
+        backgroundColor: `elementBG`,
+        p: 3,
+        mb: 3,
+        borderRadius: `lg`,
+        display: `flex`,
+        flexWrap: `wrap`,
+        justifyContent: `space-between`,
+        alignItems: `center`,
         variant: `rows.default`,
       }}
     >
-      <div sx={{ display: `flex`, alignItems: `center`, my: 2 }}>
+      <div data-name="color-row-color" sx={{ display: `flex`, alignItems: `center`, my: 2 }}>
         <div
           sx={{
             backgroundColor: color,
@@ -44,7 +53,10 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
         />
         <div sx={{ fontSize: 1 }}>{`${prefix}${name}`}</div>
       </div>
-      <div sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 1fr)`], gridGap: 2 }}>
+      <div
+        data-name="color-row-values"
+        sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 1fr)`], gridGap: 2 }}
+      >
         <div sx={{ ...infoItemStyles }}>
           <span>HEX</span>
           <span>{hex}</span>

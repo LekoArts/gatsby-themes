@@ -11,9 +11,34 @@ type DownloadProps = {
 }
 
 const Download = ({ name, src, bg = `white`, preview = true, notes = `` }: DownloadProps) => (
-  <a href={src} sx={{ variant: `download.default` }}>
+  <a
+    href={src}
+    sx={{
+      backgroundColor: `elementBG`,
+      display: `block`,
+      textDecoration: `none`,
+      color: `text`,
+      p: [3, 4],
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      mb: 3,
+      svg: { width: [6, 8], height: [6, 8], mr: 3 },
+      ".primary": {
+        fill: `currentColor`,
+        color: `indigo.6`,
+      },
+      ".secondary": {
+        fill: `currentColor`,
+        color: `indigo.3`,
+      },
+      variant: `download.default`,
+    }}
+  >
     {name && (
-      <div sx={{ display: `flex`, alignItems: `center`, justifyContent: `space-between`, flexWrap: `wrap` }}>
+      <div
+        data-name="download-top"
+        sx={{ display: `flex`, alignItems: `center`, justifyContent: `space-between`, flexWrap: `wrap` }}
+      >
         <div sx={{ display: `flex`, alignItems: `center` }}>
           <DownloadIcon />
           <div sx={{ fontWeight: `medium`, fontSize: 2 }}>{name}</div>
@@ -23,6 +48,7 @@ const Download = ({ name, src, bg = `white`, preview = true, notes = `` }: Downl
     )}
     {preview && (
       <div
+        data-name="download-preview"
         sx={{
           mt: 3,
           boxShadow: `lg`,

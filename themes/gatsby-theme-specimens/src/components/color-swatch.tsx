@@ -37,11 +37,19 @@ const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
   return (
     <div
       sx={{
+        display: `inline-block`,
+        width: [`100%`, `265px`, `275px`],
+        borderRadius: `lg`,
+        overflow: `hidden`,
+        boxShadow: `default`,
+        mr: 3,
+        mb: 3,
         variant: `swatches.default`,
       }}
       className={className}
     >
       <div
+        data-name="color-swatch-bg"
         sx={{
           backgroundColor: hex,
           boxShadow: hex === `#ffffff` ? `inset 0 0 0 1px #a0aec0` : `none`,
@@ -82,7 +90,10 @@ const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
           </div>
         ))}
       </div>
-      <div sx={{ p: 3, pb: 1, display: `flex`, flexWrap: `wrap`, backgroundColor: `elementBG` }}>
+      <div
+        data-name="color-swatch-content"
+        sx={{ p: 3, pb: 1, display: `flex`, flexWrap: `wrap`, backgroundColor: `elementBG` }}
+      >
         {name && (
           <div sx={{ ...swatchContentStyles }}>
             <span>Name</span>
