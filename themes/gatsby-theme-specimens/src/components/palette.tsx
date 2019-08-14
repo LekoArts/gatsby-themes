@@ -84,7 +84,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
               name={name}
               key={name}
               minimal={minimal}
-              sx={{ variant: `swatches.default`, width: `100%`, display: `block` }}
+              sx={{ width: `100% !important`, display: `block !important` }}
             />
           )
         }

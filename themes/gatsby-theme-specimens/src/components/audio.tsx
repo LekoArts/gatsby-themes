@@ -14,16 +14,34 @@ type AudioProps = {
 const Audio = ({ autoplay = false, loop = false, name = ``, desc = ``, src }: AudioProps) => (
   <div
     sx={{
+      backgroundColor: `elementBG`,
+      p: [3, 4],
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      mb: 3,
+      svg: { width: [6, 8], height: [6, 8], mr: 3 },
+      ".primary": {
+        fill: `currentColor`,
+        color: `indigo.6`,
+      },
+      ".secondary": {
+        fill: `currentColor`,
+        color: `indigo.3`,
+      },
       variant: `audio.default`,
     }}
   >
     {name && (
-      <div sx={{ display: `flex`, alignItems: `center`, mb: 3 }}>
+      <div data-name="audio-name" sx={{ display: `flex`, alignItems: `center`, mb: 3 }}>
         <Volume />
         <div sx={{ fontWeight: `medium`, fontSize: 2 }}>{name}</div>
       </div>
     )}
-    {desc && <div sx={{ fontSize: 1, mb: 4 }}>{desc}</div>}
+    {desc && (
+      <div data-name="audio-desc" sx={{ fontSize: 1, mb: 4 }}>
+        {desc}
+      </div>
+    )}
     <div sx={{ display: `flex`, alignItems: `center` }}>
       {!name && <Volume />}
       <audio

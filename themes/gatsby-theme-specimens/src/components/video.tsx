@@ -13,7 +13,25 @@ type VideoProps = {
 }
 
 const Video = ({ autoplay = false, loop = false, muted = false, name = ``, poster = ``, src }: VideoProps) => (
-  <div sx={{ variant: `video.default` }}>
+  <div
+    sx={{
+      backgroundColor: `elementBG`,
+      p: [3, 4],
+      borderRadius: `lg`,
+      boxShadow: `default`,
+      mb: 3,
+      svg: { width: [6, 8], height: [6, 8], mr: 3 },
+      ".primary": {
+        fill: `currentColor`,
+        color: `indigo.6`,
+      },
+      ".secondary": {
+        fill: `currentColor`,
+        color: `indigo.3`,
+      },
+      variant: `video.default`,
+    }}
+  >
     {name && (
       <div sx={{ display: `flex`, alignItems: `center`, mb: 3 }}>
         <Film />
