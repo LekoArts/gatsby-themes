@@ -2,7 +2,6 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-sequences */
 import * as THREE from "three"
-import React from "react"
 import { jsx, useColorMode } from "theme-ui"
 import { Canvas } from "react-three-fiber"
 import Model from "../webgl/model"
