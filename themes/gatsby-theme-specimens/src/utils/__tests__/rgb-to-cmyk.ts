@@ -1,7 +1,5 @@
 import RGBToCMYK from "../rgb-to-cmyk"
 
-// lines  22,23,26,27
-
 describe(`rgb-to-cymk`, () => {
   test(`should convert white correctly`, () => {
     expect(RGBToCMYK(255, 255, 255)).toStrictEqual({ C: 0, M: 0, Y: 0, K: 0 })

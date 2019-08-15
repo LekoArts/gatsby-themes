@@ -6,13 +6,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       contrastGuidelines: String
       CMYK: Boolean
       codeExample: Boolean
+      rootFontSize: String
     }
   `)
 }
 
 exports.sourceNodes = (
   { actions, createContentDigest },
-  { contrastGuidelines = `AA`, CMYK = true, codeExample = true }
+  { contrastGuidelines = `AA`, CMYK = true, codeExample = true, rootFontSize = `16px` }
 ) => {
   const { createNode } = actions
 
@@ -20,6 +21,7 @@ exports.sourceNodes = (
     contrastGuidelines,
     CMYK,
     codeExample,
+    rootFontSize,
   }
 
   createNode({
