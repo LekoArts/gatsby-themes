@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
+import Badge from "./badge"
 
 type ColorRowProps = {
   color: string
@@ -55,19 +56,19 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
       </div>
       <div
         data-name="color-row-values"
-        sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 1fr)`], gridGap: 2 }}
+        sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 1fr)`], gridGap: 2, span: { ml: 2 } }}
       >
-        <div sx={{ ...infoItemStyles }}>
-          <span>HEX</span>
+        <div>
+          <Badge>Hex</Badge>
           <span>{hex}</span>
         </div>
-        <div sx={{ ...infoItemStyles }}>
-          <span>RGB</span>
+        <div>
+          <Badge>RGB</Badge>
           <span>{RGB}</span>
         </div>
         {specimensOptions.CMYK && (
-          <div sx={{ ...infoItemStyles }}>
-            <span>CMYK</span>
+          <div>
+            <Badge>CMYK</Badge>
             <span>{CMYK}</span>
           </div>
         )}

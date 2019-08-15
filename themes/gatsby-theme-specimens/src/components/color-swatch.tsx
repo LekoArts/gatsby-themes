@@ -2,24 +2,16 @@
 import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
+import Badge from "./badge"
 
 const swatchContentStyles = {
   flexBasis: `50%`,
   display: `flex`,
   flexDirection: `column`,
-  mb: 3,
   fontSize: 1,
-  mt: 1,
   alignItems: `flex-start`,
   span: {
-    backgroundColor: `gray.3`,
-    color: `gray.7`,
-    letterSpacing: `wider`,
-    fontSize: `0.65rem`,
-    padding: `3px 6px`,
-    borderRadius: `default`,
     mb: 2,
-    textTransform: `uppercase`,
   },
 }
 
@@ -92,27 +84,27 @@ const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
       </div>
       <div
         data-name="color-swatch-content"
-        sx={{ p: 3, pb: 1, display: `flex`, flexWrap: `wrap`, backgroundColor: `elementBG` }}
+        sx={{ p: 3, display: `grid`, gridTemplateColumns: `1fr 1fr`, gridGap: 3, backgroundColor: `elementBG` }}
       >
         {name && (
           <div sx={{ ...swatchContentStyles }}>
-            <span>Name</span>
+            <Badge>Name</Badge>
             {name}
           </div>
         )}
         <div sx={{ ...swatchContentStyles }}>
-          <span>Hex</span>
+          <Badge>Hex</Badge>
           {hex}
         </div>
         {!minimal && (
           <div sx={{ ...swatchContentStyles }}>
-            <span>RGB</span>
+            <Badge>RGB</Badge>
             {RGB}
           </div>
         )}
         {!minimal && specimensOptions.CMYK && (
           <div sx={{ ...swatchContentStyles }}>
-            <span>CMYK</span>
+            <Badge>CMYK</Badge>
             {CMYK}
           </div>
         )}

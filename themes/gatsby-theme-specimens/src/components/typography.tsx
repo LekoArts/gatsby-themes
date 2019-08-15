@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
+import Badge from "./badge"
 
 type headingType = {
   fontFamily: string
@@ -19,37 +20,57 @@ type TypographyProps = {
     h5: headingType
     h6: headingType
   }
-  theme: any
+  theme?: any
 }
 
 const infoStyles = {
-  mr: 4,
   display: `flex`,
   flexDirection: `column`,
   alignItems: `flex-start`,
-  p: {
-    backgroundColor: `gray.3`,
-    color: `gray.7`,
-    fontSize: `0.65rem`,
-    padding: `3px 8px`,
-    borderRadius: `default`,
-    letterSpacing: `wider`,
-    textAlign: `center`,
-    textTransform: `uppercase`,
-  },
-  span: {
-    fontSize: 1,
-  },
 }
+
+const removeREM = (input: string) => parseFloat(input.slice(0, -3))
 
 const Typography = ({ styles, theme }: TypographyProps) => {
   const specimensConfig = useSpecimensConfig()
 
+  if (Array.isArray(styles)) {
+    return (
+      <div sx={{ variant: `typography.scale` }}>
+        <div sx={{ display: `grid`, gridTemplateColumns: [`90px 1fr`, `80px 120px 1fr`], mb: 3 }}>
+          <div sx={{ gridColumn: [`span 2`, `span 1`] }}>
+            <Badge>Token</Badge>
+          </div>
+          <div sx={{ minWidth: `80px` }}>
+            <Badge>Size</Badge>
+          </div>
+          <div>
+            <Badge>Preview</Badge>
+          </div>
+        </div>
+        <div sx={{ display: `grid`, gridGap: 4 }}>
+          {styles.map((size, index) => (
+            <div
+              key={size}
+              sx={{ display: `grid`, gridTemplateColumns: [`90px 1fr`, `80px 120px 1fr`], alignItems: `center` }}
+            >
+              <div sx={{ gridColumn: [`span 2`, `span 1`] }}>{index}</div>
+              <div>{size}</div>
+              <div sx={{ fontSize: `${specimensConfig.rootFontSize * removeREM(size)}px`, lineHeight: `90%` }}>
+                Size {index}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div>
       {Object.entries(styles).map(([key, value]) => {
-        const heading = {
-          type: key,
+        const type = {
+          level: key,
           fontFamily: value.fontFamily,
           size: value.fontSize,
           weight: value.fontWeight,
@@ -58,7 +79,7 @@ const Typography = ({ styles, theme }: TypographyProps) => {
 
         return (
           <div
-            key={heading.type}
+            key={type.level}
             sx={{
               display: `flex`,
               flexDirection: `column`,
@@ -70,46 +91,57 @@ const Typography = ({ styles, theme }: TypographyProps) => {
               "&:last-child": {
                 borderBottom: `none`,
               },
-              variant: `typography.default`,
+              variant: `typography.heading`,
             }}
           >
             <div
-              data-name="typography-heading-preview"
+              data-name="typography-heading-level-preview"
               sx={{
-                fontFamily: heading.fontFamily,
-                fontSize: heading.size,
-                fontWeight: heading.weight,
-                lineHeight: heading.lineHeight,
+                fontFamily: type.fontFamily,
+                fontSize: `${specimensConfig.rootFontSize * removeREM(theme.fontSizes[type.size])}px`,
+                fontWeight: type.weight,
+                lineHeight: type.lineHeight,
                 mb: 4,
               }}
             >
               Heading
             </div>
             <div
-              data-name="typography-info"
+              data-name="typography-heading-info"
               sx={{
                 display: `flex`,
                 flexDirection: `row`,
                 flexWrap: `wrap`,
                 justifyContent: `flex-start`,
                 width: `100%`,
+                "> div": {
+                  mr: 4,
+                  mb: 2,
+                },
+                span: {
+                  mb: 2,
+                },
               }}
             >
               <div sx={{ ...infoStyles }}>
-                <p>Type</p>
-                <span>{heading.type}</span>
-              </div>
-              <div sx={{ ...infoStyles, minWidth: `80px` }}>
-                <p>Size</p>
-                <span>{theme.fontSizes[heading.size]}</span>
-              </div>
-              <div sx={{ ...infoStyles, minWidth: `80px` }}>
-                <p>Line Height</p>
-                <span>{theme.lineHeights[heading.lineHeight]}</span>
+                <Badge>Type</Badge>
+                {type.level}
               </div>
               <div sx={{ ...infoStyles }}>
-                <p>Weight</p>
-                <span>{theme.fontWeights[heading.weight]}</span>
+                <Badge>Token</Badge>
+                {type.size}
+              </div>
+              <div sx={{ ...infoStyles, minWidth: `80px` }}>
+                <Badge>Size</Badge>
+                {theme.fontSizes[type.size]}
+              </div>
+              <div sx={{ ...infoStyles, minWidth: `80px` }}>
+                <Badge>Line Height</Badge>
+                {theme.lineHeights[type.lineHeight]}
+              </div>
+              <div sx={{ ...infoStyles }}>
+                <Badge>Weight</Badge>
+                {theme.fontWeights[type.weight]}
               </div>
             </div>
             {specimensConfig.codeExample && (
@@ -150,16 +182,16 @@ const Typography = ({ styles, theme }: TypographyProps) => {
                     <span className="token punctuation">{`{`}</span>
                     <span className="token punctuation" /> fontSize<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token number">{heading.size}</span>
+                    <span className="token number">{type.size}</span>
                     <span className="token punctuation">,</span> fontWeight<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token string">"{heading.weight}"</span>
+                    <span className="token string">"{type.weight}"</span>
                     <span className="token punctuation">,</span> lineHeight<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token string">"{heading.lineHeight}"</span>
+                    <span className="token string">"{type.lineHeight}"</span>
                     <span className="token punctuation">,</span> fontFamily<span className="token punctuation">:</span>
                     {` `}
-                    <span className="token string">"{heading.fontFamily}"</span>
+                    <span className="token string">"{type.fontFamily}"</span>
                     {` `}
                     <span className="token punctuation">{`}`}</span>
                   </code>

@@ -9,6 +9,7 @@ type specimensOptionsType = {
     contrastGuidelines: ContrastTypes
     CMYK: boolean
     codeExample: boolean
+    rootFontSize: number
   }
 }
 
@@ -19,6 +20,7 @@ const useSpecimensConfig = () => {
         contrastGuidelines
         CMYK
         codeExample
+        rootFontSize
       }
     }
   `)

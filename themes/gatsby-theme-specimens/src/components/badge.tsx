@@ -11,8 +11,6 @@ const Badge = ({ children, className }: BadgeProps) => (
   <span
     sx={{
       backgroundColor: `gray.3`,
-      margin: 0,
-      mb: 2,
       color: `gray.8`,
       fontSize: `0.7rem`,
       padding: `3px 8px`,

@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
           background-color: #3490dc;
         }
         html {
-          font-size: 18px;
+          font-size: 16px;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
             "Helvetica Neue", sans-serif;
         }
