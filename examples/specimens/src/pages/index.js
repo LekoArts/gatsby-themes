@@ -5,7 +5,7 @@ import {
   ColorSwatch,
   ColorRow,
   Palette,
-  normalizeThemeUI,
+  normalizeThemeUIColors,
   filterStyles,
   Typography,
   Audio,
@@ -13,7 +13,7 @@ import {
   Download,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
-import { colors, styles, theme } from "../../theme"
+import { colors, styles, theme, fontSizes } from "../../theme"
 
 const Index = () => (
   <Layout>
@@ -39,14 +39,16 @@ const Index = () => (
       <h2>Color Rows</h2>
       <ColorRow color="#000" name="Blackness" prefix="Dark - " />
       <h2>Palette: Color Swatches</h2>
-      <Palette colors={normalizeThemeUI({ colors })} single minimal mode="swatch" />
+      <Palette colors={normalizeThemeUIColors({ colors })} single minimal mode="swatch" />
       <h2>Palette: Color Rows</h2>
-      <Palette colors={normalizeThemeUI({ colors: colors.indigo })} prefix="Indigo - " />
-      <h2>Typography</h2>
+      <Palette colors={normalizeThemeUIColors({ colors: colors.indigo })} prefix="Indigo - " />
+      <h2>Typography: Headings</h2>
       <Typography
         styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}
         theme={theme}
       />
+      <h2>Typography: Scale</h2>
+      <Typography styles={fontSizes} />
       <h2>Audio</h2>
       <Audio
         src="sounds/through_the_gate.mp3"
