@@ -13,7 +13,8 @@ import {
   Download,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
-import { colors, styles, theme, fontSizes } from "../../theme"
+import { colors, styles, theme, fontSizes, fonts } from "../../theme"
+import FontFamily from '../../../../themes/gatsby-theme-specimens/src/components/fontFamily'
 
 const Index = () => (
   <Layout>
@@ -49,6 +50,8 @@ const Index = () => (
       />
       <h2>Typography: Scale</h2>
       <Typography styles={fontSizes} />
+      <h2>Typography: Font Families</h2>
+      <FontFamily fonts={fonts} />
       <h2>Audio</h2>
       <Audio
         src="sounds/through_the_gate.mp3"
