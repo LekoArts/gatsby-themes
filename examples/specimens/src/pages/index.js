@@ -14,7 +14,7 @@ import {
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
 import { colors, styles, theme, fontSizes, fonts } from "../../theme"
-import FontFamily from '../../../../themes/gatsby-theme-specimens/src/components/fontFamily'
+import FontFamily from "../../../../themes/gatsby-theme-specimens/src/components/fontFamily"
 
 const Index = () => (
   <Layout>
