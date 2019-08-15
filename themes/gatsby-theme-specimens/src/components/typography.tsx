@@ -1,7 +1,9 @@
 /** @jsx jsx */
+import React from "react"
 import { jsx } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
+import Table from "./table"
 
 type headingType = {
   fontFamily: string
@@ -36,38 +38,24 @@ const Typography = ({ styles, theme }: TypographyProps) => {
 
   if (Array.isArray(styles)) {
     return (
-      <div sx={{ variant: `typography.scale` }}>
-        <div sx={{ display: `grid`, gridTemplateColumns: [`90px 1fr`, `80px 120px 1fr`], mb: 3 }}>
-          <div sx={{ gridColumn: [`span 2`, `span 1`] }}>
-            <Badge>Token</Badge>
-          </div>
-          <div sx={{ minWidth: `80px` }}>
-            <Badge>Size</Badge>
-          </div>
-          <div>
-            <Badge>Preview</Badge>
-          </div>
-        </div>
-        <div sx={{ display: `grid`, gridGap: 4 }}>
-          {styles.map((size, index) => (
-            <div
-              key={size}
-              sx={{ display: `grid`, gridTemplateColumns: [`90px 1fr`, `80px 120px 1fr`], alignItems: `center` }}
-            >
-              <div sx={{ gridColumn: [`span 2`, `span 1`] }}>{index}</div>
-              <div>{size}</div>
-              <div sx={{ fontSize: `${specimensConfig.rootFontSize * removeREM(size)}px`, lineHeight: `90%` }}>
-                Size {index}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Table
+        sx={{ variant: `typography.scale`, div: { alignSelf: `center` } }}
+        columns={3}
+        titles={[`Token`, `Size`, `Preview`]}
+      >
+        {styles.map((size, index) => (
+          <React.Fragment key={size}>
+            <div>{index}</div>
+            <div>{size}</div>
+            <div sx={{ fontSize: `${specimensConfig.rootFontSize * removeREM(size)}px` }}>Size {index}</div>
+          </React.Fragment>
+        ))}
+      </Table>
     )
   }
 
   return (
-    <div>
+    <React.Fragment>
       {Object.entries(styles).map(([key, value]) => {
         const type = {
           level: key,
@@ -201,7 +189,7 @@ const Typography = ({ styles, theme }: TypographyProps) => {
           </div>
         )
       })}
-    </div>
+    </React.Fragment>
   )
 }
 
