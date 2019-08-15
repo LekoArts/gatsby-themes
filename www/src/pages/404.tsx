@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx, Styled, Container } from "theme-ui"
 import Layout from "../components/layout"
 
