@@ -90,7 +90,8 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
         {name && (
           <div sx={{ ...swatchContentStyles }}>
             <Badge>Name</Badge>
-            {prefix}{name}
+            {prefix}
+            {name}
           </div>
         )}
         <div sx={{ ...swatchContentStyles }}>
