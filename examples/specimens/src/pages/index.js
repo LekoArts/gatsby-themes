@@ -7,12 +7,13 @@ import {
   Palette,
   normalizeThemeUIColors,
   filterStyles,
-  Typography,
+  Heading,
   Audio,
   Video,
   Download,
   FontWeight,
   FontFamily,
+  FontSize,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
 import { colors, styles, theme, fontSizes, fonts, fontWeights } from "../../theme"
@@ -45,12 +46,9 @@ const Index = () => (
       <h2>Palette: Color Rows</h2>
       <Palette colors={normalizeThemeUIColors({ colors: colors.indigo })} prefix="Indigo - " />
       <h2>Typography: Headings</h2>
-      <Typography
-        styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}
-        theme={theme}
-      />
-      <h2>Typography: Scale</h2>
-      <Typography styles={fontSizes} />
+      <Heading styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })} theme={theme} />
+      <h2>Typography: Font Sizes</h2>
+      <FontSize fontSizes={fontSizes} />
       <h2>Typography: Font Families</h2>
       <FontFamily fonts={fonts} />
       <h2>Typography: Font Weights</h2>

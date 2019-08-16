@@ -20,7 +20,7 @@ const FontWeight = ({ fontWeights }: FontWeightProps) => (
       <React.Fragment key={key}>
         <div>{key}</div>
         <div>{value}</div>
-        <div sx={{ fontWeight: value, fontSize: 2 }}>Pack my box with five dozen liquor jugs</div>
+        <div sx={{ fontWeight: value, fontSize: [1, 2] }}>Pack my box with five dozen liquor jugs</div>
       </React.Fragment>
     ))}
   </Table>
