@@ -1,8 +1,12 @@
 import React from "react"
 import { css, Global } from "@emotion/core"
+import Helmet from "react-helmet"
 
 const Layout = ({ children }) => (
   <React.Fragment>
+    <Helmet>
+      <title>Specimens for Design Systems - @lekoarts/gatsby-theme-specimens</title>
+    </Helmet>
     <Global
       styles={css`
         *::before,
@@ -13,17 +17,10 @@ const Layout = ({ children }) => (
           color: #fff;
           background-color: #3490dc;
         }
-        html {
-          font-size: 16px;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-            "Helvetica Neue", sans-serif;
-        }
         body {
           border: 0;
           margin: 0;
           padding: 0;
-          color: #24242d;
-          background: #fff;
         }
         h1,
         h2,
@@ -31,26 +28,26 @@ const Layout = ({ children }) => (
         h4,
         h5,
         h6 {
-          color: #434190;
-          font-weight: 700;
-          line-height: 1.25;
-          margin-bottom: 3rem;
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
         }
-        h1 {
-          font-size: 3rem;
-        }
-        h2 {
-          font-size: 2.25rem;
-        }
-        h3 {
-          font-size: 1.875rem;
-        }
-        h4 {
-          font-size: 1.5rem;
+        .sizes-table {
+          > div:not(:first-of-type) {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+          }
         }
       `}
     />
-    {children}
+    <main
+      css={css`
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+      `}
+    >
+      {children}
+    </main>
   </React.Fragment>
 )
 

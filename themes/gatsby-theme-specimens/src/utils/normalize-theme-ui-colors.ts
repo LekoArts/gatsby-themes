@@ -12,7 +12,7 @@ type normalizeProps = {
  * @param colors {Object}
  * @param omit {Array.<string>}
  */
-const normalizeThemeUiColors = ({ colors, omit = [`modes`, `transparent`] }: normalizeProps) => {
+const normalizeThemeUIColors = ({ colors, omit = [`modes`, `transparent`] }: normalizeProps) => {
   const arr: { name: string; color: string }[] = []
 
   Object.entries(colors)
@@ -29,4 +29,4 @@ const normalizeThemeUiColors = ({ colors, omit = [`modes`, `transparent`] }: nor
   return arr
 }
 
-export default normalizeThemeUiColors
+export default normalizeThemeUIColors
