@@ -20,9 +20,10 @@ type ColorSwatchProps = {
   name?: string
   minimal?: boolean
   className?: string
+  prefix?: string
 }
 
-const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
+const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchProps) => {
   const { hex, RGB, CMYK, ratings } = useColorUtils(color)
   const specimensOptions = useSpecimensConfig()
 
@@ -89,7 +90,7 @@ const ColorSwatch = ({ color, name, minimal, className }: ColorSwatchProps) => {
         {name && (
           <div sx={{ ...swatchContentStyles }}>
             <Badge>Name</Badge>
-            {name}
+            {prefix}{name}
           </div>
         )}
         <div sx={{ ...swatchContentStyles }}>

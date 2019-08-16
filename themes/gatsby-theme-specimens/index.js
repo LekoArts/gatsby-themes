@@ -8,6 +8,7 @@ import FontSize from "./src/components/fontSize"
 import FontWeight from "./src/components/fontWeight"
 import Heading from "./src/components/heading"
 import Palette from "./src/components/palette"
+import Table from "./src/components/table"
 import Video from "./src/components/video"
 
 import filterStyles from "./src/utils/filter-styles"
@@ -22,8 +23,9 @@ export {
   FontFamily,
   FontSize,
   FontWeight,
-  Palette,
   Heading,
+  Palette,
+  Table,
   Video,
   filterStyles,
   normalizeThemeUIColors,

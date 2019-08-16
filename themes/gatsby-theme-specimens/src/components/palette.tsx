@@ -18,9 +18,10 @@ type PaletteProps = {
   single?: boolean
   minimal?: boolean
   prefix?: string
+  className?: string
 }
 
-const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = `` }: PaletteProps) => {
+const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = ``, className }: PaletteProps) => {
   let wrapperStyles = {}
 
   if (mode === `list`) {
@@ -53,7 +54,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
   }
 
   return (
-    <div sx={{ ...wrapperStyles }}>
+    <div sx={{ ...wrapperStyles }} className={className}>
       {colors.map(({ name, color }) => {
         if (!color) return false
 
@@ -84,6 +85,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
               name={name}
               key={name}
               minimal={minimal}
+              prefix={prefix}
               sx={{ width: `100% !important`, display: `block !important` }}
             />
           )

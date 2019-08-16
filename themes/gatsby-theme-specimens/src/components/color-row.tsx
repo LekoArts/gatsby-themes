@@ -44,7 +44,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
       </div>
       <div
         data-name="color-row-values"
-        sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 1fr)`], gridGap: 2, span: { ml: 2 } }}
+        sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 150px)`], gridGap: 2, span: { ml: 2 } }}
       >
         <div>
           <Badge>Hex</Badge>

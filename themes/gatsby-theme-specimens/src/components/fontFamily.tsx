@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import Table from "./table"
 
@@ -11,17 +10,21 @@ type FontFamilyProps = {
 
 const FontFamily = ({ fonts }: FontFamilyProps) => (
   <Table
-    columns={3}
+    columns={[`110px 1fr`, `110px 300px 1fr`, `110px 350px 1fr`, `110px 450px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
-    hideColumnMobile={2}
-    sx={{ variant: `typography.fontFamily` }}
+    sx={{
+      "> div > div:nth-of-type(2)": {
+        display: [`none`, `block`],
+      },
+      variant: `typography.fontFamily`,
+    }}
   >
     {Object.entries(fonts).map(([key, value]) => (
-      <React.Fragment key={key}>
+      <div key={key}>
         <div>{key}</div>
-        <div>{value}</div>
+        <div sx={{ fontSize: 0 }}>{value}</div>
         <div sx={{ fontFamily: value, fontSize: [1, 2] }}>Pack my box with five dozen liquor jugs</div>
-      </React.Fragment>
+      </div>
     ))}
   </Table>
 )
