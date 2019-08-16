@@ -11,10 +11,11 @@ import {
   Audio,
   Video,
   Download,
+  FontWeight,
+  FontFamily,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
-import { colors, styles, theme, fontSizes, fonts } from "../../theme"
-import FontFamily from "../../../../themes/gatsby-theme-specimens/src/components/fontFamily"
+import { colors, styles, theme, fontSizes, fonts, fontWeights } from "../../theme"
 
 const Index = () => (
   <Layout>
@@ -52,6 +53,8 @@ const Index = () => (
       <Typography styles={fontSizes} />
       <h2>Typography: Font Families</h2>
       <FontFamily fonts={fonts} />
+      <h2>Typography: Font Weights</h2>
+      <FontWeight fontWeights={fontWeights} />
       <h2>Audio</h2>
       <Audio
         src="sounds/through_the_gate.mp3"
