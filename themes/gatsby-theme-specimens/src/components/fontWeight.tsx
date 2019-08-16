@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import Table from "./table"
 
@@ -11,17 +10,23 @@ type FontWeightProps = {
 
 const FontWeight = ({ fontWeights }: FontWeightProps) => (
   <Table
-    columns={3}
+    columns={[`110px 1fr`, `110px 80px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
     hideColumnMobile={2}
-    sx={{ variant: `typography.fontWeight`, div: { alignSelf: `center` } }}
+    sx={{
+      div: { alignSelf: `center` },
+      "> div > div:nth-of-type(2)": {
+        display: [`none`, `block`],
+      },
+      variant: `typography.fontWeight`,
+    }}
   >
     {Object.entries(fontWeights).map(([key, value]) => (
-      <React.Fragment key={key}>
+      <div key={key}>
         <div>{key}</div>
         <div>{value}</div>
         <div sx={{ fontWeight: value, fontSize: [1, 2] }}>Pack my box with five dozen liquor jugs</div>
-      </React.Fragment>
+      </div>
     ))}
   </Table>
 )

@@ -5,40 +5,39 @@ import Badge from "./badge"
 
 type TableProps = {
   className?: string
-  columns: number
+  columns: string | string[]
   titles: string[]
   children: React.ReactNode
   hideColumnMobile?: number
 }
 
-const Table = ({ className, columns, titles, children, hideColumnMobile }: TableProps) => {
-  const hideStyle = `&:nth-of-type(3n+${hideColumnMobile})`
-
-  return (
+const Table = ({ className, columns, titles, children }: TableProps) => (
+  <div
+    sx={{
+      div: { alignSelf: `center` },
+      "> div": { display: `grid`, gridTemplateColumns: columns, p: 2 },
+      "> div:nth-of-type(even)": { backgroundColor: `gray.1`, borderRadius: `default` },
+      "> div:not(:first-child)": { py: 3 },
+    }}
+    className={className}
+  >
     <div
       sx={{
-        display: `inline-grid`,
-        gridTemplateColumns: hideColumnMobile
-          ? [`repeat(${columns - 1}, auto)`, `repeat(${columns}, auto)`]
-          : `repeat(${columns}, auto)`,
-        gridGap: [3, 4],
-        div: {
-          alignSelf: `flex-start`,
-          [hideStyle]: {
-            display: [`none`, `block`],
-          },
-        },
+        p: 2,
+        backgroundColor: `indigo.1`,
+        borderRadius: `default`,
+        mb: 3,
+        "[data-name='badge']": { backgroundColor: `indigo.6`, color: `white` },
       }}
-      className={className}
     >
       {titles.map(title => (
         <div key={title}>
           <Badge>{title}</Badge>
         </div>
       ))}
-      {children}
     </div>
-  )
-}
+    {children}
+  </div>
+)
 
 export default Table
