@@ -3,7 +3,7 @@ import React from "react"
 import { jsx } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
-import removeLastThree from "../utils/remove-last-three"
+import getValue from "../utils/get-value"
 
 type headingType = {
   fontFamily: string
@@ -66,7 +66,7 @@ const Heading = ({ styles, theme }: HeadingProps) => {
               data-name="heading-level-preview"
               sx={{
                 fontFamily: type.fontFamily,
-                fontSize: `${specimensConfig.rootFontSize * removeLastThree(theme.fontSizes[type.size])}px`,
+                fontSize: `${specimensConfig.rootFontSize * getValue(theme.fontSizes[type.size])}px`,
                 fontWeight: type.weight,
                 lineHeight: type.lineHeight,
                 mb: 4,
