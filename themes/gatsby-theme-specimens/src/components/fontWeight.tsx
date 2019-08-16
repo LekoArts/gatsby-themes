@@ -3,27 +3,27 @@ import React from "react"
 import { jsx } from "theme-ui"
 import Table from "./table"
 
-type FontFamilyProps = {
-  fonts: {
+type FontWeightProps = {
+  fontWeights: {
     [key: string]: string
   }
 }
 
-const FontFamily = ({ fonts }: FontFamilyProps) => (
+const FontWeight = ({ fontWeights }: FontWeightProps) => (
   <Table
     columns={3}
     titles={[`Token`, `Value`, `Preview`]}
     hideColumnMobile={2}
-    sx={{ variant: `typography.fontFamily` }}
+    sx={{ variant: `typography.fontWeight`, div: { alignSelf: `center` } }}
   >
-    {Object.entries(fonts).map(([key, value]) => (
+    {Object.entries(fontWeights).map(([key, value]) => (
       <React.Fragment key={key}>
         <div>{key}</div>
         <div>{value}</div>
-        <div sx={{ fontFamily: value, fontSize: 2 }}>Pack my box with five dozen liquor jugs</div>
+        <div sx={{ fontWeight: value, fontSize: 2 }}>Pack my box with five dozen liquor jugs</div>
       </React.Fragment>
     ))}
   </Table>
 )
 
-export default FontFamily
+export default FontWeight

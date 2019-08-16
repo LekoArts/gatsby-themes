@@ -22,7 +22,7 @@ const Table = ({ className, columns, titles, children, hideColumnMobile }: Table
           ? [`repeat(${columns - 1}, auto)`, `repeat(${columns}, auto)`]
           : `repeat(${columns}, auto)`,
         gridGap: [3, 4],
-        "> div": {
+        div: {
           alignSelf: `flex-start`,
           [hideStyle]: {
             display: [`none`, `block`],
