@@ -10,9 +10,9 @@ type FontFamilyProps = {
 }
 
 const FontFamily = ({ fonts }: FontFamilyProps) => (
-  <Table columns={3} titles={[`Token`, `Value`, `Preview`]}>
+  <Table columns={3} titles={[`Token`, `Value`, `Preview`]} hideColumnMobile={2}>
     {Object.entries(fonts).map(([key, value]) => (
-      <React.Fragment>
+      <React.Fragment key={key}>
         <div>{key}</div>
         <div>{value}</div>
         <div sx={{ fontFamily: value, fontSize: 2 }}>Pack my box with five dozen liquor jugs</div>
