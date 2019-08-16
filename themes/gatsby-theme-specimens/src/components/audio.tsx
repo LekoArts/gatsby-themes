@@ -28,7 +28,7 @@ const Audio = ({ autoplay = false, loop = false, name = ``, desc = ``, src }: Au
         fill: `currentColor`,
         color: `indigo.3`,
       },
-      variant: `audio.default`,
+      variant: `audio.specimens`,
     }}
   >
     {name && (

@@ -50,7 +50,7 @@ const Index = () => {
           padding: 1.5rem;
         `}
       >
-        <h1>Specimens for Design Systems</h1>
+        {/*<h1>Specimens for Design Systems</h1>
         <p>React component utilities to build your design system!</p>
         <h2>Alerts</h2>
         <Alert type="success">Make it so! Make it so! Make it so! Make it so! Make it so!</Alert>
@@ -66,8 +66,8 @@ const Index = () => {
         <ColorRow color="#000" name="Blackness" prefix="Dark - " />
         <h2>Palette: Color Swatches</h2>
         <Palette colors={normalizeThemeUIColors({ colors })} single minimal mode="swatch" />
-        {/*<h2>Palette: Color Rows</h2>
-        {colorFamilies(colors)}*/}
+        <h2>Palette: Color Rows</h2>
+        {colorFamilies(colors)}
         <h2>Sizes</h2>
         <Table
           columns={[`120px 1fr`]}
@@ -80,7 +80,7 @@ const Index = () => {
               <div>{value}</div>
             </div>
           ))}
-        </Table>
+        </Table>*/}
         <h2>Typography: Headings</h2>
         <Heading
           styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}

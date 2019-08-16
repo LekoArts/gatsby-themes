@@ -29,7 +29,7 @@ const Video = ({ autoplay = false, loop = false, muted = false, name = ``, poste
         fill: `currentColor`,
         color: `indigo.3`,
       },
-      variant: `video.default`,
+      variant: `video.specimens`,
     }}
   >
     {name && (
