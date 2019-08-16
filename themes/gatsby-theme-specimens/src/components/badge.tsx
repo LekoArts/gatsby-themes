@@ -12,7 +12,7 @@ const Badge = ({ children, className }: BadgeProps) => (
     sx={{
       backgroundColor: `gray.3`,
       color: `gray.8`,
-      fontSize: `0.7rem`,
+      fontSize: `0.75rem`,
       padding: `3px 8px`,
       borderRadius: `default`,
       letterSpacing: `wider`,

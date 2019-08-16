@@ -14,7 +14,7 @@ const Space = ({ space }: SpaceProps) => {
   return (
     <Table
       sx={{ overflow: `auto`, variant: `space.specimens` }}
-      columns="80px 80px 1fr"
+      columns="80px 100px 1fr"
       titles={[`Token`, `Size`, `Preview`]}
     >
       {space.map((size, index) => (

@@ -1,5 +1,6 @@
 import Alert from "./src/components/alert"
 import Audio from "./src/components/audio"
+import BorderRadius from "./src/components/borderRadius"
 import ColorRow from "./src/components/color-row"
 import ColorSwatch from "./src/components/color-swatch"
 import Download from "./src/components/download"
@@ -8,6 +9,7 @@ import FontSize from "./src/components/fontSize"
 import FontWeight from "./src/components/fontWeight"
 import Heading from "./src/components/heading"
 import Palette from "./src/components/palette"
+import Shadow from "./src/components/shadow"
 import Space from "./src/components/space"
 import Table from "./src/components/table"
 import Video from "./src/components/video"
@@ -18,6 +20,7 @@ import normalizeThemeUIColors from "./src/utils/normalize-theme-ui-colors"
 export {
   Alert,
   Audio,
+  BorderRadius,
   ColorRow,
   ColorSwatch,
   Download,
@@ -26,6 +29,7 @@ export {
   FontWeight,
   Heading,
   Palette,
+  Shadow,
   Space,
   Table,
   Video,
