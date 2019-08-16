@@ -16,9 +16,11 @@ import {
   FontSize,
   Table,
   Space,
+  BorderRadius,
+  Shadow,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
-import { colors, styles, theme, fontSizes, fonts, fontWeights, sizes, space } from "../../theme"
+import { colors, styles, theme, fontSizes, fonts, fontWeights, sizes, space, radii, shadows } from "../../theme"
 
 const capitalize = s => {
   if (typeof s !== `string`) return ``
@@ -31,7 +33,7 @@ const Index = () => {
       if (!color || !Array.isArray(color)) return false
 
       return (
-        <React.Fragment>
+        <React.Fragment key={key}>
           <h3>{capitalize(key)}</h3>
           <Palette
             colors={normalizeThemeUIColors({ colors: color })}
@@ -51,9 +53,7 @@ const Index = () => {
           padding: 1.5rem;
         `}
       >
-        <h2>Space</h2>
-        <Space space={space} />
-        {/*<h1>Specimens for Design Systems</h1>
+        <h1>Specimens for Design Systems</h1>
         <p>React component utilities to build your design system!</p>
         <h2>Alerts</h2>
         <Alert type="success">Make it so! Make it so! Make it so! Make it so! Make it so!</Alert>
@@ -83,7 +83,13 @@ const Index = () => {
               <div>{value}</div>
             </div>
           ))}
-        </Table>*/}
+        </Table>
+        <h2>Radii</h2>
+        <BorderRadius radii={radii} />
+        <h2>Shadows</h2>
+        <Shadow shadows={shadows} />
+        <h2>Space</h2>
+        <Space space={space} />
         <h2>Typography: Headings</h2>
         <Heading
           styles={filterStyles({ input: styles, allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`] })}

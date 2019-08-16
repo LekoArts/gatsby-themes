@@ -29,7 +29,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
         variant: `rows.specimens`,
       }}
     >
-      <div data-name="color-row-color" sx={{ display: `flex`, alignItems: `center`, my: 2 }}>
+      <div data-name="color-row-color" sx={{ display: `flex`, alignItems: `center`, my: [3, 2] }}>
         <div
           sx={{
             backgroundColor: color,
@@ -44,7 +44,12 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
       </div>
       <div
         data-name="color-row-values"
-        sx={{ display: `grid`, gridTemplateColumns: [`1fr`, `repeat(3, 150px)`], gridGap: 2, span: { ml: 2 } }}
+        sx={{
+          display: `grid`,
+          gridTemplateColumns: [`1fr`, `repeat(3, 160px)`],
+          gridGap: 2,
+          "span:last-of-type": { ml: 2 },
+        }}
       >
         <div>
           <Badge>Hex</Badge>

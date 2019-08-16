@@ -15,9 +15,9 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
   <div
     sx={{
       div: { alignSelf: `center` },
-      "> div": { display: `grid`, gridTemplateColumns: columns, p: 2 },
+      "> div": { display: `grid`, gridTemplateColumns: columns, p: [2, 3] },
       "> div:nth-of-type(even)": { backgroundColor: `gray.1`, borderRadius: `default` },
-      "> div:not(:first-child)": { py: 3 },
+      "> div:not(:first-of-type)": { py: 3 },
       variant: `table.specimens`,
     }}
     className={className}
@@ -28,7 +28,7 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
         backgroundColor: `indigo.1`,
         borderRadius: `default`,
         mb: 3,
-        "[data-name='badge']": { backgroundColor: `indigo.6`, color: `white` },
+        "[data-name='badge']": { backgroundColor: `indigo.2`, color: `indigo.9`, fontWeight: `medium` },
       }}
     >
       {titles.map(title => (
