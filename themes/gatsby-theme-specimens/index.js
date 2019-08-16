@@ -8,6 +8,7 @@ import FontSize from "./src/components/fontSize"
 import FontWeight from "./src/components/fontWeight"
 import Heading from "./src/components/heading"
 import Palette from "./src/components/palette"
+import Space from "./src/components/space"
 import Table from "./src/components/table"
 import Video from "./src/components/video"
 
@@ -25,6 +26,7 @@ export {
   FontWeight,
   Heading,
   Palette,
+  Space,
   Table,
   Video,
   filterStyles,

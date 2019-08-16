@@ -15,9 +15,10 @@ import {
   FontFamily,
   FontSize,
   Table,
+  Space,
 } from "@lekoarts/gatsby-theme-specimens"
 import Layout from "../components/layout"
-import { colors, styles, theme, fontSizes, fonts, fontWeights, sizes } from "../../theme"
+import { colors, styles, theme, fontSizes, fonts, fontWeights, sizes, space } from "../../theme"
 
 const capitalize = s => {
   if (typeof s !== `string`) return ``
@@ -50,6 +51,8 @@ const Index = () => {
           padding: 1.5rem;
         `}
       >
+        <h2>Space</h2>
+        <Space space={space} />
         {/*<h1>Specimens for Design Systems</h1>
         <p>React component utilities to build your design system!</p>
         <h2>Alerts</h2>

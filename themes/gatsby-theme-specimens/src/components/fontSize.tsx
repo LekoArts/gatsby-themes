@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import Table from "./table"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
-import removeLastThree from "../utils/remove-last-three"
+import getValue from "../utils/get-value"
 
 type FontSizeProps = {
   fontSizes: string[]
@@ -17,7 +17,7 @@ const FontSize = ({ fontSizes }: FontSizeProps) => {
         <div key={size}>
           <div>{index}</div>
           <div>{size}</div>
-          <div sx={{ fontSize: `${specimensConfig.rootFontSize * removeLastThree(size)}px` }}>Size {index}</div>
+          <div sx={{ fontSize: `${specimensConfig.rootFontSize * getValue(size)}px` }}>Size {index}</div>
         </div>
       ))}
     </Table>
