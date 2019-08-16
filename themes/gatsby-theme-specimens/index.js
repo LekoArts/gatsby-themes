@@ -1,6 +1,7 @@
 import Alert from "./src/components/alert"
 import Audio from "./src/components/audio"
 import BorderRadius from "./src/components/borderRadius"
+import ColorFamilies from "./src/components/color-families"
 import ColorRow from "./src/components/color-row"
 import ColorSwatch from "./src/components/color-swatch"
 import Download from "./src/components/download"
@@ -21,6 +22,7 @@ export {
   Alert,
   Audio,
   BorderRadius,
+  ColorFamilies,
   ColorRow,
   ColorSwatch,
   Download,
