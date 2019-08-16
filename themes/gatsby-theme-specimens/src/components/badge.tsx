@@ -18,7 +18,7 @@ const Badge = ({ children, className }: BadgeProps) => (
       letterSpacing: `wider`,
       textAlign: `center`,
       textTransform: `uppercase`,
-      variant: `badge.default`,
+      variant: `badge.specimens`,
     }}
     data-name="badge"
     className={className}

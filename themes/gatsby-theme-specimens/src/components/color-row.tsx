@@ -26,7 +26,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
         flexWrap: `wrap`,
         justifyContent: `space-between`,
         alignItems: `center`,
-        variant: `rows.default`,
+        variant: `rows.specimens`,
       }}
     >
       <div data-name="color-row-color" sx={{ display: `flex`, alignItems: `center`, my: 2 }}>

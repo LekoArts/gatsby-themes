@@ -31,7 +31,7 @@ const Download = ({ name, src, bg = `white`, preview = true, notes = `` }: Downl
         fill: `currentColor`,
         color: `indigo.3`,
       },
-      variant: `download.default`,
+      variant: `download.specimens`,
     }}
   >
     {name && (
