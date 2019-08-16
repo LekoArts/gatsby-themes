@@ -20,7 +20,7 @@ const FontFamily = ({ fonts }: FontFamilyProps) => (
       <React.Fragment key={key}>
         <div>{key}</div>
         <div>{value}</div>
-        <div sx={{ fontFamily: value, fontSize: 2 }}>Pack my box with five dozen liquor jugs</div>
+        <div sx={{ fontFamily: value, fontSize: [1, 2] }}>Pack my box with five dozen liquor jugs</div>
       </React.Fragment>
     ))}
   </Table>

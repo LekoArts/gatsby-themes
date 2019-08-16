@@ -4,9 +4,10 @@ import ColorRow from "./src/components/color-row"
 import ColorSwatch from "./src/components/color-swatch"
 import Download from "./src/components/download"
 import FontFamily from "./src/components/fontFamily"
+import FontSize from "./src/components/fontSize"
 import FontWeight from "./src/components/fontWeight"
+import Heading from "./src/components/heading"
 import Palette from "./src/components/palette"
-import Typography from "./src/components/typography"
 import Video from "./src/components/video"
 
 import filterStyles from "./src/utils/filter-styles"
@@ -19,9 +20,10 @@ export {
   ColorSwatch,
   Download,
   FontFamily,
+  FontSize,
   FontWeight,
   Palette,
-  Typography,
+  Heading,
   Video,
   filterStyles,
   normalizeThemeUIColors,
