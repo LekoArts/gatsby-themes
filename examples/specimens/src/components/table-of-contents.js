@@ -11,11 +11,10 @@ const TableOfContents = () => {
     }
   `)
 
-  const toc = result.mdx.tableOfContents.items[0].items
+  const toc = result.mdx.tableOfContents.items[0].items[2].items
 
   return (
     <React.Fragment>
-      <b>Table of contents:</b>
       <ul>
         {toc.map(entry => (
           <li key={entry.url}>

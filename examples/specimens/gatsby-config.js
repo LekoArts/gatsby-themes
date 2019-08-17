@@ -34,7 +34,7 @@ module.exports = {
       options: {
         name: `Specimens for Design Systems - @lekoarts/gatsby-theme-specimens`,
         short_name: `Specimens`,
-        description: `Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not how to showcase it. Works seamlessly with MDX.`,
+        description: `Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#b83280`,
