@@ -26,7 +26,7 @@
     </a>
 </p>
 
-Show the live statuses of your Netlify and CircleCI builds on your website! Easily integrate the customizable components into your site and adapt them to your theme (utilizing Theme UI).
+Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not how to showcase it. Works seamlessly with MDX.
 
 [**Demo Website**](https://specimens.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-specimens))
 
@@ -44,7 +44,7 @@ npm install @lekoarts/gatsby-theme-specimens
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme. Perfect for a single-page usage (e.g. `https://status.your-domain.tld`).
+This will generate a new site that pre-configures use of the theme.
 
 ```sh
 gatsby new specimens LekoArts/gatsby-starter-specimens

@@ -5,7 +5,30 @@ import Helmet from "react-helmet"
 const Layout = ({ children }) => (
   <React.Fragment>
     <Helmet>
+      <html lang="en" />
       <title>Specimens for Design Systems - @lekoarts/gatsby-theme-specimens</title>
+      <meta
+        name="description"
+        content="Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not how to showcase it. Works seamlessly with MDX."
+      />
+      <meta name="image" content="https://themes.lekoarts.de/specimens/banner.jpg" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="lekoarts.de" />
+      <meta property="og:url" content="https://themes.lekoarts.de/specimens" />
+      <meta property="og:title" content="Specimens for Design Systems - @lekoarts/gatsby-theme-specimens" />
+      <meta
+        property="og:description"
+        content={`Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not how to showcase it. Works seamlessly with MDX.`}
+      />
+      <meta property="og:image" content="https://themes.lekoarts.de/specimens/banner.jpg" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@lekoarts_de" />
+      <meta name="twitter:title" content="Specimens for Design Systems - @lekoarts/gatsby-theme-specimens" />
+      <meta
+        name="twitter:description"
+        content={`Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not how to showcase it. Works seamlessly with MDX.`}
+      />
+      <meta name="twitter:image" content="https://themes.lekoarts.de/specimens/banner.jpg" />
     </Helmet>
     <Global
       styles={css`

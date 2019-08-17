@@ -1,7 +1,13 @@
 import React from "react"
 
 const Info = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon-information" aria-hidden focusable="false">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="icon-information"
+    aria-hidden
+    focusable="false"
+  >
     <path className="primary" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20z" />
     <path
       className="secondary"
