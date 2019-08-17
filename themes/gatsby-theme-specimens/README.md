@@ -64,12 +64,12 @@ gatsby new specimens LekoArts/gatsby-starter-specimens
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `contrastGuidelines` | `AA`          | The color swatches display in their top section whether white/black text has sufficient color contrast with the respective color. By default the function determines that Pass/Fail by 'AA' (ratio at least 4.5:1). You can also set this value to 'AAA' (ratio at least 7:1).        |
-| `CMYK` | `true`          | The color swatch and color row component display their values in HEX, RGB, and CMYK. You can optionally disable the CMYK field.        |
-| `codeExample` | `true`          | The heading component displays Theme UI code implementation examples below the different headings. You can disable those by setting it to `false`.       |
-| `rootFontSize` | `16`          | Values for spacing, border-radius, font-size mostly can be defined as `rem` values. As the examples shouldn't be influenced by the root font size of the website, but the design system itself you can define your theme's rootFontSize here.      |
+| Key                  | Default Value | Description                                                                                                                                                                                                                                                                    |
+| -------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `contrastGuidelines` | `AA`          | The color swatches display in their top section whether white/black text has sufficient color contrast with the respective color. By default the function determines that Pass/Fail by 'AA' (ratio at least 4.5:1). You can also set this value to 'AAA' (ratio at least 7:1). |
+| `CMYK`               | `true`        | The color swatch and color row component display their values in HEX, RGB, and CMYK. You can optionally disable the CMYK field.                                                                                                                                                |
+| `codeExample`        | `true`        | The heading component displays Theme UI code implementation examples below the different headings. You can disable those by setting it to `false`.                                                                                                                             |
+| `rootFontSize`       | `16`          | Values for spacing, border-radius, font-size mostly can be defined as `rem` values. As the examples shouldn't be influenced by the root font size of the website, but the design system itself you can define your theme's rootFontSize here.                                  |
 
 #### Example usage
 
@@ -98,7 +98,7 @@ When you use `gatsby-plugin-theme-ui` in your project, create a new file at `src
 
 ```jsx
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx } from "theme-ui";
 import {
   Alert,
   Audio,
@@ -115,8 +115,8 @@ import {
   Shadow,
   Space,
   Table,
-  Video,
-} from "@lekoarts/gatsby-theme-specimens"
+  Video
+} from "@lekoarts/gatsby-theme-specimens";
 
 export default {
   Alert: ({ type, children }) => <Alert type={type}>{children}</Alert>,
@@ -125,7 +125,9 @@ export default {
   ),
   BorderRadius: ({ radii }) => <BorderRadius radii={radii} />,
   ColorFamilies: ({ colors }) => <ColorFamilies colors={colors} />,
-  ColorRow: ({ color, name, prefix }) => <ColorRow color={color} name={name} prefix={prefix} />,
+  ColorRow: ({ color, name, prefix }) => (
+    <ColorRow color={color} name={name} prefix={prefix} />
+  ),
   ColorSwatch: ({ color, name, minimal, prefix }) => (
     <ColorSwatch color={color} name={name} minimal={minimal} prefix={prefix} />
   ),
@@ -137,7 +139,13 @@ export default {
   FontWeight: ({ fontWeights }) => <FontWeight fontWeights={fontWeights} />,
   Heading: ({ styles, theme }) => <Heading styles={styles} theme={theme} />,
   Palette: ({ colors, mode, single, minimal, prefix }) => (
-    <Palette colors={colors} mode={mode} single={single} minimal={minimal} prefix={prefix} />
+    <Palette
+      colors={colors}
+      mode={mode}
+      single={single}
+      minimal={minimal}
+      prefix={prefix}
+    />
   ),
   Shadow: ({ shadows }) => <Shadow shadows={shadows} />,
   Space: ({ space }) => <Space space={space} />,
@@ -147,9 +155,16 @@ export default {
     </Table>
   ),
   Video: ({ autoplay, loop, muted, name, poster, src }) => (
-    <Video autoplay={autoplay} loop={loop} muted={muted} name={name} poster={poster} src={src} />
-  ),
-}
+    <Video
+      autoplay={autoplay}
+      loop={loop}
+      muted={muted}
+      name={name}
+      poster={poster}
+      src={src}
+    />
+  )
+};
 ```
 
 This way you are able to use the components directly in your MDX file:
