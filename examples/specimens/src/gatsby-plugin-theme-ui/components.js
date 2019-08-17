@@ -1,6 +1,8 @@
 /* eslint-disable react/display-name */
+/* eslint-disable react/destructuring-assignment */
 
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import {
   Alert,
   Audio,
@@ -19,6 +21,26 @@ import {
   Table,
   Video,
 } from "@lekoarts/gatsby-theme-specimens"
+
+const heading = Tag => props =>
+  props.id ? (
+    <Tag {...props}>
+      <a
+        href={`#${props.id}`}
+        sx={{
+          color: `inherit`,
+          textDecoration: `none`,
+          ":hover": {
+            textDecoration: `underline`,
+          },
+        }}
+      >
+        {props.children}
+      </a>
+    </Tag>
+  ) : (
+    <Tag {...props} />
+  )
 
 export default {
   Alert: ({ type, children }) => <Alert type={type}>{children}</Alert>,
@@ -51,4 +73,9 @@ export default {
   Video: ({ autoplay, loop, muted, name, poster, src }) => (
     <Video autoplay={autoplay} loop={loop} muted={muted} name={name} poster={poster} src={src} />
   ),
+  h2: heading(`h2`),
+  h3: heading(`h3`),
+  h4: heading(`h4`),
+  h5: heading(`h5`),
+  h6: heading(`h6`),
 }

@@ -2,6 +2,9 @@ require(`dotenv`).config({
   path: `.env`,
 })
 
+// eslint-disable-next-line global-require
+const remarkPlugins = [require(`remark-slug`)]
+
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Specimens for Design Systems - TODO`,
@@ -20,7 +23,13 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`],
+        remarkPlugins,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
