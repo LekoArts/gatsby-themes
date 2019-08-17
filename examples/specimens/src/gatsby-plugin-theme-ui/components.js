@@ -3,7 +3,7 @@
 
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import Prism from '@theme-ui/prism'
+import Prism from "@theme-ui/prism"
 import {
   Alert,
   Audio,
