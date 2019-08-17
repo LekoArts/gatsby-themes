@@ -19,7 +19,8 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
       sx={{
         boxShadow: `default`,
         backgroundColor: `elementBG`,
-        p: 3,
+        px: 3,
+        py: 2,
         mb: 3,
         borderRadius: `lg`,
         display: `flex`,
@@ -40,13 +41,13 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
             boxShadow: `0 10px 15px -3px rgba(${RGB}, 0.3), 0 4px 6px -2px rgba(${RGB}, 0.15)`,
           }}
         />
-        <div sx={{ fontSize: 1 }}>{`${prefix}${name}`}</div>
+        <div sx={{ fontSize: 1, mr: 3 }}>{`${prefix}${name}`}</div>
       </div>
       <div
         data-name="color-row-values"
         sx={{
           display: `grid`,
-          gridTemplateColumns: [`1fr`, `repeat(3, 160px)`],
+          gridTemplateColumns: [`1fr`, `130px 160px 170px`],
           gridGap: 2,
           "span:last-of-type": { ml: 2 },
         }}

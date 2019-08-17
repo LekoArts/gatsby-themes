@@ -63,7 +63,8 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
           >
             <div
               title={`${rating.title} (${rating.color}): ${rating.value ? `Pass` : `Fail`}`}
-              sx={{ textAlign: `center`, color: rating.color, fontSize: rating.size }}
+              aria-label={`${rating.title} (${rating.color}): ${rating.value ? `Pass` : `Fail`}`}
+              sx={{ textAlign: `center`, color: rating.color, fontSize: rating.size, fontWeight: `medium` }}
             >
               A
             </div>
@@ -74,7 +75,8 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
                 color: `white`,
                 borderRadius: `default`,
                 fontSize: 0,
-                padding: `2px 5px`,
+                py: 0,
+                px: 2,
                 mt: 1,
               }}
             >
