@@ -20,7 +20,7 @@
     </a>
 </p>
 
-Stub description for Specimens for Design Systems. Using the Gatsby Theme [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens).
+Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX. Using the Gatsby Theme [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens).
 
 [**Demo Website**](https://specimens.lekoarts.de)
 
@@ -28,7 +28,15 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## ✨ Features
 
-- TODO
+- Theme UI-based theming
+- Suitable for MDX
+- Offers React components specifically designed for design systems. You can display:
+  - Colors as swatches and rows. Individually placed or automated from an object/array in your theme file
+  - Typography e.g. font-family, font-size, font-weight and headings
+  - Spacing scales
+  - Audio files and downloads
+  - border-radius or box-shadow
+  - Alerts to emphasize important messages
 
 ## 🚀 Getting Started
 

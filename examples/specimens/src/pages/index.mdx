@@ -7,11 +7,33 @@ import {
 
 # Specimens for Design Systems
 
-React component utilities to build your design system!
+Leverage the wide variety of powerful React components of `@lekoarts/gatsby-theme-specimens` to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
+
+[**Source code for this site**](https://github.com/LekoArts/gatsby-starter-specimens)
+
+## Features
+
+- Theme UI-based theming
+- Suitable for MDX
+- Offers React components specifically designed for design systems. You can display:
+  - Colors as swatches and rows. Individually placed or automated from an object/array in your theme file
+  - Typography e.g. font-family, font-size, font-weight and headings
+  - Spacing scales
+  - Audio files and downloads
+  - border-radius or box-shadow
+  - Alerts to emphasize important messages
+
+## Installation
+
+```sh
+npm install @lekoarts/gatsby-theme-specimens
+```
+
+## Specimens
 
 <TableOfContents />
 
-## Alert
+### Alert
 
 <Alert type="success">Make it so!</Alert>
 <Alert type="hint">Neutral Hint</Alert>
@@ -19,7 +41,7 @@ React component utilities to build your design system!
 <Alert type="info">Super helpful information goes here</Alert>
 <Alert type="danger">nooooooooo, not this way</Alert>
 
-## Audio
+### Audio
 
 <Audio
   src="sounds/through_the_gate.mp3"
@@ -29,21 +51,21 @@ React component utilities to build your design system!
 
 <Audio src="sounds/through_the_gate.mp3" />
 
-## Border Radius
+### Border Radius
 
 <BorderRadius radii={theme.radii} />
 
-## Color Row
+### Color Row
 
 <ColorRow color="#000" name="Blackness" prefix="Dark - " />
 
-## Color Swatch
+### Color Swatch
 
 <ColorSwatch color="#2d3748" name="Blueish" />
 <ColorSwatch color="#fff" />
 <ColorSwatch color="#667eea" name="Swift" />
 
-## Download
+### Download
 
 <Download
   name="Gatsby Themes Wallpaper"
@@ -53,19 +75,19 @@ React component utilities to build your design system!
 
 <Download name="Logo" bg="black" src="downloads/logo.png" />
 
-## Font Family
+### Font Family
 
 <FontFamily fonts={theme.fonts} />
 
-## Font Size
+### Font Size
 
 <FontSize fontSizes={theme.fontSizes} />
 
-## Font Weight
+### Font Weight
 
 <FontWeight fontWeights={theme.fontWeights} />
 
-## Heading
+### Heading
 
 <Heading
   styles={filterStyles({
@@ -75,14 +97,14 @@ React component utilities to build your design system!
   theme={theme}
 />
 
-## Palette: Color Rows
+### Palette: Color Rows
 
 <Palette
   colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
   prefix="Indigo - "
 />
 
-## Palette: Color Swatches
+### Palette: Color Swatches
 
 <Palette
   colors={normalizeThemeUIColors({ colors: theme.colors })}
@@ -91,7 +113,7 @@ React component utilities to build your design system!
   mode="swatch"
 />
 
-## Sizes
+### Sizes
 
 <Table
   columns={[`120px 1fr`]}
@@ -106,15 +128,15 @@ React component utilities to build your design system!
   ))}
 </Table>
 
-## Shadows
+### Shadows
 
 <Shadow shadows={theme.shadows} />
 
-## Space
+### Space
 
 <Space space={theme.space} />
 
-## Video
+### Video
 
 <Video
   name="LekoArts Intro"

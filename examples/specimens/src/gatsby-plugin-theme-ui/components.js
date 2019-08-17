@@ -3,6 +3,7 @@
 
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import Prism from '@theme-ui/prism'
 import {
   Alert,
   Audio,
@@ -78,4 +79,6 @@ export default {
   h4: heading(`h4`),
   h5: heading(`h5`),
   h6: heading(`h6`),
+  pre: props => props.children,
+  code: Prism,
 }
