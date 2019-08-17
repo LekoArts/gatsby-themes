@@ -1,7 +1,13 @@
 import React from "react"
 
 const ChevronRight = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon-cheveron-right-circle" aria-hidden focusable="false">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    className="icon-cheveron-right-circle"
+    aria-hidden
+    focusable="false"
+  >
     <circle cx="12" cy="12" r="10" className="primary" />
     <path
       className="secondary"
