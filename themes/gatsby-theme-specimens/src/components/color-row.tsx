@@ -32,6 +32,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
     >
       <div data-name="color-row-color" sx={{ display: `flex`, alignItems: `center`, my: [3, 2] }}>
         <div
+          aria-label={`Color preview: ${prefix}${name}`}
           sx={{
             backgroundColor: color,
             borderRadius: `full`,

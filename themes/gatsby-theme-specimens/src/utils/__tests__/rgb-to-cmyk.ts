@@ -16,7 +16,7 @@ describe(`rgb-to-cymk`, () => {
     // @ts-ignore
     RGBToCMYK(`84`, `test`, 204)
     // @ts-ignore
-    expect(RGBToCMYK(`84`, `test`, 204)).toEqual(false)
+    expect(RGBToCMYK(`84`, `test`, 204)).toEqual(undefined)
     expect(warn).toHaveBeenCalledWith(`Please enter numeric RGB values!`)
 
     warn.mockRestore()
@@ -26,7 +26,7 @@ describe(`rgb-to-cymk`, () => {
     // @ts-ignore
     RGBToCMYK(-5, 300, 204)
     // @ts-ignore
-    expect(RGBToCMYK(-5, 300, 204)).toEqual(false)
+    expect(RGBToCMYK(-5, 300, 204)).toEqual(undefined)
     expect(warn).toHaveBeenCalledWith(`RGB values must be in the range 0 to 255.`)
 
     warn.mockRestore()

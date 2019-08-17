@@ -13,8 +13,6 @@ const TableOfContents = () => {
 
   const toc = result.mdx.tableOfContents.items[0].items
 
-  console.log(toc)
-
   return (
     <React.Fragment>
       <b>Table of contents:</b>
