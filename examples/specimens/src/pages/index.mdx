@@ -1,4 +1,5 @@
 import { theme } from "../../theme";
+import TableOfContents from "../components/table-of-contents"
 import {
   normalizeThemeUIColors,
   filterStyles
@@ -8,7 +9,9 @@ import {
 
 React component utilities to build your design system!
 
-## Alerts
+<TableOfContents />
+
+## Alert
 
 <Alert type="success">Make it so!</Alert>
 <Alert type="hint">Neutral Hint</Alert>
@@ -16,15 +19,68 @@ React component utilities to build your design system!
 <Alert type="info">Super helpful information goes here</Alert>
 <Alert type="danger">nooooooooo, not this way</Alert>
 
-## Color Swatches
+## Audio
+
+<Audio
+  src="sounds/through_the_gate.mp3"
+  name="Through the Gate"
+  desc="Hundreds of years in the future, in a colonized Solar System, police detective Josephus Miller, born on Ceres in the asteroid belt, is sent to find a missing young woman, Juliette 'Julie' Andromeda Mao. James Holden, Executive Officer of the ice hauler Canterbury, is involved in a tragic incident that threatens to destabilize the uneasy peace between Earth, Mars and the Belt."
+/>
+
+<Audio src="sounds/through_the_gate.mp3" />
+
+## Border Radius
+
+<BorderRadius radii={theme.radii} />
+
+## Color Row
+
+<ColorRow color="#000" name="Blackness" prefix="Dark - " />
+
+## Color Swatch
 
 <ColorSwatch color="#2d3748" name="Blueish" />
 <ColorSwatch color="#fff" />
 <ColorSwatch color="#667eea" name="Swift" />
 
-## Color Rows
+## Download
 
-<ColorRow color="#000" name="Blackness" prefix="Dark - " />
+<Download
+  name="Gatsby Themes Wallpaper"
+  notes="Use for Social Media previews"
+  src="downloads/gatsby-themes-wallpaper.jpg"
+/>
+
+<Download name="Logo" bg="black" src="downloads/logo.png" />
+
+## Font Family
+
+<FontFamily fonts={theme.fonts} />
+
+## Font Size
+
+<FontSize fontSizes={theme.fontSizes} />
+
+## Font Weight
+
+<FontWeight fontWeights={theme.fontWeights} />
+
+## Heading
+
+<Heading
+  styles={filterStyles({
+    input: theme.styles,
+    allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]
+  })}
+  theme={theme}
+/>
+
+## Palette: Color Rows
+
+<Palette
+  colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
+  prefix="Indigo - "
+/>
 
 ## Palette: Color Swatches
 
@@ -33,13 +89,6 @@ React component utilities to build your design system!
   single
   minimal
   mode="swatch"
-/>
-
-## Palette: Color Rows
-
-<Palette
-  colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
-  prefix="Indigo - "
 />
 
 ## Sizes
@@ -57,10 +106,6 @@ React component utilities to build your design system!
   ))}
 </Table>
 
-## Radii
-
-<BorderRadius radii={theme.radii} />
-
 ## Shadows
 
 <Shadow shadows={theme.shadows} />
@@ -69,38 +114,6 @@ React component utilities to build your design system!
 
 <Space space={theme.space} />
 
-## Typography: Headings
-
-<Heading
-  styles={filterStyles({
-    input: theme.styles,
-    allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]
-  })}
-  theme={theme}
-/>
-
-## Typography: Font Sizes
-
-<FontSize fontSizes={theme.fontSizes} />
-
-## Typography: Font Families
-
-<FontFamily fonts={theme.fonts} />
-
-## Typography: Font Weights
-
-<FontWeight fontWeights={theme.fontWeights} />
-
-## Audio
-
-<Audio
-  src="sounds/through_the_gate.mp3"
-  name="Through the Gate"
-  desc="Hundreds of years in the future, in a colonized Solar System, police detective Josephus Miller, born on Ceres in the asteroid belt, is sent to find a missing young woman, Juliette 'Julie' Andromeda Mao. James Holden, Executive Officer of the ice hauler Canterbury, is involved in a tragic incident that threatens to destabilize the uneasy peace between Earth, Mars and the Belt."
-/>
-
-<Audio src="sounds/through_the_gate.mp3" />
-
 ## Video
 
 <Video
@@ -108,13 +121,3 @@ React component utilities to build your design system!
   src="videos/intro.mp4"
   poster="videos/intro_poster.jpg"
 />
-
-## Downloads
-
-<Download
-  name="Gatsby Themes Wallpaper"
-  notes="Use for Social Media previews"
-  src="downloads/gatsby-themes-wallpaper.jpg"
-/>
-
-<Download name="Logo" bg="black" src="downloads/logo.png" />
