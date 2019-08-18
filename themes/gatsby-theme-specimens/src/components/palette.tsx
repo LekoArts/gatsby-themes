@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from "react"
 import { jsx } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"
@@ -75,7 +76,16 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
           })
           const inverted = arr.reverse()
 
-          return <Palette colors={inverted} key={name} minimal={minimal} mode={mode} prefix={prefix} />
+          return (
+            <Palette
+              colors={inverted}
+              key={name}
+              minimal={minimal}
+              mode={mode}
+              prefix={prefix}
+              sx={{ gridColumn: `-1 / 1` }}
+            />
+          )
         }
 
         if (mode === `swatch`) {

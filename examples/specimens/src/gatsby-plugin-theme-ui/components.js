@@ -1,9 +1,11 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/destructuring-assignment */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import Prism from "@theme-ui/prism"
+import React from "react"
 import {
   Alert,
   Audio,
@@ -22,10 +24,13 @@ import {
   Table,
   Video,
 } from "@lekoarts/gatsby-theme-specimens"
+import { preToCodeBlock } from "mdx-utils"
+import { MDXScopeProvider, useMDXScope } from "gatsby-plugin-mdx/context"
+import Code from "../components/code"
 
 const heading = Tag => props =>
   props.id ? (
-    <Tag {...props}>
+    <Tag {...props} id={props.id}>
       <a
         href={`#${props.id}`}
         sx={{
@@ -43,7 +48,7 @@ const heading = Tag => props =>
     <Tag {...props} />
   )
 
-export default {
+const components = {
   Alert: ({ type, children }) => <Alert type={type}>{children}</Alert>,
   Audio: ({ autoplay, loop, name, desc, src }) => (
     <Audio autoplay={autoplay} loop={loop} name={name} desc={desc} src={src} />
@@ -74,11 +79,29 @@ export default {
   Video: ({ autoplay, loop, muted, name, poster, src }) => (
     <Video autoplay={autoplay} loop={loop} muted={muted} name={name} poster={poster} src={src} />
   ),
+}
+
+const CustomProvider = ({ customComponents, children }) => {
+  const comp = useMDXScope()
+
+  return <MDXScopeProvider __mdxScope={{ ...comp, ...customComponents }}>{children}</MDXScopeProvider>
+}
+
+export default {
+  ...components,
   h2: heading(`h2`),
   h3: heading(`h3`),
   h4: heading(`h4`),
   h5: heading(`h5`),
   h6: heading(`h6`),
-  pre: props => props.children,
-  code: Prism,
+  pre: preProps => {
+    const props = preToCodeBlock(preProps)
+    // if there's a codeString and some props, we passed the test
+    if (props) {
+      return <Code {...props} />
+    }
+    // it's possible to have a pre without a code in it
+    return <pre {...preProps} />
+  },
+  wrapper: ({ children }) => <CustomProvider customComponents={components}>{children}</CustomProvider>,
 }

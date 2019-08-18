@@ -87,7 +87,14 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
       </div>
       <div
         data-name="color-swatch-content"
-        sx={{ p: 3, display: `grid`, gridTemplateColumns: `1fr 1fr`, gridGap: 3, backgroundColor: `elementBG` }}
+        sx={{
+          p: 3,
+          display: `grid`,
+          gridTemplateColumns: `1fr 1fr`,
+          gridGap: 3,
+          backgroundColor: `elementBG`,
+          height: `100%`,
+        }}
       >
         {name && (
           <div sx={{ ...swatchContentStyles }}>

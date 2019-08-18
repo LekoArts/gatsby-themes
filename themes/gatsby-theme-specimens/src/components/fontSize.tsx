@@ -17,7 +17,9 @@ const FontSize = ({ fontSizes }: FontSizeProps) => {
         <div key={size}>
           <div>{index}</div>
           <div>{size}</div>
-          <div sx={{ fontSize: `${specimensConfig.rootFontSize * getValue(size)}px` }}>Size {index}</div>
+          <div sx={{ fontSize: `${specimensConfig.rootFontSize * getValue(size, specimensConfig.rootFontSize)}px` }}>
+            Size {index}
+          </div>
         </div>
       ))}
     </Table>

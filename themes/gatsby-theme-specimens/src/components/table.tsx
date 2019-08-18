@@ -8,7 +8,6 @@ type TableProps = {
   columns: string | string[]
   titles: string[]
   children: React.ReactNode
-  hideColumnMobile?: number
 }
 
 const Table = ({ className, columns, titles, children }: TableProps) => (

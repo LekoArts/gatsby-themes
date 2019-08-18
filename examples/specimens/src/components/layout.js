@@ -60,6 +60,20 @@ const Layout = ({ children }) => (
             padding-bottom: 0.5rem !important;
           }
         }
+        pre {
+          padding: 0.75rem;
+          border-radius: 0.25rem;
+          font-size: 1rem;
+        }
+        code {
+          background-color: rgb(30, 30, 30);
+          color: white;
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+          font-size: 1rem;
+          margin-left: 0.25rem;
+          margin-right: 0.25rem;
+        }
       `}
     />
     <main

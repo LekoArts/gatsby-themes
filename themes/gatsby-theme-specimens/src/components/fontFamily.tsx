@@ -10,7 +10,7 @@ type FontFamilyProps = {
 
 const FontFamily = ({ fonts }: FontFamilyProps) => (
   <Table
-    columns={[`110px 1fr`, `110px 300px 1fr`, `110px 350px 1fr`, `110px 450px 1fr`]}
+    columns={[`100px 1fr`, `100px 300px 1fr`, `100px 350px 1fr`, `100px 450px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
     sx={{
       "> div > div:nth-of-type(2)": {

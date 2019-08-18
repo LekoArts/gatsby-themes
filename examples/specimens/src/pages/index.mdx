@@ -25,9 +25,11 @@ Leverage the wide variety of powerful React components of `@lekoarts/gatsby-them
 
 ## Installation
 
-```sh
+```shell
 npm install @lekoarts/gatsby-theme-specimens
 ```
+
+View the [**theme's README**](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens) to see more instructions on how to set up this theme!
 
 ## Specimens
 
@@ -35,98 +37,421 @@ npm install @lekoarts/gatsby-theme-specimens
 
 ### Alert
 
-<Alert type="success">Make it so!</Alert>
-<Alert type="hint">Neutral Hint</Alert>
-<Alert type="warning">Gentle warning :)</Alert>
-<Alert type="info">Super helpful information goes here</Alert>
-<Alert type="danger">nooooooooo, not this way</Alert>
+Available props:
+
+- type (string) (optional)
+
+If no `type` is given it will default to "hint".
+
+```jsx live
+<Alert>Neutral hint - Default</Alert>
+```
+
+```jsx live noInline
+render(
+  <React.Fragment>
+    <Alert type="success">Make it so!</Alert>
+    <Alert type="hint">Neutral Hint</Alert>
+    <Alert type="warning">Gentle warning :)</Alert>
+    <Alert type="info">Super helpful information goes here</Alert>
+    <Alert type="danger">nooooooooo, not this way</Alert>
+  </React.Fragment>
+);
+```
 
 ### Audio
 
+Available props:
+
+- src (string) - Must be a valid path on your webserver, e.g. the sound file below is placed inside src/static/sounds
+- name (string) (optional)
+- desc (string) (optional)
+
+```jsx live
 <Audio
   src="sounds/through_the_gate.mp3"
   name="Through the Gate"
   desc="Hundreds of years in the future, in a colonized Solar System, police detective Josephus Miller, born on Ceres in the asteroid belt, is sent to find a missing young woman, Juliette 'Julie' Andromeda Mao. James Holden, Executive Officer of the ice hauler Canterbury, is involved in a tragic incident that threatens to destabilize the uneasy peace between Earth, Mars and the Belt."
 />
+```
 
+```jsx live
 <Audio src="sounds/through_the_gate.mp3" />
+```
 
 ### Border Radius
 
-<BorderRadius radii={theme.radii} />
+Available props:
+
+- radii
+
+radii has to be in the following format:
+
+```
+radii: {
+  [key: string]: string
+}
+```
+
+---
+
+```jsx live noInline
+const radii = {
+  none: "0",
+  sm: "0.5rem",
+  md: "1rem"
+};
+
+render(<BorderRadius radii={radii} />);
+```
 
 ### Color Row
 
+Available props:
+
+- color (string) - Must be in HEX format
+- name (string)
+- prefix (string) (optional)
+
+```jsx live
 <ColorRow color="#000" name="Blackness" prefix="Dark - " />
+```
 
 ### Color Swatch
 
-<ColorSwatch color="#2d3748" name="Blueish" />
-<ColorSwatch color="#fff" />
-<ColorSwatch color="#667eea" name="Swift" />
+Available props:
+
+- color (string) - Must be in HEX format
+- name (string) (optional)
+- minimal (boolean) (optional)
+- prefix (string) (optional)
+
+```jsx live noInline
+render(
+  <React.Fragment>
+    <ColorSwatch color="#fff" />
+    <ColorSwatch color="#2d3748" name="Blueish" />
+    <ColorSwatch color="#667eea" name="Swift" minimal />
+    <ColorSwatch color="#4fd1c5" name="4" prefix="Teal - " />
+  </React.Fragment>
+);
+```
 
 ### Download
 
+Available props:
+
+- src (string) - Must be a valid path on your webserver, e.g. the sound file below is placed inside src/static/downloads
+- name (string)
+
+```jsx live
 <Download
   name="Gatsby Themes Wallpaper"
   notes="Use for Social Media previews"
   src="downloads/gatsby-themes-wallpaper.jpg"
 />
+```
 
+```jsx live
 <Download name="Logo" bg="black" src="downloads/logo.png" />
+```
 
 ### Font Family
 
-<FontFamily fonts={theme.fonts} />
+Available props:
+
+- fonts
+
+fonts has to be in the following format:
+
+```
+fonts: {
+  [key: string]: string
+}
+```
+
+---
+
+```jsx live noInline
+const fonts = {
+  sans:
+    '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+  serif: 'Georgia, Cambria, "Times New Roman", Times, serif',
+  mono: 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace'
+};
+
+render(<FontFamily fonts={fonts} />);
+```
 
 ### Font Size
 
-<FontSize fontSizes={theme.fontSizes} />
+Available props:
+
+- fontSizes
+
+fontSizes has to be in the following format:
+
+```
+fontSizes: string[] | number[]
+```
+
+---
+
+```jsx live noInline
+const fontSizes = ["0.875rem", "1rem", "1.25rem", "1.5rem"];
+
+render(<FontSize fontSizes={fontSizes} />);
+```
 
 ### Font Weight
 
-<FontWeight fontWeights={theme.fontWeights} />
+Available props:
+
+- fontWeights
+
+fontWeights has to be in the following format:
+
+```
+fontWeights: {
+  [key: string]: string
+}
+```
+
+---
+
+```jsx live noInline
+const fontWeights = {
+  normal: "400",
+  medium: "500",
+  semibold: "600",
+  bold: "700",
+  black: "900"
+};
+
+render(<FontWeight fontWeights={fontWeights} />);
+```
 
 ### Heading
 
-<Heading
-  styles={filterStyles({
-    input: theme.styles,
-    allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]
-  })}
-  theme={theme}
-/>
+Available props:
+
+- styles
+- theme
+
+If you're already using Theme UI your theme file already has all necessary keys (styles, fontSizes, fontWeights, fonts). As you can see in the below example the `theme.styles` has entries like `h1` which then will be used to display.
+
+You can filter which keys to show by using the helper function `filterStyles({ input, allowed })`.
+
+```jsx live noInline
+const theme = {
+  fontSizes: [
+    "0.875rem",
+    "1rem",
+    "1.25rem",
+    "1.5rem",
+    "1.875rem",
+    "2.25rem",
+    "3rem",
+    "4rem",
+    "4.5rem"
+  ],
+  lineHeights: {
+    heading: "1.25"
+  },
+  fontWeights: {
+    heading: "700"
+  },
+  fonts: {
+    heading: "inherit"
+  },
+  styles: {
+    root: {
+      fontFamily: "body",
+      lineHeight: "body",
+      fontWeight: "body"
+    },
+    a: {
+      color: "primary",
+      textDecoration: "none",
+      ":hover": {
+        textDecoration: "underline"
+      }
+    },
+    h1: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
+      m: 0,
+      mb: 1,
+      fontSize: 6,
+      mt: 2
+    },
+    h2: {
+      fontFamily: "heading",
+      fontWeight: "heading",
+      lineHeight: "heading",
+      m: 0,
+      mb: 1,
+      fontSize: 5,
+      mt: 2
+    },
+    code: {},
+    pre: {},
+    hr: {
+      bg: "muted",
+      border: 0,
+      height: "1px",
+      m: 3
+    }
+  }
+};
+
+render(
+  <Heading
+    styles={filterStyles({
+      input: theme.styles,
+      allowed: [`h1`, `h2`]
+    })}
+    theme={theme}
+  />
+);
+```
 
 ### Palette: Color Rows
 
-<Palette
-  colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
-  prefix="Indigo - "
-/>
+Available props:
+
+- colors - If you use Theme UI you can use the helper function `normalizeThemeUIColors({ colors })` to convert the array of color strings to the necessary format
+- prefix (string) (optional)
+
+colors has to be in the following format:
+
+```
+colors: {
+  name: string
+  color: string
+}[]
+```
+
+---
+
+```jsx live noInline
+const theme = {
+  colors: {
+    indigo: [null, "#ebf4ff", "#c3dafe", "#a3bffa", "#7f9cf5", "#667eea"]
+  }
+};
+
+const orange = [
+  {
+    name: "1",
+    color: "#feebc8"
+  },
+  {
+    name: "2",
+    color: "#fbd38d"
+  }
+];
+
+render(
+  <React.Fragment>
+    <Palette
+      colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
+      prefix="Indigo - "
+    />
+    <h3>Orange</h3>
+    <Palette colors={orange} />
+  </React.Fragment>
+);
+```
 
 ### Palette: Color Swatches
 
-<Palette
-  colors={normalizeThemeUIColors({ colors: theme.colors })}
-  single
-  minimal
-  mode="swatch"
-/>
+Available props:
+
+- colors - If you use Theme UI you can use the helper function `normalizeThemeUIColors({ colors })` to convert the array of color strings to the necessary format
+- prefix (string) (optional)
+- single (boolean) (optional) - When passing in the colors object you can filter out all keys that have arrays as children
+- minimal (boolean) (optional) - Hide RGB and CMYK label
+- mode (string) (optional) - Defaults to "list" (shows the ColorRow component), can be set to "swatch"
+
+colors has to be in the following format:
+
+```
+colors: {
+  name: string
+  color: string
+}[]
+```
+
+---
+
+```jsx live noInline
+const theme = {
+  colors: {
+    primary: `#2b6cb0`,
+    secondary: `#feb2b2`,
+    success: `#9ae6b4`,
+    text: `#2d3748`,
+    indigo: [null, "#ebf4ff", "#c3dafe", "#a3bffa", "#7f9cf5", "#667eea"]
+  }
+};
+
+render(
+  <Palette
+    colors={normalizeThemeUIColors({ colors: theme.colors })}
+    minimal
+    mode="swatch"
+  />
+);
+```
 
 ### Sizes
 
-<Table
-  columns={[`120px 1fr`]}
-  titles={[`Token`, `Value`]}
-  className="sizes-table"
->
-  {Object.entries(theme.sizes).map(([key, value]) => (
-    <div key={key}>
-      <div>{key}</div>
-      <div>{value}</div>
-    </div>
-  ))}
-</Table>
+This theme also exposes a `Table` component. It is used in this case to showcase the different `sizes` of the theme. Generally speaking the `Table` component has the following props:
+
+- columns (string[])
+- titles (string[])
+- children (React.ReactNode)
+
+The `columns` prop is defining the `grid-template-columns` of the table in the fashion of Theme UI. The `titles` should be the same count as columns.
+
+So you can define the style for every breakpoint, e.g. `` [`120px 1fr`, `150px 1fr`] `` (120px for everything below the smallest breakpoint, 150px for everything above smallest breakpoint).
+
+You can format the data you want to show how you like but in the end you should have the amount of columns as defined above. This example takes an Object, its keys and iterates over that.
+
+---
+
+```jsx live noInline
+const sizes = {
+  "0": "0",
+  "1": "0.25rem",
+  "2": "0.5rem",
+  "3": "0.75rem",
+  "4": "1rem",
+  "5": "1.25rem",
+  "6": "1.5rem",
+  "8": "2rem",
+  "10": "2.5rem",
+  "12": "3rem",
+  "16": "4rem"
+};
+
+render(
+  <Table
+    columns={[`120px 1fr`]}
+    titles={[`Token`, `Value`]}
+    className="sizes-table"
+  >
+    {Object.entries(sizes).map(([key, value]) => (
+      <div key={key}>
+        <div>{key}</div>
+        <div>{value}</div>
+      </div>
+    ))}
+  </Table>
+);
+```
 
 ### Shadows
 

@@ -106,7 +106,7 @@ const dict = {
   danger: <Important />,
 }
 
-const Alert = ({ children, type }: AlertProps) => (
+const Alert = ({ children, type = `hint` }: AlertProps) => (
   <div data-alert-type={type} sx={{ ...commonAlertStyles, ...alerts[type], variant: `alerts.${type}` }}>
     {dict[type]}
     {children}

@@ -12,7 +12,6 @@ const FontWeight = ({ fontWeights }: FontWeightProps) => (
   <Table
     columns={[`110px 1fr`, `110px 80px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
-    hideColumnMobile={2}
     sx={{
       div: { alignSelf: `center` },
       "> div > div:nth-of-type(2)": {

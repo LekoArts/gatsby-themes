@@ -59,7 +59,7 @@ const Download = ({ name, src, bg = `white`, preview = true, notes = `` }: Downl
           textAlign: `center`,
         }}
       >
-        <img src={src} alt={name} />
+        <img src={src} alt={`File "${name}" not found`} />
       </div>
     )}
   </a>
