@@ -24,6 +24,13 @@ module.exports = {
     cy: true,
     Cypress: true,
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   rules: {
     "@typescript-eslint/no-unused-vars": [
       1,
