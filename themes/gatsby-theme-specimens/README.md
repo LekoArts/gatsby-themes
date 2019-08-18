@@ -167,11 +167,15 @@ export default {
 };
 ```
 
-This way you are able to use the components directly in your MDX file:
+This way you are able to use the components directly in your MDX file without importing them:
 
 ```md
 <Alert type="success">Make it so!</Alert>
 ```
+
+## Components
+
+The heart of this theme are the reusable React components that you can use to fill your design system with content. Every component has mandatory (and sometimes optional) fields. Some components such as the ones for color require the input in a specific format, please keep that in mind. Visit the [**Demo Website**](https://specimens.lekoarts.de) to see how to use the components.
 
 ## 🌟Supporting me
 
