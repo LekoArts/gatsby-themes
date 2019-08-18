@@ -1,6 +1,6 @@
 /// <reference types="../support/index" />
 /// <reference types="cypress" />
-/// <reference types="@testing-library/cypress/typings" />
+/// <reference types="@types/testing-library__cypress" />
 
 describe(`gatsby-theme-emma`, () => {
   beforeEach(() => {

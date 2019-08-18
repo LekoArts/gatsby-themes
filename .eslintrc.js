@@ -24,13 +24,6 @@ module.exports = {
     cy: true,
     Cypress: true,
   },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
-  },
   rules: {
     "@typescript-eslint/no-unused-vars": [
       1,
@@ -65,6 +58,7 @@ module.exports = {
     "linebreak-style": 0,
     "consistent-return": 0,
     "import": 0,
+    "import/no-unresolved": 1,
     "func-names": 0,
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
