@@ -90,6 +90,51 @@ module.exports = {
 };
 ```
 
+## Components
+
+The heart of this theme are the reusable React components that you can use to fill your design system with content. Every component has mandatory (and sometimes optional) fields. Some components such as the ones for color require the input in a specific format, please keep that in mind. Visit the [**Demo Website**](https://specimens.lekoarts.de) to see how to use the components.
+
+### Modifications
+
+As with every Gatsby theme you can of course shadow the files (e.g. `src/@lekoarts/gatsby-theme-specimens/alert.js`) but if you only want to change some styles, not the whole structure of the component you can get away with another approach. Since all components are styled with Theme UI, you are able to override the theme's Theme UI config file.
+
+Every component has a `variant` defined in its styles, e.g. the mentioned "Alert" component:
+
+```jsx
+const Alert = ({ children, type = `hint` }: AlertProps) => (
+  <div
+    data-alert-type={type}
+    sx={{ ...commonAlertStyles, ...alerts[type], variant: `alerts.${type}` }}
+  >
+    {dict[type]}
+    {children}
+  </div>
+);
+```
+
+You can use the variant to add additional styles / override styles. Create a new file at `src/gatsby-plugin-theme-ui/index.js` with the following content:
+
+```js
+import baseTheme from "@lekoarts/gatsby-theme-specimens/src/gatsby-plugin-theme-ui";
+
+export default {
+  ...baseTheme,
+  alerts: {
+    hint: {
+      padding: `3rem`
+    }
+  }
+};
+```
+
+The [**Demo Website**](https://specimens.lekoarts.de) tells you the respective variant names you can use to change styles. Normally the variant is defined on the outermost HTML element of the component, if you want to change elements inside those you are able to use CSS selectors. In doubt have a look at the source file :)
+
+### Using together with existing Theme UI config
+
+Since this theme uses Theme UI to style its components, a Theme UI config file placed in your project will override the styles. Internally it uses the [`@theme-ui/presets` tailwind](https://theme-ui.com/presets/) so if you're fine with using this preset globally, go ahead and follow the aforementioned guide ("Modifications"). You can still override individual styles with this approach.
+
+If you want to separate the styles completely, have a look at Theme UI's recipe on [Nested Theme Providers](https://theme-ui.com/guides/nested-theme-providers). The idea is that you will wrap the MDX content with its own `ThemeProvider` (and pass the theme from `@lekoarts/gatsby-theme-specimens` to it).
+
 ### MDX Shortcodes
 
 In order to be able to use these components without importing them every time in your MDX files, you should define them as components / shortcodes. MDX has [documentation](https://mdxjs.com/blog/shortcodes/) on that, and also [Theme UI](https://theme-ui.com/gatsby-plugin#components).
@@ -97,8 +142,6 @@ In order to be able to use these components without importing them every time in
 When you use `gatsby-plugin-theme-ui` in your project, create a new file at `src/gatsby-plugin-theme-ui/components.js` and insert this content:
 
 ```jsx
-/** @jsx jsx */
-import { jsx } from "theme-ui";
 import {
   Alert,
   Audio,
@@ -172,10 +215,6 @@ This way you are able to use the components directly in your MDX file without im
 ```md
 <Alert type="success">Make it so!</Alert>
 ```
-
-## Components
-
-The heart of this theme are the reusable React components that you can use to fill your design system with content. Every component has mandatory (and sometimes optional) fields. Some components such as the ones for color require the input in a specific format, please keep that in mind. Visit the [**Demo Website**](https://specimens.lekoarts.de) to see how to use the components.
 
 ## 🌟Supporting me
 

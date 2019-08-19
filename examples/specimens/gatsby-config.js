@@ -26,6 +26,7 @@ module.exports = {
         remarkPlugins,
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,

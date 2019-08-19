@@ -1,4 +1,3 @@
-import { theme } from "../../theme";
 import TableOfContents from "../components/table-of-contents";
 import {
   normalizeThemeUIColors,
@@ -10,6 +9,8 @@ import {
 Leverage the wide variety of powerful React components of `@lekoarts/gatsby-theme-specimens` to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
 
 [**Source code for this site**](https://github.com/LekoArts/gatsby-starter-specimens)
+
+If you simply want to see how the components look, head over to the [**Preview**](/preview)!
 
 ## Features
 
@@ -35,13 +36,15 @@ View the [**theme's README**](https://github.com/LekoArts/gatsby-themes/tree/mas
 
 <TableOfContents />
 
+**Please note:** Components wrapped in a `render()` don't need to be written this way in your MDX files - it's only necessary for [`react-live`](https://github.com/FormidableLabs/react-live#liveprovider-) demos on this page.
+
 ### Alert
+
+Variants: `alerts.success`, `alerts.hint`, `alerts.warning`, `alerts.info`, `alerts.danger`,
 
 Available props:
 
-- type (string) (optional)
-
-If no `type` is given it will default to "hint".
+- type (string) (optional) (Default: "hint")
 
 ```jsx live
 <Alert>Neutral hint - Default</Alert>
@@ -61,11 +64,13 @@ render(
 
 ### Audio
 
+Variant: `audio.specimens`
+
 Available props:
 
 - src (string) - Must be a valid path on your webserver, e.g. the sound file below is placed inside src/static/sounds
-- name (string) (optional)
-- desc (string) (optional)
+- name (string) (optional) (Default: "")
+- desc (string) (optional) (Default: "")
 
 ```jsx live
 <Audio
@@ -80,6 +85,8 @@ Available props:
 ```
 
 ### Border Radius
+
+Variant: `tables.borderRadius`
 
 Available props:
 
@@ -107,11 +114,13 @@ render(<BorderRadius radii={radii} />);
 
 ### Color Row
 
+Variant: `rows.specimens`
+
 Available props:
 
 - color (string) - Must be in HEX format
 - name (string)
-- prefix (string) (optional)
+- prefix (string) (optional) (Default: "")
 
 ```jsx live
 <ColorRow color="#000" name="Blackness" prefix="Dark - " />
@@ -119,12 +128,14 @@ Available props:
 
 ### Color Swatch
 
+Variant: `swatches.specimens`
+
 Available props:
 
 - color (string) - Must be in HEX format
-- name (string) (optional)
-- minimal (boolean) (optional)
-- prefix (string) (optional)
+- name (string) (optional) (Default: "")
+- minimal (boolean) (optional) (Default: false)
+- prefix (string) (optional) (Default: "")
 
 ```jsx live noInline
 render(
@@ -139,9 +150,11 @@ render(
 
 ### Download
 
+Variant: `download.specimens`
+
 Available props:
 
-- src (string) - Must be a valid path on your webserver, e.g. the sound file below is placed inside src/static/downloads
+- src (string) - Must be a valid path on your webserver, e.g. the file below is placed inside src/static/downloads
 - name (string)
 
 ```jsx live
@@ -157,6 +170,8 @@ Available props:
 ```
 
 ### Font Family
+
+Variant: `typography.fontFamily`
 
 Available props:
 
@@ -185,6 +200,8 @@ render(<FontFamily fonts={fonts} />);
 
 ### Font Size
 
+Variant: `typography.fontSize`
+
 Available props:
 
 - fontSizes
@@ -204,6 +221,8 @@ render(<FontSize fontSizes={fontSizes} />);
 ```
 
 ### Font Weight
+
+Variant: `typography.fontWeight`
 
 Available props:
 
@@ -232,6 +251,8 @@ render(<FontWeight fontWeights={fontWeights} />);
 ```
 
 ### Heading
+
+Variants: `typography.heading`, `codeStyles.default`
 
 Available props:
 
@@ -322,7 +343,7 @@ render(
 Available props:
 
 - colors - If you use Theme UI you can use the helper function `normalizeThemeUIColors({ colors })` to convert the array of color strings to the necessary format
-- prefix (string) (optional)
+- prefix (string) (optional) (Default: "")
 
 colors has to be in the following format:
 
@@ -359,7 +380,7 @@ render(
       colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
       prefix="Indigo - "
     />
-    <h3>Orange</h3>
+    <h4>Orange</h4>
     <Palette colors={orange} />
   </React.Fragment>
 );
@@ -370,10 +391,10 @@ render(
 Available props:
 
 - colors - If you use Theme UI you can use the helper function `normalizeThemeUIColors({ colors })` to convert the array of color strings to the necessary format
-- prefix (string) (optional)
-- single (boolean) (optional) - When passing in the colors object you can filter out all keys that have arrays as children
-- minimal (boolean) (optional) - Hide RGB and CMYK label
-- mode (string) (optional) - Defaults to "list" (shows the ColorRow component), can be set to "swatch"
+- prefix (string) (optional) (Default: "")
+- single (boolean) (optional) (Default: false) - When passing in the colors object you can filter out all keys that have arrays as children
+- minimal (boolean) (optional) (Default: false) - Hide RGB and CMYK label
+- mode (string) (optional) (Default: "list")
 
 colors has to be in the following format:
 
@@ -408,17 +429,19 @@ render(
 
 ### Sizes
 
+Variant: `tables.space`
+
 This theme also exposes a `Table` component. It is used in this case to showcase the different `sizes` of the theme. Generally speaking the `Table` component has the following props:
 
 - columns (string[])
 - titles (string[])
 - children (React.ReactNode)
 
-The `columns` prop is defining the `grid-template-columns` of the table in the fashion of Theme UI. The `titles` should be the same count as columns.
+The `columns` prop is defining the `grid-template-columns` of the table in the fashion of Theme UI ([Responsive Styles](https://theme-ui.com/getting-started#responsive-styles)). The `titles` should be the same count as columns.
 
 So you can define the style for every breakpoint, e.g. `` [`120px 1fr`, `150px 1fr`] `` (120px for everything below the smallest breakpoint, 150px for everything above smallest breakpoint).
 
-You can format the data you want to show how you like but in the end you should have the amount of columns as defined above. This example takes an Object, its keys and iterates over that.
+You can format the data you want to show how you like but in the end you should have the amount of columns as defined above.
 
 ---
 
@@ -455,16 +478,69 @@ render(
 
 ### Shadows
 
-<Shadow shadows={theme.shadows} />
+Variant: `tables.shadow`
+
+Available props:
+
+- shadows
+
+shadows has to be in the following format:
+
+```
+shadows: {
+  [key: string]: string
+}
+```
+
+---
+
+```jsx live noInline
+const shadows = {
+  default: `0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)`,
+  xl: `0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
+  "2xl": `0 25px 50px -12px rgba(0, 0, 0, 0.25)`
+};
+
+render(<Shadow shadows={shadows} />);
+```
 
 ### Space
 
-<Space space={theme.space} />
+Available props:
+
+- space
+
+space has to be in the following format:
+
+```
+space: string[] | number[]
+```
+
+---
+
+```jsx live noInline
+const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`];
+
+render(<Space space={space} />);
+```
 
 ### Video
 
+Variant: `video.specimens`
+
+Available props:
+
+- src (string) - Must be a valid path on your webserver, e.g. the video file below is placed inside src/static/videos
+- poster (string) (optional) (Default: "") - By default the video tag will use the first frame of the video as a preview. With the poster you can define a custom preview image
+- name (string) (optional) (Default: "")
+- muted (boolean) (optional) (Default: false)
+- loop (boolean) (optional) (Default: false)
+- autoplay (boolean) (optional) (Default: false)
+
+```jsx live
 <Video
   name="LekoArts Intro"
   src="videos/intro.mp4"
   poster="videos/intro_poster.jpg"
 />
+```
