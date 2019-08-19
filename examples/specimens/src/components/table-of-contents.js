@@ -5,22 +5,23 @@ import { useStaticQuery, graphql } from "gatsby"
 const TableOfContents = () => {
   const result = useStaticQuery(graphql`
     query {
-      mdx {
+      mdx(fileAbsolutePath: { regex: "/index.mdx/" }) {
         tableOfContents
       }
     }
   `)
 
-  const toc = result.mdx.tableOfContents.items[0].items[2].items
+  const toc = result.mdx.tableOfContents.items[0].items[2].items || false
 
   return (
     <React.Fragment>
       <ul>
-        {toc.map(entry => (
-          <li key={entry.url}>
-            <Styled.a href={entry.url}>{entry.title}</Styled.a>
-          </li>
-        ))}
+        {toc &&
+          toc.map(entry => (
+            <li key={entry.url}>
+              <Styled.a href={entry.url}>{entry.title}</Styled.a>
+            </li>
+          ))}
       </ul>
     </React.Fragment>
   )
