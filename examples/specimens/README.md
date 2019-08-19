@@ -15,9 +15,9 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="TODO">
-      <img src="TODO" alt="Netlify Status" />
-    </a>
+  <a href="https://app.netlify.com/sites/specimens/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/cae76bb8-1b0a-4c63-95b9-236d4f3f9371/deploy-status" alt="Netlify Status" />
+  </a>
 </p>
 
 Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX. Using the Gatsby Theme [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens).
@@ -72,6 +72,10 @@ Please have a look at the theme's README and files to see what options are avail
 ### Change your `static` folder
 
 The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
+
+## 🤔 Questions or problems?
+
+Please open up an issue on the main repository: [LekoArts/gatsby-themes](https://github.com/LekoArts/gatsby-themes). Thanks!
 
 ## 🎓 Learning Gatsby
 
