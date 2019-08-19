@@ -82,6 +82,11 @@ const exampleActions = [
   },
   {
     type: `add`,
+    path: `examples/{{kebabCase name}}/.github/FUNDING.yml`,
+    templateFile: `plop-templates/example/FUNDING.yml.hbs`,
+  },
+  {
+    type: `add`,
     path: `examples/{{kebabCase name}}/package.json`,
     templateFile: `plop-templates/example/package.json.hbs`,
   },
