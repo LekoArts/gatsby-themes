@@ -1,0 +1,225 @@
+<p align="center">
+  <a href="https://themes.lekoarts.de">
+    <img alt="Gatsby Theme" src="https://img.lekoarts.de/gatsby/gatsby-themes-illustration.png" />
+  </a>
+</p>
+<h1 align="center">
+  @lekoarts/gatsby-theme-specimens
+</h1>
+
+<p align="center">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-specimens is released under the MIT license." />
+  </a>
+  <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-specimens">
+    <img src="https://img.shields.io/npm/v/@lekoarts/gatsby-theme-specimens.svg" alt="Current npm package version." />
+  </a>
+  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-specimens?minimal=true">
+    <img src="https://img.shields.io/npm/dm/@lekoarts/gatsby-theme-specimens.svg" alt="Downloads per month on npm." />
+  </a>
+  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-specimens?minimal=true">
+    <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-specimens.svg" alt="Total downloads on npm." />
+  </a>
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
+      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+    </a>
+</p>
+
+Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
+
+[**Demo Website**](https://specimens.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-specimens))
+
+Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+
+## Features
+
+- Theme UI-based theming
+- Suitable for MDX
+- Offers React components specifically designed for design systems. You can display:
+  - Colors as swatches and rows. Individually placed or automated from an object/array in your theme file
+  - Typography e.g. font-family, font-size, font-weight and headings
+  - Spacing scales
+  - Audio files and downloads
+  - border-radius or box-shadow
+  - Alerts to emphasize important messages
+
+## Installation
+
+```sh
+npm install @lekoarts/gatsby-theme-specimens
+```
+
+### Install as a starter
+
+This will generate a new site that pre-configures use of the theme. Replace the `theme.js` file with your theme file and you have a living style-guide!
+
+```sh
+gatsby new specimens LekoArts/gatsby-starter-specimens
+```
+
+[**View the starter's code**](https://github.com/LekoArts/gatsby-starter-specimens)
+
+## Usage
+
+### Theme options
+
+| Key                  | Default Value | Description                                                                                                                                                                                                                                                                    |
+| -------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `contrastGuidelines` | `AA`          | The color swatches display in their top section whether white/black text has sufficient color contrast with the respective color. By default the function determines that Pass/Fail by 'AA' (ratio at least 4.5:1). You can also set this value to 'AAA' (ratio at least 7:1). |
+| `CMYK`               | `true`        | The color swatch and color row component display their values in HEX, RGB, and CMYK. You can optionally disable the CMYK field.                                                                                                                                                |
+| `codeExample`        | `true`        | The heading component displays Theme UI code implementation examples below the different headings. You can disable those by setting it to `false`.                                                                                                                             |
+| `rootFontSize`       | `16`          | Values for spacing, border-radius, font-size mostly can be defined as `rem` values. As the examples shouldn't be influenced by the root font size of the website, but the design system itself you can define your theme's rootFontSize here.                                  |
+
+#### Example usage
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `@lekoarts/gatsby-theme-specimens`,
+      options: {
+          contrastGuidelines: `AAA`,
+          codeExample: false,
+          rootFontSize: 16,
+        }
+      }
+    }
+  ]
+};
+```
+
+## Components
+
+The heart of this theme are the reusable React components that you can use to fill your design system with content. Every component has mandatory (and sometimes optional) fields. Some components such as the ones for color require the input in a specific format, please keep that in mind. Visit the [**Demo Website**](https://specimens.lekoarts.de) to see how to use the components.
+
+### Modifications
+
+As with every Gatsby theme you can of course shadow the files (e.g. `src/@lekoarts/gatsby-theme-specimens/alert.js`) but if you only want to change some styles, not the whole structure of the component you can get away with another approach. Since all components are styled with Theme UI, you are able to override the theme's Theme UI config file.
+
+Every component has a `variant` defined in its styles, e.g. the mentioned "Alert" component:
+
+```jsx
+const Alert = ({ children, type = `hint` }: AlertProps) => (
+  <div
+    data-alert-type={type}
+    sx={{ ...commonAlertStyles, ...alerts[type], variant: `alerts.${type}` }}
+  >
+    {dict[type]}
+    {children}
+  </div>
+);
+```
+
+You can use the variant to add additional styles / override styles. Create a new file at `src/gatsby-plugin-theme-ui/index.js` with the following content:
+
+```js
+import baseTheme from "@lekoarts/gatsby-theme-specimens/src/gatsby-plugin-theme-ui";
+
+export default {
+  ...baseTheme,
+  alerts: {
+    hint: {
+      padding: `3rem`
+    }
+  }
+};
+```
+
+The [**Demo Website**](https://specimens.lekoarts.de) tells you the respective variant names you can use to change styles. Normally the variant is defined on the outermost HTML element of the component, if you want to change elements inside those you are able to use CSS selectors. In doubt have a look at the source file :)
+
+### Using together with existing Theme UI config
+
+Since this theme uses Theme UI to style its components, a Theme UI config file placed in your project will override the styles. Internally it uses the [`@theme-ui/presets` tailwind](https://theme-ui.com/presets/) so if you're fine with using this preset globally, go ahead and follow the aforementioned guide ("Modifications"). You can still override individual styles with this approach.
+
+If you want to separate the styles completely, have a look at Theme UI's recipe on [Nested Theme Providers](https://theme-ui.com/guides/nested-theme-providers). The idea is that you will wrap the MDX content with its own `ThemeProvider` (and pass the theme from `@lekoarts/gatsby-theme-specimens` to it).
+
+### MDX Shortcodes
+
+In order to be able to use these components without importing them every time in your MDX files, you should define them as components / shortcodes. MDX has [documentation](https://mdxjs.com/blog/shortcodes/) on that, and also [Theme UI](https://theme-ui.com/gatsby-plugin#components).
+
+When you use `gatsby-plugin-theme-ui` in your project, create a new file at `src/gatsby-plugin-theme-ui/components.js` and insert this content:
+
+```jsx
+import {
+  Alert,
+  Audio,
+  BorderRadius,
+  ColorFamilies,
+  ColorRow,
+  ColorSwatch,
+  Download,
+  FontFamily,
+  FontSize,
+  FontWeight,
+  Heading,
+  Palette,
+  Shadow,
+  Space,
+  Table,
+  Video
+} from "@lekoarts/gatsby-theme-specimens";
+
+export default {
+  Alert: ({ type, children }) => <Alert type={type}>{children}</Alert>,
+  Audio: ({ autoplay, loop, name, desc, src }) => (
+    <Audio autoplay={autoplay} loop={loop} name={name} desc={desc} src={src} />
+  ),
+  BorderRadius: ({ radii }) => <BorderRadius radii={radii} />,
+  ColorFamilies: ({ colors }) => <ColorFamilies colors={colors} />,
+  ColorRow: ({ color, name, prefix }) => (
+    <ColorRow color={color} name={name} prefix={prefix} />
+  ),
+  ColorSwatch: ({ color, name, minimal, prefix }) => (
+    <ColorSwatch color={color} name={name} minimal={minimal} prefix={prefix} />
+  ),
+  Download: ({ name, src, bg, preview, notes }) => (
+    <Download name={name} src={src} bg={bg} preview={preview} notes={notes} />
+  ),
+  FontFamily: ({ fonts }) => <FontFamily fonts={fonts} />,
+  FontSize: ({ fontSizes }) => <FontSize fontSizes={fontSizes} />,
+  FontWeight: ({ fontWeights }) => <FontWeight fontWeights={fontWeights} />,
+  Heading: ({ styles, theme }) => <Heading styles={styles} theme={theme} />,
+  Palette: ({ colors, mode, single, minimal, prefix }) => (
+    <Palette
+      colors={colors}
+      mode={mode}
+      single={single}
+      minimal={minimal}
+      prefix={prefix}
+    />
+  ),
+  Shadow: ({ shadows }) => <Shadow shadows={shadows} />,
+  Space: ({ space }) => <Space space={space} />,
+  Table: ({ columns, titles, children, className }) => (
+    <Table columns={columns} titles={titles} className={className}>
+      {children}
+    </Table>
+  ),
+  Video: ({ autoplay, loop, muted, name, poster, src }) => (
+    <Video
+      autoplay={autoplay}
+      loop={loop}
+      muted={muted}
+      name={name}
+      poster={poster}
+      src={src}
+    />
+  )
+};
+```
+
+This way you are able to use the components directly in your MDX file without importing them:
+
+```md
+<Alert type="success">Make it so!</Alert>
+```
+
+## 🌟Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts)!
+
+If you want to hire me for **contract/freelance work**, you can do so! [Get in touch with me!](https://www.lekoarts.de/en/contact)

@@ -77,6 +77,11 @@ const exampleActions = [
   },
   {
     type: `add`,
+    path: `examples/{{kebabCase name}}/.gitignore`,
+    templateFile: `plop-templates/example/.gitignore.hbs`,
+  },
+  {
+    type: `add`,
     path: `examples/{{kebabCase name}}/package.json`,
     templateFile: `plop-templates/example/package.json.hbs`,
   },

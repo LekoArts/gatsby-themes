@@ -1,0 +1,48 @@
+{
+  "name": "@lekoarts/gatsby-theme-specimens",
+  "version": "1.0.0",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.65",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@mdx-js/react": "^1.1.5",
+    "@styled-system/css": "^5.0.23",
+    "@theme-ui/presets": "^0.2.15",
+    "chroma-js": "^2.0.4",
+    "gatsby-plugin-theme-ui": "^0.2.34",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "polished": "^3.4.1",
+    "theme-ui": "^0.2.35"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-specimens"
+  }
+}

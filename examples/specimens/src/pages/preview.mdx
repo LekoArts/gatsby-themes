@@ -1,0 +1,121 @@
+import { theme } from "../../theme";
+import {
+  normalizeThemeUIColors,
+  filterStyles
+} from "@lekoarts/gatsby-theme-specimens";
+
+# Specimens for Design Systems (Preview)
+
+Go back to the [**homepage**](/) to see installation and usage instructions!
+
+## Alert
+
+<Alert type="success">Make it so!</Alert>
+<Alert type="hint">Neutral Hint</Alert>
+<Alert type="warning">Gentle warning :)</Alert>
+<Alert type="info">Super helpful information goes here</Alert>
+<Alert type="danger">nooooooooo, not this way</Alert>
+
+## Audio
+
+<Audio
+  src="sounds/through_the_gate.mp3"
+  name="Through the Gate"
+  desc="Hundreds of years in the future, in a colonized Solar System, police detective Josephus Miller, born on Ceres in the asteroid belt, is sent to find a missing young woman, Juliette 'Julie' Andromeda Mao. James Holden, Executive Officer of the ice hauler Canterbury, is involved in a tragic incident that threatens to destabilize the uneasy peace between Earth, Mars and the Belt."
+/>
+
+<Audio src="sounds/through_the_gate.mp3" />
+
+## Border Radius
+
+<BorderRadius radii={theme.radii} />
+
+## Color Row
+
+<ColorRow color="#000" name="Blackness" prefix="Dark - " />
+
+## Color Swatch
+
+<ColorSwatch color="#fff" />
+<ColorSwatch color="#2d3748" name="Blueish" />
+<ColorSwatch color="#667eea" name="Swift" />
+<ColorSwatch color="#4fd1c5" name="4" prefix="Teal - " />
+
+## Download
+
+<Download
+  name="Gatsby Themes Wallpaper"
+  notes="Use for Social Media previews"
+  src="downloads/gatsby-themes-wallpaper.jpg"
+/>
+
+<Download name="Logo" bg="black" src="downloads/logo.png" />
+
+## Font Family
+
+<FontFamily fonts={theme.fonts} />
+
+## Font Size
+
+<FontSize fontSizes={theme.fontSizes} />
+
+## Font Weight
+
+<FontWeight fontWeights={theme.fontWeights} />
+
+## Heading
+
+<Heading
+  styles={filterStyles({
+    input: theme.styles,
+    allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`]
+  })}
+  theme={theme}
+/>
+
+## Palette: Color Rows
+
+<Palette
+  colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
+  prefix="Indigo - "
+/>
+
+## Palette: Color Swatches
+
+<Palette
+  colors={normalizeThemeUIColors({ colors: theme.colors })}
+  single
+  minimal
+  mode="swatch"
+/>
+
+## Sizes
+
+<Table
+  columns={[`120px 1fr`]}
+  titles={[`Token`, `Value`]}
+  className="sizes-table"
+>
+  {Object.entries(theme.sizes).map(([key, value]) => (
+    <div key={key}>
+      <div>{key}</div>
+      <div>{value}</div>
+    </div>
+  ))}
+</Table>
+
+## Shadows
+
+<Shadow shadows={theme.shadows} />
+
+## Space
+
+<Space space={theme.space} />
+
+## Video
+
+<Video
+  name="LekoArts Intro"
+  src="videos/intro.mp4"
+  poster="videos/intro_poster.jpg"
+/>

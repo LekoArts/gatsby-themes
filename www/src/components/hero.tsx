@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { Box, Container, Flex, jsx, Styled } from "theme-ui"
 import { useMediaQuery } from "react-responsive"
 import ThreeDModel from "./3d-model"
