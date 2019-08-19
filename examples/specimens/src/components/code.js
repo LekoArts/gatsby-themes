@@ -4,6 +4,7 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/vsDark"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useMDXScope } from "gatsby-plugin-mdx/context"
+import { useMDXComponents } from "@mdx-js/react"
 import { css } from "@emotion/core"
 
 const badgeStyle = {
@@ -19,11 +20,14 @@ const badgeStyle = {
 }
 
 const Code = ({ codeString, language, live, noInline }) => {
-  const components = useMDXScope()
+  const imported = useMDXScope()
+  const defined = useMDXComponents()
+
+  delete defined.delete
 
   if (live) {
     return (
-      <LiveProvider code={codeString} theme={theme} noInline={noInline || false} scope={components}>
+      <LiveProvider code={codeString} theme={theme} noInline={noInline || false} scope={{ ...defined, ...imported }}>
         <div css={css(badgeStyle)}>Editor</div>
         <LiveEditor css={css({ marginBottom: `1rem`, borderRadius: `0.25rem` })} />
         <LiveError />

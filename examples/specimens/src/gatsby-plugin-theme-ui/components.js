@@ -81,12 +81,6 @@ const components = {
   ),
 }
 
-const CustomProvider = ({ customComponents, children }) => {
-  const comp = useMDXScope()
-
-  return <MDXScopeProvider __mdxScope={{ ...comp, ...customComponents }}>{children}</MDXScopeProvider>
-}
-
 export default {
   ...components,
   h2: heading(`h2`),
@@ -103,5 +97,5 @@ export default {
     // it's possible to have a pre without a code in it
     return <pre {...preProps} />
   },
-  wrapper: ({ children }) => <CustomProvider customComponents={components}>{children}</CustomProvider>,
+  wrapper: ({ children }) => <>{children}</>,
 }
