@@ -11,10 +11,10 @@ type ShadowProps = {
 const Shadow = ({ shadows }: ShadowProps) => (
   <Table
     sx={{
-      variant: `borderRadius.specimens`,
       "> div:nth-of-type(even)": { backgroundColor: `gray.2`, borderRadius: `default` },
       "> div:nth-of-type(odd):not(:first-of-type)": { backgroundColor: `gray.1`, borderRadius: `default` },
       "> div:not(:first-of-type)": { py: 4 },
+      variant: `tables.shadow`,
     }}
     columns="120px 1fr"
     titles={[`Token`, `Preview`]}

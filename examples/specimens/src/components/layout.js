@@ -54,6 +54,9 @@ const Layout = ({ children }) => (
           margin-top: 2rem !important;
           margin-bottom: 1rem !important;
         }
+        h3 {
+          margin-top: 6rem !important;
+        }
         .sizes-table {
           > div:not(:first-of-type) {
             padding-top: 0.5rem !important;

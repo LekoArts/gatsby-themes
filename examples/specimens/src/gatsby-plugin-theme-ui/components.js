@@ -25,7 +25,6 @@ import {
   Video,
 } from "@lekoarts/gatsby-theme-specimens"
 import { preToCodeBlock } from "mdx-utils"
-import { MDXScopeProvider, useMDXScope } from "gatsby-plugin-mdx/context"
 import Code from "../components/code"
 
 const heading = Tag => props =>
