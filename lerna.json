@@ -3,14 +3,9 @@
   "npmClient": "yarn",
   "useWorkspaces": false,
   "loglevel": "success",
-  "packages": ["themes/*"],
+  "packages": ["themes/*", "examples/*"],
   "registry": "https://registry.npmjs.org/",
-  "ignoreChanges": [
-    "CHANGELOG.md",
-    "**/__tests__/**",
-    "**/__mocks__/**",
-    "examples/**/*"
-  ],
+  "ignoreChanges": ["CHANGELOG.md", "**/__tests__/**", "**/__mocks__/**"],
   "command": {
     "publish": {
       "allowBranch": "master",
