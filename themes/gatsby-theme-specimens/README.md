@@ -26,7 +26,7 @@
     </a>
 </p>
 
-Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
+Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
 
 [**Demo Website**](https://specimens.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-specimens))
 

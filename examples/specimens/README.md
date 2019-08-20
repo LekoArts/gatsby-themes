@@ -20,7 +20,7 @@
   </a>
 </p>
 
-Leverage the wide variety of powerful React components of '@lekoarts/gatsby-theme-specimens' to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX. Using the Gatsby Theme [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens).
+Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX. Using the Gatsby Theme [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens).
 
 [**Demo Website**](https://specimens.lekoarts.de)
 
@@ -39,6 +39,8 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
   - Alerts to emphasize important messages
 
 ## 🚀 Getting Started
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-specimens) [![Edit gatsby-starter-specimens](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LekoArts/gatsby-starter-specimens/tree/master/)
 
 1. **Create a Gatsby site.**
 
