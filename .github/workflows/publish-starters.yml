@@ -3,14 +3,11 @@ on:
   push:
     branches:
       - master
-    paths:
-      - examples/*
-      - themes/*
 jobs:
   master:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@latest
+      - uses: actions/checkout@master
       - name: publish:starters
         uses: johno/actions-push-subdirectories@master
         env:
