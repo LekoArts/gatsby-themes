@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.18](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.17...@lekoarts/gatsby-theme-emma@0.0.18) (2019-08-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/core to ^10.0.16 ([#41](https://github.com/LekoArts/gatsby-themes/issues/41)) ([074a79b](https://github.com/LekoArts/gatsby-themes/commit/074a79b))
+* **deps:** update gatsby ([#42](https://github.com/LekoArts/gatsby-themes/issues/42)) ([46f9332](https://github.com/LekoArts/gatsby-themes/commit/46f9332))
+* **deps:** update theme ui ([#44](https://github.com/LekoArts/gatsby-themes/issues/44)) ([81a7f6c](https://github.com/LekoArts/gatsby-themes/commit/81a7f6c))
+* Dependency & renovate updates ([#48](https://github.com/LekoArts/gatsby-themes/issues/48)) ([208cc23](https://github.com/LekoArts/gatsby-themes/commit/208cc23))
+
+
+
+
+
 ## [0.0.17](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.16...@lekoarts/gatsby-theme-emma@0.0.17) (2019-08-12)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-emma
