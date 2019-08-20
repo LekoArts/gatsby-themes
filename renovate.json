@@ -1,6 +1,6 @@
 {
   "extends": ["config:base", ":disablePeerDependencies"],
-  "includePaths": ["examples/**", "themes/**", "www"],
+  "includePaths": ["package.json", "examples/**", "themes/**", "www"],
   "packageRules": [
     {
       "packagePatterns": [
@@ -19,6 +19,10 @@
     {
       "packagePatterns": ["@mdx-js"],
       "groupName": "MDX"
+    },
+    {
+      "packagePatterns": ["@testing-library"],
+      "groupName": "@testing-library"
     },
     {
       "packageNames": ["react", "react-dom"],
