@@ -35,8 +35,10 @@ const mdxResolverPassthrough = fieldName => async (source, args, context, info) 
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions, schema }) => {
+exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   const { createTypes } = actions
+
+  const { basePath } = withDefaults(themeOptions)
 
   createTypes(`
     interface Project @nodeInterface {
@@ -62,13 +64,19 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
     }
   `)
 
+  const slugify = source => {
+    const slug = kebabCase(source.title)
+
+    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+  }
+
   const typeDefs = [
     schema.buildObjectType({
       name: `MdxProject`,
       fields: {
         id: { type: `ID!` },
-        slug: { type: `String!` },
         title: { type: `String!` },
+        slug: { type: `String!`, resolve: slugify },
         client: { type: `String!` },
         service: { type: `String!` },
         color: { type: `String!` },
@@ -120,26 +128,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   createTypes(typeDefs)
 }
 
-// Slugify the title and add it to the "slug" node
-exports.createResolvers = ({ createResolvers }, themeOptions) => {
-  const { basePath } = withDefaults(themeOptions)
-
-  const slugify = str => {
-    const slug = kebabCase(str)
-
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
-  }
-
-  createResolvers({
-    Project: {
-      slug: {
-        resolve: source => slugify(source.title),
-      },
-    },
-  })
-}
-
-exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
+exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
   const { projectsPath, pagesPath } = withDefaults(themeOptions)
@@ -168,7 +157,7 @@ exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createCont
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
 
-    await createNode({
+    createNode({
       ...fieldData,
       // Required fields
       id: mdxProjectId,
