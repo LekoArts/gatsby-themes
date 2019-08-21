@@ -22,6 +22,7 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
     className={className}
   >
     <div
+      data-testid="table-header"
       sx={{
         p: 2,
         backgroundColor: `indigo.1`,
