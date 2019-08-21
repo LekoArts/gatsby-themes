@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { graphql } from "gatsby"
 import { animated, useSpring, config } from "react-spring"
 import { Container, Styled, jsx, Flex } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "./layout"
+import SEO from "./seo"
 import { ChildImageSharp } from "../types"
-import Hero from "../components/hero"
+import Hero from "./hero"
 
 type Props = {
   data: {
@@ -20,7 +19,7 @@ type Props = {
   }
 }
 
-const PageTemplate = ({ data: { page } }: Props) => {
+const Page = ({ data: { page } }: Props) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -59,22 +58,4 @@ const PageTemplate = ({ data: { page } }: Props) => {
   )
 }
 
-export default PageTemplate
-
-export const query = graphql`
-  query($slug: String!) {
-    page(slug: { eq: $slug }) {
-      title
-      slug
-      excerpt
-      body
-      cover {
-        childImageSharp {
-          fluid(maxWidth: 1920, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  }
-`
+export default Page
