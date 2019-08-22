@@ -26,15 +26,11 @@
     </a>
 </p>
 
-TODO
+Core Theme for [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma). This theme implements the `Project` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
 
-[**Demo Website**](https://emma-core.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emma))
+[**Demo Website**](https://emma.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emma))
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
-
-## Features
-
-- TODO
 
 ## Installation
 
@@ -42,23 +38,18 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 npm install @lekoarts/gatsby-theme-emma-core
 ```
 
-### Install as a starter
-
-This will generate a new site that pre-configures use of the theme.
-
-```sh
-gatsby new emma-core LekoArts/gatsby-starter-portfolio-emma
-```
-
-[**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
-
 ## Usage
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| Key            | Default Value      | Description                                                                                               |
+| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
+| `basePath`     | `/`                | Root url for the theme                                                                                    |
+| `projectsPath` | `content/projects` | Location of projects                                                                                      |
+| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
+| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
+
+The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
 #### Example usage
 
@@ -69,8 +60,10 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-emma-core`,
       options: {
-          // TODO
-        }
+        // basePath defaults to `/`
+        basePath: `/sideproject`,
+        // projectsPath defaults to `content/projects`
+        projectsPath: `content/cool-projects`
       }
     }
   ]
