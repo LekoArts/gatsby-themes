@@ -49,6 +49,12 @@ Commit your changes to a feature branch of your fork and open up a PR against th
 
 ### Testing
 
+#### Jest
+
+Some parts of the codebase have unit tests written with Jest to ensure the correct functionality, e.g. custom hooks or utility functions.
+
+You can run `yarn test` to run all tests, `yarn test:watch` to run Jest in watch mode. Feel free to improve the code base with additional tests!
+
 #### Cypress
 
 The Cypress tests are written in TypeScript, too, and hence need to be compiled before usage. Run the following script for development:
