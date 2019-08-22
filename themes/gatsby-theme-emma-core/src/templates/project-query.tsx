@@ -4,8 +4,8 @@ import ProjectComponent from "../components/project"
 export default ProjectComponent
 
 export const query = graphql`
-  query($slug: String!) {
-    project(slug: { eq: $slug }) {
+  query($id: String!) {
+    project(id: { eq: $id }) {
       body
       excerpt
       client

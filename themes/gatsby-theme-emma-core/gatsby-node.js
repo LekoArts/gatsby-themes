@@ -221,6 +221,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     query {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
+          id
           slug
         }
       }
@@ -244,7 +245,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       path: project.slug,
       component: projectTemplate,
       context: {
-        slug: project.slug,
+        id: project.id,
       },
     })
   })
