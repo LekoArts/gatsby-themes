@@ -6,9 +6,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## [1.0.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@0.0.18...@lekoarts/gatsby-theme-emma@1.0.1) (2019-08-23)
 
 
-### Features
+### BREAKING
 
 * Add `gatsby-theme-emma-core` ([#49](https://github.com/LekoArts/gatsby-themes/issues/49)) ([4d8149a](https://github.com/LekoArts/gatsby-themes/commit/4d8149a))
+
+The theme is now a child-theme of `@lekoarts/gatsby-theme-emma-core` which means it uses its underlying data structure / GraphQL node interfaces to build the site. The `-core` theme handles the data, the normal `emma` theme handles the styling and using this data. If you just used this theme without modifications you shouldn't have any breaking changes, if you shadowed files this might be the case.
 
 
 
