@@ -36,21 +36,48 @@ const mdxResolverPassthrough = fieldName => async (source, args, context, info) 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
 exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
-  const { createTypes } = actions
+  const { createTypes, createFieldExtension } = actions
 
   const { basePath } = withDefaults(themeOptions)
+
+  const slugify = source => {
+    const slug = kebabCase(source.title)
+
+    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+  }
+
+  createFieldExtension({
+    name: `slugify`,
+    extend() {
+      return {
+        resolve: slugify,
+      }
+    },
+  })
+
+  createFieldExtension({
+    name: `mdxpassthrough`,
+    args: {
+      fieldName: `String!`,
+    },
+    extend({ fieldName }) {
+      return {
+        resolve: mdxResolverPassthrough(fieldName),
+      }
+    },
+  })
 
   createTypes(`
     interface Project @nodeInterface {
       id: ID!
-      slug: String!
+      slug: String! @slugify
       title: String!
       client: String!
       service: String!
       color: String!
       date: Date! @dateformat
       cover: File! @fileByRelativePath
-      excerpt: String!
+      excerpt(pruneLength: Int = 160): String!
       body: String!
     }
     
@@ -59,73 +86,30 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       slug: String!
       title: String!
       cover: File! @fileByRelativePath
-      excerpt: String!
+      excerpt(pruneLength: Int = 160): String!
       body: String!
     }
+    
+    type MdxProject implements Node & Project {
+      title: String!
+      slug: String! @slugify
+      client: String!
+      service: String!
+      color: String!
+      date: Date! @dateformat
+      cover: File! @fileByRelativePath
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
+      body: String! @mdxpassthrough(fieldName: "body")
+    }
+    
+    type MdxPage implements Node & Page {
+      slug: String!
+      title: String!
+      cover: File! @fileByRelativePath
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
+      body: String! @mdxpassthrough(fieldName: "body")
+    }
   `)
-
-  const slugify = source => {
-    const slug = kebabCase(source.title)
-
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
-  }
-
-  const typeDefs = [
-    schema.buildObjectType({
-      name: `MdxProject`,
-      fields: {
-        id: { type: `ID!` },
-        title: { type: `String!` },
-        slug: { type: `String!`, resolve: slugify },
-        client: { type: `String!` },
-        service: { type: `String!` },
-        color: { type: `String!` },
-        date: { type: `Date!`, extensions: { dateformat: {} } },
-        cover: { type: `File!`, extensions: { fileByRelativePath: {} } },
-        excerpt: {
-          type: `String!`,
-          args: {
-            pruneLength: {
-              type: `Int`,
-              defaultValue: 160,
-            },
-          },
-          resolve: mdxResolverPassthrough(`excerpt`),
-        },
-        body: {
-          type: `String!`,
-          resolve: mdxResolverPassthrough(`body`),
-        },
-      },
-      interfaces: [`Node`, `Project`],
-    }),
-    schema.buildObjectType({
-      name: `MdxPage`,
-      fields: {
-        id: { type: `ID!` },
-        slug: { type: `String!` },
-        title: { type: `String!` },
-        cover: { type: `File!`, extensions: { fileByRelativePath: {} } },
-        excerpt: {
-          type: `String!`,
-          args: {
-            pruneLength: {
-              type: `Int`,
-              defaultValue: 160,
-            },
-          },
-          resolve: mdxResolverPassthrough(`excerpt`),
-        },
-        body: {
-          type: `String!`,
-          resolve: mdxResolverPassthrough(`body`),
-        },
-      },
-      interfaces: [`Node`, `Page`],
-    }),
-  ]
-
-  createTypes(typeDefs)
 }
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
@@ -221,7 +205,6 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     query {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
-          id
           slug
         }
       }
@@ -245,7 +228,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       path: project.slug,
       component: projectTemplate,
       context: {
-        id: project.id,
+        slug: project.slug,
       },
     })
   })
