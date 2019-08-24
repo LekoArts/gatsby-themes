@@ -7,6 +7,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-status-dashboard
 
+There are **NO** breaking changes, this is just a bump to stable version since the theme is established now.
+
 
 
 
