@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.3...cara@0.0.4) (2019-08-24)
+
+
+### Bug Fixes
+
+* **deps:** Update all dependencies ([#53](https://github.com/LekoArts/gatsby-themes/issues/53)) ([5159f0f](https://github.com/LekoArts/gatsby-themes/commit/5159f0f))
+
+
+
+
+
 ## [0.0.3](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.2...cara@0.0.3) (2019-08-24)
 
 **Note:** Version bump only for package cara
