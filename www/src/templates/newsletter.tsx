@@ -2,6 +2,7 @@
 import { graphql, Link } from "gatsby"
 import { Container, jsx, Styled, Flex } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { TwitterShareButton } from "react-share"
 import Layout from "../components/layout"
 import LeftArrow from "../icons/left-arrow"
 import { Circle, Donut } from "../components/shapes"
@@ -80,9 +81,30 @@ const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) =
           mt: 5,
           pt: 3,
           color: `textMuted`,
+          display: `flex`,
+          flexWrap: `wrap`,
         }}
       >
-        Originally published on {newsletter.date}
+        <div sx={{ mr: 4 }}>Originally published on {newsletter.date}</div>
+        <TwitterShareButton
+          url={`https://themes.lekoarts.de${newsletter.slug}`}
+          via="lekoarts_de"
+          title={newsletter.title}
+          sx={{
+            variant: `buttons.transparent`,
+            color: `primary`,
+            "&:hover, &:focus": {
+              boxShadow: `none`,
+              cursor: `pointer`,
+              textDecoration: `underline`,
+              color: `primary`,
+            },
+            mr: 4,
+          }}
+        >
+          Share on Twitter
+        </TwitterShareButton>
+        <Styled.a href="/rss.xml">RSS Feed</Styled.a>
       </div>
       <Flex
         sx={{

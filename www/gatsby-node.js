@@ -12,40 +12,32 @@ const mdxResolverPassthrough = fieldName => async (source, args, context, info) 
   return result
 }
 
-exports.sourceNodes = ({ actions, schema }) => {
-  const { createTypes } = actions
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes, createFieldExtension } = actions
 
-  const typeDefs = [
-    schema.buildObjectType({
-      name: `Newsletter`,
-      fields: {
-        slug: { type: `String` },
-        title: { type: `String` },
-        info: { type: `String` },
-        date: { type: `Date`, extensions: { dateformat: {} } },
-        excerpt: {
-          type: `String`,
-          args: {
-            pruneLength: {
-              type: `Int`,
-              defaultValue: 160,
-            },
-          },
-          resolve: mdxResolverPassthrough(`excerpt`),
-        },
-        body: {
-          type: `String`,
-          resolve: mdxResolverPassthrough(`body`),
-        },
-      },
-      interfaces: [`Node`],
-      extensions: {
-        infer: true,
-      },
-    }),
-  ]
+  createFieldExtension({
+    name: `mdxpassthrough`,
+    args: {
+      fieldName: `String!`,
+    },
+    extend({ fieldName }) {
+      return {
+        resolve: mdxResolverPassthrough(fieldName),
+      }
+    },
+  })
 
-  createTypes(typeDefs)
+  createTypes(`
+    type Newsletter implements Node {
+      slug: String!
+      title: String!
+      info: String!
+      date: Date! @dateformat
+      excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
+      body: String! @mdxpassthrough(fieldName: "body")
+      html: String! @mdxpassthrough(fieldName: "html")
+    }
+  `)
 }
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }) => {
@@ -80,7 +72,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
         type: `Newsletter`,
         contentDigest: createContentDigest(fieldData),
         content: JSON.stringify(fieldData),
-        description: `Newsletters`,
+        description: `Newsletters Type`,
       },
     })
 

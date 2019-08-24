@@ -2,15 +2,17 @@ require(`dotenv`).config({
   path: `.env`,
 })
 
+const newsletterFeed = require(`./src/utils/feed`)
+
 module.exports = {
   siteMetadata: {
-    siteTitle: `Gatsby Themes by LekoArts`,
-    siteTitleAlt: `Free & Open Source Gatsby Themes by LekoArts`,
+    title: `Gatsby Themes by LekoArts`,
+    titleAlt: `Free & Open Source Gatsby Themes by LekoArts`,
     siteUrl: `https://themes.lekoarts.de`,
-    siteDescription: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
-    siteHeadline: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website`,
-    siteLanguage: `en`,
-    siteImage: `/banner.png`,
+    description: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
+    headline: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website`,
+    language: `en`,
+    image: `/banner.png`,
     author: `@lekoarts_de`,
   },
   plugins: [
@@ -56,6 +58,10 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: newsletterFeed,
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
