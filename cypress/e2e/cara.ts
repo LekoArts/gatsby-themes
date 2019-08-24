@@ -27,6 +27,9 @@ describe(`gatsby-theme-cara`, () => {
     cy.getByLabelText(/toggle dark mode/i)
   })
   it(`should render the footer`, () => {
-    cy.getByText(/theme by lekoarts/i)
+    cy.getByLabelText(`Link to the theme's GitHub repository`)
+      .contains(`Theme`)
+      .getByLabelText(`Link to the theme author's website`)
+      .contains(`LekoArts`)
   })
 })

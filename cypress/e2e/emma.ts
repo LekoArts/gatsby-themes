@@ -19,7 +19,10 @@ describe(`gatsby-theme-emma`, () => {
     cy.getByLabelText(/instagram/i).getByLabelText(/dribbble/i)
   })
   it(`should render the footer`, () => {
-    cy.getByText(/theme by lekoarts/i)
+    cy.getByLabelText(`Link to the theme's GitHub repository`)
+      .contains(`Theme`)
+      .getByLabelText(`Link to the theme author's website`)
+      .contains(`LekoArts`)
   })
   it(`should have item with all information`, () => {
     cy.getByLabelText(/view detail page of hermione granger/i).within(() => {
