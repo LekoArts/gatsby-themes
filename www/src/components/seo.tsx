@@ -41,18 +41,18 @@ const SEO = ({ description, meta, pathname, image, title, newsletter, datePublis
   const buildTime = useBuildTime()
 
   const {
-    siteTitle,
-    siteTitleAlt: defaultTitle,
+    title: defaultTitle,
+    titleAlt: defaultTitleAlt,
     siteUrl,
-    siteDescription: defaultDescription,
-    siteHeadline,
-    siteLanguage,
-    siteImage: defaultImage,
+    description: defaultDescription,
+    headline,
+    language,
+    image: defaultImage,
     author,
   } = site
 
   const seo = {
-    title: title || defaultTitle,
+    title: title || defaultTitleAlt,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
@@ -74,14 +74,14 @@ const SEO = ({ description, meta, pathname, image, title, newsletter, datePublis
     dateModified: buildTime,
     datePublished: `2019-07-17T23:33:12-05:00`,
     description: defaultDescription,
-    headline: siteHeadline,
+    headline,
     image: {
       "@type": `ImageObject`,
       url: seo.image,
     },
     inLanguage: `en`,
     mainEntityOfPage: siteUrl,
-    name: defaultTitle,
+    name: defaultTitleAlt,
     publisher: {
       "@id": `${siteUrl}/#creator`,
     },
@@ -98,8 +98,8 @@ const SEO = ({ description, meta, pathname, image, title, newsletter, datePublis
       addressLocality: ``,
       postalCode: ``,
     },
-    name: defaultTitle,
-    alternateName: siteTitle,
+    name: defaultTitleAlt,
+    alternateName: defaultTitle,
     description: defaultDescription,
     url: siteUrl,
     email: `hello@lekoarts.de`,
@@ -191,7 +191,7 @@ const SEO = ({ description, meta, pathname, image, title, newsletter, datePublis
 
   return (
     <Helmet meta={meta}>
-      <html lang={siteLanguage} />
+      <html lang={language} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
