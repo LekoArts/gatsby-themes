@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.3...specimens@0.0.4) (2019-08-26)
+
+
+### Bug Fixes
+
+* **specimens:** Add clearer links to theme's github repo ([2be03b9](https://github.com/LekoArts/gatsby-themes/commit/2be03b9))
+
+
+
+
+
 ## [0.0.3](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.2...specimens@0.0.3) (2019-08-23)
 
 
