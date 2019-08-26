@@ -1,9 +1,8 @@
 {
   "version": "independent",
   "npmClient": "yarn",
-  "useWorkspaces": false,
+  "useWorkspaces": true,
   "loglevel": "success",
-  "packages": ["themes/*", "examples/*"],
   "registry": "https://registry.npmjs.org/",
   "ignoreChanges": ["CHANGELOG.md", "**/__tests__/**", "**/__mocks__/**"],
   "command": {
