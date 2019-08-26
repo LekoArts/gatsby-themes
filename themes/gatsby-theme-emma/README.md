@@ -115,9 +115,19 @@ module.exports = {
 };
 ```
 
-### Formats
+### Adding content
 
-Projects need the following frontmatter:
+#### Adding a new project
+
+New projects will be shown on the index page of this theme and can be added by creating MDX files inside `content/projects`. General setup:
+
+1. Create a new folder inside `content/projects`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Add an image to the created folder (from step 1)
+1. Reference this image as your `cover` in the frontmatter
+1. Write your content below the frontmatter
+
+**Frontmatter reference:**
 
 ```md
 ---
@@ -130,7 +140,17 @@ color: "#8e9d31"
 ---
 ```
 
-Pages need the following frontmatter:
+#### Adding a new page
+
+Additional pages will be shown in the navigation (left side) and allow you to display content other than projects, e.g. a "Contact" or "About Me" page. General setup:
+
+1. Create a new folder inside `content/pages`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Add an image to the created folder (from step 1)
+1. Reference this image as your `cover` in the frontmatter
+1. Write your content below the frontmatter
+
+**Frontmatter reference:**
 
 ```md
 ---
