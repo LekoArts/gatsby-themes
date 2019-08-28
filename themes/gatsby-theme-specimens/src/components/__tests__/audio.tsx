@@ -5,9 +5,12 @@ import Audio from "../audio"
 
 describe(`Audio`, () => {
   it(`should display with standard values`, () => {
-    const { getByLabelText } = render(<Audio src="sounds/wingardium-leviosa.mp3" />)
+    const { getByLabelText, container } = render(<Audio src="sounds/wingardium-leviosa.mp3" />)
 
     expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`))
+    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`)).not.toHaveAttribute(`autoplay`)
+    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`)).not.toHaveAttribute(`loop`)
+    expect(container.querySelector(`[data-name="audio-name"]`)).toBe(null)
   })
   it(`should take audio props`, () => {
     const { getByLabelText } = render(<Audio src="sounds/wingardium-leviosa.mp3" autoplay loop />)

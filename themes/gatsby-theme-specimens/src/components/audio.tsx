@@ -47,7 +47,7 @@ const Audio = ({ autoplay = false, loop = false, name = ``, desc = ``, src }: Au
       <audio
         sx={{ width: `100%`, boxShadow: `lg`, borderRadius: `full` }}
         controls
-        aria-label={`Audio file: ${name ? `${name}` : `${src}`}`}
+        aria-label={`Audio file: ${name || src}`}
         autoPlay={autoplay}
         loop={loop}
         src={src}

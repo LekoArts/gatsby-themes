@@ -39,6 +39,7 @@ const Video = ({ autoplay = false, loop = false, muted = false, name = ``, poste
       </div>
     )}
     <video
+      aria-label={`Video file: ${name || src}`}
       sx={{ width: `100%`, boxShadow: `lg` }}
       poster={poster}
       controls
