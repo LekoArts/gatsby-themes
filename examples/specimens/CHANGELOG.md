@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.4...specimens@0.0.5) (2019-08-29)
+
+
+### Bug Fixes
+
+* **specimens:** Add links to badges on index page ([935d519](https://github.com/LekoArts/gatsby-themes/commit/935d519))
+
+
+
+
+
 ## [0.0.4](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.3...specimens@0.0.4) (2019-08-26)
 
 
