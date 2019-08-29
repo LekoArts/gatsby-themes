@@ -81,6 +81,7 @@ If you want to receive monthly updates on my themes and all things related to Ga
 
 - [How I used Theme UI to build my Gatsby Themes library](https://www.lekoarts.de/en/blog/how-i-used-theme-ui-to-build-my-gatsby-themes-library)
 - [Setting up a Gatsby Themes workspace with TypeScript, ESLint & Cypress](https://www.lekoarts.de/en/blog/setting-up-a-gatsby-themes-workspace-with-typescript-eslint-and-cypress)
+- [Specimens for Gatsby powered Design Systems](https://www.lekoarts.de/en/blog/specimens-for-gatsby-powered-design-systems)
 
 ### Official resources
 
