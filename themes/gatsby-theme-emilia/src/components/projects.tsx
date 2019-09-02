@@ -101,13 +101,13 @@ const Projects = ({ projects }: Props) => {
     <Layout>
       <Header />
       <Main>
-        <Container>
+        <Container sx={{ px: `0px !important` }}>
           <div
             sx={{
               position: `relative`,
               width: `100%`,
               height: `100%`,
-              mt: `-6rem`,
+              mt: `-8rem`,
               zIndex: 10,
               "> div": {
                 position: `absolute`,
@@ -138,10 +138,7 @@ const Projects = ({ projects }: Props) => {
                     ...rest,
                   }}
                 >
-                  <Img
-                    fluid={item.cover.childImageSharp.fluid}
-                    style={{ boxShadow: shadowArray.join(", ") }}
-                  />
+                  <Img fluid={item.cover.childImageSharp.fluid} style={{ boxShadow: shadowArray.join(`, `) }} />
                 </animated.div>
               )
             })}

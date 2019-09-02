@@ -50,7 +50,7 @@ const Header = () => {
         >
           <Location /> {location}
         </div>
-        <div sx={{ mt: 4, mb: 5 }}>
+        <div sx={{ mt: 4, mb: 6 }}>
           {socialMedia.map(entry => (
             <Styled.a sx={{ mx: 2 }} key={entry.title} href={entry.href}>
               {entry.title}
