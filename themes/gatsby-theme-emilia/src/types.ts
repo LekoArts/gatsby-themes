@@ -9,6 +9,7 @@ export type ChildImageSharp = {
       tracedSVG: string
       srcWebp: string
       srcSetWebp: string
+      presentationHeight: number
     }
     resize?: {
       src: string

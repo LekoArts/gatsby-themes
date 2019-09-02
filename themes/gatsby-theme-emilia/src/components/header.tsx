@@ -41,7 +41,13 @@ const Header = () => {
           <Img fixed={avatar.file.childImageSharp.fixed} />
         </div>
         <Styled.h1>{name}</Styled.h1>
-        <div sx={{ svg: { width: `20px`, ".primary": { color: `gray.8` }, ".secondary": { color: `gray.6` } } }}>
+        <div
+          sx={{
+            svg: { width: `20px`, ".primary": { color: `gray.8` }, ".secondary": { color: `gray.6` }, mr: 2 },
+            display: `flex`,
+            justifyContent: `center`,
+          }}
+        >
           <Location /> {location}
         </div>
         <div sx={{ mt: 4, mb: 5 }}>

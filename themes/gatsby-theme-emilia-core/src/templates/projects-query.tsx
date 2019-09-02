@@ -15,6 +15,7 @@ export const query = graphql`
           childImageSharp {
             fluid(maxWidth: 1000, quality: 90) {
               ...GatsbyImageSharpFluid_withWebp
+              presentationHeight
             }
           }
         }

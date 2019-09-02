@@ -7,7 +7,7 @@ export default function useMedia(queries: string[], values: number[], defaultVal
   useEffect(() => {
     const handler = () => set(match)
     window.addEventListener(`resize`, handler)
-    return () => window.removeEventListener(handler)
+    return () => window.removeEventListener(`resize`, handler)
   }, [])
   return value
 }
