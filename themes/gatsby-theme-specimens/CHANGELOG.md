@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@1.0.3...@lekoarts/gatsby-theme-specimens@1.0.4) (2019-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency chroma-js to ^2.0.6 ([#63](https://github.com/LekoArts/gatsby-themes/issues/63)) ([b8add54](https://github.com/LekoArts/gatsby-themes/commit/b8add54))
+* **deps:** update emotion monorepo to ^10.0.17 ([#64](https://github.com/LekoArts/gatsby-themes/issues/64)) ([34041e8](https://github.com/LekoArts/gatsby-themes/commit/34041e8))
+* **deps:** update mdx to ^1.4.0 ([#65](https://github.com/LekoArts/gatsby-themes/issues/65)) ([5d37985](https://github.com/LekoArts/gatsby-themes/commit/5d37985))
+
+
+
+
+
 ## [1.0.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@1.0.2...@lekoarts/gatsby-theme-specimens@1.0.3) (2019-08-29)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
