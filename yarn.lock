@@ -2800,7 +2800,7 @@
     "@types/react-dom" "*"
     "@types/testing-library__dom" "*"
 
-"@types/theme-ui@^0.2.1":
+"@types/theme-ui@^0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@types/theme-ui/-/theme-ui-0.2.2.tgz#06c8e51bf231ce643f7ce859d6309d104e18a4d9"
   integrity sha512-c6kGvo8GeLGw92nbH3jGCzJHmJQ838fwo4Pst7WoYkUwOar2fIDCW70DRdW+mFXrvA1l1jPUY0bwYwwjXFjhZA==
@@ -8380,6 +8380,11 @@ gatsby-plugin-theme-ui@^0.2.34:
   version "0.2.34"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.2.34.tgz#bbc5af48849ff4be88cd9ef6b66439768da80966"
   integrity sha512-y9QrtMEhalB1mJ7E0y8UW9sffrTJ4W/dj0631k0LfUxEeKs2gA3VJf4yuJ+MOu4RloE9XDC04csM6zOy0tz7kA==
+
+gatsby-plugin-theme-ui@^0.2.38:
+  version "0.2.38"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.2.38.tgz#519afdd63ffe4cf3824f1150a933f2ff57b549b3"
+  integrity sha512-4HUf5EoYQAuxrSyLRVyrYNzqOVnj4hNuPorQk55l8kvTR1MdL3URaoQmsES895cb6+mNOb4/ODb66tFCOdwjwQ==
 
 gatsby-plugin-typescript@^2.1.6:
   version "2.1.6"
@@ -17025,6 +17030,16 @@ theme-ui@^0.2.35:
   version "0.2.36"
   resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.2.36.tgz#3d087f186e30abf415c41d9f0a04c4cf619fe248"
   integrity sha512-7K+rVfl6txPnd05YyNGmgsgrzep2V99/d+CrHjAfBYX9GGoVmKs5X1/3KkdJD8rf/bjF8yDGLwLyaFUYL6T/0A==
+  dependencies:
+    "@emotion/is-prop-valid" "^0.8.1"
+    "@styled-system/css" "^5.0.16"
+    deepmerge "^4.0.0"
+    react "^16.8.0"
+
+theme-ui@^0.2.38:
+  version "0.2.38"
+  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.2.38.tgz#7d294b6bf8b5bae27e36cccb41c0eca60309f0c9"
+  integrity sha512-nPjZlDyRISPu1EYlYHOUT5IKFd22cSEg3i2Kr9EH/mbtD3ezTAqAdE7SKzjUe9tFyagJ9y0UbY/tUI+SENu8wQ==
   dependencies:
     "@emotion/is-prop-valid" "^0.8.1"
     "@styled-system/css" "^5.0.16"
