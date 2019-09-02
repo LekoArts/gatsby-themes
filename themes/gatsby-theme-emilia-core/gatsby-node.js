@@ -88,6 +88,17 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
+    
+    type EmiliaConfig implements Node {
+      name: String
+      location: String
+      socialMedia: [socialMediaEntry!]
+    }
+    
+    type socialMediaEntry {
+      title: String
+      href: String
+    }
   `)
 }
 
@@ -134,6 +145,39 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
     createParentChildLink({ parent: node, child: getNode(mdxProjectId) })
   }
+}
+
+exports.sourceNodes = (
+  { actions, createContentDigest },
+  {
+    name = `LekoArts`,
+    location = `Germany`,
+    socialMedia = [
+      { title: `Twitter`, href: `https://twitter.com/lekoarts_de` },
+      { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` },
+    ],
+  }
+) => {
+  const { createNode } = actions
+
+  const specimensConfig = {
+    name,
+    location,
+    socialMedia,
+  }
+
+  createNode({
+    ...specimensConfig,
+    id: `@lekoarts/gatsby-theme-emilia-core-config`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `EmiliaConfig`,
+      contentDigest: createContentDigest(specimensConfig),
+      content: JSON.stringify(specimensConfig),
+      description: `Options for @lekoarts/gatsby-theme-emilia-core`,
+    },
+  })
 }
 
 // These template are only data-fetching wrappers that import components

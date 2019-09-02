@@ -6,13 +6,16 @@ export default {
   useCustomProperties: true,
   colors: {
     ...tailwind.colors,
-    primary: tailwind.colors.pink[7],
-    secondary: tailwind.colors.indigo[6],
+    text: tailwind.colors.gray[8],
+    primary: tailwind.colors.blue[6],
+    background: tailwind.colors.gray[1],
+    backgroundPattern: `#F1F4F7`,
     modes: {
       dark: {
-        text: tailwind.colors.white,
-        primary: tailwind.colors.pink[4],
-        background: tailwind.colors.gray[8],
+        primary: tailwind.colors.blue[4],
+        text: tailwind.colors.gray[4],
+        background: tailwind.colors.gray[9],
+        backgroundPattern: `#1D2330`,
       },
     },
   },
@@ -23,6 +26,29 @@ export default {
       color: `text`,
       backgroundColor: `background`,
     },
+    Footer: {
+      display: `block`,
+      color: `text`,
+    },
+    a: {
+      ...tailwind.styles.a,
+      color: `primary`,
+    },
+    Main: {
+      ...tailwind.styles.Main,
+      position: `relative`,
+    },
+    Header: {
+      ...tailwind.styles.Header,
+      position: `relative`,
+      overflow: `hidden`,
+      justifyContent: `center`,
+    },
+    Container: {
+      px: [3, 4],
+      py: [2, 3],
+      maxWidth: `1600px`,
+    },
     p: {
       fontSize: [1, 2],
       letterSpacing: `-0.003em`,
@@ -32,26 +58,26 @@ export default {
     },
     h1: {
       ...tailwind.styles.h1,
-      fontSize: [5, 6],
+      fontSize: [4, 5],
       mt: 2,
     },
     h2: {
       ...tailwind.styles.h2,
-      fontSize: [4, 5],
+      fontSize: [3, 4],
       mt: 2,
     },
     h3: {
       ...tailwind.styles.h3,
-      fontSize: [3, 4],
+      fontSize: [2, 3],
       mt: 3,
     },
     h4: {
       ...tailwind.styles.h4,
-      fontSize: [2, 3],
+      fontSize: [1, 2],
     },
     h5: {
       ...tailwind.styles.h5,
-      fontSize: [1, 2],
+      fontSize: 1,
     },
     h6: {
       ...tailwind.styles.h6,

@@ -11,6 +11,14 @@ export const query = graphql`
       date(formatString: "DD.MM.YYYY")
       slug
       title
+      areas
+      cover {
+        childImageSharp {
+          fluid(maxWidth: 1000, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   }
 `
