@@ -98,7 +98,7 @@ jobs:
           name: Run Unit tests
           command: yarn test:ci
           environment:
-            JEST_JUNIT_OUTPUT: "results/jest/result.xml"
+            JEST_JUNIT_OUTPUT_DIR: "results/jest"
       - <<: *store_results
       - <<: *store_results_artifacts
 
