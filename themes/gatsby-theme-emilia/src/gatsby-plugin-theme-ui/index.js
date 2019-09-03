@@ -10,6 +10,9 @@ export default {
     primary: tailwind.colors.blue[6],
     background: tailwind.colors.gray[1],
     backgroundPattern: `#F1F4F7`,
+    iconPrimary: tailwind.colors.gray[8],
+    iconSecondary: tailwind.colors.gray[6],
+    textMuted: tailwind.colors.gray[7],
     modes: {
       dark: {
         primary: tailwind.colors.blue[4],
@@ -50,7 +53,7 @@ export default {
       maxWidth: `1600px`,
     },
     p: {
-      fontSize: [1, 2],
+      fontSize: 1,
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,

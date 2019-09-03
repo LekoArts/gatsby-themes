@@ -5,9 +5,10 @@ import Img from "gatsby-image"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 import HeaderBackground from "./header-background"
 import Location from "../assets/location"
+import SocialMediaList from "./social-media-list"
 
 const Header = () => {
-  const { name, location, socialMedia } = useEmiliaConfig()
+  const { name, location } = useEmiliaConfig()
   const avatar = useStaticQuery(graphql`
     query {
       file(sourceInstanceName: { eq: "assets" }, name: { eq: "avatar" }) {
@@ -43,19 +44,21 @@ const Header = () => {
         <Styled.h1>{name}</Styled.h1>
         <div
           sx={{
-            svg: { width: `20px`, ".primary": { color: `gray.8` }, ".secondary": { color: `gray.6` }, mr: 2 },
+            svg: {
+              width: `20px`,
+              ".primary": { color: `iconPrimary` },
+              ".secondary": { color: `iconSecondary` },
+              mr: 2,
+            },
             display: `flex`,
             justifyContent: `center`,
+            color: `textMuted`,
           }}
         >
           <Location /> {location}
         </div>
         <div sx={{ mt: 4, mb: 6 }}>
-          {socialMedia.map(entry => (
-            <Styled.a sx={{ mx: 2 }} key={entry.title} href={entry.href}>
-              {entry.title}
-            </Styled.a>
-          ))}
+          <SocialMediaList />
         </div>
       </div>
     </ThemeHeader>

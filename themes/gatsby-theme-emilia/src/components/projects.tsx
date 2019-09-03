@@ -2,7 +2,7 @@
 import { jsx, Container, Styled, Main } from "theme-ui"
 import { useTransition, animated } from "react-spring"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { ChildImageSharp } from "../types"
 import Layout from "./layout"
 import Header from "./header"
@@ -68,31 +68,33 @@ const Projects = ({ projects }: Props) => {
     return (
       <Layout>
         <Header />
-        <Styled.p>
-          Hi!{` `}
-          <span role="img" aria-label="Wave emoji">
-            👋
-          </span>
-          {` `}
-          <br />
-          Thanks for using <b>@lekoarts/gatsby-theme-emilia</b>. You currently don't have any content in your{` `}
-          <i>projects</i> folder - that's why this page displays a placeholder text. Head over to the{` `}
-          <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
-            README
-          </Styled.a>
-          {` `}
-          to learn how to setup them.
-        </Styled.p>
-        <Styled.p>
-          <b>TL;DR:</b> <br />
-          The starter automatically created the folder <code>content/projects</code>. Go into this folder, create a new
-          folder called <code>example</code> and create an <code>index.mdx</code> file there and place an image. Edit
-          the frontmatter like described in the{` `}
-          <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
-            README
-          </Styled.a>
-          .
-        </Styled.p>
+        <Container>
+          <Styled.p>
+            Hi!{` `}
+            <span role="img" aria-label="Wave emoji">
+              👋
+            </span>
+            {` `}
+            <br />
+            Thanks for using <b>@lekoarts/gatsby-theme-emilia</b>. You currently don't have any content in your{` `}
+            <i>projects</i> folder - that's why this page displays a placeholder text. Head over to the{` `}
+            <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
+              README
+            </Styled.a>
+            {` `}
+            to learn how to setup them.
+          </Styled.p>
+          <Styled.p>
+            <b>TL;DR:</b> <br />
+            The starter automatically created the folder <code>content/projects</code>. Go into this folder, create a
+            new folder called <code>example</code> and create an <code>index.mdx</code> file there and place an image.
+            Edit the frontmatter like described in the{` `}
+            <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
+              README
+            </Styled.a>
+            .
+          </Styled.p>
+        </Container>
       </Layout>
     )
   }
@@ -113,10 +115,19 @@ const Projects = ({ projects }: Props) => {
                 position: `absolute`,
                 willChange: `transform, width, height, opacity`,
                 padding: `1.5rem`,
-                "> div": {
-                  position: `absolute !important`,
+                a: {
+                  position: `absolute`,
+                  top: `1.5rem`,
+                  left: `1.5rem`,
+                  right: 0,
+                  bottom: 0,
                   height: `calc(100% - 3rem)`,
                   width: `calc(100% - 3rem)`,
+                  "> div": {
+                    position: `absolute !important`,
+                    height: `100%`,
+                    width: `100%`,
+                  },
                 },
               },
             }}
@@ -138,7 +149,38 @@ const Projects = ({ projects }: Props) => {
                     ...rest,
                   }}
                 >
-                  <Img fluid={item.cover.childImageSharp.fluid} style={{ boxShadow: shadowArray.join(`, `) }} />
+                  <Styled.a
+                    as={Link}
+                    sx={{
+                      outline: `none`,
+                      "&:focus": {
+                        boxShadow: `rgba(${shadow}, 0.5) 0px 0px 0px 10px`,
+                      },
+                      "&:hover, &:focus": {
+                        "[data-name='card-overlay']": {
+                          opacity: 1,
+                        },
+                      },
+                    }}
+                    to={item.slug}
+                  >
+                    <div
+                      sx={{
+                        zIndex: 20,
+                        display: `flex`,
+                        justifyContent: `center`,
+                        alignItems: `center`,
+                        opacity: 0,
+                        transition: `all 0.3s ease-in-out`,
+                        color: `white`,
+                        backgroundColor: `rgba(${shadow}, 0.9)`,
+                      }}
+                      data-name="card-overlay"
+                    >
+                      <Styled.h2 sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px` }}>{item.title}</Styled.h2>
+                    </div>
+                    <Img fluid={item.cover.childImageSharp.fluid} style={{ boxShadow: shadowArray.join(`, `) }} />
+                  </Styled.a>
                 </animated.div>
               )
             })}

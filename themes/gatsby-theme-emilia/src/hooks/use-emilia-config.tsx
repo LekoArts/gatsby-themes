@@ -8,6 +8,7 @@ type Props = {
       href: string
       title: string
     }[]
+    showThemeAuthor: boolean
   }
 }
 
@@ -21,6 +22,7 @@ const useEmiliaConfig = () => {
           href
           title
         }
+        showThemeAuthor
       }
     }
   `)

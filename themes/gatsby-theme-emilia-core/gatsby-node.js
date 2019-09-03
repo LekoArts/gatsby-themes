@@ -156,6 +156,7 @@ exports.sourceNodes = (
       { title: `Twitter`, href: `https://twitter.com/lekoarts_de` },
       { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` },
     ],
+    showThemeAuthor = true,
   }
 ) => {
   const { createNode } = actions
@@ -164,6 +165,7 @@ exports.sourceNodes = (
     name,
     location,
     socialMedia,
+    showThemeAuthor,
   }
 
   createNode({
