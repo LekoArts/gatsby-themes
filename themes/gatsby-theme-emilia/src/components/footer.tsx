@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Footer as ThemeFooter, jsx, Styled, Container, Flex, useColorMode } from "theme-ui"
+import { Footer as ThemeFooter, jsx, Styled, Container, useColorMode } from "theme-ui"
 import AboutMeMDX from "../texts/about-me.mdx"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 import SocialMediaList from "./social-media-list"
@@ -15,7 +15,11 @@ const Footer = () => {
   }
 
   return (
-    <ThemeFooter sx={{ background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, ${isDark ? `0.35` : `0.15`}) 100%)` }}>
+    <ThemeFooter
+      sx={{
+        background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, ${isDark ? `0.35` : `0.15`}) 100%)`,
+      }}
+    >
       <Container>
         <div sx={{ display: `grid`, gridGap: 4, gridTemplateColumns: [`1fr`, `1fr`, `1fr`, `2fr 1fr`] }}>
           <div sx={{ p: { mb: 0 }, h2: { mt: 0 } }}>

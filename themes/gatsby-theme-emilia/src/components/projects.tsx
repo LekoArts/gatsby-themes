@@ -1,4 +1,5 @@
 /** @jsx jsx */
+/* eslint no-shadow: 0 */
 import { jsx, Container, Styled, Main } from "theme-ui"
 import { useTransition, animated } from "react-spring"
 import { graphql, useStaticQuery } from "gatsby"
