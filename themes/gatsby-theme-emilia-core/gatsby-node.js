@@ -201,6 +201,27 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
           slug
+          ... on MdxProject {
+            parent {
+              ... on Mdx {
+                fileAbsolutePath
+              }
+            }
+          }
+          title
+          cover {
+            childImageSharp {
+              fluid(maxWidth: 770, quality: 90) {
+                aspectRatio
+                base64
+                src
+                srcSet
+                srcSetWebp
+                srcWebp
+                sizes
+              }
+            }
+          }
         }
       }
     }
@@ -213,12 +234,20 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const projects = result.data.allProject.nodes
 
-  projects.forEach(project => {
+  projects.forEach((project, index) => {
+    const { fileAbsolutePath } = project.parent
+
+    const next = index === 0 ? null : projects[index - 1]
+    const prev = index === projects.length - 1 ? null : projects[index + 1]
+
     createPage({
       path: project.slug,
       component: projectTemplate,
       context: {
         slug: project.slug,
+        absolutePathRegex: `/^${path.dirname(fileAbsolutePath)}/`,
+        prev,
+        next,
       },
     })
   })

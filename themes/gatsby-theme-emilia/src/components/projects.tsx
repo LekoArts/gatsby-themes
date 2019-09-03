@@ -8,6 +8,7 @@ import Layout from "./layout"
 import Header from "./header"
 import useMedia from "../utils/useMedia"
 import useMeasure from "../utils/useMeasure"
+import Card from "./card"
 
 type Props = {
   projects: {
@@ -149,40 +150,7 @@ const Projects = ({ projects }: Props) => {
                     ...rest,
                   }}
                 >
-                  <Styled.a
-                    as={Link}
-                    sx={{
-                      outline: `none`,
-                      "&:focus": {
-                        boxShadow: `rgba(${shadow}, 0.5) 0px 0px 0px 10px`,
-                      },
-                      "&:hover, &:focus": {
-                        "[data-name='card-overlay']": {
-                          opacity: 1,
-                        },
-                      },
-                    }}
-                    to={item.slug}
-                  >
-                    <div
-                      sx={{
-                        zIndex: 20,
-                        display: `flex`,
-                        justifyContent: `center`,
-                        alignItems: `center`,
-                        opacity: 0,
-                        transition: `all 0.3s ease-in-out`,
-                        color: `white`,
-                        backgroundColor: `rgba(${shadow}, 0.9)`,
-                      }}
-                      data-name="card-overlay"
-                    >
-                      <Styled.h2 sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px`, color: `white` }}>
-                        {item.title}
-                      </Styled.h2>
-                    </div>
-                    <Img fluid={item.cover.childImageSharp.fluid} style={{ boxShadow: shadowArray.join(`, `) }} />
-                  </Styled.a>
+                  <Card item={item} overlay={shadow} shadow={shadowArray} />
                 </animated.div>
               )
             })}

@@ -4,7 +4,23 @@ import ProjectComponent from "../components/project"
 export default ProjectComponent
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $absolutePathRegex: String!) {
+    images: allFile(
+      filter: {
+        absolutePath: { regex: $absolutePathRegex }
+        extension: { regex: "/(jpg)|(png)|(tif)|(tiff)|(webp)|(jpeg)/" }
+      }
+      sort: { fields: name, order: ASC }
+    ) {
+      nodes {
+        name
+        childImageSharp {
+          fluid(maxWidth: 1600, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
     project(slug: { eq: $slug }) {
       body
       excerpt
@@ -14,8 +30,8 @@ export const query = graphql`
       areas
       cover {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
+          resize(width: 800, quality: 90) {
+            src
           }
         }
       }
