@@ -139,7 +139,7 @@ const Projects = ({ projects }: Props) => {
               const shadow = `${val[0]}, ${val[1]}, ${val[2]}`
 
               const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
-              const shadowArray = px.map(v => `rgba(${shadow}, 0.25) 0px ${v} ${v} 0px`)
+              const shadowArray = px.map(v => `rgba(${shadow}, 0.15) 0px ${v} ${v} 0px`)
 
               return (
                 <animated.div
@@ -177,7 +177,9 @@ const Projects = ({ projects }: Props) => {
                       }}
                       data-name="card-overlay"
                     >
-                      <Styled.h2 sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px` }}>{item.title}</Styled.h2>
+                      <Styled.h2 sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px`, color: `white` }}>
+                        {item.title}
+                      </Styled.h2>
                     </div>
                     <Img fluid={item.cover.childImageSharp.fluid} style={{ boxShadow: shadowArray.join(`, `) }} />
                   </Styled.a>

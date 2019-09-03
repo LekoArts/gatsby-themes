@@ -52,12 +52,12 @@ const Header = () => {
             },
             display: `flex`,
             justifyContent: `center`,
-            color: `textMuted`,
+            color: `text`,
           }}
         >
           <Location /> {location}
         </div>
-        <div sx={{ mt: 4, mb: 6 }}>
+        <div sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
           <SocialMediaList />
         </div>
       </div>
