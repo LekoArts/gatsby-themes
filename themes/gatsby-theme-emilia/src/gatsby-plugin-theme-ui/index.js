@@ -15,6 +15,7 @@ export default {
     textMuted: tailwind.colors.gray[7],
     heading: tailwind.colors.black,
     toggleIcon: tailwind.colors.black,
+    muted: tailwind.colors.gray[3],
     modes: {
       dark: {
         primary: tailwind.colors.blue[4],
@@ -26,6 +27,7 @@ export default {
         textMuted: tailwind.colors.gray[6],
         heading: tailwind.colors.white,
         toggleIcon: tailwind.colors.white,
+        muted: tailwind.colors.gray[8],
       },
     },
   },

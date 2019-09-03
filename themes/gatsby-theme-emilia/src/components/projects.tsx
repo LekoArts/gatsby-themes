@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Styled, Main } from "theme-ui"
 import { useTransition, animated } from "react-spring"
-import Img from "gatsby-image"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { ChildImageSharp } from "../types"
 import Layout from "./layout"
 import Header from "./header"

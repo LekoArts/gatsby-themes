@@ -10,11 +10,14 @@ type Props = {
     cover: ChildImageSharp
     title: string
   }
-  overlay: string
-  shadow: string[]
+  overlay?: string | undefined
+  shadow?: string[]
 }
 
-const Card = ({ item, overlay, shadow }: Props) => (
+const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
+const shadowArray = px.map(v => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+
+const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray }: Props) => (
   <Styled.a
     as={Link}
     sx={{
