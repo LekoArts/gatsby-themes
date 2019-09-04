@@ -37,8 +37,22 @@ type Props = {
     }
   }
   pageContext: {
-    prev: any
-    next: any
+    prev: {
+      slug: string
+      parent: {
+        fileAbsolutePath: string
+      }
+      title: string
+      cover: ChildImageSharp
+    }
+    next: {
+      slug: string
+      parent: {
+        fileAbsolutePath: string
+      }
+      title: string
+      cover: ChildImageSharp
+    }
   }
 }
 

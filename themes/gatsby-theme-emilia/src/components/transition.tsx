@@ -1,7 +1,7 @@
 import React from "react"
 import { useTransition, animated } from "react-spring"
 
-const Transition = props => {
+const Transition = (props: any) => {
   const transitions = useTransition([props], item => item.location.pathname, {
     from: { opacity: 0, transform: `translateY(60px)` },
     enter: { opacity: 1, transform: `translateY(0px)` },
