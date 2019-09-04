@@ -78,7 +78,7 @@ const Header = () => {
             <Location /> {location}
           </div>
         </animated.div>
-        <div sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
+        <div data-testid="social-header" sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
           <animated.div style={fadeLongProps}>
             <SocialMediaList />
           </animated.div>

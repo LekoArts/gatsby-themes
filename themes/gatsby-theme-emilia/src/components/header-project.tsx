@@ -49,6 +49,7 @@ const HeaderProject = ({ title, areas, description, date }: Props) => {
         <animated.div style={backButtonProps}>
           <Link
             to="/"
+            aria-label={`${name} - Back to homepage`}
             sx={{
               display: `flex`,
               alignItems: `center`,

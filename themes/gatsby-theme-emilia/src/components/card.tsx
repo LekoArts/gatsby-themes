@@ -20,6 +20,7 @@ const shadowArray = px.map(v => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray }: Props) => (
   <Styled.a
     as={Link}
+    aria-label={`Visit ${item.title} project page`}
     sx={{
       outline: `none`,
       "&:focus": {
