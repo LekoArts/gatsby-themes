@@ -4,7 +4,7 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Gatsby Starter Portfolio: Emilia - TODO`,
+    siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
   },
   plugins: [
     {

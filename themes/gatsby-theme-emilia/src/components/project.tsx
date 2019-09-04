@@ -5,6 +5,7 @@ import { ChildImageSharp } from "../types"
 import Layout from "./layout"
 import HeaderProject from "./header-project"
 import ProjectPagination from "./project-pagination"
+import SEO from "./seo"
 
 type Props = {
   data: {
@@ -43,6 +44,12 @@ type Props = {
 
 const Project = ({ data: { project, images }, pageContext: { prev, next } }: Props) => (
   <Layout>
+    <SEO
+      title={project.title}
+      description={project.excerpt}
+      pathname={project.slug}
+      image={project.cover.childImageSharp.resize!.src}
+    />
     <HeaderProject title={project.title} description={project.body} areas={project.areas} date={project.date} />
     <Container sx={{ mt: [`-6rem`, `-6rem`, `-8rem`], zIndex: 10 }}>
       {images.nodes.map(image => (
