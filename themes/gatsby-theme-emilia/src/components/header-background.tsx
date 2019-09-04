@@ -18,7 +18,6 @@ const HeaderBackground = () => {
           bottom: 0,
           width: `100%`,
           height: `100%`,
-          zIndex: 1,
           color: `backgroundPattern`,
           svg: {
             height: `100%`,
@@ -35,7 +34,6 @@ const HeaderBackground = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          zIndex: 2,
           background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 34.99%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, ${
             isDark ? `0.35` : `0.15`
           }) 100%)`,

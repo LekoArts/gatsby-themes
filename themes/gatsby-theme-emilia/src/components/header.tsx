@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { Header as ThemeHeader, jsx, Styled } from "theme-ui"
+import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import useEmiliaConfig from "../hooks/use-emilia-config"
@@ -21,44 +22,66 @@ const Header = () => {
     }
   `)
 
+  const fadeUpProps = useSpring({
+    config: config.slow,
+    from: { opacity: 0, transform: `translate3d(0, 30px, 0)` },
+    to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
+  })
+  const fadeUpPropsDelay = useSpring({
+    config: config.slow,
+    delay: 250,
+    from: { opacity: 0, transform: `translate3d(0, 30px, 0)` },
+    to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
+  })
+  const fadeProps = useSpring({ config: config.slow, from: { opacity: 0 }, to: { opacity: 1 } })
+  const fadeLongProps = useSpring({ config: config.slow, delay: 600, from: { opacity: 0 }, to: { opacity: 1 } })
+
   return (
     <ThemeHeader>
       <HeaderBackground />
       <div sx={{ textAlign: `center`, my: 5, zIndex: 10 }}>
-        <div
-          sx={{
-            overflow: `hidden`,
-            borderRadius: `full`,
-            height: [`100px`, `140px`],
-            width: [`100px`, `140px`],
-            display: `inline-block`,
-            boxShadow: `lg`,
-            "> div": {
-              height: [`100px !important`, `140px !important`],
-              width: [`100px !important`, `140px !important`],
-            },
-          }}
-        >
-          <Img fixed={avatar.file.childImageSharp.fixed} />
-        </div>
-        <Styled.h1>{name}</Styled.h1>
-        <div
-          sx={{
-            svg: {
-              width: `20px`,
-              ".primary": { color: `iconPrimary` },
-              ".secondary": { color: `iconSecondary` },
-              mr: 2,
-            },
-            display: `flex`,
-            justifyContent: `center`,
-            color: `text`,
-          }}
-        >
-          <Location /> {location}
-        </div>
+        <animated.div style={fadeProps}>
+          <div
+            sx={{
+              overflow: `hidden`,
+              borderRadius: `full`,
+              height: [`100px`, `140px`],
+              width: [`100px`, `140px`],
+              display: `inline-block`,
+              boxShadow: `lg`,
+              "> div": {
+                height: [`100px !important`, `140px !important`],
+                width: [`100px !important`, `140px !important`],
+              },
+            }}
+          >
+            <Img fixed={avatar.file.childImageSharp.fixed} />
+          </div>
+        </animated.div>
+        <animated.div style={fadeUpProps}>
+          <Styled.h1>{name}</Styled.h1>
+        </animated.div>
+        <animated.div style={fadeUpPropsDelay}>
+          <div
+            sx={{
+              svg: {
+                width: `20px`,
+                ".primary": { color: `iconPrimary` },
+                ".secondary": { color: `iconSecondary` },
+                mr: 2,
+              },
+              display: `flex`,
+              justifyContent: `center`,
+              color: `text`,
+            }}
+          >
+            <Location /> {location}
+          </div>
+        </animated.div>
         <div sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
-          <SocialMediaList />
+          <animated.div style={fadeLongProps}>
+            <SocialMediaList />
+          </animated.div>
         </div>
       </div>
     </ThemeHeader>
