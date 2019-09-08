@@ -66,12 +66,14 @@ const Header = () => {
             sx={{
               svg: {
                 width: `20px`,
+                height: `20px`,
                 ".primary": { color: `iconPrimary` },
                 ".secondary": { color: `iconSecondary` },
                 mr: 2,
               },
               display: `flex`,
               justifyContent: `center`,
+              alignItems: `center`,
               color: `text`,
             }}
           >

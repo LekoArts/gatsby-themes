@@ -1,13 +1,11 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
 import { jsx, Container, Styled, Main } from "theme-ui"
-import { useTransition, animated } from "react-spring"
+import { useSpring, animated, config } from "react-spring"
 import { graphql, useStaticQuery } from "gatsby"
 import { ChildImageSharp } from "../types"
 import Layout from "./layout"
 import Header from "./header"
-import useMedia from "../utils/useMedia"
-import useMeasure from "../utils/useMeasure"
 import Card from "./card"
 
 type Props = {
@@ -39,30 +37,11 @@ const Projects = ({ projects }: Props) => {
     }
   `)
 
-  // Tie media queries to the number of columns
-  const columns = useMedia([`(min-width: 758px)`], [2], 1)
-
-  // Measure the width of the container element
-  const [bind, { width }] = useMeasure()
-
-  // Form a grid of stacked items
-  const heights = new Array(columns).fill(0) // Each column gets a height starting with zero
-  const gridItems = projects.map(project => {
-    const projectHeight = project.cover.childImageSharp.fluid.presentationHeight
-
-    const column = heights.indexOf(Math.min(...heights)) // Basic masonry-grid placing, puts tile into the smallest column using Math.min
-    const xy = [(width / columns) * column, (heights[column] += projectHeight / 2) - projectHeight / 2] // X = container width / number of columns * column index, Y = it's just the height of the current column
-    return { ...project, xy, width: width / columns, height: projectHeight / 2 }
-  })
-
-  // Turn the static grid values into animated transitions, any addition, removal or change will be animated
-  const transitions = useTransition(gridItems, item => item.slug, {
-    from: ({ xy, width, height }) => ({ xy, width, height, opacity: 0 }),
-    enter: ({ xy, width, height }) => ({ xy, width, height, opacity: 1 }),
-    update: ({ xy, width, height }) => ({ xy, width, height }),
-    leave: { height: 0, opacity: 0 },
-    config: { mass: 5, tension: 500, friction: 100 },
-    trail: 25,
+  const fadeUpProps = useSpring({
+    config: config.slow,
+    delay: 600,
+    from: { opacity: 0, transform: `translate3d(0, 30px, 0)` },
+    to: { opacity: 1, transform: `translate3d(0, 0, 0)` },
   })
 
   if (projects.length === 0) {
@@ -104,58 +83,26 @@ const Projects = ({ projects }: Props) => {
     <Layout>
       <Header />
       <Main>
-        <Container sx={{ px: `0px !important` }}>
-          <div
+        <animated.div style={fadeUpProps}>
+          <Container
             sx={{
-              position: `relative`,
-              width: `100%`,
-              height: `100%`,
               mt: `-8rem`,
-              zIndex: 10,
-              "> div": {
-                position: `absolute`,
-                willChange: `transform, width, height, opacity`,
-                padding: `1.5rem`,
-                a: {
-                  position: `absolute`,
-                  top: `1.5rem`,
-                  left: `1.5rem`,
-                  right: 0,
-                  bottom: 0,
-                  height: `calc(100% - 3rem)`,
-                  width: `calc(100% - 3rem)`,
-                  "> div": {
-                    position: `absolute !important`,
-                    height: `100%`,
-                    width: `100%`,
-                  },
-                },
-              },
+              display: `grid`,
+              gridTemplateColumns: `repeat(auto-fill, minmax(350px, 1fr))`,
+              gridColumnGap: 4,
             }}
-            {...bind}
-            style={{ height: Math.max(...heights) }}
           >
-            {transitions.map(({ item, props: { xy, ...rest }, key }, index) => {
+            {projects.map((project, index) => {
               const val = data.allProject.nodes[index].parent.fields.colorThief
               const shadow = `${val[0]}, ${val[1]}, ${val[2]}`
 
               const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
               const shadowArray = px.map(v => `rgba(${shadow}, 0.15) 0px ${v} ${v} 0px`)
 
-              return (
-                <animated.div
-                  key={key}
-                  style={{
-                    transform: xy.interpolate((x, y) => `translate3d(${x}px,${y}px,0)`),
-                    ...rest,
-                  }}
-                >
-                  <Card item={item} overlay={shadow} shadow={shadowArray} />
-                </animated.div>
-              )
+              return <Card key={project.slug} item={project} overlay={shadow} shadow={shadowArray} />
             })}
-          </div>
-        </Container>
+          </Container>
+        </animated.div>
       </Main>
     </Layout>
   )
