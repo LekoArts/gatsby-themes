@@ -21,12 +21,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `emilia - @lekoarts/gatsby-theme-emilia`,
-        short_name: `emilia`,
-        description: `Stub description for emilia`,
+        name: `Emilia - @lekoarts/gatsby-theme-emilia`,
+        short_name: `Emilia`,
+        description: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI.`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#b83280`,
+        theme_color: `#3182ce`,
         display: `standalone`,
         icons: [
           {
