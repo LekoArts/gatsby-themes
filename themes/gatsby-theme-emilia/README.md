@@ -77,7 +77,7 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 module.exports = {
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-emilia-core`,
+      resolve: `@lekoarts/gatsby-theme-emilia`,
       options: {
           name: `Emilia`,
           socialMedia: [
