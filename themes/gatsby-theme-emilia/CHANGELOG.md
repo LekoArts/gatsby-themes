@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.0.2...@lekoarts/gatsby-theme-emilia@1.0.3) (2019-09-08)
+
+
+### Bug Fixes
+
+* **gatsby-theme-emilia:** Use special grid styles only conditionally ([5359a89](https://github.com/LekoArts/gatsby-themes/commit/5359a89))
+
+
+
+
+
 ## [1.0.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.0.1...@lekoarts/gatsby-theme-emilia@1.0.2) (2019-09-08)
 
 
