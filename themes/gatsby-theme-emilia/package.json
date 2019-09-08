@@ -1,0 +1,54 @@
+{
+  "name": "@lekoarts/gatsby-theme-emilia",
+  "version": "1.0.0",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.15.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.17",
+    "@lekoarts/gatsby-theme-emilia-core": "^1.0.0",
+    "@mdx-js/react": "^1.4.0",
+    "@theme-ui/presets": "^0.2.34",
+    "colorthief": "^2.3.0",
+    "gatsby-core-utils": "^1.0.7",
+    "gatsby-image": "^2.2.16",
+    "gatsby-plugin-emotion": "^4.1.5",
+    "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-theme-ui": "^0.2.18",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
+    "resize-observer-polyfill": "^1.5.1",
+    "theme-ui": "^0.2.38"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-emilia"
+  }
+}

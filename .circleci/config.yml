@@ -102,17 +102,23 @@ jobs:
       - <<: *store_results
       - <<: *store_results_artifacts
 
+  e2e-test-cara:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: cara
+
   e2e-test-emma:
     <<: *e2e-executor
     steps:
       - e2e-test:
           example-name: emma
 
-  e2e-test-cara:
+  e2e-test-emilia:
     <<: *e2e-executor
     steps:
       - e2e-test:
-          example-name: cara
+          example-name: emilia
 
   e2e-test-status-dashboard:
     <<: *e2e-executor
@@ -126,9 +132,11 @@ workflows:
     jobs:
       - lint
       - unit_tests
-      - e2e-test-emma:
-          <<: *e2e-test-workflow
       - e2e-test-cara:
+          <<: *e2e-test-workflow
+      - e2e-test-emilia:
+          <<: *e2e-test-workflow
+      - e2e-test-emma:
           <<: *e2e-test-workflow
       - e2e-test-status-dashboard:
           <<: *e2e-test-workflow
