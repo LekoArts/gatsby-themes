@@ -26,7 +26,7 @@
     </a>
 </p>
 
-TODO
+Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.
 
 [**Demo Website**](https://emilia.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emilia))
 
@@ -34,7 +34,11 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## Features
 
-- TODO
+- MDX
+- Theme UI-based theming
+- react-spring page animations
+- Light Mode / Dark Mode
+- Masonry grid
 
 ## Installation
 
@@ -56,9 +60,15 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| Key               | Default Value                                                                                                                                 | Description                                                                                                                                       |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`                                                                                                                                           | Root url for the theme                                                                                                                            |
+| `projectsPath`    | `content/projects`                                                                                                                            | Location of projects                                                                                                                              |
+| `mdx`             | `true`                                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
+| `name`            | `LekoArts`                                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
+| `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
+| `socialMedia`     | `` [{ title: `Twitter`, href: `https://twitter.com/lekoarts_de` }, { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` }] `` | An array of objects (with the keys "title" and "href" display on the homepage. Can of course hold any kind of links (not limited to social media) |
+| `showThemeAuthor` | `true`                                                                                                                                        | Show the "Theme by LekoArts" in the footer                                                                                                        |
 
 #### Example usage
 
@@ -67,15 +77,80 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 module.exports = {
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-emilia`,
+      resolve: `@lekoarts/gatsby-theme-emilia-core`,
       options: {
-          // TODO
+          name: `Emilia`,
+          socialMedia: [
+            {
+              title: `Instagram`,
+              href: `https://www.instagram.com/lekoarts.de`
+            }
+          ]
         }
       }
     }
   ]
 };
 ```
+
+#### Additional configuration
+
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+
+```js
+// gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    // Used for the title template on pages other than the index site
+    siteTitle: `Emilia`,
+    // Default title of the page
+    siteTitleAlt: `Emilia - @lekoarts/gatsby-theme-emilia`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://emilia.lekoarts.de`,
+    // Used for SEO
+    siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`
+  }
+};
+```
+
+### Shadowing
+
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme!
+
+### Adding content
+
+#### Adding a new project
+
+New projects will be shown on the index page of this theme and can be added by creating MDX files inside `content/projects`. General setup:
+
+1. Create a new folder inside `content/projects`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Add images to the created folder (from step 1)
+1. Reference your desired images as your `cover` in the frontmatter
+1. Write your content below the frontmatter (optional)
+
+**Frontmatter reference:**
+
+```md
+---
+cover: "./sean-foley-0JD7kvxAq0Y-unsplash.jpg"
+date: "2019-09-10"
+title: "Emilia"
+areas:
+  - Neon
+  - Lights
+---
+```
+
+The frontmatter alone is enough, if you'd like to add additional content you can do so by writing your content (as usual with MDX) below the frontmatter. It'll be displayed in the header of the project below the date and areas.
 
 ## 🌟 Supporting me
 

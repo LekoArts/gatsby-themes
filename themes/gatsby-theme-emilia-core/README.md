@@ -32,50 +32,29 @@ Core Theme for [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gat
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
-## Features
-
-- TODO
-
 ## Installation
 
 ```sh
 npm install @lekoarts/gatsby-theme-emilia-core
 ```
 
-### Install as a starter
-
-This will generate a new site that pre-configures use of the theme.
-
-```sh
-gatsby new emilia-core LekoArts/gatsby-starter-portfolio-emilia
-```
-
-[**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)
-
 ## Usage
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| Key               | Default Value                                                                                                                                 | Description                                                                                                                                       |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`                                                                                                                                           | Root url for the theme                                                                                                                            |
+| `projectsPath`    | `content/projects`                                                                                                                            | Location of projects                                                                                                                              |
+| `mdx`             | `true`                                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
+| `name`            | `LekoArts`                                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
+| `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
+| `socialMedia`     | `` [{ title: `Twitter`, href: `https://twitter.com/lekoarts_de` }, { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` }] `` | An array of objects (with the keys "title" and "href" display on the homepage. Can of course hold any kind of links (not limited to social media) |
+| `showThemeAuthor` | `true`                                                                                                                                        | Show the "Theme by LekoArts" in the footer                                                                                                        |
 
-#### Example usage
+### Shadowing
 
-```js
-// gatsby-config.js
-module.exports = {
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-emilia-core`,
-      options: {
-          // TODO
-        }
-      }
-    }
-  ]
-};
-```
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! You can also have a look at [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia) to see it in action.
 
 ## 🌟 Supporting me
 

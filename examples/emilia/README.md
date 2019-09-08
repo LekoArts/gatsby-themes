@@ -15,12 +15,12 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="TODO">
-    <img src="TODO" alt="Netlify Status" />
+  <a href="https://app.netlify.com/sites/portfolio-emilia/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/5da7d9e1-9b91-44c5-b23d-b47cab98c50d/deploy-status" alt="Netlify Status" />
   </a>
 </p>
 
-Stub description for Gatsby Starter Portfolio: Emilia. Using the Gatsby Theme [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia).
+Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Using the Gatsby Theme [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia).
 
 [**Demo Website**](https://emilia.lekoarts.de)
 
@@ -28,7 +28,14 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## ✨ Features
 
-- TODO
+- MDX
+- Fully customizable through the usage of Gatsby Themes (and Theme UI)
+- Light Mode / Dark Mode
+- Page Transitions
+- Masonry grid and focus on big images
+- Google Analytics Support
+- SEO (Sitemap, OpenGraph tags, Twitter tags)
+- Offline Support & WebApp Manifest
 
 ## 🚀 Getting Started
 
@@ -57,17 +64,40 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 
 ## 📝 Using and modifying this starter
 
+**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the underlying theme!
+
 This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia).
 
-Please have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI.
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+
+### Adding a new project
+
+New projects will be shown on the index page of this theme and can be added by creating MDX files inside `content/projects`. General setup:
+
+1. Create a new folder inside `content/projects`
+1. Create a new `index.mdx` file, and add the frontmatter
+1. Add images to the created folder (from step 1)
+1. Reference your desired images as your `cover` in the frontmatter
+1. Write your content below the frontmatter (optional)
+
+**Frontmatter reference:**
+
+```md
+---
+cover: "./sean-foley-0JD7kvxAq0Y-unsplash.jpg"
+date: "2019-09-10"
+title: "Emilia"
+areas:
+  - Neon
+  - Lights
+---
+```
+
+The frontmatter alone is enough, if you'd like to add additional content you can do so by writing your content (as usual with MDX) below the frontmatter. It'll be displayed in the header of the project below the date and areas.
 
 ### Change your `static` folder
 
 The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
-
-### Modifying components & this starter
-
-Please have a look at [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia)'s README to see how you can change/shadow components. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia/` to shadow/override files.
 
 ## 🤔 Questions or problems?
 
