@@ -1,7 +1,7 @@
 - title: "Emma"
   url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma"
   preview: "https://emma.lekoarts.de"
-  description: "Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images"
+  description: "Clean portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images"
   image: "./emma.jpg"
   shapes: [
     {
@@ -95,6 +95,29 @@
     size: ["100px", "135px"],
     xOffset: ["300px", "600px", "280px", "400px"],
     yOffset: ["-40px", "-60px"],
+    opacity: 1,
+  },
+  ]
+- title: "Emilia"
+  url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia"
+  preview: "https://emilia.lekoarts.de"
+  description: "Minimalistic portfolio/photography site with masonry grid, page transitions and big images."
+  image: "./emilia.png"
+  shapes: [
+  {
+    type: "circle",
+    color: "blue",
+    size: ["100px", "200px"],
+    xOffset: ["-70px"],
+    yOffset: ["100px", "180px"],
+    opacity: 1,
+  },
+  {
+    type: "circle",
+    color: "orange",
+    size: ["80px", "100px"],
+    xOffset: ["350px", "350px", "320px", "400px"],
+    yOffset: ["-40px", "-70px"],
     opacity: 1,
   },
   ]
