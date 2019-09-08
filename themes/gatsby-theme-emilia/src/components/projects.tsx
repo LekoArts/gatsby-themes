@@ -99,7 +99,7 @@ const Projects = ({ projects }: Props) => {
               const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
               const shadowArray = px.map(v => `rgba(${shadow}, 0.15) 0px ${v} ${v} 0px`)
 
-              return <Card key={project.slug} item={project} overlay={shadow} shadow={shadowArray} />
+              return <Card key={project.slug} item={project} overlay={shadow} shadow={shadowArray} inGrid />
             })}
           </Container>
         </animated.div>

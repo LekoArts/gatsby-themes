@@ -12,14 +12,26 @@ type Props = {
   }
   overlay?: string | undefined
   shadow?: string[]
+  inGrid?: boolean
 }
 
 const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
 const shadowArray = px.map(v => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
-const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray }: Props) => {
+const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false }: Props) => {
   const h = item.cover.childImageSharp.fluid.presentationHeight
   const count = Math.floor(h / 50)
+
+  let conditionalStyles = {}
+
+  if (inGrid) {
+    conditionalStyles = {
+      height: 0,
+      paddingBottom: `${100 / item.cover.childImageSharp.fluid.aspectRatio}%`,
+      gridRowEnd: `span ${count}`,
+      mb: 4,
+    }
+  }
 
   return (
     <Styled.a
@@ -37,10 +49,7 @@ const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray }: Props) => {
         },
         boxShadow: shadow.join(`, `),
         position: `relative`,
-        height: 0,
-        paddingBottom: `${100 / item.cover.childImageSharp.fluid.aspectRatio}%`,
-        gridRowEnd: `span ${count}`,
-        mb: 4,
+        ...conditionalStyles,
       }}
       to={item.slug}
     >
