@@ -28,8 +28,6 @@
 
 Core Theme for [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma). This theme implements the `Project` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
 
-[**Demo Website**](https://emma.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emma))
-
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
 ## Installation
@@ -51,24 +49,9 @@ npm install @lekoarts/gatsby-theme-emma-core
 
 The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
-#### Example usage
+### Shadowing
 
-```js
-// gatsby-config.js
-module.exports = {
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-emma-core`,
-      options: {
-        // basePath defaults to `/`
-        basePath: `/sideproject`,
-        // projectsPath defaults to `content/projects`
-        projectsPath: `content/cool-projects`
-      }
-    }
-  ]
-};
-```
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! You can also have a look at [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma-core/` to shadow/override files.
 
 ## 🌟 Supporting me
 

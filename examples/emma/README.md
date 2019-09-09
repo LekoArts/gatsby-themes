@@ -66,9 +66,11 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 
 ## 📝 Using and modifying this starter
 
+**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the underlying theme!
+
 This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma).
 
-Please have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI.
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Adding content
 
@@ -118,10 +120,6 @@ cover: "./name.jpg"
 ### Change your `static` folder
 
 The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
-
-### Modifying components & this starter
-
-Please have a look at [`@lekoarts/gatsby-theme-emma`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma)'s README to see how you can change/shadow components. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma/` to shadow/override files.
 
 ## 🤔 Questions or problems?
 
