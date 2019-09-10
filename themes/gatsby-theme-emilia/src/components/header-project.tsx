@@ -20,7 +20,7 @@ const HeaderProject = ({ title, areas, description, date }: Props) => {
   const { name } = useEmiliaConfig()
   const avatar = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "assets" }, name: { eq: "avatar" }) {
+      file(name: { eq: "avatar" }) {
         childImageSharp {
           fixed(width: 40, height: 40, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
@@ -73,7 +73,9 @@ const HeaderProject = ({ title, areas, description, date }: Props) => {
                 mx: 2,
               }}
             >
-              <Img fixed={avatar.file.childImageSharp.fixed} />
+              {avatar && avatar.file && avatar.file.childImageSharp && (
+                <Img fixed={avatar.file.childImageSharp.fixed} />
+              )}
             </div>
             <span sx={{ fontWeight: `medium` }}>{name}</span>
           </Link>

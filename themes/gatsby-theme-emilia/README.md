@@ -64,6 +64,7 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `basePath`        | `/`                                                                                                                                           | Root url for the theme                                                                                                                            |
 | `projectsPath`    | `content/projects`                                                                                                                            | Location of projects                                                                                                                              |
+| `assetsPath`      | `content/assets`                                                                                                                              | Location of assets (such as the avatar in the header)                                                                                             |
 | `mdx`             | `true`                                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
 | `name`            | `LekoArts`                                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
 | `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
@@ -155,6 +156,10 @@ The frontmatter alone is enough, if you'd like to add additional content you can
 #### Changing the "About Me" text
 
 Create a file at `src/@lekoarts/gatsby-theme-emilia/texts/about-me.mdx` to edit the text.
+
+#### Changing the avatar
+
+Place an image with the name `avatar` inside the folder `content/assets` (or your custom `assetsPath` which you defined for the theme).
 
 ## 🌟 Supporting me
 

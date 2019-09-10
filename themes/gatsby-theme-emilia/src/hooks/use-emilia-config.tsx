@@ -9,6 +9,7 @@ type Props = {
       title: string
     }[]
     showThemeAuthor: boolean
+    assetsPath: string
   }
 }
 
@@ -23,6 +24,7 @@ const useEmiliaConfig = () => {
           title
         }
         showThemeAuthor
+        assetsPath
       }
     }
   `)

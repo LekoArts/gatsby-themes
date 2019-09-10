@@ -9,10 +9,10 @@ import Location from "../assets/location"
 import SocialMediaList from "./social-media-list"
 
 const Header = () => {
-  const { name, location } = useEmiliaConfig()
+  const { name, location, assetsPath } = useEmiliaConfig()
   const avatar = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "assets" }, name: { eq: "avatar" }) {
+      file(name: { eq: "avatar" }) {
         childImageSharp {
           fixed(width: 140, height: 140, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
@@ -49,13 +49,31 @@ const Header = () => {
               width: [`100px`, `140px`],
               display: `inline-block`,
               boxShadow: `lg`,
-              "> div": {
+              "> div:not([data-placeholder='true'])": {
                 height: [`100px !important`, `140px !important`],
                 width: [`100px !important`, `140px !important`],
               },
             }}
           >
-            <Img fixed={avatar.file.childImageSharp.fixed} />
+            {avatar && avatar.file && avatar.file.childImageSharp ? (
+              <Img fixed={avatar.file.childImageSharp.fixed} />
+            ) : (
+              <div
+                sx={{
+                  fontSize: 0,
+                  position: `absolute`,
+                  top: 0,
+                  left: 0,
+                  width: `100% !important`,
+                  right: 0,
+                  p: 3,
+                  backgroundColor: `red.2`,
+                }}
+                data-placeholder="true"
+              >
+                Place an image with the name "avatar" inside the directory "{assetsPath}"
+              </div>
+            )}
           </div>
         </animated.div>
         <animated.div style={fadeUpProps}>
