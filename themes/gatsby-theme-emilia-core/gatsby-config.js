@@ -25,6 +25,13 @@ module.exports = themeOptions => {
           path: options.projectsPath,
         },
       },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: options.assetsPath,
+          path: options.assetsPath,
+        },
+      },
       mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {},
