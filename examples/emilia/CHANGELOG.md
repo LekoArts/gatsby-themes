@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.6](https://github.com/LekoArts/gatsby-themes/compare/emilia@0.0.5...emilia@0.0.6) (2019-09-10)
+
+
+### Bug Fixes
+
+* **gatsby-theme-emilia:** Make avatar configurable ([#78](https://github.com/LekoArts/gatsby-themes/issues/78)) ([479a6e9](https://github.com/LekoArts/gatsby-themes/commit/479a6e9)), closes [#77](https://github.com/LekoArts/gatsby-themes/issues/77)
+
+
+
+
+
 ## [0.0.5](https://github.com/LekoArts/gatsby-themes/compare/emilia@0.0.4...emilia@0.0.5) (2019-09-09)
 
 **Note:** Version bump only for package emilia
