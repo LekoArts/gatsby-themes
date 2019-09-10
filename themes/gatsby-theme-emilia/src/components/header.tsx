@@ -12,7 +12,7 @@ const Header = () => {
   const { name, location, assetsPath } = useEmiliaConfig()
   const avatar = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "content/assets" }, name: { eq: "avatar" }) {
+      file(name: { eq: "avatar" }) {
         childImageSharp {
           fixed(width: 140, height: 140, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
