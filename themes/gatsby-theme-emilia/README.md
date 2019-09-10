@@ -71,8 +71,6 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 | `socialMedia`     | `` [{ title: `Twitter`, href: `https://twitter.com/lekoarts_de` }, { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` }] `` | An array of objects (with the keys "title" and "href" display on the homepage. Can of course hold any kind of links (not limited to social media) |
 | `showThemeAuthor` | `true`                                                                                                                                        | Show the "Theme by LekoArts" in the footer                                                                                                        |
 
-**Important:** You have to place an image with the name `avatar` inside your `assetsPath` (default: `content/assets`) in order to run this theme. Otherwise the theme can't find a file to put into the header.
-
 #### Example usage
 
 ```js
@@ -158,6 +156,10 @@ The frontmatter alone is enough, if you'd like to add additional content you can
 #### Changing the "About Me" text
 
 Create a file at `src/@lekoarts/gatsby-theme-emilia/texts/about-me.mdx` to edit the text.
+
+#### Changing the avatar
+
+Place an image with the name `avatar` inside the folder `content/assets` (or your custom `assetsPath` which you defined for the theme).
 
 ## 🌟 Supporting me
 
