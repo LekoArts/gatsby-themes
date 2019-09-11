@@ -44,6 +44,14 @@ module.exports = {
         "allowTaggedTemplates": true
       }
     ],
+    quotes: "off",
+    "@typescript-eslint/quotes": [
+      2,
+      "backtick",
+      {
+        "avoidEscape": true
+      }
+    ],
     "@typescript-eslint/prefer-interface": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-use-before-define": 0,
@@ -83,13 +91,6 @@ module.exports = {
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    quotes: [
-      2,
-      "backtick",
-      {
-        "avoidEscape": true
-      }
-    ],
     indent: ["error", 2, { SwitchCase: 1 }],
     "prettier/prettier": [
       "error",

@@ -67,8 +67,6 @@ const icons = {
   },
 }
 
-// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
-// eslint-disable-next-line
 type IconType = "triangle" | "circle" | "arrowUp" | "upDown" | "box" | "hexa" | "cross"
 
 type SVGProps = {

@@ -7,9 +7,7 @@ import Announcement from "../icons/announcement"
 import Info from "../icons/info"
 import Important from "../icons/important"
 
-// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
-// eslint-disable-next-line
-type AlertTypes = 'success' | 'hint' | 'warning' | 'info' | 'danger'
+type AlertTypes = "success" | "hint" | "warning" | "info" | "danger"
 
 type AlertProps = {
   children: React.ReactNode
