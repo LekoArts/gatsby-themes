@@ -51,6 +51,7 @@ module.exports = {
         typeName: `Themes`,
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
