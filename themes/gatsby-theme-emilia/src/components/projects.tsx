@@ -88,7 +88,7 @@ const Projects = ({ projects }: Props) => {
             sx={{
               mt: `-8rem`,
               display: `grid`,
-              gridTemplateColumns: `repeat(auto-fill, minmax(350px, 1fr))`,
+              gridTemplateColumns: [`1fr`, `repeat(auto-fill, minmax(350px, 1fr))`],
               gridColumnGap: 4,
             }}
           >
