@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { Container, jsx, Styled, Box, Flex, useColorMode } from "theme-ui"
-import { TwitterShareButton } from "react-share"
 import { Circle, Donut } from "./shapes"
 import { down, upWide } from "../styles/animations"
 import Logo from "../icons/logo"
