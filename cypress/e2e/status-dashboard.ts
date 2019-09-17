@@ -8,31 +8,31 @@ describe(`gatsby-theme-status-dashboard`, () => {
   })
   it(`should render the title`, () => {
     cy.get(`h1`).within(() => {
-      cy.getByText(/status dashboard - lekoarts/i)
+      cy.findByText(/status dashboard - lekoarts/i)
     })
   })
   it(`should render the description`, () => {
-    cy.getByText(/showing the statuses of my netlify deploys & circleci tests./i)
+    cy.findByText(/showing the statuses of my netlify deploys & circleci tests./i)
   })
   it(`should render the info`, () => {
-    cy.getByText(/circleci projects/i)
+    cy.findByText(/circleci projects/i)
   })
   it(`should render the repository title`, () => {
-    cy.getByText(/gatsby-themes-by-lekoarts/i)
+    cy.findByText(/gatsby-themes-by-lekoarts/i)
   })
   it(`should render the circleci icon`, () => {
-    cy.getByLabelText(/view gatsby-themes-by-lekoarts on circleci/i)
+    cy.findByLabelText(/view gatsby-themes-by-lekoarts on circleci/i)
   })
   it(`should render the github icon`, () => {
-    cy.getByLabelText(/view gatsby-themes-by-lekoarts source on github/i)
+    cy.findByLabelText(/view gatsby-themes-by-lekoarts source on github/i)
   })
   it(`should render the netlify status badge`, () => {
-    cy.getByAltText(/netlify deploy status of gatsby-themes-by-lekoarts/i)
+    cy.findByAltText(/netlify deploy status of gatsby-themes-by-lekoarts/i)
   })
   it(`should render the circleci status badge`, () => {
-    cy.getByAltText(/circleci status of gatsby-themes-by-lekoarts/i)
+    cy.findByAltText(/circleci status of gatsby-themes-by-lekoarts/i)
   })
   it(`should render the footer`, () => {
-    cy.getByText(/theme by lekoarts/i)
+    cy.findByText(/theme by lekoarts/i)
   })
 })

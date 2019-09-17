@@ -2442,10 +2442,10 @@
   resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.23.tgz#35ad4f34fe0fec9b011a5468ac0821f12f5e4b1a"
   integrity sha512-yC3S0Iox8OTPAyrP1t5yY9nURUICcUdhVYOkwffftuxa5+txxI4qkT2e9JNCc2aaem+DG8mlXTdnYefjqge5wg==
 
-"@testing-library/cypress@^4.2.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-4.2.0.tgz#788ed4ccb3ad2f70fbe4758f07995cd1cdd58ba7"
-  integrity sha512-IFM/iuVBUi0ciw5rx6zzX//DtFUrPumZJIDjMRe1MzsoakdvLfMdPtt2DuvEt3iJHmH0LQM1vZCIoQDUe99yhQ==
+"@testing-library/cypress@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-5.0.0.tgz#307d384c41b652974ba07d91e6f5a6c2b76c026b"
+  integrity sha512-+koZObqHbgrqsZr6knbKLfGsuT2YoNIX0H60iMlMHQOvuIvZriyHKIDQMAxnCPn3nPKjIepZnUVAAz+WMHIwLQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@testing-library/dom" "^6.0.0"
@@ -2814,10 +2814,18 @@
   dependencies:
     csstype "^2.6.6"
 
-"@types/testing-library__cypress@^4.1.0", "@types/testing-library__cypress@^4.2.0":
+"@types/testing-library__cypress@^4.1.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@types/testing-library__cypress/-/testing-library__cypress-4.2.0.tgz#c319e12f5dacfed4761bb47432a029a50abf60ba"
   integrity sha512-e3Z7zLHGH+n5B0kfYEW5GoO55J2nCNSFnacg0wnXkMOpBKvZVXB5GtRVCWQF2+I2vnCahu8dB96AmLh7dnw5TA==
+  dependencies:
+    "@types/jquery" "*"
+    "@types/testing-library__dom" "*"
+
+"@types/testing-library__cypress@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/testing-library__cypress/-/testing-library__cypress-5.0.0.tgz#23586b6183a504c59fbd716ba2bd2d5a909528e6"
+  integrity sha512-0tpxkL+9nJTtSCbdGYA6/rB3/2dRvH7QrFsR1sjuLlK5iU9BVSbjaiy1h0nhnh314U9rtvp8h2Vxz2Vh717+6w==
   dependencies:
     "@types/jquery" "*"
     "@types/testing-library__dom" "*"

@@ -7,43 +7,43 @@ describe(`gatsby-theme-emma`, () => {
     cy.visit(`/`).waitForRouteChange()
   })
   it(`should render the site title`, () => {
-    cy.getByLabelText(/emma, back to homepage/i)
+    cy.findByLabelText(/emma, back to homepage/i)
   })
   it(`should render additional page in navigation`, () => {
-    cy.getByText(/about/i)
+    cy.findByText(/about/i)
   })
   it(`should render the light/dark mode toggle`, () => {
-    cy.getByLabelText(/toggle dark mode/i)
+    cy.findByLabelText(/toggle dark mode/i)
   })
   it(`should render social media icons in header`, () => {
-    cy.getByLabelText(/instagram/i).getByLabelText(/dribbble/i)
+    cy.findByLabelText(/instagram/i).findByLabelText(/dribbble/i)
   })
   it(`should render the footer`, () => {
-    cy.getByLabelText(`Link to the theme's GitHub repository`)
+    cy.findByLabelText(`Link to the theme's GitHub repository`)
       .contains(`Theme`)
-      .getByLabelText(`Link to the theme author's website`)
+      .findByLabelText(`Link to the theme author's website`)
       .contains(`LekoArts`)
   })
   it(`should have item with all information`, () => {
-    cy.getByLabelText(/view detail page of hermione granger/i).within(() => {
-      cy.getByText(/hogwarts/i).getByText(/witchcraft/i)
+    cy.findByLabelText(/view detail page of hermione granger/i).within(() => {
+      cy.findByText(/hogwarts/i).findByText(/witchcraft/i)
     })
   })
   it(`should link and display the project page`, () => {
-    cy.getByLabelText(/view detail page of hermione granger/i)
+    cy.findByLabelText(/view detail page of hermione granger/i)
       .click()
       .waitForRouteChange()
       .assertRoute(`/hermione-granger`)
       .get(`h1`)
       .within(() => {
-        cy.getByText(/hermione granger/i)
+        cy.findByText(/hermione granger/i)
       })
-      .getByText(/hogwarts/i)
-      .getByText(/10.06.2019/i)
-      .getByText(/witchcraft/i)
+      .findByText(/hogwarts/i)
+      .findByText(/10.06.2019/i)
+      .findByText(/witchcraft/i)
   })
   it(`should link and display the about page`, () => {
-    cy.getByText(/about/i)
+    cy.findByText(/about/i)
       .click()
       .waitForRouteChange()
       .assertRoute(`/about`)
