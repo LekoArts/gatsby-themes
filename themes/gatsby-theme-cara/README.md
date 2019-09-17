@@ -108,6 +108,10 @@ module.exports = {
 };
 ```
 
+### Shadowing
+
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-cara/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+
 ### Editing the content
 
 The content of the page is managed by `.mdx` files inside the theme's `sections` folder. You can edit the files by shadowing them in your site.

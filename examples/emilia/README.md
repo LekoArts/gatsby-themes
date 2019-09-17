@@ -39,6 +39,8 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## 🚀 Getting Started
 
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-portfolio-emilia) [![Edit gatsby-starter-portfolio-emilia](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/LekoArts/gatsby-starter-portfolio-emilia/tree/master/)
+
 1. **Create a Gatsby site.**
 
 Use the Gatsby CLI to create a new site, specifying this project
@@ -94,6 +96,14 @@ areas:
 ```
 
 The frontmatter alone is enough, if you'd like to add additional content you can do so by writing your content (as usual with MDX) below the frontmatter. It'll be displayed in the header of the project below the date and areas.
+
+### Changing the "About Me" text
+
+Create a file at `src/@lekoarts/gatsby-theme-emilia/texts/about-me.mdx` to edit the text.
+
+### Changing the avatar
+
+Place an image with the name `avatar` inside the folder `content/assets` (or your custom `assetsPath` which you defined for the theme).
 
 ### Change your `static` folder
 

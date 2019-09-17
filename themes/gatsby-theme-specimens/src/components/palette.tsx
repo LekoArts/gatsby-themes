@@ -6,9 +6,7 @@ import ColorRow from "./color-row"
 
 const join = (...args: any) => args.filter(Boolean).join(`.`)
 
-// TODO: https://github.com/typescript-eslint/typescript-eslint/pull/762 Change quotes setup so that type can also use double quotes
-// eslint-disable-next-line
-type ModeTypes = 'list' | 'swatch'
+type ModeTypes = "list" | "swatch"
 
 type PaletteProps = {
   colors: {

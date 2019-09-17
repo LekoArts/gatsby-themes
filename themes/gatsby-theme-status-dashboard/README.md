@@ -127,3 +127,7 @@ export default Index;
 The Netlify API doesn't update the paths to GitHub when you e.g. change your username (it'll keep the one from the time you created the Netlify project). As the theme will use the GitHub URLs from Netlify projects to check against CircleCI (to see if it can find CircleCI projects with the same GitHub URL), they need to be the same.
 
 Hence this theme allows to shadow a `formatters` file. It'll be used to replace words in the URL, e.g. replace `LeKoArts` with `LekoArts`. You can find the file in `src/utils`.
+
+### Shadowing
+
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-status-dashboard/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.

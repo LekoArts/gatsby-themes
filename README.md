@@ -27,8 +27,11 @@ Get **high-quality** and **customizable** Gatsby themes to quickly bootstrap you
 This repository is a collection of my Gatsby themes, managed as a [monorepo](https://trunkbaseddevelopment.com/monorepos/) with [Lerna](https://github.com/lerna/lerna) and [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
 
 - `.circleci`: Contains the configuration file for CircleCI
+- `.github`: GitHub actions, templates for issues, and FUNDING file
 - `cypress`: Contains the Cypress tests for `examples`
 - `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`
+- `jest`: Primarily files for mocking functions/files in Jest tests
+- `plop-templates`: Template for [plop.js](https://plopjs.com/)
 - `scripts`: In order to run the tests on CircleCI some utility bash scripts are needed which are located here
 - `themes`: Contains the themes themselves. They should only have the bare minimum of plugins installed (as `examples` can expand them) and also use `Theme UI` for styling. The naming of the folders must be `gatsby-theme-[name-with-dashes]` and the package name under the scope of `@lekoarts`
 - `www`: Contains the source code for [themes.lekoarts.de](http://themes.lekoarts.de)
@@ -47,29 +50,7 @@ In the case of `examples/emma` this command would be `yarn workspace emma develo
 
 Commit your changes to a feature branch of your fork and open up a PR against this repository. The PR will have checks in place (unit and end-to-end tests) which you can also run on your machine in preparation for the PR.
 
-### Testing
-
-#### Jest
-
-Some parts of the codebase have unit tests written with Jest to ensure the correct functionality, e.g. custom hooks or utility functions.
-
-You can run `yarn test` to run all tests, `yarn test:watch` to run Jest in watch mode. Feel free to improve the code base with additional tests!
-
-#### Cypress
-
-The Cypress tests are written in TypeScript, too, and hence need to be compiled before usage. Run the following script for development:
-
-```sh
-bash ./scripts/e2e-dev.sh "example-name"
-```
-
-In the case of `examples/emma` the "example-name" would be "emma".
-
-The script starts `tsc` in _watch_ mode (for the files in `cypress/e2e`) and outputs them to `cypress/e2e/build` + starts `start-server-and-test` with Gatsby's development server and Cypress. Once the Cypress GUI opens select the fitting test (the others won't work, only the respective test + `smoke.js`!).
-
-CircleCI will run the `e2e-build.sh` script — you can use it to run the tests headless.
-
-You can skip the e2e tests if you use `docs` or `www` in your branch name, e.g. `docs/improve-readme` or `www/add-new-entry`.
+Have a look at the [contributing guide](CONTRIBUTING.md) to learn more.
 
 ## 🤩 Newsletter
 

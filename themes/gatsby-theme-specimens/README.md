@@ -94,6 +94,10 @@ module.exports = {
 
 The heart of this theme are the reusable React components that you can use to fill your design system with content. Every component has mandatory (and sometimes optional) fields. Some components such as the ones for color require the input in a specific format, please keep that in mind. Visit the [**Demo Website**](https://specimens.lekoarts.de) to see how to use the components.
 
+### Shadowing
+
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme!
+
 ### Modifications
 
 As with every Gatsby theme you can of course shadow the files (e.g. `src/@lekoarts/gatsby-theme-specimens/alert.js`) but if you only want to change some styles, not the whole structure of the component you can get away with another approach. Since all components are styled with Theme UI, you are able to override the theme's Theme UI config file.

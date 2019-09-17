@@ -28,8 +28,6 @@
 
 Core Theme for [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia). This theme implements the `Project` node interface and exports templates (+ queries) which you can shadow.
 
-[**Demo Website**](https://emilia.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emilia))
-
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
 ## Installation
@@ -46,6 +44,7 @@ npm install @lekoarts/gatsby-theme-emilia-core
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `basePath`        | `/`                                                                                                                                           | Root url for the theme                                                                                                                            |
 | `projectsPath`    | `content/projects`                                                                                                                            | Location of projects                                                                                                                              |
+| `assetsPath`      | `content/assets`                                                                                                                              | Location of assets (such as the avatar in the header)                                                                                             |
 | `mdx`             | `true`                                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
 | `name`            | `LekoArts`                                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
 | `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
@@ -54,7 +53,7 @@ npm install @lekoarts/gatsby-theme-emilia-core
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! You can also have a look at [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia) to see it in action.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! You can also have a look at [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia-core/` to shadow/override files.
 
 ## 🌟 Supporting me
 

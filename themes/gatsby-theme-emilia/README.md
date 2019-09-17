@@ -64,6 +64,7 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `basePath`        | `/`                                                                                                                                           | Root url for the theme                                                                                                                            |
 | `projectsPath`    | `content/projects`                                                                                                                            | Location of projects                                                                                                                              |
+| `assetsPath`      | `content/assets`                                                                                                                              | Location of assets (such as the avatar in the header)                                                                                             |
 | `mdx`             | `true`                                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
 | `name`            | `LekoArts`                                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
 | `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
@@ -123,7 +124,7 @@ module.exports = {
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme!
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Adding content
 
@@ -151,6 +152,14 @@ areas:
 ```
 
 The frontmatter alone is enough, if you'd like to add additional content you can do so by writing your content (as usual with MDX) below the frontmatter. It'll be displayed in the header of the project below the date and areas.
+
+#### Changing the "About Me" text
+
+Create a file at `src/@lekoarts/gatsby-theme-emilia/texts/about-me.mdx` to edit the text.
+
+#### Changing the avatar
+
+Place an image with the name `avatar` inside the folder `content/assets` (or your custom `assetsPath` which you defined for the theme).
 
 ## 🌟 Supporting me
 

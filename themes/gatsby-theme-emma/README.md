@@ -115,6 +115,10 @@ module.exports = {
 };
 ```
 
+### Shadowing
+
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+
 ### Adding content
 
 #### Adding a new project

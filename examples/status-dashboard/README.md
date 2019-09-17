@@ -52,17 +52,15 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 
 ## 📝 Using and modifying this starter
 
+**Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the underlying theme!
+
 This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard).
 
-Please have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI.
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-status-dashboard/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Change your `static` / `assets` folder
 
 The `static` folder contains the Facebook/Twitter preview, the `assets` the favicon.
-
-### Modifying components
-
-Please have a look at [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard)'s README to see how you can change/shadow components. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-status-dashboard/` to shadow/override files.
 
 ## 🤔 Questions or problems?
 

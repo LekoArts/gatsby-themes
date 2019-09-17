@@ -1,0 +1,58 @@
+---
+title: "Small improvements can make a huge difference!"
+date: 2019-08-31
+info: "Website updates, GitHub actions, Emma Theme, Specimens Theme, New Articles"
+---
+
+# Small improvements can make a huge difference!
+
+Hi!
+
+In this month's edition I want to go into all the little changes I made to both my themes but also to the themes overview website and how they still made a huge impact nevertheless. You can certainly compare this to GitHub's [Project Paper Cuts](http://p.amxe.net/yh7n10br-vzj51eu9-hbw2yz53-grp) and I want to inspire you to try to do the same on one ore more projects of yours 😊
+
+Also a warm welcome to all new readers who signed up after my initial newsletter!
+
+## themes.lekoarts.de goes Stranger Things
+
+As my website uses [Theme UI](http://p.amxe.net/yh7n10br-vzj51eu9-jpq2j31v-dd1) it's quite easy to implement other themes/modes + toggle for that. Since it seems everybody can't live without a darkmode anymore (😜), I implemented that into the website, head over to [themes.lekoarts.de](/) and click the toggle button in the header (besides the GitHub button). At that time I also was watching the new season of Stranger Things, so it also got a theme for that, too!
+
+Darkmode is obviously not only good because it's cool right now, but also because some people might prefer it due to eye strain issues (so accessibility concerns). Small thing for me to implement, can be a huge help accessibility-wise.
+
+Furthermore I also added a newsletter archive (+RSS feed) to the website. Just scroll down the website and you'll see the entries, e.g. [A successful launch to “Gatsby Themes by LekoArts”](/2019-08-02-a-successful-launch-to-gatsby-themes-by-lekoarts/). Small bonus here: If you're interested in implementing RSS feeds with MDX, you can look at the source [here](http://p.amxe.net/yh7n10br-vzj51eu9-uua2rlrm-xsg) and [here](http://p.amxe.net/yh7n10br-vzj51eu9-y6cmq1l3-5sa).
+
+## GitHub actions
+
+Since my existing starters were and will be ported to themes (and the starter itself is using the theme) it's only logical to use the examples in the [themes monorepo](http://p.amxe.net/yh7n10br-vzj51eu9-6qtcmzba-gy) as starters. However, it's really tedious to copy/paste content, commit that and push it to the repository. Luckily John Otander built a GitHub action ([tutorial here](http://p.amxe.net/yh7n10br-vzj51eu9-a0im8ys2-o6h)) to publish changes from the monorepo to the respective repositories. It works like a charm, was set up in no time and is a huge time-saver for me!
+
+What have you used GitHub actions for? Let me know on [Twitter](http://p.amxe.net/yh7n10br-vzj51eu9-azzcvqlj-4pa)!
+
+## Splitting the "Emma" theme into two themes
+
+Inspired by Chris Biscardi's work on [gatsby-theme-blog-core](http://p.amxe.net/yh7n10br-vzj51eu9-fop4yusn-17i0) I also split gatsby-theme-emma into gatsby-theme-emma and gatsby-theme-emma-core. Sounds fancy, but what does it actually mean?
+
+gatsby-theme-emma-core is now a parent theme to gatsby-theme-emma (so the latter uses the former). The core theme implements two core types (Project and Page) which are meant to be re-used. The core theme implements this approach with MDX, however you (as a consumer of the theme) are now able to implement this with any data source you want. If you want to dig deeper into the how have a look at Chris' excellent [articles](http://p.amxe.net/yh7n10br-vzj51eu9-jhtypcc3-quo).
+
+To the why:
+As the core theme contains all data structures, sources and processing, plus the page creation you are free to only use the core theme and create your own design. If you don't like the overall design of the Emma theme, this change now enables you to only care about the styling.
+
+That's why gatsby-theme-emma shadows two components from the core theme and then implements Theme UI, styling etc.
+
+The [Pull Request](http://p.amxe.net/yh7n10br-vzj51eu9-mgd8va1y-urn) also gives you some more information. I think I'll write a more detailed blogpost about this, e.g. showing how to now use a CMS (instead of MDX) with this theme.
+
+## New theme "Specimens", new articles
+
+The newly created Gatsby theme [@lekoarts/gatsby-theme-specimens](http://p.amxe.net/yh7n10br-vzj51eu9-os7ewtti-16qw) offers you React components you can use in your Gatsby and/or MDX files to display design tokens like typography, colors, space, audio and video. Have a look at the [interactive preview](http://p.amxe.net/yh7n10br-vzj51eu9-uy855bw2-fth) where you can change the props inside the code blocks. The theme is essentially a MDX port of my existing remark plugin [gatsby-remark-design-system](http://p.amxe.net/yh7n10br-vzj51eu9-w7bjqozr-q6o). Last but not least I wrote a short blogpost about it: [Specimens for Gatsby powered Design Systems](http://p.amxe.net/yh7n10br-vzj51eu9-6ury7sxy-2z7).
+
+If you're interested in the setup of my [gatsby-themes monorepo](http://p.amxe.net/yh7n10br-vzj51eu9-81gy7swi-n7w) I'd highly recommend reading my article ["Setting up a Gatsby Themes workspace with TypeScript, ESLint & Cypress"](http://p.amxe.net/yh7n10br-vzj51eu9-cr4am2nb-itx) as I go into detail how I set up my repository. Working with it for a month now, I can definitely say that it works out great! Especially the Cypress tests give me confidence when opening up PRs.
+
+## #Community
+
+Here are some noteworthy news/links from the community:
+
+- Congratulations to the winners of the [Theme Jam: Vojtěch Holík and Allan Pooley](http://p.amxe.net/yh7n10br-vzj51eu9-hfu5736v-ocd)! They both created beautiful Gatsby themes
+- [How to Turn an Existing Gatsby Site Into a Theme](http://p.amxe.net/yh7n10br-vzj51eu9-hylma1mb-lx2) by Laurie Barth
+- Cool themes: [gatsby-theme-firebase](http://p.amxe.net/yh7n10br-vzj51eu9-ofdtq5nq-15qj) & [Gatsby Shopify Theme](http://p.amxe.net/yh7n10br-vzj51eu9-os7diyjq-11up)
+- GitHub also uses Gatsby themes now: [Doctocat](http://p.amxe.net/yh7n10br-vzj51eu9-v267dfxu-12jm) 🎉
+
+Thanks for reading this month's issue and see you in a month 👏
+Lennart
