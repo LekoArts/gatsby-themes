@@ -14,7 +14,7 @@ const Layout = ({ children, className }: LayoutProps) => {
   const nav = useNavigation()
 
   return (
-    <Styled.root>
+    <Styled.root data-testid="theme-root">
       <Global
         styles={css({
           "*": {
