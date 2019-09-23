@@ -2442,14 +2442,14 @@
   resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.23.tgz#35ad4f34fe0fec9b011a5468ac0821f12f5e4b1a"
   integrity sha512-yC3S0Iox8OTPAyrP1t5yY9nURUICcUdhVYOkwffftuxa5+txxI4qkT2e9JNCc2aaem+DG8mlXTdnYefjqge5wg==
 
-"@testing-library/cypress@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-5.0.0.tgz#307d384c41b652974ba07d91e6f5a6c2b76c026b"
-  integrity sha512-+koZObqHbgrqsZr6knbKLfGsuT2YoNIX0H60iMlMHQOvuIvZriyHKIDQMAxnCPn3nPKjIepZnUVAAz+WMHIwLQ==
+"@testing-library/cypress@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-5.0.1.tgz#ca65d6c610e4173621380dc40c94cf849dd4c9c4"
+  integrity sha512-OuQRO4F1hrR/hQYUacFNFOIF//Xs4j3ufwZZ5vGokGSY7jMFlh08iwJoyLwIvutvWrnFqCZLZ02j8VKWtWkIvw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     "@testing-library/dom" "^6.0.0"
-    "@types/testing-library__cypress" "^4.1.0"
+    "@types/testing-library__cypress" "^5.0.0"
 
 "@testing-library/dom@^6.0.0":
   version "6.1.0"
@@ -2813,14 +2813,6 @@
   integrity sha512-SHHoNh9cCRTG9hcmCD2ua0NeYUrLmLXoMJ7g0U/e0FjrzcwNQtM5wjjEJVCVZymU632xA1PdPEykrtoSHTIecA==
   dependencies:
     csstype "^2.6.6"
-
-"@types/testing-library__cypress@^4.1.0":
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/@types/testing-library__cypress/-/testing-library__cypress-4.2.0.tgz#c319e12f5dacfed4761bb47432a029a50abf60ba"
-  integrity sha512-e3Z7zLHGH+n5B0kfYEW5GoO55J2nCNSFnacg0wnXkMOpBKvZVXB5GtRVCWQF2+I2vnCahu8dB96AmLh7dnw5TA==
-  dependencies:
-    "@types/jquery" "*"
-    "@types/testing-library__dom" "*"
 
 "@types/testing-library__cypress@^5.0.0":
   version "5.0.0"
