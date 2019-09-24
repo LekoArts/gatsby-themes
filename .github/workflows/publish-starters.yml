@@ -9,8 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v1
-          with:
-            node-version: '10.x'
+        with:
+          node-version: '10.x'
       - name: publish:starters
         uses: johno/actions-push-subdirectories@master
         env:
