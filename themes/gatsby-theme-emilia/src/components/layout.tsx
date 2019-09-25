@@ -7,7 +7,7 @@ import SEO from "./seo"
 type LayoutProps = { children: React.ReactNode }
 
 const Layout = ({ children }: LayoutProps) => (
-  <Styled.root>
+  <Styled.root data-testid="theme-root">
     <Global
       styles={css({
         "*": {
