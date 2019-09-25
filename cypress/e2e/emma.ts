@@ -11,6 +11,9 @@ describe(`gatsby-theme-emma`, () => {
   })
   it(`should render additional page in navigation`, () => {
     cy.findByText(/about/i)
+      .click()
+      .waitForRouteChange()
+      .assertRoute(`/about`)
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/toggle dark mode/i)
