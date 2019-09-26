@@ -25,6 +25,17 @@ describe(`gatsby-theme-emilia`, () => {
   it(`should render about me`, () => {
     cy.findByText(/about me/i).findByText(/Boggarts lavender robes/i)
   })
+  it(`should have functioning theme toggle`, () => {
+    cy.findByTestId(`theme-root`)
+      .should(`have.css`, `color`, `rgb(45, 55, 72)`)
+      .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)
+      .findByLabelText(/activate dark mode/i)
+      .click()
+      .findByTestId(`theme-root`)
+      .should(`have.css`, `color`, `rgb(203, 213, 224)`)
+      .should(`have.css`, `background`, `rgb(26, 32, 44) none repeat scroll 0% 0% / auto padding-box border-box`)
+      .findByLabelText(/activate light mode/i)
+  })
   it(`should render the theme footer`, () => {
     cy.findByLabelText(`Link to the theme's GitHub repository`)
       .contains(`Theme`)

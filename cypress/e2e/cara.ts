@@ -26,6 +26,16 @@ describe(`gatsby-theme-cara`, () => {
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/toggle dark mode/i)
   })
+  it(`should have functioning dark mode toggle`, () => {
+    cy.findByTestId(`theme-root`)
+      .should(`have.css`, `color`, `rgb(226, 232, 240)`)
+      .should(`have.css`, `background`, `rgb(20, 24, 33) none repeat scroll 0% 0% / auto padding-box border-box`)
+      .findByLabelText(/toggle dark mode/i)
+      .click()
+      .findByTestId(`theme-root`)
+      .should(`have.css`, `color`, `rgb(45, 55, 72)`)
+      .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)
+  })
   it(`should render the footer`, () => {
     cy.findByLabelText(`Link to the theme's GitHub repository`)
       .contains(`Theme`)
