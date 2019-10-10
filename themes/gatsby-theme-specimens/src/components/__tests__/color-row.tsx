@@ -16,7 +16,7 @@ describe(`Color Row`, () => {
   it(`should display with standard values`, () => {
     const { getByLabelText, getByText } = render(<ColorRow color="#5a67d8" name="Harry Potter" />)
 
-    expect(getByLabelText(`Color preview: Harry Potter`)).toHaveStyle(`backgroundColor: #5a67d8`)
+    expect(getByLabelText(`Color preview: Harry Potter`)).toHaveStyle(`background-color: rgb(90, 103, 216);`)
     expect(getByText(/harry potter/i))
     expect(getByText(/#5a67d8/i))
     expect(getByText(/RGB/i))

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"

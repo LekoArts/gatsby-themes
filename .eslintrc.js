@@ -83,6 +83,7 @@ module.exports = {
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/jsx-fragments": 0,
+    "react/jsx-curly-brace-presence": 0,
     "react/jsx-filename-extension": [
       1,
       {
