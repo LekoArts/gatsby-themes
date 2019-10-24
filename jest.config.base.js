@@ -7,6 +7,11 @@ module.exports = {
   setupFilesAfterEnv: [`../../jest/loadershim.js`],
   globals: {
     __PATH_PREFIX__: ``,
+    "ts-jest": {
+      diagnostics: {
+        ignoreCodes: [2322],
+      },
+    },
   },
   reporters: [`jest-junit`],
 }

@@ -41,20 +41,12 @@ describe(`Normalize ThemeUI`, () => {
     expect(normalizeThemeUIColors({ colors: exampleTheme, omit: [] })).toMatchInlineSnapshot(`
       Array [
         Object {
-          "color": "transparent",
-          "name": "transparent",
-        },
-        Object {
           "color": "#000",
           "name": "black",
         },
         Object {
-          "color": Object {
-            "dark": Object {
-              "black": "#fff",
-            },
-          },
-          "name": "modes",
+          "color": "transparent",
+          "name": "transparent",
         },
         Object {
           "color": Array [
@@ -70,6 +62,14 @@ describe(`Normalize ThemeUI`, () => {
             "#3c366b",
           ],
           "name": "indigo",
+        },
+        Object {
+          "color": Object {
+            "dark": Object {
+              "black": "#fff",
+            },
+          },
+          "name": "modes",
         },
       ]
     `)
