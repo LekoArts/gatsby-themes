@@ -28,7 +28,9 @@
 
 Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.
 
-[**Demo Website**](https://emilia.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emilia))
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://emilia.lekoarts.de) [![View Design on Figma](https://img.lekoarts.de/gatsby/view_design.svg)](https://www.figma.com/file/DITKhFGWrMOADOPLSA9uzn/gatsby-theme-emilia?node-id=0%3A1)
+
+Read the [Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emilia).
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 

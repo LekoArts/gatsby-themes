@@ -28,7 +28,9 @@
 
 Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images. Especially designers and/or photographers will love this theme! Built with [MDX](https://mdxjs.com/) and [Theme UI](https://theme-ui.com/).
 
-[**Demo Website**](https://emma.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emma))
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://emma.lekoarts.de)
+
+Read the [Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emma).
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 

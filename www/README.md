@@ -20,7 +20,7 @@
     </a>
 </p>
 
-Showcase of the available themes I made 😊 New entries go into `data/themes.yaml` alongside a screenshot of the site at 1440x900px.
+[![View Design on Figma](https://img.lekoarts.de/gatsby/view_design.svg)](https://www.figma.com/file/Dmmvz9AkTAT5HPVvWbgGlJsK/themes.lekoarts.de?node-id=5%3A63)
 
 ## 🎉 Awesome Tech Stack
 

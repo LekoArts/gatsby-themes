@@ -28,7 +28,9 @@
 
 Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
 
-[**Demo Website**](https://specimens.lekoarts.de) ([Source Code](https://github.com/LekoArts/gatsby-starter-specimens))
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://specimens.lekoarts.de)
+
+Read the [Source Code](https://github.com/LekoArts/gatsby-starter-specimens).
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
