@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.8...@lekoarts/gatsby-theme-cara@1.0.9) (2019-10-31)
+
+
+### Bug Fixes
+
+* **deps:** update emotion monorepo to ^10.0.22 ([#125](https://github.com/LekoArts/gatsby-themes/issues/125)) ([7e5eb60](https://github.com/LekoArts/gatsby-themes/commit/7e5eb60))
+* **deps:** update gatsby ([#126](https://github.com/LekoArts/gatsby-themes/issues/126)) ([0e8ca8b](https://github.com/LekoArts/gatsby-themes/commit/0e8ca8b))
+
+
+
+
+
 ## [1.0.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.7...@lekoarts/gatsby-theme-cara@1.0.8) (2019-10-17)
 
 
