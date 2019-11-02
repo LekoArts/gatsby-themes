@@ -2,7 +2,7 @@ const withDefaults = require(`./utils/default-options`)
 
 module.exports = themeOptions => {
   const options = withDefaults(themeOptions)
-  const { mdx = true, yaml = true } = themeOptions
+  const { mdx = true } = themeOptions
 
   return {
     siteMetadata: {
@@ -15,7 +15,7 @@ module.exports = themeOptions => {
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
       basePath: options.basePath,
-      projectsPath: options.docsPath,
+      docsPath: options.docsPath,
     },
     plugins: [
       {
@@ -29,17 +29,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-plugin-mdx`,
         options: {},
       },
-      yaml && {
-        resolve: `gatsby-transformer-yaml`,
-        options: {
-          typeName: ({ node }) => {
-            if (node.name === `navigation`) {
-              return `Navigation`
-            }
-            return `Yaml`
-          },
-        },
-      },
+      `gatsby-plugin-theme-ui`,
       `gatsby-plugin-typescript`,
     ].filter(Boolean),
   }

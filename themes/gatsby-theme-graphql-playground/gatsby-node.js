@@ -1,6 +1,7 @@
 const fs = require(`fs`)
 const mkdirp = require(`mkdirp`)
 const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 const withDefaults = require(`./utils/default-options`)
 
 // Ensure that content directories exist at site-level
@@ -107,8 +108,14 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
   // Check for "docs" and create the "MdxPlayground" type
   if (node.internal.type === `Mdx` && source === docsPath) {
+    const relativeFilePath = createFilePath({
+      node,
+      getNode,
+      basePath: `docs/items/`,
+    })
+
     const fieldData = {
-      slug: node.frontmatter.slug,
+      slug: relativeFilePath,
     }
 
     const mdxID = createNodeId(`${node.id} >>> MdxPlayground`)
@@ -173,15 +180,4 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       })
     })
   }
-}
-
-exports.onCreateBabelConfig = ({ actions }) => {
-  actions.setBabelPlugin({
-    name: `babel-plugin-import`,
-    options: {
-      libraryName: `antd`,
-      libraryDirectory: `es`,
-      style: `css`,
-    },
-  })
 }
