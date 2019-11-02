@@ -21,6 +21,7 @@ const useSiteMetadata = () => {
           siteLanguage
           siteImage
           author
+          graphiQLUrl
         }
       }
     }

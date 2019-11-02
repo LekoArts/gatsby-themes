@@ -14,6 +14,7 @@ module.exports = themeOptions => {
       siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
+      graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
       basePath: options.basePath,
       docsPath: options.docsPath,
     },

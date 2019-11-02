@@ -1,4 +1,5 @@
 import { tailwind } from "@theme-ui/presets"
+import nightOwl from "@theme-ui/prism/presets/night-owl"
 
 export default {
   ...tailwind,
@@ -23,6 +24,10 @@ export default {
       ...tailwind.styles.root,
       color: `text`,
       backgroundColor: `background`,
+    },
+    pre: {
+      ...nightOwl,
+      padding: 3,
     },
     Footer: {
       textAlign: `center`,

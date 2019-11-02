@@ -1,0 +1,14 @@
+```graphql preview
+{
+  allMarkdownRemark(filter: { frontmatter: { date: { ne: null } } }) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "dddd DD MMMM YYYY")
+        }
+      }
+    }
+  }
+}
+```

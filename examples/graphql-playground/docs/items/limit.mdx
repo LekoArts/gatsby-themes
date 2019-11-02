@@ -1,0 +1,14 @@
+```graphql preview
+{
+  allMarkdownRemark(limit: 3) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+```

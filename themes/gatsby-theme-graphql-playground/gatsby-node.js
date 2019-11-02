@@ -1,7 +1,6 @@
 const fs = require(`fs`)
 const mkdirp = require(`mkdirp`)
 const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
 const withDefaults = require(`./utils/default-options`)
 
 // Ensure that content directories exist at site-level
@@ -93,7 +92,7 @@ exports.createResolvers = ({ createResolvers }) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
-  const { docsPath } = withDefaults(themeOptions)
+  const { docsPath, basePath } = withDefaults(themeOptions)
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -107,15 +106,9 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   const source = fileNode.sourceInstanceName
 
   // Check for "docs" and create the "MdxPlayground" type
-  if (node.internal.type === `Mdx` && source === docsPath) {
-    const relativeFilePath = createFilePath({
-      node,
-      getNode,
-      basePath: `docs/items/`,
-    })
-
+  if (node.internal.type === `Mdx` && source === docsPath && fileNode.name !== `navigation`) {
     const fieldData = {
-      slug: relativeFilePath,
+      slug: `/${basePath}/${fileNode.name}`.replace(/\/\/+/g, `/`),
     }
 
     const mdxID = createNodeId(`${node.id} >>> MdxPlayground`)

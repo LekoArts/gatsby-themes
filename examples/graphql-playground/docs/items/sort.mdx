@@ -1,0 +1,15 @@
+```graphql preview
+{
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+          date
+        }
+      }
+    }
+  }
+}
+```
