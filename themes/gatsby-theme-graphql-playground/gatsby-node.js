@@ -59,6 +59,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
       query: String!
+      title: String!
     }
     
     type MdxPlayground implements Node & Playground {
@@ -66,6 +67,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
       query: String!
+      title: String!
     }
   `)
 }
@@ -109,6 +111,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   if (node.internal.type === `Mdx` && source === docsPath && fileNode.name !== `navigation`) {
     const fieldData = {
       slug: `/${basePath}/${fileNode.name}`.replace(/\/\/+/g, `/`),
+      title: node.frontmatter.title,
     }
 
     const mdxID = createNodeId(`${node.id} >>> MdxPlayground`)

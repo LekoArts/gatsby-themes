@@ -1,58 +1,39 @@
 /** @jsx jsx */
-import { css, jsx, Styled } from "theme-ui"
-import { Sidenav } from "@theme-ui/sidenav"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Global } from "@emotion/core"
-import useNavigation from "../hooks/use-navigation"
+import React from "react"
+import { jsx, Styled } from "theme-ui"
+import { Global, css } from "@emotion/core"
+import SEO from "./seo"
+import Sidebar from "./sidebar"
 
-const Layout = ({ children }) => {
-  const nav = useNavigation()
-
-  return (
-    <Styled.root>
-      <Global
-        styles={css({
-          "*": {
-            boxSizing: `inherit`,
-          },
-          body: {
-            margin: 0,
-            padding: 0,
-            boxSizing: `border-box`,
-            textRendering: `optimizeLegibility`,
-          },
-          "::selection": {
-            backgroundColor: `primary`,
-            color: `background`,
-          },
-          a: {
-            transition: `all 0.3s ease-in-out`,
-          },
-        })}
-      />
-      <div sx={{ display: `grid`, gridTemplateColumns: `300px 1fr`, gridColumnGap: 3, minHeight: `100vh` }}>
-        <Sidenav
-          sx={{
-            a: {
-              fontWeight: `normal !important`,
-              "&:hover": {
-                textDecoration: `none !important`,
-              },
-            },
-            "ul > li": { paddingLeft: 2, fontWeight: `bold`, a: { px: 0 } },
-            "ul > li > ul > li": { paddingLeft: 3 },
-            p: 2,
-          }}
-        >
-          <MDXRenderer>{nav}</MDXRenderer>
-        </Sidenav>
-        <main sx={{ backgroundColor: `gray.1`, padding: 5 }}>
-          <div>{children}</div>
-          <footer>Theme by LekoArts</footer>
-        </main>
-      </div>
-    </Styled.root>
-  )
+type LayoutProps = {
+  children: React.ReactNode
+  title?: string
 }
+
+const Layout = ({ children, title }: LayoutProps) => (
+  <Styled.root>
+    <Global
+      styles={css({
+        "*": {
+          boxSizing: `inherit`,
+        },
+        body: {
+          margin: 0,
+          padding: 0,
+          boxSizing: `border-box`,
+          textRendering: `optimizeLegibility`,
+        },
+        a: {
+          transition: `all 0.3s ease-in-out`,
+        },
+      })}
+    />
+    <SEO title={title} />
+    <div sx={{ display: `grid`, gridTemplateColumns: `250px 1fr`, minHeight: `100vh` }}>
+      <Sidebar />
+      <main sx={{ backgroundColor: `backgroundContent`, padding: 5 }}>{children}</main>
+    </div>
+  </Styled.root>
+)
 
 export default Layout

@@ -1,30 +1,32 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import IFrame from "../components/iframe"
 
-const Item = ({ data: { playground } }) => {
-  const { graphiQLUrl } = useSiteMetadata()
-
-  return (
-    <Layout>
-      <section sx={{ "pre:first-of-type": { display: `none` }, maxWidth: `900px` }}>
-        <MDXRenderer>{playground.body}</MDXRenderer>
-      </section>
-      <section>
-        <iframe
-          title={playground.slug}
-          src={`${graphiQLUrl}?query=${playground.query}`}
-          width="100%"
-          height="100%"
-          style={{ minHeight: `600px` }}
-        />
-      </section>
-    </Layout>
-  )
+type ItemType = {
+  data: {
+    playground: {
+      slug: string
+      query: string
+      body: string
+      title: string
+    }
+  }
 }
+
+const Item = ({ data: { playground } }: ItemType) => (
+  <Layout title={playground.title}>
+    <section sx={{ "pre:first-of-type": { display: `none` }, maxWidth: `900px` }}>
+      <Styled.h1>{playground.title}</Styled.h1>
+      <MDXRenderer>{playground.body}</MDXRenderer>
+    </section>
+    <section>
+      <IFrame title={playground.slug} query={playground.query} />
+    </section>
+  </Layout>
+)
 
 export default Item
 
@@ -34,6 +36,7 @@ export const query = graphql`
       slug
       query
       body
+      title
     }
   }
 `
