@@ -29,9 +29,9 @@ const Layout = ({ children, title }: LayoutProps) => (
       })}
     />
     <SEO title={title} />
-    <div sx={{ display: `grid`, gridTemplateColumns: `250px 1fr`, minHeight: `100vh` }}>
+    <div sx={{ display: `grid`, gridTemplateColumns: [`200px 1fr`, `200px 1fr`, `250px 1fr`], minHeight: `100vh` }}>
       <Sidebar />
-      <main sx={{ backgroundColor: `backgroundContent`, padding: 5 }}>{children}</main>
+      <main sx={{ backgroundColor: `backgroundContent`, padding: [3, 3, 4, 5] }}>{children}</main>
     </div>
   </Styled.root>
 )

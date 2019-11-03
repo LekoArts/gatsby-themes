@@ -21,6 +21,8 @@ export default {
         background: tailwind.colors.gray[8],
         backgroundContent: tailwind.colors.gray[9],
         textMuted: tailwind.colors.gray[5],
+        codeBlockBG: tailwind.colors.gray[7],
+        codeBlockText: tailwind.colors.gray[1],
       },
     },
   },
@@ -63,6 +65,15 @@ export default {
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
+      code: {
+        backgroundColor: `codeBlockBG`,
+        px: 2,
+        py: 1,
+        color: `codeBlockText`,
+        borderRadius: `default`,
+      },
+    },
+    ul: {
       code: {
         backgroundColor: `codeBlockBG`,
         px: 2,

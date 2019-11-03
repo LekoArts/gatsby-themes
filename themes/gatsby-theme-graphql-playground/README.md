@@ -26,7 +26,7 @@
     </a>
 </p>
 
-TODO
+GraphiQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display one query in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. codesandbox).
 
 [![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://graphql-playground.lekoarts.de)
 

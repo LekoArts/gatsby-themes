@@ -1,0 +1,28 @@
+---
+title: Query Variables
+---
+
+```graphql preview
+query GetBlogPosts(
+  $limit: Int
+  $filter: MarkdownRemarkFilterInput
+  $sort: MarkdownRemarkSortInput
+) {
+  allMarkdownRemark(limit: $limit, filter: $filter, sort: $sort) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "dddd DD MMMM YYYY")
+        }
+      }
+    }
+  }
+}
+```
+
+In addition to adding query arguments directly to queries, GraphQL allows to pass in "query variables". These can be both simple scalar values as well as objects.
+
+The query below is the same one as the previous example, but with the input arguments passed in as "query variables".
+
+To add variables to page component queries, pass these in the `context` object [when creating pages](https://gatsbyjs.org/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs).

@@ -1,0 +1,30 @@
+---
+title: Aliasing
+---
+
+```graphql preview
+{
+  someEntries: allMarkdownRemark(skip: 3, limit: 3) {
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+  someMoreEntries: allMarkdownRemark(limit: 3) {
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+```
+
+Want to run two queries on the same datasource? You can do this by aliasing your queries.
+
+When you use your data, you will be able to reference it using the alias instead of the root query name. In this example, that would be `data.someEntries` or `data.someMoreEntries` instead of `data.allMarkdownRemark`.

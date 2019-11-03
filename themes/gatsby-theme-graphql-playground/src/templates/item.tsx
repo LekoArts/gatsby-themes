@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import IFrame from "../components/iframe"
+import Resizable from "../components/resizable"
 
 type ItemType = {
   data: {
@@ -23,7 +24,9 @@ const Item = ({ data: { playground } }: ItemType) => (
       <MDXRenderer>{playground.body}</MDXRenderer>
     </section>
     <section>
-      <IFrame title={playground.slug} query={playground.query} />
+      <Resizable>
+        <IFrame title={playground.slug} query={playground.query} />
+      </Resizable>
     </section>
   </Layout>
 )
