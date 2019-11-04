@@ -30,6 +30,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-plugin-mdx`,
         options: {},
       },
+      `gatsby-plugin-react-helmet`,
       `gatsby-plugin-theme-ui`,
       `gatsby-plugin-typescript`,
     ].filter(Boolean),
