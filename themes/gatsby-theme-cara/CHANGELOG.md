@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.9...@lekoarts/gatsby-theme-cara@1.0.10) (2019-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/styled to ^10.0.23 ([#133](https://github.com/LekoArts/gatsby-themes/issues/133)) ([5bebd52](https://github.com/LekoArts/gatsby-themes/commit/5bebd52))
+* **deps:** update dependency theme-ui to ^0.2.46 ([#136](https://github.com/LekoArts/gatsby-themes/issues/136)) ([328eedd](https://github.com/LekoArts/gatsby-themes/commit/328eedd))
+* **deps:** update gatsby ([#137](https://github.com/LekoArts/gatsby-themes/issues/137)) ([8619dc2](https://github.com/LekoArts/gatsby-themes/commit/8619dc2))
+
+
+
+
+
 ## [1.0.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.8...@lekoarts/gatsby-theme-cara@1.0.9) (2019-10-31)
 
 

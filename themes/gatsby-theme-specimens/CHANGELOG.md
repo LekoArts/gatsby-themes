@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@1.0.10...@lekoarts/gatsby-theme-specimens@1.0.11) (2019-11-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency chroma-js to ^2.1.0 ([#134](https://github.com/LekoArts/gatsby-themes/issues/134)) ([310671e](https://github.com/LekoArts/gatsby-themes/commit/310671e))
+* **deps:** update dependency polished to ^3.4.2 ([#135](https://github.com/LekoArts/gatsby-themes/issues/135)) ([ec6a2dd](https://github.com/LekoArts/gatsby-themes/commit/ec6a2dd))
+* **deps:** update dependency theme-ui to ^0.2.46 ([#136](https://github.com/LekoArts/gatsby-themes/issues/136)) ([328eedd](https://github.com/LekoArts/gatsby-themes/commit/328eedd))
+
+
+
+
+
 ## [1.0.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@1.0.9...@lekoarts/gatsby-theme-specimens@1.0.10) (2019-10-31)
 
 
