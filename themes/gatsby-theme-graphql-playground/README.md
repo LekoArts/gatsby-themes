@@ -26,9 +26,9 @@
     </a>
 </p>
 
-GraphiQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display one query in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. codesandbox).
+GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).
 
-[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://graphql-playground.lekoarts.de)
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://gatsby-theme-graphql-playground.netlify.com/)
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-graphql-playground).
 
@@ -36,7 +36,10 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## Features
 
-- TODO
+- MDX for the navigation and content
+- Automatically converts GraphQL code blocks with the meta field `preview` to live previews in a GraphiQL iframe
+- Theme UI-based theming
+- Light Mode / Dark Mode
 
 ## Installation
 
@@ -58,9 +61,11 @@ gatsby new graphql-playground LekoArts/gatsby-starter-graphql-playground
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| Key        | Default Value | Description                                                                                                                                         |
+| ---------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `basePath` | `/`           | Root url for the theme                                                                                                                              |
+| `docsPath` | `docs`        | Location of `navigation.mdx` and the individual doc pages. It's recommended to place these doc pages into `/<docsPath>/items` for a better overview |
+| `mdx`      | `true`        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass false to turn this off)                                             |
 
 #### Example usage
 
@@ -71,7 +76,7 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-graphql-playground`,
       options: {
-          // TODO
+          docsPath: `playground`
         }
       }
     }
@@ -79,9 +84,83 @@ module.exports = {
 };
 ```
 
+#### Additional configuration
+
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+
+```js
+// gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    // Used for the title template on pages other than the index site
+    siteTitle: `GraphQL Playground`,
+    // Default title of the page
+    siteTitleAlt: `GraphQL Playground - @lekoarts/gatsby-theme-graphql-playground`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://gatsby-theme-graphql-playground.netlify.com`,
+    // Used for SEO
+    siteDescription: `Stub description for graphql-playground`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`,
+    // Will be the root URL for the iFrame
+    graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`
+  }
+};
+```
+
 ### Shadowing
 
 Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-graphql-playground/` to shadow/override files.
+
+### Adding content
+
+#### Adding a new doc page
+
+First, create a new entry in your `navigation.mdx` file. If this file doesn't exist yet, create it inside your `docsPath` (default: `docs`) folder.
+
+You need to create a "classic" markdown list, like:
+
+```markdown
+- Welcome
+- Basics
+  - [GraphQL Introduction](/graphql-introduction)
+```
+
+You'll now see a navigation that has two sections (Welcome and Basics) of which Basics has a sub-menu.
+
+Now, create a new file at `docs/items/graphql-introduction.mdx`. The filename has to be the same as the link you used in the navigation.
+Add a title to the frontmatter of the MDX file and place the GraphQL query you wish to display in the GraphiQL iFrame as the **first** item.
+
+````markdown
+---
+title: GraphQL Introduction
+---
+
+```graphql preview
+{
+  ...your
+  query
+  goes
+  here
+}
+```
+
+Normal text can go here.
+
+## Normal markdown too
+````
+
+You need to write your query with `graphql preview` so that the theme can pick it up. You also must place it directly after the frontmatter.
+
+#### Changing the "Homepage" text
+
+Create a file at `src/@lekoarts/gatsby-theme-graphql-playground/text/index.mdx` to edit the text.
 
 ## 🌟 Supporting me
 

@@ -15,20 +15,23 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="TODO">
-    <img src="TODO" alt="Netlify Status" />
+  <a href="https://app.netlify.com/sites/gatsby-theme-graphql-playground/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/fe1faa72-4ba8-43e5-9847-5a48fe9a6bb8/deploy-status" alt="Netlify Status" />
   </a>
 </p>
 
-Stub description for GraphQL Playground. Using the Gatsby Theme [`@lekoarts/gatsby-theme-graphql-playground`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-graphql-playground).
+GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox). Using the Gatsby Theme [`@lekoarts/gatsby-theme-graphql-playground`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-graphql-playground).
 
-[**Demo Website**](https://graphql-playground.lekoarts.de)
+[**Demo Website**](https://gatsby-theme-graphql-playground.netlify.com/)
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
 ## ✨ Features
 
-- TODO
+- MDX for the navigation and content
+- Automatically converts GraphQL code blocks with the meta field `preview` to live previews in a GraphiQL iframe
+- Theme UI-based theming
+- Light Mode / Dark Mode
 
 ## 🚀 Getting Started
 
@@ -62,6 +65,50 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-graphql-playground`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-graphql-playground).
 
 Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-graphql-playground/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+
+### Adding content
+
+#### Adding a new doc page
+
+First, create a new entry in your `navigation.mdx` file. If this file doesn't exist yet, create it inside your `docsPath` (default: `docs`) folder.
+
+You need to create a "classic" markdown list, like:
+
+```markdown
+- Welcome
+- Basics
+  - [GraphQL Introduction](/graphql-introduction)
+```
+
+You'll now see a navigation that has two sections (Welcome and Basics) of which Basics has a sub-menu.
+
+Now, create a new file at `docs/items/graphql-introduction.mdx`. The filename has to be the same as the link you used in the navigation.
+Add a title to the frontmatter of the MDX file and place the GraphQL query you wish to display in the GraphiQL iFrame as the **first** item.
+
+````markdown
+---
+title: GraphQL Introduction
+---
+
+```graphql preview
+{
+  ...your
+  query
+  goes
+  here
+}
+```
+
+Normal text can go here.
+
+## Normal markdown too
+````
+
+You need to write your query with `graphql preview` so that the theme can pick it up. You also must place it directly after the frontmatter.
+
+#### Changing the "Homepage" text
+
+Create a file at `src/@lekoarts/gatsby-theme-graphql-playground/text/index.mdx` to edit the text.
 
 ### Change your `static` folder
 
