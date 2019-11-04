@@ -1,0 +1,52 @@
+{
+  "name": "@lekoarts/gatsby-theme-graphql-playground",
+  "version": "0.0.1",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Stub description for graphql-playground",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.17.7",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.1.5",
+    "@theme-ui/presets": "^0.2.44",
+    "@theme-ui/prism": "^0.2.46",
+    "@theme-ui/sidenav": "^0.2.46",
+    "gatsby-plugin-mdx": "^1.0.55",
+    "gatsby-plugin-theme-ui": "^0.2.43",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "gatsby-source-filesystem": "^2.1.35",
+    "is-absolute-url": "^3.0.3",
+    "re-resizable": "^6.1.0",
+    "theme-ui": "^0.2.46"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-graphql-playground"
+  }
+}

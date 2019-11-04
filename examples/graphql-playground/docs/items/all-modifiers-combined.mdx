@@ -1,0 +1,24 @@
+---
+title: All Modifiers Combined
+---
+
+```graphql preview
+{
+  allMarkdownRemark(
+    limit: 3
+    filter: { frontmatter: { date: { ne: null } } }
+    sort: { fields: [frontmatter___date], order: DESC }
+  ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          date(formatString: "dddd DD MMMM YYYY")
+        }
+      }
+    }
+  }
+}
+```
+
+This query combines sorting, filtering, limiting and formatting together.

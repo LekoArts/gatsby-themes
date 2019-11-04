@@ -1,0 +1,21 @@
+---
+title: Sort
+---
+
+```graphql preview
+{
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+          date
+        }
+      }
+    }
+  }
+}
+```
+
+The ordering of your results can be specified with `sort`. Here the results are sorted in ascending order of `frontmatter`'s `date` field.

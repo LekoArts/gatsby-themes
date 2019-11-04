@@ -1,0 +1,20 @@
+---
+title: Skip
+---
+
+```graphql preview
+{
+  allMarkdownRemark(skip: 3) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+```
+
+Skip over a number of results. In this query `skip` is used to omit the first 3 results.

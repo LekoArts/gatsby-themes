@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "graphql-playground",
+  "description": "Stub description for graphql-playground",
+  "version": "0.0.1",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "license": "MIT",
+  "starter-name": "gatsby-starter-graphql-playground",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@lekoarts/gatsby-theme-graphql-playground": "*",
+    "gatsby": "^2.17.7",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

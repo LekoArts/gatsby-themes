@@ -1,0 +1,31 @@
+---
+title: Group
+---
+
+```graphql preview
+{
+  allMarkdownRemark(filter: { frontmatter: { title: { ne: "" } } }) {
+    group(field: frontmatter___categories) {
+      fieldValue
+      totalCount
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    nodes {
+      frontmatter {
+        title
+        categories
+      }
+    }
+  }
+}
+```
+
+You can also group values on the basis of a field e.g. the title, date or category and get the field value, the total number of occurrences and edges.
+
+The query below gets you all categories (`fieldValue`) applied to a book and how many books (`totalCount`) a given category is applied to. In addition you are grabbing the `title` of books in a given category. You can see for example that there are 3 books in the `magical creatures` category.

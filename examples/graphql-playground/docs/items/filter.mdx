@@ -1,0 +1,44 @@
+---
+title: Filter
+---
+
+```graphql preview
+{
+  allMarkdownRemark(filter: { frontmatter: { title: { ne: "" } } }) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+```
+
+In this query `filter` and the `ne` (not equals) operator is used to show only results that have a title. You can find a good video tutorial on this [here](https://www.youtube.com/watch?v=Lg1bom99uGM).
+
+Gatsby relies on [Sift](https://www.npmjs.com/package/sift) to enable MongoDB-like query syntax for object filtering. This allows Gatsby to support operators like `eq`, `ne`, `in`, `regex` and querying nested fields through the `__` connector.
+
+It is also possible to filter on multiple fields - just separate the individual filters by a comma (works as an AND):
+
+```javascript
+filter: { contentType: { in: ["post", "page"] }, draft: { eq: false } }
+```
+
+## Complete list of possible operators
+
+- `eq`: short for **equal**, must match the given data exactly
+- `ne`: short for **not equal**, must be different from the given data
+- `regex`: short for **regular expression**, must match the given pattern. Note that backslashes need to be escaped _twice_, so `/\w+/` needs to be written as `"/\\\\w+/"`.
+- `glob`: short for **global**, allows to use wildcard `*` which acts as a placeholder for any non-empty string
+- `in`: short for **in array**, must be an element of the array
+- `nin`: short for **not in array**, must NOT be an element of the array
+- `gt`: short for **greater than**, must be greater than given value
+- `gte`: short for **greater than or equal**, must be greater than or equal to given value
+- `lt`: short for **less than**, must be less than given value
+- `lte`: short for **less than or equal**, must be less than or equal to given value
+- `elemMatch`: short for **element match**, this indicates that the field you are filtering will return an array of elements, on which you can apply a filter using the previous operators
+
+If you want to understand more how these filters work, looking at the corresponding [tests](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/schema/__tests__/run-query.js) in the codebase could be very useful.

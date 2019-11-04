@@ -12,7 +12,7 @@ const prompt = [
   {
     type: `input`,
     name: `starter-name`,
-    message: `Name of the respective starter project (if already existing use the name after "LekoArts/")`,
+    message: `Name of the respective starter project (if already existing use the name after "LekoArts/" so "gatsby-starter-x")`,
   },
 ]
 
