@@ -25,7 +25,7 @@ const Item = ({ data: { playground } }: ItemType) => (
     </section>
     <section>
       <Resizable>
-        <IFrame title={playground.slug} query={playground.query} />
+        <IFrame title={playground.title} query={playground.query} />
       </Resizable>
     </section>
   </Layout>

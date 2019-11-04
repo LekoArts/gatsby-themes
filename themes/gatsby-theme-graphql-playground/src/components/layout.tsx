@@ -11,7 +11,7 @@ type LayoutProps = {
 }
 
 const Layout = ({ children, title }: LayoutProps) => (
-  <Styled.root>
+  <Styled.root data-testid="theme-root">
     <Global
       styles={css({
         "*": {

@@ -18,7 +18,10 @@ const Sidebar = () => {
 
   return (
     <div>
-      <div sx={{ backgroundColor: `primary`, p: 3, color: `background`, fontWeight: `bold`, fontSize: 1 }}>
+      <div
+        data-testid="Title"
+        sx={{ backgroundColor: `primary`, p: 3, color: `background`, fontWeight: `bold`, fontSize: 1 }}
+      >
         {siteTitle}
       </div>
       <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
