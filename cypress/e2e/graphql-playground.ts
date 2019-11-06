@@ -23,10 +23,8 @@ describe(`gatsby-theme-graphql-playground`, () => {
       .click()
       .waitForRouteChange()
       .assertRoute(`/get-the-site-title`)
-      .get(`h1`)
-      .within(() => {
-        cy.findByText(/Get The Site Title/i)
-      })
+      .findByTestId(`item-title`)
+      .contains(`Get The Site Title`)
       .findByText(/Start with the basics, pulling up the site/i)
       .findByTestId(/iFrame-Get the Site Title/i)
   })

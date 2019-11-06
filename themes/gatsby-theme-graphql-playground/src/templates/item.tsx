@@ -20,7 +20,7 @@ type ItemType = {
 const Item = ({ data: { playground } }: ItemType) => (
   <Layout title={playground.title}>
     <section sx={{ "pre:first-of-type": { display: `none` }, maxWidth: `900px` }}>
-      <Styled.h1>{playground.title}</Styled.h1>
+      <Styled.h1 data-testid="item-title">{playground.title}</Styled.h1>
       <MDXRenderer>{playground.body}</MDXRenderer>
     </section>
     <section>
