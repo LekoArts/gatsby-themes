@@ -3,121 +3,112 @@
   preview: "https://emma.lekoarts.de"
   description: "Clean portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images"
   image: "./emma.jpg"
-  shapes: [
-    {
-      type: "circle",
-      color: "green",
-      size: ["200px", "300px"],
-      xOffset: ["-140px"],
-      yOffset: ["-70px"],
-      opacity: 0.5,
-    },
-    {
-      type: "donut",
-      color: "teal",
-      size: ["25px", "100px"],
-      xOffset: ["50px"],
-      yOffset: ["-60px"],
-      opacity: 1,
-    },
-  ]
+  shapes:
+    - type: "circle"
+      color: "green"
+      size: ["200px", "300px"]
+      xOffset: ["-140px"]
+      yOffset: ["-70px"]
+      opacity: 0.5
+    - type: "donut"
+      color: "teal"
+      size: ["25px", "100px"]
+      xOffset: ["50px"]
+      yOffset: ["-60px"]
+      opacity: 1
 - title: "Status Dashboard"
   url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard"
   preview: "https://status.lekoarts.de"
   description: "Show the live statuses of your Netlify and CircleCI builds on your website by using the customizable components"
   image: "./status-dashboard.png"
-  shapes: [
-    {
-      type: "circle",
-      color: "orange",
-      size: ["120px", "220px"],
-      xOffset: ["-20px"],
-      yOffset: ["100px", "180px"],
-      opacity: 1,
-    },
-    {
-      type: "circle",
-      color: "gray",
-      size: ["50px", "100px"],
-      xOffset: ["-40px"],
-      yOffset: ["-60px"],
-      opacity: 1,
-    },
-  ]
+  shapes:
+    - type: "circle"
+      color: "orange"
+      size: ["120px", "220px"]
+      xOffset: ["-20px"]
+      yOffset: ["100px", "180px"]
+      opacity: 1
+    - type: "circle"
+      color: "gray"
+      size: ["50px", "100px"]
+      xOffset: ["-40px"]
+      yOffset: ["-60px"]
+      opacity: 1
 - title: "Cara"
   url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara"
   preview: "https://cara.lekoarts.de"
   description: "Playful and Colorful One-Page portfolio featuring Parallax effects and animations"
   image: "./cara.jpg"
-  shapes: [
-  {
-    type: "donut",
-    color: "blue",
-    size: ["120px", "220px"],
-    xOffset: ["-70px"],
-    yOffset: ["100px", "180px"],
-    opacity: 1,
-  },
-  {
-    type: "circle",
-    color: "purple",
-    size: ["50px", "100px"],
-    xOffset: ["140px"],
-    yOffset: ["-40px", "-70px"],
-    opacity: 1,
-  },
-  ]
+  shapes:
+    - type: "donut"
+      color: "blue"
+      size: ["120px", "220px"]
+      xOffset: ["-70px"]
+      yOffset: ["100px", "180px"]
+      opacity: 1
+    - type: "circle"
+      color: "purple"
+      size: ["50px", "100px"]
+      xOffset: ["140px"]
+      yOffset: ["-40px", "-70px"]
+      opacity: 1
 - title: "Specimens"
   url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens"
   preview: "https://specimens.lekoarts.de"
   description: "Leverage the wide variety of powerful React components to build your design system"
   image: "./specimens.jpg"
-  shapes: [
-  {
-    type: "circle",
-    color: "red",
-    size: ["100px", "175px"],
-    xOffset: ["-60px", "-90px"],
-    yOffset: ["100px", "200px", "180px", "230px"],
-    opacity: 1,
-  },
-  {
-    type: "donut",
-    color: "teal",
-    size: ["80px", "150px"],
-    xOffset: ["-30px", "-70px"],
-    yOffset: ["-50px", "-50px", "-50px"],
-    opacity: 1,
-  },
-  {
-    type: "circle",
-    color: "yellow",
-    size: ["100px", "135px"],
-    xOffset: ["300px", "600px", "280px", "400px"],
-    yOffset: ["-40px", "-60px"],
-    opacity: 1,
-  },
-  ]
+  shapes:
+    - type: "circle"
+      color: "red"
+      size: ["100px", "175px"]
+      xOffset: ["-60px", "-90px"]
+      yOffset: ["100px", "200px", "180px", "230px"]
+      opacity: 1
+    - type: "donut"
+      color: "teal"
+      size: ["80px", "150px"]
+      xOffset: ["-30px", "-70px"]
+      yOffset: ["-50px", "-50px", "-50px"]
+      opacity: 1
+    - type: "circle"
+      color: "yellow"
+      size: ["100px", "135px"]
+      xOffset: ["300px", "600px", "280px", "400px"]
+      yOffset: ["-40px", "-60px"]
+      opacity: 1
 - title: "Emilia"
   url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia"
   preview: "https://emilia.lekoarts.de"
-  description: "Minimalistic portfolio/photography site with masonry grid, page transitions and big images."
+  description: "Minimalistic portfolio/photography site with masonry grid, page transitions and big images"
   image: "./emilia.png"
-  shapes: [
-  {
-    type: "circle",
-    color: "blue",
-    size: ["100px", "200px"],
-    xOffset: ["-70px"],
-    yOffset: ["100px", "180px"],
-    opacity: 1,
-  },
-  {
-    type: "circle",
-    color: "orange",
-    size: ["80px", "100px"],
-    xOffset: ["350px", "350px", "320px", "400px"],
-    yOffset: ["-40px", "-70px"],
-    opacity: 1,
-  },
-  ]
+  shapes:
+    - type: "circle"
+      color: "blue"
+      size: ["100px", "200px"]
+      xOffset: ["-70px"]
+      yOffset: ["100px", "180px"]
+      opacity: 1
+    - type: "circle"
+      color: "orange"
+      size: ["80px", "100px"]
+      xOffset: ["350px", "350px", "320px", "400px"]
+      yOffset: ["-40px", "-70px"]
+      opacity: 1
+- title: "GraphQL Playground"
+  url: "https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-graphql-playground"
+  preview: "https://gatsby-theme-graphql-playground.netlify.com"
+  description: "Write queries in MDX to create an interactive GraphQL Playground to showcase the power of GraphQL"
+  image: "./graphql-playground.png"
+  shapes:
+    - type: "circle"
+      color: "black"
+      size: ["120px", "150px", "170px", "220px"]
+      xOffset: ["-60px", "100px"]
+      yOffset: ["200px", "200px", "140px", "180px"]
+      opacity: 1
+    - type: "donut"
+      color: "red"
+      size: ["60px", "110px"]
+      xOffset: ["-40px"]
+      yOffset: ["-60px"]
+      opacity: 1

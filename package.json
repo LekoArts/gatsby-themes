@@ -15,7 +15,7 @@
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js",
     "lint:fix": "yarn lint --fix",
     "lint:ci": "yarn lint --format junit -o results/eslint/result.xml",
-    "format": "prettier \"**/*.{md,mdx,json}\" --write",
+    "format": "prettier \"**/*.{md,mdx,json,yaml}\" --write",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:update": "jest --updateSnapshot",

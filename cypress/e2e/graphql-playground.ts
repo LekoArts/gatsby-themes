@@ -24,7 +24,6 @@ describe(`gatsby-theme-graphql-playground`, () => {
       .waitForRouteChange()
       .assertRoute(`/get-the-site-title`)
       .findByTestId(`item-title`)
-      .contains(`Get The Site Title`)
       .findByText(/Start with the basics, pulling up the site/i)
       .findByTestId(/iFrame-Get the Site Title/i)
   })
