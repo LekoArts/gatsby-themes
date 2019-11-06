@@ -249,6 +249,9 @@ export default {
     gray: {
       backgroundImage: t => `linear-gradient(135deg, ${t.colors.gray[5]}, ${t.colors.gray[7]})`,
     },
+    black: {
+      backgroundImage: t => `linear-gradient(135deg, ${t.colors.gray[7]}, ${t.colors.gray[9]})`,
+    },
     red: {
       backgroundImage: t => `linear-gradient(225deg, ${t.colors.red[6]}, ${t.colors.red[3]})`,
     },
