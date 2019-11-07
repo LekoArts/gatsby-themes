@@ -17,6 +17,7 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,7 +26,7 @@ module.exports = {
         description: `Stub description for minimal-blog`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#b83280`,
+        theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
           {
