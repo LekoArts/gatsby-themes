@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Link } from "gatsby"
 import { jsx, Styled, Flex } from "theme-ui"
+import { Link } from "gatsby"
 
 type Props = {
   nav: {

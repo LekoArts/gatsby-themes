@@ -1,16 +1,16 @@
 import { graphql } from "gatsby"
-import PostsComponent from "../components/posts"
+import HomepageComponent from "../components/homepage"
 
-export default PostsComponent
+export default HomepageComponent
 
 export const query = graphql`
   query {
-    allPost(sort: { fields: date, order: DESC }) {
+    allPost(sort: { fields: date, order: DESC }, limit: 3) {
       nodes {
         slug
         title
         date(formatString: "DD.MM.YYYY")
-        categories
+        tags
       }
     }
   }

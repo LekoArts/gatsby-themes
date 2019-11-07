@@ -75,8 +75,9 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 160): String!
       body: String!
-      categories: [String!]!
-      banner: File! @fileByRelativePath
+      tags: [String!]!
+      banner: File @fileByRelativePath
+      description: String
     }
     
     interface Page @nodeInterface {
@@ -93,8 +94,9 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
-      categories: [String!]!
-      banner: File! @fileByRelativePath
+      tags: [String!]!
+      banner: File @fileByRelativePath
+      description: String
     }
     
     type MdxPage implements Node & Page {
@@ -127,7 +129,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     const fieldData = {
       title: node.frontmatter.title,
       date: node.frontmatter.date,
-      categories: node.frontmatter.categories,
+      tags: node.frontmatter.tags,
       banner: node.frontmatter.banner,
     }
 
@@ -178,18 +180,24 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 }
 
 // These template are only data-fetching wrappers that import components
-const postsTemplate = require.resolve(`./src/templates/posts-query.tsx`)
+const homepageTemplate = require.resolve(`./src/templates/homepage-query.tsx`)
+const blogTemplate = require.resolve(`./src/templates/blog-query.tsx`)
 const postTemplate = require.resolve(`./src/templates/post-query.tsx`)
 const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, blogPath } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
-    component: postsTemplate,
+    component: homepageTemplate,
+  })
+
+  createPage({
+    path: `/${basePath}/${blogPath}`.replace(/\/\/+/g, `/`),
+    component: blogTemplate,
   })
 
   const result = await graphql(`

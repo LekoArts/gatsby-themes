@@ -28,7 +28,7 @@
 
 TODO
 
-[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://minimal-blog.lekoarts.de)
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://minimal-blog.lekoarts.de) [![View Design on Figma](https://img.lekoarts.de/gatsby/view_design.svg)](https://www.figma.com/file/sq2VwMy8579ioDTXjUdlYr/gatsby-theme-minimal-blog?node-id=0%3A1)
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-minimal-blog).
 
