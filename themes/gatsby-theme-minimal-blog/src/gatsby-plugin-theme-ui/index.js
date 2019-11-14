@@ -44,7 +44,7 @@ export default {
   colors: {
     ...tailwind.colors,
     primary: tailwind.colors.purple[7],
-    secondary: tailwind.colors.gray[7],
+    secondary: `#5f6c80`,
     toggleIcon: tailwind.colors.gray[8],
     heading: tailwind.colors.black,
     divide: tailwind.colors.gray[4],
@@ -110,9 +110,12 @@ export default {
     secondary: {
       color: `secondary`,
       ":hover": {
-        textDecoration: `none`,
         color: `heading`,
       },
+    },
+    listItem: {
+      fontSize: [1, 2, 3],
+      color: `text`,
     },
   },
 }

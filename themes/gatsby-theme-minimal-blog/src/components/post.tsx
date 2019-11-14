@@ -5,7 +5,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import Layout from "./layout"
 import ItemTags from "./item-tags"
-import CodeStyles from "../styles/code"
 
 type PostProps = {
   data: {
@@ -45,7 +44,7 @@ const Post = ({ data: { post } }: PostProps) => (
         </React.Fragment>
       )}
     </p>
-    <section sx={{ ...CodeStyles, my: 5, ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` } }}>
+    <section sx={{ my: 5, ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` } }}>
       <MDXRenderer>{post.body}</MDXRenderer>
     </section>
   </Layout>

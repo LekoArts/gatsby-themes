@@ -1,7 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Heading } from "@theme-ui/components"
+import { jsx, Styled } from "theme-ui"
+import { Heading, Box, Flex } from "@theme-ui/components"
+import kebabCase from "lodash.kebabcase"
+import { Link } from "gatsby"
 import Layout from "./layout"
+import useSiteMetadata from "../hooks/use-site-metadata"
 
 type PostsProps = {
   list: {
@@ -10,12 +13,29 @@ type PostsProps = {
   }[]
 }
 
-const Tags = ({ list }: PostsProps) => (
-  <Layout>
-    <Heading variant="h2" as="h2">
-      Categories
-    </Heading>
-  </Layout>
-)
+const Tags = ({ list }: PostsProps) => {
+  const { tagsPath } = useSiteMetadata()
+
+  return (
+    <Layout>
+      <Heading variant="h2" as="h2">
+        Tags
+      </Heading>
+      <Box mt={[4, 5]}>
+        {list.map(listItem => (
+          <Flex key={listItem.fieldValue} mb={[1, 1, 2]} sx={{ alignItems: `center` }}>
+            <Styled.a
+              as={Link}
+              sx={{ variant: `links.listItem`, mr: 2 }}
+              to={`/${tagsPath}/${kebabCase(listItem.fieldValue)}`.replace(/\/\/+/g, `/`)}
+            >
+              {listItem.fieldValue} <span sx={{ color: `secondary` }}>({listItem.totalCount})</span>
+            </Styled.a>
+          </Flex>
+        ))}
+      </Box>
+    </Layout>
+  )
+}
 
 export default Tags

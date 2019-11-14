@@ -6,9 +6,10 @@ import useSiteMetadata from "../hooks/use-site-metadata"
 import ColorModeToggle from "./colormode-toggle"
 import useNavigation from "../hooks/use-navigation"
 import Navigation from "./navigation"
+import replaceSlashes from "../utils/replaceSlashes"
 
 const Header = () => {
-  const { siteTitle, externalLinks } = useSiteMetadata()
+  const { siteTitle, externalLinks, basePath } = useSiteMetadata()
   const nav = useNavigation()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
@@ -20,7 +21,11 @@ const Header = () => {
   return (
     <header sx={{ mb: [5, 6] }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-        <Link to="/" aria-label={`${siteTitle} - Back to home`} sx={{ color: `heading`, textDecoration: `none` }}>
+        <Link
+          to={replaceSlashes(`/${basePath}`)}
+          aria-label={`${siteTitle} - Back to home`}
+          sx={{ color: `heading`, textDecoration: `none` }}
+        >
           <h1 sx={{ my: 0, fontWeight: `normal`, fontSize: [3, 4] }}>{siteTitle}</h1>
         </Link>
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
@@ -32,7 +37,7 @@ const Header = () => {
           justifyContent: `space-between`,
           mt: 3,
           color: `secondary`,
-          a: { color: `secondary` },
+          a: { color: `secondary`, ":hover": { color: `heading` } },
         }}
       >
         <Navigation nav={nav} />

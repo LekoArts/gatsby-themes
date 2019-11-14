@@ -6,10 +6,11 @@ type Props = {
     allPost: any
     [key: string]: any
   }
+  pageContext: any
 }
 
-export default ({ data }: Props) => {
+export default ({ data, pageContext }: Props) => {
   const { allPost } = data
 
-  return <Tag data={{ ...data, allPost }} />
+  return <Tag posts={allPost.nodes} pageContext={pageContext} />
 }

@@ -17,6 +17,8 @@ type Props = {
       }[]
       tagsPath: string
       basePath: string
+      blogPath: string
+      showLineNumbers: boolean
     }
   }
 }
@@ -40,6 +42,8 @@ const useSiteMetadata = () => {
           }
           tagsPath
           basePath
+          blogPath
+          showLineNumbers
         }
       }
     }

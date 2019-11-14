@@ -3,6 +3,7 @@ import React from "react"
 import Highlight, { defaultProps, Language } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/nightOwl"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
+import useSiteMetadata from "../hooks/use-site-metadata"
 
 type CodeProps = {
   codeString: string
@@ -58,8 +59,12 @@ const Code = ({
   metastring = ``,
   ...props
 }: CodeProps) => {
+  const { showLineNumbers } = useSiteMetadata()
+
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
+
+  const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
 
   if (props[`react-live`]) {
     return (
@@ -80,7 +85,7 @@ const Code = ({
             </div>
           )}
           <div className="gatsby-highlight" data-language={language}>
-            <pre className={className} style={style}>
+            <pre className={className} style={style} data-linenumber={hasLineNumbers}>
               {tokens.map((line, i) => {
                 const lineProps = getLineProps({ line, key: i })
 
@@ -90,7 +95,7 @@ const Code = ({
 
                 return (
                   <div {...lineProps}>
-                    {!noLineNumbers && <span className="line-number-style">{i + 1}</span>}
+                    {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
                     {line.map((token, key) => (
                       <span {...getTokenProps({ token, key })} />
                     ))}

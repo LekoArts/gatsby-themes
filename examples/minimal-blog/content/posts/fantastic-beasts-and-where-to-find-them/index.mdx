@@ -51,10 +51,10 @@ var treePromise = new Promise(function(resolve) {
 
 Code block with code highlighting:
 
-```jsx:title=src/components/post.jsx {5-7}
+```jsx:title=src/components/post.jsx {5-7,10}
 import React from "react";
 
-const Post = ({ data: { post } }: PostProps) => (
+const Post = ({ data: { post } }) => (
   <Layout>
     <Heading variant="h2" as="h2">
       {post.title}
@@ -93,5 +93,49 @@ export default Post;
 Code block without title:
 
 ```
-test123
+Harry Potter and the Philosopher's Stone
+```
+
+Code block without lineNumbers (but lang):
+
+```text noLineNumbers
+Harry Potter and the Chamber of Secrets
+```
+
+Code block without lineNumbers (and without lang):
+
+```noLineNumbers
+Harry Potter and the Chamber of Secrets
+```
+
+Here will `inline code` go, just inside the text. Wow!
+
+Code block without line numbers but with highlighting, language, and title:
+
+```tsx:title=src/components/blog.tsx {7-9,16} noLineNumbers
+import React from "react";
+
+const Blog = ({ posts }: PostsProps) => {
+  const { tagsPath, basePath } = useSiteMetadata();
+
+  return (
+    <Layout>
+      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+        <Heading variant="h2" as="h2">
+          Blog
+        </Heading>
+        <Styled.a
+          as={Link}
+          sx={{ variant: `links.secondary` }}
+          to={`/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`)}
+        >
+          View all tags
+        </Styled.a>
+      </Flex>
+      <Listing posts={posts} sx={{ mt: [4, 5] }} />
+    </Layout>
+  );
+};
+
+export default Blog;
 ```

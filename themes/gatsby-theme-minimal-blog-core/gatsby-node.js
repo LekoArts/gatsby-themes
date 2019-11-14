@@ -235,8 +235,8 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           slug
         }
       }
-      tags: allPost(sort: { fields: tags___slug, order: DESC }) {
-        group(field: tags___slug) {
+      tags: allPost(sort: { fields: tags___name, order: DESC }) {
+        group(field: tags___name) {
           fieldValue
         }
       }
@@ -265,7 +265,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (pages.length > 0) {
     pages.forEach(page => {
       createPage({
-        path: page.slug,
+        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
         component: pageTemplate,
         context: {
           slug: page.slug,
@@ -279,10 +279,11 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (tags.length > 0) {
     tags.forEach(tag => {
       createPage({
-        path: `/${tagsPath}/${tag.fieldValue}`.replace(/\/\/+/g, `/`),
+        path: `/${basePath}/${tagsPath}/${kebabCase(tag.fieldValue)}`.replace(/\/\/+/g, `/`),
         component: tagTemplate,
         context: {
-          slug: tag.fieldValue,
+          slug: kebabCase(tag.fieldValue),
+          name: tag.fieldValue,
         },
       })
     })

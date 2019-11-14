@@ -1,4 +1,4 @@
-import { tint, shade } from "@theme-ui/color"
+import { tint } from "@theme-ui/color"
 
 export default {
   "[data-name='live-editor']": {
@@ -18,6 +18,17 @@ export default {
     float: `left`,
     minWidth: `100%`,
     mb: 0,
+    '&[data-linenumber="false"]': {
+      ".token-line": {
+        pl: 3,
+      },
+    },
+  },
+  "p > code": {
+    bg: `rgb(1, 22, 39)`,
+    color: `rgb(214, 222, 235)`,
+    px: 2,
+    py: 1,
   },
   ".gatsby-highlight": {
     position: `relative`,
@@ -30,10 +41,13 @@ export default {
     "pre.language-": {
       mt: 0,
     },
+    "pre.language-noLineNumbers": {
+      mt: 0,
+    },
     'pre[class*="language-"]:before': {
-      bg: `black`,
+      bg: `white`,
       borderRadius: `0 0 0.25rem 0.25rem`,
-      color: `white`,
+      color: `black`,
       fontSize: `12px`,
       letterSpacing: `0.025rem`,
       padding: `0.1rem 0.5rem`,
@@ -58,6 +72,16 @@ export default {
       background: `#61dafb`,
       color: `black`,
     },
+    'pre[class~="language-ts"]:before': {
+      content: `"ts"`,
+      background: `#61dafb`,
+      color: `black`,
+    },
+    'pre[class~="language-tsx"]:before': {
+      content: `"tsx"`,
+      background: `#61dafb`,
+      color: `black`,
+    },
     'pre[class~="language-html"]:before': {
       content: `"html"`,
       background: `#005a9c`,
@@ -75,6 +99,33 @@ export default {
       content: `"mdx"`,
       background: `#f9ac00`,
       color: `black`,
+    },
+    'pre[class~="language-text"]:before': {
+      content: `"text"`,
+    },
+    "pre[class='language-shell']:before": {
+      content: `'shell'`,
+    },
+    "pre[class='language-sh']:before": {
+      content: `'sh'`,
+    },
+    "pre[class='language-bash']:before": {
+      content: `'bash'`,
+    },
+    "pre[class='language-yaml']:before": {
+      content: `'yaml'`,
+      background: `#ffa8df`,
+    },
+    "pre[class='language-markdown']:before": {
+      content: `'md'`,
+    },
+    "pre[class='language-json']:before, pre[class='language-json5']:before": {
+      content: `'json'`,
+      background: `linen`,
+    },
+    "pre[class='language-diff']:before": {
+      content: `'diff'`,
+      background: `#e6ffed`,
     },
   },
   '.gatsby-highlight > code[class*="language-"], .gatsby-highlight > pre[class=*="language-"]': {
@@ -101,11 +152,15 @@ export default {
     py: 2,
     fontFamily: `monospace`,
   },
+  ".token-line": {
+    pr: 3,
+  },
   ".highlight-line": {
     backgroundColor: `rgb(2, 55, 81)`,
     borderLeft: `4px solid rgb(2, 155, 206)`,
     ".line-number-style": {
       width: `calc(3em - 4px)`,
+      opacity: 0.5,
     },
   },
 }

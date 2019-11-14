@@ -5,6 +5,7 @@ import "typeface-open-sans"
 import SEO from "./seo"
 import Header from "./header"
 import Footer from "./footer"
+import CodeStyles from "../styles/code"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -34,7 +35,9 @@ const Layout = ({ children, className }: LayoutProps) => (
     <SEO />
     <Container>
       <Header />
-      <Main className={className}>{children}</Main>
+      <Main css={css({ ...CodeStyles })} className={className}>
+        {children}
+      </Main>
       <Footer />
     </Container>
   </Styled.root>

@@ -5,6 +5,7 @@ import { Heading, Flex } from "@theme-ui/components"
 import Layout from "./layout"
 import Listing from "./listing"
 import useSiteMetadata from "../hooks/use-site-metadata"
+import replaceSlashes from "../utils/replaceSlashes"
 
 type PostsProps = {
   posts: {
@@ -27,7 +28,7 @@ const Blog = ({ posts }: PostsProps) => {
         <Heading variant="h2" as="h2">
           Blog
         </Heading>
-        <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={`/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`)}>
+        <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
           View all tags
         </Styled.a>
       </Flex>

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Heading, Flex } from "@theme-ui/components"
+import { Heading } from "@theme-ui/components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 
