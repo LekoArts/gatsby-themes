@@ -75,9 +75,14 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 160): String!
       body: String!
-      tags: [String!]!
+      tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
+    }
+    
+    type PostTag {
+      name: String
+      slug: String
     }
     
     interface Page @nodeInterface {
@@ -94,7 +99,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
-      tags: [String!]!
+      tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
     }
@@ -126,10 +131,21 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
   // Check for "projects" and create the "Project" type
   if (node.internal.type === `Mdx` && source === postsPath) {
+    let modifiedTags
+
+    if (node.frontmatter.tags) {
+      modifiedTags = node.frontmatter.tags.map(tag => ({
+        name: tag,
+        slug: kebabCase(tag),
+      }))
+    } else {
+      modifiedTags = null
+    }
+
     const fieldData = {
       title: node.frontmatter.title,
       date: node.frontmatter.date,
-      tags: node.frontmatter.tags,
+      tags: modifiedTags,
       banner: node.frontmatter.banner,
     }
 
@@ -184,11 +200,13 @@ const homepageTemplate = require.resolve(`./src/templates/homepage-query.tsx`)
 const blogTemplate = require.resolve(`./src/templates/blog-query.tsx`)
 const postTemplate = require.resolve(`./src/templates/post-query.tsx`)
 const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
+const tagTemplate = require.resolve(`./src/templates/tag-query.tsx`)
+const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, blogPath } = withDefaults(themeOptions)
+  const { basePath, blogPath, tagsPath } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -198,6 +216,11 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   createPage({
     path: `/${basePath}/${blogPath}`.replace(/\/\/+/g, `/`),
     component: blogTemplate,
+  })
+
+  createPage({
+    path: `/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`),
+    component: tagsTemplate,
   })
 
   const result = await graphql(`
@@ -210,6 +233,11 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allPage {
         nodes {
           slug
+        }
+      }
+      tags: allPost(sort: { fields: tags___slug, order: DESC }) {
+        group(field: tags___slug) {
+          fieldValue
         }
       }
     }
@@ -241,6 +269,20 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         component: pageTemplate,
         context: {
           slug: page.slug,
+        },
+      })
+    })
+  }
+
+  const tags = result.data.tags.group
+
+  if (tags.length > 0) {
+    tags.forEach(tag => {
+      createPage({
+        path: `/${tagsPath}/${tag.fieldValue}`.replace(/\/\/+/g, `/`),
+        component: tagTemplate,
+        context: {
+          slug: tag.fieldValue,
         },
       })
     })

@@ -3,7 +3,7 @@ import Page from "../../../components/page"
 
 type Props = {
   data: {
-    project: any
+    page: any
     [key: string]: any
   }
 }

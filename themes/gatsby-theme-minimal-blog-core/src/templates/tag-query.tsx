@@ -1,11 +1,11 @@
 import { graphql } from "gatsby"
-import BlogComponent from "../components/blog"
+import TagComponent from "../components/tag"
 
-export default BlogComponent
+export default TagComponent
 
 export const query = graphql`
-  query {
-    allPost(sort: { fields: date, order: DESC }) {
+  query($slug: String!) {
+    allPost(sort: { fields: date, order: DESC }, filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
       nodes {
         slug
         title

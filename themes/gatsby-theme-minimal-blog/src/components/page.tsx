@@ -1,5 +1,6 @@
-import React from "react"
-import { Heading } from "@theme-ui/components"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import { Heading, Flex } from "@theme-ui/components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 
@@ -19,7 +20,9 @@ const Page = ({ data: { page } }: PageProps) => (
     <Heading variant="h2" as="h2">
       {page.title}
     </Heading>
-    <MDXRenderer>{page.body}</MDXRenderer>
+    <section sx={{ my: 5 }}>
+      <MDXRenderer>{page.body}</MDXRenderer>
+    </section>
   </Layout>
 )
 

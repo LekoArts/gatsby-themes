@@ -50,7 +50,7 @@ export default {
     divide: tailwind.colors.gray[4],
     modes: {
       dark: {
-        text: tailwind.colors.gray[3],
+        text: tailwind.colors.gray[4],
         primary: tailwind.colors.purple[5],
         secondary: `#7f8ea3`,
         toggleIcon: tailwind.colors.gray[4],
@@ -72,7 +72,7 @@ export default {
       backgroundColor: `background`,
     },
     p: {
-      fontSize: [1, 2],
+      fontSize: [1, 1, 2],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
@@ -85,5 +85,34 @@ export default {
   },
   text: {
     ...headingStyles,
+    heading: {
+      fontFamily: `heading`,
+      fontWeight: `heading`,
+      lineHeight: `heading`,
+      color: `heading`,
+    },
+  },
+  dividers: {
+    bottom: {
+      borderBottomStyle: `solid`,
+      borderBottomWidth: `1px`,
+      borderBottomColor: `divide`,
+      pb: 3,
+    },
+    top: {
+      borderTopStyle: `solid`,
+      borderTopWidth: `1px`,
+      borderTopColor: `divide`,
+      pt: 3,
+    },
+  },
+  links: {
+    secondary: {
+      color: `secondary`,
+      ":hover": {
+        textDecoration: `none`,
+        color: `heading`,
+      },
+    },
   },
 }

@@ -18,6 +18,7 @@ module.exports = themeOptions => {
       blogPath: options.blogPath,
       postsPath: options.postsPath,
       pagesPath: options.pagesPath,
+      tagsPath: options.tagsPath,
       externalLinks: [
         {
           name: `Twitter`,

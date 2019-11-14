@@ -15,6 +15,8 @@ type Props = {
         name: string
         url: string
       }[]
+      tagsPath: string
+      basePath: string
     }
   }
 }
@@ -36,6 +38,8 @@ const useSiteMetadata = () => {
             name
             url
           }
+          tagsPath
+          basePath
         }
       }
     }

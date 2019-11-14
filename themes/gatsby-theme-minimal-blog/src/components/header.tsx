@@ -5,6 +5,7 @@ import { Flex } from "@theme-ui/components"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import ColorModeToggle from "./colormode-toggle"
 import useNavigation from "../hooks/use-navigation"
+import Navigation from "./navigation"
 
 const Header = () => {
   const { siteTitle, externalLinks } = useSiteMetadata()
@@ -26,24 +27,15 @@ const Header = () => {
       </Flex>
       <Flex
         sx={{
+          variant: `dividers.bottom`,
           alignItems: `center`,
           justifyContent: `space-between`,
           mt: 3,
           color: `secondary`,
           a: { color: `secondary` },
-          borderBottomStyle: `solid`,
-          borderBottomWidth: `1px`,
-          borderBottomColor: `divide`,
-          pb: 3,
         }}
       >
-        <nav sx={{ "a:not(:last-of-type)": { mr: 3 }, fontSize: [1, `18px`] }}>
-          {nav.map(item => (
-            <Styled.a key={item.slug} as={Link} to={item.slug}>
-              {item.title}
-            </Styled.a>
-          ))}
-        </nav>
+        <Navigation nav={nav} />
         <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
           {externalLinks.map(link => (
             <Styled.a key={link.url} href={link.url}>

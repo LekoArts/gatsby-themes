@@ -4,6 +4,7 @@ import { Main, Styled, Container, css } from "theme-ui"
 import "typeface-open-sans"
 import SEO from "./seo"
 import Header from "./header"
+import Footer from "./footer"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -26,6 +27,7 @@ const Layout = ({ children, className }: LayoutProps) => (
         },
         a: {
           transition: `all 0.3s ease-in-out`,
+          color: `text`,
         },
       })}
     />
@@ -33,6 +35,7 @@ const Layout = ({ children, className }: LayoutProps) => (
     <Container>
       <Header />
       <Main className={className}>{children}</Main>
+      <Footer />
     </Container>
   </Styled.root>
 )

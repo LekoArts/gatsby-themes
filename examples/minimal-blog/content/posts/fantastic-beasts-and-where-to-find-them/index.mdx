@@ -5,20 +5,93 @@ tags:
   - Novel
 ---
 
-Charm totalus alohomora petrificus diffindo leviosa wingardium leviosa lumos aresto stupefy. Legilimens charm totalus totalus tarantallegra. Stupefy serpensortia alohomora engorgio charm. Rictusempra funnunculus pesternomi diffindo incarcerous. Lacarnum aparecium arania totalus sonorus sonorus. Stupefy immobilus mortis evanesco aresto charm expecto aresto serpensortia. Sonorus ennervate portus leviosa tarantallegra impedimenta.
+import SpotifyPlayer from "./SpotifyPlayer";
 
-Quodpot jelly-legs mortis wolfsbane locomotor lumos stupefy ennervate protego tarantallegra. Totalus sonorous immobilus pesternomi banishing anapneo impedimenta. Nox tarantallegra rictusempra immobilus lacarnum lacarnum tarantallegra finite lacarnum portus. Imperturbable inflamarae leviosa nox. Densaugeo tarantallegra finite leviosa kedavra protego. Expecto hover rictusempra tarantallegra alohomora. Aguamenti rennervate evanesco stupefy colloportus skele-gro.
+Here will a React component go:
 
-Vipera engorgio impedimenta tarantallegra evanesco crucio funnunculus episkey stupefy. Quietus unction evanesco specialis funnunculus mortis babbling. Alohomora concealment ennervate locomotor rictusempra me aparecium.
+<SpotifyPlayer
+  uri="spotify:user:bbcamerica:playlist:3w18u69NplCpXVG4fQG726"
+  size="large"
+  theme="black"
+  view="list"
+/>
 
-Liberacorpus serpensortia serpensortia crucio lacarnum lumos. Incantato rictusempra locomotor stupefy relashio. Incendio stupefy fidelius furnunculus engorgio immobilus immobilus evanesco alohomora.
+Here will a live code example go:
 
-Immobilus peskipiksi stupefy imperio quietus. Mobilicorpus unctuous totalus inflamarae.
+```js react-live
+const onClick = () => {
+  alert("You opened me");
+};
+render(<button onClick={onClick}>Alohomora!</button>);
+```
 
-Leviosa serpensortia patronum immobilus. Lacarnum imperio nox immobilus quietus aresto. Locomotor specialis incarcerous funnunculus muffliato evanesco stupefy funnunculus patronum. Legilimens leviosa reparo aparecium rictusempra. Reparo lacarnum reducio mortis stupefy inflamarae totalus serpensortia. Liberacorpus reducio imperturbable revelio aparecium charm lacarnum sonorus alohomora imperio.
+Here will a normal code block go:
 
-Protego totalus sonorus portus incarcerous locomotor tarantallegra anapneo legilimens mobilicorpus. Aparecium lumos expecto locomotor locomotor mortis imperturbable petrificus lacarnum portus. Aparecium totalus lumos expecto totalus banishing patronum petrificus incendio stupefy.
+```js
+(function() {
 
-Locomotor sonorus mobilicorpus imperio confundus mortis quietus lumos mortis expecto. Immobilus portus petrificus protego aresto quietus serpensortia lumos. Engorgio legilimens protean funnunculus ennervate avada arania stupefy petrificus. Confundus inflamarae inflamarae petrificus curse alohomora wingardium inflamarae. Alohomora bulbadox serpensortia babbling evanesco lacarnum. Protego unbreakable serpensortia imperio stupefy serpensortia rictusempra.
+var cache = {};
+var form = $('form');
+var minified = true;
 
-Drought expelliarmus totalus mortis mobilicorpus funnunculus rennervate aparecium scourgify. Legilimens arania aparecium aresto imperius lacarnum ferula reparo. Sonorus pesternomi nox legilimens pesternomi imperio funnunculus aguamenti portus aparecium.
+var dependencies = {};
+
+var treeURL = 'https://api.github.com/repos/PrismJS/prism/git/trees/gh-pages?recursive=1';
+var treePromise = new Promise(function(resolve) {
+	$u.xhr({
+		url: treeURL,
+		callback: function(xhr) {
+			if (xhr.status < 400) {
+				resolve(JSON.parse(xhr.responseText).tree);
+			}
+		}
+	});
+});
+```
+
+Code block with code highlighting:
+
+```jsx:title=src/components/post.jsx {5-7}
+import React from "react";
+
+const Post = ({ data: { post } }: PostProps) => (
+  <Layout>
+    <Heading variant="h2" as="h2">
+      {post.title}
+    </Heading>
+    <p
+      sx={{
+        color: `secondary`,
+        mt: 3,
+        a: { color: `secondary` },
+        fontSize: [1, 1, 2]
+      }}
+    >
+      <span>{post.date}</span>
+      {post.tags && (
+        <React.Fragment>
+          {` — `}
+          <ItemTags tags={post.tags} />
+        </React.Fragment>
+      )}
+    </p>
+    <section
+      sx={{
+        ...CodeStyles,
+        my: 5,
+        ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` }
+      }}
+    >
+      <MDXRenderer>{post.body}</MDXRenderer>
+    </section>
+  </Layout>
+);
+
+export default Post;
+```
+
+Code block without title:
+
+```
+test123
+```

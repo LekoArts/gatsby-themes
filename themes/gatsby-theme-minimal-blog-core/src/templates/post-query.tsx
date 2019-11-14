@@ -9,7 +9,10 @@ export const query = graphql`
       slug
       title
       date(formatString: "DD.MM.YYYY")
-      tags
+      tags {
+        name
+        slug
+      }
       description
       body
       excerpt

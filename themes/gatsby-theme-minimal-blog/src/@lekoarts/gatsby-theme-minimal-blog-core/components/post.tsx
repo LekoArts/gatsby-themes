@@ -3,7 +3,7 @@ import Post from "../../../components/post"
 
 type Props = {
   data: {
-    project: any
+    post: any
     [key: string]: any
   }
 }
