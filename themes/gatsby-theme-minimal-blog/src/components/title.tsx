@@ -25,7 +25,12 @@ const Title = ({ text, children, as = `h2`, className }: TitleProps) => (
     <Heading as={as} sx={{ fontWeight: `normal`, fontSize: [3, 4] }} className={className}>
       {text}
     </Heading>
-    <div sx={{ color: `secondary`, a: { color: `secondary`, textDecoration: `none`, ":hover": { color: `heading` } } }}>
+    <div
+      sx={{
+        color: `secondary`,
+        a: { color: `secondary`, textDecoration: `none`, ":hover": { color: `heading`, textDecoration: `underline` } },
+      }}
+    >
       {children}
     </div>
   </Flex>

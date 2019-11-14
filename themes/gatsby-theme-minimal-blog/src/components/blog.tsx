@@ -6,6 +6,7 @@ import Layout from "./layout"
 import Listing from "./listing"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import replaceSlashes from "../utils/replaceSlashes"
+import SEO from "./seo"
 
 type PostsProps = {
   posts: {
@@ -24,6 +25,7 @@ const Blog = ({ posts }: PostsProps) => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <Heading variant="h2" as="h2">
           Blog

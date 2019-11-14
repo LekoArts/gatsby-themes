@@ -5,6 +5,7 @@ import kebabCase from "lodash.kebabcase"
 import { Link } from "gatsby"
 import Layout from "./layout"
 import useSiteMetadata from "../hooks/use-site-metadata"
+import SEO from "./seo"
 
 type PostsProps = {
   list: {
@@ -18,6 +19,7 @@ const Tags = ({ list }: PostsProps) => {
 
   return (
     <Layout>
+      <SEO title="Tags" />
       <Heading variant="h2" as="h2">
         Tags
       </Heading>

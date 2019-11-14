@@ -6,6 +6,7 @@ import Layout from "./layout"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import Listing from "./listing"
 import replaceSlashes from "../utils/replaceSlashes"
+import SEO from "./seo"
 
 type TagProps = {
   posts: {
@@ -30,6 +31,7 @@ const Tag = ({ posts, pageContext }: TagProps) => {
 
   return (
     <Layout>
+      <SEO title={`Tag: ${pageContext.name}`} />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
         <Heading variant="h2" as="h2">
           {pageContext.name}

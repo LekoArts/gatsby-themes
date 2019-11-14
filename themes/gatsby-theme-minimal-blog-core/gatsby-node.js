@@ -75,6 +75,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 160): String!
       body: String!
+      timeToRead: Int!
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -99,6 +100,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
+      timeToRead: Int! @mdxpassthrough(fieldName: "timeToRead")
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -147,6 +149,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       date: node.frontmatter.date,
       tags: modifiedTags,
       banner: node.frontmatter.banner,
+      description: node.frontmatter.description,
     }
 
     const mdxPostId = createNodeId(`${node.id} >>> MdxPost`)
