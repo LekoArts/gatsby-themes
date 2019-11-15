@@ -6,39 +6,11 @@ module.exports = themeOptions => {
 
   return {
     siteMetadata: {
-      siteTitle: `Lupin`,
-      siteTitleAlt: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
-      siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-      siteUrl: `https://minimal-blog.lekoarts.de`,
-      siteDescription: `TODO`,
-      siteLanguage: `en`,
-      siteImage: `/banner.jpg`,
-      author: `@lekoarts_de`,
       basePath: options.basePath,
       blogPath: options.blogPath,
       postsPath: options.postsPath,
       pagesPath: options.pagesPath,
       tagsPath: options.tagsPath,
-      externalLinks: [
-        {
-          name: `Twitter`,
-          url: `https://twitter.com/lekoarts_de`,
-        },
-        {
-          name: `Instagram`,
-          url: `https://www.instagram.com/lekoarts.de/`,
-        },
-      ],
-      navigation: [
-        {
-          title: `Blog`,
-          slug: `/blog`,
-        },
-        {
-          title: `About`,
-          slug: `/about`,
-        },
-      ],
     },
     plugins: [
       {
