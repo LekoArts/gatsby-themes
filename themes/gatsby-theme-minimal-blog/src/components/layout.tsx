@@ -1,7 +1,7 @@
 import React from "react"
 import { Global } from "@emotion/core"
 import { Main, Styled, Container, css } from "theme-ui"
-import "typeface-open-sans"
+import "typeface-ibm-plex-sans"
 import SEO from "./seo"
 import Header from "./header"
 import Footer from "./footer"

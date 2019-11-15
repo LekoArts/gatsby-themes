@@ -62,7 +62,7 @@ export default {
   },
   fonts: {
     ...tailwind.fonts,
-    body: `"Open Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
+    body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   },
   styles: {
     ...tailwind.styles,
@@ -119,7 +119,12 @@ export default {
   links: {
     secondary: {
       color: `secondary`,
+      textDecoration: `none`,
       ":hover": {
+        color: `heading`,
+        textDecoration: `underline`,
+      },
+      ":focus": {
         color: `heading`,
       },
     },
