@@ -108,6 +108,28 @@ Code block without lineNumbers (and without lang):
 Harry Potter and the Chamber of Secrets
 ```
 
+Code block with only the title:
+
+```:title=src/utils/scream.js
+const scream = (input) => window.alert(input)
+```
+
+Code block with only the title but without lineNumbers:
+
+```:title=src/utils/scream.js noLineNumbers
+const scream = (input) => window.alert(input)
+```
+
+Line highlighting without code title:
+
+```js {2,4-5}
+const test = 3;
+const foo = "bar";
+const harry = "potter";
+const hermione = "granger";
+const ron = "weasley";
+```
+
 Here will `inline code` go, just inside the text. Wow!
 
 Code block without line numbers but with highlighting, language, and title:

@@ -79,9 +79,37 @@ module.exports = {
 };
 ```
 
+#### Additional configuration
+
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+
+```js
+// gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    // Used for the title template on pages other than the index site
+    siteTitle: `{{titleCase name}}`,
+    // Default title of the page
+    siteTitleAlt: `{{titleCase name}} - @lekoarts/gatsby-theme-{{kebabCase name}}`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `{{titleCase name}} - Gatsby Theme from @lekoarts`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://{{kebabCase name}}.lekoarts.de`,
+    // Used for SEO
+    siteDescription: `TODO`,
+    // Will be set on the html tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/banner.jpg`,
+    // Twitter Handle
+    author: `@lekoarts_de`
+  }
+};
+```
+
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-{{kebabCase name}}/` to shadow/override files.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-{{kebabCase name}}/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ## 🌟 Supporting me
 
