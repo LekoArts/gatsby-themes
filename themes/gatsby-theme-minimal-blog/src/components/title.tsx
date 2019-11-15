@@ -20,6 +20,7 @@ const Title = ({ text, children, as = `h2`, className }: TitleProps) => (
       borderBottomColor: `divide`,
       pb: 3,
       mb: 4,
+      flexFlow: `wrap`,
     }}
   >
     <Heading as={as} sx={{ fontWeight: `normal`, fontSize: [3, 4] }} className={className}>

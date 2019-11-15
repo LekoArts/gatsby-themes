@@ -32,7 +32,7 @@ const Tag = ({ posts, pageContext }: TagProps) => {
   return (
     <Layout>
       <SEO title={`Tag: ${pageContext.name}`} />
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+      <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading variant="h2" as="h2">
           {pageContext.name}
         </Heading>

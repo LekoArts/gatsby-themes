@@ -26,7 +26,7 @@ const Blog = ({ posts }: PostsProps) => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+      <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading variant="h2" as="h2">
           Blog
         </Heading>

@@ -38,6 +38,7 @@ const Header = () => {
           mt: 3,
           color: `secondary`,
           a: { color: `secondary`, ":hover": { color: `heading` } },
+          flexFlow: `wrap`,
         }}
       >
         <Navigation nav={nav} />

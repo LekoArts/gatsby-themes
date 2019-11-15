@@ -12,18 +12,17 @@ const Footer = () => {
       sx={{
         variant: `dividers.top`,
         justifyContent: `space-between`,
-        mt: [5, 6, 6],
+        mt: [6],
         color: `secondary`,
         a: {
           variant: `links.secondary`,
         },
+        flexDirection: [`column`, `column`, `row`],
       }}
     >
-      <Flex>
-        <div>
-          &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
-        </div>
-      </Flex>
+      <div>
+        &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
+      </div>
       <div>
         <Styled.a
           aria-label="Link to the theme's GitHub repository"

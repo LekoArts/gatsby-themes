@@ -82,6 +82,16 @@ export default {
     Container: {
       padding: [3, 4],
     },
+    blockquote: {
+      borderLeftColor: `primary`,
+      borderLeftStyle: `solid`,
+      borderLeftWidth: `6px`,
+      mx: 0,
+      pl: 4,
+      p: {
+        fontStyle: `italic`,
+      },
+    },
   },
   text: {
     ...headingStyles,
