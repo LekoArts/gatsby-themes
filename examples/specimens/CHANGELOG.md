@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.15](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.14...specimens@0.0.15) (2019-11-16)
+
+
+### Bug Fixes
+
+* **specimens:** Overflow of code block ([cd30475](https://github.com/LekoArts/gatsby-themes/commit/cd30475))
+
+
+
+
+
 ## [0.0.14](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.13...specimens@0.0.14) (2019-11-16)
 
 **Note:** Version bump only for package specimens
