@@ -75,6 +75,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 160): String!
       body: String!
+      html: String
       timeToRead: Int!
       tags: [PostTag]
       banner: File @fileByRelativePath
@@ -100,6 +101,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
+      html: String! @mdxpassthrough(fieldName: "html")
       timeToRead: Int! @mdxpassthrough(fieldName: "timeToRead")
       tags: [PostTag]
       banner: File @fileByRelativePath

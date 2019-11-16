@@ -1,3 +1,5 @@
+const newsletterFeed = require(`./src/utils/newsletterFeed`)
+
 module.exports = options => {
   const showLineNumbers = options.showLineNumbers || true
 
@@ -33,6 +35,10 @@ module.exports = options => {
       {
         resolve: `@lekoarts/gatsby-theme-minimal-blog-core`,
         options,
+      },
+      {
+        resolve: `gatsby-plugin-feed`,
+        options: newsletterFeed,
       },
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-typescript`,
