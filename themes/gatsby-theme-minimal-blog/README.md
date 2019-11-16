@@ -42,6 +42,7 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 - Typography driven, minimal style
 - Tags/Categories support
 - Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Also allows adding line numbers, line highlighting, language tabs, and file titles.
+- RSS Feed for blog posts
 
 ## Installation
 

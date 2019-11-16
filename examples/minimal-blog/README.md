@@ -15,8 +15,8 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="TODO">
-    <img src="TODO" alt="Netlify Status" />
+  <a href="https://app.netlify.com/sites/minimal-blog/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/f466015c-14f4-440d-a92b-0b0e30de609a/deploy-status" alt="Netlify Status" />
   </a>
 </p>
 
@@ -34,6 +34,7 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 - Typography driven, minimal style
 - Tags/Categories support
 - Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Also allows adding line numbers, line highlighting, language tabs, and file titles.
+- RSS Feed for blog posts
 - Google Analytics Support
 - SEO (Sitemap, OpenGraph tags, Twitter tags)
 - Offline Support & WebApp Manifest
