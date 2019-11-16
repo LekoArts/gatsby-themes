@@ -1,0 +1,49 @@
+{
+  "name": "@lekoarts/gatsby-theme-minimal-blog-core",
+  "version": "1.0.0",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Core Theme for @lekoarts/gatsby-theme-minimal-blog. This theme implements the Post and Page node interfaces and exports templates (+ queries) which you can shadow.",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "@mdx-js/react": "^1.5.1",
+    "gatsby": "^2.17.10",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.1",
+    "@mdx-js/react": "^1.5.1",
+    "gatsby-plugin-mdx": "^1.0.55",
+    "gatsby-plugin-sharp": "^2.2.36",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "gatsby-remark-images": "^3.1.29",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-sharp": "^2.3.2",
+    "lodash.kebabcase": "^4.1.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-minimal-blog-core"
+  }
+}

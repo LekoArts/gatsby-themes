@@ -1,0 +1,163 @@
+---
+title: Fantastic Beasts and Where to Find Them
+date: 2019-11-01
+tags:
+  - Novel
+---
+
+import SpotifyPlayer from "./SpotifyPlayer";
+
+Here will a React component go:
+
+<SpotifyPlayer
+  uri="spotify:user:bbcamerica:playlist:3w18u69NplCpXVG4fQG726"
+  size="large"
+  theme="black"
+  view="list"
+/>
+
+Here will a live code example go:
+
+```js react-live
+const onClick = () => {
+  alert("You opened me");
+};
+render(<button onClick={onClick}>Alohomora!</button>);
+```
+
+Here will a normal code block go:
+
+```js
+(function() {
+
+var cache = {};
+var form = $('form');
+var minified = true;
+
+var dependencies = {};
+
+var treeURL = 'https://api.github.com/repos/PrismJS/prism/git/trees/gh-pages?recursive=1';
+var treePromise = new Promise(function(resolve) {
+	$u.xhr({
+		url: treeURL,
+		callback: function(xhr) {
+			if (xhr.status < 400) {
+				resolve(JSON.parse(xhr.responseText).tree);
+			}
+		}
+	});
+});
+```
+
+Code block with code highlighting:
+
+```jsx:title=src/components/post.jsx {5-7,10}
+import React from "react";
+
+const Post = ({ data: { post } }) => (
+  <Layout>
+    <Heading variant="h2" as="h2">
+      {post.title}
+    </Heading>
+    <p
+      sx={{
+        color: `secondary`,
+        mt: 3,
+        a: { color: `secondary` },
+        fontSize: [1, 1, 2]
+      }}
+    >
+      <span>{post.date}</span>
+      {post.tags && (
+        <React.Fragment>
+          {` — `}
+          <ItemTags tags={post.tags} />
+        </React.Fragment>
+      )}
+    </p>
+    <section
+      sx={{
+        ...CodeStyles,
+        my: 5,
+        ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` }
+      }}
+    >
+      <MDXRenderer>{post.body}</MDXRenderer>
+    </section>
+  </Layout>
+);
+
+export default Post;
+```
+
+Code block without title:
+
+```
+Harry Potter and the Philosopher's Stone
+```
+
+Code block without lineNumbers (but lang):
+
+```text noLineNumbers
+Harry Potter and the Chamber of Secrets
+```
+
+Code block without lineNumbers (and without lang):
+
+```noLineNumbers
+Harry Potter and the Chamber of Secrets
+```
+
+Code block with only the title:
+
+```:title=src/utils/scream.js
+const scream = (input) => window.alert(input)
+```
+
+Code block with only the title but without lineNumbers:
+
+```:title=src/utils/scream.js noLineNumbers
+const scream = (input) => window.alert(input)
+```
+
+Line highlighting without code title:
+
+```js {2,4-5}
+const test = 3;
+const foo = "bar";
+const harry = "potter";
+const hermione = "granger";
+const ron = "weasley";
+```
+
+Here will `inline code` go, just inside the text. Wow!
+
+Code block without line numbers but with highlighting, language, and title:
+
+```tsx:title=src/components/blog.tsx {7-9,16} noLineNumbers
+import React from "react";
+
+const Blog = ({ posts }: PostsProps) => {
+  const { tagsPath, basePath } = useSiteMetadata();
+
+  return (
+    <Layout>
+      <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
+        <Heading variant="h2" as="h2">
+          Blog
+        </Heading>
+        <Styled.a
+          as={Link}
+          sx={{ variant: `links.secondary` }}
+          to={`/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`)}
+        >
+          View all tags
+        </Styled.a>
+      </Flex>
+      <Listing posts={posts} sx={{ mt: [4, 5] }} />
+    </Layout>
+  );
+};
+
+export default Blog;
+```
