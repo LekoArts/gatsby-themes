@@ -1,9 +1,8 @@
 /* eslint react/prop-types: 0 */
-/* eslint react/display-name: 0  */
 import React from "react"
 import { preToCodeBlock } from "mdx-utils"
 import { Text } from "@theme-ui/components"
-import Code from "../components/Code"
+import Code from "../components/code"
 import Title from "../components/title"
 
 export default {
