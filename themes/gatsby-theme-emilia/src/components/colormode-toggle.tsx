@@ -30,6 +30,8 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
         outline: `none`,
         background: `none`,
         cursor: `pointer`,
+        padding: 0,
+        appearance: `none`,
         "&:hover, &:focus": { opacity: 1 },
       }}
     >
