@@ -75,6 +75,7 @@ const Layout = ({ children }) => {
             padding: 0.75rem;
             border-radius: 0.25rem;
             font-size: 1rem;
+            overflow: auto;
           }
           code {
             background-color: rgb(30, 30, 30);
