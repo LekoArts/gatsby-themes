@@ -3,14 +3,14 @@ import { tint } from "@theme-ui/color"
 export default {
   "[data-name='live-editor']": {
     padding: (t: any) => `${t.space[2]} !important`,
-    fontSize: [1, 1, 2],
+    fontSize: 1,
   },
   "[data-name='live-preview']": {
     padding: (t: any) => `calc(${t.space[2]} + 10px) !important`,
     backgroundColor: tint(`primary`, 0.7),
   },
   ".prism-code": {
-    fontSize: [1, 1, 2],
+    fontSize: 1,
     padding: 3,
     webkitOverflowScrolling: `touch`,
     backgroundColor: `transparent`,
@@ -24,6 +24,9 @@ export default {
       },
     },
   },
+  ".token": {
+    display: `inline-block`,
+  },
   "p > code": {
     bg: `rgb(1, 22, 39)`,
     color: `rgb(214, 222, 235)`,
@@ -31,6 +34,7 @@ export default {
     py: 1,
   },
   ".gatsby-highlight": {
+    fontSize: 1,
     position: `relative`,
     webkitOverflowScrolling: `touch`,
     bg: `rgb(1, 22, 39)`,
