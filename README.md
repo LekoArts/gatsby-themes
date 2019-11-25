@@ -50,6 +50,12 @@ To launch the development server of an example site, use:
 yarn workspace [examples/name] develop
 ```
 
+Or for a build:
+
+```sh
+yarn workspace [examples/name] build
+```
+
 In the case of `examples/emma` this command would be `yarn workspace emma develop`. Now you can make changes to the respective theme and see them via Hot-Reloading.
 
 Commit your changes to a feature branch of your fork and open up a PR against this repository. The PR will have checks in place (unit and end-to-end tests) which you can also run on your machine in preparation for the PR.
