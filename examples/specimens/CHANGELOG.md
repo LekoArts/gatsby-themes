@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.15...specimens@0.0.16) (2019-11-25)
+
+
+### Bug Fixes
+
+* **deps:** Update all dependencies ([#159](https://github.com/LekoArts/gatsby-themes/issues/159)) ([6047e50](https://github.com/LekoArts/gatsby-themes/commit/6047e5005f5b1ea3438ec99c0aea1cd1febf20b0))
+
+
+
+
+
 ## [0.0.15](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.14...specimens@0.0.15) (2019-11-16)
 
 

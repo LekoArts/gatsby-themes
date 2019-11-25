@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.11...@lekoarts/gatsby-theme-cara@1.0.12) (2019-11-25)
+
+
+### Bug Fixes
+
+* **deps:** Update all dependencies ([#159](https://github.com/LekoArts/gatsby-themes/issues/159)) ([6047e50](https://github.com/LekoArts/gatsby-themes/commit/6047e5005f5b1ea3438ec99c0aea1cd1febf20b0))
+* **deps:** update gatsby ([#166](https://github.com/LekoArts/gatsby-themes/issues/166)) ([8b5cd32](https://github.com/LekoArts/gatsby-themes/commit/8b5cd32222495e1433b6c508697b1853ba99b939))
+* **deps:** update theme ui ([#158](https://github.com/LekoArts/gatsby-themes/issues/158)) ([ef07342](https://github.com/LekoArts/gatsby-themes/commit/ef07342deed95faf403f3ce07fe5b2a8f9996ef0))
+
+
+
+
+
 ## [1.0.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.10...@lekoarts/gatsby-theme-cara@1.0.11) (2019-11-16)
 
 
