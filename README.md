@@ -64,7 +64,7 @@ Have a look at the [contributing guide](CONTRIBUTING.md) to learn more.
 
 ## 🤩 Newsletter
 
-If you want to receive monthly updates on my themes and all things related to Gatsby themes (relevant blog posts from me and other people) you can [subscribe to my newsletter](https://leko.io/newsletter-themes).
+If you want to receive monthly updates on my themes and all things related to Gatsby themes (relevant blog posts from me and other people, articles about Theme UI) you can [subscribe to my newsletter](https://leko.io/newsletter-themes).
 
 ## 🎓 Learning Gatsby Themes
 
