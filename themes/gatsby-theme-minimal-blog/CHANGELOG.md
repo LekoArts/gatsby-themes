@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.0...@lekoarts/gatsby-theme-minimal-blog@1.1.1) (2019-11-26)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Revert lazy loading ([#169](https://github.com/LekoArts/gatsby-themes/issues/169)) ([cfb9c68](https://github.com/LekoArts/gatsby-themes/commit/cfb9c6898e217c2483a6d6f150e0437da611717a))
+
+
+
+
+
 # [1.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.0.3...@lekoarts/gatsby-theme-minimal-blog@1.1.0) (2019-11-25)
 
 
