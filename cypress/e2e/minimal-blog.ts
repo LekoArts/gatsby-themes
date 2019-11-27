@@ -99,6 +99,20 @@ describe(`gatsby-theme-minimal-blog`, () => {
         /Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog./i
       )
   })
+  it(`should render blogpost with code component`, () => {
+    cy.visit(`/fantastic-beasts-and-where-to-find-them`)
+      .assertRoute(`/fantastic-beasts-and-where-to-find-them`)
+      .waitForRouteChange()
+      .get(`h2`)
+      .within(() => {
+        cy.findByText(/Fantastic Beasts and Where to Find Them/i)
+      })
+      .findByTitle(`Spotify`)
+      .get(`[data-name="live-editor"]`)
+      .should(`exist`)
+      .get(`[data-language="jsx"]`)
+      .should(`exist`)
+  })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/Activate Dark Mode/i)
   })
