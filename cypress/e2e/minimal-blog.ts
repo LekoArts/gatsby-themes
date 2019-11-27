@@ -100,7 +100,8 @@ describe(`gatsby-theme-minimal-blog`, () => {
       )
   })
   it(`should render blogpost with code component`, () => {
-    cy.visit(`/fantastic-beasts-and-where-to-find-them/`)
+    cy.visit(`/fantastic-beasts-and-where-to-find-them`)
+      .assertRoute(`/fantastic-beasts-and-where-to-find-them`)
       .waitForRouteChange()
       .get(`h2`)
       .within(() => {
