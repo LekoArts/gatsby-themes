@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.2...@lekoarts/gatsby-theme-minimal-blog@1.1.3) (2019-12-01)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Remove file extension from import ([88f2f3d](https://github.com/LekoArts/gatsby-themes/commit/88f2f3d40d49afda2cd8e39fe4f3f11104d44a7a))
+
+
+
+
+
 ## [1.1.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.1...@lekoarts/gatsby-theme-minimal-blog@1.1.2) (2019-11-27)
 
 
