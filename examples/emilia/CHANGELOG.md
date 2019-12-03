@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/LekoArts/gatsby-themes/compare/emilia@0.0.15...emilia@0.0.16) (2019-12-03)
+
+**Note:** Version bump only for package emilia
+
+
+
+
+
 ## [0.0.15](https://github.com/LekoArts/gatsby-themes/compare/emilia@0.0.14...emilia@0.0.15) (2019-11-25)
 
 **Note:** Version bump only for package emilia

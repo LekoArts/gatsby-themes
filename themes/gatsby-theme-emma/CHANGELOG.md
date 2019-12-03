@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.0.15...@lekoarts/gatsby-theme-emma@1.1.0) (2019-12-03)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#178](https://github.com/LekoArts/gatsby-themes/issues/178)) ([6ede2c3](https://github.com/LekoArts/gatsby-themes/commit/6ede2c3654f5baa6f1c53f5bb73d046fc257c0af))
+
+
+### Features
+
+* Improve shadow-ability of project template ([#181](https://github.com/LekoArts/gatsby-themes/issues/181)) ([29e6fc8](https://github.com/LekoArts/gatsby-themes/commit/29e6fc8fc5296e4896e6db4fa22213f4ac7fe02f))
+
+
+
+
+
 ## [1.0.15](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.0.14...@lekoarts/gatsby-theme-emma@1.0.15) (2019-11-25)
 
 
