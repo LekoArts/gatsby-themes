@@ -6,6 +6,7 @@ import Layout from "./layout"
 import SEO from "./seo"
 import { ChildImageSharp } from "../types"
 import Hero from "./hero"
+import ProjectInfo from "./project-info"
 
 type Props = {
   data: {
@@ -22,35 +23,6 @@ type Props = {
     }
   }
 }
-
-type ItemProps = {
-  name: string
-  content: string
-}
-
-const Item = ({ name, content }: ItemProps) => (
-  <Flex
-    sx={{
-      flexDirection: `column`,
-      "&:not(:last-of-type)": {
-        mr: 5,
-      },
-      mb: 2,
-    }}
-  >
-    <div
-      sx={{
-        textTransform: `uppercase`,
-        color: `primary`,
-        letterSpacing: `wider`,
-        fontWeight: `semibold`,
-      }}
-    >
-      {name}
-    </div>
-    <div sx={{ fontSize: 2 }}>{content}</div>
-  </Flex>
-)
 
 const Project = ({ data: { project } }: Props) => {
   const titleProps = useSpring({
@@ -92,11 +64,7 @@ const Project = ({ data: { project } }: Props) => {
             <Styled.h1>{project.title}</Styled.h1>
           </animated.div>
           <animated.div style={infoProps}>
-            <Flex sx={{ mt: 4, mb: [2, 4], flexWrap: `wrap` }}>
-              <Item name="Client" content={project.client} />
-              <Item name="Date" content={project.date} />
-              <Item name="Service" content={project.service} />
-            </Flex>
+            <ProjectInfo project={project} />
           </animated.div>
         </Flex>
       </Hero>
