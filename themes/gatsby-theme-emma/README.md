@@ -165,3 +165,7 @@ slug: "/name"
 cover: "./name.jpg"
 ---
 ```
+
+#### Project Info
+
+You can shadow `src/@lekoarts/gatsby-theme-emma/components/project-info.tsx` to edit the three informational items below the title on the `project` template.
