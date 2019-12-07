@@ -1,7 +1,3 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
-
 module.exports = {
   siteMetadata: {
     siteTitle: `Styleguide`,
