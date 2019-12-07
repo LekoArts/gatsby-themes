@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Table from "./table"
+import theme from "../theme"
 
 type FontWeightProps = {
   fontWeights: {
@@ -24,7 +25,9 @@ const FontWeight = ({ fontWeights }: FontWeightProps) => (
       <div key={key}>
         <div>{key}</div>
         <div>{value}</div>
-        <div sx={{ fontWeight: value, fontSize: [1, 2] }}>Pack my box with five dozen liquor jugs</div>
+        <div sx={{ fontWeight: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>
+          Pack my box with five dozen liquor jugs
+        </div>
       </div>
     ))}
   </Table>

@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Table from "./table"
+import theme from "../theme"
 
 type FontFamilyProps = {
   fonts: {
@@ -22,8 +23,10 @@ const FontFamily = ({ fonts }: FontFamilyProps) => (
     {Object.entries(fonts).map(([key, value]) => (
       <div key={key}>
         <div>{key}</div>
-        <div sx={{ fontSize: 0 }}>{value}</div>
-        <div sx={{ fontFamily: value, fontSize: [1, 2] }}>Pack my box with five dozen liquor jugs</div>
+        <div sx={{ fontSize: theme.fontSizes[0] }}>{value}</div>
+        <div sx={{ fontFamily: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>
+          Pack my box with five dozen liquor jugs
+        </div>
       </div>
     ))}
   </Table>

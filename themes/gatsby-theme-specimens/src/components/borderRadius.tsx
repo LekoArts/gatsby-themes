@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import Table from "./table"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import getValue from "../utils/get-value"
+import theme from "../theme"
 
 type BorderRadiusProps = {
   radii: {
@@ -22,9 +23,9 @@ const BorderRadius = ({ radii }: BorderRadiusProps) => {
           <div
             sx={{
               borderRadius: `${specimensConfig.rootFontSize * getValue(value)}px`,
-              width: 16,
-              height: 16,
-              backgroundColor: `primary`,
+              width: theme.sizes[`16`],
+              height: theme.sizes[`16`],
+              backgroundColor: theme.colors.primary,
             }}
           />
         </div>

@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Table from "./table"
 import getValue from "../utils/get-value"
+import theme from "../theme"
 
 type SpaceProps = {
   space: string[]
@@ -25,7 +26,7 @@ const Space = ({ space }: SpaceProps) => {
             sx={{
               width: `${specimensConfig.rootFontSize * getValue(size)}px`,
               height: `${specimensConfig.rootFontSize * getValue(size)}px`,
-              backgroundColor: `primary`,
+              backgroundColor: theme.colors.primary,
             }}
           />
         </div>

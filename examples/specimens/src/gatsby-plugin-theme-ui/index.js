@@ -1,5 +1,5 @@
-import theme from "@lekoarts/gatsby-theme-specimens/src/gatsby-plugin-theme-ui"
+import { roboto } from "@theme-ui/presets"
 
 export default {
-  ...theme,
+  ...roboto,
 }
