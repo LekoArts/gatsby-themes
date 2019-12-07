@@ -17,7 +17,7 @@ const FontFamily = ({ fonts }: FontFamilyProps) => (
       "> div > div:nth-of-type(2)": {
         display: [`none`, `block`],
       },
-      variant: `typography.fontFamily`,
+      ...theme.typography.fontFamily,
     }}
   >
     {Object.entries(fonts).map(([key, value]) => (

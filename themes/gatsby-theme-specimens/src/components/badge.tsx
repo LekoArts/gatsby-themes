@@ -19,7 +19,7 @@ const Badge = ({ children, className }: BadgeProps) => (
       letterSpacing: theme.letterSpacings.wider,
       textAlign: `center`,
       textTransform: `uppercase`,
-      variant: `badge.specimens`,
+      ...theme.badge.specimens,
     }}
     data-name="badge"
     className={className}

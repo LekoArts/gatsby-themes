@@ -1,6 +1,12 @@
 // Based on https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 // and https://tailwindcss.com/components
 
+import { jsx } from "theme-ui"
+import ChevronRight from "./icons/chevron-right"
+import Announcement from "./icons/announcement"
+import Info from "./icons/info"
+import Important from "./icons/important"
+
 const borderWidths = {
   px: `1px`,
   "0": `0`,
@@ -404,6 +410,49 @@ const styles = {
   },
 }
 
+const variants = {
+  alerts: {
+    success: {},
+    hint: {},
+    warning: {},
+    info: {},
+    danger: {},
+  },
+  audio: {
+    specimens: {},
+  },
+  badge: {
+    specimens: {},
+  },
+  tables: {
+    borderRadius: {},
+    shadow: {},
+    space: {},
+    specimens: {},
+  },
+  rows: {
+    specimens: {},
+  },
+  swatches: {
+    specimens: {},
+  },
+  download: {
+    specimens: {},
+  },
+  typography: {
+    fontFamily: {},
+    fontSize: {},
+    fontWeight: {},
+    heading: {},
+  },
+  codeStyles: {
+    default: {},
+  },
+  video: {
+    specimens: {},
+  },
+}
+
 const theme = {
   borderWidths,
   breakpoints,
@@ -421,6 +470,7 @@ const theme = {
   styles,
   buttons,
   inputs,
+  ...variants,
 }
 
 export default theme

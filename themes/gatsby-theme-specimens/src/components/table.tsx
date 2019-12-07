@@ -18,7 +18,7 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
       "> div": { display: `grid`, gridTemplateColumns: columns, p: [theme.space[2], theme.space[3]] },
       "> div:nth-of-type(even)": { backgroundColor: theme.colors.gray[1], borderRadius: theme.radii.default },
       "> div:not(:first-of-type)": { py: theme.space[3] },
-      variant: `table.specimens`,
+      ...theme.tables.specimens,
     }}
     className={className}
   >

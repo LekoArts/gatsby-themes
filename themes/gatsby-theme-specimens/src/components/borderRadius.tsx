@@ -15,7 +15,7 @@ const BorderRadius = ({ radii }: BorderRadiusProps) => {
   const specimensConfig = useSpecimensConfig()
 
   return (
-    <Table sx={{ variant: `tables.borderRadius` }} columns="90px 120px 1fr" titles={[`Token`, `Size`, `Preview`]}>
+    <Table sx={{ ...theme.tables.borderRadius }} columns="90px 120px 1fr" titles={[`Token`, `Size`, `Preview`]}>
       {Object.entries(radii).map(([key, value]) => (
         <div key={key}>
           <div>{key}</div>

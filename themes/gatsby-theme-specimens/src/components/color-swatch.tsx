@@ -38,7 +38,7 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
         boxShadow: theme.shadows.default,
         mr: theme.space[3],
         mb: theme.space[3],
-        variant: `swatches.specimens`,
+        ...theme.swatches.specimens,
       }}
       className={className}
     >

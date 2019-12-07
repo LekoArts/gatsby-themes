@@ -14,7 +14,7 @@ const Space = ({ space }: SpaceProps) => {
 
   return (
     <Table
-      sx={{ overflow: `auto`, variant: `tables.space` }}
+      sx={{ overflow: `auto`, ...theme.tables.space }}
       columns="80px 100px 1fr"
       titles={[`Token`, `Size`, `Preview`]}
     >

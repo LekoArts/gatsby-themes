@@ -28,7 +28,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
         flexWrap: `wrap`,
         justifyContent: `space-between`,
         alignItems: `center`,
-        variant: `rows.specimens`,
+        ...theme.rows.specimens,
       }}
     >
       <div

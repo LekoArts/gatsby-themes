@@ -18,7 +18,7 @@ const FontWeight = ({ fontWeights }: FontWeightProps) => (
       "> div > div:nth-of-type(2)": {
         display: [`none`, `block`],
       },
-      variant: `typography.fontWeight`,
+      ...theme.typography.fontWeight,
     }}
   >
     {Object.entries(fontWeights).map(([key, value]) => (

@@ -60,7 +60,7 @@ const Heading = ({ styles, theme }: HeadingProps) => {
               "&:last-child": {
                 borderBottom: `none`,
               },
-              variant: `typography.heading`,
+              ...themeConfig.typography.heading,
             }}
           >
             <div
@@ -143,7 +143,7 @@ const Heading = ({ styles, theme }: HeadingProps) => {
                   fontSize: themeConfig.fontSizes[0],
                   width: `100%`,
                   overflow: `auto`,
-                  variant: `codeStyles.default`,
+                  ...themeConfig.codeStyles.default,
                 }}
               >
                 <pre sx={{ my: themeConfig.space[0] }}>

@@ -18,7 +18,7 @@ const Shadow = ({ shadows }: ShadowProps) => (
         borderRadius: theme.radii.default,
       },
       "> div:not(:first-of-type)": { py: theme.space[4] },
-      variant: `tables.shadow`,
+      ...theme.tables.shadow,
     }}
     columns="120px 1fr"
     titles={[`Token`, `Preview`]}
