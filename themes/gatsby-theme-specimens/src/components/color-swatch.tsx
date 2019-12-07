@@ -3,15 +3,16 @@ import { jsx } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
+import theme from "../theme"
 
 const swatchContentStyles = {
   flexBasis: `50%`,
   display: `flex`,
   flexDirection: `column`,
-  fontSize: 1,
+  fontSize: theme.fontSizes[1],
   alignItems: `flex-start`,
   span: {
-    mb: 2,
+    mb: theme.space[2],
   },
 }
 
@@ -32,12 +33,12 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
       sx={{
         display: `inline-block`,
         width: [`100%`, `265px`, `275px`],
-        borderRadius: `lg`,
+        borderRadius: theme.radii.lg,
         overflow: `hidden`,
-        boxShadow: `default`,
-        mr: 3,
-        mb: 3,
-        variant: `swatches.specimens`,
+        boxShadow: theme.shadows.default,
+        mr: theme.space[3],
+        mb: theme.space[3],
+        ...theme.swatches.specimens,
       }}
       className={className}
     >
@@ -46,13 +47,13 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
         sx={{
           backgroundColor: hex,
           boxShadow: hex === `#ffffff` ? `inset 0 0 0 1px #a0aec0` : `none`,
-          borderTopLeftRadius: `lg`,
-          borderTopRightRadius: `lg`,
+          borderTopLeftRadius: theme.radii.lg,
+          borderTopRightRadius: theme.radii.lg,
           display: `flex`,
           height: `125px`,
           alignItems: `flex-end`,
           justifyContent: `center`,
-          pb: 3,
+          pb: theme.space[3],
           position: `relative`,
         }}
       >
@@ -64,20 +65,25 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
             <div
               title={`${rating.title} (${rating.color}): ${rating.value ? `Pass` : `Fail`}`}
               aria-label={`${rating.title} (${rating.color}): ${rating.value ? `Pass` : `Fail`}`}
-              sx={{ textAlign: `center`, color: rating.color, fontSize: rating.size, fontWeight: `medium` }}
+              sx={{
+                textAlign: `center`,
+                color: rating.color,
+                fontSize: rating.size,
+                fontWeight: theme.fontWeights.medium,
+              }}
             >
               A
             </div>
             <div
               sx={{
                 textAlign: `center`,
-                background: `black`,
-                color: `white`,
-                borderRadius: `default`,
-                fontSize: 0,
-                py: 0,
-                px: 2,
-                mt: 1,
+                background: theme.colors.black,
+                color: theme.colors.white,
+                borderRadius: theme.radii.default,
+                fontSize: theme.fontSizes[0],
+                py: theme.space[0],
+                px: theme.space[2],
+                mt: theme.space[1],
               }}
             >
               {rating.value ? `Pass` : `Fail`}
@@ -88,11 +94,11 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
       <div
         data-name="color-swatch-content"
         sx={{
-          p: 3,
+          p: theme.space[3],
           display: `grid`,
           gridTemplateColumns: `1fr 1fr`,
-          gridGap: 3,
-          backgroundColor: `elementBG`,
+          gridGap: theme.space[3],
+          backgroundColor: theme.colors.elementBG,
           height: `100%`,
         }}
       >

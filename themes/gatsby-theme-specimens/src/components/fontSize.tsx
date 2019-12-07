@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import Table from "./table"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import getValue from "../utils/get-value"
+import theme from "../theme"
 
 type FontSizeProps = {
   fontSizes: string[]
@@ -12,7 +13,7 @@ const FontSize = ({ fontSizes }: FontSizeProps) => {
   const specimensConfig = useSpecimensConfig()
 
   return (
-    <Table sx={{ variant: `typography.fontSize` }} columns={[`75px 100px 1fr`]} titles={[`Token`, `Size`, `Preview`]}>
+    <Table sx={{ ...theme.typography.fontSize }} columns={[`75px 100px 1fr`]} titles={[`Token`, `Size`, `Preview`]}>
       {fontSizes.map((size, index) => (
         <div key={size}>
           <div>{index}</div>

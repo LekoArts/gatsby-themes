@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import DownloadIcon from "../icons/download"
+import theme from "../theme"
 
 type DownloadProps = {
   name: string
@@ -14,24 +15,28 @@ const Download = ({ name, src, bg = `white`, preview = true, notes = `` }: Downl
   <a
     href={src}
     sx={{
-      backgroundColor: `elementBG`,
+      backgroundColor: theme.colors.elementBG,
       display: `block`,
       textDecoration: `none`,
-      color: `text`,
-      p: [3, 4],
-      borderRadius: `lg`,
-      boxShadow: `default`,
-      mb: 3,
-      svg: { width: [6, 8], height: [6, 8], mr: 3 },
+      color: theme.colors.text,
+      p: [theme.space[3], theme.space[4]],
+      borderRadius: theme.radii.lg,
+      boxShadow: theme.shadows.default,
+      mb: theme.space[3],
+      svg: {
+        width: [theme.sizes[`6`], theme.sizes[`8`]],
+        height: [theme.sizes[`6`], theme.sizes[`8`]],
+        mr: theme.space[3],
+      },
       ".primary": {
         fill: `currentColor`,
-        color: `indigo.6`,
+        color: theme.colors.indigo[6],
       },
       ".secondary": {
         fill: `currentColor`,
-        color: `indigo.3`,
+        color: theme.colors.indigo[3],
       },
-      variant: `download.specimens`,
+      ...theme.download.specimens,
     }}
   >
     {name && (
@@ -41,19 +46,21 @@ const Download = ({ name, src, bg = `white`, preview = true, notes = `` }: Downl
       >
         <div sx={{ display: `flex`, alignItems: `center` }}>
           <DownloadIcon />
-          <div sx={{ fontWeight: `medium`, fontSize: 2 }}>{name}</div>
+          <div sx={{ fontWeight: theme.fontWeights.medium, fontSize: theme.fontSizes[2] }}>{name}</div>
         </div>
-        {notes && <div sx={{ my: 2, color: `gray.7`, fontSize: 0 }}>{notes}</div>}
+        {notes && (
+          <div sx={{ my: theme.space[2], color: theme.colors.gray[7], fontSize: theme.fontSizes[0] }}>{notes}</div>
+        )}
       </div>
     )}
     {preview && (
       <div
         data-name="download-preview"
         sx={{
-          mt: 3,
-          boxShadow: `lg`,
-          borderRadius: `lg`,
-          padding: [2, 3],
+          mt: theme.space[3],
+          boxShadow: theme.shadows.lg,
+          borderRadius: theme.radii.lg,
+          padding: [theme.space[2], theme.space[3]],
           backgroundColor: bg,
           img: { maxWidth: `100%` },
           textAlign: `center`,

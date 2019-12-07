@@ -4,6 +4,7 @@ import { jsx } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
 import getValue from "../utils/get-value"
+import themeConfig from "../theme"
 
 type headingType = {
   fontFamily: string
@@ -52,14 +53,14 @@ const Heading = ({ styles, theme }: HeadingProps) => {
               display: `flex`,
               flexDirection: `column`,
               borderBottomWidth: `1px`,
-              borderBottomColor: `gray.3`,
+              borderBottomColor: themeConfig.colors.gray[3],
               borderBottomStyle: `solid`,
-              mb: 4,
-              pb: 4,
+              mb: themeConfig.space[4],
+              pb: themeConfig.space[4],
               "&:last-child": {
                 borderBottom: `none`,
               },
-              variant: `typography.heading`,
+              ...themeConfig.typography.heading,
             }}
           >
             <div
@@ -69,7 +70,7 @@ const Heading = ({ styles, theme }: HeadingProps) => {
                 fontSize: `${specimensConfig.rootFontSize * getValue(theme.fontSizes[type.size])}px`,
                 fontWeight: type.weight,
                 lineHeight: type.lineHeight,
-                mb: 4,
+                mb: themeConfig.space[4],
               }}
             >
               Heading
@@ -83,11 +84,11 @@ const Heading = ({ styles, theme }: HeadingProps) => {
                 justifyContent: `flex-start`,
                 width: `100%`,
                 "> div": {
-                  mr: 4,
-                  mb: 2,
+                  mr: themeConfig.space[4],
+                  mb: themeConfig.space[2],
                 },
                 span: {
-                  mb: 2,
+                  mb: themeConfig.space[2],
                 },
               }}
             >
@@ -126,7 +127,7 @@ const Heading = ({ styles, theme }: HeadingProps) => {
                     hyphens: `none`,
                     backgroundColor: `#f5f7ff`,
                     color: `#5e6687`,
-                    padding: 2,
+                    padding: themeConfig.space[2],
                     borderRadius: `default`,
                     ".token.string": {
                       color: `#22a2c9`,
@@ -138,14 +139,14 @@ const Heading = ({ styles, theme }: HeadingProps) => {
                       color: `#c76b29`,
                     },
                   },
-                  mt: 3,
-                  fontSize: 0,
+                  mt: themeConfig.space[3],
+                  fontSize: themeConfig.fontSizes[0],
                   width: `100%`,
                   overflow: `auto`,
-                  variant: `codeStyles.default`,
+                  ...themeConfig.codeStyles.default,
                 }}
               >
-                <pre sx={{ my: 0 }}>
+                <pre sx={{ my: themeConfig.space[0] }}>
                   <code>
                     <span className="token punctuation">{`{`}</span>
                     <span className="token punctuation" /> fontSize<span className="token punctuation">:</span>

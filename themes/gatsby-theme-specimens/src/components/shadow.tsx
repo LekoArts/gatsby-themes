@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Table from "./table"
+import theme from "../theme"
 
 type ShadowProps = {
   shadows: {
@@ -11,10 +12,13 @@ type ShadowProps = {
 const Shadow = ({ shadows }: ShadowProps) => (
   <Table
     sx={{
-      "> div:nth-of-type(even)": { backgroundColor: `gray.2`, borderRadius: `default` },
-      "> div:nth-of-type(odd):not(:first-of-type)": { backgroundColor: `gray.1`, borderRadius: `default` },
-      "> div:not(:first-of-type)": { py: 4 },
-      variant: `tables.shadow`,
+      "> div:nth-of-type(even)": { backgroundColor: theme.colors.gray[2], borderRadius: theme.radii.default },
+      "> div:nth-of-type(odd):not(:first-of-type)": {
+        backgroundColor: theme.colors.gray[1],
+        borderRadius: theme.radii.default,
+      },
+      "> div:not(:first-of-type)": { py: theme.space[4] },
+      ...theme.tables.shadow,
     }}
     columns="120px 1fr"
     titles={[`Token`, `Preview`]}
@@ -24,9 +28,9 @@ const Shadow = ({ shadows }: ShadowProps) => (
         <div>{key}</div>
         <div
           sx={{
-            width: 16,
-            height: 16,
-            backgroundColor: `white`,
+            width: theme.sizes[`16`],
+            height: theme.sizes[`16`],
+            backgroundColor: theme.colors.white,
             boxShadow: value,
           }}
         />

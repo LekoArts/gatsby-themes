@@ -3,6 +3,7 @@ import { jsx } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Table from "./table"
 import getValue from "../utils/get-value"
+import theme from "../theme"
 
 type SpaceProps = {
   space: string[]
@@ -13,7 +14,7 @@ const Space = ({ space }: SpaceProps) => {
 
   return (
     <Table
-      sx={{ overflow: `auto`, variant: `tables.space` }}
+      sx={{ overflow: `auto`, ...theme.tables.space }}
       columns="80px 100px 1fr"
       titles={[`Token`, `Size`, `Preview`]}
     >
@@ -25,7 +26,7 @@ const Space = ({ space }: SpaceProps) => {
             sx={{
               width: `${specimensConfig.rootFontSize * getValue(size)}px`,
               height: `${specimensConfig.rootFontSize * getValue(size)}px`,
-              backgroundColor: `primary`,
+              backgroundColor: theme.colors.primary,
             }}
           />
         </div>

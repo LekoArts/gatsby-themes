@@ -2,6 +2,7 @@
 import React from "react"
 import { jsx } from "theme-ui"
 import Badge from "./badge"
+import theme from "../theme"
 
 type TableProps = {
   className?: string
@@ -14,21 +15,25 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
   <div
     sx={{
       div: { alignSelf: `center` },
-      "> div": { display: `grid`, gridTemplateColumns: columns, p: [2, 3] },
-      "> div:nth-of-type(even)": { backgroundColor: `gray.1`, borderRadius: `default` },
-      "> div:not(:first-of-type)": { py: 3 },
-      variant: `table.specimens`,
+      "> div": { display: `grid`, gridTemplateColumns: columns, p: [theme.space[2], theme.space[3]] },
+      "> div:nth-of-type(even)": { backgroundColor: theme.colors.gray[1], borderRadius: theme.radii.default },
+      "> div:not(:first-of-type)": { py: theme.space[3] },
+      ...theme.tables.specimens,
     }}
     className={className}
   >
     <div
       data-testid="table-header"
       sx={{
-        p: 2,
-        backgroundColor: `indigo.1`,
-        borderRadius: `default`,
-        mb: 3,
-        "[data-name='badge']": { backgroundColor: `indigo.2`, color: `indigo.9`, fontWeight: `medium` },
+        p: theme.space[2],
+        backgroundColor: theme.colors.indigo[1],
+        borderRadius: theme.radii.default,
+        mb: theme.space[3],
+        "[data-name='badge']": {
+          backgroundColor: theme.colors.indigo[2],
+          color: theme.colors.indigo[9],
+          fontWeight: theme.fontWeights.medium,
+        },
       }}
     >
       {titles.map(title => (

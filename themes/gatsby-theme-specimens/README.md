@@ -102,7 +102,7 @@ Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs
 
 ### Modifications
 
-As with every Gatsby theme you can of course shadow the files (e.g. `src/@lekoarts/gatsby-theme-specimens/alert.js`) but if you only want to change some styles, not the whole structure of the component you can get away with another approach. Since all components are styled with Theme UI, you are able to override the theme's Theme UI config file.
+As with every Gatsby theme you can of course shadow the files (e.g. `src/@lekoarts/gatsby-theme-specimens/alert.js`) but if you only want to change some styles, not the whole structure of the component you can get away with another approach. Since all components are styled with a Theme UI/System UI compatible theme file, you are able to override it.
 
 Every component has a `variant` defined in its styles, e.g. the mentioned "Alert" component:
 
@@ -110,7 +110,7 @@ Every component has a `variant` defined in its styles, e.g. the mentioned "Alert
 const Alert = ({ children, type = `hint` }: AlertProps) => (
   <div
     data-alert-type={type}
-    sx={{ ...commonAlertStyles, ...alerts[type], variant: `alerts.${type}` }}
+    sx={{ ...commonAlertStyles, ...alerts[type], ...theme.alerts[type] }}
   >
     {dict[type]}
     {children}
@@ -118,10 +118,12 @@ const Alert = ({ children, type = `hint` }: AlertProps) => (
 );
 ```
 
-You can use the variant to add additional styles / override styles. Create a new file at `src/gatsby-plugin-theme-ui/index.js` with the following content:
+Here: `...theme.alerts[type]`
+
+You can use the variant to add additional styles / override styles. Create a new file at `src/@lekoarts/gatsby-theme-specimens/theme.js` with the following content:
 
 ```js
-import baseTheme from "@lekoarts/gatsby-theme-specimens/src/gatsby-plugin-theme-ui";
+import baseTheme from "@lekoarts/gatsby-theme-specimens/src/theme";
 
 export default {
   ...baseTheme,
@@ -137,9 +139,7 @@ The [**Demo Website**](https://specimens.lekoarts.de) tells you the respective v
 
 ### Using together with existing Theme UI config
 
-Since this theme uses Theme UI to style its components, a Theme UI config file placed in your project will override the styles. Internally it uses the [`@theme-ui/presets` tailwind](https://theme-ui.com/presets/) so if you're fine with using this preset globally, go ahead and follow the aforementioned guide ("Modifications"). You can still override individual styles with this approach.
-
-If you want to separate the styles completely, have a look at Theme UI's recipe on [Nested Theme Providers](https://theme-ui.com/guides/nested-theme-providers). The idea is that you will wrap the MDX content with its own `ThemeProvider` (and pass the theme from `@lekoarts/gatsby-theme-specimens` to it).
+Since this theme uses a local file with the [`@theme-ui/presets` tailwind](https://theme-ui.com/presets/) your Theme UI config you e.g. set up with `gatsby-plugin-theme-ui` won't affect the styles of this theme.
 
 ### MDX Shortcodes
 

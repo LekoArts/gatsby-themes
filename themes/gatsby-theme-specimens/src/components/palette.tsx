@@ -2,6 +2,7 @@
 import { jsx } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"
+import theme from "../theme"
 
 const join = (...args: any) => args.filter(Boolean).join(`.`)
 
@@ -26,27 +27,27 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
     wrapperStyles = {
       display: `grid`,
       overflow: `hidden`,
-      borderRadius: `lg`,
-      boxShadow: `default`,
+      borderRadius: theme.radii.lg,
+      boxShadow: theme.shadows.default,
       "> div": {
-        mb: 0,
+        mb: theme.space[0],
         borderRadius: 0,
         boxShadow: `none`,
       },
       "> div:not(:last-child)": {
         borderBottomWidth: `1px`,
         borderBottomStyle: `solid`,
-        borderBottomColor: `gray.3`,
+        borderBottomColor: theme.colors.gray[3],
       },
     }
   } else {
     wrapperStyles = {
       display: `grid`,
       gridTemplateColumns: `repeat(auto-fit,minmax(265px,1fr))`,
-      gridGap: 3,
+      gridGap: theme.space[3],
       "> div": {
-        mb: 0,
-        mr: 0,
+        mb: theme.space[0],
+        mr: theme.space[0],
       },
     }
   }

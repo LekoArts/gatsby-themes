@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
+import theme from "../theme"
 
 type BadgeProps = {
   children: React.ReactNode
@@ -10,15 +11,15 @@ type BadgeProps = {
 const Badge = ({ children, className }: BadgeProps) => (
   <span
     sx={{
-      backgroundColor: `gray.3`,
-      color: `gray.8`,
+      backgroundColor: theme.colors.gray[3],
+      color: theme.colors.gray[8],
       fontSize: `0.75rem`,
       padding: `3px 8px`,
-      borderRadius: `default`,
-      letterSpacing: `wider`,
+      borderRadius: theme.radii.default,
+      letterSpacing: theme.letterSpacings.wider,
       textAlign: `center`,
       textTransform: `uppercase`,
-      variant: `badge.specimens`,
+      ...theme.badge.specimens,
     }}
     data-name="badge"
     className={className}

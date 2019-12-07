@@ -3,6 +3,7 @@ import React from "react"
 import { jsx } from "theme-ui"
 import Palette from "./palette"
 import normalizeThemeUIColors from "../utils/normalize-theme-ui-colors"
+import theme from "../theme"
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
@@ -19,7 +20,11 @@ const ColorFamilies = ({ colors }: ColorFamiliesProps) => {
     return (
       <React.Fragment key={key}>
         <h3>{capitalize(key)}</h3>
-        <Palette colors={normalizeThemeUIColors({ colors: color })} prefix={`${capitalize(key)} - `} sx={{ mb: 4 }} />
+        <Palette
+          colors={normalizeThemeUIColors({ colors: color })}
+          prefix={`${capitalize(key)} - `}
+          sx={{ mb: theme.space[4] }}
+        />
       </React.Fragment>
     )
   })
