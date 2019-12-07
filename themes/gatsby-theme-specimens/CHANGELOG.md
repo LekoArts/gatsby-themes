@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [2.0.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@1.0.14...@lekoarts/gatsby-theme-specimens@2.0.0) (2019-12-07)
 
-* **BREAKING:** Don't use `gatsby-plugin-theme-ui` for the Specimens theme but a local file. So that a global Theme UI config of the site doesn't affect the styling of the components. However, the local theme file is just the Theme UI Tailwind preset and can be shadowed.
+* **BREAKING:** Don't use `gatsby-plugin-theme-ui` for the Specimens theme but a local file. So that a global Theme UI config of the site doesn't affect the styling of the components. However, the local theme file is just the Theme UI Tailwind preset and can be shadowed. ([#184](https://github.com/LekoArts/gatsby-themes/pull/184))
 
 
 
