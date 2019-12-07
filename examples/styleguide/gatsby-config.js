@@ -4,17 +4,20 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Styleguide - TODO`,
+    siteTitle: `Styleguide`,
+    siteTitleAlt: `Theme UI Styleguide`,
+    siteHeadline: `Styleguide - Gatsby Theme from @lekoarts`,
+    siteUrl: `https://www.google.de`,
+    siteDescription: `TODO`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-styleguide`,
-      options: {},
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        basePath: `/`,
       },
     },
     {
