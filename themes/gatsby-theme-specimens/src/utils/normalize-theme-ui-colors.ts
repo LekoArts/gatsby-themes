@@ -1,9 +1,7 @@
 import { get } from "@styled-system/css"
+import { Theme } from "theme-ui"
 
-type normalizeProps = {
-  colors: {
-    [key: string]: string | (string | null)[] | any
-  }
+interface NormalizeProps extends Theme {
   omit?: string[]
 }
 
@@ -12,19 +10,21 @@ type normalizeProps = {
  * @param colors {Object}
  * @param omit {Array.<string>}
  */
-const normalizeThemeUIColors = ({ colors, omit = [`modes`, `transparent`] }: normalizeProps) => {
+const normalizeThemeUIColors = ({ colors, omit = [`modes`, `transparent`] }: NormalizeProps) => {
   const arr: { name: string; color: string }[] = []
 
-  Object.entries(colors)
-    .sort(([_, colorA]) => (typeof colorA === `string` ? -1 : 1))
-    .forEach(([key, color]) => {
-      if (!color || omit.includes(key)) return false
+  if (colors) {
+    Object.entries(colors)
+      .sort(([_, colorA]) => (typeof colorA === `string` ? -1 : 1))
+      .forEach(([key, color]) => {
+        if (!color || omit.includes(key)) return false
 
-      arr.push({
-        name: key,
-        color: get(colors, key),
+        arr.push({
+          name: key,
+          color: get(colors, key),
+        })
       })
-    })
+  }
 
   return arr
 }

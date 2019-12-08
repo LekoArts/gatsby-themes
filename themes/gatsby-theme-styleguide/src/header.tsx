@@ -1,8 +1,8 @@
-import React from "react"
-import { Styled } from "theme-ui"
+/** @jsx jsx */
+import { Styled, jsx } from "theme-ui"
 
 export default () => (
-  <header>
+  <header sx={{ my: 4 }}>
     <Styled.h1>Style Guide</Styled.h1>
   </header>
 )

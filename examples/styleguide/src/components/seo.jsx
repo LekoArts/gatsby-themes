@@ -2,23 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
-const defaultProps = {
-  title: ``,
-  description: false,
-  pathname: false,
-  image: false,
-  children: null,
-}
-
-type Props = {
-  title?: string
-  description?: string
-  pathname?: string
-  image?: string
-  children?: React.ReactNode
-}
-
-const SEO = ({ title, description, pathname, image, children }: Props) => {
+const SEO = ({ title = ``, description = false, pathname = false, image = false, children = null }) => {
   const site = useSiteMetadata()
 
   const {
@@ -65,5 +49,3 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
 }
 
 export default SEO
-
-SEO.defaultProps = defaultProps

@@ -1,11 +1,16 @@
 import React from "react"
 import Layout from "./layout"
 import Header from "./header"
+import Colors from "./colors"
+import Typography from "./typography"
 
 const Template = () => (
   <Layout>
     <Header />
-    <main>test123</main>
+    <main>
+      <Colors />
+      <Typography />
+    </main>
   </Layout>
 )
 
