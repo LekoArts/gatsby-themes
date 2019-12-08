@@ -10,6 +10,7 @@ module.exports = {
     author: `@lekoarts_de`,
   },
   plugins: [
+    `gatsby-plugin-theme-ui`,
     {
       resolve: `@lekoarts/gatsby-theme-styleguide`,
       options: {

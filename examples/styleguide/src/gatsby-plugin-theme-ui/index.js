@@ -1,5 +1,5 @@
-import { roboto } from "@theme-ui/presets"
+import { system } from "@theme-ui/presets"
 
 export default {
-  ...roboto,
+  ...system,
 }
