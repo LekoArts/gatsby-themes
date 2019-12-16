@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import * as CSS from "csstype"
+import { ObjectOrArray } from "styled-system"
 import Table from "./table"
 import theme from "../theme"
 
 type FontWeightProps = {
-  fontWeights: {
-    [key: string]: string
-  }
+  fontWeights?: ObjectOrArray<CSS.FontWeightProperty>
 }
 
 const FontWeight = ({ fontWeights }: FontWeightProps) => (
@@ -21,15 +21,19 @@ const FontWeight = ({ fontWeights }: FontWeightProps) => (
       ...theme.typography.fontWeight,
     }}
   >
-    {Object.entries(fontWeights).map(([key, value]) => (
-      <div key={key}>
-        <div>{key}</div>
-        <div>{value}</div>
-        <div sx={{ fontWeight: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>
-          Pack my box with five dozen liquor jugs
+    {fontWeights ? (
+      Object.entries(fontWeights).map(([key, value]) => (
+        <div key={key}>
+          <div>{key}</div>
+          <div>{value}</div>
+          <div sx={{ fontWeight: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>
+            Pack my box with five dozen liquor jugs
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    ) : (
+      <div sx={{ gridTemplateColumns: `1fr !important` }}>No fontWeights defined</div>
+    )}
   </Table>
 )
 

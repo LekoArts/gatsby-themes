@@ -16,11 +16,7 @@ const baseColors = {
   white: `#fff`,
   gray: [null, `#f7fafc`, `#edf2f7`, `#e2e8f0`, `#cbd5e0`, `#a0aec0`, `#718096`, `#4a5568`, `#2d3748`, `#1a202c`],
   red: [null, `#fff5f5`, `#fed7d7`, `#feb2b2`, `#fc8181`, `#f56565`, `#e53e3e`, `#c53030`, `#9b2c2c`, `#742a2a`],
-  orange: [null, `#fffaf0`, `#feebc8`, `#fbd38d`, `#f6ad55`, `#ed8936`, `#dd6b20`, `#c05621`, `#9c4221`, `#7b341e`],
-  green: [null, `#f0fff4`, `#c6f6d5`, `#9ae6b4`, `#68d391`, `#48bb78`, `#38a169`, `#2f855a`, `#276749`, `#22543d`],
   blue: [null, `#ebf8ff`, `#bee3f8`, `#90cdf4`, `#63b3ed`, `#4299e1`, `#3182ce`, `#2b6cb0`, `#2c5282`, `#2a4365`],
-  indigo: [null, `#ebf4ff`, `#c3dafe`, `#a3bffa`, `#7f9cf5`, `#667eea`, `#5a67d8`, `#4c51bf`, `#434190`, `#3c366b`],
-  purple: [null, `#faf5ff`, `#e9d8fd`, `#d6bcfa`, `#b794f4`, `#9f7aea`, `#805ad5`, `#6b46c1`, `#553c9a`, `#44337a`],
 }
 
 const colors = {
@@ -30,7 +26,6 @@ const colors = {
   primary: baseColors.blue[7],
   secondary: baseColors.gray[6],
   muted: baseColors.gray[3],
-  success: baseColors.green[3],
   info: baseColors.blue[4],
   danger: baseColors.red[3],
 }
@@ -128,7 +123,7 @@ const shadows = {
   none: `none`,
 }
 
-const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`, `16rem`, `32rem`]
+const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`, `16rem`]
 
 const zIndices = {
   auto: `auto`,

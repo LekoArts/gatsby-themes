@@ -3,6 +3,8 @@ import Layout from "./layout"
 import Header from "./header"
 import Colors from "./colors"
 import Typography from "./typography"
+import Footer from "./footer"
+import Space from "./space"
 
 const Template = () => (
   <Layout>
@@ -10,7 +12,9 @@ const Template = () => (
     <main>
       <Colors />
       <Typography />
+      <Space />
     </main>
+    <Footer />
   </Layout>
 )
 
