@@ -26,9 +26,9 @@
     </a>
 </p>
 
-TODO
+Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner.
 
-[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://styleguide.lekoarts.de)
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://theme-ui-styleguide.netlify.com)
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-styleguide).
 
@@ -36,7 +36,9 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## Features
 
-- TODO
+- Automatic styleguide based on your Theme UI configuration
+- Displays colors (individual and palettes), typography (font family, weights, sizes, headings), and a spacing scale
+- Uses [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens) under the hood. You can use components from it to extend your styleguide page
 
 ## Installation
 
@@ -58,9 +60,9 @@ gatsby new styleguide LekoArts/gatsby-starter-styleguide
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| Key        | Default Value  | Description            |
+| ---------- | -------------- | ---------------------- |
+| `basePath` | `/style-guide` | Root url for the theme |
 
 #### Example usage
 
@@ -71,7 +73,7 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-styleguide`,
       options: {
-          // TODO
+          basePath: `/`,
         }
       }
     }
@@ -79,37 +81,23 @@ module.exports = {
 };
 ```
 
-#### Additional configuration
-
-In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
-
-```js
-// gatsby-config.js
-module.exports = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Styleguide`,
-    // Default title of the page
-    siteTitleAlt: `Styleguide - @lekoarts/gatsby-theme-styleguide`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Styleguide - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://styleguide.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `TODO`,
-    // Will be set on the html tag
-    siteLanguage: `en`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Twitter Handle
-    author: `@lekoarts_de`
-  }
-};
-```
-
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-styleguide/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-styleguide/` to shadow/override files.
+
+#### Examples
+
+| Component            | Description                                                      |
+| -------------------- | ---------------------------------------------------------------- |
+| `src/template.tsx`   | Used by `createPage` function and holds all following components |
+| `src/layout.tsx`     | Wrapper for adding a page layout (e.g. max-width)                |
+| `src/header.tsx`     | Header for the top of the page ("Style Guide")                   |
+| `src/colors.tsx`     | Section for colors                                               |
+| `src/typography.tsx` | Section for typography styles                                    |
+| `src/space.tsx`      | Section for space                                                |
+| `src/footer.tsx`     | Footer section (holding the theme notice)                        |
+
+Please keep in mind that you can shadow `.tsx` files also with `.js`/`.jsx` files.
 
 ## 🌟 Supporting me
 
