@@ -20,7 +20,7 @@
   </a>
 </p>
 
-Stub description for Styleguide. Using the Gatsby Theme [`@lekoarts/gatsby-theme-styleguide`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide).
+Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner. Using the Gatsby Theme [`@lekoarts/gatsby-theme-styleguide`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide).
 
 [**Demo Website**](https://styleguide.lekoarts.de)
 
@@ -28,7 +28,9 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 
 ## ✨ Features
 
-- TODO
+- Automatic styleguide based on your Theme UI configuration
+- Displays colors (individual and palettes), typography (font family, weights, sizes, headings), and a spacing scale
+- Uses [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens) under the hood. You can use components from it to extend your styleguide page
 
 ## 🚀 Getting Started
 
@@ -61,7 +63,7 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 
 This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-styleguide`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide).
 
-Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-styleguide/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+Have a look at the theme's README and files to see what options are available and how you can shadow the various components. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-styleguide/` to shadow/override files.
 
 ### Change your `static` folder
 
