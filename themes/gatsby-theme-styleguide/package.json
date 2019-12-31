@@ -1,11 +1,10 @@
 {
-  "name": "@lekoarts/gatsby-theme-specimens",
-  "version": "2.0.0",
+  "name": "@lekoarts/gatsby-theme-styleguide",
+  "version": "1.0.0",
   "author": "LekoArts <hello@lekoarts.de>",
-  "description": "Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.",
+  "description": "Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner.",
   "license": "MIT",
   "main": "index.js",
-  "types": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -16,17 +15,13 @@
     "clean": "gatsby clean"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.65",
+    "gatsby": "^2.13.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
-    "@styled-system/css": "^5.1.4",
-    "chroma-js": "^2.1.0",
-    "gatsby-plugin-typescript": "^2.1.23",
-    "polished": "^3.4.2",
-    "theme-ui": "^0.2.52"
+    "@lekoarts/gatsby-theme-specimens": "^2.0.0",
+    "theme-ui": "^0.2.49"
   },
   "keywords": [
     "gatsby",
@@ -41,6 +36,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LekoArts/gatsby-themes.git",
-    "directory": "themes/gatsby-theme-specimens"
+    "directory": "themes/gatsby-theme-styleguide"
   }
 }
