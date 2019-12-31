@@ -1,6 +1,6 @@
 [build]
   base = "www/"
-  publish = "www/public"
+  publish = "public/"
   command = "gatsby build"
 [context.deploy-preview.processing]
   skip_processing = true
