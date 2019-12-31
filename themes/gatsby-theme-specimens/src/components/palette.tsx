@@ -91,7 +91,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
             <ColorSwatch
               color={color}
               name={name}
-              key={name}
+              key={`${name}-${color}-${prefix}`}
               minimal={minimal}
               prefix={prefix}
               sx={{ width: `100% !important`, display: `block !important` }}
@@ -99,7 +99,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
           )
         }
 
-        return <ColorRow color={color} name={name} prefix={prefix} key={name} />
+        return <ColorRow color={color} name={name} prefix={prefix} key={`${name}-${color}-${prefix}`} />
       })}
     </div>
   )
