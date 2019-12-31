@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.0.0...@lekoarts/gatsby-theme-specimens@2.0.1) (2019-12-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @styled-system/css to ^5.1.4 ([#190](https://github.com/LekoArts/gatsby-themes/issues/190)) ([3bd65c0](https://github.com/LekoArts/gatsby-themes/commit/3bd65c0f6c763e0e5d6ccd8e2b22d1f50bb45e85))
+* **deps:** update emotion monorepo to ^10.0.27 ([#196](https://github.com/LekoArts/gatsby-themes/issues/196)) ([53f019e](https://github.com/LekoArts/gatsby-themes/commit/53f019ed5e0718367dcb2458480f42795cfa4efe))
+* **deps:** update gatsby ([#192](https://github.com/LekoArts/gatsby-themes/issues/192)) ([77916ac](https://github.com/LekoArts/gatsby-themes/commit/77916acb51169bbc2e79af70d0b5ee93d1592a2f))
+* **deps:** update theme ui ([#199](https://github.com/LekoArts/gatsby-themes/issues/199)) ([47bb84a](https://github.com/LekoArts/gatsby-themes/commit/47bb84a5b8da618e8b083632493c97a91c442a89))
+
+
+
+
+
 # [2.0.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@1.0.14...@lekoarts/gatsby-theme-specimens@2.0.0) (2019-12-07)
 
 * **BREAKING:** Don't use `gatsby-plugin-theme-ui` for the Specimens theme but a local file. So that a global Theme UI config of the site doesn't affect the styling of the components. However, the local theme file is just the Theme UI Tailwind preset and can be shadowed. ([#184](https://github.com/LekoArts/gatsby-themes/pull/184))

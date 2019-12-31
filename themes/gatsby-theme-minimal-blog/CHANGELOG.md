@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.4...@lekoarts/gatsby-theme-minimal-blog@1.1.5) (2019-12-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @loadable/component to ^5.11.0 ([#189](https://github.com/LekoArts/gatsby-themes/issues/189)) ([fe60b2b](https://github.com/LekoArts/gatsby-themes/commit/fe60b2b557ef48e9f9ed413209e9f3ca19a8a18e))
+* **deps:** update dependency react-live to ^2.2.2 ([#191](https://github.com/LekoArts/gatsby-themes/issues/191)) ([0b22261](https://github.com/LekoArts/gatsby-themes/commit/0b2226198ac6e7e397bc8b84a0ca3c6fdc68097c))
+* **deps:** update emotion monorepo to ^10.0.27 ([#196](https://github.com/LekoArts/gatsby-themes/issues/196)) ([53f019e](https://github.com/LekoArts/gatsby-themes/commit/53f019ed5e0718367dcb2458480f42795cfa4efe))
+* **deps:** update gatsby ([#192](https://github.com/LekoArts/gatsby-themes/issues/192)) ([77916ac](https://github.com/LekoArts/gatsby-themes/commit/77916acb51169bbc2e79af70d0b5ee93d1592a2f))
+* **deps:** update theme ui ([#193](https://github.com/LekoArts/gatsby-themes/issues/193)) ([cfea6ee](https://github.com/LekoArts/gatsby-themes/commit/cfea6ee10d392cfc40190ed869ce5891221cd7da))
+* **deps:** update theme ui ([#199](https://github.com/LekoArts/gatsby-themes/issues/199)) ([47bb84a](https://github.com/LekoArts/gatsby-themes/commit/47bb84a5b8da618e8b083632493c97a91c442a89))
+
+
+
+
+
 ## [1.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.3...@lekoarts/gatsby-theme-minimal-blog@1.1.4) (2019-12-03)
 
 
