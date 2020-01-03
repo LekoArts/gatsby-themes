@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import { Flex, Heading } from "@theme-ui/components"
+import { Flex } from "@theme-ui/components"
 import { Link } from "gatsby"
 import Layout from "./layout"
 import useSiteMetadata from "../hooks/use-site-metadata"
@@ -33,9 +33,7 @@ const Tag = ({ posts, pageContext }: TagProps) => {
     <Layout>
       <SEO title={`Tag: ${pageContext.name}`} />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Heading variant="h2" as="h2">
-          {pageContext.name}
-        </Heading>
+        <Styled.h2>{pageContext.name}</Styled.h2>
         <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
           View all tags
         </Styled.a>

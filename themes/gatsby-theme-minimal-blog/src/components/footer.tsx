@@ -1,16 +1,15 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
-import { Flex } from "@theme-ui/components"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 const Footer = () => {
   const { siteTitle } = useSiteMetadata()
 
   return (
-    <Flex
-      as="footer"
+    <footer
       sx={{
-        variant: `dividers.top`,
+        boxSizing: `border-box`,
+        display: `flex`,
         justifyContent: `space-between`,
         mt: [6],
         color: `secondary`,
@@ -18,6 +17,7 @@ const Footer = () => {
           variant: `links.secondary`,
         },
         flexDirection: [`column`, `column`, `row`],
+        variant: `dividers.top`,
       }}
     >
       <div>
@@ -37,7 +37,7 @@ const Footer = () => {
           LekoArts
         </Styled.a>
       </div>
-    </Flex>
+    </footer>
   )
 }
 

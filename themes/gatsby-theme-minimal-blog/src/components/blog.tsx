@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
-import { Heading, Flex } from "@theme-ui/components"
+import { Flex } from "@theme-ui/components"
 import Layout from "./layout"
 import Listing from "./listing"
 import useSiteMetadata from "../hooks/use-site-metadata"
@@ -27,9 +27,7 @@ const Blog = ({ posts }: PostsProps) => {
     <Layout>
       <SEO title="Blog" />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Heading variant="h2" as="h2">
-          Blog
-        </Heading>
+        <Styled.h2>Blog</Styled.h2>
         <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
           View all tags
         </Styled.a>

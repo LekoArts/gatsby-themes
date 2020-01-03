@@ -81,7 +81,6 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .contains(`Theme`)
       .findByLabelText(`Link to the theme author's website`)
       .contains(`LekoArts`)
-      .findByText(/© 2019 by Lupin./i)
   })
   it(`should link to individual blog post`, () => {
     cy.findByText(/Introduction to "Defence against the Dark Arts"/i)

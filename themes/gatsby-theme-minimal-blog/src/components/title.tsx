@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
-import { Heading, Flex } from "@theme-ui/components"
+import { Heading } from "@theme-ui/components"
 
 type TitleProps = {
   children?: React.ReactNode
@@ -11,7 +11,7 @@ type TitleProps = {
 }
 
 const Title = ({ text, children, as = `h2`, className }: TitleProps) => (
-  <Flex
+  <div
     sx={{
       justifyContent: `space-between`,
       alignItems: `center`,
@@ -21,9 +21,11 @@ const Title = ({ text, children, as = `h2`, className }: TitleProps) => (
       pb: 3,
       mb: 4,
       flexFlow: `wrap`,
+      boxSizing: `border-box`,
+      display: `flex`,
     }}
   >
-    <Heading as={as} sx={{ fontWeight: `medium`, fontSize: [3, 4] }} className={className}>
+    <Heading as={as} sx={{ fontWeight: `medium`, fontSize: [3, 4], fontFamily: `heading` }} className={className}>
       {text}
     </Heading>
     <div
@@ -36,7 +38,7 @@ const Title = ({ text, children, as = `h2`, className }: TitleProps) => (
     >
       {children}
     </div>
-  </Flex>
+  </div>
 )
 
 export default Title
