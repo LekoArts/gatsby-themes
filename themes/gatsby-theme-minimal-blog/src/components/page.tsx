@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Heading } from "@theme-ui/components"
+import { jsx, Styled } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import SEO from "./seo"
@@ -19,9 +18,7 @@ type PageProps = {
 const Page = ({ data: { page } }: PageProps) => (
   <Layout>
     <SEO title={page.title} description={page.excerpt} />
-    <Heading variant="h2" as="h2">
-      {page.title}
-    </Heading>
+    <Styled.h2>{page.title}</Styled.h2>
     <section sx={{ my: 5 }}>
       <MDXRenderer>{page.body}</MDXRenderer>
     </section>

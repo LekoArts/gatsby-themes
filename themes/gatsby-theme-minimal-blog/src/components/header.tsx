@@ -30,8 +30,10 @@ const Header = () => {
         </Link>
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
-      <Flex
+      <div
         sx={{
+          boxSizing: `border-box`,
+          display: `flex`,
           variant: `dividers.bottom`,
           alignItems: `center`,
           justifyContent: `space-between`,
@@ -49,7 +51,7 @@ const Header = () => {
             </Styled.a>
           ))}
         </div>
-      </Flex>
+      </div>
     </header>
   )
 }
