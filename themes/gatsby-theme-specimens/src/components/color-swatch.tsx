@@ -100,6 +100,7 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
           gridGap: theme.space[3],
           backgroundColor: theme.colors.elementBG,
           height: `100%`,
+          gridAutoRows: `min-content`,
         }}
       >
         {name && (
