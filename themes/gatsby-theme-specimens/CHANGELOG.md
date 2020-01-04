@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.0.2...@lekoarts/gatsby-theme-specimens@2.0.3) (2020-01-04)
+
+
+### Bug Fixes
+
+* Various styling issues in different browsers ([#210](https://github.com/LekoArts/gatsby-themes/issues/210)) ([a4ce528](https://github.com/LekoArts/gatsby-themes/commit/a4ce528151c3ef227beec66162804d6ed88dd33b))
+
+
+
+
+
 ## [2.0.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.0.1...@lekoarts/gatsby-theme-specimens@2.0.2) (2019-12-31)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
