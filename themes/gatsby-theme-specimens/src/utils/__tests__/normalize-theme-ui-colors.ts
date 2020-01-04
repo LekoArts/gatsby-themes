@@ -4,6 +4,7 @@ const exampleTheme = {
   transparent: `transparent`,
   black: `#000`,
   indigo: [null, `#ebf4ff`, `#c3dafe`, `#a3bffa`, `#7f9cf5`, `#667eea`, `#5a67d8`, `#4c51bf`, `#434190`, `#3c366b`],
+  white: `#fff`,
   modes: {
     dark: {
       black: `#fff`,
@@ -12,12 +13,16 @@ const exampleTheme = {
 }
 
 describe(`Normalize ThemeUI`, () => {
-  test(`should transform with default options (omitting values)`, () => {
+  test(`should transform with default options (omitting values and ordering arrays to bottom)`, () => {
     expect(normalizeThemeUIColors({ colors: exampleTheme })).toMatchInlineSnapshot(`
       Array [
         Object {
           "color": "#000",
           "name": "black",
+        },
+        Object {
+          "color": "#fff",
+          "name": "white",
         },
         Object {
           "color": Array [
@@ -41,12 +46,16 @@ describe(`Normalize ThemeUI`, () => {
     expect(normalizeThemeUIColors({ colors: exampleTheme, omit: [] })).toMatchInlineSnapshot(`
       Array [
         Object {
+          "color": "transparent",
+          "name": "transparent",
+        },
+        Object {
           "color": "#000",
           "name": "black",
         },
         Object {
-          "color": "transparent",
-          "name": "transparent",
+          "color": "#fff",
+          "name": "white",
         },
         Object {
           "color": Array [
