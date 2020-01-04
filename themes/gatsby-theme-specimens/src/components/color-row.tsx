@@ -25,6 +25,7 @@ const ColorRow = ({ color, name, prefix = `` }: ColorRowProps) => {
         mb: theme.space[3],
         borderRadius: theme.radii.lg,
         display: `flex`,
+        color: theme.colors.black,
         flexWrap: `wrap`,
         justifyContent: `space-between`,
         alignItems: `center`,

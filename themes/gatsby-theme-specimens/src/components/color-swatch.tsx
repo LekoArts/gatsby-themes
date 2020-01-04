@@ -11,6 +11,7 @@ const swatchContentStyles = {
   flexDirection: `column`,
   fontSize: theme.fontSizes[1],
   alignItems: `flex-start`,
+  color: theme.colors.black,
   span: {
     mb: theme.space[2],
   },
@@ -100,6 +101,7 @@ const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchPro
           gridGap: theme.space[3],
           backgroundColor: theme.colors.elementBG,
           height: `100%`,
+          gridAutoRows: `min-content`,
         }}
       >
         {name && (

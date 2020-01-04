@@ -15,7 +15,15 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
   <div
     sx={{
       div: { alignSelf: `center` },
-      "> div": { display: `grid`, gridTemplateColumns: columns, p: [theme.space[2], theme.space[3]] },
+      color: theme.colors.text,
+      "> div": {
+        display: `grid`,
+        gridTemplateColumns: columns,
+        p: [theme.space[2], theme.space[3]],
+        gridColumnGap: 1,
+        backgroundColor: theme.colors.white,
+        borderRadius: theme.radii.default,
+      },
       "> div:nth-of-type(even)": { backgroundColor: theme.colors.gray[1], borderRadius: theme.radii.default },
       "> div:not(:first-of-type)": { py: theme.space[3] },
       ...theme.tables.specimens,

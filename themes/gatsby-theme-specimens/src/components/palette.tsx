@@ -72,12 +72,11 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
               color: colorValue,
             })
           })
-          const inverted = arr.reverse()
 
           return (
             <Palette
-              colors={inverted}
-              key={name}
+              colors={arr}
+              key={`${name}-${color}-${prefix}-palette`}
               minimal={minimal}
               mode={mode}
               prefix={prefix}
@@ -91,7 +90,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
             <ColorSwatch
               color={color}
               name={name}
-              key={`${name}-${color}-${prefix}`}
+              key={`${name}-${color}-${prefix}-swatch`}
               minimal={minimal}
               prefix={prefix}
               sx={{ width: `100% !important`, display: `block !important` }}
@@ -99,7 +98,7 @@ const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefi
           )
         }
 
-        return <ColorRow color={color} name={name} prefix={prefix} key={`${name}-${color}-${prefix}`} />
+        return <ColorRow color={color} name={name} prefix={prefix} key={`${name}-${color}-${prefix}-row`} />
       })}
     </div>
   )
