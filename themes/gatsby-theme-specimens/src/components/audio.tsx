@@ -20,6 +20,7 @@ const Audio = ({ autoplay = false, loop = false, name = ``, desc = ``, src }: Au
       borderRadius: theme.radii.lg,
       boxShadow: theme.shadows.default,
       mb: theme.space[3],
+      color: theme.colors.text,
       svg: {
         width: [theme.sizes[`6`], theme.sizes[`8`]],
         height: [theme.sizes[`6`], theme.sizes[`8`]],

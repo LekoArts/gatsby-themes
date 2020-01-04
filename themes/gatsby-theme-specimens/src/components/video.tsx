@@ -21,6 +21,7 @@ const Video = ({ autoplay = false, loop = false, muted = false, name = ``, poste
       borderRadius: theme.radii.lg,
       boxShadow: theme.shadows.default,
       mb: theme.space[3],
+      color: theme.colors.black,
       svg: {
         width: [theme.sizes[`6`], theme.sizes[`8`]],
         height: [theme.sizes[`6`], theme.sizes[`8`]],

@@ -11,6 +11,7 @@ const swatchContentStyles = {
   flexDirection: `column`,
   fontSize: theme.fontSizes[1],
   alignItems: `flex-start`,
+  color: theme.colors.black,
   span: {
     mb: theme.space[2],
   },
