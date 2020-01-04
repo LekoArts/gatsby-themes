@@ -1,4 +1,4 @@
-module.exports = ({ basePath = `/` }) => ({
+module.exports = ({ basePath = `/`, mdx = true }) => ({
   siteMetadata: {
     siteTitle: `Cara`,
     siteTitleAlt: `Cara - @lekoarts/gatsby-theme-cara`,
@@ -18,7 +18,10 @@ module.exports = ({ basePath = `/` }) => ({
         path: `${__dirname}/src/sections`,
       },
     },
-    `gatsby-plugin-mdx`,
+    mdx && {
+      resolve: `gatsby-plugin-mdx`,
+      options: {},
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
