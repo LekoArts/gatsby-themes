@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.0.3...@lekoarts/gatsby-theme-specimens@2.0.4) (2020-01-04)
+
+
+### Bug Fixes
+
+* **gatsby-theme-specimens:** Stable sort for normalizeThemeUIColors ([e8e3f01](https://github.com/LekoArts/gatsby-themes/commit/e8e3f0189b79acf3add5ed6dca4c65b7d3c2d83c))
+
+
+
+
+
 ## [2.0.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.0.2...@lekoarts/gatsby-theme-specimens@2.0.3) (2020-01-04)
 
 
