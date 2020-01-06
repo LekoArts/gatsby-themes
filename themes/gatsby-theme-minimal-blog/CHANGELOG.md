@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.7...@lekoarts/gatsby-theme-minimal-blog@1.1.8) (2020-01-06)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Correct padding. Fixes [#211](https://github.com/LekoArts/gatsby-themes/issues/211) ([2b431c6](https://github.com/LekoArts/gatsby-themes/commit/2b431c60a64152cf107ef9ae4c5f5ff1a17d4252))
+* **gatsby-theme-minimal-blog:** Styling fixes ([240571e](https://github.com/LekoArts/gatsby-themes/commit/240571e39a4b12d6b6585c89062579dd2dc03a0f))
+
+
+
+
+
 ## [1.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@1.1.6...@lekoarts/gatsby-theme-minimal-blog@1.1.7) (2020-01-04)
 
 
