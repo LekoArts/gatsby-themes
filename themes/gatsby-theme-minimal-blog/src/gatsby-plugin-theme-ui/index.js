@@ -78,6 +78,24 @@ export default {
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
     },
+    ul: {
+      li: {
+        fontSize: [1, 1, 2],
+        letterSpacing: `-0.003em`,
+        lineHeight: `body`,
+        "--baseline-multiplier": 0.179,
+        "--x-height-multiplier": 0.35,
+      },
+    },
+    ol: {
+      li: {
+        fontSize: [1, 1, 2],
+        letterSpacing: `-0.003em`,
+        lineHeight: `body`,
+        "--baseline-multiplier": 0.179,
+        "--x-height-multiplier": 0.35,
+      },
+    },
     ...headingStyles,
     Container: {
       padding: [3, 4],

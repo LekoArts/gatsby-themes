@@ -27,7 +27,7 @@ export default {
   ".token": {
     display: `inline-block`,
   },
-  "p > code": {
+  "p > code, li > code": {
     bg: `rgb(1, 22, 39)`,
     color: `rgb(214, 222, 235)`,
     px: 2,
@@ -90,6 +90,7 @@ export default {
     'pre[class~="language-html"]:before': {
       content: `"html"`,
       background: `#005a9c`,
+      color: `white`,
     },
     'pre[class~="language-graphql"]:before': {
       content: `"GraphQL"`,
@@ -108,27 +109,27 @@ export default {
     'pre[class~="language-text"]:before': {
       content: `"text"`,
     },
-    "pre[class='language-shell']:before": {
+    "pre[class~='language-shell']:before": {
       content: `'shell'`,
     },
-    "pre[class='language-sh']:before": {
+    "pre[class~='language-sh']:before": {
       content: `'sh'`,
     },
-    "pre[class='language-bash']:before": {
+    "pre[class~='language-bash']:before": {
       content: `'bash'`,
     },
-    "pre[class='language-yaml']:before": {
+    "pre[class~='language-yaml']:before": {
       content: `'yaml'`,
       background: `#ffa8df`,
     },
-    "pre[class='language-markdown']:before": {
+    "pre[class~='language-markdown']:before": {
       content: `'md'`,
     },
-    "pre[class='language-json']:before, pre[class='language-json5']:before": {
+    "pre[class~='language-json']:before, pre[class~='language-json5']:before": {
       content: `'json'`,
       background: `linen`,
     },
-    "pre[class='language-diff']:before": {
+    "pre[class~='language-diff']:before": {
       content: `'diff'`,
       background: `#e6ffed`,
     },
