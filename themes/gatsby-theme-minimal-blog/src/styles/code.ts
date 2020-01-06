@@ -2,8 +2,10 @@ import { tint } from "@theme-ui/color"
 
 export default {
   "[data-name='live-editor']": {
-    padding: (t: any) => `${t.space[2]} !important`,
     fontSize: 1,
+    "textarea, pre": {
+      padding: (t: any) => `${t.space[3]} !important`,
+    },
   },
   "[data-name='live-preview']": {
     padding: (t: any) => `calc(${t.space[2]} + 10px) !important`,
