@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma-core@1.0.14...@lekoarts/gatsby-theme-emma-core@1.1.0) (2020-01-07)
+
+
+### Features
+
+* **gatsby-theme-emma-core:** Custom slug for projects via frontmatter ([6236603](https://github.com/LekoArts/gatsby-themes/commit/62366035d3d3f83a2326c67a0fe28c514fb66f8e))
+
+
+
+
+
 ## [1.0.14](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma-core@1.0.13...@lekoarts/gatsby-theme-emma-core@1.0.14) (2019-12-31)
 
 

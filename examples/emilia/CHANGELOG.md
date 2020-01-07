@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/LekoArts/gatsby-themes/compare/emilia@0.0.17...emilia@0.1.0) (2020-01-07)
+
+
+### Features
+
+* **gatsby-theme-emilia-core:** Custom slug for projects via frontmatter ([ccdaa1a](https://github.com/LekoArts/gatsby-themes/commit/ccdaa1aab2137f8ac76017723f50c582edae3a0b))
+
+
+
+
+
 ## [0.0.17](https://github.com/LekoArts/gatsby-themes/compare/emilia@0.0.16...emilia@0.0.17) (2019-12-31)
 
 **Note:** Version bump only for package emilia

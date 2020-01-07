@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@0.1.8...minimal-blog@0.2.0) (2020-01-07)
+
+
+### Features
+
+* **gatsby-theme-minimal-blog-core:** Custom slug for blog posts via frontmatter ([05cff1e](https://github.com/LekoArts/gatsby-themes/commit/05cff1ec0bcd2ba2fb3b7cfbb8a55f626ab9abd8)), closes [#217](https://github.com/LekoArts/gatsby-themes/issues/217)
+
+
+
+
+
 ## [0.1.8](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@0.1.7...minimal-blog@0.1.8) (2020-01-06)
 
 
