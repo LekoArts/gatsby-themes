@@ -60,6 +60,12 @@ describe(`gatsby-theme-emma`, () => {
       .findByText(/10.06.2019/i)
       .findByText(/witchcraft/i)
   })
+  it(`should accept custom slug in frontmatter and use that as URL`, () => {
+    cy.findByLabelText(/View detail page of Proprius: steady, individual, personal/i)
+      .click()
+      .waitForRouteChange()
+      .assertRoute(`/proprius`)
+  })
   it(`should link and display the about page`, () => {
     cy.findByText(/about/i)
       .click()
