@@ -41,7 +41,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   const { basePath } = withDefaults(themeOptions)
 
   const slugify = source => {
-    const slug = kebabCase(source.title)
+    const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
   }
@@ -121,6 +121,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   // Check for "projects" and create the "Project" type
   if (node.internal.type === `Mdx` && source === projectsPath) {
     const fieldData = {
+      slug: node.frontmatter.slug ? node.frontmatter.slug : undefined,
       title: node.frontmatter.title,
       cover: node.frontmatter.cover,
       date: node.frontmatter.date,
@@ -230,7 +231,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   `)
 
   if (result.errors) {
-    reporter.panic(`There was an error loading your projects or pages`, result.errors)
+    reporter.panicOnBuild(`There was an error loading your projects or pages`, result.errors)
     return
   }
 

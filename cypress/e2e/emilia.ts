@@ -58,4 +58,10 @@ describe(`gatsby-theme-emilia`, () => {
       .findByLabelText(/visit jodie project page/i)
       .findByText(/About Me/i)
   })
+  it(`should accept custom slug in frontmatter and use that as URL`, () => {
+    cy.findByLabelText(/Visit Ars Aurea project page/i)
+      .click()
+      .waitForRouteChange()
+      .assertRoute(`/ars-aurea-goldene-kunst`)
+  })
 })
