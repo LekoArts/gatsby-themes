@@ -41,7 +41,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   const { basePath } = withDefaults(themeOptions)
 
   const slugify = source => {
-    const slug = kebabCase(source.title)
+    const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
   }
@@ -133,7 +133,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   const fileNode = getNode(node.parent)
   const source = fileNode.sourceInstanceName
 
-  // Check for "projects" and create the "Project" type
+  // Check for "posts" and create the "Post" type
   if (node.internal.type === `Mdx` && source === postsPath) {
     let modifiedTags
 
@@ -147,6 +147,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     }
 
     const fieldData = {
+      slug: node.frontmatter.slug ? node.frontmatter.slug : undefined,
       title: node.frontmatter.title,
       date: node.frontmatter.date,
       tags: modifiedTags,
@@ -249,7 +250,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   `)
 
   if (result.errors) {
-    reporter.panic(`There was an error loading your posts or pages`, result.errors)
+    reporter.panicOnBuild(`There was an error loading your posts or pages`, result.errors)
     return
   }
 

@@ -223,6 +223,7 @@ New blog posts will be shown on the index page (the three most recent ones) of t
 1. Add images to the created folder (from step 1) you want to reference in your blog post
 1. Reference an image as your `banner` in the frontmatter
 1. Write your content below the frontmatter
+1. Add a `slug` to the frontmatter to use a custom slug, e.g. `slug: "/my-slug"` (Optional)
 
 **Frontmatter reference:**
 

@@ -112,6 +112,14 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .get(`[data-language="jsx"]`)
       .should(`exist`)
   })
+  it(`should accept custom slug in frontmatter and use that as URL`, () => {
+    cy.findByText(
+      `Curses and Counter-curses (Bewitch Your Friends and Befuddle Your Enemies with the Latest Revenges: Hair Loss, Jelly-Legs, Tongue-Tying, and Much, Much More)`
+    )
+      .click()
+      .waitForRouteChange()
+      .assertRoute(`/curses-counter-curses-and-more`)
+  })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/Activate Dark Mode/i)
   })
