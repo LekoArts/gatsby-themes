@@ -1,7 +1,5 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-unused-vars */
 
 /** @jsx jsx */
 import { jsx } from "theme-ui"
@@ -96,5 +94,5 @@ export default {
     // it's possible to have a pre without a code in it
     return <pre {...preProps} />
   },
-  wrapper: ({ children }) => <>{children}</>,
+  wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
 }
