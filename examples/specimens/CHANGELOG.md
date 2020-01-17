@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.23](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.22...specimens@0.0.23) (2020-01-17)
+
+
+### Bug Fixes
+
+* Delete unused file and use React.Fragment instead of <> ([f4e36ca](https://github.com/LekoArts/gatsby-themes/commit/f4e36caef6637c0977f0894d4679caa08fa363d1))
+
+
+
+
+
 ## [0.0.22](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.21...specimens@0.0.22) (2020-01-04)
 
 **Note:** Version bump only for package specimens

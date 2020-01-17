@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.0.5...@lekoarts/gatsby-theme-styleguide@1.0.6) (2020-01-17)
+
+
+### Bug Fixes
+
+* Don't use React.FC ([cc1ca59](https://github.com/LekoArts/gatsby-themes/commit/cc1ca59e0bfec5fa17337156468d2e6b27b636b2))
+
+
+
+
+
 ## [1.0.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.0.4...@lekoarts/gatsby-theme-styleguide@1.0.5) (2020-01-06)
 
 

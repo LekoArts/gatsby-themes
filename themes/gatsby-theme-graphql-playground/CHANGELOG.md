@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-graphql-playground@1.0.7...@lekoarts/gatsby-theme-graphql-playground@1.0.8) (2020-01-17)
+
+
+### Bug Fixes
+
+* Delete unused file and use React.Fragment instead of <> ([f4e36ca](https://github.com/LekoArts/gatsby-themes/commit/f4e36caef6637c0977f0894d4679caa08fa363d1))
+* **deps:** update gatsby ([#224](https://github.com/LekoArts/gatsby-themes/issues/224)) ([b8c544a](https://github.com/LekoArts/gatsby-themes/commit/b8c544a0172180b246cd17c3385dc8e55efef981))
+* **deps:** update mdx to ^1.5.5 ([#198](https://github.com/LekoArts/gatsby-themes/issues/198)) ([052d711](https://github.com/LekoArts/gatsby-themes/commit/052d711c2a56ecaf7a0f10f308b525cd963a9bc2))
+
+
+
+
+
 ## [1.0.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-graphql-playground@1.0.6...@lekoarts/gatsby-theme-graphql-playground@1.0.7) (2019-12-31)
 
 
