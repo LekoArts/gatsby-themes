@@ -159,7 +159,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   `)
 
   if (result.errors) {
-    reporter.panic(`There was an error loading your playground items`, result.errors)
+    reporter.panicOnBuild(`There was an error loading your playground items`, result.errors)
     return
   }
 

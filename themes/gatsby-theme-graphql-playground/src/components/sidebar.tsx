@@ -1,13 +1,11 @@
 /** @jsx jsx */
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Sidenav } from "@theme-ui/sidenav"
 import { jsx, useColorMode } from "theme-ui"
-import useNavigation from "../hooks/use-navigation"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import ColorModeToggle from "./colormode-toggle"
+import Navigation from "../data/navigation.mdx"
 
 const Sidebar = () => {
-  const nav = useNavigation()
   const { siteTitle } = useSiteMetadata()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
@@ -45,7 +43,7 @@ const Sidebar = () => {
           width: `initial`,
         }}
       >
-        <MDXRenderer>{nav}</MDXRenderer>
+        <Navigation />
       </Sidenav>
     </div>
   )

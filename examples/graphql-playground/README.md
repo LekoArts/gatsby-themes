@@ -68,9 +68,13 @@ Have a look at the theme's README and files to see what options are available an
 
 ### Adding content
 
+#### Changing the Navigation
+
+Create a file at `src/@lekoarts/gatsby-theme-graphql-playground/data/navigation.mdx` to edit the navigation.
+
 #### Adding a new doc page
 
-First, create a new entry in your `navigation.mdx` file. If this file doesn't exist yet, create it inside your `docsPath` (default: `docs`) folder.
+First, create a new entry in your `navigation.mdx` file. If this file doesn't exist yet, see the step above.
 
 You need to create a "classic" markdown list, like:
 
@@ -82,7 +86,7 @@ You need to create a "classic" markdown list, like:
 
 You'll now see a navigation that has two sections (Welcome and Basics) of which Basics has a sub-menu.
 
-Now, create a new file at `docs/items/graphql-introduction.mdx`. The filename has to be the same as the link you used in the navigation.
+Now, create a new file at `docs/graphql-introduction.mdx`. The filename has to be the same as the link you used in the navigation.
 Add a title to the frontmatter of the MDX file and place the GraphQL query you wish to display in the GraphiQL iFrame as the **first** item.
 
 ````markdown
@@ -106,9 +110,9 @@ Normal text can go here.
 
 You need to write your query with `graphql preview` so that the theme can pick it up. You also must place it directly after the frontmatter.
 
-#### Changing the "Homepage" text
+#### Changing the "Welcome" text
 
-Create a file at `src/@lekoarts/gatsby-theme-graphql-playground/text/index.mdx` to edit the text.
+Create a file at `src/@lekoarts/gatsby-theme-graphql-playground/data/index.mdx` to edit the text.
 
 ### Change your `static` folder
 
