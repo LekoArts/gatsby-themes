@@ -59,10 +59,10 @@ const components = {
   Download: ({ name, src, bg, preview, notes }) => (
     <Download name={name} src={src} bg={bg} preview={preview} notes={notes} />
   ),
-  FontFamily: ({ fonts }) => <FontFamily fonts={fonts} />,
+  FontFamily: ({ fonts, previewText }) => <FontFamily fonts={fonts} previewText={previewText} />,
   FontSize: ({ fontSizes }) => <FontSize fontSizes={fontSizes} />,
-  FontWeight: ({ fontWeights }) => <FontWeight fontWeights={fontWeights} />,
-  Heading: ({ styles, theme }) => <Heading styles={styles} theme={theme} />,
+  FontWeight: ({ fontWeights, previewText }) => <FontWeight fontWeights={fontWeights} previewText={previewText} />,
+  Heading: ({ styles, theme, previewText }) => <Heading styles={styles} theme={theme} previewText={previewText} />,
   Palette: ({ colors, mode, single, minimal, prefix }) => (
     <Palette colors={colors} mode={mode} single={single} minimal={minimal} prefix={prefix} />
   ),

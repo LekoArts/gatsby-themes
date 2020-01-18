@@ -7,9 +7,10 @@ import theme from "../theme"
 
 type FontWeightProps = {
   fontWeights?: ObjectOrArray<CSS.FontWeightProperty>
+  previewText?: string
 }
 
-const FontWeight = ({ fontWeights }: FontWeightProps) => (
+const FontWeight = ({ fontWeights, previewText = `The quick brown fox jumps over the lazy dog` }: FontWeightProps) => (
   <Table
     columns={[`110px 1fr`, `110px 80px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
@@ -26,9 +27,7 @@ const FontWeight = ({ fontWeights }: FontWeightProps) => (
         <div key={key}>
           <div>{key}</div>
           <div>{value}</div>
-          <div sx={{ fontWeight: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>
-            Pack my box with five dozen liquor jugs
-          </div>
+          <div sx={{ fontWeight: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>{previewText}</div>
         </div>
       ))
     ) : (
