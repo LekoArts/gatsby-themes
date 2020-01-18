@@ -7,9 +7,10 @@ import theme from "../theme"
 
 interface FontFamilyProps {
   fonts?: ObjectOrArray<CSS.FontFamilyProperty>
+  previewText?: string
 }
 
-const FontFamily = ({ fonts }: FontFamilyProps) => (
+const FontFamily = ({ fonts, previewText = `The quick brown fox jumps over the lazy dog` }: FontFamilyProps) => (
   <Table
     columns={[`100px 1fr`, `100px 300px 1fr`, `100px 350px 1fr`, `100px 450px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
@@ -25,9 +26,7 @@ const FontFamily = ({ fonts }: FontFamilyProps) => (
         <div key={key}>
           <div>{key}</div>
           <div sx={{ fontSize: theme.fontSizes[0] }}>{value}</div>
-          <div sx={{ fontFamily: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>
-            Pack my box with five dozen liquor jugs
-          </div>
+          <div sx={{ fontFamily: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>{previewText}</div>
         </div>
       ))
     ) : (

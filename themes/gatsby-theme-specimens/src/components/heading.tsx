@@ -24,6 +24,7 @@ type HeadingProps = {
     h6: headingType
   }
   theme?: any
+  previewText?: string
 }
 
 const infoStyles = {
@@ -32,7 +33,7 @@ const infoStyles = {
   alignItems: `flex-start`,
 }
 
-const Heading = ({ styles, theme }: HeadingProps) => {
+const Heading = ({ styles, theme, previewText = `Heading` }: HeadingProps) => {
   const specimensConfig = useSpecimensConfig()
 
   return (
@@ -73,7 +74,7 @@ const Heading = ({ styles, theme }: HeadingProps) => {
                 mb: themeConfig.space[4],
               }}
             >
-              Heading
+              {previewText}
             </div>
             <div
               data-name="heading-info"
