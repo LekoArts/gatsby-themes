@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.23...specimens@0.1.0) (2020-01-18)
+
+
+### Features
+
+* **gatsby-theme-specimens:** Add previewText prop ([#226](https://github.com/LekoArts/gatsby-themes/issues/226)) ([ccb321c](https://github.com/LekoArts/gatsby-themes/commit/ccb321c8e1bc062fde513dd24dc1d1c345456147))
+
+
+
+
+
 ## [0.0.23](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.0.22...specimens@0.0.23) (2020-01-17)
 
 
