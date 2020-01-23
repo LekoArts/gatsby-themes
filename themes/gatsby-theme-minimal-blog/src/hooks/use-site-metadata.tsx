@@ -11,14 +11,7 @@ type Props = {
       siteLanguage: string
       siteImage: string
       author: string
-      externalLinks: {
-        name: string
-        url: string
-      }[]
-      tagsPath: string
-      basePath: string
-      blogPath: string
-      showLineNumbers: boolean
+      [key: string]: unknown
     }
   }
 }
@@ -36,14 +29,6 @@ const useSiteMetadata = () => {
           siteLanguage
           siteImage
           author
-          externalLinks {
-            name
-            url
-          }
-          tagsPath
-          basePath
-          blogPath
-          showLineNumbers
         }
       }
     }
