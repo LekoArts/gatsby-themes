@@ -6,6 +6,7 @@ type filterStylesType = {
 }
 
 const filterStyles = ({ input, allowed }: filterStylesType) =>
+  // @ts-ignore
   allowed.reduce((obj, key) => ({ ...obj, [key]: input[key] }), {})
 
 export default filterStyles
