@@ -1,7 +1,7 @@
 import React from "react"
 import { Styled } from "theme-ui"
 import { Link } from "gatsby"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
 
 type TagsProps = {
@@ -12,7 +12,7 @@ type TagsProps = {
 }
 
 const ItemTags = ({ tags }: TagsProps) => {
-  const { tagsPath, basePath } = useSiteMetadata()
+  const { tagsPath, basePath } = useMinimalBlogConfig()
 
   return (
     <React.Fragment>

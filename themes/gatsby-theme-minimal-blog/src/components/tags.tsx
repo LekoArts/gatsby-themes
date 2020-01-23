@@ -4,7 +4,7 @@ import { Box, Flex } from "@theme-ui/components"
 import kebabCase from "lodash.kebabcase"
 import { Link } from "gatsby"
 import Layout from "./layout"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import SEO from "./seo"
 import replaceSlashes from "../utils/replaceSlashes"
 
@@ -16,7 +16,7 @@ type PostsProps = {
 }
 
 const Tags = ({ list }: PostsProps) => {
-  const { tagsPath, basePath } = useSiteMetadata()
+  const { tagsPath, basePath } = useMinimalBlogConfig()
 
   return (
     <Layout>

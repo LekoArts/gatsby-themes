@@ -7,7 +7,7 @@ import Bottom from "../texts/bottom"
 import Title from "./title"
 import Listing from "./listing"
 import List from "./list"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
 
 type PostsProps = {
@@ -23,7 +23,7 @@ type PostsProps = {
 }
 
 const Homepage = ({ posts }: PostsProps) => {
-  const { basePath, blogPath } = useSiteMetadata()
+  const { basePath, blogPath } = useMinimalBlogConfig()
 
   return (
     <Layout>

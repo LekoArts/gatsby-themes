@@ -3,14 +3,14 @@ import { jsx, useColorMode, Styled } from "theme-ui"
 import { Link } from "gatsby"
 import { Flex } from "@theme-ui/components"
 import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import ColorModeToggle from "./colormode-toggle"
-import useNavigation from "../hooks/use-navigation"
 import Navigation from "./navigation"
 import replaceSlashes from "../utils/replaceSlashes"
 
 const Header = () => {
-  const { siteTitle, externalLinks, basePath } = useSiteMetadata()
-  const nav = useNavigation()
+  const { siteTitle } = useSiteMetadata()
+  const { navigation: nav, externalLinks, basePath } = useMinimalBlogConfig()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
   const toggleColorMode = (e: any) => {
@@ -44,13 +44,15 @@ const Header = () => {
         }}
       >
         <Navigation nav={nav} />
-        <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
-          {externalLinks.map(link => (
-            <Styled.a key={link.url} href={link.url}>
-              {link.name}
-            </Styled.a>
-          ))}
-        </div>
+        {externalLinks && externalLinks.length > 0 && (
+          <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
+            {externalLinks.map(link => (
+              <Styled.a key={link.url} href={link.url}>
+                {link.name}
+              </Styled.a>
+            ))}
+          </div>
+        )}
       </div>
     </header>
   )

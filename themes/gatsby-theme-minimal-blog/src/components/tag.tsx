@@ -3,7 +3,7 @@ import { jsx, Styled } from "theme-ui"
 import { Flex } from "@theme-ui/components"
 import { Link } from "gatsby"
 import Layout from "./layout"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import Listing from "./listing"
 import replaceSlashes from "../utils/replaceSlashes"
 import SEO from "./seo"
@@ -27,7 +27,7 @@ type TagProps = {
 }
 
 const Tag = ({ posts, pageContext }: TagProps) => {
-  const { tagsPath, basePath } = useSiteMetadata()
+  const { tagsPath, basePath } = useMinimalBlogConfig()
 
   return (
     <Layout>
