@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* **gatsby-theme-specimens:** Add previewText prop ([#226](https://github.com/LekoArts/gatsby-themes/issues/226)) ([ccb321c](https://github.com/LekoArts/gatsby-themes/commit/ccb321c8e1bc062fde513dd24dc1d1c345456147))
+* Add previewText prop ([#226](https://github.com/LekoArts/gatsby-themes/issues/226)) ([ccb321c](https://github.com/LekoArts/gatsby-themes/commit/ccb321c8e1bc062fde513dd24dc1d1c345456147))
 
 
 
@@ -30,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **gatsby-theme-specimens:** Stable sort for normalizeThemeUIColors ([e8e3f01](https://github.com/LekoArts/gatsby-themes/commit/e8e3f0189b79acf3add5ed6dca4c65b7d3c2d83c))
+* Stable sort for normalizeThemeUIColors ([e8e3f01](https://github.com/LekoArts/gatsby-themes/commit/e8e3f0189b79acf3add5ed6dca4c65b7d3c2d83c))
 
 
 

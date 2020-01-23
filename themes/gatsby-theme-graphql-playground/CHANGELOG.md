@@ -80,7 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **gatsby-theme-graphql-playground:** Add missing React Helmet deps and plugin ([e6c6b77](https://github.com/LekoArts/gatsby-themes/commit/e6c6b77))
+* Add missing React Helmet deps and plugin ([e6c6b77](https://github.com/LekoArts/gatsby-themes/commit/e6c6b77))
 
 
 
