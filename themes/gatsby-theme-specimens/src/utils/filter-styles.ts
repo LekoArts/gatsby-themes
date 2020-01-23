@@ -1,11 +1,12 @@
+import { Theme } from "theme-ui"
+
 type filterStylesType = {
-  input: {
-    [key: string]: any
-  }
+  input: Theme["styles"]
   allowed: string[]
 }
 
 const filterStyles = ({ input, allowed }: filterStylesType) =>
+  // @ts-ignore
   allowed.reduce((obj, key) => ({ ...obj, [key]: input[key] }), {})
 
 export default filterStyles

@@ -261,7 +261,7 @@ There are **NO** breaking changes, this is just a bump to stable version since t
 
 ### Features
 
-* **gatsby-theme-status-dashboard:** Re-Export components for easier use ([e06c1cd](https://github.com/LekoArts/gatsby-themes/commit/e06c1cd))
+* Re-Export components for easier use ([e06c1cd](https://github.com/LekoArts/gatsby-themes/commit/e06c1cd))
 
 
 
@@ -292,7 +292,7 @@ There are **NO** breaking changes, this is just a bump to stable version since t
 
 ### Bug Fixes
 
-* **gatsby-theme-status-dashboard:** Change colors and icon sizes to meet a11y requirements ([6ed80cb](https://github.com/LekoArts/gatsby-themes/commit/6ed80cb))
+* Change colors and icon sizes to meet a11y requirements ([6ed80cb](https://github.com/LekoArts/gatsby-themes/commit/6ed80cb))
 
 
 

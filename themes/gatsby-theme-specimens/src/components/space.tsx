@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { ObjectOrArray } from "styled-system"
+import { jsx, Theme } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Table from "./table"
 import getValue from "../utils/get-value"
 import theme from "../theme"
 
 type SpaceProps = {
-  space?: ObjectOrArray<number | string>
+  space?: Theme["space"]
 }
 
 const Space = ({ space }: SpaceProps) => {

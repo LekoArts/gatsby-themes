@@ -1,14 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import * as CSS from "csstype"
-import { ObjectOrArray } from "styled-system"
+import { jsx, Theme } from "theme-ui"
 import Table from "./table"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import getValue from "../utils/get-value"
 import theme from "../theme"
 
 type FontSizeProps = {
-  fontSizes?: ObjectOrArray<CSS.FontSizeProperty<number>>
+  fontSizes?: Theme["fontSizes"]
 }
 
 const FontSize = ({ fontSizes }: FontSizeProps) => {

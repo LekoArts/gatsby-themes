@@ -11,7 +11,7 @@ type ModeTypes = "list" | "swatch"
 type PaletteProps = {
   colors: {
     name: string
-    color: string
+    color: string | []
   }[]
   mode?: ModeTypes
   single?: boolean

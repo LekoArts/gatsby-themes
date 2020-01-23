@@ -9,7 +9,7 @@ const BGImage = ({ children, color, slim }: Props) => {
   const [colorMode] = useColorMode()
   const { theme } = useThemeUI()
 
-  const bg = colorMode === `light` ? theme.colors.background : theme.colors.modes.dark.background
+  const bg = colorMode === `light` ? theme!.colors!.background : theme!.colors!.modes!.dark.background
   const shade = rgba(bg, 0.4)
 
   return (

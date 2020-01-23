@@ -31,7 +31,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **gatsby-theme-cara:** MDX option ([#209](https://github.com/LekoArts/gatsby-themes/issues/209)) ([dcc99b7](https://github.com/LekoArts/gatsby-themes/commit/dcc99b72c7db440162874547e11eba498fb7762e))
+* MDX option ([#209](https://github.com/LekoArts/gatsby-themes/issues/209)) ([dcc99b7](https://github.com/LekoArts/gatsby-themes/commit/dcc99b72c7db440162874547e11eba498fb7762e))
 
 
 
@@ -193,7 +193,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **gatsby-theme-cara:** Correct link to theme in footer ([ad8bc44](https://github.com/LekoArts/gatsby-themes/commit/ad8bc44))
+* Correct link to theme in footer ([ad8bc44](https://github.com/LekoArts/gatsby-themes/commit/ad8bc44))
 
 
 
@@ -291,7 +291,7 @@ There are **NO** breaking changes, this is just a bump to stable version since t
 ### Bug Fixes
 
 * Remove white-space from Footer component ([2fa77a1](https://github.com/LekoArts/gatsby-themes/commit/2fa77a1))
-* **gatsby-theme-cara:** Colors in Contact section ([6d2d5dd](https://github.com/LekoArts/gatsby-themes/commit/6d2d5dd))
+* Colors in Contact section ([6d2d5dd](https://github.com/LekoArts/gatsby-themes/commit/6d2d5dd))
 
 
 
@@ -302,8 +302,8 @@ There are **NO** breaking changes, this is just a bump to stable version since t
 
 ### Bug Fixes
 
-* **gatsby-theme-cara:** Add shortcodes again ([e41da33](https://github.com/LekoArts/gatsby-themes/commit/e41da33))
-* **gatsby-theme-cara:** right colors in both modes ([0e3872b](https://github.com/LekoArts/gatsby-themes/commit/0e3872b))
+* Add shortcodes again ([e41da33](https://github.com/LekoArts/gatsby-themes/commit/e41da33))
+* right colors in both modes ([0e3872b](https://github.com/LekoArts/gatsby-themes/commit/0e3872b))
 
 
 
