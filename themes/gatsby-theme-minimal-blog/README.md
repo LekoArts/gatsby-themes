@@ -73,6 +73,8 @@ gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
 | `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                   |
 | `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
 | `showLineNumbers` | `true`          | Show line numbers in code blocks                                                                          |
+| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                           |
+| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                          |
 
 #### Example usage
 
@@ -83,8 +85,27 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
-          showLineNumbers: false,
-        }
+        showLineNumbers: false,
+        navigation: [
+          {
+            title: `Blog`,
+            slug: `/blog`
+          },
+          {
+            title: `About`,
+            slug: `/about`
+          }
+        ],
+        externalLinks: [
+          {
+            name: `Twitter`,
+            url: `https://twitter.com/lekoarts_de`
+          },
+          {
+            name: `Instagram`,
+            url: `https://www.instagram.com/lekoarts.de/`
+          }
+        ]
       }
     }
   ]

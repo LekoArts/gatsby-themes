@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { Flex } from "@theme-ui/components"
 import Layout from "./layout"
 import Listing from "./listing"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
 import SEO from "./seo"
 
@@ -21,7 +21,7 @@ type PostsProps = {
 }
 
 const Blog = ({ posts }: PostsProps) => {
-  const { tagsPath, basePath } = useSiteMetadata()
+  const { tagsPath, basePath } = useMinimalBlogConfig()
 
   return (
     <Layout>

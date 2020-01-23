@@ -2,7 +2,7 @@
 import React from "react"
 import loadable from "@loadable/component"
 import theme from "prism-react-renderer/themes/nightOwl"
-import useSiteMetadata from "../hooks/use-site-metadata"
+import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import { HighlightInnerProps, Language } from "../types"
 
 type CodeProps = {
@@ -78,7 +78,7 @@ const Code = ({
   metastring = ``,
   ...props
 }: CodeProps) => {
-  const { showLineNumbers } = useSiteMetadata()
+  const { showLineNumbers } = useMinimalBlogConfig()
 
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)

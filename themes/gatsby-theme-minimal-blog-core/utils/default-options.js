@@ -4,6 +4,9 @@ module.exports = themeOptions => {
   const postsPath = themeOptions.postsPath || `content/posts`
   const pagesPath = themeOptions.pagesPath || `content/pages`
   const tagsPath = themeOptions.tagsPath || `/tags`
+  const externalLinks = themeOptions.externalLinks || []
+  const navigation = themeOptions.navigation || []
+  const showLineNumbers = themeOptions.showLineNumbers || true
 
   return {
     basePath,
@@ -11,5 +14,8 @@ module.exports = themeOptions => {
     postsPath,
     pagesPath,
     tagsPath,
+    externalLinks,
+    navigation,
+    showLineNumbers,
   }
 }
