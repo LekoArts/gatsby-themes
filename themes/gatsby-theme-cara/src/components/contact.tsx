@@ -6,7 +6,8 @@ import Inner from "../elements/inner"
 import Content from "../elements/content"
 import SVG from "./svg"
 import { UpDown, UpDownWide, waveAnimation } from "../styles/animations"
-import ContactMDX from "../sections/contact.mdx"
+// @ts-ignore
+import ContactMDX from "../sections/contact"
 import Footer from "./footer"
 
 const InnerWave = styled.div`

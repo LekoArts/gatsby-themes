@@ -5,7 +5,8 @@ import Inner from "../elements/inner"
 import Content from "../elements/content"
 import SVG from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
-import Intro from "../sections/intro.mdx"
+// @ts-ignore
+import Intro from "../sections/intro"
 
 const Hero = ({ offset }: { offset: number }) => (
   <div>

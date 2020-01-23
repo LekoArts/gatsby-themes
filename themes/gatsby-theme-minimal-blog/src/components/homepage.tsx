@@ -2,7 +2,9 @@
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import Layout from "./layout"
+// @ts-ignore
 import Hero from "../texts/hero"
+// @ts-ignore
 import Bottom from "../texts/bottom"
 import Title from "./title"
 import Listing from "./listing"

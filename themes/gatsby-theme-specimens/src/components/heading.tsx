@@ -1,28 +1,13 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx } from "theme-ui"
+import { jsx, Theme } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
 import getValue from "../utils/get-value"
 import themeConfig from "../theme"
 
-type headingType = {
-  fontFamily: string
-  fontSize: number
-  fontWeight: string
-  lineHeight: string
-  [key: string]: any
-}
-
 type HeadingProps = {
-  styles: {
-    h1: headingType
-    h2: headingType
-    h3: headingType
-    h4: headingType
-    h5: headingType
-    h6: headingType
-  }
+  styles: Theme["styles"]
   theme?: any
   previewText?: string
 }

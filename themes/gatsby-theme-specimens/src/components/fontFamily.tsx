@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import { ObjectOrArray } from "styled-system"
-import * as CSS from "csstype"
+import { jsx, Theme } from "theme-ui"
 import Table from "./table"
 import theme from "../theme"
 
 interface FontFamilyProps {
-  fonts?: ObjectOrArray<CSS.FontFamilyProperty>
+  fonts?: Theme["fonts"]
   previewText?: string
 }
 

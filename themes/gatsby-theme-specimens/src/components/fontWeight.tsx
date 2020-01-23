@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import * as CSS from "csstype"
-import { ObjectOrArray } from "styled-system"
+import { jsx, Theme } from "theme-ui"
 import Table from "./table"
 import theme from "../theme"
 
 type FontWeightProps = {
-  fontWeights?: ObjectOrArray<CSS.FontWeightProperty>
+  fontWeights?: Theme["fontWeights"]
   previewText?: string
 }
 

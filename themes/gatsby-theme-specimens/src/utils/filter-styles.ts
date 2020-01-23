@@ -1,7 +1,7 @@
+import { Theme } from "theme-ui"
+
 type filterStylesType = {
-  input: {
-    [key: string]: any
-  }
+  input: Theme["styles"]
   allowed: string[]
 }
 
