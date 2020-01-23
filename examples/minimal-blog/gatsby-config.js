@@ -5,21 +5,32 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    navigation: [
-      {
-        title: `Blog`,
-        slug: `/blog`,
-      },
-      {
-        title: `About`,
-        slug: `/about`,
-      },
-    ],
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      options: {},
+      options: {
+        navigation: [
+          {
+            title: `Blog`,
+            slug: `/blog`,
+          },
+          {
+            title: `About`,
+            slug: `/about`,
+          },
+        ],
+        externalLinks: [
+          {
+            name: `Twitter`,
+            url: `https://twitter.com/lekoarts_de`,
+          },
+          {
+            name: `Instagram`,
+            url: `https://www.instagram.com/lekoarts.de/`,
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,

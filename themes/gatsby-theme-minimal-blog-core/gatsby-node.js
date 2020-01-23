@@ -114,7 +114,66 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
+    
+    type MinimalBlogConfig implements Node {
+      basePath: String
+      blogPath: String
+      postsPath: String
+      pagesPath: String
+      tagsPath: String
+      externalLinks: [ExternalLink]
+      navigation: [NavigationEntry]
+      showLineNumbers: Boolean
+    }
+    
+    type ExternalLink {
+      name: String!
+      url: String!
+    }
+    
+    type NavigationEntry {
+      title: String!
+      slug: String!
+    }
   `)
+}
+
+exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
+  const { createNode } = actions
+  const {
+    basePath,
+    blogPath,
+    postsPath,
+    pagesPath,
+    tagsPath,
+    externalLinks,
+    navigation,
+    showLineNumbers,
+  } = withDefaults(themeOptions)
+
+  const minimalBlogConfig = {
+    basePath,
+    blogPath,
+    postsPath,
+    pagesPath,
+    tagsPath,
+    externalLinks,
+    navigation,
+    showLineNumbers,
+  }
+
+  createNode({
+    ...minimalBlogConfig,
+    id: `@lekoarts/gatsby-theme-minimal-blog-core-config`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `MinimalBlogConfig`,
+      contentDigest: createContentDigest(minimalBlogConfig),
+      content: JSON.stringify(minimalBlogConfig),
+      description: `Options for @lekoarts/gatsby-theme-minimal-blog-core`,
+    },
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {

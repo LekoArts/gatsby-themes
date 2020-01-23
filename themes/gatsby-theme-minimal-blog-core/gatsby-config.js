@@ -5,13 +5,6 @@ module.exports = themeOptions => {
   const { mdx = true } = themeOptions
 
   return {
-    siteMetadata: {
-      basePath: options.basePath,
-      blogPath: options.blogPath,
-      postsPath: options.postsPath,
-      pagesPath: options.pagesPath,
-      tagsPath: options.tagsPath,
-    },
     plugins: [
       {
         resolve: `gatsby-source-filesystem`,
