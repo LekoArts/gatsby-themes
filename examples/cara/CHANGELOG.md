@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.21](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.20...cara@0.0.21) (2020-01-23)
+
+
+### Bug Fixes
+
+* Various fixes about TypeScript, typos, comments ([#235](https://github.com/LekoArts/gatsby-themes/issues/235)) ([2a429c2](https://github.com/LekoArts/gatsby-themes/commit/2a429c2c49ed7a07ec231248372929bb2f18ab91))
+
+
+
+
+
 ## [0.0.20](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.19...cara@0.0.20) (2020-01-17)
 
 **Note:** Version bump only for package cara
