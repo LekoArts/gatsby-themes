@@ -173,7 +173,7 @@ The `date` field has to be written in the format `YYYY-MM-DD`!
 
 #### Adding a new page
 
-Additional pages can be created by placing MDX files inside `contents/pages`, e.g. an "About" or "Contact" page. You'll manually need to link to those pages, for example by adding them to the navigation (in `siteMetadata`). General instructions:
+Additional pages can be created by placing MDX files inside `contents/pages`, e.g. an "About" or "Contact" page. You'll manually need to link to those pages, for example by adding them to the navigation (in `navigation` option of the theme). General instructions:
 
 1. Create a new folder inside `content/pages`
 1. Create a new `index.mdx` file, and add the frontmatter
