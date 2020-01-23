@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@1.1.1...@lekoarts/gatsby-theme-minimal-blog-core@2.0.0) (2020-01-23)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#229](https://github.com/LekoArts/gatsby-themes/issues/229)) ([9292484](https://github.com/LekoArts/gatsby-themes/commit/9292484599ba48cc622696a4b38a7f170c91df86))
+
+
+### Features
+
+* Change config format on minimal-blog theme ([#234](https://github.com/LekoArts/gatsby-themes/issues/234)) ([bdeb670](https://github.com/LekoArts/gatsby-themes/commit/bdeb670797da5faa2d4084c3c128f0e38dbbf582))
+
+
+### BREAKING CHANGES
+
+* The navigation and externalLinks options are no longer on the siteMetadata but now in the theme options itself.
+
+
+
+
+
 ## [1.1.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@1.1.0...@lekoarts/gatsby-theme-minimal-blog-core@1.1.1) (2020-01-17)
 
 

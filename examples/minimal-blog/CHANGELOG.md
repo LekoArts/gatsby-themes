@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@0.2.1...minimal-blog@1.0.0) (2020-01-23)
+
+
+### Features
+
+* Change config format on minimal-blog theme ([#234](https://github.com/LekoArts/gatsby-themes/issues/234)) ([bdeb670](https://github.com/LekoArts/gatsby-themes/commit/bdeb670797da5faa2d4084c3c128f0e38dbbf582))
+
+
+### BREAKING CHANGES
+
+* The navigation and externalLinks options are no longer on the siteMetadata but now in the theme options itself.
+
+
+
+
+
 ## [0.2.1](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@0.2.0...minimal-blog@0.2.1) (2020-01-17)
 
 **Note:** Version bump only for package minimal-blog
