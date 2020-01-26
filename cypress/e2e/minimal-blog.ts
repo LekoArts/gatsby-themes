@@ -112,6 +112,13 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .get(`[data-language="jsx"]`)
       .should(`exist`)
   })
+  it(`should render blogpost headings with slugified anchors`, () => {
+    cy.visit(`/harry-potter-and-the-half-blood-prince`)
+      .assertRoute(`/harry-potter-and-the-half-blood-prince`)
+      .waitForRouteChange()
+      .get(`h2[id=header-2]`)
+      .should(`exist`)
+  })
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.findByText(
       `Curses and Counter-curses (Bewitch Your Friends and Befuddle Your Enemies with the Latest Revenges: Hair Loss, Jelly-Legs, Tongue-Tying, and Much, Much More)`

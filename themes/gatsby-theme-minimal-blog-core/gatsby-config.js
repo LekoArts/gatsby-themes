@@ -1,3 +1,4 @@
+const remarkSlug = require(`remark-slug`)
 const withDefaults = require(`./utils/default-options`)
 
 module.exports = themeOptions => {
@@ -43,6 +44,7 @@ module.exports = themeOptions => {
               },
             },
           ],
+          remarkPlugins: [remarkSlug],
         },
       },
       `gatsby-transformer-sharp`,
