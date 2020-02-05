@@ -40,6 +40,7 @@ const headingStyles = {
 export default {
   ...tailwind,
   initialColorMode: `light`,
+  useColorSchemeMediaQuery: true,
   useCustomProperties: true,
   colors: {
     ...tailwind.colors,
