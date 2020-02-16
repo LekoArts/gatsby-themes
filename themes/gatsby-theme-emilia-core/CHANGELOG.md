@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.1.2...@lekoarts/gatsby-theme-emilia-core@1.1.3) (2020-02-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency gatsby-plugin-sharp to ^2.4.0 ([#246](https://github.com/LekoArts/gatsby-themes/issues/246)) ([19a6fbe](https://github.com/LekoArts/gatsby-themes/commit/19a6fbe8c4313fd03c2dc3f5c69a886ceb56d699))
+* **deps:** update gatsby ([#260](https://github.com/LekoArts/gatsby-themes/issues/260)) ([5a779f3](https://github.com/LekoArts/gatsby-themes/commit/5a779f32d548e0f4cfb63f6534f81c949123fa67))
+
+
+
+
+
 ## [1.1.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.1.1...@lekoarts/gatsby-theme-emilia-core@1.1.2) (2020-01-23)
 
 

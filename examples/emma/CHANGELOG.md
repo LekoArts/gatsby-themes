@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/LekoArts/gatsby-themes/compare/emma@0.1.3...emma@0.1.4) (2020-02-16)
+
+**Note:** Version bump only for package emma
+
+
+
+
+
 ## [0.1.3](https://github.com/LekoArts/gatsby-themes/compare/emma@0.1.2...emma@0.1.3) (2020-01-23)
 
 **Note:** Version bump only for package emma
