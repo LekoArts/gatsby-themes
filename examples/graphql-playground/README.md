@@ -15,9 +15,6 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="https://app.netlify.com/sites/gatsby-theme-graphql-playground/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/fe1faa72-4ba8-43e5-9847-5a48fe9a6bb8/deploy-status" alt="Netlify Status" />
-  </a>
 </p>
 
 GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox). Using the Gatsby Theme [`@lekoarts/gatsby-theme-graphql-playground`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-graphql-playground).

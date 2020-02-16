@@ -15,9 +15,6 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="https://app.netlify.com/sites/specimens/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/cae76bb8-1b0a-4c63-95b9-236d4f3f9371/deploy-status" alt="Netlify Status" />
-  </a>
 </p>
 
 Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX. Using the Gatsby Theme [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens).

@@ -15,9 +15,6 @@
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
   </a>
-  <a href="https://app.netlify.com/sites/theme-ui-styleguide/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/4082ba4d-2a83-4c46-9140-a398b585b84a/deploy-status" alt="Netlify Status" />
-  </a>
 </p>
 
 Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner. Using the Gatsby Theme [`@lekoarts/gatsby-theme-styleguide`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide).
