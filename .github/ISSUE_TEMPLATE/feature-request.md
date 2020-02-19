@@ -1,7 +1,7 @@
 ---
 name: "Feature request \U0001F4A1"
 about: Suggest an idea for this project
-title: ''
+title: '[theme name]: Title of your issue'
 labels: 'type: enhancement'
 assignees: ''
 
@@ -18,7 +18,7 @@ assignees: ''
 
 ## Summary
 
-Brief explanation of the feature.
+Brief explanation of the feature. And to which theme this should be added.
 
 ### Basic example
 

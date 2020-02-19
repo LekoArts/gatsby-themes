@@ -28,6 +28,10 @@ assignees: ''
 
 <!-- Provide as much useful information as you can -->
 
+### Theme
+
+<!-- What theme are you using? -->
+
 ### Environment (if relevant)
 
 <!--

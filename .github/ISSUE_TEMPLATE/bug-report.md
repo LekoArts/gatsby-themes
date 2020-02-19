@@ -1,7 +1,7 @@
 ---
 name: "Bug report \U0001F41E"
 about: Something isn't working as expected? Here is the right place to report.
-title: ''
+title: '[theme name]: Title of your issue'
 labels: 'type: bug'
 assignees: ''
 
@@ -19,7 +19,7 @@ assignees: ''
 
 ## Description
 
-Describe the issue that you're seeing.
+Describe the issue that you're seeing. And which theme is affected.
 
 ### Steps to reproduce
 
