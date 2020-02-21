@@ -40,14 +40,15 @@ npm install @lekoarts/gatsby-theme-minimal-blog-core
 
 ### Theme options
 
-| Key         | Default Value   | Description                                                                                               |
-| ----------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| `basePath`  | `/`             | Root url for the theme                                                                                    |
-| `blogPath`  | `/blog`         | url for the blog post overview page                                                                       |
-| `tagsPath`  | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                  |
-| `postsPath` | `content/posts` | Location of posts                                                                                         |
-| `pagesPath` | `content/pages` | Location of additional pages (optional)                                                                   |
-| `mdx`       | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
+| Key                      | Default Value   | Description                                                                                               |
+| ------------------------ | --------------- | --------------------------------------------------------------------------------------------------------- |
+| `basePath`               | `/`             | Root url for the theme                                                                                    |
+| `blogPath`               | `/blog`         | url for the blog post overview page                                                                       |
+| `additionalPostsFolders` | `[]`            | blog path subfolders (if any). For example: `["drafts"]`                                                  |
+| `tagsPath`               | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                  |
+| `postsPath`              | `content/posts` | Location of posts                                                                                         |
+| `pagesPath`              | `content/pages` | Location of additional pages (optional)                                                                   |
+| `mdx`                    | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
 
 The usage of `content/pages` is optional.
 
