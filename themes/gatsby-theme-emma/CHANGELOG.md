@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.2.5...@lekoarts/gatsby-theme-emma@1.3.0) (2020-02-27)
+
+
+### Features
+
+* Add `formatString` option ([#289](https://github.com/LekoArts/gatsby-themes/issues/289)) ([4714efb](https://github.com/LekoArts/gatsby-themes/commit/4714efbab2156eb853e94958f0b078f28dd065dc))
+
+
+
+
+
 ## [1.2.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.2.4...@lekoarts/gatsby-theme-emma@1.2.5) (2020-02-27)
 
 
