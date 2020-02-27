@@ -4,13 +4,13 @@ import ProjectComponent from "../components/project"
 export default ProjectComponent
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $formatString: String!) {
     project(slug: { eq: $slug }) {
       body
       excerpt
       client
       color
-      date(formatString: "DD.MM.YYYY")
+      date(formatString: $formatString)
       service
       slug
       title
