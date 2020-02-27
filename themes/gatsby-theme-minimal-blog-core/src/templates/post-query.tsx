@@ -4,11 +4,11 @@ import PostComponent from "../components/post"
 export default PostComponent
 
 export const query = graphql`
-  query($slug: String!) {
+  query($slug: String!, $formatString: String!) {
     post(slug: { eq: $slug }) {
       slug
       title
-      date(formatString: "DD.MM.YYYY")
+      date(formatString: $formatString)
       tags {
         name
         slug
