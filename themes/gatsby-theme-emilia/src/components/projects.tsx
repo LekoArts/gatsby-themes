@@ -12,8 +12,6 @@ type Props = {
   projects: {
     slug: string
     title: string
-    areas: string[]
-    date: string
     cover: ChildImageSharp
   }[]
 }
