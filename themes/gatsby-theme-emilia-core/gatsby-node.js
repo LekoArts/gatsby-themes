@@ -192,7 +192,7 @@ const projectTemplate = require.resolve(`./src/templates/project-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -251,6 +251,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         absolutePathRegex: `/^${path.dirname(fileAbsolutePath)}/`,
         prev,
         next,
+        formatString,
       },
     })
   })

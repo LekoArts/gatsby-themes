@@ -50,6 +50,7 @@ npm install @lekoarts/gatsby-theme-emilia-core
 | `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
 | `socialMedia`     | `` [{ title: `Twitter`, href: `https://twitter.com/lekoarts_de` }, { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` }] `` | An array of objects (with the keys "title" and "href" display on the homepage. Can of course hold any kind of links (not limited to social media) |
 | `showThemeAuthor` | `true`                                                                                                                                        | Show the "Theme by LekoArts" in the footer                                                                                                        |
+| `formatString`    | `DD.MM.YYYY`                                                                                                                                  | Configure the date format for Date fields                                                                                                         |
 
 ### Shadowing
 

@@ -9,8 +9,6 @@ export const query = graphql`
       nodes {
         slug
         title
-        areas
-        date(formatString: "DD.MM.YYYY")
         cover {
           childImageSharp {
             fluid(maxWidth: 770, quality: 95) {
