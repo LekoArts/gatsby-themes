@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.2...@lekoarts/gatsby-theme-specimens@2.1.3) (2020-02-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @styled-system/css to ^5.1.5 ([#287](https://github.com/LekoArts/gatsby-themes/issues/287)) ([7a4385d](https://github.com/LekoArts/gatsby-themes/commit/7a4385dfcd1765d82ebb0371134462e45047f4ff))
+
+
+
+
+
 ## [2.1.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.1...@lekoarts/gatsby-theme-specimens@2.1.2) (2020-02-16)
 
 
