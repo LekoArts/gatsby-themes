@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.20...@lekoarts/gatsby-theme-cara@1.1.0) (2020-02-29)
+
+
+### Features
+
+* Add factor prop to all sections ([e893a9b](https://github.com/LekoArts/gatsby-themes/commit/e893a9b60911f475017931ecd9841321cb3d4fa8))
+
+
+
+
+
 ## [1.0.20](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-cara@1.0.19...@lekoarts/gatsby-theme-cara@1.0.20) (2020-02-27)
 
 
