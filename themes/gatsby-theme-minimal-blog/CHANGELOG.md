@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.1.0...@lekoarts/gatsby-theme-minimal-blog@2.1.1) (2020-02-29)
+
+
+### Bug Fixes
+
+* Add table styles to minimal-blog ([6e3d750](https://github.com/LekoArts/gatsby-themes/commit/6e3d750b01d0398fc2dd5b3d043754389a0f46ff))
+
+
+
+
+
 # [2.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.0.3...@lekoarts/gatsby-theme-minimal-blog@2.1.0) (2020-02-27)
 
 
