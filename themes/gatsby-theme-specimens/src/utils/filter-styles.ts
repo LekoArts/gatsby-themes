@@ -5,8 +5,23 @@ type filterStylesType = {
   allowed: string[]
 }
 
-const filterStyles = ({ input, allowed }: filterStylesType) =>
-  // @ts-ignore
-  allowed.reduce((obj, key) => ({ ...obj, [key]: input[key] }), {})
+const filterStyles = ({ input, allowed }: filterStylesType) => {
+  if (!input) {
+    return undefined
+  }
+
+  return allowed.reduce((obj, key) => {
+    // If a key is only existing in "allowed" but not in the "input", skip it
+    // Otherwise e.g. h3: undefined will be added
+
+    // @ts-ignore
+    if (!input[key]) {
+      return { ...obj }
+    }
+
+    // @ts-ignore
+    return { ...obj, [key]: input[key] }
+  }, {})
+}
 
 export default filterStyles
