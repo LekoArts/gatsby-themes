@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.1.0...@lekoarts/gatsby-theme-minimal-blog-core@2.2.0) (2020-02-29)
+
+
+### Features
+
+* Add excerpt, description and timeToRead to queries ([8c38636](https://github.com/LekoArts/gatsby-themes/commit/8c386368fd4a819cc95f41af8842bde712a5183e)), closes [#274](https://github.com/LekoArts/gatsby-themes/issues/274)
+
+
+
+
+
 # [2.1.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.0.2...@lekoarts/gatsby-theme-minimal-blog-core@2.1.0) (2020-02-27)
 
 
