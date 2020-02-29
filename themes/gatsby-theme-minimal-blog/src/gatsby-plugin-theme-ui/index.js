@@ -57,6 +57,7 @@ export default {
         background: `#1A202C`,
         heading: tailwind.colors.white,
         divide: tailwind.colors.gray[8],
+        muted: tailwind.colors.gray[8],
       },
     },
   },
@@ -109,6 +110,29 @@ export default {
       p: {
         fontStyle: `italic`,
       },
+    },
+    table: {
+      width: `100%`,
+      my: 4,
+      borderCollapse: `separate`,
+      borderSpacing: 0,
+      [[`th`, `td`]]: {
+        textAlign: `left`,
+        py: `4px`,
+        pr: `4px`,
+        pl: 0,
+        borderColor: `muted`,
+        borderBottomStyle: `solid`,
+      },
+    },
+    th: {
+      verticalAlign: `bottom`,
+      borderBottomWidth: `2px`,
+      color: `heading`,
+    },
+    td: {
+      verticalAlign: `top`,
+      borderBottomWidth: `1px`,
     },
   },
   text: {
