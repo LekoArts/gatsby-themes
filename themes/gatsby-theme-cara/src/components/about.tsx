@@ -8,10 +8,16 @@ import { UpDown, UpDownWide } from "../styles/animations"
 // @ts-ignore
 import AboutMDX from "../sections/about"
 
-const About = ({ offset }: { offset: number }) => (
+const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
-    <Divider bg="divider" clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)" speed={0.2} offset={offset} />
-    <Divider speed={0.1} offset={offset}>
+    <Divider
+      bg="divider"
+      clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"
+      speed={0.2}
+      offset={offset}
+      factor={factor}
+    />
+    <Divider speed={0.1} offset={offset} factor={factor}>
       <UpDown>
         <SVG icon="box" hiddenMobile width={6} color="icon_blue" left="50%" top="75%" />
         <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
@@ -30,7 +36,7 @@ const About = ({ offset }: { offset: number }) => (
       <SVG icon="box" width={12} color="icon_darkest" left="20%" top="30%" />
       <SVG icon="hexa" width={8} stroke color="icon_darkest" left="80%" top="70%" />
     </Divider>
-    <Content speed={0.4} offset={offset}>
+    <Content speed={0.4} offset={offset} factor={factor}>
       <Inner>
         <AboutMDX />
       </Inner>

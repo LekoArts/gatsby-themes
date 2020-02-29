@@ -16,9 +16,9 @@ const InnerWave = styled.div`
   }
 `
 
-const Contact = ({ offset }: { offset: number }) => (
+const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
-    <Divider fill="divider" speed={0.2} offset={offset}>
+    <Divider fill="divider" speed={0.2} offset={offset} factor={factor}>
       <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
         <InnerWave sx={{ position: `relative`, height: `full`, svg: { width: `100%`, height: `40vh` } }}>
           <svg xmlns="http://www.w3.org/2000/svg" id="contact-wave" viewBox="0 0 800 338.05" preserveAspectRatio="none">
@@ -34,13 +34,13 @@ const Contact = ({ offset }: { offset: number }) => (
         </InnerWave>
       </div>
     </Divider>
-    <Content speed={0.4} offset={offset}>
+    <Content speed={0.4} offset={offset} factor={factor}>
       <Inner>
         <ContactMDX />
       </Inner>
       <Footer />
     </Content>
-    <Divider speed={0.1} offset={offset}>
+    <Divider speed={0.1} offset={offset} factor={factor}>
       <UpDown>
         <SVG icon="upDown" hiddenMobile width={8} color="icon_darkest" left="70%" top="20%" />
         <SVG icon="triangle" width={8} stroke color="icon_darkest" left="25%" top="5%" />
