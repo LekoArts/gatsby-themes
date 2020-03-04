@@ -64,18 +64,20 @@ gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
 
 ### Theme options
 
-| Key               | Default Value   | Description                                                                                               |
-| ----------------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| `basePath`        | `/`             | Root url for the theme                                                                                    |
-| `blogPath`        | `/blog`         | url for the blog post overview page                                                                       |
-| `tagsPath`        | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                  |
-| `postsPath`       | `content/posts` | Location of posts                                                                                         |
-| `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                   |
-| `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
-| `formatString`    | `DD.MM.YYYY`    | Configure the date format for Date fields                                                                 |
-| `showLineNumbers` | `true`          | Show line numbers in code blocks                                                                          |
-| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                           |
-| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                          |
+| Key               | Default Value                                        | Description                                                                                                |
+| ----------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`                                                  | Root url for the theme                                                                                     |
+| `blogPath`        | `/blog`                                              | url for the blog post overview page                                                                        |
+| `tagsPath`        | `/tags`                                              | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                   |
+| `postsPath`       | `content/posts`                                      | Location of posts                                                                                          |
+| `pagesPath`       | `content/pages`                                      | Location of additional pages (optional)                                                                    |
+| `mdx`             | `true`                                               | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)  |
+| `formatString`    | `DD.MM.YYYY`                                         | Configure the date format for Date fields                                                                  |
+| `showLineNumbers` | `true`                                               | Show line numbers in code blocks                                                                           |
+| `navigation`      | `[]`                                                 | Add links to your internal sites to the left part of the header                                            |
+| `externalLinks`   | `[]`                                                 | Add links to your external sites to the right part of the header                                           |
+| `feed`            | `true`                                               | Configure `gatsby-plugin-feed` (if your website already is using the plugin pass `false` to turn this off) |
+| `feedTitle`       | `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog` | Pass a string to the `title` option of `gatsby-plugin-feed`                                                |
 
 #### Example usage
 
