@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.0.10...@lekoarts/gatsby-theme-styleguide@1.0.11) (2020-03-04)
+
+
+### Bug Fixes
+
+* filterStyles & better checks in Heading ([#291](https://github.com/LekoArts/gatsby-themes/issues/291)) ([1f20d4b](https://github.com/LekoArts/gatsby-themes/commit/1f20d4ba18f6aed253559fc2a99d5333e0272bfd))
+
+
+
+
+
 ## [1.0.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.0.9...@lekoarts/gatsby-theme-styleguide@1.0.10) (2020-02-27)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide

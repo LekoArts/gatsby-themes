@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.0.11...styleguide@0.0.12) (2020-03-04)
+
+**Note:** Version bump only for package styleguide
+
+
+
+
+
 ## [0.0.11](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.0.10...styleguide@0.0.11) (2020-02-27)
 
 **Note:** Version bump only for package styleguide

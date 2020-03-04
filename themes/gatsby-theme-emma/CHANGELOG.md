@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.3.0...@lekoarts/gatsby-theme-emma@1.3.1) (2020-03-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/core to ^10.0.28 ([#296](https://github.com/LekoArts/gatsby-themes/issues/296)) ([8f92e72](https://github.com/LekoArts/gatsby-themes/commit/8f92e726a198026e1aa7917ab1161a941e166dbe))
+* **deps:** update gatsby ([#297](https://github.com/LekoArts/gatsby-themes/issues/297)) ([1c2cd69](https://github.com/LekoArts/gatsby-themes/commit/1c2cd695d7e2abbc820ce81a37fc20f23ab9f7ce))
+* **deps:** update gatsby ([#298](https://github.com/LekoArts/gatsby-themes/issues/298)) ([a904526](https://github.com/LekoArts/gatsby-themes/commit/a904526aed9c86fa291866fc85f0d0bca11112b6))
+
+
+
+
+
 # [1.3.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.2.5...@lekoarts/gatsby-theme-emma@1.3.0) (2020-02-27)
 
 

@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.3...@lekoarts/gatsby-theme-specimens@2.1.4) (2020-03-04)
+
+
+### Bug Fixes
+
+* filterStyles & better checks in Heading ([#291](https://github.com/LekoArts/gatsby-themes/issues/291)) ([1f20d4b](https://github.com/LekoArts/gatsby-themes/commit/1f20d4ba18f6aed253559fc2a99d5333e0272bfd))
+* **deps:** update dependency @emotion/core to ^10.0.28 ([#296](https://github.com/LekoArts/gatsby-themes/issues/296)) ([8f92e72](https://github.com/LekoArts/gatsby-themes/commit/8f92e726a198026e1aa7917ab1161a941e166dbe))
+* **deps:** update gatsby ([#298](https://github.com/LekoArts/gatsby-themes/issues/298)) ([a904526](https://github.com/LekoArts/gatsby-themes/commit/a904526aed9c86fa291866fc85f0d0bca11112b6))
+
+
+
+
+
 ## [2.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.2...@lekoarts/gatsby-theme-specimens@2.1.3) (2020-02-27)
 
 
