@@ -20,7 +20,7 @@ const Typography = () => {
         theme={useTheme()}
         styles={filterStyles({
           input: styles,
-          allowed: [`h1`, `h2`, `h3`, `h4`],
+          allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`],
         })}
       />
     </section>
