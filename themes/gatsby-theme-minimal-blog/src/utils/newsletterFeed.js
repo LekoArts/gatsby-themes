@@ -1,6 +1,6 @@
 /* eslint arrow-body-style: 0 */
 
-module.exports = {
+module.exports = title => ({
   query: `
     {
       site {
@@ -8,6 +8,7 @@ module.exports = {
           title: siteTitle
           description: siteDescription
           siteUrl
+          site_url: siteUrl
         }
       }
     }
@@ -40,7 +41,7 @@ module.exports = {
         }
       `,
       output: `rss.xml`,
-      title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+      title,
     },
   ],
-}
+})
