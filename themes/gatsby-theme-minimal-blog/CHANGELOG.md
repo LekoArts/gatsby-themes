@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.1...@lekoarts/gatsby-theme-minimal-blog@2.2.2) (2020-03-04)
+
+
+### Bug Fixes
+
+* Allow customized RSS feed and title ([#301](https://github.com/LekoArts/gatsby-themes/issues/301)) ([fa01ac8](https://github.com/LekoArts/gatsby-themes/commit/fa01ac8f3e7fc103b16377d678ed22108b0e27d0))
+
+
+
+
+
 ## [2.2.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.0...@lekoarts/gatsby-theme-minimal-blog@2.2.1) (2020-03-04)
 
 
