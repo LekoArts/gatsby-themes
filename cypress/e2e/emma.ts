@@ -10,16 +10,13 @@ describe(`gatsby-theme-emma`, () => {
     cy.findByLabelText(/emma, back to homepage/i)
   })
   it(`should render additional page in navigation`, () => {
-    cy.findByText(/about/i)
-      .click()
-      .waitForRouteChange()
-      .assertRoute(`/about`)
+    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/toggle dark mode/i)
   })
   it(`should have functioning theme toggle`, () => {
-    cy.findByLabelText(/toggle dark mode/i).then(button => {
+    cy.findByLabelText(/toggle dark mode/i).then((button) => {
       if (button.text().includes(`Light`)) {
         cy.findByLabelText(/toggle dark mode/i).click()
       }
@@ -67,9 +64,6 @@ describe(`gatsby-theme-emma`, () => {
       .assertRoute(`/proprius`)
   })
   it(`should link and display the about page`, () => {
-    cy.findByText(/about/i)
-      .click()
-      .waitForRouteChange()
-      .assertRoute(`/about`)
+    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
   })
 })

@@ -24,7 +24,7 @@ const RectAreaLightDecl = ({
     color={color}
     width={width}
     height={height}
-    onUpdate={self => self.lookAt(...lookAt)}
+    onUpdate={(self) => self.lookAt(...lookAt)}
   />
 )
 

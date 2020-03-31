@@ -92,26 +92,26 @@ module.exports = {
         navigation: [
           {
             title: `Blog`,
-            slug: `/blog`
+            slug: `/blog`,
           },
           {
             title: `About`,
-            slug: `/about`
-          }
+            slug: `/about`,
+          },
         ],
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`
+            url: `https://twitter.com/lekoarts_de`,
           },
           {
             name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`
-          }
-        ]
-      }
-    }
-  ]
+            url: `https://www.instagram.com/lekoarts.de/`,
+          },
+        ],
+      },
+    },
+  ],
 };
 ```
 
@@ -143,21 +143,21 @@ module.exports = {
     externalLinks: [
       {
         name: `Twitter`,
-        url: `https://twitter.com/lekoarts_de`
+        url: `https://twitter.com/lekoarts_de`,
       },
       {
         name: `Instagram`,
-        url: `https://www.instagram.com/lekoarts.de/`
-      }
+        url: `https://www.instagram.com/lekoarts.de/`,
+      },
     ],
     // Navigation links
     navigation: [
       {
         title: `Blog`,
-        slug: `/blog`
-      }
-    ]
-  }
+        slug: `/blog`,
+      },
+    ],
+  },
 };
 ```
 

@@ -9,10 +9,10 @@ exports.onCreateNode = async ({ node, actions, reporter }) => {
     const pathToImage = urlResolve(path.dirname(node.fileAbsolutePath), node.frontmatter.cover)
 
     await ColorThief.getColor(pathToImage)
-      .then(color => {
+      .then((color) => {
         createNodeField({ node, name: `colorThief`, value: color })
       })
-      .catch(err => {
+      .catch((err) => {
         reporter.error(err)
       })
   }

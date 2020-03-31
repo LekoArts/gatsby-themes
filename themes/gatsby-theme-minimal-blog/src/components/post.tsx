@@ -32,7 +32,7 @@ type PostProps = {
 }
 
 const px = [`32px`, `16px`, `8px`, `4px`]
-const shadow = px.map(v => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 const Post = ({ data: { post } }: PostProps) => (
   <Layout>
@@ -40,6 +40,7 @@ const Post = ({ data: { post } }: PostProps) => (
       title={post.title}
       description={post.description ? post.description : post.excerpt}
       image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
+      pathname={post.slug}
     />
     <Styled.h2>{post.title}</Styled.h2>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>

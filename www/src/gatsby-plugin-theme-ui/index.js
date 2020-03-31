@@ -142,20 +142,20 @@ export default {
     primary: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      backgroundImage: t => `linear-gradient(45deg, ${t.colors.indigo[6]}, ${t.colors.indigo[4]})`,
+      backgroundImage: (t) => `linear-gradient(45deg, ${t.colors.indigo[6]}, ${t.colors.indigo[4]})`,
       fontSize: [1, 2],
       px: 4,
       py: `0.6rem`,
-      boxShadow: t => `0px 10px 15px ${t.colors.shadow}`,
+      boxShadow: (t) => `0px 10px 15px ${t.colors.shadow}`,
       "&:hover": {
         transform: `translateY(-2px)`,
-        boxShadow: t => `0px 20px 25px ${t.colors.shadow}`,
+        boxShadow: (t) => `0px 20px 25px ${t.colors.shadow}`,
       },
     },
     secondary: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      backgroundImage: t => `linear-gradient(45deg, ${t.colors.gray[7]}, ${t.colors.gray[5]})`,
+      backgroundImage: (t) => `linear-gradient(45deg, ${t.colors.gray[7]}, ${t.colors.gray[5]})`,
       fontSize: 1,
       px: 4,
       py: 1,
@@ -235,40 +235,40 @@ export default {
   },
   gradients: {
     blue: {
-      backgroundImage: t => `linear-gradient(45deg, ${t.colors.indigo[3]}, ${t.colors.indigo[5]})`,
+      backgroundImage: (t) => `linear-gradient(45deg, ${t.colors.indigo[3]}, ${t.colors.indigo[5]})`,
     },
     orange: {
-      backgroundImage: t => `linear-gradient(225deg, ${t.colors.orange[3]}, ${t.colors.orange[5]})`,
+      backgroundImage: (t) => `linear-gradient(225deg, ${t.colors.orange[3]}, ${t.colors.orange[5]})`,
     },
     pink: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.pink[4]}, ${t.colors.pink[6]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.pink[4]}, ${t.colors.pink[6]})`,
     },
     purple: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.purple[6]}, ${t.colors.purple[3]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.purple[6]}, ${t.colors.purple[3]})`,
     },
     gray: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.gray[5]}, ${t.colors.gray[7]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.gray[5]}, ${t.colors.gray[7]})`,
     },
     black: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.gray[7]}, ${t.colors.gray[9]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.gray[7]}, ${t.colors.gray[9]})`,
     },
     red: {
-      backgroundImage: t => `linear-gradient(225deg, ${t.colors.red[6]}, ${t.colors.red[3]})`,
+      backgroundImage: (t) => `linear-gradient(225deg, ${t.colors.red[6]}, ${t.colors.red[3]})`,
     },
     yellow: {
-      backgroundImage: t => `linear-gradient(180deg, ${t.colors.yellow[5]}, ${t.colors.yellow[6]})`,
+      backgroundImage: (t) => `linear-gradient(180deg, ${t.colors.yellow[5]}, ${t.colors.yellow[6]})`,
     },
     green: {
-      backgroundImage: t => `linear-gradient(225deg, ${t.colors.green[3]}, ${t.colors.green[5]})`,
+      backgroundImage: (t) => `linear-gradient(225deg, ${t.colors.green[3]}, ${t.colors.green[5]})`,
     },
     indigo: {
-      backgroundImage: t => `linear-gradient(72deg, ${t.colors.indigo[7]}, ${t.colors.indigo[5]})`,
+      backgroundImage: (t) => `linear-gradient(72deg, ${t.colors.indigo[7]}, ${t.colors.indigo[5]})`,
     },
     teal: {
-      backgroundImage: t => `linear-gradient(72deg, ${t.colors.teal[7]}, ${t.colors.teal[5]})`,
+      backgroundImage: (t) => `linear-gradient(72deg, ${t.colors.teal[7]}, ${t.colors.teal[5]})`,
     },
     darkIndigo: {
-      backgroundImage: t => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
+      backgroundImage: (t) => `linear-gradient(135deg, ${t.colors.indigo[8]}, ${t.colors.indigo[6]})`,
     },
     strangerThings: {
       backgroundImage: `radial-gradient(#BA230D, #520506)`,

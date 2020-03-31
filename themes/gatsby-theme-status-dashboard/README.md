@@ -77,11 +77,11 @@ module.exports = {
       options: {
         // netlifyOptions defaults to `{}`
         netlifyOptions: {
-          userAgent: `netlify/js-client`
-        }
-      }
-    }
-  ]
+          userAgent: `netlify/js-client`,
+        },
+      },
+    },
+  ],
 };
 ```
 

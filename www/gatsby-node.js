@@ -1,6 +1,6 @@
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -100,7 +100,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const newsletters = result.data.allNewsletter.nodes
 
-  newsletters.forEach(newsletter => {
+  newsletters.forEach((newsletter) => {
     createPage({
       path: newsletter.slug,
       component: require.resolve(`./src/templates/newsletter.tsx`),

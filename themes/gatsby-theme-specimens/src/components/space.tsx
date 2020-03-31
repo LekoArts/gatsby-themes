@@ -13,7 +13,7 @@ const Space = ({ space }: SpaceProps) => {
   const specimensConfig = useSpecimensConfig()
   const formattedSpace = Array.isArray(space)
     ? space.map((entry, index) => ({ size: entry, token: index }))
-    : Object.entries(space).map(entry => ({ token: entry[0], size: entry[1] }))
+    : Object.entries(space).map((entry) => ({ token: entry[0], size: entry[1] }))
 
   return (
     <Table

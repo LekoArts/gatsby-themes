@@ -44,7 +44,7 @@ const Table = ({ className, columns, titles, children }: TableProps) => (
         },
       }}
     >
-      {titles.map(title => (
+      {titles.map((title) => (
         <div key={title}>
           <Badge>{title}</Badge>
         </div>

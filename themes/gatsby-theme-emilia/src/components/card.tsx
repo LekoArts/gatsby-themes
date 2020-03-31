@@ -16,7 +16,7 @@ type Props = {
 }
 
 const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
-const shadowArray = px.map(v => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+const shadowArray = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false }: Props) => {
   const h = item.cover.childImageSharp.fluid.presentationHeight

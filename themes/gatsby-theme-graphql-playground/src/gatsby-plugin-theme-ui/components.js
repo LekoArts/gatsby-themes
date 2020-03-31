@@ -3,6 +3,6 @@ import NavLink from "../components/nav-link"
 
 export default {
   a: NavLink,
-  pre: props => props.children,
+  pre: (props) => props.children,
   code: Prism,
 }

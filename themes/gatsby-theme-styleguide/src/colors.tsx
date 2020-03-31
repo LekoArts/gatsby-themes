@@ -7,9 +7,9 @@ import ColorsPalette from "./colors-palettes"
 
 const Colors = () => {
   const { colors } = useTheme()
-  const filteredKeys = Object.keys(colors).filter(k => Array.isArray(colors[k]))
+  const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]))
   const filteredColors = Object.keys(colors)
-    .filter(key => filteredKeys.includes(key))
+    .filter((key) => filteredKeys.includes(key))
     .reduce(
       (obj, key) => ({
         ...obj,

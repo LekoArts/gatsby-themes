@@ -109,8 +109,8 @@ module.exports = {
     // Twitter Handle
     author: `@lekoarts_de`,
     // Will be the root URL for the iFrame
-    graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`
-  }
+    graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
+  },
 };
 ```
 

@@ -1,4 +1,4 @@
-module.exports = options => ({
+module.exports = (options) => ({
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia-core`,
