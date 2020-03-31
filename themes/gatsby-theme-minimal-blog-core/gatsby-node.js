@@ -13,7 +13,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
 
   const dirs = [path.join(program.directory, postsPath), path.join(program.directory, pagesPath)]
 
-  dirs.forEach(dir => {
+  dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
       reporter.info(`Initializing "${dir}" directory`)
       mkdirp.sync(dir)
@@ -21,7 +21,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
   })
 }
 
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -40,7 +40,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
   const { basePath } = withDefaults(themeOptions)
 
-  const slugify = source => {
+  const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
@@ -197,7 +197,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     let modifiedTags
 
     if (node.frontmatter.tags) {
-      modifiedTags = node.frontmatter.tags.map(tag => ({
+      modifiedTags = node.frontmatter.tags.map((tag) => ({
         name: tag,
         slug: kebabCase(tag),
       }))
@@ -321,7 +321,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const posts = result.data.allPost.nodes
 
-  posts.forEach(post => {
+  posts.forEach((post) => {
     createPage({
       path: post.slug,
       component: postTemplate,
@@ -335,7 +335,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const pages = result.data.allPage.nodes
 
   if (pages.length > 0) {
-    pages.forEach(page => {
+    pages.forEach((page) => {
       createPage({
         path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
         component: pageTemplate,
@@ -349,7 +349,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const tags = result.data.tags.group
 
   if (tags.length > 0) {
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       createPage({
         path: `/${basePath}/${tagsPath}/${kebabCase(tag.fieldValue)}`.replace(/\/\/+/g, `/`),
         component: tagTemplate,

@@ -4,7 +4,7 @@ module.exports = {
   feeds: [
     {
       serialize: ({ query: { site, allNewsletter } }) => {
-        return allNewsletter.nodes.map(newsletter => {
+        return allNewsletter.nodes.map((newsletter) => {
           return {
             title: newsletter.title,
             date: newsletter.date,

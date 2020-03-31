@@ -13,8 +13,8 @@ function Model({ url }: { url: string }) {
 
   React.useMemo(
     () =>
-      new GLTFLoader().setDRACOLoader(new DRACOLoader()).load(url, gltf => {
-        gltf.scene.traverse(obj => {
+      new GLTFLoader().setDRACOLoader(new DRACOLoader()).load(url, (gltf) => {
+        gltf.scene.traverse((obj) => {
           if (obj.type === `Mesh`) {
             obj.material.dispose()
             obj.material = new THREE.MeshPhysicalMaterial({

@@ -129,9 +129,9 @@ export default {
   ...baseTheme,
   alerts: {
     hint: {
-      padding: `3rem`
-    }
-  }
+      padding: `3rem`,
+    },
+  },
 };
 ```
 
@@ -164,7 +164,7 @@ import {
   Shadow,
   Space,
   Table,
-  Video
+  Video,
 } from "@lekoarts/gatsby-theme-specimens";
 
 export default {
@@ -218,7 +218,7 @@ export default {
       poster={poster}
       src={src}
     />
-  )
+  ),
 };
 ```
 

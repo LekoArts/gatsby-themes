@@ -76,10 +76,10 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-cara`,
       options: {
         // basePath defaults to `/`
-        basePath: `/sideproject`
-      }
-    }
-  ]
+        basePath: `/sideproject`,
+      },
+    },
+  ],
 };
 ```
 
@@ -106,8 +106,8 @@ module.exports = {
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@lekoarts_de`
-  }
+    author: `@lekoarts_de`,
+  },
 };
 ```
 

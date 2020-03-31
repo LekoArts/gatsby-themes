@@ -64,7 +64,7 @@ const Post = ({ data: { post } }) => (
         color: `secondary`,
         mt: 3,
         a: { color: `secondary` },
-        fontSize: [1, 1, 2]
+        fontSize: [1, 1, 2],
       }}
     >
       <span>{post.date}</span>
@@ -79,7 +79,7 @@ const Post = ({ data: { post } }) => (
       sx={{
         ...CodeStyles,
         my: 5,
-        ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` }
+        ".gatsby-resp-image-wrapper": { my: 5, boxShadow: `lg` },
       }}
     >
       <MDXRenderer>{post.body}</MDXRenderer>

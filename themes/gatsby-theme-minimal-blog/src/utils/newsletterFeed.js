@@ -1,6 +1,6 @@
 /* eslint arrow-body-style: 0 */
 
-module.exports = title => ({
+module.exports = (title) => ({
   query: `
     {
       site {
@@ -16,7 +16,7 @@ module.exports = title => ({
   feeds: [
     {
       serialize: ({ query: { site, allPost } }) => {
-        return allPost.nodes.map(post => {
+        return allPost.nodes.map((post) => {
           return {
             title: post.title,
             date: post.date,

@@ -70,7 +70,7 @@ const Project = ({ data: { project, images }, pageContext: { prev, next } }: Pro
       />
       <HeaderProject title={project.title} description={project.body} areas={project.areas} date={project.date} />
       <Container sx={{ mt: [`-6rem`, `-6rem`, `-8rem`] }}>
-        {images.nodes.map(image => (
+        {images.nodes.map((image) => (
           <animated.div key={image.name} style={imageFade}>
             <Img fluid={image.childImageSharp.fluid} alt={image.name} sx={{ mb: [4, 4, 5], boxShadow: `xl` }} />
           </animated.div>

@@ -13,7 +13,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
 
   const dirs = [path.join(program.directory, projectsPath)]
 
-  dirs.forEach(dir => {
+  dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
       reporter.info(`Initializing "${dir}" directory`)
       mkdirp.sync(dir)
@@ -21,7 +21,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
   })
 }
 
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -40,7 +40,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
   const { basePath } = withDefaults(themeOptions)
 
-  const slugify = source => {
+  const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)

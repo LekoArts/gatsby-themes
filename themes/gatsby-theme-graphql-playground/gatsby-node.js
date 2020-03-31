@@ -12,7 +12,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
 
   const dirs = [path.join(program.directory, docsPath)]
 
-  dirs.forEach(dir => {
+  dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
       reporter.info(`Initializing "${dir}" directory`)
       mkdirp.sync(dir)
@@ -79,7 +79,7 @@ exports.createResolvers = ({ createResolvers }) => {
         async resolve(source, args, context, info) {
           const node = await mdxResolverPassthrough({ fieldName: `mdxAST`, source, args, context, info })
           const block = node.children.find(
-            ast => ast.type === `code` && ast.lang === `graphql` && ast.meta === `preview`
+            (ast) => ast.type === `code` && ast.lang === `graphql` && ast.meta === `preview`
           )
 
           return encodeURI(block.value)
@@ -166,7 +166,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const items = result.data.allPlayground.nodes
 
   if (items.length > 0) {
-    items.forEach(page => {
+    items.forEach((page) => {
       createPage({
         path: page.slug,
         component: itemTemplate,
