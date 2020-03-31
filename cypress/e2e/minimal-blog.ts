@@ -26,13 +26,12 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .within(() => {
         cy.findByText(/Blog/i)
       })
-      .findByText(/Fantastic Beasts and Where to Find Them/i)
-      .findByText(/View all tags/i)
+    cy.findByText(/Fantastic Beasts and Where to Find Them/i)
+    cy.findByText(/View all tags/i)
   })
   it(`should have functioning tags in list items`, () => {
-    cy.visit(`/blog`)
-      .waitForRouteChange()
-      .findByText(/Tutorial/i)
+    cy.visit(`/blog`).waitForRouteChange()
+    cy.findByText(/Tutorial/i)
       .click()
       .waitForRouteChange()
       .assertRoute(`/tags/tutorial`)
@@ -40,12 +39,11 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .within(() => {
         cy.findByText(/Tutorial/i)
       })
-      .findByText(/Introduction to "Defence against the Dark Arts"/i)
+    cy.findByText(/Introduction to "Defence against the Dark Arts"/i)
   })
   it(`should have functioning tags overview page`, () => {
-    cy.visit(`/blog`)
-      .waitForRouteChange()
-      .findByText(/View all tags/i)
+    cy.visit(`/blog`).waitForRouteChange()
+    cy.findByText(/View all tags/i)
       .click()
       .waitForRouteChange()
       .assertRoute(`/tags`)
@@ -53,7 +51,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .within(() => {
         cy.findByText(/Tags/i)
       })
-      .findByText(/Novel/i)
+    cy.findByText(/Novel/i)
   })
   it(`should have social media links`, () => {
     cy.get(`header`).within(() => {
@@ -65,19 +63,20 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should render the latest posts`, () => {
     cy.findByText(/Latest Posts/i)
-      .findByText(/Fantastic Beasts and Where to Find Them/i)
-      .findByText(/Read all posts/i)
+    cy.findByText(/Fantastic Beasts and Where to Find Them/i)
+    cy.findByText(/Read all posts/i)
   })
   it(`should render the bottom part`, () => {
     cy.findByText(/Projects/i)
-      .findByText(/Instagram Project "Proprius"/i)
-      .should(`have.attr`, `href`, `https://www.lekoarts.de/en/projects/private-instagram-project-proprius`)
+    cy.findByText(/Instagram Project "Proprius"/i).should(
+      `have.attr`,
+      `href`,
+      `https://www.lekoarts.de/en/projects/private-instagram-project-proprius`
+    )
   })
   it(`should render the footer`, () => {
-    cy.findByLabelText(`Link to the theme's GitHub repository`)
-      .contains(`Theme`)
-      .findByLabelText(`Link to the theme author's website`)
-      .contains(`LekoArts`)
+    cy.findByLabelText(`Link to the theme's GitHub repository`).contains(`Theme`)
+    cy.findByLabelText(`Link to the theme author's website`).contains(`LekoArts`)
   })
   it(`should link to individual blog post`, () => {
     cy.findByText(/Introduction to "Defence against the Dark Arts"/i)
@@ -88,22 +87,16 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .within(() => {
         cy.findByText(/Introduction to "Defence against the Dark Arts"/i)
       })
-      .findByText(/07.11.2019/i)
-      .findByText(/Tutorial/i)
-      .findByText(/2 min read/i)
-      .findByText(
-        /Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog./i
-      )
+    cy.findByText(/07.11.2019/i)
+    cy.findByText(/Tutorial/i)
+    cy.findByText(/2 min read/i)
+    cy.findByText(
+      /Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog./i
+    )
   })
   it(`should render blogpost with code component`, () => {
     cy.visit(`/fantastic-beasts-and-where-to-find-them`)
-      .assertRoute(`/fantastic-beasts-and-where-to-find-them`)
-      .waitForRouteChange()
-      .get(`h2`)
-      .within(() => {
-        cy.findByText(/Fantastic Beasts and Where to Find Them/i)
-      })
-      .findByTitle(`Spotify`)
+    cy.findByTitle(`Spotify`)
       .get(`[data-name="live-editor"]`)
       .should(`exist`)
       .get(`[data-language="jsx"]`)
@@ -124,9 +117,8 @@ describe(`gatsby-theme-minimal-blog`, () => {
     cy.findByTestId(`theme-root`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box`)
-      .findByLabelText(/Activate Dark Mode/i)
-      .click()
-      .findByTestId(`theme-root`)
+    cy.findByLabelText(/Activate Dark Mode/i).click()
+    cy.findByTestId(`theme-root`)
       .should(`have.css`, `color`, `rgb(203, 213, 224)`)
       .should(`have.css`, `background`, `rgb(26, 32, 44) none repeat scroll 0% 0% / auto padding-box border-box`)
   })

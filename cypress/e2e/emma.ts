@@ -4,13 +4,13 @@
 
 describe(`gatsby-theme-emma`, () => {
   beforeEach(() => {
-    cy.visit(`/`)
+    cy.visit(`/`).waitForRouteChange()
   })
   it(`should render the site title`, () => {
     cy.findByLabelText(/emma, back to homepage/i)
   })
   it(`should render additional page in navigation`, () => {
-    cy.findByText(/about/i).click().assertRoute(`/about`)
+    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/toggle dark mode/i)
@@ -46,6 +46,7 @@ describe(`gatsby-theme-emma`, () => {
   it(`should link and display the project page`, () => {
     cy.findByLabelText(/view detail page of hermione granger/i)
       .click()
+      .waitForRouteChange()
       .assertRoute(`/hermione-granger`)
       .get(`h1`)
       .within(() => {
@@ -61,6 +62,6 @@ describe(`gatsby-theme-emma`, () => {
       .assertRoute(`/proprius`)
   })
   it(`should link and display the about page`, () => {
-    cy.findByText(/about/i).click().assertRoute(`/about`)
+    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
   })
 })
