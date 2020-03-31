@@ -40,6 +40,7 @@ const Post = ({ data: { post } }: PostProps) => (
       title={post.title}
       description={post.description ? post.description : post.excerpt}
       image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
+      pathname={post.slug}
     />
     <Styled.h2>{post.title}</Styled.h2>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
