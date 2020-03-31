@@ -83,10 +83,10 @@ module.exports = {
         // basePath defaults to `/`
         basePath: `/sideproject`,
         // projectsPath defaults to `content/projects`
-        projectsPath: `content/cool-projects`
-      }
-    }
-  ]
+        projectsPath: `content/cool-projects`,
+      },
+    },
+  ],
 };
 ```
 
@@ -113,8 +113,8 @@ module.exports = {
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
-    author: `@lekoarts_de`
-  }
+    author: `@lekoarts_de`,
+  },
 };
 ```
 
