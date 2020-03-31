@@ -1,6 +1,6 @@
 const newsletterFeed = require(`./src/utils/newsletterFeed`)
 
-module.exports = options => {
+module.exports = (options) => {
   const { feed = true, feedTitle = `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog` } = options
 
   return {

@@ -25,7 +25,7 @@ import {
 import { preToCodeBlock } from "mdx-utils"
 import Code from "../components/code"
 
-const heading = Tag => props =>
+const heading = (Tag) => (props) =>
   props.id ? (
     <Tag {...props} id={props.id}>
       <a
@@ -85,7 +85,7 @@ export default {
   h4: heading(`h4`),
   h5: heading(`h5`),
   h6: heading(`h6`),
-  pre: preProps => {
+  pre: (preProps) => {
     const props = preToCodeBlock(preProps)
     // if there's a codeString and some props, we passed the test
     if (props) {

@@ -13,10 +13,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should link the about page`, () => {
     cy.get(`nav`).within(() => {
-      cy.findByText(/About/i)
-        .click()
-        .waitForRouteChange()
-        .assertRoute(`/about`)
+      cy.findByText(/About/i).click().waitForRouteChange().assertRoute(`/about`)
     })
   })
   it(`should link the blog page`, () => {

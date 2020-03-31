@@ -37,11 +37,7 @@ function getParams(className = ``) {
 
   return [
     // @ts-ignore
-    lang
-      .split(`language-`)
-      .pop()
-      .split(`{`)
-      .shift(),
+    lang.split(`language-`).pop().split(`{`).shift(),
   ].concat(
     // @ts-ignore
     params.split(`&`).reduce((merged, param) => {
@@ -61,7 +57,7 @@ const calculateLinesToHighlight = (meta: string) => {
   }
   const lineNumbers = RE.exec(meta)![1]
     .split(`,`)
-    .map(v => v.split(`-`).map(x => parseInt(x, 10)))
+    .map((v) => v.split(`-`).map((x) => parseInt(x, 10)))
   return (index: number) => {
     const lineNumber = index + 1
     const inRange = lineNumbers.some(([start, end]) =>

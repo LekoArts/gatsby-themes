@@ -107,7 +107,7 @@ const Listing = () => {
                 order: isEven ? 1 : [1, 1, 2],
               }}
             >
-              {theme.shapes.map(shape => {
+              {theme.shapes.map((shape) => {
                 switch (shape.type) {
                   case `circle`:
                     return (

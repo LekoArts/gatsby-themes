@@ -13,7 +13,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
 
   const dirs = [path.join(program.directory, projectsPath), path.join(program.directory, pagesPath)]
 
-  dirs.forEach(dir => {
+  dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
       reporter.info(`Initializing "${dir}" directory`)
       mkdirp.sync(dir)
@@ -21,7 +21,7 @@ exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
   })
 }
 
-const mdxResolverPassthrough = fieldName => async (source, args, context, info) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -40,7 +40,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
   const { basePath } = withDefaults(themeOptions)
 
-  const slugify = source => {
+  const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
     return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
@@ -224,7 +224,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const projects = result.data.allProject.nodes
 
-  projects.forEach(project => {
+  projects.forEach((project) => {
     createPage({
       path: project.slug,
       component: projectTemplate,
@@ -238,7 +238,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const pages = result.data.allPage.nodes
 
   if (pages.length > 0) {
-    pages.forEach(page => {
+    pages.forEach((page) => {
       createPage({
         path: page.slug,
         component: pageTemplate,

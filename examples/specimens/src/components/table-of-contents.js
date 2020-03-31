@@ -17,7 +17,7 @@ const TableOfContents = () => {
     <React.Fragment>
       <ul>
         {toc &&
-          toc.map(entry => (
+          toc.map((entry) => (
             <li key={entry.url}>
               <Styled.a href={entry.url}>{entry.title}</Styled.a>
             </li>

@@ -1,4 +1,4 @@
-module.exports = themeOptions => {
+module.exports = (themeOptions) => {
   const basePath = themeOptions.basePath || `/`
   const blogPath = themeOptions.blogPath || `/blog`
   const postsPath = themeOptions.postsPath || `content/posts`

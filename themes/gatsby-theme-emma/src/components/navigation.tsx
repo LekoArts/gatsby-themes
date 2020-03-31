@@ -22,7 +22,7 @@ const Navigation = ({ nav }: Props) => (
     }}
     aria-label="Primary Navigation"
   >
-    {nav.map(n => (
+    {nav.map((n) => (
       <Styled.a
         as={Link}
         sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}

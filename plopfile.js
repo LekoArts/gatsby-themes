@@ -102,7 +102,7 @@ const exampleActions = [
   },
 ]
 
-module.exports = function(plop) {
+module.exports = function (plop) {
   // Add a new theme + example to get going with theme development
   plop.setGenerator(`theme & example`, {
     description: `Use this template to get started with the next theme! It sets up a theme inside /themes, an example inside /examples and a Cypress test.`,

@@ -23,7 +23,7 @@ const Tags = ({ list }: PostsProps) => {
       <SEO title="Tags" />
       <Styled.h2>Tags</Styled.h2>
       <Box mt={[4, 5]}>
-        {list.map(listItem => (
+        {list.map((listItem) => (
           <Flex key={listItem.fieldValue} mb={[1, 1, 2]} sx={{ alignItems: `center` }}>
             <Styled.a
               as={Link}

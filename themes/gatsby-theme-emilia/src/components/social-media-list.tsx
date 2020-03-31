@@ -8,7 +8,7 @@ const SocialMediaList = () => {
 
   return (
     <React.Fragment>
-      {socialMedia.map(entry => (
+      {socialMedia.map((entry) => (
         <Styled.a key={entry.title} href={entry.href}>
           {entry.title}
         </Styled.a>
