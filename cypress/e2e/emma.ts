@@ -24,24 +24,23 @@ describe(`gatsby-theme-emma`, () => {
     cy.findByTestId(`theme-root`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box`)
-      .findByLabelText(/toggle dark mode/i)
-      .click()
-      .findByTestId(`theme-root`)
+    cy.findByLabelText(/toggle dark mode/i).click()
+    cy.findByTestId(`theme-root`)
       .should(`have.css`, `color`, `rgb(255, 255, 255)`)
       .should(`have.css`, `background`, `rgb(45, 55, 72) none repeat scroll 0% 0% / auto padding-box border-box`)
   })
   it(`should render social media icons in header`, () => {
-    cy.findByLabelText(/instagram/i).findByLabelText(/dribbble/i)
+    cy.findByLabelText(/instagram/i)
+    cy.findByLabelText(/dribbble/i)
   })
   it(`should render the footer`, () => {
-    cy.findByLabelText(`Link to the theme's GitHub repository`)
-      .contains(`Theme`)
-      .findByLabelText(`Link to the theme author's website`)
-      .contains(`LekoArts`)
+    cy.findByLabelText(`Link to the theme's GitHub repository`).contains(`Theme`)
+    cy.findByLabelText(`Link to the theme author's website`).contains(`LekoArts`)
   })
   it(`should have item with all information`, () => {
     cy.findByLabelText(/view detail page of hermione granger/i).within(() => {
-      cy.findByText(/hogwarts/i).findByText(/witchcraft/i)
+      cy.findByText(/hogwarts/i)
+      cy.findByText(/witchcraft/i)
     })
   })
   it(`should link and display the project page`, () => {
@@ -53,14 +52,13 @@ describe(`gatsby-theme-emma`, () => {
       .within(() => {
         cy.findByText(/hermione granger/i)
       })
-      .findByText(/hogwarts/i)
-      .findByText(/10.06.2019/i)
-      .findByText(/witchcraft/i)
+    cy.findByText(/hogwarts/i)
+    cy.findByText(/10.06.2019/i)
+    cy.findByText(/witchcraft/i)
   })
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.findByLabelText(/View detail page of Proprius: steady, individual, personal/i)
       .click()
-      .waitForRouteChange()
       .assertRoute(`/proprius`)
   })
   it(`should link and display the about page`, () => {
