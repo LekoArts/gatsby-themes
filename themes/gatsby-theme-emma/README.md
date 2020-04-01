@@ -171,3 +171,9 @@ cover: "./name.jpg"
 #### Project Info
 
 You can shadow `src/@lekoarts/gatsby-theme-emma/components/project-info.tsx` to edit the three informational items below the title on the `project` template.
+
+## 🌟 Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!

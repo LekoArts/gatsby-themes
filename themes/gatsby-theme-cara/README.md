@@ -140,3 +140,9 @@ You also have access to the `<ProjectCard />` component/shortcode which is used 
 This project is my entry to Adobe's #ChallengeYourPerspective contest.
 </ProjectCard>
 ```
+
+## 🌟 Supporting me
+
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!
