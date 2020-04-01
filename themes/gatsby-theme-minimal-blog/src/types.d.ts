@@ -137,13 +137,3 @@ interface HighlightProps {
   code: string
   children: (props: RenderProps) => React.ReactNode
 }
-
-export interface HighlightInnerProps {
-  className: string
-  style: StyleObj
-  tokens: Token[][]
-  themeDict: ThemeDict
-  getLineProps: (lineInputProps: LineInputProps) => LineOutputProps
-  getStyleForToken: (token: Token) => { [inlineStyle: string]: string }
-  getTokenProps: (tokenInputPropsL: TokenInputProps) => TokenOutputProps
-}
