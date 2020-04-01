@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.3...@lekoarts/gatsby-theme-minimal-blog@2.2.4) (2020-04-01)
+
+
+### Bug Fixes
+
+* Remove `@loadable/component` ([#334](https://github.com/LekoArts/gatsby-themes/issues/334)) ([405a753](https://github.com/LekoArts/gatsby-themes/commit/405a7538467d7656c840b9de7f5aef59235e5f26))
+
+
+
+
+
 ## [2.2.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.2...@lekoarts/gatsby-theme-minimal-blog@2.2.3) (2020-03-31)
 
 
