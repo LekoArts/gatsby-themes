@@ -1,9 +1,10 @@
 /* eslint react/destructuring-assignment: 0 */
 import React from "react"
-import loadable from "@loadable/component"
+import Highlight, { defaultProps } from "prism-react-renderer"
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import theme from "prism-react-renderer/themes/nightOwl"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import { HighlightInnerProps, Language } from "../types"
+import { Language } from "../types"
 
 type CodeProps = {
   codeString: string
@@ -12,25 +13,6 @@ type CodeProps = {
   metastring?: string
   [key: string]: any
 }
-
-const LazyHighlight = loadable(async () => {
-  const Module = await import(`prism-react-renderer`)
-  const Highlight = Module.default
-  const { defaultProps } = Module
-  return (props: any) => <Highlight {...defaultProps} {...props} />
-})
-
-const LazyLiveProvider = loadable(async () => {
-  const Module = await import(`react-live`)
-  const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
-  return (props: any) => (
-    <LiveProvider {...props}>
-      <LiveEditor data-name="live-editor" />
-      <LiveError />
-      <LivePreview data-name="live-preview" />
-    </LiveProvider>
-  )
-})
 
 function getParams(className = ``) {
   const [lang = ``, params = ``] = className.split(`:`)
@@ -82,11 +64,17 @@ const Code = ({
   const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
 
   if (props[`react-live`]) {
-    return <LazyLiveProvider code={codeString} noInline theme={theme} />
+    return (
+      <LiveProvider code={codeString} noInline theme={theme}>
+        <LiveEditor data-name="live-editor" />
+        <LiveError />
+        <LivePreview data-name="live-preview" />
+      </LiveProvider>
+    )
   }
   return (
-    <LazyHighlight code={codeString} language={language} theme={theme}>
-      {({ className, style, tokens, getLineProps, getTokenProps }: HighlightInnerProps) => (
+    <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <React.Fragment>
           {title && (
             <div className="code-title">
@@ -115,7 +103,7 @@ const Code = ({
           </div>
         </React.Fragment>
       )}
-    </LazyHighlight>
+    </Highlight>
   )
 }
 
