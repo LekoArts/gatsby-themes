@@ -9,7 +9,7 @@ type ListingProps = {
     date: string
     excerpt: string
     description: string
-    timeToRead: number
+    timeToRead?: number
     tags?: {
       name: string
       slug: string
