@@ -1,5 +1,6 @@
 import React from "react"
 import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 const defaultProps = {
@@ -56,9 +57,9 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
       <meta name="gatsby-theme" content="@lekoarts/gatsby-theme-emilia" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href={withPrefix(`/favicon-32x32.png`)} />
+      <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/favicon-16x16.png`)} />
+      <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
       {children}
     </Helmet>
   )
