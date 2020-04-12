@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.6...@lekoarts/gatsby-theme-specimens@2.1.7) (2020-04-12)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
+
+
+
+
+
 ## [2.1.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.5...@lekoarts/gatsby-theme-specimens@2.1.6) (2020-04-01)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-specimens
