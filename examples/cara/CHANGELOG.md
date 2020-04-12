@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.29](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.28...cara@0.0.29) (2020-04-12)
+
+**Note:** Version bump only for package cara
+
+
+
+
+
 ## [0.0.28](https://github.com/LekoArts/gatsby-themes/compare/cara@0.0.27...cara@0.0.28) (2020-04-12)
 
 **Note:** Version bump only for package cara

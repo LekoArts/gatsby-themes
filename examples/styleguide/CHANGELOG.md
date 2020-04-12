@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.16](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.0.15...styleguide@0.0.16) (2020-04-12)
+
+
+### Bug Fixes
+
+* Use withPrefix helper in SEO component ([#346](https://github.com/LekoArts/gatsby-themes/issues/346)) ([91fc16c](https://github.com/LekoArts/gatsby-themes/commit/91fc16c3c725a2d858ee093d761530975e2173d9))
+
+
+
+
+
 ## [0.0.15](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.0.14...styleguide@0.0.15) (2020-04-12)
 
 **Note:** Version bump only for package styleguide
