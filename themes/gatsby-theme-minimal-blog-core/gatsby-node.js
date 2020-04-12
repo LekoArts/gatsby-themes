@@ -76,7 +76,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
       html: String
-      timeToRead: Int!
+      timeToRead: Int
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -102,7 +102,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
       html: String! @mdxpassthrough(fieldName: "html")
-      timeToRead: Int! @mdxpassthrough(fieldName: "timeToRead")
+      timeToRead: Int @mdxpassthrough(fieldName: "timeToRead")
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
