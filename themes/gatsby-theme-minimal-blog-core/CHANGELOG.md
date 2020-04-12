@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.2.4...@lekoarts/gatsby-theme-minimal-blog-core@2.2.5) (2020-04-12)
+
+
+### Bug Fixes
+
+* Allow timeToRead to be null ([#347](https://github.com/LekoArts/gatsby-themes/issues/347)) ([5142ecf](https://github.com/LekoArts/gatsby-themes/commit/5142ecfcf10a7eb1529be335282b55368fa73047))
+
+
+
+
+
 ## [2.2.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.2.3...@lekoarts/gatsby-theme-minimal-blog-core@2.2.4) (2020-04-12)
 
 
