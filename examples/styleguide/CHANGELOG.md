@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.17](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.0.16...styleguide@0.0.17) (2020-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-helmet to v6 ([#354](https://github.com/LekoArts/gatsby-themes/issues/354)) ([117d1d5](https://github.com/LekoArts/gatsby-themes/commit/117d1d5a6989d763c89137d8a9f0fb55f55efdee))
+
+
+
+
+
 ## [0.0.16](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.0.15...styleguide@0.0.16) (2020-04-12)
 
 
