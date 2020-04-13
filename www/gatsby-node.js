@@ -28,7 +28,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   })
 
   createTypes(`
-    type Newsletter implements Node {
+    type Thought implements Node {
       slug: String!
       title: String!
       info: String!
@@ -53,7 +53,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     const slug = createFilePath({
       node,
       getNode,
-      basePath: `newsletter`,
+      basePath: `thoughts`,
     })
 
     const fieldData = {
@@ -65,14 +65,14 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 
     createNode({
       ...fieldData,
-      id: createNodeId(`${node.id} >>> Newsletter`),
+      id: createNodeId(`${node.id} >>> Thought`),
       parent: node.id,
       children: [],
       internal: {
-        type: `Newsletter`,
+        type: `Thought`,
         contentDigest: createContentDigest(fieldData),
         content: JSON.stringify(fieldData),
-        description: `Newsletters Type`,
+        description: `Thoughts Type`,
       },
     })
 
@@ -85,7 +85,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     query {
-      allNewsletter(sort: { fields: date, order: ASC }) {
+      allThought(sort: { fields: date, order: ASC }) {
         nodes {
           slug
         }
@@ -98,14 +98,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  const newsletters = result.data.allNewsletter.nodes
+  const thoughts = result.data.allThought.nodes
 
-  newsletters.forEach((newsletter) => {
+  thoughts.forEach((thought) => {
     createPage({
-      path: newsletter.slug,
-      component: require.resolve(`./src/templates/newsletter.tsx`),
+      path: thought.slug,
+      component: require.resolve(`./src/templates/thought.tsx`),
       context: {
-        slug: newsletter.slug,
+        slug: thought.slug,
       },
     })
   })

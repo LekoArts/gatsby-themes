@@ -62,9 +62,11 @@ Commit your changes to a feature branch of your fork and open up a PR against th
 
 Have a look at the [contributing guide](CONTRIBUTING.md) to learn more.
 
-## 🤩 Newsletter
+## 🤩 Support Me
 
-If you want to receive monthly updates on my themes and all things related to Gatsby themes (relevant blog posts from me and other people, articles about Theme UI) you can [subscribe to my newsletter](https://leko.io/newsletter-themes).
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+
+Please star this project, share it on Social Media or consider supporting me on [Patreon](https://www.patreon.com/lekoarts) or [GitHub Sponsor](https://github.com/sponsors/LekoArts)!
 
 ## 🎓 Learning Gatsby Themes
 

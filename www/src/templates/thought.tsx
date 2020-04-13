@@ -9,9 +9,9 @@ import { Circle, Donut } from "../components/shapes"
 import CircleGrid from "../icons/circle-grid"
 import SEO from "../components/seo"
 
-type NewsletterTemplateProps = {
+type ThoughtTemplateProps = {
   data: {
-    newsletter: {
+    thought: {
       slug: string
       title: string
       info: string
@@ -22,15 +22,15 @@ type NewsletterTemplateProps = {
   }
 }
 
-const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) => (
-  <Layout newsletter>
+const ThoughtTemplate = ({ data: { thought } }: ThoughtTemplateProps) => (
+  <Layout thought>
     <SEO
-      title={`${newsletter.title} | Gatsby Themes by LekoArts`}
-      description={newsletter.excerpt}
-      pathname={newsletter.slug}
-      datePublished={newsletter.date}
-      info={newsletter.info}
-      newsletter
+      title={`${thought.title} | Gatsby Themes by LekoArts`}
+      description={thought.excerpt}
+      pathname={thought.slug}
+      datePublished={thought.date}
+      info={thought.info}
+      thought
     />
     <Container>
       <Styled.a
@@ -65,12 +65,12 @@ const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) =
         <LeftArrow />
         {` `}
         <div sx={{ fontSize: 1, fontWeight: `medium` }}>
-          You're reading an archived newsletter. <br /> Go back to the homepage to view all themes & sign up for the
-          newsletter to receive new ones directly to your inbox!
+          You're reading a short post about Gatsby Themes. <br /> Go back to the homepage to view all themes & give the
+          project a star if you like the content!
         </div>
       </Styled.a>
-      <div className="newsletter-speakable">
-        <MDXRenderer>{newsletter.body}</MDXRenderer>
+      <div className="thought-speakable">
+        <MDXRenderer>{thought.body}</MDXRenderer>
       </div>
       <div
         sx={{
@@ -85,11 +85,11 @@ const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) =
           flexWrap: `wrap`,
         }}
       >
-        <div sx={{ mr: 4 }}>Originally published on {newsletter.date}</div>
+        <div sx={{ mr: 4 }}>Published on {thought.date}</div>
         <TwitterShareButton
-          url={`https://themes.lekoarts.de${newsletter.slug}`}
+          url={`https://themes.lekoarts.de${thought.slug}`}
           via="lekoarts_de"
-          title={newsletter.title}
+          title={thought.title}
           sx={{
             variant: `buttons.transparent`,
             color: `primary`,
@@ -122,20 +122,20 @@ const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) =
           position: `relative`,
         }}
       >
-        <div>Get monthly information about Gatsby themes right to your inbox!</div>
+        <div>Like what you're reading? Try out the available themes!</div>
         <a
-          href="https://leko.io/newsletter-themes"
+          href="https://github.com/LekoArts/gatsby-themes"
           rel="noopener noreferrer"
           target="_blank"
           sx={{
-            variant: `buttons.newsletter`,
+            variant: `buttons.thought`,
             mt: 4,
             display: `inline-block`,
             color: `primary`,
             backgroundColor: `white`,
           }}
         >
-          Subscribe to the newsletter
+          View all themes
         </a>
         <Donut
           width="20px"
@@ -158,11 +158,11 @@ const NewsletterTemplate = ({ data: { newsletter } }: NewsletterTemplateProps) =
   </Layout>
 )
 
-export default NewsletterTemplate
+export default ThoughtTemplate
 
 export const query = graphql`
   query($slug: String!) {
-    newsletter(slug: { eq: $slug }) {
+    thought(slug: { eq: $slug }) {
       slug
       title
       info

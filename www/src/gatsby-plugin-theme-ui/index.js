@@ -31,6 +31,7 @@ export default {
     dark: tailwind.colors.gray[7],
     muted: tailwind.colors.gray[5],
     light: tailwind.colors.gray[3],
+    starsCount: tailwind.colors.gray[7],
     model: {
       one: tailwind.colors.gray[2],
       two: tailwind.colors.gray[3],
@@ -66,6 +67,7 @@ export default {
         dark: tailwind.colors.gray[4],
         heading: `#000114`,
         light: `#842626`,
+        starsCount: tailwind.colors.gray[8],
         model: {
           one: `#000114`,
           two: `#000114`,
@@ -164,12 +166,8 @@ export default {
         transform: `translateY(-1px)`,
       },
     },
-    newsletter: {
+    heroStars: {
       ...sharedButtonStyles,
-      borderRadius: `default`,
-      px: `1.25rem`,
-      py: `0.6rem`,
-      backgroundColor: `primary`,
       fontSize: 1,
       boxShadow: `default`,
       "&:hover": {

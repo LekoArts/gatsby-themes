@@ -3,8 +3,8 @@ import { Container, Styled, jsx, Flex } from "theme-ui"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import RSS from "../icons/rss"
 
-type NewsletterQueryProps = {
-  newsletter: {
+type ThoughtQueryProps = {
+  thoughts: {
     totalCount: number
     nodes: {
       title: string
@@ -15,10 +15,10 @@ type NewsletterQueryProps = {
   }
 }
 
-const NewsletterArchive = () => {
-  const { newsletter } = useStaticQuery<NewsletterQueryProps>(graphql`
+const ThoughtsArchive = () => {
+  const { thoughts } = useStaticQuery<ThoughtQueryProps>(graphql`
     query {
-      newsletter: allNewsletter(sort: { fields: date, order: DESC }) {
+      thoughts: allThought(sort: { fields: date, order: DESC }) {
         totalCount
         nodes {
           slug
@@ -34,7 +34,7 @@ const NewsletterArchive = () => {
     <section data-name="newsletter-archive">
       <Container>
         <div sx={{ display: `flex`, alignItems: `center`, flexWrap: `wrap` }}>
-          <Styled.h2 sx={{ mr: 3 }}>Newsletter Archive</Styled.h2>
+          <Styled.h2 sx={{ mr: 3 }}>Thoughts Archive</Styled.h2>
           <a
             href="/rss.xml"
             title="RSS Feed of 'Newsletter Archive'"
@@ -64,11 +64,9 @@ const NewsletterArchive = () => {
             <RSS />
           </a>
         </div>
-        <Styled.p>
-          Read previous editions online and be sure to sign up for the newsletter to not miss future ones!
-        </Styled.p>
+        <Styled.p>Read news or thoughts about this project & Gatsby themes in general!</Styled.p>
         <div sx={{ my: 5 }}>
-          {newsletter.nodes.map((entry, index) => (
+          {thoughts.nodes.map((entry, index) => (
             <div key={`${entry.title}-${entry.date}`} sx={{ mb: [4], position: `relative` }}>
               <div
                 aria-hidden
@@ -83,7 +81,7 @@ const NewsletterArchive = () => {
                   opacity: 0.06,
                 }}
               >
-                {newsletter.totalCount - index}
+                {thoughts.totalCount - index}
               </div>
               <Flex
                 sx={{
@@ -118,4 +116,4 @@ const NewsletterArchive = () => {
   )
 }
 
-export default NewsletterArchive
+export default ThoughtsArchive

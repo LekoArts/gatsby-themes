@@ -1,13 +1,41 @@
 /** @jsx jsx */
 import { Box, Container, Flex, jsx, Styled } from "theme-ui"
+import { useStaticQuery, graphql } from "gatsby"
 import { useMediaQuery } from "react-responsive"
 import ThreeDModel from "./3d-model"
 import { Circle, Donut } from "./shapes"
 import CircleGrid from "../icons/circle-grid"
+import Star from "../icons/star"
 import { down, up } from "../styles/animations"
+
+type StarsType = {
+  githubData: {
+    data: {
+      repository: {
+        stargazers: {
+          totalCount: number
+        }
+      }
+    }
+  }
+}
 
 const Hero = () => {
   const isBigScreen = useMediaQuery({ minWidth: `1100px` })
+  const data = useStaticQuery<StarsType>(graphql`
+    {
+      githubData {
+        data {
+          repository {
+            stargazers {
+              totalCount
+            }
+          }
+        }
+      }
+    }
+  `)
+  const starsCount = data.githubData.data.repository.stargazers.totalCount
 
   return (
     <div>
@@ -16,20 +44,46 @@ const Hero = () => {
           <Box>
             <Box sx={{ maxWidth: `490px` }}>
               <Styled.h1>Free & Open Source Gatsby Themes</Styled.h1>
-              <Styled.p sx={{ color: `dark` }}>
+              <Styled.p sx={{ color: `dark`, mt: 3, mb: 4 }}>
                 Get <span sx={{ fontWeight: `bold` }}>high-quality</span> and{` `}
                 <span sx={{ fontWeight: `bold` }}>customizable</span> Gatsby themes to quickly bootstrap your website
               </Styled.p>
             </Box>
-            <Box sx={{ mt: 5 }}>
-              <Box sx={{ fontSize: 1, fontWeight: `semibold`, mb: 2 }}>Get monthly information about Gatsby Themes</Box>
+            <Box>
               <a
-                href="https://leko.io/newsletter-themes"
+                href="https://github.com/LekoArts/gatsby-themes"
                 rel="noopener noreferrer"
                 target="_blank"
-                sx={{ variant: `buttons.newsletter`, mt: 2, display: `inline-block` }}
+                sx={{
+                  variant: `buttons.heroStars`,
+                  display: `inline-flex`,
+                  alignItems: `center`,
+                }}
               >
-                Subscribe to the newsletter
+                <div
+                  sx={{
+                    display: `inline-flex`,
+                    svg: { width: `20px`, height: `auto`, mr: 2, color: `indigo.2` },
+                    px: 3,
+                    py: 1,
+                    backgroundColor: `primary`,
+                    borderTopLeftRadius: `default`,
+                    borderBottomLeftRadius: `default`,
+                  }}
+                >
+                  <Star /> Star
+                </div>
+                <div
+                  sx={{
+                    px: 3,
+                    py: 1,
+                    backgroundColor: `starsCount`,
+                    borderTopRightRadius: `default`,
+                    borderBottomRightRadius: `default`,
+                  }}
+                >
+                  {starsCount}
+                </div>
               </a>
             </Box>
           </Box>
