@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.17](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-graphql-playground@1.0.16...@lekoarts/gatsby-theme-graphql-playground@1.0.17) (2020-04-13)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#353](https://github.com/LekoArts/gatsby-themes/issues/353)) ([4550ff3](https://github.com/LekoArts/gatsby-themes/commit/4550ff3a79ba415a4f019019300fea47d24b16c8))
+
+
+
+
+
 ## [1.0.16](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-graphql-playground@1.0.15...@lekoarts/gatsby-theme-graphql-playground@1.0.16) (2020-04-12)
 
 
