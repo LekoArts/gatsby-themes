@@ -116,8 +116,8 @@ const AboutMe = () => {
           </h3>
           <Styled.p sx={{ textShadow: `0 1px 1px rgba(0, 0, 0, 0.2)` }}>
             I'm grateful for every form of support: Share this website with your friends & colleagues, buy me a tea
-            ('cause I don't drink coffee), or consider supporting me on Patreon. The latter will allow me to allocate
-            more time to maintaining these themes. Thanks for using my themes!{` `}
+            ('cause I don't drink coffee), or consider supporting me on Patreon or GitHub Sponsors. The latter will
+            allow me to allocate more time to maintaining these themes. Thanks for using my themes!{` `}
             <span role="img" aria-label="Smile">
               😊
             </span>
@@ -132,13 +132,13 @@ const AboutMe = () => {
               flexDirection: [`column`, `row`],
             }}
           >
-            <a href="https://leko.io/newsletter-themes" sx={{ variant: `buttons.outline` }}>
-              Newsletter
+            <a href="https://github.com/sponsors/LekoArts" sx={{ variant: `buttons.white` }}>
+              GitHub Sponsors
             </a>
             <a href="https://www.patreon.com/lekoarts" sx={{ variant: `buttons.white` }}>
               Patreon
             </a>
-            <a href="https://ko-fi.com/N4N0W91I" sx={{ variant: `buttons.outline` }}>
+            <a href="https://ko-fi.com/N4N0W91I" sx={{ variant: `buttons.white` }}>
               Buy me a tea
             </a>
           </Flex>

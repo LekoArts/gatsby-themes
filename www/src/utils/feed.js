@@ -3,21 +3,21 @@
 module.exports = {
   feeds: [
     {
-      serialize: ({ query: { site, allNewsletter } }) => {
-        return allNewsletter.nodes.map((newsletter) => {
+      serialize: ({ query: { site, allThought } }) => {
+        return allThought.nodes.map((thought) => {
           return {
-            title: newsletter.title,
-            date: newsletter.date,
-            excerpt: newsletter.excerpt,
-            url: site.siteMetadata.siteUrl + newsletter.slug,
-            guid: site.siteMetadata.siteUrl + newsletter.slug,
-            custom_elements: [{ "content:encoded": newsletter.html }],
+            title: thought.title,
+            date: thought.date,
+            excerpt: thought.excerpt,
+            url: site.siteMetadata.siteUrl + thought.slug,
+            guid: site.siteMetadata.siteUrl + thought.slug,
+            custom_elements: [{ "content:encoded": thought.html }],
           }
         })
       },
       query: `
         {
-          allNewsletter(sort: { fields: date, order: DESC }) {
+          allThought(sort: { fields: date, order: DESC }) {
             nodes {
               title
               date(formatString: "MMMM D, YYYY")
@@ -29,7 +29,7 @@ module.exports = {
         }
       `,
       output: `rss.xml`,
-      title: `Gatsby Themes by LekoArts - Newsletter`,
+      title: `Gatsby Themes by LekoArts - Thoughts`,
     },
   ],
 }

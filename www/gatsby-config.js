@@ -2,7 +2,7 @@ require(`dotenv`).config({
   path: `.env`,
 })
 
-const newsletterFeed = require(`./src/utils/feed`)
+const thoughtsFeed = require(`./src/utils/feed`)
 
 module.exports = {
   siteMetadata: {
@@ -26,8 +26,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `newsletter`,
-        path: `${__dirname}/newsletter`,
+        name: `thoughts`,
+        path: `${__dirname}/thoughts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.GITHUB_TOKEN,
+        variables: {},
+        graphQLQuery: `
+          query {
+            repository(owner: "LekoArts", name: "gatsby-themes") {
+              stargazers {
+                totalCount
+              }
+            }
+          }
+        `,
       },
     },
     {
@@ -61,7 +77,7 @@ module.exports = {
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-feed`,
-      options: newsletterFeed,
+      options: thoughtsFeed,
     },
     {
       resolve: `gatsby-plugin-manifest`,
