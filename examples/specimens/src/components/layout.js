@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { css, Global } from "@emotion/core"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {
   const { site } = useStaticQuery(graphql`
