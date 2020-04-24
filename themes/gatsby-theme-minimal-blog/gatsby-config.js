@@ -27,6 +27,6 @@ module.exports = (options) => {
       `gatsby-plugin-typescript`,
       `gatsby-plugin-catch-links`,
       `gatsby-plugin-theme-ui`,
-    ],
+    ].filter(Boolean),
   }
 }
