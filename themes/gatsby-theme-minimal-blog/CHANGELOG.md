@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.10...@lekoarts/gatsby-theme-minimal-blog@2.2.11) (2020-04-24)
+
+
+### Bug Fixes
+
+* **minimal-blog:** remove falsy values from plugins list ([#368](https://github.com/LekoArts/gatsby-themes/issues/368)) ([452afa9](https://github.com/LekoArts/gatsby-themes/commit/452afa9eae6e4a999fd118c8a81881bbe2eacec7))
+
+
+
+
+
 ## [2.2.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.9...@lekoarts/gatsby-theme-minimal-blog@2.2.10) (2020-04-24)
 
 
