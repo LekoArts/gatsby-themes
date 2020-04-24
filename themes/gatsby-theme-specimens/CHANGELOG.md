@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.7...@lekoarts/gatsby-theme-specimens@2.1.8) (2020-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency polished to ^3.5.2 ([#363](https://github.com/LekoArts/gatsby-themes/issues/363)) ([f66e5ef](https://github.com/LekoArts/gatsby-themes/commit/f66e5ef942a22b626a8ea6a01e98189e27cb7968))
+* **deps:** update gatsby ([#364](https://github.com/LekoArts/gatsby-themes/issues/364)) ([aac08a8](https://github.com/LekoArts/gatsby-themes/commit/aac08a809b86de28f78d2db95dc5651a0a8e640b))
+
+
+
+
+
 ## [2.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-specimens@2.1.6...@lekoarts/gatsby-theme-specimens@2.1.7) (2020-04-12)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-specimens

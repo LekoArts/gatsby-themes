@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.2.6...@lekoarts/gatsby-theme-minimal-blog-core@2.2.7) (2020-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update gatsby ([#364](https://github.com/LekoArts/gatsby-themes/issues/364)) ([aac08a8](https://github.com/LekoArts/gatsby-themes/commit/aac08a809b86de28f78d2db95dc5651a0a8e640b))
+
+
+
+
+
 ## [2.2.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.2.5...@lekoarts/gatsby-theme-minimal-blog-core@2.2.6) (2020-04-13)
 
 
