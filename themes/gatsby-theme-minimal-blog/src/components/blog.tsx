@@ -24,7 +24,7 @@ type PostsProps = {
 }
 
 const Blog = ({ posts }: PostsProps) => {
-  const { tagsPath, basePath } = useMinimalBlogConfig()
+  const { tagsPath, basePath, viewAllTagsText } = useMinimalBlogConfig()
 
   return (
     <Layout>
@@ -32,7 +32,7 @@ const Blog = ({ posts }: PostsProps) => {
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Styled.h2>Blog</Styled.h2>
         <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
-          View all tags
+          {viewAllTagsText}
         </Styled.a>
       </Flex>
       <Listing posts={posts} sx={{ mt: [4, 5] }} />

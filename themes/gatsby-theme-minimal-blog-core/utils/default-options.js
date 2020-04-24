@@ -8,6 +8,9 @@ module.exports = (themeOptions) => {
   const navigation = themeOptions.navigation || []
   const showLineNumbers = themeOptions.showLineNumbers || true
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
+  const latestPostsText = themeOptions.latestPostsText || `Latest posts`
+  const readAllPostsText = themeOptions.readAllPostsText || `Read all posts`
+  const viewAllTagsText = themeOptions.viewAllTagsText || `View all tags`
 
   return {
     basePath,
@@ -19,5 +22,8 @@ module.exports = (themeOptions) => {
     navigation,
     showLineNumbers,
     formatString,
+    latestPostsText,
+    readAllPostsText,
+    viewAllTagsText,
   }
 }

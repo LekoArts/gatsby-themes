@@ -124,6 +124,9 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       externalLinks: [ExternalLink]
       navigation: [NavigationEntry]
       showLineNumbers: Boolean
+      latestPostsText: String
+      readAllPostsText: String
+      viewAllTagsText: String
     }
     
     type ExternalLink {
@@ -149,6 +152,9 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
     externalLinks,
     navigation,
     showLineNumbers,
+    latestPostsText,
+    readAllPostsText,
+    viewAllTagsText,
   } = withDefaults(themeOptions)
 
   const minimalBlogConfig = {
@@ -160,6 +166,9 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
     externalLinks,
     navigation,
     showLineNumbers,
+    latestPostsText,
+    readAllPostsText,
+    viewAllTagsText,
   }
 
   createNode({

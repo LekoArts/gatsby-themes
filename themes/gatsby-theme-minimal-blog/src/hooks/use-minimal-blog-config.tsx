@@ -16,6 +16,9 @@ type Props = {
       slug: string
     }[]
     showLineNumbers: boolean
+    latestPostsText: string
+    readAllPostsText: string
+    viewAllTagsText: string
   }
 }
 
@@ -37,6 +40,9 @@ const useMinimalBlogConfig = () => {
           slug
         }
         showLineNumbers
+        latestPostsText
+        readAllPostsText
+        viewAllTagsText
       }
     }
   `)
