@@ -9,6 +9,7 @@ module.exports = {
     siteDescription: process.env.SITE_DESCRIPTION || `Showing the statuses of my Netlify deploys & CircleCI tests.`,
   },
   plugins: [
+    // See the theme's README for all available components
     `@lekoarts/gatsby-theme-status-dashboard`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
