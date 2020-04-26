@@ -57,62 +57,65 @@ export default merge(tailwind, {
       color: `text`,
       backgroundColor: `background`,
       a: {
+        color: `primary`,
+        textDecoration: `none`,
         transition: `all 0.3s ease-in-out`,
         "&:hover": {
           color: `primary`,
           textDecoration: `none`,
         },
       },
-    },
-    Container: {
-      maxWidth: `5xl`,
-    },
-    p: {
-      fontSize: [1, 2],
-      letterSpacing: `-0.003em`,
-      lineHeight: `body`,
-      "--baseline-multiplier": 0.179,
-      "--x-height-multiplier": 0.35,
-      color: `text`,
-    },
-    blockquote: {
-      marginLeft: 0,
       p: {
-        fontSize: [2, 3],
-        fontWeight: `medium`,
+        fontSize: [1, 2],
+        letterSpacing: `-0.003em`,
+        lineHeight: `body`,
+        "--baseline-multiplier": 0.179,
+        "--x-height-multiplier": 0.35,
+        color: `text`,
+      },
+      blockquote: {
+        marginLeft: 0,
+        p: {
+          fontSize: [2, 3],
+          fontWeight: `medium`,
+          color: `heading`,
+        },
+      },
+      h1: {
+        fontSize: [6, 7, 8],
+        mt: 2,
+        mb: 3,
+        textShadow: `rgba(255, 255, 255, 0.15) 0px 5px 35px`,
+        letterSpacing: `wide`,
+        color: `heading`,
+      },
+      h2: {
+        fontSize: [4, 5, 6],
+        mt: 2,
+        mb: 2,
+        color: `heading`,
+      },
+      h3: {
+        fontSize: [3, 4, 5],
+        mt: 3,
+        color: `heading`,
+      },
+      h4: {
+        fontSize: [2, 3, 4],
+        color: `heading`,
+      },
+      h5: {
+        fontSize: [1, 2, 3],
+        color: `heading`,
+      },
+      h6: {
+        fontSize: 1,
+        mb: 2,
         color: `heading`,
       },
     },
-    h1: {
-      fontSize: [6, 7, 8],
-      mt: 2,
-      mb: 4,
-      textShadow: `rgba(255, 255, 255, 0.15) 0px 5px 35px`,
-      letterSpacing: `wide`,
-      color: `heading`,
-    },
-    h2: {
-      fontSize: [4, 5, 6],
-      mt: 2,
-      color: `heading`,
-    },
-    h3: {
-      fontSize: [3, 4, 5],
-      mt: 3,
-      color: `heading`,
-    },
-    h4: {
-      fontSize: [2, 3, 4],
-      color: `heading`,
-    },
-    h5: {
-      fontSize: [1, 2, 3],
-      color: `heading`,
-    },
-    h6: {
-      fontSize: 1,
-      mb: 2,
-      color: `heading`,
+    Container: {
+      maxWidth: `5xl`,
     },
   },
   buttons: {
