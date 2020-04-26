@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type Props = {
+type UseCircleCIProps = {
   me: {
     num_projects_followed: number
   }
@@ -12,7 +12,7 @@ type Props = {
 }
 
 const useCircleCi = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<UseCircleCIProps>(graphql`
     query {
       me: circleCiMe {
         num_projects_followed
