@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Header as ThemeHeader, jsx, Styled } from "theme-ui"
+import { jsx, Heading, Flex } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -7,10 +7,17 @@ import useEmiliaConfig from "../hooks/use-emilia-config"
 import HeaderBackground from "./header-background"
 import Location from "../assets/location"
 import SocialMediaList from "./social-media-list"
+import { ChildImageSharpFixed } from "../types"
+
+type AvatarStaticQuery = {
+  file: {
+    childImageSharp: ChildImageSharpFixed
+  }
+}
 
 const Header = () => {
   const { name, location, assetsPath } = useEmiliaConfig()
-  const avatar = useStaticQuery(graphql`
+  const avatar = useStaticQuery<AvatarStaticQuery>(graphql`
     query {
       file(name: { eq: "avatar" }) {
         childImageSharp {
@@ -37,7 +44,7 @@ const Header = () => {
   const fadeLongProps = useSpring({ config: config.slow, delay: 600, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <ThemeHeader>
+    <Flex as="header" variant="layout.projectHead">
       <HeaderBackground />
       <div sx={{ textAlign: `center`, my: 5, zIndex: 10 }}>
         <animated.div style={fadeProps}>
@@ -55,7 +62,7 @@ const Header = () => {
               },
             }}
           >
-            {avatar && avatar.file && avatar.file.childImageSharp ? (
+            {avatar?.file?.childImageSharp?.fixed ? (
               <Img fixed={avatar.file.childImageSharp.fixed} />
             ) : (
               <div
@@ -77,10 +84,12 @@ const Header = () => {
           </div>
         </animated.div>
         <animated.div style={fadeUpProps}>
-          <Styled.h1>{name}</Styled.h1>
+          <Heading as="h1" variant="styles.h1">
+            {name}
+          </Heading>
         </animated.div>
         <animated.div style={fadeUpPropsDelay}>
-          <div
+          <Flex
             sx={{
               svg: {
                 width: `20px`,
@@ -89,14 +98,13 @@ const Header = () => {
                 ".secondary": { color: `iconSecondary` },
                 mr: 2,
               },
-              display: `flex`,
               justifyContent: `center`,
               alignItems: `center`,
               color: `text`,
             }}
           >
             <Location /> {location}
-          </div>
+          </Flex>
         </animated.div>
         <div data-testid="social-header" sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
           <animated.div style={fadeLongProps}>
@@ -104,7 +112,7 @@ const Header = () => {
           </animated.div>
         </div>
       </div>
-    </ThemeHeader>
+    </Flex>
   )
 }
 

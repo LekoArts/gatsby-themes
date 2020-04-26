@@ -114,7 +114,9 @@ export default merge(tailwind, {
         color: `heading`,
       },
     },
-    Container: {
+  },
+  layout: {
+    container: {
       maxWidth: `5xl`,
     },
   },

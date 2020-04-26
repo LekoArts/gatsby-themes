@@ -1,13 +1,15 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Link as TLink, Heading } from "theme-ui"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import { ChildImageSharp } from "../types"
+import { ChildImageSharpFluid } from "../types"
 
-type Props = {
+type CardProps = {
   item: {
     slug: string
-    cover: ChildImageSharp
+    cover: {
+      childImageSharp: ChildImageSharpFluid
+    }
     title: string
   }
   overlay?: string | undefined
@@ -18,7 +20,7 @@ type Props = {
 const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
 const shadowArray = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
-const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false }: Props) => {
+const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false }: CardProps) => {
   const h = item.cover.childImageSharp.fluid.presentationHeight
   const count = Math.floor(h / 50)
 
@@ -34,7 +36,7 @@ const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false 
   }
 
   return (
-    <Styled.a
+    <TLink
       as={Link}
       aria-label={`Visit ${item.title} project page`}
       sx={{
@@ -71,12 +73,12 @@ const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false 
         }}
         data-name="card-overlay"
       >
-        <Styled.h2 sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px`, color: `white` }}>
+        <Heading variant="styles.h2" sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px`, color: `white` }}>
           {item.title}
-        </Styled.h2>
+        </Heading>
       </div>
       <Img fluid={item.cover.childImageSharp.fluid} />
-    </Styled.a>
+    </TLink>
   )
 }
 

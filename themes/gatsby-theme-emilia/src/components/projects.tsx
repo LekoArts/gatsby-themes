@@ -1,9 +1,9 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
-import { jsx, Container, Styled, Main } from "theme-ui"
+import { jsx, Container, Styled, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
 import { graphql, useStaticQuery } from "gatsby"
-import { ChildImageSharp } from "../types"
+import { ChildImageSharpFluid } from "../types"
 import Layout from "./layout"
 import Header from "./header"
 import Card from "./card"
@@ -12,12 +12,26 @@ type Props = {
   projects: {
     slug: string
     title: string
-    cover: ChildImageSharp
+    cover: {
+      childImageSharp: ChildImageSharpFluid
+    }
   }[]
 }
 
+type ProjecsStaticQuery = {
+  allProject: {
+    nodes: {
+      parent: {
+        fields: {
+          colorThief: string[]
+        }
+      }
+    }[]
+  }
+}
+
 const Projects = ({ projects }: Props) => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<ProjecsStaticQuery>(graphql`
     query {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
@@ -80,7 +94,7 @@ const Projects = ({ projects }: Props) => {
   return (
     <Layout>
       <Header />
-      <Main>
+      <Box as="main" variant="layout.main">
         <animated.div style={fadeUpProps}>
           <Container
             sx={{
@@ -101,7 +115,7 @@ const Projects = ({ projects }: Props) => {
             })}
           </Container>
         </animated.div>
-      </Main>
+      </Box>
     </Layout>
   )
 }

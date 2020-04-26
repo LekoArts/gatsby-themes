@@ -1,11 +1,10 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
-export default {
-  ...tailwind,
-  initialColorMode: `light`,
+export default merge(tailwind, {
+  initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    ...tailwind.colors,
     text: tailwind.colors.gray[8],
     primary: tailwind.colors.blue[6],
     background: tailwind.colors.gray[1],
@@ -31,37 +30,45 @@ export default {
       },
     },
   },
-  styles: {
-    ...tailwind.styles,
-    root: {
-      ...tailwind.styles.root,
-      color: `text`,
-      backgroundColor: `background`,
-    },
-    Footer: {
+  layout: {
+    footer: {
       display: `block`,
       color: `text`,
       pt: 6,
       pb: 4,
     },
-    a: {
-      ...tailwind.styles.a,
-      color: `primary`,
-    },
-    Main: {
-      ...tailwind.styles.Main,
+    main: {
       position: `relative`,
     },
-    Header: {
-      ...tailwind.styles.Header,
+    header: {
       position: `relative`,
       overflow: `hidden`,
       justifyContent: `center`,
     },
-    Container: {
+    projectHead: {
+      position: `relative`,
+      overflow: `hidden`,
+      justifyContent: `center`,
+    },
+    container: {
       px: [3, 4],
       py: [2, 3],
       maxWidth: `1600px`,
+    },
+  },
+  styles: {
+    root: {
+      color: `text`,
+      backgroundColor: `background`,
+      margin: 0,
+      padding: 0,
+      boxSizing: `border-box`,
+      textRendering: `optimizeLegibility`,
+    },
+    a: {
+      color: `primary`,
+      textDecoration: `none`,
+      transition: `all 0.3s ease-in-out`,
     },
     p: {
       fontSize: 1,
@@ -71,38 +78,32 @@ export default {
       "--x-height-multiplier": 0.35,
     },
     h1: {
-      ...tailwind.styles.h1,
       fontSize: [4, 5],
       mt: 2,
       color: `heading`,
     },
     h2: {
-      ...tailwind.styles.h2,
       fontSize: [3, 4],
       mt: 2,
       color: `heading`,
     },
     h3: {
-      ...tailwind.styles.h3,
       fontSize: [2, 3],
       mt: 3,
       color: `heading`,
     },
     h4: {
-      ...tailwind.styles.h4,
       fontSize: [1, 2],
       color: `heading`,
     },
     h5: {
-      ...tailwind.styles.h5,
       fontSize: 1,
       color: `heading`,
     },
     h6: {
-      ...tailwind.styles.h6,
       fontSize: 1,
       mb: 2,
       color: `heading`,
     },
   },
-}
+})

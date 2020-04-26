@@ -25,11 +25,11 @@ describe(`gatsby-theme-emilia`, () => {
     cy.findByText(/Boggarts lavender robes/i)
   })
   it(`should have functioning theme toggle`, () => {
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/activate dark mode/i).click()
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(203, 213, 224)`)
       .should(`have.css`, `background`, `rgb(26, 32, 44) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/activate light mode/i)
