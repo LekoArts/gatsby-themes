@@ -22,7 +22,7 @@ const Heading = ({ styles, config, previewText = `Heading` }: HeadingProps) => {
   const specimensConfig = useSpecimensConfig()
 
   if (!styles) {
-    return <div sx={{ gridTemplateColumns: `1fr !important` }}>No styles/config defined</div>
+    return <div sx={{ gridTemplateColumns: `1fr !important` }}>No styles defined</div>
   }
 
   return (
