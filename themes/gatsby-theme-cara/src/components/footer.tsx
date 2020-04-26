@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Footer as ThemeFooter, Styled, Flex, useColorMode, jsx } from "theme-ui"
+import { Box, Flex, Link, useColorMode, jsx } from "theme-ui"
 
 const Footer = () => {
   const [colorMode, setColorMode] = useColorMode()
@@ -9,7 +9,7 @@ const Footer = () => {
   }
 
   return (
-    <ThemeFooter>
+    <Box as="footer" variant="footer">
       <button
         sx={{ variant: `buttons.toggle`, fontWeight: `semibold`, display: `block`, mx: `auto`, mb: 3 }}
         onClick={toggleColorMode}
@@ -32,20 +32,20 @@ const Footer = () => {
       >
         <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
         {` `}
-        <Styled.a
+        <Link
           aria-label="Link to the theme's GitHub repository"
           sx={{ ml: 2 }}
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-cara"
         >
           Theme
-        </Styled.a>
+        </Link>
         <div sx={{ mx: 1 }}>by</div>
         {` `}
-        <Styled.a aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
           LekoArts
-        </Styled.a>
+        </Link>
       </Flex>
-    </ThemeFooter>
+    </Box>
   )
 }
 
