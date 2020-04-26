@@ -62,7 +62,7 @@ const components = {
   FontFamily: ({ fonts, previewText }) => <FontFamily fonts={fonts} previewText={previewText} />,
   FontSize: ({ fontSizes }) => <FontSize fontSizes={fontSizes} />,
   FontWeight: ({ fontWeights, previewText }) => <FontWeight fontWeights={fontWeights} previewText={previewText} />,
-  Heading: ({ styles, theme, previewText }) => <Heading styles={styles} theme={theme} previewText={previewText} />,
+  Heading: ({ styles, config, previewText }) => <Heading styles={styles} config={config} previewText={previewText} />,
   Palette: ({ colors, mode, single, minimal, prefix }) => (
     <Palette colors={colors} mode={mode} single={single} minimal={minimal} prefix={prefix} />
   ),
