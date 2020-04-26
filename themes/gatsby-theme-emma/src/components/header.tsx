@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { Header as ThemeHeader, jsx, useColorMode, Styled } from "theme-ui"
+import { Flex, jsx, useColorMode, Link as TLink } from "theme-ui"
 import { Link } from "gatsby"
 import Navigation from "./navigation"
 import SocialLinks from "./social-links"
 
-type MetaType = {
+type HeaderProps = {
   meta: {
     [key: string]: string
   }
@@ -14,7 +14,7 @@ type MetaType = {
   }[]
 }
 
-const Header = ({ meta, nav }: MetaType) => {
+const Header = ({ meta, nav }: HeaderProps) => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
   const toggleColorMode = (e: any) => {
@@ -24,27 +24,26 @@ const Header = ({ meta, nav }: MetaType) => {
   const navEmpty = nav.length === 0
 
   return (
-    <ThemeHeader>
+    <Flex as="header" variant="layout.header">
       {!navEmpty && <Navigation nav={nav} />}
-      <div
+      <Flex
         sx={{
           fontWeight: `bold`,
           fontSize: 4,
-          display: `flex`,
           flex: navEmpty ? 1 : [`1 0 100%`, 1],
           justifyContent: navEmpty ? `flex-start` : `center`,
           order: [1, 2],
         }}
       >
-        <Styled.a
+        <TLink
           aria-label={`${meta.siteTitle}, Back to homepage`}
           as={Link}
           sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
           to="/"
         >
           {meta.siteTitle}
-        </Styled.a>
-      </div>
+        </TLink>
+      </Flex>
       <div
         sx={{
           a: {
@@ -75,7 +74,7 @@ const Header = ({ meta, nav }: MetaType) => {
           {isDark ? `Light` : `Dark`}
         </button>
       </div>
-    </ThemeHeader>
+    </Flex>
   )
 }
 

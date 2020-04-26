@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type Props = {
+type UseNavigationProps = {
   allPage: {
     nodes: {
       title: string
@@ -10,7 +10,7 @@ type Props = {
 }
 
 const useNavigation = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<UseNavigationProps>(graphql`
     query {
       allPage {
         nodes {

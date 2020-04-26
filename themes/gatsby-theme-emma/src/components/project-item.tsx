@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 import { animated } from "react-spring"
 import { ChildImageSharp } from "../types"
 
-type Props = {
+type ProjectItemProps = {
   node: {
     color: string
     title: string
@@ -17,7 +17,7 @@ type Props = {
   style: any
 }
 
-const ProjectItem = ({ node, style }: Props) => (
+const ProjectItem = ({ node, style }: ProjectItemProps) => (
   <animated.div
     sx={{
       position: `relative`,
