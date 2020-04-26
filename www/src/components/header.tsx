@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, Header as ThemeHeader, jsx, Flex, Box, useColorMode } from "theme-ui"
+import { Container, jsx, Flex, Box, useColorMode } from "theme-ui"
 import Logo from "../icons/logo"
 import ThemeSwitch from "../icons/theme-switch"
 
@@ -14,7 +14,7 @@ const Header = () => {
   }
 
   return (
-    <ThemeHeader>
+    <header>
       <Container sx={{ pb: 0 }}>
         <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexDirection: [`column`, `row`] }}>
           <Flex>
@@ -50,7 +50,7 @@ const Header = () => {
           </Flex>
         </Flex>
       </Container>
-    </ThemeHeader>
+    </header>
   )
 }
 
