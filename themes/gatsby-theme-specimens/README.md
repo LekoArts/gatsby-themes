@@ -49,8 +49,10 @@ Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes
 ## Installation
 
 ```sh
-npm install @lekoarts/gatsby-theme-specimens
+npm install @lekoarts/gatsby-theme-specimens theme-ui
 ```
+
+This theme has `theme-ui` defined as a `peerDependency` so make sure to also install it if you don't use it already.
 
 ### Install as a starter
 
