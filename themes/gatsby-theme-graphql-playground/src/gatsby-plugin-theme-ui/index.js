@@ -1,12 +1,11 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 import nightOwl from "@theme-ui/prism/presets/night-owl"
 
-export default {
-  ...tailwind,
-  initialColorMode: `light`,
+export default merge(tailwind, {
+  initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    ...tailwind.colors,
     primary: tailwind.colors.indigo[7],
     secondary: tailwind.colors.orange[6],
     codeBlockBG: tailwind.colors.gray[2],
@@ -26,25 +25,15 @@ export default {
       },
     },
   },
-  styles: {
-    ...tailwind.styles,
-    root: {
-      ...tailwind.styles.root,
-      color: `text`,
-      backgroundColor: `background`,
-    },
-    pre: {
-      ...nightOwl,
-      padding: 3,
-    },
-    Footer: {
+  layout: {
+    footer: {
       textAlign: `center`,
       display: `block`,
       color: `textMuted`,
       px: [2, 3],
       py: [3, 4],
     },
-    Header: {
+    header: {
       px: [3, 4],
       py: [2, 3],
       fontSize: 2,
@@ -52,12 +41,25 @@ export default {
       alignItems: `center`,
       flexWrap: `wrap`,
     },
-    Main: {
-      ...tailwind.styles.Main,
+    main: {
       position: `relative`,
     },
-    Container: {
+    container: {
       maxWidth: `5xl`,
+    },
+  },
+  styles: {
+    root: {
+      color: `text`,
+      backgroundColor: `background`,
+      margin: 0,
+      padding: 0,
+      boxSizing: `border-box`,
+      textRendering: `optimizeLegibility`,
+    },
+    pre: {
+      ...nightOwl,
+      padding: 3,
     },
     p: {
       fontSize: [1, 2],
@@ -83,38 +85,32 @@ export default {
       },
     },
     h1: {
-      ...tailwind.styles.h1,
       fontSize: [5, 6],
       mt: 2,
       color: `textHeading`,
     },
     h2: {
-      ...tailwind.styles.h2,
       fontSize: [4, 5],
       mt: 2,
       color: `textHeading`,
     },
     h3: {
-      ...tailwind.styles.h3,
       fontSize: [3, 4],
       mt: 3,
       color: `textHeading`,
     },
     h4: {
-      ...tailwind.styles.h4,
       fontSize: [2, 3],
       color: `textHeading`,
     },
     h5: {
-      ...tailwind.styles.h5,
       fontSize: [1, 2],
       color: `textHeading`,
     },
     h6: {
-      ...tailwind.styles.h6,
       fontSize: 1,
       mb: 2,
       color: `textHeading`,
     },
   },
-}
+})

@@ -28,11 +28,11 @@ describe(`gatsby-theme-graphql-playground`, () => {
     cy.findByTestId(/iFrame-Get the Site Title/i)
   })
   it(`should have functioning theme toggle`, () => {
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/activate dark mode/i).click()
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(237, 242, 247)`)
       .should(`have.css`, `background`, `rgb(45, 55, 72) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/activate light mode/i)

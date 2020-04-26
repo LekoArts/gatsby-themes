@@ -3,7 +3,8 @@ import { Sidenav } from "@theme-ui/sidenav"
 import { jsx, useColorMode } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import ColorModeToggle from "./colormode-toggle"
-import Navigation from "../data/navigation.mdx"
+// @ts-ignore
+import Navigation from "../data/navigation"
 
 const Sidebar = () => {
   const { siteTitle } = useSiteMetadata()

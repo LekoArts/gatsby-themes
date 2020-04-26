@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
-import { jsx, Styled } from "theme-ui"
-import { Global, css } from "@emotion/core"
+import { jsx } from "theme-ui"
+import { Global } from "@emotion/core"
 import SEO from "./seo"
 import Sidebar from "./sidebar"
 
@@ -11,17 +11,11 @@ type LayoutProps = {
 }
 
 const Layout = ({ children, title }: LayoutProps) => (
-  <Styled.root data-testid="theme-root">
+  <React.Fragment>
     <Global
-      styles={css({
+      styles={(theme) => ({
         "*": {
           boxSizing: `inherit`,
-        },
-        body: {
-          margin: 0,
-          padding: 0,
-          boxSizing: `border-box`,
-          textRendering: `optimizeLegibility`,
         },
         a: {
           transition: `all 0.3s ease-in-out`,
@@ -33,7 +27,7 @@ const Layout = ({ children, title }: LayoutProps) => (
       <Sidebar />
       <main sx={{ backgroundColor: `backgroundContent`, padding: [3, 3, 4, 5] }}>{children}</main>
     </div>
-  </Styled.root>
+  </React.Fragment>
 )
 
 export default Layout
