@@ -49,6 +49,20 @@ var treePromise = new Promise(function(resolve) {
 });
 ```
 
+Normal block without language:
+
+```
+import Test from "../components/test"
+
+const Layout = ({ children }) => (
+  <Test>
+    {children}
+  </Test>
+)
+
+export default Layout
+```
+
 Code block with code highlighting:
 
 ```jsx:title=src/components/post.jsx {5-7,10}

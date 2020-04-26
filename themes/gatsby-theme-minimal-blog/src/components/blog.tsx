@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Heading, Link as TLink } from "theme-ui"
 import { Link } from "gatsby"
 import { Flex } from "@theme-ui/components"
 import Layout from "./layout"
@@ -30,10 +30,10 @@ const Blog = ({ posts }: PostsProps) => {
     <Layout>
       <SEO title="Blog" />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Styled.h2>Blog</Styled.h2>
-        <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
+        <Heading variant="styles.h2">Blog</Heading>
+        <TLink as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
           View all tags
-        </Styled.a>
+        </TLink>
       </Flex>
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>
