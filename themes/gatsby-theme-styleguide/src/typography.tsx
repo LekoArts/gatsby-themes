@@ -17,7 +17,7 @@ const Typography = () => {
       <FontSize fontSizes={fontSizes} />
       <Styled.h3>Headings</Styled.h3>
       <Heading
-        theme={useTheme()}
+        config={useTheme()}
         styles={filterStyles({
           input: styles,
           allowed: [`h1`, `h2`, `h3`, `h4`, `h5`, `h6`],
