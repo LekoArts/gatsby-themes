@@ -1,13 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type Props = {
+type UseBuildTimeProps = {
   site: {
     buildTime: string
   }
 }
 
 const useBuildTime = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<UseBuildTimeProps>(graphql`
     query {
       site {
         buildTime(formatString: "DD/MM/YYYY")

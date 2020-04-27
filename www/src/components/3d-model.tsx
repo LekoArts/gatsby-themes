@@ -40,8 +40,8 @@ const ThreeDModel = () => {
   const [mode] = useColorMode()
 
   const isStrange = mode === `strangerThings`
-
   const standardColor = isStrange ? `#E7251D` : `#663399`
+  const isBrowser = typeof window !== `undefined`
 
   return (
     <div
@@ -51,6 +51,9 @@ const ThreeDModel = () => {
         marginRight: `-2rem`,
         position: `relative`,
         "&:hover": { cursor: `grab` },
+        canvas: {
+          outline: `none`,
+        },
       }}
     >
       <Canvas
@@ -75,7 +78,7 @@ const ThreeDModel = () => {
         <RectAreaLightDecl intensity={1.5} width={500} height={1000} position={[0, 500, 0]} />
         <RectAreaLightDecl intensity={0.5} width={500} height={1000} position={[400, 0, 400]} color="#ffb238" />
         <RectAreaLightDecl intensity={5} width={1000} height={100} position={[-400, 0, 400]} />
-        <Model url="/model/dracoGatsby.gltf" />
+        {isBrowser && <Model url="/model/dracoGatsby.gltf" />}
         <Controls
           autoRotate
           enablePan={false}

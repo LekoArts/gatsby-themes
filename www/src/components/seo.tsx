@@ -14,7 +14,7 @@ const defaultProps = {
   info: false,
 }
 
-type Props = {
+type SEOProps = {
   description?: string
   meta?:
     | {
@@ -36,7 +36,7 @@ type Props = {
   info?: string
 }
 
-const SEO = ({ description, meta, pathname, image, title, thought, datePublished, info }: Props) => {
+const SEO = ({ description, meta, pathname, image, title, thought, datePublished, info }: SEOProps) => {
   const site = useSiteMetadata()
   const buildTime = useBuildTime()
 

@@ -1,3 +1,4 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
 const sharedButtonStyles = {
@@ -13,12 +14,10 @@ const sharedHeadingStyles = {
   color: `heading`,
 }
 
-export default {
-  ...tailwind,
-  initialColorMode: `light`,
+export default merge(tailwind, {
+  initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    ...tailwind.colors,
     primary: tailwind.colors.indigo[6],
     shadow: tailwind.colors.indigo[2],
     secondary: tailwind.colors.orange[5],
@@ -83,20 +82,35 @@ export default {
   },
   breakpoints: [`600px`, `900px`, `1200px`, `1800px`],
   radii: {
-    ...tailwind.radii,
     xl: `1rem`,
   },
-  styles: {
-    ...tailwind.styles,
-    Footer: {
+  layout: {
+    footer: {
       textAlign: `center`,
       display: `block`,
       color: `textMuted`,
       px: [2, 3],
       py: [4, 5],
     },
-    Container: {
+    container: {
       maxWidth: `1200px`,
+      padding: 4,
+    },
+  },
+  styles: {
+    root: {
+      margin: 0,
+      padding: 0,
+      boxSizing: `border-box`,
+      textRendering: `optimizeLegibility`,
+      fontSize: `18px`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
+      color: `text`,
+      backgroundColor: `background`,
+      fontFamily: `body`,
+      lineHeight: `body`,
+      fontWeight: `body`,
     },
     p: {
       fontSize: [1, 2],
@@ -106,35 +120,29 @@ export default {
       "--x-height-multiplier": 0.35,
     },
     h1: {
-      ...tailwind.styles.h1,
       ...sharedHeadingStyles,
       fontSize: [5, 6],
       mt: 2,
     },
     h2: {
-      ...tailwind.styles.h2,
       ...sharedHeadingStyles,
       fontSize: [4, 5],
       mt: 2,
     },
     h3: {
-      ...tailwind.styles.h3,
       ...sharedHeadingStyles,
       fontSize: [3, 4],
       mt: 3,
     },
     h4: {
-      ...tailwind.styles.h4,
       ...sharedHeadingStyles,
       fontSize: [2, 3],
     },
     h5: {
-      ...tailwind.styles.h5,
       ...sharedHeadingStyles,
       fontSize: [1, 2],
     },
     h6: {
-      ...tailwind.styles.h6,
       ...sharedHeadingStyles,
       fontSize: 1,
       mb: 2,
@@ -272,4 +280,4 @@ export default {
       backgroundImage: `radial-gradient(#BA230D, #520506)`,
     },
   },
-}
+})
