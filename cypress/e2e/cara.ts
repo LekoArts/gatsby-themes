@@ -28,11 +28,11 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByLabelText(/toggle dark mode/i)
   })
   it(`should have functioning dark mode toggle`, () => {
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(226, 232, 240)`)
       .should(`have.css`, `background`, `rgb(20, 24, 33) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/toggle dark mode/i).click()
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)
   })

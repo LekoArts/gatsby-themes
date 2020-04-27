@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
-import Index from "../data/index.mdx"
+// @ts-ignore
+import Index from "../data/index"
 
 const Homepage = () => (
   <Layout>

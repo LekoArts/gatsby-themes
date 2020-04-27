@@ -26,5 +26,5 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
-  ],
+  ].filter(Boolean),
 })

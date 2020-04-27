@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import Layout from "./layout"
@@ -42,7 +42,7 @@ const Post = ({ data: { post } }: PostProps) => (
       image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
       pathname={post.slug}
     />
-    <Styled.h2>{post.title}</Styled.h2>
+    <Heading variant="styles.h2">{post.title}</Heading>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
       <time>{post.date}</time>
       {post.tags && (

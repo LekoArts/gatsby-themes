@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Heading } from "theme-ui"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import IFrame from "../components/iframe"
 import Resizable from "../components/resizable"
 
-type ItemType = {
+type ItemProps = {
   data: {
     playground: {
       slug: string
@@ -17,10 +17,12 @@ type ItemType = {
   }
 }
 
-const Item = ({ data: { playground } }: ItemType) => (
+const Item = ({ data: { playground } }: ItemProps) => (
   <Layout title={playground.title}>
     <section sx={{ "pre:first-of-type": { display: `none` }, maxWidth: `900px` }}>
-      <Styled.h1 data-testid="item-title">{playground.title}</Styled.h1>
+      <Heading as="h1" variant="styles.h1" data-testid="item-title">
+        {playground.title}
+      </Heading>
       <MDXRenderer>{playground.body}</MDXRenderer>
     </section>
     <section>

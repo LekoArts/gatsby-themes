@@ -21,11 +21,11 @@ describe(`gatsby-theme-emma`, () => {
         cy.findByLabelText(/toggle dark mode/i).click()
       }
     })
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/toggle dark mode/i).click()
-    cy.findByTestId(`theme-root`)
+    cy.get(`body`)
       .should(`have.css`, `color`, `rgb(255, 255, 255)`)
       .should(`have.css`, `background`, `rgb(45, 55, 72) none repeat scroll 0% 0% / auto padding-box border-box`)
   })

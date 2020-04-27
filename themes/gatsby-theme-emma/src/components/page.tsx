@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { animated, useSpring, config } from "react-spring"
-import { Container, Styled, jsx, Flex } from "theme-ui"
+import { Container, jsx, Flex, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import SEO from "./seo"
 import { ChildImageSharp } from "../types"
 import Hero from "./hero"
 
-type Props = {
+type PageProps = {
   data: {
     page: {
       title: string
@@ -19,7 +19,7 @@ type Props = {
   }
 }
 
-const Page = ({ data: { page } }: Props) => {
+const Page = ({ data: { page } }: PageProps) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -45,7 +45,9 @@ const Page = ({ data: { page } }: Props) => {
           }}
         >
           <animated.div style={titleProps}>
-            <Styled.h1>{page.title}</Styled.h1>
+            <Heading as="h1" variant="styles.h1">
+              {page.title}
+            </Heading>
           </animated.div>
         </Flex>
       </Hero>

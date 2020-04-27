@@ -5,7 +5,7 @@ import Layout from "./layout"
 import { ChildImageSharp } from "../types"
 import ProjectItem from "./project-item"
 
-type Props = {
+type ProjectsProps = {
   projects: {
     color: string
     slug: string
@@ -16,7 +16,7 @@ type Props = {
   }[]
 }
 
-const Projects = ({ projects }: Props) => {
+const Projects = ({ projects }: ProjectsProps) => {
   const trail = useTrail(projects.length, {
     from: { height: `0%` },
     to: { height: `100%` },

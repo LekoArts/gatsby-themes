@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { Flex, jsx } from "theme-ui"
 
-type ItemProps = {
+type ProjectInfoItemProps = {
   name: string
   content: string
 }
 
-const ProjectInfoItem = ({ name, content }: ItemProps) => (
+const ProjectInfoItem = ({ name, content }: ProjectInfoItemProps) => (
   <Flex
     sx={{
       flexDirection: `column`,

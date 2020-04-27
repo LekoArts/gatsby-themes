@@ -9,6 +9,7 @@ module.exports = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia`,
+      // See the theme's README for all available options
       options: {},
     },
     {

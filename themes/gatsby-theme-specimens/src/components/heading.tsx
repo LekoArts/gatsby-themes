@@ -7,8 +7,8 @@ import getValue from "../utils/get-value"
 import themeConfig from "../theme"
 
 type HeadingProps = {
-  styles: Theme["styles"]
-  theme?: any
+  styles?: Theme["styles"]
+  config: Theme
   previewText?: string
 }
 
@@ -18,7 +18,7 @@ const infoStyles = {
   alignItems: `flex-start`,
 }
 
-const Heading = ({ styles, theme, previewText = `Heading` }: HeadingProps) => {
+const Heading = ({ styles, config, previewText = `Heading` }: HeadingProps) => {
   const specimensConfig = useSpecimensConfig()
 
   if (!styles) {
@@ -58,7 +58,7 @@ const Heading = ({ styles, theme, previewText = `Heading` }: HeadingProps) => {
                 data-name="heading-level-preview"
                 sx={{
                   fontFamily: type.fontFamily,
-                  fontSize: `${specimensConfig.rootFontSize * getValue(theme.fontSizes[type.size])}px`,
+                  fontSize: `${specimensConfig.rootFontSize * getValue(config.fontSizes[type.size])}px`,
                   fontWeight: type.weight,
                   lineHeight: type.lineHeight,
                   mb: themeConfig.space[4],
@@ -93,15 +93,15 @@ const Heading = ({ styles, theme, previewText = `Heading` }: HeadingProps) => {
                 </div>
                 <div sx={{ ...infoStyles, minWidth: `80px` }}>
                   <Badge>Size</Badge>
-                  {theme.fontSizes[type.size]}
+                  {config.fontSizes[type.size]}
                 </div>
                 <div sx={{ ...infoStyles, minWidth: `80px` }}>
                   <Badge>Line Height</Badge>
-                  {theme.lineHeights[type.lineHeight]}
+                  {config.lineHeights[type.lineHeight]}
                 </div>
                 <div sx={{ ...infoStyles }}>
                   <Badge>Weight</Badge>
-                  {theme.fontWeights[type.weight]}
+                  {config.fontWeights[type.weight]}
                 </div>
               </div>
               {specimensConfig.codeExample && (

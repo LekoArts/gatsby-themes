@@ -3,9 +3,9 @@ import React from "react"
 import { jsx, useColorMode, useThemeUI } from "theme-ui"
 import { rgba } from "polished"
 
-type Props = { children: React.ReactNode; color?: string; slim: boolean }
+type BGImageProps = { children: React.ReactNode; color?: string; slim: boolean }
 
-const BGImage = ({ children, color, slim }: Props) => {
+const BGImage = ({ children, color, slim }: BGImageProps) => {
   const [colorMode] = useColorMode()
   const { theme } = useThemeUI()
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useColorMode, Styled } from "theme-ui"
+import { jsx, useColorMode, Link as TLink } from "theme-ui"
 import { Link } from "gatsby"
 import { Flex } from "@theme-ui/components"
 import useSiteMetadata from "../hooks/use-site-metadata"
@@ -47,9 +47,9 @@ const Header = () => {
         {externalLinks && externalLinks.length > 0 && (
           <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
             {externalLinks.map((link) => (
-              <Styled.a key={link.url} href={link.url}>
+              <TLink key={link.url} href={link.url}>
                 {link.name}
-              </Styled.a>
+              </TLink>
             ))}
           </div>
         )}

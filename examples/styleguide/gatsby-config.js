@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-theme-ui`,
     {
       resolve: `@lekoarts/gatsby-theme-styleguide`,
+      // See the theme's README for all available options
       options: {
         basePath: `/`,
       },

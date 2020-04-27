@@ -1,11 +1,10 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
-export default {
-  ...tailwind,
-  initialColorMode: `dark`,
+export default merge(tailwind, {
+  initialColorModeName: `dark`,
   useCustomProperties: true,
   colors: {
-    ...tailwind.colors,
     primary: tailwind.colors.orange[4],
     secondary: tailwind.colors.indigo[6],
     text: tailwind.colors.gray[3],
@@ -38,62 +37,34 @@ export default {
     },
   },
   breakpoints: [`400px`, `600px`, `900px`, `1200px`, `1600px`],
-  sizes: {
-    ...tailwind.sizes,
-    "1/2": `50%`,
-    "1/3": `33.333333%`,
-    "2/3": `66.666667%`,
-    "1/4": `25%`,
-    "2/4": `50%`,
-    "3/4": `75%`,
-    "1/5": `20%`,
-    "2/5": `40%`,
-    "3/5": `60%`,
-    "4/5": `80%`,
-    "1/6": `16.666667%`,
-    "2/6": `33.333333%`,
-    "3/6": `50%`,
-    "4/6": `66.666667%`,
-    "5/6": `83.333333%`,
-    "1/12": `8.333333%`,
-    "2/12": `16.666667%`,
-    "3/12": `25%`,
-    "4/12": `33.333333%`,
-    "5/12": `41.666667%`,
-    "6/12": `50%`,
-    "7/12": `58.333333%`,
-    "8/12": `66.666667%`,
-    "9/12": `75%`,
-    "10/12": `83.333333%`,
-    "11/12": `91.666667%`,
-    full: `100%`,
-    screen: `100vw`,
+  footer: {
+    textAlign: `center`,
+    display: `block`,
+    position: `absolute`,
+    bottom: 0,
+    color: `textMuted`,
+    px: [2, 3],
+    py: [3, 4],
   },
   styles: {
-    ...tailwind.styles,
     root: {
-      ...tailwind.styles.root,
+      margin: 0,
+      padding: 0,
+      boxSizing: `border-box`,
+      textRendering: `optimizeLegibility`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
       color: `text`,
       backgroundColor: `background`,
       a: {
+        color: `primary`,
+        textDecoration: `none`,
         transition: `all 0.3s ease-in-out`,
         "&:hover": {
           color: `primary`,
           textDecoration: `none`,
         },
       },
-    },
-    Footer: {
-      textAlign: `center`,
-      display: `block`,
-      position: `absolute`,
-      bottom: 0,
-      color: `textMuted`,
-      px: [2, 3],
-      py: [3, 4],
-    },
-    Container: {
-      maxWidth: `5xl`,
     },
     p: {
       fontSize: [1, 2],
@@ -112,41 +83,41 @@ export default {
       },
     },
     h1: {
-      ...tailwind.styles.h1,
       fontSize: [6, 7, 8],
       mt: 2,
-      mb: 4,
+      mb: 3,
       textShadow: `rgba(255, 255, 255, 0.15) 0px 5px 35px`,
       letterSpacing: `wide`,
       color: `heading`,
     },
     h2: {
-      ...tailwind.styles.h2,
       fontSize: [4, 5, 6],
       mt: 2,
+      mb: 2,
       color: `heading`,
     },
     h3: {
-      ...tailwind.styles.h3,
       fontSize: [3, 4, 5],
       mt: 3,
       color: `heading`,
     },
     h4: {
-      ...tailwind.styles.h4,
       fontSize: [2, 3, 4],
       color: `heading`,
     },
     h5: {
-      ...tailwind.styles.h5,
       fontSize: [1, 2, 3],
       color: `heading`,
     },
     h6: {
-      ...tailwind.styles.h6,
       fontSize: 1,
       mb: 2,
       color: `heading`,
+    },
+  },
+  layout: {
+    container: {
+      maxWidth: `5xl`,
     },
   },
   buttons: {
@@ -168,4 +139,4 @@ export default {
       },
     },
   },
-}
+})

@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import { jsx, Styled, Flex } from "theme-ui"
+import { jsx, Link as TLink, Flex } from "theme-ui"
 import { Link } from "gatsby"
 
-type Props = {
+type NavigationProps = {
   nav: {
     title: string
     slug: string
   }[]
 }
 
-const Navigation = ({ nav }: Props) => (
+const Navigation = ({ nav }: NavigationProps) => (
   <Flex
     as="nav"
     sx={{
@@ -23,14 +23,14 @@ const Navigation = ({ nav }: Props) => (
     aria-label="Primary Navigation"
   >
     {nav.map((n) => (
-      <Styled.a
+      <TLink
         as={Link}
         sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
         key={n.slug}
         to={n.slug}
       >
         {n.title}
-      </Styled.a>
+      </TLink>
     ))}
   </Flex>
 )

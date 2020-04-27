@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Link } from "theme-ui"
 import CircleCI from "../icons/circle-ci"
 import GitHub from "../icons/github"
 
@@ -19,7 +19,7 @@ type Props = {
 const Card = ({ site, isOnCircleCI, GH_POSTFIX }: Props) => (
   <div key={site.netlify_id} sx={{ variant: `cards.dashboard` }}>
     <div data-name="card-top" sx={{ display: `flex`, justifyContent: `space-between`, alignItems: `center` }}>
-      <Styled.a href={site.url}>{site.name}</Styled.a>
+      <Link href={site.url}>{site.name}</Link>
       <div
         sx={{
           svg: { fill: `currentColor` },
@@ -29,13 +29,13 @@ const Card = ({ site, isOnCircleCI, GH_POSTFIX }: Props) => (
         }}
       >
         {isOnCircleCI && (
-          <Styled.a aria-label={`View ${site.name} on CircleCI`} href={`https://circleci.com/gh/${GH_POSTFIX}`}>
+          <Link aria-label={`View ${site.name} on CircleCI`} href={`https://circleci.com/gh/${GH_POSTFIX}`}>
             <CircleCI />
-          </Styled.a>
+          </Link>
         )}
-        <Styled.a aria-label={`View ${site.name} source on GitHub`} href={site.build_settings.repo_url}>
+        <Link aria-label={`View ${site.name} source on GitHub`} href={site.build_settings.repo_url}>
           <GitHub />
-        </Styled.a>
+        </Link>
       </div>
     </div>
     <div sx={{ mt: 3, a: { mr: 2 } }}>

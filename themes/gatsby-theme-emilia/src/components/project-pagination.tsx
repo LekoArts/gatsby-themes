@@ -1,16 +1,18 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import Card from "./card"
-import { ChildImageSharp } from "../types"
+import { ChildImageSharpFluid } from "../types"
 
-type Props = {
+type ProjectPaginationProps = {
   prev: {
     slug: string
     parent: {
       fileAbsolutePath: string
     }
     title: string
-    cover: ChildImageSharp
+    cover: {
+      childImageSharp: ChildImageSharpFluid
+    }
   }
   next: {
     slug: string
@@ -18,11 +20,13 @@ type Props = {
       fileAbsolutePath: string
     }
     title: string
-    cover: ChildImageSharp
+    cover: {
+      childImageSharp: ChildImageSharpFluid
+    }
   }
 }
 
-const ProjectPagination = ({ prev, next }: Props) => (
+const ProjectPagination = ({ prev, next }: ProjectPaginationProps) => (
   <div sx={{ mt: 6, mb: 4 }}>
     <div sx={{ display: `grid`, gridTemplateColumns: `250px 1fr`, alignItems: `center`, mb: 4 }}>
       <h2

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from "react"
-import { Header as ThemeHeader, jsx, Styled, Container } from "theme-ui"
+import { Flex, jsx, Container, Heading, Styled } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -8,17 +8,24 @@ import Img from "gatsby-image"
 import HeaderBackground from "./header-background"
 import LeftArrow from "../assets/left-arrow"
 import useEmiliaConfig from "../hooks/use-emilia-config"
+import { ChildImageSharpFixed } from "../types"
 
-type Props = {
+type HeaderProjectProps = {
   title: string
   areas: string[]
   description?: string
   date: string
 }
 
-const HeaderProject = ({ title, areas, description, date }: Props) => {
+type AvatarStaticQuery = {
+  file: {
+    childImageSharp: ChildImageSharpFixed
+  }
+}
+
+const HeaderProject = ({ title, areas, description, date }: HeaderProjectProps) => {
   const { name } = useEmiliaConfig()
-  const avatar = useStaticQuery(graphql`
+  const avatar = useStaticQuery<AvatarStaticQuery>(graphql`
     query {
       file(name: { eq: "avatar" }) {
         childImageSharp {
@@ -43,7 +50,7 @@ const HeaderProject = ({ title, areas, description, date }: Props) => {
   const infoProps = useSpring({ config: config.slow, delay: 500, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <ThemeHeader>
+    <Flex as="header" variant="layout.header">
       <HeaderBackground />
       <Container sx={{ textAlign: `center`, my: 4, zIndex: 10 }}>
         <animated.div style={backButtonProps}>
@@ -73,16 +80,16 @@ const HeaderProject = ({ title, areas, description, date }: Props) => {
                 mx: 2,
               }}
             >
-              {avatar && avatar.file && avatar.file.childImageSharp && (
-                <Img fixed={avatar.file.childImageSharp.fixed} />
-              )}
+              {avatar?.file?.childImageSharp?.fixed && <Img fixed={avatar.file.childImageSharp.fixed} />}
             </div>
             <span sx={{ fontWeight: `medium` }}>{name}</span>
           </Link>
         </animated.div>
         <div sx={{ mt: 4, mb: [6, 6, 7] }}>
           <animated.div style={titleProps}>
-            <Styled.h1>{title}</Styled.h1>
+            <Heading as="h1" variant="styles.h1">
+              {title}
+            </Heading>
           </animated.div>
           <animated.div style={infoProps}>
             <Styled.p sx={{ mb: 0, mt: 4 }}>{date}</Styled.p>
@@ -102,7 +109,7 @@ const HeaderProject = ({ title, areas, description, date }: Props) => {
           </animated.div>
         </div>
       </Container>
-    </ThemeHeader>
+    </Flex>
   )
 }
 

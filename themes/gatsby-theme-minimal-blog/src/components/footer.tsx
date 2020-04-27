@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx, Link } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 const Footer = () => {
@@ -24,18 +24,18 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
       </div>
       <div>
-        <Styled.a
+        <Link
           aria-label="Link to the theme's GitHub repository"
           href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
         >
           Theme
-        </Styled.a>
+        </Link>
         {` `}
         by
         {` `}
-        <Styled.a aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
           LekoArts
-        </Styled.a>
+        </Link>
       </div>
     </footer>
   )

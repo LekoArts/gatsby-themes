@@ -21,7 +21,7 @@ type PaletteProps = {
 }
 
 const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = ``, className }: PaletteProps) => {
-  let wrapperStyles = {}
+  let wrapperStyles: {}
 
   if (mode === `list`) {
     wrapperStyles = {

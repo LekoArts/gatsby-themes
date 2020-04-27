@@ -2,13 +2,13 @@
 import { jsx, Container } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 import Img from "gatsby-image"
-import { ChildImageSharp } from "../types"
+import { ChildImageSharpFluid } from "../types"
 import Layout from "./layout"
 import HeaderProject from "./header-project"
 import ProjectPagination from "./project-pagination"
 import SEO from "./seo"
 
-type Props = {
+type ProjectProps = {
   data: {
     project: {
       body: string
@@ -17,23 +17,18 @@ type Props = {
       slug: string
       title: string
       areas: string[]
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: {
+          resize: {
+            src: string
+          }
+        }
+      }
     }
     images: {
       nodes: {
         name: string
-        childImageSharp: {
-          fluid: {
-            aspectRatio: number
-            src: string
-            srcSet: string
-            sizes: string
-            base64: string
-            tracedSVG: string
-            srcWebp: string
-            srcSetWebp: string
-          }
-        }
+        childImageSharp: ChildImageSharpFluid
       }[]
     }
   }
@@ -44,7 +39,9 @@ type Props = {
         fileAbsolutePath: string
       }
       title: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: ChildImageSharpFluid
+      }
     }
     next: {
       slug: string
@@ -52,12 +49,14 @@ type Props = {
         fileAbsolutePath: string
       }
       title: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: ChildImageSharpFluid
+      }
     }
   }
 }
 
-const Project = ({ data: { project, images }, pageContext: { prev, next } }: Props) => {
+const Project = ({ data: { project, images }, pageContext: { prev, next } }: ProjectProps) => {
   const imageFade = useSpring({ config: config.slow, delay: 800, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
@@ -66,7 +65,7 @@ const Project = ({ data: { project, images }, pageContext: { prev, next } }: Pro
         title={project.title}
         description={project.excerpt}
         pathname={project.slug}
-        image={project.cover.childImageSharp.resize!.src}
+        image={project.cover.childImageSharp.resize.src}
       />
       <HeaderProject title={project.title} description={project.body} areas={project.areas} date={project.date} />
       <Container sx={{ mt: [`-6rem`, `-6rem`, `-8rem`] }}>

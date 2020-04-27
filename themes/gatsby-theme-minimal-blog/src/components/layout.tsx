@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import React from "react"
 import { Global } from "@emotion/core"
-import { Main, Styled, Container, css } from "theme-ui"
+import { Box, Container, jsx } from "theme-ui"
 import "typeface-ibm-plex-sans"
 import SEO from "./seo"
 import Header from "./header"
@@ -11,17 +12,11 @@ import SkipNavLink from "./skip-nav"
 type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className }: LayoutProps) => (
-  <Styled.root data-testid="theme-root">
+  <React.Fragment>
     <Global
-      styles={css({
+      styles={(theme) => ({
         "*": {
           boxSizing: `inherit`,
-        },
-        body: {
-          margin: 0,
-          padding: 0,
-          boxSizing: `border-box`,
-          textRendering: `optimizeLegibility`,
         },
         "::selection": {
           backgroundColor: `primary`,
@@ -37,12 +32,12 @@ const Layout = ({ children, className }: LayoutProps) => (
     <SkipNavLink>Skip to content</SkipNavLink>
     <Container>
       <Header />
-      <Main id="skip-nav" css={css({ ...CodeStyles })} className={className}>
+      <Box id="skip-nav" sx={{ ...CodeStyles }} className={className}>
         {children}
-      </Main>
+      </Box>
       <Footer />
     </Container>
-  </Styled.root>
+  </React.Fragment>
 )
 
 export default Layout

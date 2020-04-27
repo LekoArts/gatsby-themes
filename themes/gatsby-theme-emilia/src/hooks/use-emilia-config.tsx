@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type Props = {
+type UseEmiliaConfigProps = {
   emiliaConfig: {
     name: string
     location: string
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const useEmiliaConfig = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<UseEmiliaConfigProps>(graphql`
     query {
       emiliaConfig {
         name

@@ -8,7 +8,7 @@ const defaultProps = {
   slim: false,
 }
 
-type Props = {
+type HeroProps = {
   children: React.ReactNode
   color?: string
   slim?: boolean
@@ -24,7 +24,7 @@ type Props = {
   }
 } & typeof defaultProps
 
-const Hero = ({ children, color, image, slim }: Props) => (
+const Hero = ({ children, color, image, slim }: HeroProps) => (
   <section
     sx={{
       position: `relative`,

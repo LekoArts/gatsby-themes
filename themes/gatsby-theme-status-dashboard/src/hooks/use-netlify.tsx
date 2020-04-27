@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type Props = {
+type UseNetlifyProps = {
   sites: {
     totalCount: number
     nodes: {
@@ -15,7 +15,7 @@ type Props = {
 }
 
 const useNetlify = () => {
-  const data = useStaticQuery<Props>(graphql`
+  const data = useStaticQuery<UseNetlifyProps>(graphql`
     query {
       sites: allNetlifySites(
         filter: { build_settings: { public_repo: { eq: true } } }

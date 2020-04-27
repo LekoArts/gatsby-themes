@@ -1,15 +1,15 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Flex } from "theme-ui"
 
 type Props = {
   isDark: boolean
   toggle: (e: any) => void
 }
 
-// Adapted from: https://codepen.io/aaroniker/pen/KGpXZo and https://github.com/narative/gatsby-theme-novela/blob/master/%40narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header.tsx
+// Adapted from: https://codepen.io/aaroniker/pen/KGpXZo and https://github.com/narative/gatsby-theme-novela/blob/714b6209c5bd61b220370e8a7ad84c0b1407946a/%40narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header.tsx
 
 const ColorModeToggle = ({ isDark, toggle }: Props) => (
-  <div sx={{ display: `flex`, alignItems: `center`, justifyContent: [`center`, `center`, `center`, `flex-end`] }}>
+  <Flex sx={{ alignItems: `center`, justifyContent: [`center`, `center`, `center`, `flex-end`] }}>
     <div sx={{ mr: 2 }}>Toggle Mode</div>
     <button
       onClick={toggle}
@@ -77,7 +77,7 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
         }}
       />
     </button>
-  </div>
+  </Flex>
 )
 
 export default ColorModeToggle

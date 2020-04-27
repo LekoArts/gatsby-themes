@@ -1,48 +1,10 @@
+import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
-const headingStyles = {
-  h1: {
-    ...tailwind.styles.h1,
-    color: `heading`,
-    fontSize: [5, 6, 7],
-    mt: 2,
-  },
-  h2: {
-    ...tailwind.styles.h2,
-    color: `heading`,
-    fontSize: [4, 5, 6],
-    mt: 2,
-  },
-  h3: {
-    ...tailwind.styles.h3,
-    color: `heading`,
-    fontSize: [3, 4, 5],
-    mt: 3,
-  },
-  h4: {
-    ...tailwind.styles.h4,
-    color: `heading`,
-    fontSize: [2, 3, 4],
-  },
-  h5: {
-    ...tailwind.styles.h5,
-    color: `heading`,
-    fontSize: [1, 2, 3],
-  },
-  h6: {
-    ...tailwind.styles.h6,
-    color: `heading`,
-    fontSize: 1,
-    mb: 2,
-  },
-}
-
-export default {
-  ...tailwind,
-  initialColorMode: `light`,
+export default merge(tailwind, {
+  initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    ...tailwind.colors,
     primary: tailwind.colors.purple[7],
     secondary: `#5f6c80`,
     toggleIcon: tailwind.colors.gray[8],
@@ -62,15 +24,16 @@ export default {
     },
   },
   fonts: {
-    ...tailwind.fonts,
     body: `"IBM Plex Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   },
   styles: {
-    ...tailwind.styles,
     root: {
-      ...tailwind.styles.root,
       color: `text`,
       backgroundColor: `background`,
+      margin: 0,
+      padding: 0,
+      boxSizing: `border-box`,
+      textRendering: `optimizeLegibility`,
     },
     p: {
       fontSize: [1, 1, 2],
@@ -97,9 +60,33 @@ export default {
         "--x-height-multiplier": 0.35,
       },
     },
-    ...headingStyles,
-    Container: {
-      padding: [3, 4],
+    h1: {
+      variant: `text.heading`,
+      fontSize: [5, 6, 7],
+      mt: 2,
+    },
+    h2: {
+      variant: `text.heading`,
+      fontSize: [4, 5, 6],
+      mt: 2,
+    },
+    h3: {
+      variant: `text.heading`,
+      fontSize: [3, 4, 5],
+      mt: 3,
+    },
+    h4: {
+      variant: `text.heading`,
+      fontSize: [2, 3, 4],
+    },
+    h5: {
+      variant: `text.heading`,
+      fontSize: [1, 2, 3],
+    },
+    h6: {
+      variant: `text.heading`,
+      fontSize: 1,
+      mb: 2,
     },
     blockquote: {
       borderLeftColor: `primary`,
@@ -135,8 +122,13 @@ export default {
       borderBottomWidth: `1px`,
     },
   },
+  layout: {
+    container: {
+      padding: [3, 4],
+      maxWidth: `1024px`,
+    },
+  },
   text: {
-    ...headingStyles,
     heading: {
       fontFamily: `heading`,
       fontWeight: `heading`,
@@ -175,4 +167,4 @@ export default {
       color: `text`,
     },
   },
-}
+})
