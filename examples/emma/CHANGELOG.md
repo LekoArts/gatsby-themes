@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/LekoArts/gatsby-themes/compare/emma@0.1.14...emma@0.2.0) (2020-04-27)
+
+
+### Features
+
+* Update theme-ui to v0.3.x ([#371](https://github.com/LekoArts/gatsby-themes/issues/371)) ([67a05ac](https://github.com/LekoArts/gatsby-themes/commit/67a05ac3e1deaddfe38591739e7f50f56d49d109)), closes [/theme-ui.com/migrating#v03](https://github.com//theme-ui.com/migrating/issues/v03) [#262](https://github.com/LekoArts/gatsby-themes/issues/262)
+
+
+
+
+
 ## [0.1.14](https://github.com/LekoArts/gatsby-themes/compare/emma@0.1.13...emma@0.1.14) (2020-04-24)
 
 **Note:** Version bump only for package emma
