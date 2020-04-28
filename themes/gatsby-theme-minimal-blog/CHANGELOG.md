@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.3.0...@lekoarts/gatsby-theme-minimal-blog@2.3.1) (2020-04-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prism-react-renderer to ^1.1.0 ([#377](https://github.com/LekoArts/gatsby-themes/issues/377)) ([c334028](https://github.com/LekoArts/gatsby-themes/commit/c334028c0768b2b332b02db3a58e255ee3c8ad25))
+* **deps:** update gatsby ([#378](https://github.com/LekoArts/gatsby-themes/issues/378)) ([8238565](https://github.com/LekoArts/gatsby-themes/commit/82385658f18c983b4ca4d83233660e9f4492a4a9))
+
+
+
+
+
 # [2.3.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.2.11...@lekoarts/gatsby-theme-minimal-blog@2.3.0) (2020-04-27)
 
 
