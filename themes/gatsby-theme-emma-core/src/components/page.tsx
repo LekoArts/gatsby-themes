@@ -1,3 +1,5 @@
 import React from "react"
 
-export default ({ data }: { data: any }) => <pre>{JSON.stringify(data, null, 2)}</pre>
+export default function Page({ data }: { data: any }) {
+  return <pre>{JSON.stringify(data, null, 2)}</pre>
+}

@@ -8,7 +8,7 @@ type Props = {
   }
 }
 
-export default ({ data }: Props) => {
+export default function EmmaCoreProject({ data }: Props) {
   const { project } = data
 
   return <Project data={{ ...data, project }} />

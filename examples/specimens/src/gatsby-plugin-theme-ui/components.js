@@ -45,7 +45,7 @@ const heading = (Tag) => (props) =>
     <Tag {...props} />
   )
 
-const components = {
+const shortcodes = {
   Alert: ({ type, children }) => <Alert type={type}>{children}</Alert>,
   Audio: ({ autoplay, loop, name, desc, src }) => (
     <Audio autoplay={autoplay} loop={loop} name={name} desc={desc} src={src} />
@@ -78,8 +78,8 @@ const components = {
   ),
 }
 
-export default {
-  ...components,
+const components = {
+  ...shortcodes,
   h2: heading(`h2`),
   h3: heading(`h3`),
   h4: heading(`h4`),
@@ -96,3 +96,5 @@ export default {
   },
   wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
 }
+
+export default components

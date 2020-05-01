@@ -12,7 +12,7 @@ type Props = {
   }
 }
 
-export default ({ data }: Props) => {
+export default function MinimalBlogCoreTags({ data }: Props) {
   const { allPost } = data
 
   return <Tags list={allPost.group} />

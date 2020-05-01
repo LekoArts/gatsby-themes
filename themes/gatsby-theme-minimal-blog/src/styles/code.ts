@@ -1,6 +1,6 @@
 import { tint } from "@theme-ui/color"
 
-export default {
+const code = {
   "[data-name='live-editor']": {
     fontSize: 1,
     "textarea, pre": {
@@ -188,3 +188,5 @@ export default {
     },
   },
 }
+
+export default code

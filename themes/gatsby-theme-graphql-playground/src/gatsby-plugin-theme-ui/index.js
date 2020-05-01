@@ -2,7 +2,7 @@ import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 import nightOwl from "@theme-ui/prism/presets/night-owl"
 
-export default merge(tailwind, {
+const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
@@ -114,3 +114,5 @@ export default merge(tailwind, {
     },
   },
 })
+
+export default theme

@@ -1,5 +1,7 @@
 import { system } from "@theme-ui/presets"
 
-export default {
+const theme = {
   ...system,
 }
+
+export default theme
