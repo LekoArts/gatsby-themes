@@ -9,7 +9,7 @@ type Props = {
   pageContext: any
 }
 
-export default ({ data, pageContext }: Props) => {
+export default function MinimalBlogCoreTag({ data, pageContext }: Props) {
   const { allPost } = data
 
   return <Tag posts={allPost.nodes} pageContext={pageContext} />

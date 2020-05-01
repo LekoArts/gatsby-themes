@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { Styled, jsx } from "theme-ui"
 
-export default () => (
+const Footer = () => (
   <footer
     sx={{ pt: 2, my: 4, color: `secondary`, borderTopColor: `muted`, borderTopStyle: `solid`, borderTopWidth: `1px` }}
   >
@@ -14,3 +14,5 @@ export default () => (
     </Styled.p>
   </footer>
 )
+
+export default Footer

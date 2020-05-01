@@ -8,7 +8,7 @@ type Props = {
   }
 }
 
-export default ({ data }: Props) => {
+export default function MinimalBlogCoreBlog({ data }: Props) {
   const { allPost } = data
 
   return <Blog posts={allPost.nodes} />

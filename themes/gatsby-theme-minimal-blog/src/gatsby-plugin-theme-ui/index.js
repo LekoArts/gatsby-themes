@@ -1,7 +1,7 @@
 import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
-export default merge(tailwind, {
+const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
@@ -168,3 +168,5 @@ export default merge(tailwind, {
     },
   },
 })
+
+export default theme

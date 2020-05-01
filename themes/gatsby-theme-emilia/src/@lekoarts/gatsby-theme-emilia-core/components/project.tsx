@@ -13,7 +13,7 @@ type Props = {
   }
 }
 
-export default ({ data, pageContext }: Props) => {
+export default function EmiliaCoreProject({ data, pageContext }: Props) {
   const { project, images } = data
 
   return <Project data={{ ...data, project, images }} pageContext={pageContext} />
