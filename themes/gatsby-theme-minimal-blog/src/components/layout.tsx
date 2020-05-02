@@ -19,8 +19,8 @@ const Layout = ({ children, className }: LayoutProps) => (
           boxSizing: `inherit`,
         },
         "::selection": {
-          backgroundColor: `primary`,
-          color: `white`,
+          backgroundColor: theme.colors.text,
+          color: theme.colors.background,
         },
         a: {
           transition: `all 0.3s ease-in-out`,
