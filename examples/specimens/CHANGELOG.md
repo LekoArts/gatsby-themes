@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.1...specimens@0.2.2) (2020-05-02)
+
+
+### Bug Fixes
+
+* **specimens:** Use updated Heading prop ([86c5a55](https://github.com/LekoArts/gatsby-themes/commit/86c5a5519f1b9c6da4b9f04df76ed2d2f868425f))
+
+
+
+
+
 ## [0.2.1](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.0...specimens@0.2.1) (2020-04-28)
 
 **Note:** Version bump only for package specimens

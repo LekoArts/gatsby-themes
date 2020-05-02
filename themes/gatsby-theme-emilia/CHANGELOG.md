@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.3.1...@lekoarts/gatsby-theme-emilia@1.3.2) (2020-05-02)
+
+
+### Bug Fixes
+
+* Use correct ::selection colors ([f311851](https://github.com/LekoArts/gatsby-themes/commit/f311851e25c0c7bf40299ec3a7a430dc210bbdc9))
+
+
+
+
+
 ## [1.3.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.3.0...@lekoarts/gatsby-theme-emilia@1.3.1) (2020-04-28)
 
 

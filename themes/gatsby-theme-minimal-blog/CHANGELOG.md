@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.3.1...@lekoarts/gatsby-theme-minimal-blog@2.3.2) (2020-05-02)
+
+
+### Bug Fixes
+
+* **minimal-blog:** Correct ::selection colors. Fixes [#389](https://github.com/LekoArts/gatsby-themes/issues/389) ([9936e85](https://github.com/LekoArts/gatsby-themes/commit/9936e854e2016865217558012120d020c006dfb1))
+
+
+
+
+
 ## [2.3.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.3.0...@lekoarts/gatsby-theme-minimal-blog@2.3.1) (2020-04-28)
 
 
