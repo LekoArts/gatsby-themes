@@ -23,8 +23,8 @@ const Layout = ({ children, className }: LayoutProps) => (
           fontSize: `18px`,
         },
         "::selection": {
-          backgroundColor: `primary`,
-          color: `white`,
+          backgroundColor: theme.colors.primary,
+          color: theme.colors.background,
         },
       })}
     />

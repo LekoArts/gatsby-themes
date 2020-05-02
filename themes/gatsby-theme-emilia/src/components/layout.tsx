@@ -16,8 +16,8 @@ const Layout = ({ children }: LayoutProps) => (
           fontSize: `18px`,
         },
         "::selection": {
-          background: `black`,
-          color: `white`,
+          background: theme.colors.text,
+          color: theme.colors.background,
         },
         "@media(max-width: 600px)": {
           html: {
