@@ -1,16 +1,14 @@
 /** @jsx jsx */
-import { jsx, useColorMode, Link as TLink } from "theme-ui"
-import { Link } from "gatsby"
+import { jsx, useColorMode } from "theme-ui"
 import { Flex } from "@theme-ui/components"
-import useSiteMetadata from "../hooks/use-site-metadata"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import ColorModeToggle from "./colormode-toggle"
 import Navigation from "./navigation"
-import replaceSlashes from "../utils/replaceSlashes"
+import HeaderTitle from "./header-title"
+import HeaderExternalLinks from "./header-external-links"
 
 const Header = () => {
-  const { siteTitle } = useSiteMetadata()
-  const { navigation: nav, externalLinks, basePath } = useMinimalBlogConfig()
+  const { navigation: nav } = useMinimalBlogConfig()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
   const toggleColorMode = (e: any) => {
@@ -21,13 +19,7 @@ const Header = () => {
   return (
     <header sx={{ mb: [5, 6] }}>
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between` }}>
-        <Link
-          to={replaceSlashes(`/${basePath}`)}
-          aria-label={`${siteTitle} - Back to home`}
-          sx={{ color: `heading`, textDecoration: `none` }}
-        >
-          <h1 sx={{ my: 0, fontWeight: `medium`, fontSize: [3, 4] }}>{siteTitle}</h1>
-        </Link>
+        <HeaderTitle />
         <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       </Flex>
       <div
@@ -44,15 +36,7 @@ const Header = () => {
         }}
       >
         <Navigation nav={nav} />
-        {externalLinks && externalLinks.length > 0 && (
-          <div sx={{ "a:not(:first-of-type)": { ml: 3 }, fontSize: [1, `18px`] }}>
-            {externalLinks.map((link) => (
-              <TLink key={link.url} href={link.url}>
-                {link.name}
-              </TLink>
-            ))}
-          </div>
-        )}
+        <HeaderExternalLinks />
       </div>
     </header>
   )
