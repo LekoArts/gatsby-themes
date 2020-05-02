@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.3.2...@lekoarts/gatsby-theme-minimal-blog@2.3.3) (2020-05-02)
+
+
+### Bug Fixes
+
+* Split header.tsx into more granular components ([#390](https://github.com/LekoArts/gatsby-themes/issues/390)) ([eeecabc](https://github.com/LekoArts/gatsby-themes/commit/eeecabc5eb9efbbcefc3f41d8e7f559569af1e12))
+
+
+
+
+
 ## [2.3.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.3.1...@lekoarts/gatsby-theme-minimal-blog@2.3.2) (2020-05-02)
 
 
