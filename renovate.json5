@@ -1,8 +1,8 @@
 {
-  "extends": ["config:base", ":disablePeerDependencies"],
-  "includePaths": ["package.json", "examples/**", "themes/**", "www/package.json"],
+  extends: ["config:base", ":disablePeerDependencies"],
+  includePaths: ["package.json", "examples/**", "themes/**", "www/package.json"],
   masterIssue: true,
-  "packageRules": [
+  packageRules: [
     {
       groupName: "packages",
       paths: ["package.json", "themes/**"],
@@ -87,16 +87,16 @@
       ],
     },
   ],
-  "labels": ["renovate"],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 15,
-  "rangeStrategy": "bump",
-  "bumpVersion": null,
-  "semanticCommits": true,
-  "timezone": "GMT",
-  "schedule": ["before 9am on Monday"],
-  "automerge": true,
-  "major": {
-    "automerge": false
+  labels: ["renovate"],
+  prHourlyLimit: 4,
+  prConcurrentLimit: 15,
+  rangeStrategy: "bump",
+  bumpVersion: null,
+  semanticCommits: true,
+  timezone: "GMT",
+  schedule: ["before 9am on Monday"],
+  automerge: true,
+  major: {
+    automerge: false
   }
 }
