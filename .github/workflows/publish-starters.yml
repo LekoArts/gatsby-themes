@@ -1,7 +1,10 @@
 name: Publish Starters
 on:
-  release:
-    types: [published,created]
+  push:
+    branches: 
+      - master
+    tags:
+      - '**'
 jobs:
   master:
     runs-on: ubuntu-latest
