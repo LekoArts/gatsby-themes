@@ -6,4 +6,5 @@ module.exports = {
   globals: {
     __PATH_PREFIX__: ``,
   },
+  reporters: [[`jest-junit`, { suiteName: `Unit Tests`, outputDirectory: `results/jest`, outputName: `result.xml` }]],
 }

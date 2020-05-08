@@ -96,9 +96,11 @@ jobs:
       - <<: *save_cache
       - run:
           name: Run Unit tests
-          command: yarn test:ci
+          command: yarn test:ci --reporters=jest-junit
           environment:
+            JEST_JUNIT_NAME: "Unit Tests"
             JEST_JUNIT_OUTPUT_DIR: "results/jest"
+            JEST_JUNIT_OUTPUT_NAME: "result.xml"
       - <<: *store_results
       - <<: *store_results_artifacts
 
