@@ -69,6 +69,7 @@ const Hero = () => {
                     backgroundColor: `primary`,
                     borderTopLeftRadius: `default`,
                     borderBottomLeftRadius: `default`,
+                    alignItems: `center`,
                   }}
                 >
                   <Star /> Star
