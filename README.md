@@ -31,7 +31,7 @@ Get **high-quality** and **customizable** Gatsby themes to quickly bootstrap you
 This repository is a collection of my Gatsby themes, managed as a [monorepo](https://trunkbaseddevelopment.com/monorepos/) with [Lerna](https://github.com/lerna/lerna) and [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
 
 - `.circleci`: Contains the configuration file for CircleCI
-- `.github`: GitHub actions, templates for issues, and FUNDING file
+- `.github`: GitHub actions, templates for issues, and FUNDING file. A GitHub action will publish the `/examples` as starters to individual GitHub repositories.
 - `cypress`: Contains the Cypress tests for `examples`
 - `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`
 - `jest`: Primarily files for mocking functions/files in Jest tests
