@@ -1,16 +1,16 @@
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+  parser: `@typescript-eslint/parser`, // Specifies the ESLint parser
   extends: [
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/typescript",
-    "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    `airbnb`,
+    `plugin:@typescript-eslint/recommended`,
+    `plugin:import/typescript`,
+    `plugin:prettier/recommended`,
+    `prettier/@typescript-eslint`,
   ],
-  plugins: ["@typescript-eslint", "prettier", "react-hooks"],
+  plugins: [`@typescript-eslint`, `prettier`, `react-hooks`],
   parserOptions: {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
+    sourceType: `module`, // Allows for the use of imports
     ecmaFeatures: {
       jsx: true,
     },
@@ -28,29 +28,29 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": [
       1,
       {
-        argsIgnorePattern: "res|next|stage|^err|on|config|e|_"
-      }
+        argsIgnorePattern: `res|next|stage|^err|on|config|e|_`,
+      },
     ],
-    "arrow-body-style": [2, "as-needed"],
+    "arrow-body-style": [2, `as-needed`],
     "no-param-reassign": [
       2,
       {
-        "props": false
-      }
+        props: false,
+      },
     ],
     "no-unused-expressions": [
       1,
       {
-        "allowTaggedTemplates": true
-      }
+        allowTaggedTemplates: true,
+      },
     ],
-    quotes: "off",
+    quotes: `off`,
     "@typescript-eslint/quotes": [
       2,
-      "backtick",
+      `backtick`,
       {
-        "avoidEscape": true
-      }
+        avoidEscape: true,
+      },
     ],
     "@typescript-eslint/prefer-interface": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
@@ -61,12 +61,12 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/no-empty-function": 0,
-    "no-console": ["warn", { allow: ["warn"] }],
-    "spaced-comment": [2, "always", { "exceptions": ["-", "+"], "markers": ["/"] }],
+    "no-console": [`warn`, { allow: [`warn`] }],
+    "spaced-comment": [2, `always`, { exceptions: [`-`, `+`], markers: [`/`] }],
     "no-use-before-define": 0,
     "linebreak-style": 0,
     "consistent-return": 0,
-    "import": 0,
+    import: 0,
     "import/no-unresolved": 0,
     "func-names": 0,
     "import/no-extraneous-dependencies": 0,
@@ -90,27 +90,27 @@ module.exports = {
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx", ".tsx"]
-      }
+        extensions: [`.js`, `.jsx`, `.tsx`],
+      },
     ],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    indent: ["error", 2, { SwitchCase: 1 }],
+    "react-hooks/rules-of-hooks": `error`,
+    "react-hooks/exhaustive-deps": `warn`,
+    indent: [`error`, 2, { SwitchCase: 1 }],
     "prettier/prettier": [
-      "error",
+      `error`,
       {
-        trailingComma: "es5",
+        trailingComma: `es5`,
         semi: false,
         singleQuote: false,
-        printWidth: 120
-      }
+        printWidth: 120,
+      },
     ],
-    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/href-no-hash": `off`,
     "jsx-a11y/anchor-is-valid": [
-      "warn",
+      `warn`,
       {
-        "aspects": ["invalidHref"]
-      }
-    ]
-  }
+        aspects: [`invalidHref`],
+      },
+    ],
+  },
 }
