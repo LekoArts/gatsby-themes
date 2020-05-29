@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.4...@lekoarts/gatsby-theme-styleguide@1.1.5) (2020-05-29)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
 ## [1.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.3...@lekoarts/gatsby-theme-styleguide@1.1.4) (2020-05-12)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
