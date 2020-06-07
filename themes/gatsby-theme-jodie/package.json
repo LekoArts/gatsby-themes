@@ -1,8 +1,8 @@
 {
-  "name": "@lekoarts/gatsby-theme-{{kebabCase name}}-core",
+  "name": "@lekoarts/gatsby-theme-jodie",
   "version": "1.0.0",
   "author": "LekoArts <hello@lekoarts.de>",
-  "description": "Core Theme for @lekoarts/gatsby-theme-{{kebabCase name}}. This theme implements the TODO interfaces and exports templates (+ queries) which you can shadow.",
+  "description": "Stub description for jodie",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
@@ -20,9 +20,12 @@
     "react-dom": "^16.13.0"
   },
   "dependencies": {
-    "gatsby-plugin-sharp": "^2.6.9",
-    "gatsby-source-filesystem": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.5.3"
+    "@lekoarts/gatsby-theme-jodie-core": "^1.0.0",
+    "@theme-ui/presets": "^0.3.0",
+    "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "react-helmet": "^6.0.0",
+    "theme-ui": "^0.3.1"
   },
   "keywords": [
     "gatsby",
@@ -37,6 +40,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/LekoArts/gatsby-themes.git",
-    "directory": "themes/gatsby-theme-{{kebabCase name}}-core"
+    "directory": "themes/gatsby-theme-jodie"
   }
 }

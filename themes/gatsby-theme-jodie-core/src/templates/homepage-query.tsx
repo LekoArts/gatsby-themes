@@ -1,0 +1,10 @@
+import { graphql } from "gatsby"
+import HomepageComponent from "../components/homepage"
+
+export default HomepageComponent
+
+export const query = graphql`
+  query {
+    ...queryGoesHere
+  }
+`
