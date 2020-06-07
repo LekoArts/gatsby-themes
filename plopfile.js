@@ -7,7 +7,7 @@ const prompt = [
   {
     type: `input`,
     name: `readme-name`,
-    message: `Name for the README title, alt tags of images and siteMetadata`,
+    message: `Name for the README title, alt tags of images and siteMetadata in the starter (e.g. "Gatsby Starter Portfolio: x")`,
   },
   {
     type: `input`,
