@@ -1,9 +1,9 @@
 module.exports = (themeOptions) => {
   const basePath = themeOptions.basePath || `/`
-  const contentPath = themeOptions.contentPath || `/content`
+  const projectsPath = themeOptions.projectsPath || `/content/projects`
 
   return {
     basePath,
-    contentPath,
+    projectsPath,
   }
 }

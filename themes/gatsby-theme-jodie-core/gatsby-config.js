@@ -8,8 +8,15 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: options.contentPath,
-          path: options.contentPath,
+          name: options.projectsPath,
+          path: options.projectsPath,
+        },
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: options.projectsPath,
+          path: options.projectsPath,
         },
       },
       `gatsby-transformer-sharp`,
