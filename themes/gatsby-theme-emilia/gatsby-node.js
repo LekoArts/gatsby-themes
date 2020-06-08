@@ -5,15 +5,15 @@ const ColorThief = require(`colorthief`)
 exports.onCreateNode = async ({ node, actions, reporter }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `Mdx`) {
-    const pathToImage = urlResolve(path.dirname(node.fileAbsolutePath), node.frontmatter.cover)
+  // if (node.internal.type === `Mdx`) {
+  //   const pathToImage = urlResolve(path.dirname(node.fileAbsolutePath), node.frontmatter.cover)
 
-    await ColorThief.getColor(pathToImage)
-      .then((color) => {
-        createNodeField({ node, name: `colorThief`, value: color })
-      })
-      .catch((err) => {
-        reporter.error(err)
-      })
-  }
+  //   await ColorThief.getColor(pathToImage)
+  //     .then((color) => {
+  //       createNodeField({ node, name: `colorThief`, value: color })
+  //     })
+  //     .catch((err) => {
+  //       reporter.error(err)
+  //     })
+  // }
 }
