@@ -18,6 +18,9 @@ const Layout = ({ children, className }: LayoutProps) => (
         "*": {
           boxSizing: `inherit`,
         },
+        html: {
+          "-webkit-text-size-adjust": `100%`,
+        },
         "::selection": {
           backgroundColor: theme.colors.text,
           color: theme.colors.background,
