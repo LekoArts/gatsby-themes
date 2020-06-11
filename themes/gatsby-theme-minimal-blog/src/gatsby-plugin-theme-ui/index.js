@@ -121,6 +121,9 @@ const theme = merge(tailwind, {
       verticalAlign: `top`,
       borderBottomWidth: `1px`,
     },
+    hr: {
+      mx: 0,
+    },
   },
   layout: {
     container: {
