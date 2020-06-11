@@ -34,6 +34,8 @@ const theme = merge(tailwind, {
       padding: 0,
       boxSizing: `border-box`,
       textRendering: `optimizeLegibility`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
     },
     p: {
       fontSize: [1, 1, 2],
@@ -63,25 +65,27 @@ const theme = merge(tailwind, {
     h1: {
       variant: `text.heading`,
       fontSize: [5, 6, 7],
-      mt: 2,
+      mt: 4,
     },
     h2: {
       variant: `text.heading`,
       fontSize: [4, 5, 6],
-      mt: 2,
+      mt: 4,
     },
     h3: {
       variant: `text.heading`,
       fontSize: [3, 4, 5],
-      mt: 3,
+      mt: 4,
     },
     h4: {
       variant: `text.heading`,
       fontSize: [2, 3, 4],
+      mt: 3,
     },
     h5: {
       variant: `text.heading`,
       fontSize: [1, 2, 3],
+      mt: 3,
     },
     h6: {
       variant: `text.heading`,

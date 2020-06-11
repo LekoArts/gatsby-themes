@@ -7,7 +7,7 @@ import useNetlify from "../hooks/use-netlify"
 import useCircleCi from "../hooks/use-circle-ci"
 
 const Item = ({ input, icon }: { input: string; icon: React.ReactNode }) => (
-  <Flex sx={{ mr: 4, mb: 4, alignItems: `center` }}>
+  <Flex sx={{ mr: [3, 3, 4], mb: [3, 3, 4], alignItems: `center` }}>
     {icon}
     <div
       sx={{
