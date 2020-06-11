@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.4...@lekoarts/gatsby-theme-status-dashboard@1.1.5) (2020-06-11)
+
+
+### Bug Fixes
+
+* Normalize CSS in themes & examples ([#422](https://github.com/LekoArts/gatsby-themes/issues/422)) ([9a2600c](https://github.com/LekoArts/gatsby-themes/commit/9a2600cc45d0f6729799183116f1b87d3c943749))
+
+
+
+
+
 ## [1.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.3...@lekoarts/gatsby-theme-status-dashboard@1.1.4) (2020-06-08)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-status-dashboard

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.1.8...minimal-blog@1.1.9) (2020-06-11)
+
+
+### Bug Fixes
+
+* Normalize CSS in themes & examples ([#422](https://github.com/LekoArts/gatsby-themes/issues/422)) ([9a2600c](https://github.com/LekoArts/gatsby-themes/commit/9a2600cc45d0f6729799183116f1b87d3c943749))
+
+
+
+
+
 ## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.1.7...minimal-blog@1.1.8) (2020-06-11)
 
 
