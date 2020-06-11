@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.1.7...minimal-blog@1.1.8) (2020-06-11)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** font-size on mobile iOS ([#421](https://github.com/LekoArts/gatsby-themes/issues/421)) ([ab65ecc](https://github.com/LekoArts/gatsby-themes/commit/ab65ecceaabefc0f2f77c6f9602280a7214c34d1))
+
+
+
+
+
 ## [1.1.7](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.1.6...minimal-blog@1.1.7) (2020-06-08)
 
 **Note:** Version bump only for package minimal-blog
