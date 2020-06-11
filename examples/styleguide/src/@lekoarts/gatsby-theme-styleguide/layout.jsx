@@ -12,6 +12,9 @@ const Layout = ({ children }) => (
         *::after {
           box-sizing: border-box;
         }
+        html {
+          -webkit-text-size-adjust: 100%;
+        }
         body {
           border: 0;
           margin: 0;

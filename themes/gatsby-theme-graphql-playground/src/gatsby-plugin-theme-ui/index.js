@@ -56,6 +56,8 @@ const theme = merge(tailwind, {
       padding: 0,
       boxSizing: `border-box`,
       textRendering: `optimizeLegibility`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
     },
     pre: {
       ...nightOwl,

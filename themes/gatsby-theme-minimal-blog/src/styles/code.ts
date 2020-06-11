@@ -12,7 +12,7 @@ const code = {
     backgroundColor: tint(`primary`, 0.7),
   },
   ".prism-code": {
-    fontSize: 1,
+    fontSize: [1, 1, 2],
     padding: 3,
     webkitOverflowScrolling: `touch`,
     backgroundColor: `transparent`,
@@ -30,14 +30,14 @@ const code = {
     display: `inline-block`,
   },
   "p > code, li > code": {
-    bg: `rgb(1, 22, 39)`,
-    color: `rgb(214, 222, 235)`,
+    bg: `gray.2`,
+    color: `gray.8`,
     px: 2,
     py: 1,
     borderRadius: `2px`,
   },
   ".gatsby-highlight": {
-    fontSize: 1,
+    fontSize: [1, 1, 2],
     position: `relative`,
     webkitOverflowScrolling: `touch`,
     bg: `rgb(1, 22, 39)`,
@@ -174,6 +174,7 @@ const code = {
   },
   "[data-name='live-preview'], [data-name='live-editor']": {
     mx: [0, 0, 0, -3],
+    fontSize: [1, 1, 2],
   },
   ".token-line": {
     pr: 3,

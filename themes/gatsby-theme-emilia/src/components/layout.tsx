@@ -14,6 +14,17 @@ const Layout = ({ children }: LayoutProps) => (
         },
         html: {
           fontSize: `18px`,
+          WebkitTextSizeAdjust: `100%`,
+        },
+        img: {
+          borderStyle: `none`,
+        },
+        pre: {
+          fontFamily: `monospace`,
+          fontSize: `1em`,
+        },
+        "[hidden]": {
+          display: `none`,
         },
         "::selection": {
           background: theme.colors.text,

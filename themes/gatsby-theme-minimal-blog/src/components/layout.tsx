@@ -19,7 +19,17 @@ const Layout = ({ children, className }: LayoutProps) => (
           boxSizing: `inherit`,
         },
         html: {
-          "-webkit-text-size-adjust": `100%`,
+          WebkitTextSizeAdjust: `100%`,
+        },
+        img: {
+          borderStyle: `none`,
+        },
+        pre: {
+          fontFamily: `monospace`,
+          fontSize: `1em`,
+        },
+        "[hidden]": {
+          display: `none`,
         },
         "::selection": {
           backgroundColor: theme.colors.text,

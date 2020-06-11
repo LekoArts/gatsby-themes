@@ -48,6 +48,10 @@ const Layout = ({ children }) => {
             color: #fff;
             background-color: #3490dc;
           }
+          html {
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+          }
           body {
             border: 0;
             margin: 0;
