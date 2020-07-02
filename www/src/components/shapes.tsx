@@ -10,7 +10,7 @@ type CircleProps = {
   className?: string
 }
 
-const Circle = ({ size, color, top, left, right, className }: CircleProps) => (
+const Circle = ({ size, color, top, left = ``, right = ``, className = `` }: CircleProps) => (
   <div
     sx={{
       position: `absolute`,
@@ -37,7 +37,7 @@ type DonutProps = {
   className?: string
 }
 
-const Donut = ({ size, color, width, top, left, right, className }: DonutProps) => (
+const Donut = ({ size, color, width, top, left = ``, right = ``, className = `` }: DonutProps) => (
   <div
     sx={{
       position: `absolute`,

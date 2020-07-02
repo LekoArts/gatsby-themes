@@ -5,7 +5,7 @@ type Props = {
   className?: string
 }
 
-const Curved = ({ className }: Props) => (
+const Curved = ({ className = `` }: Props) => (
   <svg
     width="1440"
     height="169"

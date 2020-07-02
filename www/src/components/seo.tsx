@@ -3,17 +3,6 @@ import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import useBuildTime from "../hooks/use-build-time"
 
-const defaultProps = {
-  description: false,
-  meta: [],
-  pathname: false,
-  image: false,
-  title: false,
-  thought: false,
-  datePublished: false,
-  info: false,
-}
-
 type SEOProps = {
   description?: string
   meta?:
@@ -36,7 +25,16 @@ type SEOProps = {
   info?: string
 }
 
-const SEO = ({ description, meta, pathname, image, title, thought, datePublished, info }: SEOProps) => {
+const SEO = ({
+  description = ``,
+  meta = [],
+  pathname = ``,
+  image = ``,
+  title = ``,
+  thought = false,
+  datePublished = ``,
+  info = ``,
+}: SEOProps) => {
   const site = useSiteMetadata()
   const buildTime = useBuildTime()
 
@@ -231,5 +229,3 @@ const SEO = ({ description, meta, pathname, image, title, thought, datePublished
 }
 
 export default SEO
-
-SEO.defaultProps = defaultProps

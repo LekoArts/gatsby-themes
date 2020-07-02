@@ -8,7 +8,7 @@ import "../fonts/benguiat.css"
 
 type LayoutProps = { children: React.ReactNode; className?: string; thought?: boolean }
 
-const Layout = ({ children, className, thought }: LayoutProps) => {
+const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
   const [mode] = useColorMode()
 
   let headingStyles = {}
