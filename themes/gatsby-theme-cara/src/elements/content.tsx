@@ -6,12 +6,12 @@ import { ParallaxLayer } from "react-spring/renderprops-addons.cjs"
 type ContentProps = {
   speed: number
   offset: number
-  children?: React.ReactNode
+  children: React.ReactNode
   className?: string
   factor?: number
 }
 
-const Content = ({ speed, offset, children, className, factor }: ContentProps) => (
+const Content = ({ speed, offset, children, className = ``, factor = 1 }: ContentProps) => (
   <ParallaxLayer
     sx={{
       padding: [3, 4, 4, 5],
@@ -23,7 +23,7 @@ const Content = ({ speed, offset, children, className, factor }: ContentProps) =
     }}
     speed={speed}
     offset={offset}
-    factor={factor || 1}
+    factor={factor}
     className={className}
   >
     {children}
