@@ -25,7 +25,7 @@ type ColorSwatchProps = {
   prefix?: string
 }
 
-const ColorSwatch = ({ color, name, minimal, className, prefix }: ColorSwatchProps) => {
+const ColorSwatch = ({ color, name = ``, minimal = false, className = ``, prefix = `` }: ColorSwatchProps) => {
   const { hex, RGB, CMYK, ratings } = useColorUtils(color)
   const specimensOptions = useSpecimensConfig()
 

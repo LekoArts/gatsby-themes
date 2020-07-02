@@ -11,7 +11,7 @@ type ColorFamiliesProps = {
   colors?: Theme["colors"]
 }
 
-const ColorFamilies = ({ colors }: ColorFamiliesProps) => {
+const ColorFamilies = ({ colors = undefined }: ColorFamiliesProps) => {
   if (colors) {
     Object.entries(colors).map(([key, color]) => {
       if (!color || !Array.isArray(color)) return null

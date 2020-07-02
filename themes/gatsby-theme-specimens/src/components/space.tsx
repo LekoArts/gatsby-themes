@@ -9,7 +9,7 @@ type SpaceProps = {
   space?: Theme["space"]
 }
 
-const Space = ({ space }: SpaceProps) => {
+const Space = ({ space = undefined }: SpaceProps) => {
   const specimensConfig = useSpecimensConfig()
   const formattedSpace = Array.isArray(space)
     ? space.map((entry, index) => ({ size: entry, token: index }))
