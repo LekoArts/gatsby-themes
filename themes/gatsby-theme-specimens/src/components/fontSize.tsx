@@ -9,7 +9,7 @@ type FontSizeProps = {
   fontSizes?: Theme["fontSizes"]
 }
 
-const FontSize = ({ fontSizes }: FontSizeProps) => {
+const FontSize = ({ fontSizes = undefined }: FontSizeProps) => {
   const specimensConfig = useSpecimensConfig()
 
   return (

@@ -8,7 +8,10 @@ type FontWeightProps = {
   previewText?: string
 }
 
-const FontWeight = ({ fontWeights, previewText = `The quick brown fox jumps over the lazy dog` }: FontWeightProps) => (
+const FontWeight = ({
+  fontWeights = undefined,
+  previewText = `The quick brown fox jumps over the lazy dog`,
+}: FontWeightProps) => (
   <Table
     columns={[`110px 1fr`, `110px 80px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}

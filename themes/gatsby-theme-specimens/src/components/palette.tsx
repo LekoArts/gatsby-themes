@@ -20,7 +20,14 @@ type PaletteProps = {
   className?: string
 }
 
-const Palette = ({ colors, mode = `list`, single = false, minimal = false, prefix = ``, className }: PaletteProps) => {
+const Palette = ({
+  colors,
+  mode = `list`,
+  single = false,
+  minimal = false,
+  prefix = ``,
+  className = ``,
+}: PaletteProps) => {
   let wrapperStyles: {}
 
   if (mode === `list`) {

@@ -79,12 +79,7 @@ type SVGProps = {
   hiddenMobile?: boolean
 }
 
-const defaultProps = {
-  stroke: false,
-  hiddenMobile: false,
-}
-
-const SVG = ({ stroke, color, width, icon, left, top, hiddenMobile }: SVGProps) => (
+const SVG = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile = false }: SVGProps) => (
   <svg
     sx={{
       position: `absolute`,
@@ -103,5 +98,3 @@ const SVG = ({ stroke, color, width, icon, left, top, hiddenMobile }: SVGProps) 
 )
 
 export default SVG
-
-SVG.defaultProps = defaultProps

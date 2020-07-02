@@ -8,7 +8,10 @@ interface FontFamilyProps {
   previewText?: string
 }
 
-const FontFamily = ({ fonts, previewText = `The quick brown fox jumps over the lazy dog` }: FontFamilyProps) => (
+const FontFamily = ({
+  fonts = undefined,
+  previewText = `The quick brown fox jumps over the lazy dog`,
+}: FontFamilyProps) => (
   <Table
     columns={[`100px 1fr`, `100px 300px 1fr`, `100px 350px 1fr`, `100px 450px 1fr`]}
     titles={[`Token`, `Value`, `Preview`]}
