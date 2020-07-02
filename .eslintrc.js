@@ -80,6 +80,7 @@ module.exports = {
     "react/display-name": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-uses-react": 1,
+    "react/require-default-props": 0,
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
     "react/prop-types": 0,
