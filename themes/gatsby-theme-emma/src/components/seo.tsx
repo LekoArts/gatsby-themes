@@ -11,13 +11,7 @@ type SEOProps = {
   children?: React.ReactNode
 }
 
-const SEO = ({
-  title = ``,
-  description = undefined,
-  pathname = undefined,
-  image = undefined,
-  children = null,
-}: SEOProps) => {
+const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: SEOProps) => {
   const site = useSiteMetadata()
 
   const {

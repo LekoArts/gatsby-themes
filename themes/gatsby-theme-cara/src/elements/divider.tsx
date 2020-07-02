@@ -18,9 +18,9 @@ const Divider = ({
   speed,
   offset,
   factor = 1,
-  bg = undefined,
-  fill = undefined,
-  clipPath = undefined,
+  bg = ``,
+  fill = ``,
+  clipPath = ``,
   children = null,
   className = ``,
 }: DividerProps) => (

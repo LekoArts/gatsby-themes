@@ -11,13 +11,7 @@ type Props = {
   children?: React.ReactNode
 }
 
-const SEO = ({
-  title = ``,
-  description = undefined,
-  pathname = undefined,
-  image = undefined,
-  children = null,
-}: Props) => {
+const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: Props) => {
   const site = useSiteMetadata()
 
   const {

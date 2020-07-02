@@ -79,7 +79,7 @@ type SVGProps = {
   hiddenMobile?: boolean
 }
 
-const SVG = ({ stroke = false, color = undefined, width, icon, left, top, hiddenMobile = false }: SVGProps) => (
+const SVG = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile = false }: SVGProps) => (
   <svg
     sx={{
       position: `absolute`,

@@ -20,7 +20,7 @@ type HeroProps = {
   }
 }
 
-const Hero = ({ children, color = undefined, image, slim = false }: HeroProps) => (
+const Hero = ({ children, color = ``, image, slim = false }: HeroProps) => (
   <section
     sx={{
       position: `relative`,
