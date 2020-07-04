@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma-core@1.3.8...@lekoarts/gatsby-theme-emma-core@1.3.9) (2020-07-04)
+
+
+### Bug Fixes
+
+* remove folder creation in onPreBootstrap step ([#440](https://github.com/LekoArts/gatsby-themes/issues/440)) ([ba92910](https://github.com/LekoArts/gatsby-themes/commit/ba9291019db6945726274db34f6b272873a40eca))
+
+
+
+
+
 ## [1.3.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma-core@1.3.7...@lekoarts/gatsby-theme-emma-core@1.3.8) (2020-07-03)
 
 
