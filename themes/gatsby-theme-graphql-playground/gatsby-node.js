@@ -1,6 +1,6 @@
 const withDefaults = require(`./utils/default-options`)
 
-const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
+const mdxResolverPassthrough = async ({ fieldName, source, args, context, info }) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -24,7 +24,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     },
     extend({ fieldName }) {
       return {
-        resolve: mdxResolverPassthrough(fieldName),
+        async resolve(source, args, context, info) {
+          const result = await mdxResolverPassthrough({ fieldName, source, args, context, info })
+          return result
+        },
       }
     },
   })
