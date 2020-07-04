@@ -1,26 +1,6 @@
-const fs = require(`fs`)
-const mkdirp = require(`mkdirp`)
-const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
 
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { docsPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, docsPath)]
-
-  dirs.forEach((dir) => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
-
-const mdxResolverPassthrough = async ({ fieldName, source, args, context, info }) => {
+const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
     id: source.parent,
@@ -44,10 +24,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     },
     extend({ fieldName }) {
       return {
-        async resolve(source, args, context, info) {
-          const result = await mdxResolverPassthrough({ fieldName, source, args, context, info })
-          return result
-        },
+        resolve: mdxResolverPassthrough(fieldName),
       }
     },
   })
@@ -72,6 +49,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   `)
 }
 
+// Find the 'graphql' code tags and add an encoded string to the field 'query'
 exports.createResolvers = ({ createResolvers }) => {
   const resolvers = {
     MdxPlayground: {
