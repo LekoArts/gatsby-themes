@@ -1,25 +1,5 @@
-const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
-const mkdirp = require(`mkdirp`)
-const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
-
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { postsPath, pagesPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, postsPath), path.join(program.directory, pagesPath)]
-
-  dirs.forEach((dir) => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
 
 const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
