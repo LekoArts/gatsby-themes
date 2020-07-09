@@ -28,7 +28,7 @@ const Palette = ({
   prefix = ``,
   className = ``,
 }: PaletteProps) => {
-  let wrapperStyles: {}
+  let wrapperStyles: Record<string, unknown>
 
   if (mode === `list`) {
     wrapperStyles = {

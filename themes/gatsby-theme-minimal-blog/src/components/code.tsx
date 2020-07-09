@@ -1,7 +1,7 @@
 /* eslint react/destructuring-assignment: 0 */
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
+import loadable from "@loadable/component"
 import theme from "prism-react-renderer/themes/nightOwl"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import { Language } from "../types"
@@ -49,6 +49,18 @@ const calculateLinesToHighlight = (meta: string) => {
   }
 }
 
+const LazyLiveProvider = loadable(async () => {
+  const Module = await import(`react-live`)
+  const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
+  return (props: any) => (
+    <LiveProvider {...props}>
+      <LiveEditor data-name="live-editor" />
+      <LiveError />
+      <LivePreview data-name="live-preview" />
+    </LiveProvider>
+  )
+})
+
 const Code = ({
   codeString,
   noLineNumbers = false,
@@ -64,13 +76,7 @@ const Code = ({
   const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
 
   if (props[`react-live`]) {
-    return (
-      <LiveProvider code={codeString} noInline theme={theme}>
-        <LiveEditor data-name="live-editor" />
-        <LiveError />
-        <LivePreview data-name="live-preview" />
-      </LiveProvider>
-    )
+    return <LazyLiveProvider code={codeString} noInline theme={theme} />
   }
   return (
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>

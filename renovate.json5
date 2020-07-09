@@ -17,7 +17,7 @@
     },
     {
       groupName: "types",
-      packagePatterns: ["^@types"],
+      packagePatterns: ["^@types/"],
       // only upgrade types with approval as they can break transitives
       masterIssueApproval: true,
     },
