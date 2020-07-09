@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.10...specimens@0.3.0) (2020-07-09)
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
 ## [0.2.10](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.9...specimens@0.2.10) (2020-07-09)
 
 **Note:** Version bump only for package specimens

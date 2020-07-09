@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.1.10...styleguide@0.2.0) (2020-07-09)
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
 ## [0.1.10](https://github.com/LekoArts/gatsby-themes/compare/styleguide@0.1.9...styleguide@0.1.10) (2020-07-09)
 
 **Note:** Version bump only for package styleguide

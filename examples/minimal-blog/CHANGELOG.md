@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.1.13...minimal-blog@1.2.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* **minimal-blog:** Use function for SpotifyPlayer example component ([bd2c343](https://github.com/LekoArts/gatsby-themes/commit/bd2c343580c041383a98822de2c622a7d944d93d))
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
 ## [1.1.13](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.1.12...minimal-blog@1.1.13) (2020-07-09)
 
 **Note:** Version bump only for package minimal-blog
