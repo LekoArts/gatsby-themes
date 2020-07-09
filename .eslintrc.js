@@ -69,6 +69,7 @@ module.exports = {
     "linebreak-style": 0,
     "consistent-return": 0,
     import: 0,
+    camelcase: 1,
     "import/no-unresolved": 0,
     "func-names": 0,
     "import/no-extraneous-dependencies": 0,
