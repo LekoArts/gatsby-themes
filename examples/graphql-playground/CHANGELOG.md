@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.11](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.10...graphql-playground@0.1.11) (2020-07-09)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
 ## [0.1.10](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.9...graphql-playground@0.1.10) (2020-07-04)
 
 **Note:** Version bump only for package graphql-playground

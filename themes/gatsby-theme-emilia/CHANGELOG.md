@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.3.10...@lekoarts/gatsby-theme-emilia@1.3.11) (2020-07-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency colorthief to ^2.3.1 ([#443](https://github.com/LekoArts/gatsby-themes/issues/443)) ([22f59e1](https://github.com/LekoArts/gatsby-themes/commit/22f59e1d0b20252c7c9ceff308f81851f5f12e5c))
+* **deps:** update dependency colorthief to ^2.3.2 ([#444](https://github.com/LekoArts/gatsby-themes/issues/444)) ([4a4fbbd](https://github.com/LekoArts/gatsby-themes/commit/4a4fbbdb9629335540753ce1a1ca6357411f2344))
+
+
+
+
+
 ## [1.3.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.3.9...@lekoarts/gatsby-theme-emilia@1.3.10) (2020-07-04)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-emilia

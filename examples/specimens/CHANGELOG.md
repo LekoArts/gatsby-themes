@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.10](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.9...specimens@0.2.10) (2020-07-09)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
 ## [0.2.9](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.8...specimens@0.2.9) (2020-07-03)
 
 **Note:** Version bump only for package specimens

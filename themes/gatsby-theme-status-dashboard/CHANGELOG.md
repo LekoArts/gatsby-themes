@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.7...@lekoarts/gatsby-theme-status-dashboard@1.1.8) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-status-dashboard
+
+
+
+
+
 ## [1.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.6...@lekoarts/gatsby-theme-status-dashboard@1.1.7) (2020-07-03)
 
 
