@@ -3,12 +3,25 @@ import Homepage from "../../../components/homepage"
 
 type Props = {
   data: {
-    [key: string]: string
+    allProject: {
+      nodes: {
+        slug: string
+        title: string
+        shortTitle: string
+      }[]
+    }
+    allPage: {
+      nodes: {
+        slug: string
+        title: string
+      }[]
+    }
+    [key: string]: any
   }
 }
 
 export default function MinimalBlogCoreHomepage({ data }: Props) {
-  const { TODO } = data
+  const { allProject, allPage } = data
 
-  return <Homepage posts={TODO} />
+  return <Homepage projects={allProject.nodes} pages={allPage.nodes} />
 }

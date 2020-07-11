@@ -4,11 +4,12 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Gatsby Starter Portfolio: Jodie - TODO`,
+    siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-jodie`,
+      // See the theme's README for all available options
       options: {},
     },
     {
@@ -17,6 +18,7 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

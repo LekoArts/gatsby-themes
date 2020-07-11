@@ -2,7 +2,7 @@
   "name": "@lekoarts/gatsby-theme-jodie-core",
   "version": "1.0.0",
   "author": "LekoArts <hello@lekoarts.de>",
-  "description": "Core Theme for @lekoarts/gatsby-theme-jodie. This theme implements the TODO interfaces and exports templates (+ queries) which you can shadow.",
+  "description": "Core Theme for @lekoarts/gatsby-theme-jodie. This theme implements the Project interface and exports templates (+ queries) which you can shadow.",
   "license": "MIT",
   "main": "index.js",
   "publishConfig": {
@@ -20,9 +20,13 @@
     "react-dom": "^16.13.0"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.6",
+    "@mdx-js/react": "^1.6.6",
+    "gatsby-plugin-mdx": "^1.2.25",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-source-filesystem": "^2.3.8",
-    "gatsby-transformer-sharp": "^2.5.3"
+    "gatsby-transformer-sharp": "^2.5.3",
+    "lodash.kebabcase": "^4.1.1"
   },
   "keywords": [
     "gatsby",
