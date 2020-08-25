@@ -3,10 +3,10 @@
 
 export const borderWidths = {
   px: `1px`,
-  "0": `0`,
-  "2": `2px`,
-  "4": `4px`,
-  "8": `8px`,
+  0: `0`,
+  2: `2px`,
+  4: `4px`,
+  8: `8px`,
 }
 
 export const breakpoints = [`640px`, `758px`, `1024px`, `1280px`]
@@ -262,24 +262,24 @@ export const radii = {
 
 export const sizes = {
   px: `1px`,
-  "0": `0`,
-  "1": `0.25rem`,
-  "2": `0.5rem`,
-  "3": `0.75rem`,
-  "4": `1rem`,
-  "5": `1.25rem`,
-  "6": `1.5rem`,
-  "8": `2rem`,
-  "10": `2.5rem`,
-  "12": `3rem`,
-  "16": `4rem`,
-  "20": `5rem`,
-  "24": `6rem`,
-  "32": `8rem`,
-  "40": `10rem`,
-  "48": `12rem`,
-  "56": `14rem`,
-  "64": `16rem`,
+  0: `0`,
+  1: `0.25rem`,
+  2: `0.5rem`,
+  3: `0.75rem`,
+  4: `1rem`,
+  5: `1.25rem`,
+  6: `1.5rem`,
+  8: `2rem`,
+  10: `2.5rem`,
+  12: `3rem`,
+  16: `4rem`,
+  20: `5rem`,
+  24: `6rem`,
+  32: `8rem`,
+  40: `10rem`,
+  48: `12rem`,
+  56: `14rem`,
+  64: `16rem`,
   xs: `20rem`,
   sm: `24rem`,
   md: `28rem`,
@@ -336,12 +336,12 @@ export const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`, `1
 
 export const zIndices = {
   auto: `auto`,
-  "0": `0`,
-  "10": `10`,
-  "20": `20`,
-  "30": `30`,
-  "40": `40`,
-  "50": `50`,
+  0: `0`,
+  10: `10`,
+  20: `20`,
+  30: `30`,
+  40: `40`,
+  50: `50`,
 }
 
 const heading = {
