@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { graphql, useStaticQuery } from "gatsby"
 
 type UseCircleCIProps = {
