@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.1...specimens@0.3.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* Add variant to parts of minimal-blog content ([7cd58a5](https://github.com/LekoArts/gatsby-themes/commit/7cd58a51f1441ad7cc46011eac3e15be6b707d8b))
+
+
+
+
+
 ## [0.3.1](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.0...specimens@0.3.1) (2020-08-27)
 
 **Note:** Version bump only for package specimens
