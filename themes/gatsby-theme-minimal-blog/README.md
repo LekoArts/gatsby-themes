@@ -74,6 +74,7 @@ gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
 | `mdx`             | `true`                                               | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)  |
 | `formatString`    | `DD.MM.YYYY`                                         | Configure the date format for Date fields                                                                  |
 | `showLineNumbers` | `true`                                               | Show line numbers in code blocks                                                                           |
+| `showCopyButton`  | `true`                                               | Show copy button in code blocks                                                                            |
 | `navigation`      | `[]`                                                 | Add links to your internal sites to the left part of the header                                            |
 | `externalLinks`   | `[]`                                                 | Add links to your external sites to the right part of the header                                           |
 | `feed`            | `true`                                               | Configure `gatsby-plugin-feed` (if your website already is using the plugin pass `false` to turn this off) |

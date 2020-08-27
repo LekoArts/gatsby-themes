@@ -7,6 +7,7 @@ module.exports = (themeOptions) => {
   const externalLinks = themeOptions.externalLinks || []
   const navigation = themeOptions.navigation || []
   const showLineNumbers = themeOptions.showLineNumbers || true
+  const showCopyButton = themeOptions.showCopyButton || true
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
 
   return {
@@ -18,6 +19,7 @@ module.exports = (themeOptions) => {
     externalLinks,
     navigation,
     showLineNumbers,
+    showCopyButton,
     formatString,
   }
 }

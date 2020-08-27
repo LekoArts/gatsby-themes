@@ -1,4 +1,5 @@
 import { merge } from "theme-ui"
+import { transparentize } from "@theme-ui/color"
 import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
@@ -142,6 +143,29 @@ const theme = merge(tailwind, {
       lineHeight: `heading`,
       color: `heading`,
     },
+  },
+  copyButton: {
+    backgroundColor: transparentize(`primary`, 0.8),
+    border: `none`,
+    color: `gray.2`,
+    cursor: `pointer`,
+    fontSize: `16px`,
+    fontFamily: `body`,
+    lineHeight: `solid`,
+    transition: `default`,
+    "&[disabled]": {
+      cursor: `not-allowed`,
+    },
+    ":not([disabled]):hover": {
+      bg: `primary`,
+      color: `white`,
+    },
+    position: `absolute`,
+    top: 0,
+    right: 0,
+    zIndex: 1,
+    borderRadius: `0 0 0 0.25rem`,
+    padding: `0.25rem 0.6rem`,
   },
   dividers: {
     bottom: {
