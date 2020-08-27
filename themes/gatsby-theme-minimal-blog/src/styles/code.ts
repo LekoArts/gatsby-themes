@@ -176,6 +176,9 @@ const code = {
     mx: [0, 0, 0, -3],
     fontSize: [1, 1, 2],
   },
+  ".react-live-wrapper .code-copy-button": {
+    right: [0, 0, 0, -3],
+  },
   ".token-line": {
     pr: 3,
   },
@@ -187,6 +190,9 @@ const code = {
       opacity: 0.5,
       left: `-2px`,
     },
+  },
+  ".react-live-wrapper": {
+    position: `relative`,
   },
 }
 

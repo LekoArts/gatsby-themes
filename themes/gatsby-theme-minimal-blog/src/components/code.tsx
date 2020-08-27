@@ -3,6 +3,8 @@ import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import loadable from "@loadable/component"
 import theme from "prism-react-renderer/themes/nightOwl"
+
+import Copy from "./copy"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import { Language } from "../types"
 
@@ -54,6 +56,7 @@ const LazyLiveProvider = loadable(async () => {
   const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
   return (props: any) => (
     <LiveProvider {...props}>
+      {props.showCopyButton && <Copy content={props.code} />}
       <LiveEditor data-name="live-editor" />
       <LiveError />
       <LivePreview data-name="live-preview" />
@@ -68,7 +71,7 @@ const Code = ({
   metastring = ``,
   ...props
 }: CodeProps) => {
-  const { showLineNumbers } = useMinimalBlogConfig()
+  const { showLineNumbers, showCopyButton } = useMinimalBlogConfig()
 
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
@@ -76,7 +79,11 @@ const Code = ({
   const hasLineNumbers = !noLineNumbers && language !== `noLineNumbers` && showLineNumbers
 
   if (props[`react-live`]) {
-    return <LazyLiveProvider code={codeString} noInline theme={theme} />
+    return (
+      <div className="react-live-wrapper">
+        <LazyLiveProvider code={codeString} noInline theme={theme} showCopyButton={showCopyButton} />
+      </div>
+    )
   }
   return (
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
@@ -89,6 +96,7 @@ const Code = ({
           )}
           <div className="gatsby-highlight" data-language={language}>
             <pre className={className} style={style} data-linenumber={hasLineNumbers}>
+              {showCopyButton && <Copy content={codeString} fileName={title} />}
               {tokens.map((line, i) => {
                 const lineProps = getLineProps({ line, key: i })
 

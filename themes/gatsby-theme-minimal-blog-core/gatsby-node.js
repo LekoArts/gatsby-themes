@@ -104,6 +104,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       externalLinks: [ExternalLink]
       navigation: [NavigationEntry]
       showLineNumbers: Boolean
+      showCopyButton: Boolean
     }
     
     type ExternalLink {
@@ -129,6 +130,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
     externalLinks,
     navigation,
     showLineNumbers,
+    showCopyButton,
   } = withDefaults(themeOptions)
 
   const minimalBlogConfig = {
@@ -140,6 +142,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
     externalLinks,
     navigation,
     showLineNumbers,
+    showCopyButton,
   }
 
   createNode({
