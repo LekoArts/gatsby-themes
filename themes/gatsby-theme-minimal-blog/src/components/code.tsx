@@ -97,22 +97,24 @@ const Code = ({
           <div className="gatsby-highlight" data-language={language}>
             <pre className={className} style={style} data-linenumber={hasLineNumbers}>
               {showCopyButton && <Copy content={codeString} fileName={title} />}
-              {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i })
+              <code className={`language-${language}`}>
+                {tokens.map((line, i) => {
+                  const lineProps = getLineProps({ line, key: i })
 
-                if (shouldHighlightLine(i)) {
-                  lineProps.className = `${lineProps.className} highlight-line`
-                }
+                  if (shouldHighlightLine(i)) {
+                    lineProps.className = `${lineProps.className} highlight-line`
+                  }
 
-                return (
-                  <div {...lineProps}>
-                    {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                )
-              })}
+                  return (
+                    <div {...lineProps}>
+                      {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  )
+                })}
+              </code>
             </pre>
           </div>
         </React.Fragment>
