@@ -149,9 +149,9 @@ const theme = merge(tailwind, {
     border: `none`,
     color: `gray.2`,
     cursor: `pointer`,
-    fontSize: `16px`,
+    fontSize: [`14px`, `14px`, `16px`],
     fontFamily: `body`,
-    lineHeight: `solid`,
+    letterSpacing: `0.025rem`,
     transition: `default`,
     "&[disabled]": {
       cursor: `not-allowed`,
