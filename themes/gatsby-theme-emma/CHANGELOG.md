@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.13](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.12...@lekoarts/gatsby-theme-emma@1.4.13) (2020-09-10)
+
+
+### Bug Fixes
+
+* Pass all page props to page components ([#487](https://github.com/LekoArts/gatsby-themes/issues/487)) ([1f6ab37](https://github.com/LekoArts/gatsby-themes/commit/1f6ab3755a4425ae77af453cdb0a2d14cc49f006))
+* **deps:** update packages ([#481](https://github.com/LekoArts/gatsby-themes/issues/481)) ([cf206a2](https://github.com/LekoArts/gatsby-themes/commit/cf206a241867ede738be2b3a1b856ec3e85c010e))
+
+
+
+
+
 ## [1.4.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.11...@lekoarts/gatsby-theme-emma@1.4.12) (2020-08-27)
 
 
