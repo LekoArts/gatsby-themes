@@ -22,6 +22,7 @@ type ProjectProps = {
       cover: ChildImageSharp
     }
   }
+  [key: string]: any
 }
 
 const Project = ({ data: { project } }: ProjectProps) => {

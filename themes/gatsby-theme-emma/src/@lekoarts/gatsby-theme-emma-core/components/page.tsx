@@ -3,13 +3,12 @@ import Page from "../../../components/page"
 
 type Props = {
   data: {
-    project: any
+    page: any
     [key: string]: any
   }
+  [key: string]: any
 }
 
-export default function EmmaCorePage({ data }: Props) {
-  const { page } = data
-
-  return <Page data={{ ...data, page }} />
+export default function EmmaCorePage({ ...props }: Props) {
+  return <Page {...props} />
 }

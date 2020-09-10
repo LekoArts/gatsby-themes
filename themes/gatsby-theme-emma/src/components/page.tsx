@@ -17,6 +17,7 @@ type PageProps = {
       cover: ChildImageSharp
     }
   }
+  [key: string]: any
 }
 
 const Page = ({ data: { page } }: PageProps) => {
