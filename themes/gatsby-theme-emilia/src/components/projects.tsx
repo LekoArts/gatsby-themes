@@ -28,6 +28,7 @@ type ProjecsStaticQuery = {
       }
     }[]
   }
+  [key: string]: string
 }
 
 const Projects = ({ projects }: Props) => {

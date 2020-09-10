@@ -54,6 +54,7 @@ type ProjectProps = {
       }
     }
   }
+  [key: string]: any
 }
 
 const Project = ({ data: { project, images }, pageContext: { prev, next } }: ProjectProps) => {
