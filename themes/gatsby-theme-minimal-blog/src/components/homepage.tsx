@@ -25,6 +25,7 @@ type PostsProps = {
       slug: string
     }[]
   }[]
+  [key: string]: any
 }
 
 const Homepage = ({ posts }: PostsProps) => {

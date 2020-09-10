@@ -11,10 +11,9 @@ type Props = {
     prev: any
     next: any
   }
+  [key: string]: any
 }
 
-export default function EmiliaCoreProject({ data, pageContext }: Props) {
-  const { project, images } = data
-
-  return <Project data={{ ...data, project, images }} pageContext={pageContext} />
+export default function EmiliaCoreProject({ ...props }: Props) {
+  return <Project {...props} />
 }

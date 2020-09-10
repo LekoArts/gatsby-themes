@@ -14,6 +14,7 @@ type ProjectsProps = {
     client: string
     cover: ChildImageSharp
   }[]
+  [key: string]: any
 }
 
 const Projects = ({ projects }: ProjectsProps) => {

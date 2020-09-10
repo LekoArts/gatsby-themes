@@ -6,10 +6,9 @@ type Props = {
     project: any
     [key: string]: any
   }
+  [key: string]: any
 }
 
-export default function EmmaCoreProject({ data }: Props) {
-  const { project } = data
-
-  return <Project data={{ ...data, project }} />
+export default function EmmaCoreProject({ ...props }: Props) {
+  return <Project {...props} />
 }
