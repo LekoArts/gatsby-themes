@@ -21,6 +21,7 @@ type PostsProps = {
       slug: string
     }[]
   }[]
+  [key: string]: any
 }
 
 const Blog = ({ posts }: PostsProps) => {

@@ -13,6 +13,7 @@ type PageProps = {
       body: string
     }
   }
+  [key: string]: any
 }
 
 const Page = ({ data: { page } }: PageProps) => (

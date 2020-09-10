@@ -87,6 +87,7 @@ module.exports = {
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
     "react/prop-types": 0,
+    "react/no-unused-prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/jsx-fragments": 0,
     "react/jsx-curly-brace-presence": 0,
