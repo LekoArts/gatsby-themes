@@ -10,7 +10,7 @@ type Props = {
   right?: string | string[]
 }
 
-const CircleGrid = ({ className, color, size, top, left, right }: Props) => {
+const CircleGrid = ({ className = ``, color, size, top, left = ``, right = `` }: Props) => {
   const { theme } = useThemeUI()
 
   const fillColor = theme.colors[color][2]

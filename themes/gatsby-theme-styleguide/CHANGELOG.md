@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.11...@lekoarts/gatsby-theme-styleguide@1.1.12) (2020-09-10)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
+## [1.1.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.10...@lekoarts/gatsby-theme-styleguide@1.1.11) (2020-08-27)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
+## [1.1.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.9...@lekoarts/gatsby-theme-styleguide@1.1.10) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
+## [1.1.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.8...@lekoarts/gatsby-theme-styleguide@1.1.9) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
+## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.7...@lekoarts/gatsby-theme-styleguide@1.1.8) (2020-07-03)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
+## [1.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.6...@lekoarts/gatsby-theme-styleguide@1.1.7) (2020-07-02)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
+## [1.1.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.5...@lekoarts/gatsby-theme-styleguide@1.1.6) (2020-06-08)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide
+
+
+
+
+
 ## [1.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-styleguide@1.1.4...@lekoarts/gatsby-theme-styleguide@1.1.5) (2020-05-29)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-styleguide

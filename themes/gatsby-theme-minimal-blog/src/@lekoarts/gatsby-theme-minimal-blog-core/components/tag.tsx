@@ -6,11 +6,19 @@ type Props = {
     allPost: any
     [key: string]: any
   }
-  pageContext: any
+  pageContext: {
+    isCreatedByStatefulCreatePages: boolean
+    slug: string
+    name: string
+    [key: string]: any
+  }
+  [key: string]: any
 }
 
-export default function MinimalBlogCoreTag({ data, pageContext }: Props) {
-  const { allPost } = data
+export default function MinimalBlogCoreTag({ ...props }: Props) {
+  const {
+    data: { allPost },
+  } = props
 
-  return <Tag posts={allPost.nodes} pageContext={pageContext} />
+  return <Tag posts={allPost.nodes} {...props} />
 }

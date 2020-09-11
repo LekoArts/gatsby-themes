@@ -9,7 +9,7 @@ import SEO from "./seo"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
-const Layout = ({ children, className }: LayoutProps) => {
+const Layout = ({ children, className = `` }: LayoutProps) => {
   const meta = useSiteMetadata()
   const nav = useNavigation()
 
@@ -19,6 +19,19 @@ const Layout = ({ children, className }: LayoutProps) => {
         styles={(theme) => ({
           "*": {
             boxSizing: `inherit`,
+          },
+          html: {
+            WebkitTextSizeAdjust: `100%`,
+          },
+          img: {
+            borderStyle: `none`,
+          },
+          pre: {
+            fontFamily: `monospace`,
+            fontSize: `1em`,
+          },
+          "[hidden]": {
+            display: `none`,
           },
           "::selection": {
             backgroundColor: theme.colors.text,

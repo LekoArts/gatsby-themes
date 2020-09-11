@@ -17,6 +17,19 @@ const Layout = ({ children, title }: LayoutProps) => (
         "*": {
           boxSizing: `inherit`,
         },
+        html: {
+          WebkitTextSizeAdjust: `100%`,
+        },
+        img: {
+          borderStyle: `none`,
+        },
+        pre: {
+          fontFamily: `monospace`,
+          fontSize: `1em`,
+        },
+        "[hidden]": {
+          display: `none`,
+        },
         a: {
           transition: `all 0.3s ease-in-out`,
         },

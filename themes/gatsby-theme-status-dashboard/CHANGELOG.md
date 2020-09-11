@@ -3,6 +3,67 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.8...@lekoarts/gatsby-theme-status-dashboard@1.1.9) (2020-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#458](https://github.com/LekoArts/gatsby-themes/issues/458)) ([dcfb106](https://github.com/LekoArts/gatsby-themes/commit/dcfb1060ee90a928ae28840906b6f3b706218ad8))
+* **deps:** update packages ([#461](https://github.com/LekoArts/gatsby-themes/issues/461)) ([6e4e35e](https://github.com/LekoArts/gatsby-themes/commit/6e4e35e21b502a9a3b9305785b372f03a7741ce7))
+
+
+
+
+
+## [1.1.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.7...@lekoarts/gatsby-theme-status-dashboard@1.1.8) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-status-dashboard
+
+
+
+
+
+## [1.1.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.6...@lekoarts/gatsby-theme-status-dashboard@1.1.7) (2020-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#437](https://github.com/LekoArts/gatsby-themes/issues/437)) ([5e27caf](https://github.com/LekoArts/gatsby-themes/commit/5e27caf74c2eae0e7c158fa5a15bd52ae2069ee7))
+
+
+
+
+
+## [1.1.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.5...@lekoarts/gatsby-theme-status-dashboard@1.1.6) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#429](https://github.com/LekoArts/gatsby-themes/issues/429)) ([f25dfb6](https://github.com/LekoArts/gatsby-themes/commit/f25dfb6105669f62468abc63ceb73c2fbbb73065))
+
+
+
+
+
+## [1.1.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.4...@lekoarts/gatsby-theme-status-dashboard@1.1.5) (2020-06-11)
+
+
+### Bug Fixes
+
+* Normalize CSS in themes & examples ([#422](https://github.com/LekoArts/gatsby-themes/issues/422)) ([9a2600c](https://github.com/LekoArts/gatsby-themes/commit/9a2600cc45d0f6729799183116f1b87d3c943749))
+
+
+
+
+
+## [1.1.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.3...@lekoarts/gatsby-theme-status-dashboard@1.1.4) (2020-06-08)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-status-dashboard
+
+
+
+
+
 ## [1.1.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-status-dashboard@1.1.2...@lekoarts/gatsby-theme-status-dashboard@1.1.3) (2020-05-29)
 
 

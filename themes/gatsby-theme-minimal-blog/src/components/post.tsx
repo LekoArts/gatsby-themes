@@ -54,7 +54,13 @@ const Post = ({ data: { post } }: PostProps) => (
       {post.timeToRead && ` — `}
       {post.timeToRead && <span>{post.timeToRead} min read</span>}
     </p>
-    <section sx={{ my: 5, ".gatsby-resp-image-wrapper": { my: [4, 4, 5], boxShadow: shadow.join(`, `) } }}>
+    <section
+      sx={{
+        my: 5,
+        ".gatsby-resp-image-wrapper": { my: [4, 4, 5], boxShadow: shadow.join(`, `) },
+        variant: `layout.content`,
+      }}
+    >
       <MDXRenderer>{post.body}</MDXRenderer>
     </section>
   </Layout>

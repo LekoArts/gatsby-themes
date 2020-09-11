@@ -10,10 +10,13 @@ type Props = {
       }[]
     }
   }
+  [key: string]: any
 }
 
-export default function MinimalBlogCoreTags({ data }: Props) {
-  const { allPost } = data
+export default function MinimalBlogCoreTags({ ...props }: Props) {
+  const {
+    data: { allPost },
+  } = props
 
-  return <Tags list={allPost.group} />
+  return <Tags list={allPost.group} {...props} />
 }

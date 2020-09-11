@@ -16,6 +16,7 @@ type UseMinimalBlogConfigProps = {
       slug: string
     }[]
     showLineNumbers: boolean
+    showCopyButton: boolean
   }
 }
 
@@ -37,6 +38,7 @@ const useMinimalBlogConfig = () => {
           slug
         }
         showLineNumbers
+        showCopyButton
       }
     }
   `)

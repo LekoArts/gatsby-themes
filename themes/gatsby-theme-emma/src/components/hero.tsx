@@ -4,10 +4,6 @@ import { jsx } from "theme-ui"
 import Img from "gatsby-image"
 import BGImage from "./bg-image"
 
-const defaultProps = {
-  slim: false,
-}
-
 type HeroProps = {
   children: React.ReactNode
   color?: string
@@ -22,9 +18,9 @@ type HeroProps = {
     srcWebp: string
     srcSetWebp: string
   }
-} & typeof defaultProps
+}
 
-const Hero = ({ children, color, image, slim }: HeroProps) => (
+const Hero = ({ children, color = ``, image, slim = false }: HeroProps) => (
   <section
     sx={{
       position: `relative`,
@@ -42,5 +38,3 @@ const Hero = ({ children, color, image, slim }: HeroProps) => (
 )
 
 export default Hero
-
-Hero.defaultProps = defaultProps

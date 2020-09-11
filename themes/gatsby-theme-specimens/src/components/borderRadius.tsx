@@ -9,7 +9,7 @@ type BorderRadiusProps = {
   radii?: Theme["radii"]
 }
 
-const BorderRadius = ({ radii }: BorderRadiusProps) => {
+const BorderRadius = ({ radii = undefined }: BorderRadiusProps) => {
   const specimensConfig = useSpecimensConfig()
 
   return (

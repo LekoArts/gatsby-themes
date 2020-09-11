@@ -3,6 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.2.1...graphql-playground@0.2.2) (2020-09-10)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+## [0.2.1](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.2.0...graphql-playground@0.2.1) (2020-08-27)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+# [0.2.0](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.11...graphql-playground@0.2.0) (2020-07-09)
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
+## [0.1.11](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.10...graphql-playground@0.1.11) (2020-07-09)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+## [0.1.10](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.9...graphql-playground@0.1.10) (2020-07-04)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+## [0.1.9](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.8...graphql-playground@0.1.9) (2020-07-03)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+## [0.1.8](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.7...graphql-playground@0.1.8) (2020-07-02)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+## [0.1.7](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.6...graphql-playground@0.1.7) (2020-06-11)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
+## [0.1.6](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.5...graphql-playground@0.1.6) (2020-06-08)
+
+**Note:** Version bump only for package graphql-playground
+
+
+
+
+
 ## [0.1.5](https://github.com/LekoArts/gatsby-themes/compare/graphql-playground@0.1.4...graphql-playground@0.1.5) (2020-05-29)
 
 **Note:** Version bump only for package graphql-playground

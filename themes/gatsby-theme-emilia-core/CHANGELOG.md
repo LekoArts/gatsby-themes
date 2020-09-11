@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.11...@lekoarts/gatsby-theme-emilia-core@1.3.12) (2020-09-10)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#481](https://github.com/LekoArts/gatsby-themes/issues/481)) ([cf206a2](https://github.com/LekoArts/gatsby-themes/commit/cf206a241867ede738be2b3a1b856ec3e85c010e))
+
+
+
+
+
+## [1.3.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.10...@lekoarts/gatsby-theme-emilia-core@1.3.11) (2020-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#458](https://github.com/LekoArts/gatsby-themes/issues/458)) ([dcfb106](https://github.com/LekoArts/gatsby-themes/commit/dcfb1060ee90a928ae28840906b6f3b706218ad8))
+* **deps:** update packages ([#461](https://github.com/LekoArts/gatsby-themes/issues/461)) ([6e4e35e](https://github.com/LekoArts/gatsby-themes/commit/6e4e35e21b502a9a3b9305785b372f03a7741ce7))
+* **deps:** update packages ([#464](https://github.com/LekoArts/gatsby-themes/issues/464)) ([cfa1d43](https://github.com/LekoArts/gatsby-themes/commit/cfa1d43fd03d860930005359907b0bab1278e243))
+
+
+
+
+
+## [1.3.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.9...@lekoarts/gatsby-theme-emilia-core@1.3.10) (2020-07-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency gatsby-plugin-sharp to ^2.6.18 ([#445](https://github.com/LekoArts/gatsby-themes/issues/445)) ([5aad537](https://github.com/LekoArts/gatsby-themes/commit/5aad53719cd6049a1f9cfbecaf730ded952031d3))
+
+
+
+
+
+## [1.3.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.8...@lekoarts/gatsby-theme-emilia-core@1.3.9) (2020-07-04)
+
+
+### Bug Fixes
+
+* remove folder creation in onPreBootstrap step ([#440](https://github.com/LekoArts/gatsby-themes/issues/440)) ([ba92910](https://github.com/LekoArts/gatsby-themes/commit/ba9291019db6945726274db34f6b272873a40eca))
+
+
+
+
+
+## [1.3.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.7...@lekoarts/gatsby-theme-emilia-core@1.3.8) (2020-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#437](https://github.com/LekoArts/gatsby-themes/issues/437)) ([5e27caf](https://github.com/LekoArts/gatsby-themes/commit/5e27caf74c2eae0e7c158fa5a15bd52ae2069ee7))
+
+
+
+
+
+## [1.3.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.6...@lekoarts/gatsby-theme-emilia-core@1.3.7) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#429](https://github.com/LekoArts/gatsby-themes/issues/429)) ([f25dfb6](https://github.com/LekoArts/gatsby-themes/commit/f25dfb6105669f62468abc63ceb73c2fbbb73065))
+
+
+
+
+
+## [1.3.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.5...@lekoarts/gatsby-theme-emilia-core@1.3.6) (2020-06-08)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#408](https://github.com/LekoArts/gatsby-themes/issues/408)) ([11b89ad](https://github.com/LekoArts/gatsby-themes/commit/11b89ad8bb0a59dc3fe95941bca57d83a1716e80))
+
+
+
+
+
 ## [1.3.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.4...@lekoarts/gatsby-theme-emilia-core@1.3.5) (2020-05-29)
 
 

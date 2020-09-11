@@ -18,7 +18,7 @@ const infoStyles = {
   alignItems: `flex-start`,
 }
 
-const Heading = ({ styles, config, previewText = `Heading` }: HeadingProps) => {
+const Heading = ({ styles = undefined, config, previewText = `Heading` }: HeadingProps) => {
   const specimensConfig = useSpecimensConfig()
 
   if (!styles) {

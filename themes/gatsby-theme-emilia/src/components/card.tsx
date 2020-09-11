@@ -12,7 +12,7 @@ type CardProps = {
     }
     title: string
   }
-  overlay?: string | undefined
+  overlay?: string
   shadow?: string[]
   inGrid?: boolean
 }

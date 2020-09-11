@@ -23,7 +23,7 @@ type AvatarStaticQuery = {
   }
 }
 
-const HeaderProject = ({ title, areas, description, date }: HeaderProjectProps) => {
+const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectProps) => {
   const { name } = useEmiliaConfig()
   const avatar = useStaticQuery<AvatarStaticQuery>(graphql`
     query {

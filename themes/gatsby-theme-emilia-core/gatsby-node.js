@@ -1,25 +1,6 @@
-const fs = require(`fs`)
 const kebabCase = require(`lodash.kebabcase`)
-const mkdirp = require(`mkdirp`)
 const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
-
-// Ensure that content directories exist at site-level
-// If non-existent they'll be created here (as empty folders)
-exports.onPreBootstrap = ({ reporter, store }, themeOptions) => {
-  const { program } = store.getState()
-
-  const { projectsPath } = withDefaults(themeOptions)
-
-  const dirs = [path.join(program.directory, projectsPath)]
-
-  dirs.forEach((dir) => {
-    if (!fs.existsSync(dir)) {
-      reporter.info(`Initializing "${dir}" directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}
 
 const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
   const type = info.schema.getType(`Mdx`)
@@ -163,7 +144,7 @@ exports.sourceNodes = (
 ) => {
   const { createNode } = actions
 
-  const specimensConfig = {
+  const emiliaConfig = {
     name,
     location,
     socialMedia,
@@ -172,14 +153,14 @@ exports.sourceNodes = (
   }
 
   createNode({
-    ...specimensConfig,
+    ...emiliaConfig,
     id: `@lekoarts/gatsby-theme-emilia-core-config`,
     parent: null,
     children: [],
     internal: {
       type: `EmiliaConfig`,
-      contentDigest: createContentDigest(specimensConfig),
-      content: JSON.stringify(specimensConfig),
+      contentDigest: createContentDigest(emiliaConfig),
+      content: JSON.stringify(emiliaConfig),
       description: `Options for @lekoarts/gatsby-theme-emilia-core`,
     },
   })

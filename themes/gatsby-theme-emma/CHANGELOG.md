@@ -3,6 +3,92 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.13](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.12...@lekoarts/gatsby-theme-emma@1.4.13) (2020-09-10)
+
+
+### Bug Fixes
+
+* Pass all page props to page components ([#487](https://github.com/LekoArts/gatsby-themes/issues/487)) ([1f6ab37](https://github.com/LekoArts/gatsby-themes/commit/1f6ab3755a4425ae77af453cdb0a2d14cc49f006))
+* **deps:** update packages ([#481](https://github.com/LekoArts/gatsby-themes/issues/481)) ([cf206a2](https://github.com/LekoArts/gatsby-themes/commit/cf206a241867ede738be2b3a1b856ec3e85c010e))
+
+
+
+
+
+## [1.4.12](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.11...@lekoarts/gatsby-theme-emma@1.4.12) (2020-08-27)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#458](https://github.com/LekoArts/gatsby-themes/issues/458)) ([dcfb106](https://github.com/LekoArts/gatsby-themes/commit/dcfb1060ee90a928ae28840906b6f3b706218ad8))
+* **deps:** update packages ([#461](https://github.com/LekoArts/gatsby-themes/issues/461)) ([6e4e35e](https://github.com/LekoArts/gatsby-themes/commit/6e4e35e21b502a9a3b9305785b372f03a7741ce7))
+* **deps:** update packages ([#464](https://github.com/LekoArts/gatsby-themes/issues/464)) ([cfa1d43](https://github.com/LekoArts/gatsby-themes/commit/cfa1d43fd03d860930005359907b0bab1278e243))
+
+
+
+
+
+## [1.4.11](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.10...@lekoarts/gatsby-theme-emma@1.4.11) (2020-07-09)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-emma
+
+
+
+
+
+## [1.4.10](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.9...@lekoarts/gatsby-theme-emma@1.4.10) (2020-07-04)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-emma
+
+
+
+
+
+## [1.4.9](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.8...@lekoarts/gatsby-theme-emma@1.4.9) (2020-07-03)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#437](https://github.com/LekoArts/gatsby-themes/issues/437)) ([5e27caf](https://github.com/LekoArts/gatsby-themes/commit/5e27caf74c2eae0e7c158fa5a15bd52ae2069ee7))
+* Set default values and replace defaultProps ([#436](https://github.com/LekoArts/gatsby-themes/issues/436)) ([d62857f](https://github.com/LekoArts/gatsby-themes/commit/d62857ffd1d2d97cfa31cb6ca37cb39db48467d0))
+
+
+
+
+
+## [1.4.8](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.7...@lekoarts/gatsby-theme-emma@1.4.8) (2020-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#429](https://github.com/LekoArts/gatsby-themes/issues/429)) ([f25dfb6](https://github.com/LekoArts/gatsby-themes/commit/f25dfb6105669f62468abc63ceb73c2fbbb73065))
+
+
+
+
+
+## [1.4.7](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.6...@lekoarts/gatsby-theme-emma@1.4.7) (2020-06-11)
+
+
+### Bug Fixes
+
+* Normalize CSS in themes & examples ([#422](https://github.com/LekoArts/gatsby-themes/issues/422)) ([9a2600c](https://github.com/LekoArts/gatsby-themes/commit/9a2600cc45d0f6729799183116f1b87d3c943749))
+
+
+
+
+
+## [1.4.6](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.5...@lekoarts/gatsby-theme-emma@1.4.6) (2020-06-08)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#408](https://github.com/LekoArts/gatsby-themes/issues/408)) ([11b89ad](https://github.com/LekoArts/gatsby-themes/commit/11b89ad8bb0a59dc3fe95941bca57d83a1716e80))
+
+
+
+
+
 ## [1.4.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.4...@lekoarts/gatsby-theme-emma@1.4.5) (2020-05-29)
 
 

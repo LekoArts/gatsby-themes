@@ -1,4 +1,5 @@
 import { merge } from "theme-ui"
+import { transparentize } from "@theme-ui/color"
 import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
@@ -34,6 +35,8 @@ const theme = merge(tailwind, {
       padding: 0,
       boxSizing: `border-box`,
       textRendering: `optimizeLegibility`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
     },
     p: {
       fontSize: [1, 1, 2],
@@ -63,25 +66,27 @@ const theme = merge(tailwind, {
     h1: {
       variant: `text.heading`,
       fontSize: [5, 6, 7],
-      mt: 2,
+      mt: 4,
     },
     h2: {
       variant: `text.heading`,
       fontSize: [4, 5, 6],
-      mt: 2,
+      mt: 4,
     },
     h3: {
       variant: `text.heading`,
       fontSize: [3, 4, 5],
-      mt: 3,
+      mt: 4,
     },
     h4: {
       variant: `text.heading`,
       fontSize: [2, 3, 4],
+      mt: 3,
     },
     h5: {
       variant: `text.heading`,
       fontSize: [1, 2, 3],
+      mt: 3,
     },
     h6: {
       variant: `text.heading`,
@@ -121,6 +126,9 @@ const theme = merge(tailwind, {
       verticalAlign: `top`,
       borderBottomWidth: `1px`,
     },
+    hr: {
+      mx: 0,
+    },
   },
   layout: {
     container: {
@@ -135,6 +143,29 @@ const theme = merge(tailwind, {
       lineHeight: `heading`,
       color: `heading`,
     },
+  },
+  copyButton: {
+    backgroundColor: transparentize(`primary`, 0.8),
+    border: `none`,
+    color: `gray.2`,
+    cursor: `pointer`,
+    fontSize: [`14px`, `14px`, `16px`],
+    fontFamily: `body`,
+    letterSpacing: `0.025rem`,
+    transition: `default`,
+    "&[disabled]": {
+      cursor: `not-allowed`,
+    },
+    ":not([disabled]):hover": {
+      bg: `primary`,
+      color: `white`,
+    },
+    position: `absolute`,
+    top: 0,
+    right: 0,
+    zIndex: 1,
+    borderRadius: `0 0 0 0.25rem`,
+    padding: `0.25rem 0.6rem`,
   },
   dividers: {
     bottom: {

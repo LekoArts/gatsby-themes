@@ -38,7 +38,7 @@ export default merge(tailwind, {
     },
     icon: {
       svg: {
-        width: [6, 6, 8],
+        width: 8,
         borderRadius: `full`,
         p: 2,
         background: `white`,

@@ -1,12 +1,8 @@
 import React from "react"
 
-const defaultProps = {
-  hidden: true,
-}
+type Props = { className?: string; hidden?: boolean }
 
-type Props = { className?: string; hidden?: boolean } & typeof defaultProps
-
-const Logo = ({ className, hidden }: Props) => (
+const Logo = ({ className = ``, hidden = true }: Props) => (
   <svg
     className={className}
     xmlns="http://www.w3.org/2000/svg"
@@ -46,5 +42,3 @@ const Logo = ({ className, hidden }: Props) => (
 )
 
 export default Logo
-
-Logo.defaultProps = defaultProps

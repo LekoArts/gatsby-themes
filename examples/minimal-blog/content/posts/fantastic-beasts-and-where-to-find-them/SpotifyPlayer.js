@@ -8,7 +8,7 @@
  * @see https://developer.spotify.com/technologies/widgets/spotify-play-button/
  */
 
-import React, { Component } from "react"
+import React from "react"
 
 // Size presets, defined by Spotify
 const sizePresets = {
@@ -22,34 +22,18 @@ const sizePresets = {
   },
 }
 
-/**
- * SpotifyPlayer class
- */
-class SpotifyPlayer extends Component {
-  // ------------------------------------------------------
-  // Render
-  // ------------------------------------------------------
-
-  render() {
-    const { uri, view, theme } = this.props
-    let { size } = this.props
-
-    if (typeof size === `string`) {
-      size = sizePresets[size]
-    }
-
-    return (
-      <iframe
-        title="Spotify"
-        className="SpotifyPlayer"
-        src={`https://embed.spotify.com/?uri=${uri}&view=${view}&theme=${theme}`}
-        width={size.width}
-        height={size.height}
-        frameBorder="0"
-        allowtransparency="true"
-      />
-    )
-  }
+function SpotifyPlayer({ uri, view, theme, size }) {
+  return (
+    <iframe
+      title="Spotify"
+      className="SpotifyPlayer"
+      src={`https://embed.spotify.com/?uri=${uri}&view=${view}&theme=${theme}`}
+      width={sizePresets[size].width}
+      height={sizePresets[size].height}
+      frameBorder="0"
+      allowtransparency="true"
+    />
+  )
 }
 
 export default SpotifyPlayer

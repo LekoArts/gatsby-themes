@@ -8,7 +8,7 @@ type BadgeProps = {
   className?: string
 }
 
-const Badge = ({ children, className }: BadgeProps) => (
+const Badge = ({ children, className = `` }: BadgeProps) => (
   <span
     sx={{
       backgroundColor: theme.colors.gray[3],

@@ -3,6 +3,87 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.2...specimens@0.3.3) (2020-09-10)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
+## [0.3.2](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.1...specimens@0.3.2) (2020-08-27)
+
+
+### Bug Fixes
+
+* Add variant to parts of minimal-blog content ([7cd58a5](https://github.com/LekoArts/gatsby-themes/commit/7cd58a51f1441ad7cc46011eac3e15be6b707d8b))
+
+
+
+
+
+## [0.3.1](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.0...specimens@0.3.1) (2020-08-27)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
+# [0.3.0](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.10...specimens@0.3.0) (2020-07-09)
+
+
+### Features
+
+* Add bundle-analyzer and lazy-load react-live ([#450](https://github.com/LekoArts/gatsby-themes/issues/450)) ([667fd33](https://github.com/LekoArts/gatsby-themes/commit/667fd33ce6af546cf2250af1e22395a26f45d6a2))
+
+
+
+
+
+## [0.2.10](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.9...specimens@0.2.10) (2020-07-09)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
+## [0.2.9](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.8...specimens@0.2.9) (2020-07-03)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
+## [0.2.8](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.7...specimens@0.2.8) (2020-07-02)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
+## [0.2.7](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.6...specimens@0.2.7) (2020-06-11)
+
+
+### Bug Fixes
+
+* Normalize CSS in themes & examples ([#422](https://github.com/LekoArts/gatsby-themes/issues/422)) ([9a2600c](https://github.com/LekoArts/gatsby-themes/commit/9a2600cc45d0f6729799183116f1b87d3c943749))
+
+
+
+
+
+## [0.2.6](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.5...specimens@0.2.6) (2020-06-08)
+
+**Note:** Version bump only for package specimens
+
+
+
+
+
 ## [0.2.5](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.2.4...specimens@0.2.5) (2020-05-29)
 
 **Note:** Version bump only for package specimens

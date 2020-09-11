@@ -6,7 +6,8 @@ module.exports = (themeOptions) => {
   const tagsPath = themeOptions.tagsPath || `/tags`
   const externalLinks = themeOptions.externalLinks || []
   const navigation = themeOptions.navigation || []
-  const showLineNumbers = themeOptions.showLineNumbers || true
+  const showLineNumbers = themeOptions.showLineNumbers !== false
+  const showCopyButton = themeOptions.showCopyButton !== false
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
 
   return {
@@ -18,6 +19,7 @@ module.exports = (themeOptions) => {
     externalLinks,
     navigation,
     showLineNumbers,
+    showCopyButton,
     formatString,
   }
 }

@@ -1,8 +1,10 @@
 /* eslint react/destructuring-assignment: 0 */
 import React from "react"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
+import loadable from "@loadable/component"
 import theme from "prism-react-renderer/themes/nightOwl"
+
+import Copy from "./copy"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import { Language } from "../types"
 
@@ -49,6 +51,19 @@ const calculateLinesToHighlight = (meta: string) => {
   }
 }
 
+const LazyLiveProvider = loadable(async () => {
+  const Module = await import(`react-live`)
+  const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
+  return (props: any) => (
+    <LiveProvider {...props}>
+      {props.showCopyButton && <Copy content={props.code} />}
+      <LiveEditor data-name="live-editor" />
+      <LiveError />
+      <LivePreview data-name="live-preview" />
+    </LiveProvider>
+  )
+})
+
 const Code = ({
   codeString,
   noLineNumbers = false,
@@ -56,7 +71,7 @@ const Code = ({
   metastring = ``,
   ...props
 }: CodeProps) => {
-  const { showLineNumbers } = useMinimalBlogConfig()
+  const { showLineNumbers, showCopyButton } = useMinimalBlogConfig()
 
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
@@ -65,11 +80,9 @@ const Code = ({
 
   if (props[`react-live`]) {
     return (
-      <LiveProvider code={codeString} noInline theme={theme}>
-        <LiveEditor data-name="live-editor" />
-        <LiveError />
-        <LivePreview data-name="live-preview" />
-      </LiveProvider>
+      <div className="react-live-wrapper">
+        <LazyLiveProvider code={codeString} noInline theme={theme} showCopyButton={showCopyButton} />
+      </div>
     )
   }
   return (
@@ -83,22 +96,25 @@ const Code = ({
           )}
           <div className="gatsby-highlight" data-language={language}>
             <pre className={className} style={style} data-linenumber={hasLineNumbers}>
-              {tokens.map((line, i) => {
-                const lineProps = getLineProps({ line, key: i })
+              {showCopyButton && <Copy content={codeString} fileName={title} />}
+              <code className={`language-${language}`}>
+                {tokens.map((line, i) => {
+                  const lineProps = getLineProps({ line, key: i })
 
-                if (shouldHighlightLine(i)) {
-                  lineProps.className = `${lineProps.className} highlight-line`
-                }
+                  if (shouldHighlightLine(i)) {
+                    lineProps.className = `${lineProps.className} highlight-line`
+                  }
 
-                return (
-                  <div {...lineProps}>
-                    {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                )
-              })}
+                  return (
+                    <div {...lineProps}>
+                      {hasLineNumbers && <span className="line-number-style">{i + 1}</span>}
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  )
+                })}
+              </code>
             </pre>
           </div>
         </React.Fragment>
