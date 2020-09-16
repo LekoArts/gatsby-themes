@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.14](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.13...@lekoarts/gatsby-theme-emma@1.4.14) (2020-09-16)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#484](https://github.com/LekoArts/gatsby-themes/issues/484)) ([006cdc4](https://github.com/LekoArts/gatsby-themes/commit/006cdc4b8623595b14f6571fe694671a77a6a9dc))
+
+
+
+
+
 ## [1.4.13](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emma@1.4.12...@lekoarts/gatsby-theme-emma@1.4.13) (2020-09-10)
 
 
