@@ -2,6 +2,8 @@
   "compilerOptions": {
     "baseUrl": "../node_modules",
     "outDir": "e2e/build",
+    "module": "commonjs",
+    "removeComments": true,
     "strict": true,
     "sourceMap": false,
     "skipLibCheck": true,
@@ -9,5 +11,5 @@
     "lib": ["es2015", "es2017", "dom"],
     "types": ["cypress", "@testing-library/cypress"]
   },
-  "include": ["**/*.ts", "support/*.ts", "../node_modules/cypress"]
+  "include": ["**/*.ts", "support/*.ts"]
 }
