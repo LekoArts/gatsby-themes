@@ -1,7 +1,7 @@
 {
   extends: ["config:base", ":disablePeerDependencies"],
   includePaths: ["package.json", "examples/**", "themes/**", "www/package.json"],
-  masterIssue: true,
+  dependencyDashboard: true,
   packageRules: [
     {
       groupName: "packages",
@@ -19,7 +19,7 @@
       groupName: "types",
       packagePatterns: ["^@types/"],
       // only upgrade types with approval as they can break transitives
-      masterIssueApproval: true,
+      dependencyDashboardApproval: true,
     },
     // these rules define dependencies that we have special handling for
     {
@@ -40,7 +40,7 @@
       // not grouped
       groupName: "packages (<1.0.0 minor)",
       paths: ["package.json", "themes/**"],
-      masterIssueApproval: true,
+      dependencyDashboardApproval: true,
       updateTypes: ["minor"],
       packageNames: [
         // below is list of packages that use 0.X version range, any minor bump there can contain breaking changes, so we just ignore minor bumps for those packages and will need to bump them manually
@@ -57,7 +57,7 @@
       // not grouped
       groupName: "www (<1.0.0 minor)",
       paths: ["www/package.json"],
-      masterIssueApproval: true,
+      dependencyDashboardApproval: true,
       updateTypes: ["minor"],
       packageNames: [
         // below is list of packages that use 0.X version range, any minor bump there can contain breaking changes, so we just ignore minor bumps for those packages and will need to bump them manually
@@ -74,7 +74,7 @@
       // not grouped
       groupName: "starters (<1.0.0 minor)",
       paths: ["examples/**"],
-      masterIssueApproval: true,
+      dependencyDashboardApproval: true,
       updateTypes: ["minor"],
       packageNames: [
         // below is list of packages that use 0.X version range, any minor bump there can contain breaking changes, so we just ignore minor bumps for those packages and will need to bump them manually
