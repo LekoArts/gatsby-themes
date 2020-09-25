@@ -122,4 +122,8 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .should(`have.css`, `color`, `rgb(203, 213, 224)`)
       .should(`have.css`, `background`, `rgb(26, 32, 44) none repeat scroll 0% 0% / auto padding-box border-box`)
   })
+  it(`should accept canonical url in frontmatter and set in head`, () => {
+    cy.visit(`/curses-counter-curses-and-more`).waitForRouteChange()
+    cy.get(`head link[rel='canonical']`).should(`have.attr`, `href`, `https://random-blog-about-curses.com`)
+  })
 })
