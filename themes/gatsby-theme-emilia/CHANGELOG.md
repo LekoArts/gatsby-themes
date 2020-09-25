@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.15](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.3.14...@lekoarts/gatsby-theme-emilia@1.3.15) (2020-09-25)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#490](https://github.com/LekoArts/gatsby-themes/issues/490)) ([b3af934](https://github.com/LekoArts/gatsby-themes/commit/b3af934ac68b4f9fb7492cc3da7707392325175b))
+
+
+
+
+
 ## [1.3.14](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia@1.3.13...@lekoarts/gatsby-theme-emilia@1.3.14) (2020-09-16)
 
 
