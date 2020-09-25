@@ -12,7 +12,14 @@ type SEOProps = {
   canonicalUrl?: string
 }
 
-const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null, canonicalUrl }: SEOProps) => {
+const SEO = ({
+  title = ``,
+  description = ``,
+  pathname = ``,
+  image = ``,
+  children = null,
+  canonicalUrl = ``,
+}: SEOProps) => {
   const site = useSiteMetadata()
 
   const {
