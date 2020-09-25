@@ -60,6 +60,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
+      canonicalUrl: String
     }
     
     type PostTag {
@@ -86,6 +87,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
+      canonicalUrl: String
     }
     
     type MdxPage implements Node & Page {
@@ -195,6 +197,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       tags: modifiedTags,
       banner: node.frontmatter.banner,
       description: node.frontmatter.description,
+      canonicalUrl: node.frontmatter.canonicalUrl,
     }
 
     const mdxPostId = createNodeId(`${node.id} >>> MdxPost`)
