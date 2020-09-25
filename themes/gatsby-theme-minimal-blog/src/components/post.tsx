@@ -17,6 +17,7 @@ type PostProps = {
         slug: string
       }[]
       description?: string
+      canonicalUrl?: string
       body: string
       excerpt: string
       timeToRead?: number
@@ -41,6 +42,7 @@ const Post = ({ data: { post } }: PostProps) => (
       description={post.description ? post.description : post.excerpt}
       image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
       pathname={post.slug}
+      canonicalUrl={post.canonicalUrl}
     />
     <Heading variant="styles.h2">{post.title}</Heading>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>

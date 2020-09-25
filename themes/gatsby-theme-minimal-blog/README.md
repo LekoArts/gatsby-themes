@@ -261,10 +261,11 @@ tags:
   - Tutorial
   - Dark Arts
 banner: ./defence-against-the-dark-arts.jpg
+canonicalUrl: https://random-blog-about-curses.com/curses-counter-curses-and-more
 ---
 ```
 
-**The fields `description` and `banner` are optional!** If no description is provided, an excerpt of the blog post will be used. If no banner is provided, the default `siteImage` (from `siteMetadata`) is used.
+**The fields `description`, `banner` and `canonicalUrl` are optional!** If no description is provided, an excerpt of the blog post will be used. If no banner is provided, the default `siteImage` (from `siteMetadata`) is used. If no `canonicalUrl` is provided, it will not be included in the header.
 
 The `date` field has to be written in the format `YYYY-MM-DD`!
 
