@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.5.4...@lekoarts/gatsby-theme-minimal-blog@2.6.0) (2020-09-25)
+
+
+### Features
+
+* **minimal-blog:** Add Canonical URL support ([#494](https://github.com/LekoArts/gatsby-themes/issues/494)) ([0e9d7ac](https://github.com/LekoArts/gatsby-themes/commit/0e9d7ac04fdf9a7d30cca8c7ccf7565d3955502f))
+
+
+
+
+
 ## [2.5.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.5.3...@lekoarts/gatsby-theme-minimal-blog@2.5.4) (2020-09-25)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-minimal-blog
