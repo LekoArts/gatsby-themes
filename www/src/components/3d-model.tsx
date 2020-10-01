@@ -5,8 +5,8 @@ import * as THREE from "three"
 import { jsx, useColorMode } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
+import { OrbitControls } from "@react-three/drei"
 import Model from "../webgl/model"
-import Controls from "../webgl/controls"
 import uniforms from "../webgl/uniforms"
 
 uniforms.init(THREE)
@@ -84,7 +84,7 @@ const ThreeDModel = () => {
             <Model url="/model/dracoGatsby.gltf" />
           </Suspense>
         )}
-        <Controls
+        <OrbitControls
           autoRotate
           enablePan={false}
           enableZoom={false}
