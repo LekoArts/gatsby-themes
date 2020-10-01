@@ -3,6 +3,7 @@
 /* eslint-disable no-sequences */
 import * as THREE from "three"
 import { jsx, useColorMode } from "theme-ui"
+import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
 import Model from "../webgl/model"
 import Controls from "../webgl/controls"
@@ -59,13 +60,13 @@ const ThreeDModel = () => {
       <Canvas
         orthographic
         camera={{ position: [0, 0, 150], zoom: 3.5 }}
-        onCreated={({ gl }: any) => ((gl.shadowMap.enabled = true), (gl.shadowMap.type = THREE.PCFSoftShadowMap))}
+        shadowMap
+        colorManagement
         title="Spin the Model"
         aria-hidden="true"
-        focusable="false"
+        focusable={false}
         style={{ background: `transparent`, zIndex: 100 }}
       >
-        <ambientLight intensity={0.2} />
         <pointLight intensity={isStrange ? 1.5 : 1} position={[0, 0, 10]} color={standardColor} />
         <RectAreaLightDecl />
         <RectAreaLightDecl
@@ -78,7 +79,11 @@ const ThreeDModel = () => {
         <RectAreaLightDecl intensity={1.5} width={500} height={1000} position={[0, 500, 0]} />
         <RectAreaLightDecl intensity={0.5} width={500} height={1000} position={[400, 0, 400]} color="#ffb238" />
         <RectAreaLightDecl intensity={5} width={1000} height={100} position={[-400, 0, 400]} />
-        {isBrowser && <Model url="/model/dracoGatsby.gltf" />}
+        {isBrowser && (
+          <Suspense fallback={null}>
+            <Model url="/model/dracoGatsby.gltf" />
+          </Suspense>
+        )}
         <Controls
           autoRotate
           enablePan={false}

@@ -1,31 +1,16 @@
-import * as THREE from "three"
 import React from "react"
+import { useLoader } from "react-three-fiber"
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader"
 
 function Model({ url }: { url: string }) {
-  const [scene, set] = React.useState()
+  const draco = useLoader(GLTFLoader, url, (loader) => {
+    const dracoLoader = new DRACOLoader()
+    dracoLoader.setDecoderPath(`/decoder/gltf/`)
+    loader.setDRACOLoader(dracoLoader)
+  })
 
-  React.useMemo(
-    () =>
-      new GLTFLoader().setDRACOLoader(new DRACOLoader().setDecoderPath(`/decoder/gltf/`)).load(url, (gltf) => {
-        gltf.scene.traverse((obj) => {
-          if (obj.type === `Mesh`) {
-            obj.material.dispose()
-            obj.material = new THREE.MeshPhysicalMaterial({
-              roughness: 0.4,
-              clearcoat: 1,
-              clearcoatRoughness: 0.3,
-              color: obj.material.color,
-            })
-          }
-        })
-        set(gltf.scene)
-      }),
-    [url]
-  )
-
-  return scene ? <primitive object={scene} /> : null
+  return <primitive object={draco.scene} />
 }
 
 export default Model
