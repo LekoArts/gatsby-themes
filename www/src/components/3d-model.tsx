@@ -1,31 +1,26 @@
 /** @jsx jsx */
-/* eslint-disable no-return-assign */
-/* eslint-disable no-sequences */
-import * as THREE from "three"
 import { jsx, useColorMode } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
+import { OrbitControls } from "@react-three/drei/controls/OrbitControls"
+import { Shadow } from "@react-three/drei/misc/Shadow"
 import Model from "../webgl/model"
-import Controls from "../webgl/controls"
-import uniforms from "../webgl/uniforms"
-
-uniforms.init(THREE)
 
 const RectAreaLightDecl = ({
   color = `white`,
-  intensity = 1.5,
-  width = 1000,
-  height = 400,
-  position = [50, 100, -500],
+  intensity = 1,
+  width = 650,
+  height = 650,
+  position = [50, 100, -400],
   lookAt = [0, 0, 0],
 }) => (
   <rectAreaLight
     intensity={intensity}
-    position={position}
+    position={[position[0], position[1], position[2]]}
     color={color}
     width={width}
     height={height}
-    onUpdate={(self) => self.lookAt(...lookAt)}
+    onUpdate={(self) => self.lookAt(lookAt[0], lookAt[1], lookAt[2])}
   />
 )
 
@@ -37,12 +32,52 @@ const sharedDiskStyles = {
   borderRadius: `full`,
 }
 
+const Disks = () => (
+  <div sx={{ position: `absolute`, top: 0, left: 0, right: 0, bottom: 0 }}>
+    <div
+      sx={{
+        ...sharedDiskStyles,
+        width: `150px`,
+        height: `150px`,
+        background: (t: { colors: { [key: string]: any } }) => t.colors.model.four,
+        zIndex: 4,
+      }}
+    />
+    <div
+      sx={{
+        ...sharedDiskStyles,
+        width: `200px`,
+        height: `200px`,
+        background: (t: { colors: { [key: string]: any } }) => t.colors.model.three,
+        zIndex: 3,
+      }}
+    />
+    <div
+      sx={{
+        ...sharedDiskStyles,
+        width: `450px`,
+        height: `450px`,
+        background: (t: { colors: { [key: string]: any } }) => t.colors.model.two,
+        zIndex: 2,
+      }}
+    />
+    <div
+      sx={{
+        ...sharedDiskStyles,
+        width: `500px`,
+        height: `500px`,
+        background: (t: { colors: { [key: string]: any } }) => t.colors.model.one,
+        zIndex: 1,
+      }}
+    />
+  </div>
+)
+
 const ThreeDModel = () => {
   const [mode] = useColorMode()
 
   const isStrange = mode === `strangerThings`
   const standardColor = isStrange ? `#E7251D` : `#663399`
-  const isBrowser = typeof window !== `undefined`
 
   return (
     <div
@@ -67,24 +102,21 @@ const ThreeDModel = () => {
         focusable={false}
         style={{ background: `transparent`, zIndex: 100 }}
       >
-        <pointLight intensity={isStrange ? 1.5 : 1} position={[0, 0, 10]} color={standardColor} />
         <RectAreaLightDecl />
         <RectAreaLightDecl
-          intensity={isStrange ? 6 : 4}
-          width={100}
+          intensity={isStrange ? 5 : 3}
+          width={200}
           height={1000}
           position={[0, 0, 500]}
           color={standardColor}
         />
-        <RectAreaLightDecl intensity={1.5} width={500} height={1000} position={[0, 500, 0]} />
-        <RectAreaLightDecl intensity={0.5} width={500} height={1000} position={[400, 0, 400]} color="#ffb238" />
-        <RectAreaLightDecl intensity={5} width={1000} height={100} position={[-400, 0, 400]} />
-        {isBrowser && (
-          <Suspense fallback={null}>
-            <Model url="/model/dracoGatsby.gltf" />
-          </Suspense>
-        )}
-        <Controls
+        <RectAreaLightDecl color="#bfdbee" position={[50, 0, 400]} />
+        <pointLight intensity={isStrange ? 2 : 1.5} position={[0, 0, 10]} color={standardColor} />
+        <Suspense fallback={null}>
+          <Model receiveShadow />
+        </Suspense>
+        <Shadow color="#000" scale={[100, 100, 1]} rotation={[-Math.PI / 2, 0, 0]} opacity={0.5} position={[0, 0, 0]} />
+        <OrbitControls
           autoRotate
           enablePan={false}
           enableZoom={false}
@@ -95,44 +127,7 @@ const ThreeDModel = () => {
           minPolarAngle={Math.PI / 3}
         />
       </Canvas>
-      <div sx={{ position: `absolute`, top: 0, left: 0, right: 0, bottom: 0 }}>
-        <div
-          sx={{
-            ...sharedDiskStyles,
-            width: `150px`,
-            height: `150px`,
-            background: (t: { colors: { [key: string]: any } }) => t.colors.model.four,
-            zIndex: 4,
-          }}
-        />
-        <div
-          sx={{
-            ...sharedDiskStyles,
-            width: `200px`,
-            height: `200px`,
-            background: (t: { colors: { [key: string]: any } }) => t.colors.model.three,
-            zIndex: 3,
-          }}
-        />
-        <div
-          sx={{
-            ...sharedDiskStyles,
-            width: `450px`,
-            height: `450px`,
-            background: (t: { colors: { [key: string]: any } }) => t.colors.model.two,
-            zIndex: 2,
-          }}
-        />
-        <div
-          sx={{
-            ...sharedDiskStyles,
-            width: `500px`,
-            height: `500px`,
-            background: (t: { colors: { [key: string]: any } }) => t.colors.model.one,
-            zIndex: 1,
-          }}
-        />
-      </div>
+      <Disks />
     </div>
   )
 }
