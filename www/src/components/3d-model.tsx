@@ -1,15 +1,11 @@
 /** @jsx jsx */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-sequences */
-import * as THREE from "three"
 import { jsx, useColorMode } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
 import { OrbitControls } from "@react-three/drei"
 import Model from "../webgl/model"
-import uniforms from "../webgl/uniforms"
-
-uniforms.init(THREE)
 
 const RectAreaLightDecl = ({
   color = `white`,
