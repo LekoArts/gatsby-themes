@@ -93,10 +93,10 @@ const ThoughtTemplate = ({ data: { thought } }: ThoughtTemplateProps) => (
           sx={{
             variant: `buttons.transparent`,
             color: `primary`,
+            outline: `none`,
             "&:hover, &:focus": {
-              boxShadow: `none`,
+              boxShadow: `outline`,
               cursor: `pointer`,
-              textDecoration: `underline`,
               color: `primary`,
             },
             mr: 4,
@@ -128,11 +128,9 @@ const ThoughtTemplate = ({ data: { thought } }: ThoughtTemplateProps) => (
           rel="noopener noreferrer"
           target="_blank"
           sx={{
-            variant: `buttons.thought`,
+            variant: `buttons.white`,
             mt: 4,
             display: `inline-block`,
-            color: `primary`,
-            backgroundColor: `white`,
           }}
         >
           View all themes
