@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { graphql, Link } from "gatsby"
+import { graphql, Link, PageProps } from "gatsby"
 import { Container, jsx, Styled, Flex } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { TwitterShareButton } from "react-share"
@@ -10,19 +10,17 @@ import CircleGrid from "../icons/circle-grid"
 import SEO from "../components/seo"
 
 type ThoughtTemplateProps = {
-  data: {
-    thought: {
-      slug: string
-      title: string
-      info: string
-      date: string
-      body: string
-      excerpt: string
-    }
+  thought: {
+    slug: string
+    title: string
+    info: string
+    date: string
+    body: string
+    excerpt: string
   }
 }
 
-const ThoughtTemplate = ({ data: { thought } }: ThoughtTemplateProps) => (
+const ThoughtTemplate: React.FC<PageProps<ThoughtTemplateProps>> = ({ data: { thought } }) => (
   <Layout thought>
     <SEO
       title={`${thought.title} | Gatsby Themes by LekoArts`}
