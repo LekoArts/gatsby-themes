@@ -2,8 +2,8 @@
 import { jsx, useColorMode } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
-import { OrbitControls } from "@react-three/drei/controls/OrbitControls"
-import { Shadow } from "@react-three/drei/misc/Shadow"
+import { OrbitControls } from "@react-three/drei/OrbitControls"
+import { Shadow } from "@react-three/drei/Shadow"
 import Model from "../webgl/model"
 
 const RectAreaLightDecl = ({
@@ -98,9 +98,8 @@ const ThreeDModel = () => {
         shadowMap
         colorManagement
         title="Spin the Model"
-        aria-hidden="true"
-        focusable={false}
-        style={{ background: `transparent`, zIndex: 100 }}
+        aria-label="Schematic 3D model of a Gatsby theme"
+        sx={{ background: `transparent`, zIndex: 100 }}
       >
         <RectAreaLightDecl />
         <RectAreaLightDecl
@@ -113,7 +112,7 @@ const ThreeDModel = () => {
         <RectAreaLightDecl color="#bfdbee" position={[50, 0, 400]} />
         <pointLight intensity={isStrange ? 2 : 1.5} position={[0, 0, 10]} color={standardColor} />
         <Suspense fallback={null}>
-          <Model receiveShadow />
+          <Model />
         </Suspense>
         <Shadow color="#000" scale={[100, 100, 1]} rotation={[-Math.PI / 2, 0, 0]} opacity={0.5} position={[0, 0, 0]} />
         <OrbitControls

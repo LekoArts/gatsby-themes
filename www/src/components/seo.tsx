@@ -214,6 +214,7 @@ const SEO = ({
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a67d8" />
+      <link rel="preload" href="/fonts/Pacifico-Bold.woff2" as="font" type="font/woff2" crossOrigin="true" />
       <meta name="msapplication-TileColor" content="#f7fafc" />
       {thought && <meta name="article:published_time" content={datePublished} />}
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`identity`))}</script>

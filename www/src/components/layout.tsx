@@ -35,8 +35,8 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
             boxSizing: `inherit`,
           },
           "::selection": {
-            backgroundColor: `text`,
-            color: `background`,
+            backgroundColor: theme.colors.text,
+            color: theme.colors.background,
           },
           "#___gatsby": {
             position: `relative`,
@@ -47,7 +47,7 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
             textDecoration: `none`,
             outline: `none`,
             "&:focus": {
-              boxShadow: `outline`,
+              boxShadow: theme.shadows.outline,
             },
           },
           ...headingStyles,

@@ -8,6 +8,7 @@ const sharedButtonStyles = {
   fontFamily: `body`,
   fontWeight: `medium`,
   transition: `all 0.3s ease-in-out`,
+  outline: `none`,
 }
 
 const sharedHeadingStyles = {
@@ -178,7 +179,8 @@ export default merge(tailwind, {
       ...sharedButtonStyles,
       fontSize: 1,
       boxShadow: `default`,
-      "&:hover": {
+      borderRadius: `default`,
+      "&:hover,&:focus": {
         transform: `translateY(-1px)`,
       },
     },
@@ -220,7 +222,7 @@ export default merge(tailwind, {
       "&:hover, &:focus": {
         color: `primary`,
         outline: `none`,
-        boxShadow: `0 0 0 2px`,
+        boxShadow: `outline`,
         cursor: `pointer`,
       },
     },
