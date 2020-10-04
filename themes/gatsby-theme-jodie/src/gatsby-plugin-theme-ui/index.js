@@ -5,11 +5,18 @@ const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
-    primary: `#f6993f`,
+    primary: `#b75e09`,
+    primaryLight: `#f18a27`,
     secondary: tailwind.colors.indigo[6],
     heading: tailwind.colors.black,
     background: tailwind.colors.white,
     text: tailwind.colors.gray[9],
+    textMuted: `#46505f`,
+    textMutedLight: `#a0aab8`,
+  },
+  sidebar: {
+    normal: `320px`,
+    wide: `375px`,
   },
   fonts: {
     body: `"Work Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
@@ -33,6 +40,7 @@ const theme = merge(tailwind, {
       textDecoration: `none`,
       "&:hover, &:focus": {
         color: `primary`,
+        textDecoration: `none`,
       },
     },
     p: {
