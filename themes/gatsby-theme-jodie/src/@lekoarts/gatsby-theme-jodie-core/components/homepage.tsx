@@ -1,27 +1,23 @@
-import React from "react"
+import * as React from "react"
+import { PageProps } from "gatsby"
 import Homepage from "../../../components/homepage"
 
-type Props = {
-  data: {
-    allProject: {
-      nodes: {
-        slug: string
-        title: string
-        shortTitle: string
-      }[]
-    }
-    allPage: {
-      nodes: {
-        slug: string
-        title: string
-      }[]
-    }
-    [key: string]: any
+type DataProps = {
+  allProject: {
+    nodes: {
+      slug: string
+      title: string
+      shortTitle: string
+    }[]
+  }
+  allPage: {
+    nodes: {
+      slug: string
+      title: string
+    }[]
   }
 }
 
-export default function MinimalBlogCoreHomepage({ data }: Props) {
-  const { allProject, allPage } = data
-
-  return <Homepage projects={allProject.nodes} pages={allPage.nodes} />
+export default function JodieCoreHomepage({ children, ...props }: PageProps<DataProps>) {
+  return <Homepage {...props}>{children}</Homepage>
 }
