@@ -3,14 +3,14 @@ import { PageProps } from "gatsby"
 import Homepage from "../../../components/homepage"
 
 type DataProps = {
-  allProject: {
+  projects: {
     nodes: {
       slug: string
       title: string
       shortTitle: string
     }[]
   }
-  allPage: {
+  pages: {
     nodes: {
       slug: string
       title: string

@@ -227,16 +227,22 @@ exports.sourceNodes = (
 // These template are only data-fetching wrappers that import components
 const homepageTemplate = require.resolve(`./src/templates/homepage-query.tsx`)
 const projectTemplate = require.resolve(`./src/templates/project-query.tsx`)
+const projectsTemplate = require.resolve(`./src/templates/projects-query.tsx`)
 const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, formatString } = withDefaults(themeOptions)
+  const { basePath, projectsUrl, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
     component: homepageTemplate,
+  })
+
+  createPage({
+    path: `/${basePath}/${projectsUrl}`.replace(/\/\/+/g, `/`),
+    component: projectsTemplate,
   })
 
   const result = await graphql(`
@@ -261,23 +267,25 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   const projects = result.data.allProject.nodes
 
-  projects.forEach((project) => {
-    createPage({
-      path: project.slug,
-      component: projectTemplate,
-      context: {
-        slug: project.slug,
-        formatString,
-      },
+  if (projects.length > 0) {
+    projects.forEach((project) => {
+      createPage({
+        path: `/${basePath}/${project.slug}`.replace(/\/\/+/g, `/`),
+        component: projectTemplate,
+        context: {
+          slug: project.slug,
+          formatString,
+        },
+      })
     })
-  })
+  }
 
   const pages = result.data.allPage.nodes
 
   if (pages.length > 0) {
     pages.forEach((page) => {
       createPage({
-        path: page.slug,
+        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
         component: pageTemplate,
         context: {
           slug: page.slug,

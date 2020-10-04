@@ -1,20 +1,26 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import React from "react"
+import { PageProps } from "gatsby"
 import Layout from "./layout"
 
-type PostsProps = {
+type DataProps = {
   projects: {
-    slug: string
-    title: string
-    shortTitle: string
-  }[]
+    nodes: {
+      slug: string
+      title: string
+      shortTitle: string
+    }[]
+  }
   pages: {
-    slug: string
-    title: string
-  }[]
+    nodes: {
+      slug: string
+      title: string
+    }[]
+  }
 }
 
-const Homepage = ({ projects, pages }: PostsProps) => (
+const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } }) => (
   <Layout>
     <h1>Projects</h1>
     <pre>{JSON.stringify(projects, null, 2)}</pre>
