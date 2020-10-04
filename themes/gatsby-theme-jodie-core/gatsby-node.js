@@ -75,7 +75,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
-    
+
     type MdxProject implements Node & Project {
       title: String!
       shortTitle: String!
@@ -87,7 +87,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
-    
+
     interface Page @nodeInterface {
       id: ID!
       slug: String!
@@ -97,7 +97,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
-    
+
     type MdxPage implements Node & Page {
       slug: String!
       title: String!
@@ -106,11 +106,11 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
-    
+
     type JodieConfig implements Node {
       navigation: [navigationEntry!]
     }
-    
+
     type navigationEntry {
       name: String
       slug: String

@@ -1,10 +1,10 @@
 module.exports = (options) => ({
   siteMetadata: {
-    siteTitle: `Gatsby Starter Portfolio: Jodie`,
-    siteTitleAlt: `Gatsby Starter Portfolio: Jodie - @lekoarts/gatsby-theme-jodie`,
-    siteHeadline: `Gatsby Starter Portfolio: Jodie - Gatsby Theme from @lekoarts`,
+    siteTitle: `Jodie`,
+    siteTitleAlt: `Jodie - @lekoarts/gatsby-theme-jodie`,
+    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
     siteUrl: `https://jodie.lekoarts.de`,
-    siteDescription: `Stub description for jodie`,
+    siteDescription: `Stub description for Jodie`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
