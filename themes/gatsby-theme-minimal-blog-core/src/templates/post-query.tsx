@@ -14,6 +14,7 @@ export const query = graphql`
         slug
       }
       description
+      canonicalUrl
       body
       excerpt
       timeToRead

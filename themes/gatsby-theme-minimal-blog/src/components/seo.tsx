@@ -9,9 +9,17 @@ type SEOProps = {
   pathname?: string
   image?: string
   children?: React.ReactNode
+  canonicalUrl?: string
 }
 
-const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: SEOProps) => {
+const SEO = ({
+  title = ``,
+  description = ``,
+  pathname = ``,
+  image = ``,
+  children = null,
+  canonicalUrl = ``,
+}: SEOProps) => {
   const site = useSiteMetadata()
 
   const {
@@ -52,6 +60,7 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <link rel="icon" type="image/png" sizes="32x32" href={withPrefix(`/favicon-32x32.png`)} />
       <link rel="icon" type="image/png" sizes="16x16" href={withPrefix(`/favicon-16x16.png`)} />
       <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
+      {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
       {children}
     </Helmet>
   )

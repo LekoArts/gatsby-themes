@@ -44,6 +44,7 @@ const theme = merge(tailwind, {
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
+      wordBreak: `break-word`,
     },
     ul: {
       li: {

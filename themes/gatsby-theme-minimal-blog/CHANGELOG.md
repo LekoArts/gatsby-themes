@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.0...@lekoarts/gatsby-theme-minimal-blog@2.6.1) (2020-09-25)
+
+
+### Bug Fixes
+
+* **minimal-blog:** Add 'word-break' to prose CSS ([c74e28c](https://github.com/LekoArts/gatsby-themes/commit/c74e28ccb713f68ed6d5bf5b59ae05f5b032efea)), closes [#492](https://github.com/LekoArts/gatsby-themes/issues/492)
+
+
+
+
+
+# [2.6.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.5.4...@lekoarts/gatsby-theme-minimal-blog@2.6.0) (2020-09-25)
+
+
+### Features
+
+* **minimal-blog:** Add Canonical URL support ([#494](https://github.com/LekoArts/gatsby-themes/issues/494)) ([0e9d7ac](https://github.com/LekoArts/gatsby-themes/commit/0e9d7ac04fdf9a7d30cca8c7ccf7565d3955502f))
+
+
+
+
+
+## [2.5.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.5.3...@lekoarts/gatsby-theme-minimal-blog@2.5.4) (2020-09-25)
+
+**Note:** Version bump only for package @lekoarts/gatsby-theme-minimal-blog
+
+
+
+
+
+## [2.5.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.5.2...@lekoarts/gatsby-theme-minimal-blog@2.5.3) (2020-09-16)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#484](https://github.com/LekoArts/gatsby-themes/issues/484)) ([006cdc4](https://github.com/LekoArts/gatsby-themes/commit/006cdc4b8623595b14f6571fe694671a77a6a9dc))
+
+
+
+
+
 ## [2.5.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.5.1...@lekoarts/gatsby-theme-minimal-blog@2.5.2) (2020-09-10)
 
 

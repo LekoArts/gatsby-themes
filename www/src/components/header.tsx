@@ -20,7 +20,7 @@ const Header = () => {
           <Flex>
             <a
               aria-label="Link to the theme creator's website"
-              sx={{ color: `text`, "&:hover": { color: `primary` } }}
+              sx={{ color: `text`, "&:hover,&:focus": { color: `primary`, boxShadow: `none` } }}
               href="http://www.lekoarts.de/en"
             >
               <Logo sx={{ width: 12, height: 12 }} />
@@ -41,7 +41,13 @@ const Header = () => {
             </a>
             <button
               type="button"
-              sx={{ variant: `buttons.transparent`, p: 1, borderRadius: `full`, ml: 4 }}
+              sx={{
+                variant: `buttons.transparent`,
+                p: 1,
+                borderRadius: `full`,
+                ml: 4,
+                "&:hover,&:focus": { boxShadow: `0 0 0 2px` },
+              }}
               title="Change color mode"
               onClick={cycleMode}
             >
