@@ -7,7 +7,7 @@ const LayoutWrapper = ({ children }: LayoutWrapperProps) => (
   <div
     sx={{
       display: `grid`,
-      gridTemplateColumns: `300px 1fr`,
+      gridTemplateColumns: (t: any): any => [`1fr`, `1fr`, `1fr`, `${t.sidebar.normal} 1fr`, `${t.sidebar.wide} 1fr`],
     }}
   >
     {children}
