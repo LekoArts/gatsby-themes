@@ -3,7 +3,10 @@ import { Global } from "@emotion/core"
 import { Styled, Box, useColorMode } from "theme-ui"
 import SEO from "./seo"
 import Header from "./header"
-import "typeface-ibm-plex-sans"
+import "fontsource-ibm-plex-sans/400.css"
+import "fontsource-ibm-plex-sans/500.css"
+import "fontsource-ibm-plex-sans/600.css"
+import "fontsource-ibm-plex-sans/700.css"
 import "../fonts/benguiat.css"
 
 type LayoutProps = { children: React.ReactNode; className?: string; thought?: boolean }
