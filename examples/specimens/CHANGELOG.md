@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.5...specimens@0.3.6) (2020-10-10)
+
+
+### Bug Fixes
+
+* **specimens:** Pin @loadable/component ([d618acd](https://github.com/LekoArts/gatsby-themes/commit/d618acde37c7ef5448ada552346e86a6baa6c85d))
+
+
+
+
+
 ## [0.3.5](https://github.com/LekoArts/gatsby-themes/compare/specimens@0.3.4...specimens@0.3.5) (2020-09-25)
 
 **Note:** Version bump only for package specimens
