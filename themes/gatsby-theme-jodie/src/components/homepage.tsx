@@ -34,9 +34,9 @@ const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } })
 
   for (let i = 0; i < itemsCount; i++) {
     const quotient = itemsCount % divisor
-    const quotient_alt = (itemsCount - 1) % divisor
+    const quotientAlt = (itemsCount - 1) % divisor
 
-    if (quotient === 0 || quotient_alt === 0) {
+    if (quotient === 0 || quotientAlt === 0) {
       break
     }
 

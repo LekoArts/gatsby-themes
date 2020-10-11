@@ -39,7 +39,7 @@ export function SkipNavTrigger({ children = `Skip to content`, targetId = SKIP_T
     if (!!target !== hasAValidTarget) {
       setHasAValidTarget(!!target)
     }
-  })
+  }, [targetId, hasAValidTarget])
 
   // If we've rendered the trigger, but there is no target available, we don't
   // want to show the trigger. Doing so would just be frustrating, since it

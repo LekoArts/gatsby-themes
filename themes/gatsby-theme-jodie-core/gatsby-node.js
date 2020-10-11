@@ -1,5 +1,4 @@
 const kebabCase = require(`lodash.kebabcase`)
-const path = require(`path`)
 const withDefaults = require(`./utils/default-options`)
 
 const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
