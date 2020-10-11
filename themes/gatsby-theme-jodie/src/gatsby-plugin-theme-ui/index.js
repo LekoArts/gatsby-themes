@@ -1,10 +1,12 @@
 import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
+import prismPreset from "@theme-ui/prism/presets/github"
 
-const pageProjectContent = {
+const contentStyles = {
   px: [3, 3, 4, 5, 6],
   py: [3, 3, 4, 5, 5],
   maxWidth: `6xl`,
+  margin: `0 auto`,
 }
 
 const theme = merge(tailwind, {
@@ -29,10 +31,16 @@ const theme = merge(tailwind, {
   },
   content: {
     page: {
-      ...pageProjectContent,
+      ...contentStyles,
     },
     project: {
-      ...pageProjectContent,
+      ...contentStyles,
+    },
+    imageList: {
+      ...contentStyles,
+      ".gatsby-image-wrapper:not(:last-child)": {
+        marginBottom: 5,
+      },
     },
   },
   text: {
@@ -58,39 +66,54 @@ const theme = merge(tailwind, {
       },
     },
     p: {
-      fontSize: [1, 2],
+      fontSize: 1,
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
       "--x-height-multiplier": 0.35,
+      img: {
+        maxWidth: `100%`,
+      },
+      a: {
+        color: `primary`,
+        "&:hover, &:focus": {
+          textDecoration: `underline`,
+        },
+      },
     },
     h1: {
       variant: `text.heading`,
-      fontSize: [5, 5, 6],
+      fontSize: [5, 5, 5, 5, 6],
       mt: 2,
     },
     h2: {
       variant: `text.heading`,
-      fontSize: [4, 4, 5],
+      fontSize: [4, 4, 4, 4, 5],
       mt: 2,
     },
     h3: {
       variant: `text.heading`,
-      fontSize: [3, 3, 4],
+      fontSize: [3, 3, 3, 3, 4],
       mt: 3,
     },
     h4: {
       variant: `text.heading`,
-      fontSize: [2, 2, 3],
+      fontSize: [2, 2, 2, 2, 3],
     },
     h5: {
       variant: `text.heading`,
-      fontSize: [1, 1, 2],
+      fontSize: [1, 1, 1, 1, 2],
     },
     h6: {
       variant: `text.heading`,
       fontSize: 1,
       mb: 2,
+    },
+    pre: {
+      ...prismPreset,
+      padding: 2,
+      whiteSpace: `pre-wrap`,
+      wordBreak: `keep-all`,
     },
   },
 })

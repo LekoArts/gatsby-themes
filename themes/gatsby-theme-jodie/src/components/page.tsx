@@ -22,7 +22,7 @@ const Page: React.FC<PageProps<DataProps>> = ({ data: { page }, location }) => (
     <SEO title={page.title} description={page.excerpt} pathname={location.pathname} />
     <div
       sx={{
-        variant: `content.page`,
+        variant: page.custom ? `content.custom` : `content.page`,
       }}
     >
       <MDXRenderer>{page.body}</MDXRenderer>

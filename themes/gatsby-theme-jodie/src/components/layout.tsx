@@ -36,6 +36,11 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
           background: theme.colors.primary,
           color: theme.colors.white,
         },
+        "ul > li > code, ol > li > code, p > code": {
+          color: `#393A34`,
+          background: `#f6f8fa`,
+          padding: 2,
+        },
         "@media(max-width: 600px)": {
           html: {
             fontSize: `16px`,

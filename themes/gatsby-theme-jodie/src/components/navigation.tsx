@@ -1,5 +1,4 @@
 /** @jsx jsx */
-// @ts-ignore
 import { jsx, Link as TLink } from "theme-ui"
 import * as React from "react"
 import { Link } from "gatsby"
@@ -29,6 +28,7 @@ const Navigation = ({ bg }: { bg: string }) => {
           color: readableColor(bg),
           textDecoration: `none`,
           fontSize: [1, 2, 2, 3],
+          marginLeft: [2, 3, 3, 0],
           "&:hover,&:focus": {
             color: readableColor(bg, `primary`, `primaryLight`, false),
           },
