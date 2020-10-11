@@ -1,5 +1,4 @@
 /** @jsx jsx */
-// @ts-ignore
 import { jsx, Link, useThemeUI } from "theme-ui"
 import { readableColor } from "polished"
 import useSiteMetadata from "../hooks/use-site-metadata"
@@ -17,12 +16,13 @@ const Footer = ({ bg }: { bg: string }) => {
   return (
     <footer
       sx={{
-        position: `fixed`,
-        width: (t: any): any => [`100%`, `100%`, t.sidebar.normal, t.sidebar.normal, t.sidebar.wide],
+        position: [`relative`, `relative`, `relative`, `fixed`],
+        width: (t: any): any => [`100%`, `100%`, `100%`, t.sidebar.normal, t.sidebar.wide],
         bottom: 0,
         color: text,
         fontSize: 0,
         p: [3, 3, 4],
+        background: bg,
         a: {
           color: readableColor(bg),
           "&:hover,&:focus": {

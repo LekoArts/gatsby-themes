@@ -250,6 +250,17 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
           slug
+          ... on MdxProject {
+            parent {
+              ... on Mdx {
+                parent {
+                  ... on File {
+                    relativeDirectory
+                  }
+                }
+              }
+            }
+          }
         }
       }
       allPage {
@@ -275,6 +286,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         context: {
           slug: project.slug,
           formatString,
+          relativeDirectory: project.parent.parent.relativeDirectory,
         },
       })
     })

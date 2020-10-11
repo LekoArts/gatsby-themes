@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import * as React from "react"
-import "typeface-work-sans"
+import "fontsource-work-sans/latin.css"
 import { Global } from "@emotion/core"
 import Wrapper from "./layout-wrapper"
 import Sidebar from "./sidebar"
 import Footer from "./footer"
 import SEO from "./seo"
+import { SkipNavTarget, SkipNavTrigger } from "./skip-nav"
 
 type LayoutProps = { children: React.ReactNode; color?: string }
 
@@ -43,9 +44,13 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
       })}
     />
     <SEO />
+    <SkipNavTrigger />
     <Wrapper>
       <Sidebar bg={color} />
-      <main sx={{ gridColumnStart: [1, 1, 1, 2] }}>{children}</main>
+      <main sx={{ gridColumnStart: [1, 1, 1, 2] }}>
+        <SkipNavTarget />
+        {children}
+      </main>
       <Footer bg={color} />
     </Wrapper>
   </React.Fragment>

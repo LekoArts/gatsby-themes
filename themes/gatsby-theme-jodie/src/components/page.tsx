@@ -1,6 +1,10 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import * as React from "react"
 import { PageProps } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
+import SEO from "./seo"
 
 type DataProps = {
   page: {
@@ -13,11 +17,16 @@ type DataProps = {
   }
 }
 
-const Page: React.FC<PageProps<DataProps>> = ({ data: { page } }) => (
+const Page: React.FC<PageProps<DataProps>> = ({ data: { page }, location }) => (
   <Layout color={page.color || undefined}>
-    <h1>{page.title}</h1>
-    <div>
-      <pre>{JSON.stringify(page, null, 2)}</pre>
+    <SEO title={page.title} description={page.excerpt} pathname={location.pathname} />
+    <div
+      sx={{
+        px: [3, 3, 4, 6],
+        py: [3, 3, 4, 5],
+      }}
+    >
+      <MDXRenderer>{page.body}</MDXRenderer>
     </div>
   </Layout>
 )

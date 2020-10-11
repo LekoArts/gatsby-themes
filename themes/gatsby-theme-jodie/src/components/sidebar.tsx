@@ -15,21 +15,23 @@ const Sidebar = ({ bg }: SidebarProps) => {
     <div
       sx={{
         p: [3, 3, 4],
-        width: (t: any): any => [`100%`, `100%`, `100%`, t.sidebar.normal, t.sidebar.normal, t.sidebar.wide],
+        width: (t: any): any => [`100%`, `100%`, `100%`, t.sidebar.normal, t.sidebar.wide],
         background: bg,
         position: [`relative`, `relative`, `relative`, `fixed`],
         height: `100%`,
         display: `flex`,
-        flexDirection: `column`,
+        flexDirection: [`row`, `row`, `row`, `column`],
+        alignItems: [`center`, `center`, `center`, `flex-start`],
+        justifyContent: [`space-between`, `space-between`, `space-between`, `flex-start`],
         svg: {
           fill: readableColor(bg),
         },
       }}
     >
-      <Link to="/" aria-label={`${siteTitle}, Back to Home`} sx={{ width: [`3rem`, `4rem`, `5rem`] }}>
+      <Link to="/" aria-label={`${siteTitle}, Back to Home`} sx={{ width: [`3rem`, `4rem`, `4.5rem`, `5rem`] }}>
         <Logo />
       </Link>
-      <div sx={{ py: 4 }} />
+      <div sx={{ py: 4, display: [`none`, `none`, `none`, `block`] }} />
       <Navigation bg={bg} />
     </div>
   )
