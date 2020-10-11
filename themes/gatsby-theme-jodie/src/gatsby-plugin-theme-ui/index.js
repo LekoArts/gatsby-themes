@@ -1,6 +1,12 @@
 import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
+const pageProjectContent = {
+  px: [3, 3, 4, 5, 6],
+  py: [3, 3, 4, 5, 5],
+  maxWidth: `6xl`,
+}
+
 const theme = merge(tailwind, {
   initialColorModeName: `light`,
   useCustomProperties: true,
@@ -20,6 +26,14 @@ const theme = merge(tailwind, {
   },
   fonts: {
     body: `"Work Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
+  },
+  content: {
+    page: {
+      ...pageProjectContent,
+    },
+    project: {
+      ...pageProjectContent,
+    },
   },
   text: {
     heading: {
@@ -52,26 +66,26 @@ const theme = merge(tailwind, {
     },
     h1: {
       variant: `text.heading`,
-      fontSize: [5, 6],
+      fontSize: [5, 5, 6],
       mt: 2,
     },
     h2: {
       variant: `text.heading`,
-      fontSize: [4, 5],
+      fontSize: [4, 4, 5],
       mt: 2,
     },
     h3: {
       variant: `text.heading`,
-      fontSize: [3, 4],
+      fontSize: [3, 3, 4],
       mt: 3,
     },
     h4: {
       variant: `text.heading`,
-      fontSize: [2, 3],
+      fontSize: [2, 2, 3],
     },
     h5: {
       variant: `text.heading`,
-      fontSize: [1, 2],
+      fontSize: [1, 1, 2],
     },
     h6: {
       variant: `text.heading`,

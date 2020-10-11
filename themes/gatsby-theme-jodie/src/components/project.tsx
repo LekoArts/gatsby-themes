@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Heading } from "theme-ui"
 import * as React from "react"
 import { PageProps } from "gatsby"
 import Layout from "./layout"
@@ -30,12 +30,13 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { project, images }, lo
     <SEO title={project.title} description={project.excerpt} pathname={location.pathname} />
     <div
       sx={{
-        px: [3, 3, 4, 6],
-        py: [3, 3, 4, 5],
+        variant: `content.project`,
       }}
     >
-      <div sx={{ fontSize: 2, textTransform: `uppercase`, letterSpacing: `wider` }}>{project.category}</div>
-      <h1 sx={{ mt: 0 }}>{project.title}</h1>
+      <div sx={{ fontSize: 2, textTransform: `uppercase`, letterSpacing: `wider`, mb: 2 }}>{project.category}</div>
+      <Heading variant="styles.h1" sx={{ mt: 0 }}>
+        {project.title}
+      </Heading>
       <div sx={{ maxWidth: `600px` }}>
         <pre sx={{ maxWidth: `600px` }}>{JSON.stringify(images, null, 2)}</pre>
       </div>
