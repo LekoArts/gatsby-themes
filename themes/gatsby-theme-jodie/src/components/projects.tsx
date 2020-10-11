@@ -7,6 +7,8 @@ import Layout from "./layout"
 import { ChildImageSharp } from "../types"
 import SEO from "./seo"
 import GridItem from "./grid-item"
+import locales from "../locales"
+import { visuallyHidden } from "../styles/utils"
 
 type DataProps = {
   projects: {
@@ -21,6 +23,9 @@ type DataProps = {
 const Project: React.FC<PageProps<DataProps>> = ({ data: { projects }, location }) => (
   <Layout>
     <SEO title="Projects" pathname={location.pathname} />
+    <h1 sx={visuallyHidden} data-testid="page-title">
+      {locales.projects}
+    </h1>
     <div
       sx={{
         display: `grid`,
@@ -29,7 +34,7 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { projects }, location 
       }}
     >
       {projects.nodes.map((project) => (
-        <GridItem to={project.slug} key={project.slug} aria-label={`View project: ${project.shortTitle}`}>
+        <GridItem to={project.slug} key={project.slug} data-testid={project.shortTitle}>
           <Img fluid={project.cover.childImageSharp.fluid} />
           <span>{project.shortTitle}</span>
         </GridItem>

@@ -19,6 +19,13 @@ type DataProps = {
     title: string
     shortTitle: string
     category: string
+    cover: {
+      childImageSharp: {
+        resize: {
+          src: string
+        }
+      }
+    }
   }
   images: {
     nodes: {
@@ -30,7 +37,12 @@ type DataProps = {
 
 const Project: React.FC<PageProps<DataProps>> = ({ data: { project, images }, location }) => (
   <Layout color={project.color || undefined}>
-    <SEO title={project.title} description={project.excerpt} pathname={location.pathname} />
+    <SEO
+      title={project.title}
+      description={project.excerpt}
+      pathname={location.pathname}
+      image={project.cover.childImageSharp.resize.src}
+    />
     <div sx={{ variant: `content.project` }}>
       <div sx={{ fontSize: 2, textTransform: `uppercase`, letterSpacing: `wider`, mb: 2 }}>{project.category}</div>
       <Heading as="h1" variant="styles.h1" sx={{ mt: 0 }}>

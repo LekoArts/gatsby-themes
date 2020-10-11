@@ -1,14 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import * as React from "react"
+import { visuallyHidden } from "../styles/utils"
 
 const triggerCss = {
-  border: 0,
-  clip: `rect(0 0 0 0)`,
-  height: `1px`,
-  width: `1px`,
-  margin: `-1px`,
-  overflow: `hidden`,
+  ...visuallyHidden,
   position: `fixed`,
   zIndex: 9999999,
   top: 4,

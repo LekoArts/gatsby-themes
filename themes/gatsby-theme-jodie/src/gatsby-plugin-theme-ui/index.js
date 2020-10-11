@@ -33,6 +33,10 @@ const theme = merge(tailwind, {
     page: {
       ...contentStyles,
     },
+    custom: {
+      margin: 0,
+      padding: 0,
+    },
     project: {
       ...contentStyles,
     },

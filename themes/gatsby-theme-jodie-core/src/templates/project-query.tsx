@@ -14,6 +14,13 @@ export const query = graphql`
       title
       shortTitle
       category
+      cover {
+        childImageSharp {
+          resize(width: 1200, quality: 85) {
+            src
+          }
+        }
+      }
     }
     images: allFile(
       filter: {

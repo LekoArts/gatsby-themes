@@ -21,9 +21,6 @@ const Navigation = ({ bg }: { bg: string }) => {
     <nav
       aria-label="Primary Navigation"
       sx={{
-        display: `flex`,
-        flexDirection: [`row`, `row`, `row`, `column`],
-        alignItems: `flex-start`,
         a: {
           color: readableColor(bg),
           textDecoration: `none`,
@@ -33,14 +30,24 @@ const Navigation = ({ bg }: { bg: string }) => {
             color: readableColor(bg, `primary`, `primaryLight`, false),
           },
         },
+        ul: {
+          margin: 0,
+          padding: 0,
+          li: {
+            listStyle: `none`,
+            display: [`inline-block`, `inline-block`, `inline-block`, `block`],
+          },
+        },
         variant: `navigation`,
       }}
     >
-      {navigation.map((navItem) => (
-        <PartialNavLink to={navItem.slug} key={navItem.slug}>
-          {navItem.name}
-        </PartialNavLink>
-      ))}
+      <ul>
+        {navigation.map((navItem) => (
+          <li key={navItem.slug}>
+            <PartialNavLink to={navItem.slug}>{navItem.name}</PartialNavLink>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }

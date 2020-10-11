@@ -12,11 +12,11 @@ const Sidebar = ({ bg }: SidebarProps) => {
   const { siteTitle } = useSiteMetadata()
 
   return (
-    <div
+    <header
       sx={{
         p: [3, 3, 4],
         width: (t: any): any => [`100%`, `100%`, `100%`, t.sidebar.normal, t.sidebar.wide],
-        background: bg,
+        backgroundColor: bg,
         position: [`relative`, `relative`, `relative`, `fixed`],
         height: `100%`,
         display: `flex`,
@@ -28,13 +28,14 @@ const Sidebar = ({ bg }: SidebarProps) => {
         },
         variant: `sidebar`,
       }}
+      data-testid="sidebar"
     >
       <Link to="/" aria-label={`${siteTitle}, Back to Home`} sx={{ width: [`3rem`, `4rem`, `4.5rem`, `5rem`] }}>
         <Logo />
       </Link>
       <div sx={{ py: 4, display: [`none`, `none`, `none`, `block`] }} />
       <Navigation bg={bg} />
-    </div>
+    </header>
   )
 }
 

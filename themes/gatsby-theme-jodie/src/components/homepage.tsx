@@ -7,6 +7,8 @@ import Layout from "./layout"
 import { ChildImageSharp } from "../types"
 import GridItem from "./grid-item"
 import { itemListWrapperStyles, itemStyles } from "../styles/item-list"
+import locales from "../locales"
+import { visuallyHidden } from "../styles/utils"
 
 type DataProps = {
   projects: {
@@ -43,10 +45,13 @@ const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } })
 
   return (
     <Layout>
+      <h1 sx={visuallyHidden} data-testid="page-title">
+        {locales.home}
+      </h1>
       <div className={`item-list-wrapper`} sx={itemListWrapperStyles}>
         <div className={`item-list div${divisor}`}>
           {items.map((item) => (
-            <GridItem to={item.slug} className="item" key={item.title} sx={itemStyles}>
+            <GridItem to={item.slug} className="item" key={item.title} sx={itemStyles} data-testid={item.title}>
               <Img fluid={item.cover.childImageSharp.fluid} />
               <span>{item.title}</span>
             </GridItem>

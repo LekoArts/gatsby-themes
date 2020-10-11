@@ -12,6 +12,13 @@ export const query = graphql`
       body
       color
       custom
+      cover {
+        childImageSharp {
+          resize(width: 1200, quality: 85) {
+            src
+          }
+        }
+      }
     }
   }
 `

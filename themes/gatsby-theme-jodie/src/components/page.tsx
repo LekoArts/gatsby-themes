@@ -14,16 +14,29 @@ type DataProps = {
     body: string
     color: string
     custom: boolean
+    cover: {
+      childImageSharp: {
+        resize: {
+          src: string
+        }
+      }
+    }
   }
 }
 
 const Page: React.FC<PageProps<DataProps>> = ({ data: { page }, location }) => (
   <Layout color={page.color || undefined}>
-    <SEO title={page.title} description={page.excerpt} pathname={location.pathname} />
+    <SEO
+      title={page.title}
+      description={page.excerpt}
+      pathname={location.pathname}
+      image={page.cover.childImageSharp.resize.src}
+    />
     <div
       sx={{
         variant: page.custom ? `content.custom` : `content.page`,
       }}
+      data-testid="page-content"
     >
       <MDXRenderer>{page.body}</MDXRenderer>
     </div>
