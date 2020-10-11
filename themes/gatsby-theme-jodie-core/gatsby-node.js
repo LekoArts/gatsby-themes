@@ -94,6 +94,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       title: String!
       color: String
       custom: Boolean @defaultFalse
+      cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
@@ -103,6 +104,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       title: String!
       color: String
       custom: Boolean @defaultFalse
+      cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
@@ -172,6 +174,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       slug: node.frontmatter.slug,
       color: node.frontmatter.color ? node.frontmatter.color : undefined,
       custom: node.frontmatter.custom,
+      cover: node.frontmatter.cover,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)

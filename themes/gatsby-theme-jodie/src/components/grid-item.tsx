@@ -3,7 +3,7 @@ import { jsx } from "theme-ui"
 import * as React from "react"
 import { Link } from "gatsby"
 
-const GridItem: React.FC<{ to: string }> = ({ children, to, ...props }) => (
+const GridItem: React.FC<{ to: string; className?: string }> = ({ children, to, ...props }) => (
   // @ts-ignore
   <Link
     to={to}
@@ -15,6 +15,16 @@ const GridItem: React.FC<{ to: string }> = ({ children, to, ...props }) => (
         right: 0,
         bottom: 0,
         left: 0,
+      },
+      "> div:before": {
+        position: `absolute`,
+        content: `''`,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 5,
+        background: `linear-gradient(45deg, rgba(22,22,22,0) 75%, rgba(0,0,0,0.35) 100%)`,
       },
       "> div:after": {
         position: `absolute`,
@@ -39,7 +49,7 @@ const GridItem: React.FC<{ to: string }> = ({ children, to, ...props }) => (
         fontWeight: `bold`,
         fontSize: [3, 3, 4],
         padding: 3,
-        textShadow: `0 1px 3px rgba(0, 0, 0, 0.1)`,
+        textShadow: `0 1px 4px rgba(0, 0, 0, 0.5)`,
       },
       "&:hover": {
         "> div img": {
@@ -48,10 +58,14 @@ const GridItem: React.FC<{ to: string }> = ({ children, to, ...props }) => (
       },
       "&:focus": {
         outline: `none`,
+        "> div img": {
+          transform: `scale(1.01)`,
+        },
         "> div:after": {
-          boxShadow: (t) => `inset 0 0 0 8px ${t.colors.white}`,
+          boxShadow: (t) => `inset 0 0 0 7px ${t.colors.white}`,
         },
       },
+      variant: `grid-item`,
     }}
     {...props}
   >

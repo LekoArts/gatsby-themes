@@ -33,6 +33,7 @@ const Navigation = ({ bg }: { bg: string }) => {
             color: readableColor(bg, `primary`, `primaryLight`, false),
           },
         },
+        variant: `navigation`,
       }}
     >
       {navigation.map((navItem) => (

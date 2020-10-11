@@ -26,6 +26,7 @@ const Sidebar = ({ bg }: SidebarProps) => {
         svg: {
           fill: readableColor(bg),
         },
+        variant: `sidebar`,
       }}
     >
       <Link to="/" aria-label={`${siteTitle}, Back to Home`} sx={{ width: [`3rem`, `4rem`, `4.5rem`, `5rem`] }}>

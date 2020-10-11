@@ -24,12 +24,12 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { projects }, location 
     <div
       sx={{
         display: `grid`,
-        gridTemplateColumns: `1fr 1fr`,
+        gridTemplateColumns: [`1fr`, `1fr 1fr`],
         gridAutoRows: `50vw`,
       }}
     >
       {projects.nodes.map((project) => (
-        <GridItem to={project.slug} key={project.slug}>
+        <GridItem to={project.slug} key={project.slug} aria-label={`View project: ${project.shortTitle}`}>
           <Img fluid={project.cover.childImageSharp.fluid} />
           <span>{project.shortTitle}</span>
         </GridItem>

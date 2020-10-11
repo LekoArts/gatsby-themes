@@ -19,12 +19,12 @@ const triggerCss = {
   color: `text`,
   textDecoration: `none`,
   boxShadow: `lg`,
-
   "&:focus": {
     width: `auto`,
     height: `auto`,
     clip: `auto`,
   },
+  variant: `skip-nav`,
 }
 
 export type SkipNavProps = {

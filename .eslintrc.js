@@ -66,6 +66,8 @@ module.exports = {
     "no-console": [`warn`, { allow: [`warn`] }],
     "spaced-comment": [2, `always`, { exceptions: [`-`, `+`], markers: [`/`] }],
     "no-use-before-define": 0,
+    "no-plusplus": 0,
+    "no-continue": 0,
     "linebreak-style": 0,
     "consistent-return": 0,
     import: 0,
