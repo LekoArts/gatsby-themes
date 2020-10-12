@@ -26,7 +26,7 @@
     </a>
 </p>
 
-Core Theme for [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie). This theme implements the TODO node interfaces and exports templates (+ queries) which you can shadow.
+Core Theme for [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie). This theme implements the `Project` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
 
 Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
@@ -42,7 +42,12 @@ npm install @lekoarts/gatsby-theme-jodie-core
 
 | Key      | Default Value | Description |
 | -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| `basePath` | `/`          | Root url for the theme        |
+| `projectsPath` | `content/projects`          | Location of projects        |
+| `projectsUrl` | `/projects`          | url for the projects overview        |
+| `projectsPrefix` | `/`          | Prefix for all individual projects        |
+| `pagesPath` | `content/pages`          | Location of pages        |
+| `formatString` | `DD.MM.YYYY`          | Configure the date format for Date fields        |
 
 ### Shadowing
 

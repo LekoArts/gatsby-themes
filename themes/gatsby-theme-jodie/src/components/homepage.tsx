@@ -50,12 +50,18 @@ const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } })
       </h1>
       <div className={`item-list-wrapper`} sx={itemListWrapperStyles}>
         <div className={`item-list div${divisor}`}>
-          {items.map((item) => (
-            <GridItem to={item.slug} className="item" key={item.title} sx={itemStyles} data-testid={item.title}>
-              <Img fluid={item.cover.childImageSharp.fluid} />
-              <span>{item.title}</span>
-            </GridItem>
-          ))}
+          {items.length > 0 ? (
+            items.map((item) => (
+              <GridItem to={item.slug} className="item" key={item.title} sx={itemStyles} data-testid={item.title}>
+                <Img fluid={item.cover.childImageSharp.fluid} />
+                <span>{item.title}</span>
+              </GridItem>
+            ))
+          ) : (
+            <div sx={{ padding: 3 }}>
+              No projects and pages found at the locations defined for "projectsPath" and "pagesPath"
+            </div>
+          )}
         </div>
       </div>
     </Layout>

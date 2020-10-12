@@ -235,7 +235,7 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, projectsUrl, formatString } = withDefaults(themeOptions)
+  const { basePath, projectsUrl, projectsPrefix, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -283,7 +283,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (projects.length > 0) {
     projects.forEach((project) => {
       createPage({
-        path: `/${basePath}/${project.slug}`.replace(/\/\/+/g, `/`),
+        path: `/${basePath}${projectsPrefix}${project.slug}`.replace(/\/\/+/g, `/`),
         component: projectTemplate,
         context: {
           slug: project.slug,

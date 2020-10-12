@@ -33,12 +33,16 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { projects }, location 
         gridAutoRows: `50vw`,
       }}
     >
-      {projects.nodes.map((project) => (
-        <GridItem to={project.slug} key={project.slug} data-testid={project.shortTitle}>
-          <Img fluid={project.cover.childImageSharp.fluid} />
-          <span>{project.shortTitle}</span>
-        </GridItem>
-      ))}
+      {projects.nodes.length > 0 ? (
+        projects.nodes.map((project) => (
+          <GridItem to={project.slug} key={project.slug} data-testid={project.shortTitle}>
+            <Img fluid={project.cover.childImageSharp.fluid} />
+            <span>{project.shortTitle}</span>
+          </GridItem>
+        ))
+      ) : (
+        <div sx={{ padding: 3 }}>No projects found at the location defined for "projectsPath"</div>
+      )}
     </div>
   </Layout>
 )
