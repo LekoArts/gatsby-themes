@@ -12,6 +12,7 @@ import About3 from "../components/about3"
 import Contact from "../components/contact"
 import Video from "../components/video"
 import Schemetics from "../components/schemetics"
+import Header from "../components/header"
 
 const Cara = () => (
   <Layout>
@@ -24,9 +25,9 @@ const Cara = () => (
       <About3 offset={6} factor={1} />
       <Photo2 offset={7} factor={0.5} />
       <CodePhoto offset={8} factor={1} />
-      <Video offset={9} factor={1} />
-      <Schemetics offset={10} factor={1} />
-      <Contact offset={11} factor={1} />
+      {/* <Video offset={9} factor={1} /> */}
+      <Schemetics offset={9} factor={1} />
+      <Contact offset={10} factor={1} />
     </Parallax>
   </Layout>
 )
