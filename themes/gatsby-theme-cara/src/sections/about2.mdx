@@ -1,0 +1,11 @@
+## Working of RFID Based Access Control System using Arduino
+
+> On starting the project for the first time, it will ask you to define a master tag and whichever tag you will scan will be your master tag. The master tag will act as programmer and you can use it to add or remove other tags.
+
+After defining the master tag, you will have to add other tags that you can use to open the door. To do this, scan the master tag and it will take the system into program mode.
+
+In the program mode, scanning the tags will add/Remove these from the system. Scan the tags that you want to use to open the door and system will store the UID’s of these tags in the EEPROM. Scan the tag again to remove it from the EEPROM. To exit the program mode, scan the master tag.
+
+Now scan the tags that you have added in the system to open the door and on scanning the wrong tag, the door will remain closed.
+
+To reset the system, press the reset button of Arduino and then long press the wipe button for 10 seconds. This will remove all the data from the EEPROM including the master tag.

@@ -1,0 +1,15 @@
+## Circuit Diagram and Explanation
+
+> The RFID reader communicates with the Arduino through the SPI protocol and different Arduino boards have different SPI pins.
+
+To test if the RFID reader is working properly or not, upload the “dumpinfo” from the examples in the Arduino and see if it is showing the information of the tags on the serial monitor or not. If you are new to RFID, then follow this tutorial | RFID basics and RFID module interfacing with Arduino
+
+The I2C LCD communicates with the Arduino through the I2C protocol. Different Arduino boards have different I2C pins. The I2C pins on Arduino Uno and Arduino Nano are A4, A5.
+
+After that, make the connections of Arduino with servo, LED's, buzzer and push button.
+
+In the end, connect the power source to the Arduino. I have used three 18650 cells. We can give 6 to 12V to the Arduino through the barrel jack.
+
+The complete circuit diagram for RFID Based Access Control System using Arduino is as follows
+
+`gist:d3vsh4/0d1218953a0fe237344621ab5884a727#mycode.cpp`

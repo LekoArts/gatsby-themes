@@ -18,6 +18,7 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
         path: `${__dirname}/src/sections`,
       },
     },
+    
     mdx && {
       resolve: `gatsby-plugin-mdx`,
       options: {},

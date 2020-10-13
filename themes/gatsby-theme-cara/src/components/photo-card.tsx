@@ -1,29 +1,35 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
+import { Image } from 'theme-ui'
 
-type ProjectCardProps = {
+type PhotoCardProps = {
   link: string
   title: string
   children: React.ReactNode
   bg: string
 }
 
-const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
+const PhotoCard = ({ link, title, children, bg }: PhotoCardProps) => (
   <a
     href={link}
     target="_blank"
     rel="noreferrer noopener"
     sx={{
-      width: `100%`,
+      // width: `100%`,
       boxShadow: `lg`,
       position: `relative`,
       textDecoration: `none`,
       borderRadius: `lg`,
-      px: 4,
-      py: [4, 5],
+      overflow: `hidden`,
+      // lineHeight: `0px`,
+      marginTop: `5%`,
+
+      // px: 4,
+      // py: [4, 5],
       color: `white`,
-      background: bg || `none`,
+      // background: bg || `none`,
+      background: `none`,
       transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
       "&:hover": {
         color: `white !important`,
@@ -32,8 +38,8 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       },
     }}
   >
-    <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`, lineHeight: `1.5` }}>{children}</div>
-    <div
+    {children ? <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>:null}
+    {title? <div
       sx={{
         textTransform: `uppercase`,
         letterSpacing: `wide`,
@@ -44,8 +50,14 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       }}
     >
       {title}
+    </div>:null}
+    <div
+      sx={{ maxHeight: `800px`, overflowY: `auto`}}
+      onScroll={e => e.stopPropagation()}
+    >
+      <Image src={link} alt="" width="100%" />
     </div>
   </a>
 )
 
-export default ProjectCard
+export default PhotoCard

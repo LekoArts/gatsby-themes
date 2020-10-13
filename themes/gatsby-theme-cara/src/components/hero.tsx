@@ -42,7 +42,11 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
       <Inner>
         <Intro />
       </Inner>
+      <video autoPlay loop muted width="100%">
+                <source src="https://hackster.imgix.net/uploads/attachments/637925/rfid_based_access_control_system_using_arduino_4OnDV4RILD.gif?auto=compress&gifq=35&w=900&h=675&fit=min&fm=mp4" type="video/mp4" />
+            </video> 
     </Content>
+    
   </div>
 )
 
