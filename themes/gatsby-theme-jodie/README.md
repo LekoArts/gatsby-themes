@@ -26,7 +26,7 @@
     </a>
 </p>
 
-TODO
+Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and
 
 [![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://jodie.lekoarts.de)
 
