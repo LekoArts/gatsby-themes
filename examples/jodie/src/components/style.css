@@ -101,3 +101,13 @@
   overflow: hidden;
   position: absolute;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .instagram-title {
+    transform: translateY(0);
+  }
+
+  .instagram-bottom {
+    transform: translateY(0);
+  }
+}

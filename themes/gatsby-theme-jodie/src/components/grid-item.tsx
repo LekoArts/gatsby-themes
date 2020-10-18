@@ -53,16 +53,25 @@ const GridItem: React.FC<{ to: string; className?: string }> = ({ children, to, 
       },
       "&:hover": {
         "> div img": {
-          transform: `scale(1.1)`,
+          transform: `scale(1.05)`,
         },
       },
       "&:focus": {
         outline: `none`,
-        "> div img": {
-          transform: `scale(1.01)`,
-        },
         "> div:after": {
           boxShadow: (t) => `inset 0 0 0 7px ${t.colors.white}`,
+          zIndex: 10,
+        },
+      },
+      "@media screen and (prefers-reduced-motion: reduce)": {
+        "&:hover": {
+          "> div img": {
+            transform: `scale(1)`,
+          },
+          "> div:after": {
+            boxShadow: (t) => `inset 0 0 0 7px ${t.colors.white}`,
+            zIndex: 10,
+          },
         },
       },
       variant: `grid-item`,
