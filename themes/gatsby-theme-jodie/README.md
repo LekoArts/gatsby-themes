@@ -26,17 +26,21 @@
     </a>
 </p>
 
-Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and
+Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.
 
 [![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://jodie.lekoarts.de)
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-jodie).
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also, be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
 ## Features
 
-- TODO
+- MDX
+- Theme UI-based theming
+- Create a project by creating an MDX file and dropping the images into the same folder
+- Extensible custom pages
+- Define colors for each page and the sidebar & content will adapt while maintaining WCAG 2 AA contrast ratios
 
 ## Installation
 
@@ -58,9 +62,15 @@ gatsby new jodie LekoArts/gatsby-starter-portfolio-jodie
 
 ### Theme options
 
-| Key      | Default Value | Description |
-| -------- | ------------- | ----------- |
-| `option` | `{}`          | text        |
+| Key              | Default Value      | Description                                     |
+| ---------------- | ------------------ | ----------------------------------------------- |
+| `basePath`       | `/`                | Root url for the theme                          |
+| `projectsPath`   | `content/projects` | Location of projects                            |
+| `projectsUrl`    | `/projects`        | url for the projects overview                   |
+| `projectsPrefix` | `/`                | Prefix for all individual projects              |
+| `pagesPath`      | `content/pages`    | Location of pages                               |
+| `formatString`   | `DD.MM.YYYY`       | Configure the date format for Date fields       |
+| `navigation`     | `[]`               | Add links to your internal sites to the sidebar |
 
 #### Example usage
 
@@ -71,7 +81,11 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-jodie`,
       options: {
-          // TODO
+          navigation: [
+            { name: `Projects`, slug: `/projects` },
+            { name: `Instagram`, slug: `/instagram` },
+            { name: `About`, slug: `/about` },
+          ],
         }
       }
     }
@@ -96,7 +110,7 @@ module.exports = {
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: `https://jodie.lekoarts.de`,
     // Used for SEO
-    siteDescription: `TODO`,
+    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
     // Will be set on the html tag
     siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
@@ -109,7 +123,7 @@ module.exports = {
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie/` to shadow/override files.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/themes/shadowing/) to understand how to customize this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie/` to shadow/override files.
 
 ## 🌟 Supporting me
 

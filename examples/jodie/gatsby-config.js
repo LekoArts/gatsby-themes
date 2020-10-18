@@ -10,7 +10,13 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-jodie`,
       // See the theme's README for all available options
-      options: {},
+      options: {
+        navigation: [
+          { name: `Projects`, slug: `/projects` },
+          { name: `Instagram`, slug: `/instagram` },
+          { name: `About`, slug: `/about` },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -30,10 +36,10 @@ module.exports = {
       options: {
         name: `jodie - @lekoarts/gatsby-theme-jodie`,
         short_name: `jodie`,
-        description: `Stub description for jodie`,
+        description: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#b83280`,
+        background_color: `#ffffff`,
+        theme_color: `#b75e09`,
         display: `standalone`,
         icons: [
           {

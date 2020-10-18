@@ -5,6 +5,7 @@ module.exports = (themeOptions) => {
   const projectsPrefix = themeOptions.projectsPrefix || `/`
   const pagesPath = themeOptions.pagesPath || `content/pages`
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
+  const navigation = themeOptions.navigation || []
 
   return {
     basePath,
@@ -13,5 +14,6 @@ module.exports = (themeOptions) => {
     projectsPrefix,
     pagesPath,
     formatString,
+    navigation,
   }
 }

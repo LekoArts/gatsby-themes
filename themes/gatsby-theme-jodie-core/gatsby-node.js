@@ -196,25 +196,26 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   }
 }
 
-exports.sourceNodes = (
-  { actions, createContentDigest },
-  {
-    navigation = [
-      { name: `Projects`, slug: `/projects` },
-      { name: `Instagram`, slug: `/instagram` },
-      { name: `About`, slug: `/about` },
-    ],
-  }
-) => {
+exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
   const { createNode } = actions
 
+  const { projectsPrefix, basePath, formatString, navigation, pagesPath, projectsPath, projectsUrl } = withDefaults(
+    themeOptions
+  )
+
   const jodieConfig = {
+    projectsPrefix,
+    basePath,
+    formatString,
     navigation,
+    pagesPath,
+    projectsPath,
+    projectsUrl,
   }
 
   createNode({
     ...jodieConfig,
-    id: `@lekoarts/gatsby-theme-emilia-core-config`,
+    id: `@lekoarts/gatsby-theme-jodie-core-config`,
     parent: null,
     children: [],
     internal: {

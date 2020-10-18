@@ -5,16 +5,6 @@ module.exports = (themeOptions) => {
   const { mdx = true } = themeOptions
 
   return {
-    siteMetadata: {
-      siteTitle: `Jodie`,
-      siteTitleAlt: `Jodie - @lekoarts/gatsby-theme-jodie-core`,
-      siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
-      siteUrl: `https://jodie.lekoarts.de`,
-      siteDescription: `TODO`,
-      siteLanguage: `en`,
-      siteImage: `/banner.jpg`,
-      author: `@lekoarts_de`,
-    },
     plugins: [
       {
         resolve: `gatsby-source-filesystem`,

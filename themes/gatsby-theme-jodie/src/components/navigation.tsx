@@ -5,15 +5,6 @@ import { Link } from "gatsby"
 import { readableColor } from "polished"
 import useJodieConfig from "../hooks/use-jodie-config"
 
-const isPartiallyActive = ({ isPartiallyCurrent }: { isPartiallyCurrent: boolean }) =>
-  isPartiallyCurrent ? { className: `navlink-active navlink` } : { className: `navlink` }
-
-const PartialNavLink = ({ children, to, ...rest }: { children: React.ReactNode; to: string }) => (
-  <TLink as={Link} getProps={isPartiallyActive} to={to} {...rest}>
-    {children}
-  </TLink>
-)
-
 const Navigation = ({ bg }: { bg: string }) => {
   const { navigation } = useJodieConfig()
 
@@ -44,7 +35,9 @@ const Navigation = ({ bg }: { bg: string }) => {
       <ul>
         {navigation.map((navItem) => (
           <li key={navItem.slug}>
-            <PartialNavLink to={navItem.slug}>{navItem.name}</PartialNavLink>
+            <TLink as={Link} to={navItem.slug}>
+              {navItem.name}
+            </TLink>
           </li>
         ))}
       </ul>

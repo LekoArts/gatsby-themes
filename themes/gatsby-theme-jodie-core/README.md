@@ -28,7 +28,7 @@
 
 Core Theme for [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie). This theme implements the `Project` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also, be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
 
 ## Installation
 
@@ -51,7 +51,7 @@ npm install @lekoarts/gatsby-theme-jodie-core
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! You can also have a look at [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie-core/` to shadow/override files.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/themes/shadowing/) to understand how to customize this theme! You can also have a look at [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie-core/` to shadow/override files.
 
 ## 🌟 Supporting me
 
