@@ -118,6 +118,16 @@ const code = {
       background: `#f9ac00`,
       color: `black`,
     },
+    'pre[class~="language-php"]:before': {
+      content: `"php"`,
+      background: `#777bb3`,
+      color: `black`,
+    },
+    'pre[class~="language-py"]:before, pre[class~="language-python"]:before': {
+      content: `"py"`,
+      background: `#306998`,
+      color: `white`,
+    },
     'pre[class~="language-text"]:before': {
       content: `"text"`,
     },
