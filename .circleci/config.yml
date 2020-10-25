@@ -146,6 +146,12 @@ jobs:
       - e2e-test:
           example-name: styleguide
 
+  e2e-test-jodie:
+    <<: *e2e-executor
+    steps:
+      - e2e-test:
+          example-name: jodie
+
 workflows:
   version: 2
   lint-test:
@@ -165,4 +171,6 @@ workflows:
       - e2e-test-minimal-blog:
           <<: *e2e-test-workflow
       - e2e-test-styleguide:
+          <<: *e2e-test-workflow
+      - e2e-test-jodie:
           <<: *e2e-test-workflow

@@ -1,0 +1,46 @@
+{
+  "name": "@lekoarts/gatsby-theme-jodie-core",
+  "version": "1.0.0",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Core Theme for @lekoarts/gatsby-theme-jodie. This theme implements the Project interface and exports templates (+ queries) which you can shadow.",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.24.67",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
+    "gatsby-plugin-mdx": "^1.2.43",
+    "gatsby-plugin-sharp": "^2.6.38",
+    "gatsby-source-filesystem": "^2.3.32",
+    "gatsby-transformer-sharp": "^2.5.16",
+    "lodash.kebabcase": "^4.1.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-jodie-core"
+  }
+}

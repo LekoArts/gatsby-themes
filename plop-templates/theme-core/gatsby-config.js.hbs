@@ -1,0 +1,19 @@
+const withDefaults = require(`./utils/default-options`)
+
+module.exports = (themeOptions) => {
+  const options = withDefaults(themeOptions)
+
+  return {
+    plugins: [
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: options.contentPath,
+          path: options.contentPath,
+        },
+      },
+      `gatsby-transformer-sharp`,
+      `gatsby-plugin-sharp`,
+    ].filter(Boolean),
+  }
+}

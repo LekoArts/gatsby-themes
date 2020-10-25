@@ -1,0 +1,50 @@
+{
+  "name": "@lekoarts/gatsby-theme-jodie",
+  "version": "1.0.0",
+  "author": "LekoArts <hello@lekoarts.de>",
+  "description": "Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.",
+  "license": "MIT",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.24.67",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@lekoarts/gatsby-theme-jodie-core": "^1.0.0",
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "fontsource-work-sans": "^3.0.3",
+    "gatsby-image": "^2.4.20",
+    "gatsby-plugin-emotion": "^4.3.12",
+    "gatsby-plugin-react-helmet": "^3.3.12",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "polished": "^4.0.1",
+    "react-helmet": "^6.1.0",
+    "theme-ui": "^0.3.1"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "lekoarts"
+  ],
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "themes/gatsby-theme-jodie"
+  }
+}

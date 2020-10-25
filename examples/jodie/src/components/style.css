@@ -1,0 +1,113 @@
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.instagram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.instagram-link-styles {
+  position: relative;
+  overflow: hidden;
+}
+
+.instagram-link-styles:focus {
+  outline: none;
+}
+
+.instagram-content {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.instagram-title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.875rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-45px);
+  transition: all 0.4s ease 0s;
+  opacity: 0;
+}
+
+.instagram-bottom {
+  color: white;
+  transform: translateY(45px);
+  opacity: 0;
+  transition: all 0.4s ease 0s;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.instagram-heart {
+  display: flex;
+  align-items: center;
+}
+
+.instagram-heart svg {
+  margin-right: 0.5rem;
+}
+
+.instagram-link-styles > div img {
+  transition: all 0.3s ease 0s !important;
+}
+
+.instagram-link-styles:hover .instagram-overlay {
+  opacity: 1;
+}
+
+.instagram-link-styles:focus .instagram-overlay {
+  opacity: 1;
+  box-shadow: inset 0 0 0 7px white;
+}
+
+.instagram-link-styles:hover .instagram-bottom, .instagram-link-styles:focus .instagram-bottom {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.instagram-link-styles:hover .instagram-title, .instagram-link-styles:focus .instagram-title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .instagram-title {
+    transform: translateY(0);
+  }
+
+  .instagram-bottom {
+    transform: translateY(0);
+  }
+}
