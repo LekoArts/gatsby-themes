@@ -22,7 +22,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     })
     cy.waitForRouteChange()
       .assertRoute(`/blog`)
-      .get(`h2`)
+      .get(`h1`)
       .within(() => {
         cy.findByText(/Blog/i)
       })
@@ -35,7 +35,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .click()
       .waitForRouteChange()
       .assertRoute(`/tags/tutorial`)
-      .get(`h2`)
+      .get(`h1`)
       .within(() => {
         cy.findByText(/Tutorial/i)
       })
@@ -47,7 +47,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .click()
       .waitForRouteChange()
       .assertRoute(`/tags`)
-      .get(`h2`)
+      .get(`h1`)
       .within(() => {
         cy.findByText(/Tags/i)
       })
@@ -83,7 +83,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .click()
       .waitForRouteChange()
       .assertRoute(`/introduction-to-defence-against-the-dark-arts`)
-      .get(`h2`)
+      .get(`h1`)
       .within(() => {
         cy.findByText(/Introduction to "Defence against the Dark Arts"/i)
       })

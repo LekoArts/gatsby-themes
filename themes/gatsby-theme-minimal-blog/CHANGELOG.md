@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.4...@lekoarts/gatsby-theme-minimal-blog@2.6.5) (2020-10-25)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Use correct h1 on all pages ([#519](https://github.com/LekoArts/gatsby-themes/issues/519)) ([f6fdeb3](https://github.com/LekoArts/gatsby-themes/commit/f6fdeb38fd1fed4bc773681edae44fbf80096c17))
+
+
+
+
+
+## [2.6.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.3...@lekoarts/gatsby-theme-minimal-blog@2.6.4) (2020-10-25)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Add additional language PHP & PY flags ([#520](https://github.com/LekoArts/gatsby-themes/issues/520)) ([01f8e7f](https://github.com/LekoArts/gatsby-themes/commit/01f8e7f8af468376c58d39d03155f87a4ecb0e82))
+
+
+
+
+
+## [2.6.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.2...@lekoarts/gatsby-theme-minimal-blog@2.6.3) (2020-10-25)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#510](https://github.com/LekoArts/gatsby-themes/issues/510)) ([06ecc65](https://github.com/LekoArts/gatsby-themes/commit/06ecc65b784e8fd27d5354761211df14f7a72749))
+
+
+
+
+
 ## [2.6.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.1...@lekoarts/gatsby-theme-minimal-blog@2.6.2) (2020-10-10)
 
 **Note:** Version bump only for package @lekoarts/gatsby-theme-minimal-blog

@@ -44,7 +44,9 @@ const Post = ({ data: { post } }: PostProps) => (
       pathname={post.slug}
       canonicalUrl={post.canonicalUrl}
     />
-    <Heading variant="styles.h2">{post.title}</Heading>
+    <Heading as="h1" variant="styles.h1">
+      {post.title}
+    </Heading>
     <p sx={{ color: `secondary`, mt: 3, a: { color: `secondary` }, fontSize: [1, 1, 2] }}>
       <time>{post.date}</time>
       {post.tags && (
