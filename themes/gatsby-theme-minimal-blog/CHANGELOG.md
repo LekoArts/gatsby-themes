@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.3...@lekoarts/gatsby-theme-minimal-blog@2.6.4) (2020-10-25)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Add additional language PHP & PY flags ([#520](https://github.com/LekoArts/gatsby-themes/issues/520)) ([01f8e7f](https://github.com/LekoArts/gatsby-themes/commit/01f8e7f8af468376c58d39d03155f87a4ecb0e82))
+
+
+
+
+
 ## [2.6.3](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.2...@lekoarts/gatsby-theme-minimal-blog@2.6.3) (2020-10-25)
 
 
