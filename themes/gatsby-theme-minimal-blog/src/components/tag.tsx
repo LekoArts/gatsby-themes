@@ -36,8 +36,14 @@ const Tag = ({ posts, pageContext }: TagProps) => {
     <Layout>
       <SEO title={`Tag: ${pageContext.name}`} />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Heading variant="styles.h2">{pageContext.name}</Heading>
-        <TLink as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
+        <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
+          {pageContext.name}
+        </Heading>
+        <TLink
+          as={Link}
+          sx={{ variant: `links.secondary`, marginY: 2 }}
+          to={replaceSlashes(`/${basePath}/${tagsPath}`)}
+        >
           View all tags
         </TLink>
       </Flex>
