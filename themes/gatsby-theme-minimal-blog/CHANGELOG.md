@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.4...@lekoarts/gatsby-theme-minimal-blog@2.6.5) (2020-10-25)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog:** Use correct h1 on all pages ([#519](https://github.com/LekoArts/gatsby-themes/issues/519)) ([f6fdeb3](https://github.com/LekoArts/gatsby-themes/commit/f6fdeb38fd1fed4bc773681edae44fbf80096c17))
+
+
+
+
+
 ## [2.6.4](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.3...@lekoarts/gatsby-theme-minimal-blog@2.6.4) (2020-10-25)
 
 
