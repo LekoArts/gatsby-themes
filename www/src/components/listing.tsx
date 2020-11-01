@@ -14,8 +14,21 @@ type Props = {
       preview: string
       description: string
       shapes: {
-        color: string
-        type: string
+        color:
+          | `blue`
+          | `orange`
+          | `pink`
+          | `purple`
+          | `gray`
+          | `black`
+          | `red`
+          | `yellow`
+          | `green`
+          | `indigo`
+          | `teal`
+          | `darkIndigo`
+          | `strangerThings`
+        type: `circle` | `donut`
         size: string[]
         xOffset: string[]
         yOffset: string[]

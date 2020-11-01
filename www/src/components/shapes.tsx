@@ -3,7 +3,20 @@ import { jsx } from "theme-ui"
 
 type CircleProps = {
   size: string | string[]
-  color: string
+  color:
+    | `blue`
+    | `orange`
+    | `pink`
+    | `purple`
+    | `gray`
+    | `black`
+    | `red`
+    | `yellow`
+    | `green`
+    | `indigo`
+    | `teal`
+    | `darkIndigo`
+    | `strangerThings`
   top: string | string[]
   left?: string | string[]
   right?: string | string[]
