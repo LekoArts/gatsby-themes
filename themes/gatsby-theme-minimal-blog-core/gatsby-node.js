@@ -62,12 +62,12 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       description: String
       canonicalUrl: String
     }
-    
+
     type PostTag {
       name: String
       slug: String
     }
-    
+
     interface Page @nodeInterface {
       id: ID!
       slug: String!
@@ -75,7 +75,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
-    
+
     type MdxPost implements Node & Post {
       slug: String! @slugify
       title: String!
@@ -89,14 +89,14 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       description: String
       canonicalUrl: String
     }
-    
+
     type MdxPage implements Node & Page {
       slug: String!
       title: String!
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
-    
+
     type MinimalBlogConfig implements Node {
       basePath: String
       blogPath: String
@@ -108,12 +108,12 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       showLineNumbers: Boolean
       showCopyButton: Boolean
     }
-    
+
     type ExternalLink {
       name: String!
       url: String!
     }
-    
+
     type NavigationEntry {
       title: String!
       slug: String!
@@ -257,7 +257,7 @@ const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, blogPath, tagsPath, formatString } = withDefaults(themeOptions)
+  const { basePath, blogPath, tagsPath, formatString, postsPrefix } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -323,7 +323,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (pages.length > 0) {
     pages.forEach((page) => {
       createPage({
-        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
+        path: `/${basePath}${postsPrefix}${page.slug}`.replace(/\/\/+/g, `/`),
         component: pageTemplate,
         context: {
           slug: page.slug,
