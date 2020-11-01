@@ -27,8 +27,8 @@
     "start-server-and-test": "start-server-and-test",
     "concurrently": "concurrently",
     "changeset": "changeset",
-    "version-packages": "changeset bump",
-    "release": "changeset release"
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "husky": {
     "hooks": {
@@ -36,8 +36,8 @@
     }
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.2.7",
     "@changesets/cli": "^2.11.2",
-    "@changesets/get-github-info": "^0.4.4",
     "@testing-library/cypress": "^7.0.1",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.2",

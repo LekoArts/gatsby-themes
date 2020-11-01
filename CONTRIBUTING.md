@@ -4,16 +4,21 @@ Hi! I'm excited that you're interested in contributing to this project! Contribu
 
 All contributions are welcome, including opening and commenting on issues and pull requests, adding or updating the docs, bug fixes, blog posts, and suggestions for new features.
 
-The concept of Gatsby themes is rather new and best practices still need to be figured out. Therefore changes to themes need to evaluated in more detail (e.g. if they would be breaking). The time to review a pull request depends on the complexity involved, so please be patient if a particular feature takes longer to review than others. Especially since this project is currently only maintained by me, LekoArts.
+Changes to themes need to evaluated in more detail (e.g. if they would be breaking). The time to review a pull request depends on the complexity involved, so please be patient if a particular feature takes longer to review than others. Especially since this project is currently only maintained by me, LekoArts.
+
+## Prerequisites
+
+- [Node.js](http://nodejs.org/) >= v12 must be installed.
+- [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Local Development
 
-This repository uses [Yarn Workspaces][] and [Lerna][] to develop multiple packages together as a monorepo. Be sure to install [Yarn][] before setting up the development environment.
+This repository uses [Yarn Workspaces][] and [changesets][] to develop multiple packages together as a monorepo. Be sure to install [Yarn][] before setting up the development environment.
 
 Clone the repository:
 
 ```sh
-git clone git@github.com:LekoArts/gatsby-themes.git
+git clone git@github.com:LekoArts/gatsby-themes.git --depth=1
 ```
 
 Install the dependencies:
@@ -72,8 +77,12 @@ You can skip the e2e tests if you use `docs` or `www` in your branch name, e.g. 
 
 When opening a pull request, please be sure to update any relevant documentation in the READMEs or write some additional Jest/Cypress tests to ensure functionality. Also include a high-level list of changes.
 
+### Changesets
+
+This repository uses [changesets](https://github.com/Noviny/changesets) to do versioning. What that means for contributors is that you need to add a changeset by running `yarn changeset` which contains what packages should be bumped, their associated semver bump types, and some markdown which will be inserted into changelogs.
+
 [yarn]: https://yarnpkg.com
 [yarn workspaces]: https://yarnpkg.com/en/docs/workspaces
-[lerna]: https://github.com/lerna/lerna
+[changesets]: https://github.com/atlassian/changesets
 [jest]: https://jestjs.io/
 [cypress]: https://cypress.io
