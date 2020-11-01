@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.5...@lekoarts/gatsby-theme-minimal-blog@2.7.0) (2020-11-01)
+
+
+### Features
+
+* **gatsby-theme-minimal-blog:** Add postsPrefix option ([bc172cd](https://github.com/LekoArts/gatsby-themes/commit/bc172cd1eea69d9e76dd459c11d174b3ea96ea3d)), closes [#512](https://github.com/LekoArts/gatsby-themes/issues/512)
+
+
+
+
+
 ## [2.6.5](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog@2.6.4...@lekoarts/gatsby-theme-minimal-blog@2.6.5) (2020-10-25)
 
 
