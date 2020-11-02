@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.17](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.16...@lekoarts/gatsby-theme-emilia-core@1.3.17) (2020-11-02)
+
+
+### Bug Fixes
+
+* **deps:** update packages ([#530](https://github.com/LekoArts/gatsby-themes/issues/530)) ([2125d8e](https://github.com/LekoArts/gatsby-themes/commit/2125d8ec904388c66d821a7db7ebca6adc9ff73c))
+
+
+
+
+
 ## [1.3.16](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-emilia-core@1.3.15...@lekoarts/gatsby-theme-emilia-core@1.3.16) (2020-10-25)
 
 
