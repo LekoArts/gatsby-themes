@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.2](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.6.1...@lekoarts/gatsby-theme-minimal-blog-core@2.6.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* **gatsby-theme-minimal-blog-core:** Use postPrefix for posts, not pages ([d389326](https://github.com/LekoArts/gatsby-themes/commit/d389326ee1f2267e34923c13d8447f5e823d257f))
+
+
+
+
+
 ## [2.6.1](https://github.com/LekoArts/gatsby-themes/compare/@lekoarts/gatsby-theme-minimal-blog-core@2.6.0...@lekoarts/gatsby-theme-minimal-blog-core@2.6.1) (2020-11-02)
 
 
