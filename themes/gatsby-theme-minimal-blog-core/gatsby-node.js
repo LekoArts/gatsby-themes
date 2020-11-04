@@ -309,7 +309,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   posts.forEach((post) => {
     createPage({
-      path: post.slug,
+      path: `/${postsPrefix}${post.slug}`.replace(/\/\/+/g, `/`),
       component: postTemplate,
       context: {
         slug: post.slug,
@@ -323,7 +323,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (pages.length > 0) {
     pages.forEach((page) => {
       createPage({
-        path: `/${basePath}${postsPrefix}${page.slug}`.replace(/\/\/+/g, `/`),
+        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
         component: pageTemplate,
         context: {
           slug: page.slug,
