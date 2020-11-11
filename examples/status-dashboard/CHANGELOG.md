@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/LekoArts/gatsby-themes/compare/status-dashboard@0.2.6...status-dashboard@0.2.7) (2020-11-11)
+
+**Note:** Version bump only for package status-dashboard
+
+
+
+
+
 ## [0.2.6](https://github.com/LekoArts/gatsby-themes/compare/status-dashboard@0.2.5...status-dashboard@0.2.6) (2020-11-02)
 
 **Note:** Version bump only for package status-dashboard

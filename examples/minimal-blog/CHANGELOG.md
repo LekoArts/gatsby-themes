@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.9](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.3.8...minimal-blog@1.3.9) (2020-11-11)
+
+**Note:** Version bump only for package minimal-blog
+
+
+
+
+
 ## [1.3.8](https://github.com/LekoArts/gatsby-themes/compare/minimal-blog@1.3.7...minimal-blog@1.3.8) (2020-11-04)
 
 **Note:** Version bump only for package minimal-blog
