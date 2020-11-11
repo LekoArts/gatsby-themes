@@ -35,7 +35,7 @@ const Hero = () => {
       }
     }
   `)
-  const starsCount = data.githubData.data.repository.stargazers.totalCount
+  const starsCount = data?.githubData?.data?.repository?.stargazers?.totalCount
 
   return (
     <div>
@@ -83,7 +83,7 @@ const Hero = () => {
                     borderBottomRightRadius: `default`,
                   }}
                 >
-                  {starsCount}
+                  {starsCount || `0`}
                 </div>
               </a>
             </Box>

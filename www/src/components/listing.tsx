@@ -44,7 +44,6 @@ type Props = {
 
 const cardStyle = {
   position: `relative`,
-  borderRadius: `lg`,
   transition: `all 0.3s ease-in-out`,
   display: `block`,
   boxShadow: [`md`, `md`, `lg`],
@@ -55,27 +54,6 @@ const cardStyle = {
     "[data-name='card-overlay']": {
       opacity: 1,
     },
-  },
-  ".gatsby-image-wrapper": {
-    borderRadius: `lg`,
-  },
-  "[data-name='card-overlay']": {
-    position: `absolute`,
-    borderRadius: `lg`,
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    zIndex: 10,
-    backgroundColor: `rgba(90, 103, 216, 0.9)`,
-    color: `white`,
-    fontFamily: `body`,
-    fontSize: 4,
-    display: `flex`,
-    justifyContent: `center`,
-    alignItems: `center`,
-    transition: `all 0.3s ease-in-out`,
-    opacity: 0,
   },
 }
 
@@ -154,28 +132,42 @@ const Listing = () => {
                     return null
                 }
               })}
-              {theme?.image?.childImageSharp?.gatsbyImageData && (
-                <a
-                  href={theme.preview}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label={`Visit a preview of theme ${theme.title}`}
-                  sx={{
-                    ...cardStyle,
-                    "[data-name='card-overlay']": {
-                      ...cardStyle[`[data-name='card-overlay']`],
-                      ...overlayStyles,
-                    },
-                  }}
-                >
-                  <div data-name="card-overlay" aria-hidden>
-                    <div sx={{ display: `flex`, alignItems: `center` }}>
-                      <img width="40" height="40" sx={{ mr: 3 }} alt="" src={iconExternal} /> Preview
-                    </div>
+              <a
+                href={theme.preview}
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label={`Visit a preview of theme ${theme.title}`}
+                sx={{
+                  ...cardStyle,
+                  "[data-name='card-overlay']": {
+                    position: `absolute`,
+                    top: 0,
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                    zIndex: 10,
+                    backgroundColor: `rgba(90, 103, 216, 0.9)`,
+                    color: `white`,
+                    fontFamily: `body`,
+                    fontSize: 4,
+                    display: `flex`,
+                    justifyContent: `center`,
+                    alignItems: `center`,
+                    transition: `all 0.3s ease-in-out`,
+                    opacity: 0,
+                    ...overlayStyles,
+                  },
+                }}
+              >
+                <div data-name="card-overlay" aria-hidden>
+                  <div sx={{ display: `flex`, alignItems: `center` }}>
+                    <img width="40" height="40" sx={{ mr: 3 }} alt="" src={iconExternal} /> Preview
                   </div>
+                </div>
+                {theme?.image?.childImageSharp?.gatsbyImageData && (
                   <Img image={theme.image.childImageSharp.gatsbyImageData} alt="" />
-                </a>
-              )}
+                )}
+              </a>
             </div>
             <Flex sx={{ flexDirection: `column`, alignItems: `flex-start`, order: isEven ? 2 : [2, 2, 1] }}>
               <Styled.h1 as="h3">{theme.title}</Styled.h1>

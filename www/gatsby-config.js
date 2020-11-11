@@ -4,6 +4,7 @@ require(`dotenv`).config({
 
 const thoughtsFeed = require(`./src/utils/feed`)
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const githubToken = process.env.GITHUB_TOKEN
 
 module.exports = {
   siteMetadata: {
@@ -31,10 +32,10 @@ module.exports = {
         path: `${__dirname}/thoughts`,
       },
     },
-    {
+    githubToken && {
       resolve: `gatsby-source-github-api`,
       options: {
-        token: process.env.GITHUB_TOKEN,
+        token: githubToken,
         variables: {},
         graphQLQuery: `
           query {
