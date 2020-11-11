@@ -37,6 +37,22 @@ exports.createSchemaCustomization = ({ actions }) => {
       body: String! @mdxpassthrough(fieldName: "body")
       html: String! @mdxpassthrough(fieldName: "html")
     }
+
+    type GithubData implements Node {
+      data: GithubDataData
+    }
+
+    type GithubDataData {
+      repository: GithubDataDataRepository
+    }
+
+    type GithubDataDataRepository {
+      stargazers: GithubDataDataRepositoryStargazers
+    }
+
+    type GithubDataDataRepositoryStargazers {
+      totalCount: Int
+    }
   `)
 }
 

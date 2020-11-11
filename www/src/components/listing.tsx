@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { Flex, Box, jsx, Styled, Container, useColorMode } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import { ChildImageSharp } from "../types"
+import { GatsbyImage as Img, ISharpGatsbyImageData } from "gatsby-plugin-image"
 import { Circle, Donut } from "./shapes"
 import iconExternal from "../icons/icon-external-window.svg"
 
@@ -34,18 +33,22 @@ type Props = {
         yOffset: string[]
         opacity: number
       }[]
-      image: ChildImageSharp
+      image: {
+        childImageSharp: {
+          gatsbyImageData: ISharpGatsbyImageData
+        }
+      }
     }[]
   }
 }
 
 const cardStyle = {
   position: `relative`,
-  borderRadius: `lg`,
   transition: `all 0.3s ease-in-out`,
   display: `block`,
   boxShadow: [`md`, `md`, `lg`],
   zIndex: 2,
+  borderRadius: `lg`,
   "&:hover": {
     transform: `translateY(-4px)`,
     boxShadow: [`lg`, `lg`, `xl`],
@@ -53,26 +56,8 @@ const cardStyle = {
       opacity: 1,
     },
   },
-  ".gatsby-image-wrapper": {
+  ".gatsby-image-wrapper [data-placeholder-image], .gatsby-image-wrapper [data-main-image]": {
     borderRadius: `lg`,
-  },
-  "[data-name='card-overlay']": {
-    position: `absolute`,
-    borderRadius: `lg`,
-    top: 0,
-    right: 0,
-    left: 0,
-    bottom: 0,
-    zIndex: 10,
-    backgroundColor: `rgba(90, 103, 216, 0.9)`,
-    color: `white`,
-    fontFamily: `body`,
-    fontSize: 4,
-    display: `flex`,
-    justifyContent: `center`,
-    alignItems: `center`,
-    transition: `all 0.3s ease-in-out`,
-    opacity: 0,
   },
 }
 
@@ -159,7 +144,22 @@ const Listing = () => {
                 sx={{
                   ...cardStyle,
                   "[data-name='card-overlay']": {
-                    ...cardStyle[`[data-name='card-overlay']`],
+                    position: `absolute`,
+                    borderRadius: `lg`,
+                    top: 0,
+                    right: 0,
+                    left: 0,
+                    bottom: 0,
+                    zIndex: 10,
+                    backgroundColor: `rgba(90, 103, 216, 0.9)`,
+                    color: `white`,
+                    fontFamily: `body`,
+                    fontSize: 4,
+                    display: `flex`,
+                    justifyContent: `center`,
+                    alignItems: `center`,
+                    transition: `all 0.3s ease-in-out`,
+                    opacity: 0,
                     ...overlayStyles,
                   },
                 }}
@@ -169,7 +169,9 @@ const Listing = () => {
                     <img width="40" height="40" sx={{ mr: 3 }} alt="" src={iconExternal} /> Preview
                   </div>
                 </div>
-                <Img fluid={theme.image.childImageSharp.fluid} />
+                {theme?.image?.childImageSharp?.gatsbyImageData && (
+                  <Img image={theme.image.childImageSharp.gatsbyImageData} alt="" />
+                )}
               </a>
             </div>
             <Flex sx={{ flexDirection: `column`, alignItems: `flex-start`, order: isEven ? 2 : [2, 2, 1] }}>
@@ -214,9 +216,7 @@ const ListingQuery = graphql`
         }
         image {
           childImageSharp {
-            fluid(maxWidth: 900, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: FLUID, maxWidth: 900, quality: 90)
           }
         }
       }
