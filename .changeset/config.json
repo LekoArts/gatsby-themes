@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "LekoArts/gatsby-themes" }
+  ],
+  "commit": false,
+  "linked": [
+    ["@lekoarts/gatsby-theme-emilia", "@lekoarts/gatsby-theme-emilia-core"],
+    ["@lekoarts/gatsby-theme-emma", "@lekoarts/gatsby-theme-emma-core"],
+    ["@lekoarts/gatsby-theme-jodie", "@lekoarts/gatsby-theme-jodie-core"],
+    [
+      "@lekoarts/gatsby-theme-minimal-blog",
+      "@lekoarts/gatsby-theme-minimal-blog-core"
+    ]
+  ],
+  "access": "public",
+  "baseBranch": "master",
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}
