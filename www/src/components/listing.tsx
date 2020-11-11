@@ -48,12 +48,16 @@ const cardStyle = {
   display: `block`,
   boxShadow: [`md`, `md`, `lg`],
   zIndex: 2,
+  borderRadius: `lg`,
   "&:hover": {
     transform: `translateY(-4px)`,
     boxShadow: [`lg`, `lg`, `xl`],
     "[data-name='card-overlay']": {
       opacity: 1,
     },
+  },
+  ".gatsby-image-wrapper [data-placeholder-image], .gatsby-image-wrapper [data-main-image]": {
+    borderRadius: `lg`,
   },
 }
 
@@ -141,6 +145,7 @@ const Listing = () => {
                   ...cardStyle,
                   "[data-name='card-overlay']": {
                     position: `absolute`,
+                    borderRadius: `lg`,
                     top: 0,
                     right: 0,
                     left: 0,
