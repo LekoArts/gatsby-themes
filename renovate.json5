@@ -94,9 +94,6 @@
   bumpVersion: null,
   semanticCommits: true,
   timezone: "GMT",
-  schedule: ["before 9am on Monday"],
-  automerge: true,
-  major: {
-    automerge: false
-  }
+  schedule: ["before 10am on the first day of the month"],
+  automerge: false,
 }
