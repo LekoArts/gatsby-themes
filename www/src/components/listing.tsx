@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { Flex, Box, jsx, Styled, Container, useColorMode } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import { ChildImageSharp } from "../types"
+import { GatsbyImage as Img, ISharpGatsbyImageData } from "gatsby-plugin-image"
 import { Circle, Donut } from "./shapes"
 import iconExternal from "../icons/icon-external-window.svg"
 
@@ -34,7 +33,11 @@ type Props = {
         yOffset: string[]
         opacity: number
       }[]
-      image: ChildImageSharp
+      image: {
+        childImageSharp: {
+          gatsbyImageData: ISharpGatsbyImageData
+        }
+      }
     }[]
   }
 }
@@ -151,26 +154,28 @@ const Listing = () => {
                     return null
                 }
               })}
-              <a
-                href={theme.preview}
-                rel="noopener noreferrer"
-                target="_blank"
-                aria-label={`Visit a preview of theme ${theme.title}`}
-                sx={{
-                  ...cardStyle,
-                  "[data-name='card-overlay']": {
-                    ...cardStyle[`[data-name='card-overlay']`],
-                    ...overlayStyles,
-                  },
-                }}
-              >
-                <div data-name="card-overlay" aria-hidden>
-                  <div sx={{ display: `flex`, alignItems: `center` }}>
-                    <img width="40" height="40" sx={{ mr: 3 }} alt="" src={iconExternal} /> Preview
+              {theme?.image?.childImageSharp?.gatsbyImageData && (
+                <a
+                  href={theme.preview}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label={`Visit a preview of theme ${theme.title}`}
+                  sx={{
+                    ...cardStyle,
+                    "[data-name='card-overlay']": {
+                      ...cardStyle[`[data-name='card-overlay']`],
+                      ...overlayStyles,
+                    },
+                  }}
+                >
+                  <div data-name="card-overlay" aria-hidden>
+                    <div sx={{ display: `flex`, alignItems: `center` }}>
+                      <img width="40" height="40" sx={{ mr: 3 }} alt="" src={iconExternal} /> Preview
+                    </div>
                   </div>
-                </div>
-                <Img fluid={theme.image.childImageSharp.fluid} />
-              </a>
+                  <Img image={theme.image.childImageSharp.gatsbyImageData} alt="" />
+                </a>
+              )}
             </div>
             <Flex sx={{ flexDirection: `column`, alignItems: `flex-start`, order: isEven ? 2 : [2, 2, 1] }}>
               <Styled.h1 as="h3">{theme.title}</Styled.h1>
@@ -214,9 +219,7 @@ const ListingQuery = graphql`
         }
         image {
           childImageSharp {
-            fluid(maxWidth: 900, quality: 90) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: FLUID, maxWidth: 900, quality: 90)
           }
         }
       }
