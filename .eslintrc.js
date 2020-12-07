@@ -74,6 +74,7 @@ module.exports = {
     camelcase: 1,
     "import/no-unresolved": 0,
     "func-names": 0,
+    "no-underscore-dangle": [`warn`, { allow: [`__typename`] }],
     "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0,
     "import/no-cycle": 0,
