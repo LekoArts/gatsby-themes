@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.7.5
+
+### Patch Changes
+
+- [`9d25527`](https://github.com/LekoArts/gatsby-themes/commit/9d25527cf2372d24682d85c44ecca02675019774) [#551](https://github.com/LekoArts/gatsby-themes/pull/551) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update packages
+
+  You can see the details of the update here: https://github.com/LekoArts/gatsby-themes/pull/551
+
+- Updated dependencies [[`9d25527`](https://github.com/LekoArts/gatsby-themes/commit/9d25527cf2372d24682d85c44ecca02675019774)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@2.7.5
+
 ## 2.7.4
 
 ### Patch Changes
