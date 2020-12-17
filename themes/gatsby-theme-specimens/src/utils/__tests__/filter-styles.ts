@@ -1,6 +1,7 @@
+import { Theme } from "theme-ui"
 import filterStyles from "../filter-styles"
 
-const exampleStyles = {
+const exampleStyles: Theme["styles"] = {
   root: {
     fontFamily: `body`,
     lineHeight: `body`,
@@ -39,7 +40,9 @@ const exampleStyles = {
     height: `1px`,
     m: 3,
   },
-  single: `harry-potter`,
+  single: {
+    key: `harry-potter`,
+  },
 }
 
 describe(`filter styles`, () => {
@@ -70,6 +73,8 @@ describe(`filter styles`, () => {
     expect(filterStyles({ input: exampleStyles, allowed: [] })).toStrictEqual({})
   })
   test(`should return key-value pairs`, () => {
-    expect(filterStyles({ input: exampleStyles, allowed: [`single`] })).toStrictEqual({ single: `harry-potter` })
+    expect(filterStyles({ input: exampleStyles, allowed: [`single`] })).toStrictEqual({
+      single: { key: `harry-potter` },
+    })
   })
 })
