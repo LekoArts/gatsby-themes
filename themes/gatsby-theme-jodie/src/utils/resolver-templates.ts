@@ -21,7 +21,8 @@ function random(seed: number) {
   return x - Math.floor(x)
 }
 
-export function shuffle(data: IGridItem[], seed = 1) {
+export function shuffle(originalData: IGridItem[], seed = 1) {
+  const data = [...originalData]
   let m = data.length
   let t
   let i
