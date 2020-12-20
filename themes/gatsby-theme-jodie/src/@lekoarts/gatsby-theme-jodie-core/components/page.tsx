@@ -10,6 +10,13 @@ type DataProps = {
     body: string
     color: string
     custom: boolean
+    cover: {
+      childImageSharp: {
+        resize: {
+          src: string
+        }
+      }
+    }
   }
 }
 

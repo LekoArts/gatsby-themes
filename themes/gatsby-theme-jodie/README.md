@@ -62,15 +62,17 @@ gatsby new jodie LekoArts/gatsby-starter-portfolio-jodie
 
 ### Theme options
 
-| Key              | Default Value      | Description                                     |
-| ---------------- | ------------------ | ----------------------------------------------- |
-| `basePath`       | `/`                | Root url for the theme                          |
-| `projectsPath`   | `content/projects` | Location of projects                            |
-| `projectsUrl`    | `/projects`        | url for the projects overview                   |
-| `projectsPrefix` | `/`                | Prefix for all individual projects              |
-| `pagesPath`      | `content/pages`    | Location of pages                               |
-| `formatString`   | `DD.MM.YYYY`       | Configure the date format for Date fields       |
-| `navigation`     | `[]`               | Add links to your internal sites to the sidebar |
+| Key                    | Default Value      | Description                                                                                  |
+| ---------------------- | ------------------ | -------------------------------------------------------------------------------------------- |
+| `basePath`             | `/`                | Root url for the theme                                                                       |
+| `projectsPath`         | `content/projects` | Location of projects                                                                         |
+| `projectsUrl`          | `/projects`        | url for the projects overview                                                                |
+| `projectsPrefix`       | `/`                | Prefix for all individual projects                                                           |
+| `pagesPath`            | `content/pages`    | Location of pages                                                                            |
+| `formatString`         | `DD.MM.YYYY`       | Configure the date format for Date fields                                                    |
+| `navigation`           | `[]`               | Add links to your internal sites to the sidebar                                              |
+| `homepagePageLimit`    | `9999`             | Configure how many pages (defined in `pagesPath` should be shown on the homepage (`/`)       |
+| `homepageProjectLimit` | `3`                | Configure how many projects (defined in `projectsPath` should be shown on the homepage (`/`) |
 
 #### Example usage
 
@@ -119,6 +121,70 @@ module.exports = {
     author: `@lekoarts_de`,
   },
 };
+```
+
+### Customizing the homepage
+
+Both your projects and pages are displayed on the homepage (located at `/` in the live project and [`src/components/homepage.tsx`](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-jodie/src/components/homepage.tsx) in the theme itself). Of course, you can always [shadow](#shadowing) this and other files to customize the theme to your liking.
+
+However, before completely overriding the homepage you should consider the three available options:
+
+1. `homepagePageLimit`
+2. `homepageProjectLimit`
+3. Shadowing [`modify-grid.ts`](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-jodie/src/utils/modify-grid.ts)
+
+The options 1) and 2) are explained in the [theme options](#theme-options) -- they limit the number of projects and pages that will randomly be distributed on the page.
+
+Option 3) is a really powerful one! The `modifyGrid` function is wrapping the entire array of projects & pages before passing it to the `render` function of the React component. Or in other words: As the name suggests you can modify the items that are passed to the grid on the homepage.
+
+You can achieve this by shadowing [`modify-grid.ts`](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-jodie/src/utils/modify-grid.ts): Create a file at `src/@lekoarts/gatsby-theme-jodie/utils/modify-grid.js` and define a default export for `modifyGrid`.
+
+#### `modifyGrid` examples
+
+_All code snippets are placed inside `src/@lekoarts/gatsby-theme-jodie/utils/modify-grid.js`_
+
+**Default behavior:**
+
+```js
+const modifyGrid = (data) => data;
+
+export default modifyGrid;
+```
+
+I've also created some resolver templates that you can use. They are exported in [`resolver-templates.ts`](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-jodie/src/utils/resolver-templates.ts). They cover the most common use cases and can give you an idea on what to do with the resolver.
+
+**Only pages / Only projects:**
+
+```js
+import {
+  onlyPages,
+  onlyProjects,
+} from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+
+const modifyGrid = (data) => onlyPages(data);
+// const modifyGrid = data => onlyProjects(data)
+
+export default modifyGrid;
+```
+
+**Filter by slug:**
+
+```js
+import { filterBySlug } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+
+const modifyGrid = (data) => filterBySlug(data, ["/about"]);
+
+export default modifyGrid;
+```
+
+**Shuffle:**
+
+```js
+import { shuffle } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+
+const modifyGrid = (data) => shuffle(data);
+
+export default modifyGrid;
 ```
 
 ### Shadowing

@@ -23,6 +23,5 @@ type DataProps = {
 }
 
 export default function JodieCoreHomepage({ children, ...props }: PageProps<DataProps>) {
-  console.log(props)
   return <Homepage {...props}>{children}</Homepage>
 }
