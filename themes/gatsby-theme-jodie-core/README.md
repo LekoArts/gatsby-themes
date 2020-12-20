@@ -40,14 +40,16 @@ npm install @lekoarts/gatsby-theme-jodie-core
 
 ### Theme options
 
-| Key              | Default Value      | Description                               |
-| ---------------- | ------------------ | ----------------------------------------- |
-| `basePath`       | `/`                | Root url for the theme                    |
-| `projectsPath`   | `content/projects` | Location of projects                      |
-| `projectsUrl`    | `/projects`        | url for the projects overview             |
-| `projectsPrefix` | `/`                | Prefix for all individual projects        |
-| `pagesPath`      | `content/pages`    | Location of pages                         |
-| `formatString`   | `DD.MM.YYYY`       | Configure the date format for Date fields |
+| Key                    | Default Value      | Description                                                                                  |
+| ---------------------- | ------------------ | -------------------------------------------------------------------------------------------- |
+| `basePath`             | `/`                | Root url for the theme                                                                       |
+| `projectsPath`         | `content/projects` | Location of projects                                                                         |
+| `projectsUrl`          | `/projects`        | url for the projects overview                                                                |
+| `projectsPrefix`       | `/`                | Prefix for all individual projects                                                           |
+| `pagesPath`            | `content/pages`    | Location of pages                                                                            |
+| `formatString`         | `DD.MM.YYYY`       | Configure the date format for Date fields                                                    |
+| `homepagePageLimit`    | `9999`             | Configure how many pages (defined in `pagesPath` should be shown on the homepage (`/`)       |
+| `homepageProjectLimit` | `3`                | Configure how many projects (defined in `projectsPath` should be shown on the homepage (`/`) |
 
 ### Shadowing
 

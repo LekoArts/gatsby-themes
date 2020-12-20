@@ -236,11 +236,17 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, projectsUrl, projectsPrefix, formatString } = withDefaults(themeOptions)
+  const { basePath, projectsUrl, projectsPrefix, formatString, homepagePageLimit, homepageProjectLimit } = withDefaults(
+    themeOptions
+  )
 
   createPage({
     path: basePath,
     component: homepageTemplate,
+    context: {
+      homepagePageLimit,
+      homepageProjectLimit,
+    },
   })
 
   createPage({

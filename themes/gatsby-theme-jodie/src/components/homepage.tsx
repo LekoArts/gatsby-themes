@@ -9,6 +9,7 @@ import GridItem from "./grid-item"
 import { itemListWrapperStyles, itemStyles } from "../styles/item-list"
 import locales from "../locales"
 import { visuallyHidden } from "../styles/utils"
+import modifyGrid from "../utils/modify-grid"
 
 type DataProps = {
   projects: {
@@ -16,6 +17,7 @@ type DataProps = {
       slug: string
       title: string
       cover: ChildImageSharp
+      __typename: "MdxProject"
     }[]
   }
   pages: {
@@ -23,12 +25,14 @@ type DataProps = {
       slug: string
       title: string
       cover: ChildImageSharp
+      __typename: "MdxPage"
     }[]
   }
 }
 
 const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } }) => {
-  const items = [...pages.nodes, ...projects.nodes]
+  const rawItems = [...pages.nodes, ...projects.nodes]
+  const items = modifyGrid(rawItems)
   const itemsCount = items.length
   let divisor = 9
 

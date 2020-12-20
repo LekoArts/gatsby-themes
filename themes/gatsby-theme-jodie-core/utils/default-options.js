@@ -6,6 +6,8 @@ module.exports = (themeOptions) => {
   const pagesPath = themeOptions.pagesPath || `content/pages`
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
   const navigation = themeOptions.navigation || []
+  const homepagePageLimit = themeOptions.homepagePageLimit || 9999
+  const homepageProjectLimit = themeOptions.homepageProjectLimit || 3
 
   return {
     basePath,
@@ -15,5 +17,7 @@ module.exports = (themeOptions) => {
     pagesPath,
     formatString,
     navigation,
+    homepagePageLimit,
+    homepageProjectLimit,
   }
 }

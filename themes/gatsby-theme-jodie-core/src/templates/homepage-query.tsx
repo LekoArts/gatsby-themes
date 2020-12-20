@@ -4,8 +4,8 @@ import HomepageComponent from "../components/homepage"
 export default HomepageComponent
 
 export const query = graphql`
-  query {
-    pages: allPage {
+  query($homepagePageLimit: Int!, $homepageProjectLimit: Int!) {
+    pages: allPage(sort: { fields: title, order: ASC }, limit: $homepagePageLimit) {
       nodes {
         slug
         title
@@ -18,7 +18,7 @@ export const query = graphql`
         }
       }
     }
-    projects: allProject(sort: { fields: date, order: DESC }, limit: 3) {
+    projects: allProject(sort: { fields: date, order: DESC }, limit: $homepageProjectLimit) {
       nodes {
         slug
         title: shortTitle
