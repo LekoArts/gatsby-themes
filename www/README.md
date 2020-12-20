@@ -22,7 +22,7 @@
 ## 🎉 Awesome Tech Stack
 
 - [Theme UI](https://theme-ui.com/)
-- [Gatsby](https://www.gatsbyjs.org/) (obviously)
+- [Gatsby](https://www.gatsbyjs.com/)
 - [react-responsive](https://github.com/contra/react-responsive)
 - [react-share](https://github.com/nygardk/react-share)
 - [react-three-fiber](https://github.com/drcmda/react-three-fiber)

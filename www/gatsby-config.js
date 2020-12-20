@@ -17,6 +17,10 @@ module.exports = {
     image: `/banner.png`,
     author: `@lekoarts_de`,
   },
+  flags: {
+    LAZY_IMAGES: true,
+    QUERY_ON_DEMAND: true,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
