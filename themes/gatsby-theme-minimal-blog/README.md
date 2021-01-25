@@ -141,24 +141,6 @@ module.exports = {
     siteImage: `/banner.jpg`,
     // Twitter Handle
     author: `@lekoarts_de`,
-    // Links displayed in the header on the right side
-    externalLinks: [
-      {
-        name: `Twitter`,
-        url: `https://twitter.com/lekoarts_de`,
-      },
-      {
-        name: `Instagram`,
-        url: `https://www.instagram.com/lekoarts.de/`,
-      },
-    ],
-    // Navigation links
-    navigation: [
-      {
-        title: `Blog`,
-        slug: `/blog`,
-      },
-    ],
   },
 };
 ```
