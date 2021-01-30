@@ -28,6 +28,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Wait for NPM package propagation
+        if: steps.changesets.outputs.published == 'true'
+        uses: kibertoad/wait-action@1.0.1
+        with:
+          time: "30s"
       - name: Publish Starters
         if: steps.changesets.outputs.published == 'true'
         uses: johno/actions-push-subdirectories@master
@@ -35,4 +40,4 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: examples LekoArts starter-name
+          args: examples LekoArts starter-name master
