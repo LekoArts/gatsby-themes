@@ -82,8 +82,8 @@ Please star this project, share it on Social Media or consider supporting me on 
 
 ### Official resources
 
-- [Gatsbyjs.org - Gatsby Themes](https://www.gatsbyjs.org/docs/themes/)
-- [Building a Theme](https://www.gatsbyjs.org/tutorial/building-a-theme)
+- [Gatsbyjs.com - Gatsby Themes](https://www.gatsbyjs.com/docs/themes/)
+- [Building a Theme](https://www.gatsbyjs.com/tutorial/building-a-theme/)
 - [Free egghead.io "Gatsby Theme Authoring" course](https://egghead.io/courses/gatsby-theme-authoring)
 
 ### Paid resources
