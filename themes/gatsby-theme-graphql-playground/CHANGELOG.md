@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.1.21
+
+### Patch Changes
+
+- [`47f747e`](https://github.com/LekoArts/gatsby-themes/commit/47f747e045962996503bf4043b0adc5a2527a855) [#559](https://github.com/LekoArts/gatsby-themes/pull/559) Thanks [@renovate](https://github.com/apps/renovate)! - Dependency updates for various packages, including theme-ui and gatsby related packages (includes improvements for `gatsby-plugin-image`)
+
 ## 1.1.20
 
 ### Patch Changes
