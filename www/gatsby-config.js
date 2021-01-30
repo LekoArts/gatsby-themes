@@ -17,10 +17,6 @@ module.exports = {
     image: `/banner.png`,
     author: `@lekoarts_de`,
   },
-  flags: {
-    LAZY_IMAGES: true,
-    QUERY_ON_DEMAND: true,
-  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,6 +30,21 @@ module.exports = {
       options: {
         name: `thoughts`,
         path: `${__dirname}/thoughts`,
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.gstatic.com`],
+        interval: 300,
+        timeout: 30000,
+        web: [
+          {
+            name: `IBM Plex Sans`,
+            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
+          },
+        ],
       },
     },
     githubToken && {
@@ -62,6 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        lessBabel: true,
         gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
         // TODO: Remove once this is fixed
         plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],

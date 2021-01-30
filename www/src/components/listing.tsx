@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { Flex, Box, jsx, Styled, Container, useColorMode } from "theme-ui"
+import { Flex, Box, jsx, Themed, Container, useColorMode } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage as Img, ISharpGatsbyImageData } from "gatsby-plugin-image"
+import { GatsbyImage as Img, IGatsbyImageData } from "gatsby-plugin-image"
 import { Circle, Donut } from "./shapes"
 import iconExternal from "../icons/icon-external-window.svg"
 
@@ -35,7 +35,7 @@ type Props = {
       }[]
       image: {
         childImageSharp: {
-          gatsbyImageData: ISharpGatsbyImageData
+          gatsbyImageData: IGatsbyImageData
         }
       }
     }[]
@@ -55,6 +55,9 @@ const cardStyle = {
     "[data-name='card-overlay']": {
       opacity: 1,
     },
+  },
+  ".gatsby-image-wrapper": {
+    display: `block !important`,
   },
   ".gatsby-image-wrapper [data-placeholder-image], .gatsby-image-wrapper [data-main-image]": {
     borderRadius: `lg`,
@@ -175,8 +178,8 @@ const Listing = () => {
               </a>
             </div>
             <Flex sx={{ flexDirection: `column`, alignItems: `flex-start`, order: isEven ? 2 : [2, 2, 1] }}>
-              <Styled.h1 as="h3">{theme.title}</Styled.h1>
-              <Styled.p>{theme.description}</Styled.p>
+              <Themed.h1 as="h3">{theme.title}</Themed.h1>
+              <Themed.p>{theme.description}</Themed.p>
               <a href={theme.url} sx={{ variant: `buttons.primary`, mt: 3, ...buttonStyles }}>
                 Get the Theme
               </a>
@@ -187,9 +190,9 @@ const Listing = () => {
       <p sx={{ mt: 6, fontSize: [1, 2, 2, 3], textAlign: `center` }}>
         <span sx={{ fontWeight: `bold` }}>More Themes are coming soon ...</span> <br /> In the meantime you can have a
         look at my already existing{` `}
-        <Styled.a href="https://github.com/LekoArts?utf8=%E2%9C%93&tab=repositories&q=gatsby&type=public&language=">
+        <Themed.a href="https://github.com/LekoArts?utf8=%E2%9C%93&tab=repositories&q=gatsby&type=public&language=">
           open source Gatsby projects
-        </Styled.a>
+        </Themed.a>
         !
       </p>
     </Container>
@@ -216,7 +219,7 @@ const ListingQuery = graphql`
         }
         image {
           childImageSharp {
-            gatsbyImageData(layout: FLUID, maxWidth: 900, quality: 90)
+            gatsbyImageData(layout: CONSTRAINED, width: 900, quality: 90, aspectRatio: 1.7)
           }
         }
       }

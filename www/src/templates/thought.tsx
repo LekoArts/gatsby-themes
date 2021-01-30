@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { graphql, Link, PageProps } from "gatsby"
-import { Container, jsx, Styled, Flex } from "theme-ui"
+import { Container, jsx, Themed, Flex } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { TwitterShareButton } from "react-share"
 import Layout from "../components/layout"
@@ -31,7 +31,7 @@ const ThoughtTemplate: React.FC<PageProps<ThoughtTemplateProps>> = ({ data: { th
       thought
     />
     <Container>
-      <Styled.a
+      <Themed.a
         as={Link}
         to="/"
         sx={{
@@ -66,7 +66,7 @@ const ThoughtTemplate: React.FC<PageProps<ThoughtTemplateProps>> = ({ data: { th
           You're reading a short post about Gatsby Themes. <br /> Go back to the homepage to view all themes & give the
           project a star if you like the content!
         </div>
-      </Styled.a>
+      </Themed.a>
       <div className="thought-speakable">
         <MDXRenderer>{thought.body}</MDXRenderer>
       </div>
@@ -102,7 +102,7 @@ const ThoughtTemplate: React.FC<PageProps<ThoughtTemplateProps>> = ({ data: { th
         >
           Share on Twitter
         </TwitterShareButton>
-        <Styled.a href="/rss.xml">RSS Feed</Styled.a>
+        <Themed.a href="/rss.xml">RSS Feed</Themed.a>
       </div>
       <Flex
         sx={{

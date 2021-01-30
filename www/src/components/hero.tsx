@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Container, Flex, jsx, Styled } from "theme-ui"
+import { Box, Container, Flex, jsx, Themed } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 import { useMediaQuery } from "react-responsive"
 import ThreeDModel from "./3d-model"
@@ -43,11 +43,11 @@ const Hero = () => {
         <Flex sx={{ justifyContent: `space-between` }}>
           <Box>
             <Box sx={{ maxWidth: `490px` }}>
-              <Styled.h1>Free & Open Source Gatsby Themes</Styled.h1>
-              <Styled.p sx={{ color: `dark`, mt: 3, mb: 4 }}>
+              <Themed.h1>Free & Open Source Gatsby Themes</Themed.h1>
+              <Themed.p sx={{ color: `dark`, mt: 3, mb: 4 }}>
                 Get <span sx={{ fontWeight: `bold` }}>high-quality</span> and{` `}
                 <span sx={{ fontWeight: `bold` }}>customizable</span> Gatsby themes to quickly bootstrap your website
-              </Styled.p>
+              </Themed.p>
             </Box>
             <Box>
               <a

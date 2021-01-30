@@ -2,8 +2,8 @@
 import { jsx, useColorMode } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
-import { OrbitControls } from "@react-three/drei/OrbitControls"
-import { Shadow } from "@react-three/drei/Shadow"
+import { OrbitControls } from "@react-three/drei/core/OrbitControls"
+import { Shadow } from "@react-three/drei/core/Shadow"
 import Model from "../webgl/model"
 
 const RectAreaLightDecl = ({
