@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, Styled, jsx, Flex } from "theme-ui"
+import { Container, Themed, jsx, Flex } from "theme-ui"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import RSS from "../icons/rss"
 
@@ -34,7 +34,7 @@ const ThoughtsArchive = () => {
     <section data-name="newsletter-archive">
       <Container>
         <div sx={{ display: `flex`, alignItems: `center`, flexWrap: `wrap` }}>
-          <Styled.h2 sx={{ mr: 3 }}>Thoughts Archive</Styled.h2>
+          <Themed.h2 sx={{ mr: 3 }}>Thoughts Archive</Themed.h2>
           <a
             href="/rss.xml"
             title="RSS Feed of 'Newsletter Archive'"
@@ -64,7 +64,7 @@ const ThoughtsArchive = () => {
             <RSS />
           </a>
         </div>
-        <Styled.p>Read news or thoughts about this project & Gatsby themes in general!</Styled.p>
+        <Themed.p>Read news or thoughts about this project & Gatsby themes in general!</Themed.p>
         <div sx={{ my: 5 }}>
           {thoughts.nodes.map((entry, index) => (
             <div key={`${entry.title}-${entry.date}`} sx={{ mb: [4], position: `relative` }}>
@@ -91,7 +91,7 @@ const ThoughtsArchive = () => {
                   flexDirection: [`column`, `row`],
                 }}
               >
-                <Styled.a
+                <Themed.a
                   as={Link}
                   to={entry.slug}
                   sx={{
@@ -103,7 +103,7 @@ const ThoughtsArchive = () => {
                   }}
                 >
                   {entry.title}
-                </Styled.a>
+                </Themed.a>
                 <div sx={{ mr: 3, display: [`none`, `block`], color: `primary` }}>•</div>
                 <div sx={{ fontSize: 1, fontStyle: [`italic`, `normal`], color: `text` }}>{entry.date}</div>
               </Flex>

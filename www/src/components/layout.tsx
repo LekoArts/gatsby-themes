@@ -1,12 +1,8 @@
 import React from "react"
-import { Global } from "@emotion/core"
-import { Styled, Box, useColorMode } from "theme-ui"
+import { Global } from "@emotion/react"
+import { Themed, Box, useColorMode } from "theme-ui"
 import SEO from "./seo"
 import Header from "./header"
-import "fontsource-ibm-plex-sans/400.css"
-import "fontsource-ibm-plex-sans/500.css"
-import "fontsource-ibm-plex-sans/600.css"
-import "fontsource-ibm-plex-sans/700.css"
 import "../fonts/benguiat.css"
 
 type LayoutProps = { children: React.ReactNode; className?: string; thought?: boolean }
@@ -62,18 +58,18 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
         {children}
       </Box>
       <Box as="footer" variant="layout.footer">
-        &copy; {new Date().getFullYear()} by <Styled.a href="https://www.lekoarts.de/en">LekoArts</Styled.a>. All rights
+        &copy; {new Date().getFullYear()} by <Themed.a href="https://www.lekoarts.de/en">LekoArts</Themed.a>. All rights
         reserved.{` `}
-        <Styled.a rel="nofollow" href="https://www.lekoarts.de/en/imprint">
+        <Themed.a rel="nofollow" href="https://www.lekoarts.de/en/imprint">
           Imprint
-        </Styled.a>
+        </Themed.a>
         .{` `}
-        <Styled.a rel="nofollow" href="https://www.lekoarts.de/en/privacy">
+        <Themed.a rel="nofollow" href="https://www.lekoarts.de/en/privacy">
           Privacy
-        </Styled.a>
+        </Themed.a>
         .<br />
         This website is open source on{` `}
-        <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/www">GitHub</Styled.a>.
+        <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/www">GitHub</Themed.a>.
       </Box>
     </>
   )
