@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { Box, Container, Flex, jsx, Themed } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
-import { useMediaQuery } from "react-responsive"
 import ThreeDModel from "./3d-model"
 import { Circle, Donut } from "./shapes"
 import CircleGrid from "../icons/circle-grid"
 import Star from "../icons/star"
 import { down, up } from "../styles/animations"
+import useResponsive from "../hooks/use-responsive"
 
 type StarsType = {
   githubData: {
@@ -21,7 +21,7 @@ type StarsType = {
 }
 
 const Hero = () => {
-  const isBigScreen = useMediaQuery({ minWidth: `1100px` })
+  const { isBigScreen } = useResponsive()
   const data = useStaticQuery<StarsType>(graphql`
     {
       githubData {

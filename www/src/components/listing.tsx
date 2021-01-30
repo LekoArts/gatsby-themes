@@ -219,7 +219,7 @@ const ListingQuery = graphql`
         }
         image {
           childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED, width: 900, quality: 90, aspectRatio: 1.7)
+            gatsbyImageData(layout: CONSTRAINED, width: 900, quality: 90, aspectRatio: 1.7, formats: [AUTO, WEBP, AVIF])
           }
         }
       }
