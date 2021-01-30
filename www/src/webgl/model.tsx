@@ -97,5 +97,3 @@ export default function Model(props: JSX.IntrinsicElements["group"]) {
     </group>
   )
 }
-
-useGLTF.preload(`/model/dracoGatsby.gltf`)
