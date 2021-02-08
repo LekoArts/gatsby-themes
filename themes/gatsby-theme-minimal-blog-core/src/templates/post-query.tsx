@@ -9,6 +9,7 @@ export const query = graphql`
       slug
       title
       date(formatString: $formatString)
+      draft
       tags {
         name
         slug
