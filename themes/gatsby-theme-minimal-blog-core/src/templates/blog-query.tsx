@@ -10,6 +10,7 @@ export const query = graphql`
         slug
         title
         date(formatString: $formatString)
+        draft
         excerpt
         timeToRead
         description
