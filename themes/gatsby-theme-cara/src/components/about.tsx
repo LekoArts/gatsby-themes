@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+import * as React from "react"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"

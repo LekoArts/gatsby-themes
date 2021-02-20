@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Parallax } from "react-spring/renderprops-addons.cjs"
 import Layout from "../components/layout"
 import Hero from "../components/hero"

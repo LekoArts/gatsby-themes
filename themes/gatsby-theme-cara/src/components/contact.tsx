@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import styled from "@emotion/styled"
 import Divider from "../elements/divider"
 import Inner from "../elements/inner"
 import Content from "../elements/content"
@@ -10,17 +9,18 @@ import Footer from "./footer"
 // @ts-ignore
 import ContactMDX from "../sections/contact"
 
-const InnerWave = styled.div`
-  path {
-    ${waveAnimation(`20s`)};
-  }
-`
-
 const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     <Divider fill="divider" speed={0.2} offset={offset} factor={factor}>
       <div sx={{ position: `absolute`, bottom: 0, width: `full`, transform: `matrix(1, 0, 0, -1, 0, 0)` }}>
-        <InnerWave sx={{ position: `relative`, height: `full`, svg: { width: `100%`, height: `40vh` } }}>
+        <div
+          sx={{
+            position: `relative`,
+            height: `full`,
+            svg: { width: `100%`, height: `40vh` },
+            path: { animation: waveAnimation(`20s`) },
+          }}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" id="contact-wave" viewBox="0 0 800 338.05" preserveAspectRatio="none">
             <path>
               <animate
@@ -31,7 +31,7 @@ const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) =>
               />
             </path>
           </svg>
-        </InnerWave>
+        </div>
       </div>
     </Divider>
     <Content speed={0.4} offset={offset} factor={factor}>
