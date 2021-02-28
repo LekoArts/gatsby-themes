@@ -2,9 +2,9 @@ import * as React from "react"
 import { Global } from "@emotion/react"
 import SEO from "./seo"
 
-type LayoutProps = { children: React.ReactNode; className?: string }
+type LayoutProps = { children: React.ReactNode; className?: string; customSEO?: boolean }
 
-const Layout = ({ children, className = `` }: LayoutProps) => (
+const Layout = ({ children, className = ``, customSEO = false }: LayoutProps) => (
   <React.Fragment>
     <Global
       styles={(theme) => ({
@@ -37,7 +37,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         },
       })}
     />
-    <SEO />
+    {!customSEO && <SEO />}
     <main className={className}>{children}</main>
   </React.Fragment>
 )
