@@ -15,7 +15,7 @@ const Footer = () => (
         a: { color: `text` },
       }}
     >
-      <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
+      <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_v2_w30.png" alt="LekoArts Logo" />
       {` `}
       <Link
         aria-label="Link to the theme's GitHub repository"
@@ -26,7 +26,7 @@ const Footer = () => (
       </Link>
       <div sx={{ mx: 1 }}>by</div>
       {` `}
-      <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+      <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de">
         LekoArts
       </Link>
     </Flex>

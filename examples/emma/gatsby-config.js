@@ -3,10 +3,15 @@ require(`dotenv`).config({
 })
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Emma - Gatsby Starter Portfolio`,
+  },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   plugins: [
     {
@@ -14,7 +19,7 @@ module.exports = {
       // See the theme's README for all available options
       options: {},
     },
-    {
+    googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
