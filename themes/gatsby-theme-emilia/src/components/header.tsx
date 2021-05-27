@@ -2,16 +2,17 @@
 import { jsx, Heading, Flex } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 import HeaderBackground from "./header-background"
 import Location from "../assets/location"
 import SocialMediaList from "./social-media-list"
-import { ChildImageSharpFixed } from "../types"
 
 type AvatarStaticQuery = {
   file: {
-    childImageSharp: ChildImageSharpFixed
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
   }
 }
 
@@ -21,9 +22,7 @@ const Header = () => {
     query {
       file(name: { eq: "avatar" }) {
         childImageSharp {
-          fixed(width: 140, height: 140, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
+          gatsbyImageData(layout: FIXED, width: 140, height: 140, quality: 100)
         }
       }
     }
@@ -62,8 +61,8 @@ const Header = () => {
               },
             }}
           >
-            {avatar?.file?.childImageSharp?.fixed ? (
-              <Img fixed={avatar.file.childImageSharp.fixed} />
+            {avatar?.file?.childImageSharp?.gatsbyImageData ? (
+              <GatsbyImage image={avatar.file.childImageSharp.gatsbyImageData} alt="Avatar" />
             ) : (
               <div
                 sx={{

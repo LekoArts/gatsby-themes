@@ -3,7 +3,9 @@ import { tailwind } from "@theme-ui/presets"
 
 export default merge(tailwind, {
   initialColorModeName: `light`,
-  useCustomProperties: true,
+  config: {
+    useCustomProperties: true,
+  },
   colors: {
     text: tailwind.colors.gray[8],
     primary: tailwind.colors.blue[6],

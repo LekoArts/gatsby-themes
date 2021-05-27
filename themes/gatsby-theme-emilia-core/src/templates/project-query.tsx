@@ -4,7 +4,7 @@ import ProjectComponent from "../components/project"
 export default ProjectComponent
 
 export const query = graphql`
-  query($slug: String!, $absolutePathRegex: String!, $formatString: String!) {
+  query ($slug: String!, $absolutePathRegex: String!, $formatString: String!) {
     images: allFile(
       filter: {
         absolutePath: { regex: $absolutePathRegex }
@@ -15,9 +15,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(width: 1600, quality: 90)
         }
       }
     }

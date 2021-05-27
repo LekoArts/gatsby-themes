@@ -1,20 +1,18 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Helmet } from "react-helmet"
 import { Parallax } from "@react-spring/parallax"
 import { Themed } from "theme-ui"
 import Layout from "@lekoarts/gatsby-theme-cara/src/components/layout"
 import Divider from "@lekoarts/gatsby-theme-cara/src/elements/divider"
 import { UpDown, UpDownWide } from "@lekoarts/gatsby-theme-cara/src/styles/animations"
 import Svg from "@lekoarts/gatsby-theme-cara/src/components/svg"
+import Seo from "@lekoarts/gatsby-theme-cara/src/components/seo"
 import Content from "@lekoarts/gatsby-theme-cara/src/elements/content"
 import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner"
 
 const NotFound = () => (
-  <Layout customSEO>
-    <Helmet>
-      <title>404 - Not found</title>
-    </Helmet>
+  <Layout>
+    <Seo title="404 - Not Found" />
     <Parallax pages={1}>
       <div>
         <Divider speed={0.2} offset={0} factor={1}>

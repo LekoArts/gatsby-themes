@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import Card from "./card"
-import { ChildImageSharpFluid } from "../types"
 
 type ProjectPaginationProps = {
   prev: {
@@ -11,7 +11,9 @@ type ProjectPaginationProps = {
     }
     title: string
     cover: {
-      childImageSharp: ChildImageSharpFluid
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
     }
   }
   next: {
@@ -21,7 +23,9 @@ type ProjectPaginationProps = {
     }
     title: string
     cover: {
-      childImageSharp: ChildImageSharpFluid
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
     }
   }
 }
@@ -55,9 +59,6 @@ const ProjectPagination = ({ prev, next }: ProjectPaginationProps) => (
           left: 0,
           right: 0,
           bottom: 0,
-        },
-        ".gatsby-image-wrapper > div": {
-          paddingBottom: `56% !important`,
         },
       }}
     >
