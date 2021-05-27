@@ -1,6 +1,4 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const thoughtsFeed = require(`./src/utils/feed`)
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
@@ -75,7 +73,6 @@ module.exports = {
       options: {
         lessBabel: true,
         gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
-        // TODO: Remove once this is fixed
         plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
       },
     },
@@ -91,8 +88,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-feed`,

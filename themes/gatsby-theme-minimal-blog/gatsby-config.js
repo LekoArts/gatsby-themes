@@ -24,7 +24,6 @@ module.exports = (options) => {
         options: newsletterFeed(feedTitle),
       },
       `gatsby-plugin-react-helmet`,
-      `gatsby-plugin-typescript`,
       `gatsby-plugin-catch-links`,
       `gatsby-plugin-theme-ui`,
     ].filter(Boolean),

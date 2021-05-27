@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { css, Global } from "@emotion/core"
+import { css, Global } from "@emotion/react"
 import { Helmet } from "react-helmet"
 
 const Layout = ({ children }) => {

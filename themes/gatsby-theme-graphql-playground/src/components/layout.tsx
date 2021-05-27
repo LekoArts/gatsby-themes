@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 import SEO from "./seo"
 import Sidebar from "./sidebar"
 

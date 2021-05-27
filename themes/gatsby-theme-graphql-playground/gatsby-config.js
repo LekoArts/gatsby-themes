@@ -28,11 +28,12 @@ module.exports = (themeOptions) => {
       },
       mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {},
+        options: {
+          lessBabel: true,
+        },
       },
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-theme-ui`,
-      `gatsby-plugin-typescript`,
     ].filter(Boolean),
   }
 }

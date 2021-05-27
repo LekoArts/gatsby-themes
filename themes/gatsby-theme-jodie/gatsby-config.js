@@ -15,6 +15,7 @@ module.exports = (options) => ({
       options,
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-theme-ui`,
   ],
 })

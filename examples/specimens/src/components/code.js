@@ -5,7 +5,7 @@ import theme from "prism-react-renderer/themes/vsDark"
 import loadable from "@loadable/component"
 import { useMDXScope } from "gatsby-plugin-mdx/context"
 import { useMDXComponents } from "@mdx-js/react"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 const badgeStyle = {
   marginBottom: `0.5rem`,

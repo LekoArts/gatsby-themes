@@ -36,6 +36,7 @@ module.exports = (themeOptions) => {
       mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
+          lessBabel: true,
           gatsbyRemarkPlugins: [
             {
               resolve: `gatsby-remark-images`,
@@ -60,7 +61,6 @@ module.exports = (themeOptions) => {
       },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
-      `gatsby-plugin-typescript`,
     ].filter(Boolean),
   }
 }

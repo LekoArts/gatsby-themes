@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import * as React from "react"
 import "fontsource-work-sans/latin.css"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 import Wrapper from "./layout-wrapper"
 import Sidebar from "./sidebar"
 import Footer from "./footer"

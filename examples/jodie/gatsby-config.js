@@ -25,9 +25,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-instagram`,
+      resolve: `gatsby-omni-font-loader`,
       options: {
-        username: `2315642426`,
+        enableListener: true,
+        preconnect: [`https://fonts.gstatic.com`],
+        interval: 300,
+        timeout: 30000,
+        web: [
+          {
+            name: `Work Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Work+Sans:wght@400..700&display=swap`,
+          },
+        ],
       },
     },
     `gatsby-plugin-sitemap`,

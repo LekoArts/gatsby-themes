@@ -1,5 +1,5 @@
 import React from "react"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 import { Box } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import useNavigation from "../hooks/use-navigation"

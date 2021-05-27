@@ -34,11 +34,12 @@ module.exports = (themeOptions) => {
       },
       mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {},
+        options: {
+          lessBabel: true,
+        },
       },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
-      `gatsby-plugin-typescript`,
     ].filter(Boolean),
   }
 }

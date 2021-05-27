@@ -23,6 +23,7 @@ module.exports = (themeOptions) => {
       mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
+          lessBabel: true,
           extensions: [`.mdx`, `.md`],
           gatsbyRemarkPlugins: [
             {
@@ -48,7 +49,6 @@ module.exports = (themeOptions) => {
       },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
-      `gatsby-plugin-typescript`,
     ].filter(Boolean),
   }
 }
