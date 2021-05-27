@@ -33,7 +33,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   })
 
   createTypes(`
-    interface Playground @nodeInterface {
+    interface Playground implements Node {
       id: ID!
       slug: String!
       excerpt(pruneLength: Int = 160): String!
@@ -41,7 +41,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       query: String!
       title: String!
     }
-    
+
     type MdxPlayground implements Node & Playground {
       slug: String!
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
