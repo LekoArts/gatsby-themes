@@ -61,13 +61,14 @@ gatsby new emma LekoArts/gatsby-starter-portfolio-emma
 
 ### Theme options
 
-| Key            | Default Value      | Description                                                                                               |
-| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `basePath`     | `/`                | Root url for the theme                                                                                    |
-| `projectsPath` | `content/projects` | Location of projects                                                                                      |
-| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
-| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
-| `formatString` | `DD.MM.YYYY`       | Configure the date format for Date fields                                                                 |
+| Key            | Default Value      | Description                                                                                                 |
+| -------------- | ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `basePath`     | `/`                | Root url for the theme                                                                                      |
+| `projectsPath` | `content/projects` | Location of projects                                                                                        |
+| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                     |
+| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)   |
+| `sharp`        | `true`             | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off) |
+| `formatString` | `DD.MM.YYYY`       | Configure the date format for Date fields                                                                   |
 
 The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
