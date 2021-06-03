@@ -26,7 +26,6 @@ module.exports = {
               date(formatString: "MMMM D, YYYY")
               excerpt
               slug
-              html
             }
           }
         }
