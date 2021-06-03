@@ -20,10 +20,12 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-specimens?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-specimens.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=specimens&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
 Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.
@@ -32,7 +34,7 @@ Leverage the wide variety of powerful React components to build your design syst
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-specimens).
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=specimens&utm_medium=Theme).
 
 ## Features
 
@@ -100,7 +102,7 @@ The heart of this theme are the reusable React components that you can use to fi
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme!
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the theme!
 
 ### Modifications
 
@@ -141,11 +143,11 @@ The [**Demo Website**](https://specimens.lekoarts.de) tells you the respective v
 
 ### Using together with existing Theme UI config
 
-Since this theme uses a local file with the [`@theme-ui/presets` tailwind](https://theme-ui.com/presets/) your Theme UI config you e.g. set up with `gatsby-plugin-theme-ui` won't affect the styles of this theme.
+Since this theme uses a local file with the [`@theme-ui/presets` tailwind](https://theme-ui.com/packages/presets) your Theme UI config you e.g. set up with `gatsby-plugin-theme-ui` won't affect the styles of this theme.
 
 ### MDX Shortcodes
 
-In order to be able to use these components without importing them every time in your MDX files, you should define them as components / shortcodes. MDX has [documentation](https://mdxjs.com/blog/shortcodes/) on that, and also [Theme UI](https://theme-ui.com/gatsby-plugin#components).
+In order to be able to use these components without importing them every time in your MDX files, you should define them as components / shortcodes. MDX has [documentation](https://mdxjs.com/blog/shortcodes/) on that, and also [Theme UI](https://theme-ui.com/packages/gatsby-plugin#components).
 
 When you use `gatsby-plugin-theme-ui` in your project, create a new file at `src/gatsby-plugin-theme-ui/components.js` and insert this content:
 

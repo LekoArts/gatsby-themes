@@ -20,15 +20,17 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-emilia-core?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-emilia-core.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
 Core Theme for [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia). This theme implements the `Project` node interface and exports templates (+ queries) which you can shadow.
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme).
 
 ## Installation
 
@@ -55,7 +57,7 @@ npm install @lekoarts/gatsby-theme-emilia-core
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! You can also have a look at [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia-core/` to shadow/override files.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the theme! You can also have a look at [`@lekoarts/gatsby-theme-emilia`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia-core/` to shadow/override files.
 
 ## 🌟 Supporting me
 

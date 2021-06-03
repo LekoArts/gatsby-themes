@@ -136,7 +136,7 @@ exports.sourceNodes = (
     location = `Germany`,
     socialMedia = [
       { title: `Twitter`, href: `https://twitter.com/lekoarts_de` },
-      { title: `Homepage`, href: `https://www.lekoarts.de` },
+      { title: `Homepage`, href: `https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme` },
     ],
     showThemeAuthor = true,
     assetsPath = `content/assets`,

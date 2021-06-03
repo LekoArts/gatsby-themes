@@ -20,10 +20,12 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-minimal-blog?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-minimal-blog.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
 Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.
@@ -32,7 +34,7 @@ Typography driven, feature-rich blogging theme with minimal aesthetics. Includes
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-minimal-blog).
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Theme).
 
 ## Features
 
@@ -217,7 +219,7 @@ render(<button onClick={onClick}>Alohomora!</button>);
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-minimal-blog/` to shadow/override files.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-minimal-blog/` to shadow/override files.
 
 ### Adding content
 

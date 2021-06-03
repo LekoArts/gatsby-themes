@@ -47,7 +47,10 @@ const Footer = ({ bg }: { bg: string }) => {
         {` `}
         by
         {` `}
-        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de">
+        <Link
+          aria-label="Link to the theme author's website"
+          href="https://www.lekoarts.de?utm_source=jodie&utm_medium=Theme"
+        >
           LekoArts
         </Link>
       </div>

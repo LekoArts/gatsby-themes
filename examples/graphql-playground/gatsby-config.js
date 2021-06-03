@@ -3,6 +3,10 @@ require(`dotenv`).config()
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
+  },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-graphql-playground`,

@@ -20,10 +20,12 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-emilia?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-emilia.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
 Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.
@@ -32,7 +34,7 @@ Minimalistic portfolio/photography site with masonry grid, page transitions and 
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emilia).
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme).
 
 ## Features
 
@@ -95,7 +97,7 @@ module.exports = {
       }
     }
   ]
-};
+}
 ```
 
 #### Additional configuration
@@ -128,7 +130,7 @@ module.exports = {
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emilia/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Adding content
 

@@ -10,7 +10,10 @@ const Footer = () => (
       <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide">
         @lekoarts/gatsby-theme-styleguide
       </Themed.a>
-      .
+      {` `}
+      by
+      {` `}
+      <Themed.a href="https://www.lekoarts.de?utm_source=styleguide&utm_medium=Theme">LekoArts</Themed.a>.
     </Themed.p>
   </footer>
 )
