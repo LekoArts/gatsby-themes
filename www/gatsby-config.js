@@ -2,6 +2,7 @@ require(`dotenv`).config()
 
 const thoughtsFeed = require(`./src/utils/feed`)
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 const githubToken = process.env.GITHUB_TOKEN
 
 module.exports = {
@@ -14,6 +15,10 @@ module.exports = {
     language: `en`,
     image: `/banner.png`,
     author: `@lekoarts_de`,
+  },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   plugins: [
     {
@@ -61,11 +66,10 @@ module.exports = {
         `,
       },
     },
-    {
+    googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
-        anonymize: true,
       },
     },
     {

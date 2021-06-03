@@ -21,7 +21,7 @@ const Header = () => {
             <a
               aria-label="Link to the theme creator's website"
               sx={{ color: `text`, "&:hover,&:focus": { color: `primary`, boxShadow: `none` } }}
-              href="http://www.lekoarts.de"
+              href="http://www.lekoarts.de?utm_source=gatsby-themes-www"
             >
               <Logo sx={{ width: 12, height: 12 }} />
             </a>

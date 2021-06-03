@@ -5,13 +5,16 @@ module.exports = {
     {
       serialize: ({ query: { site, allThought } }) => {
         return allThought.nodes.map((thought) => {
+          const url = site.siteMetadata.siteUrl + thought.slug
+          const content = `<p>${thought.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
+
           return {
             title: thought.title,
             date: thought.date,
             excerpt: thought.excerpt,
-            url: site.siteMetadata.siteUrl + thought.slug,
-            guid: site.siteMetadata.siteUrl + thought.slug,
-            custom_elements: [{ "content:encoded": thought.html }],
+            url,
+            guid: url,
+            custom_elements: [{ "content:encoded": content }],
           }
         })
       },
@@ -29,7 +32,7 @@ module.exports = {
         }
       `,
       output: `rss.xml`,
-      title: `Gatsby Themes by LekoArts - Thoughts`,
+      title: `News about Gatsby Themes by LekoArts`,
     },
   ],
 }
