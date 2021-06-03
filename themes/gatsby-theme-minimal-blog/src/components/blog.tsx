@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { jsx, Heading, Link as TLink } from "theme-ui"
+import { jsx, Heading, Link as TLink, Flex } from "theme-ui"
 import { Link } from "gatsby"
-import { Flex } from "@theme-ui/components"
 import Layout from "./layout"
 import Listing from "./listing"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type PostsProps = {
   posts: {
@@ -21,7 +20,6 @@ type PostsProps = {
       slug: string
     }[]
   }[]
-  [key: string]: any
 }
 
 const Blog = ({ posts }: PostsProps) => {
@@ -29,7 +27,7 @@ const Blog = ({ posts }: PostsProps) => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
           Blog

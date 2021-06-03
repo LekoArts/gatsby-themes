@@ -4,7 +4,7 @@ import PostComponent from "../components/post"
 export default PostComponent
 
 export const query = graphql`
-  query($slug: String!, $formatString: String!) {
+  query ($slug: String!, $formatString: String!) {
     post(slug: { eq: $slug }) {
       slug
       title

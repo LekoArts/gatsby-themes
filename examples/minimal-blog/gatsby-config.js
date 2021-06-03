@@ -1,12 +1,15 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+  },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   plugins: [
     {
@@ -29,8 +32,8 @@ module.exports = {
             url: `https://twitter.com/lekoarts_de`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Homepage`,
+            url: `https://www.lekoarts.de`,
           },
         ],
       },
@@ -50,7 +53,7 @@ module.exports = {
         ],
       },
     },
-    {
+    googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
@@ -84,6 +87,51 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title: siteTitle
+                description: siteDescription
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allPost } }) =>
+              allPost.nodes.map((post) => ({
+                title: post.title,
+                date: post.date,
+                excerpt: post.excerpt,
+                url: site.siteMetadata.siteUrl + post.slug,
+                guid: site.siteMetadata.siteUrl + post.slug,
+                custom_elements: [{ "content:encoded": post.html }],
+              })),
+            query: `
+              {
+                allPost(sort: { fields: date, order: DESC }) {
+                  nodes {
+                    title
+                    date(formatString: "MMMM D, YYYY")
+                    excerpt
+                    slug
+                    html
+                  }
+                }
+              }
+            `,
+            output: `rss.xml`,
+            title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+          },
+        ],
+      },
+    },
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

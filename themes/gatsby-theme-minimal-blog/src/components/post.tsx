@@ -1,10 +1,10 @@
 /** @jsx jsx */
+import * as React from "react"
 import { jsx, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import React from "react"
 import Layout from "./layout"
 import ItemTags from "./item-tags"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type PostProps = {
   data: {
@@ -37,7 +37,7 @@ const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 const Post = ({ data: { post } }: PostProps) => (
   <Layout>
-    <SEO
+    <Seo
       title={post.title}
       description={post.description ? post.description : post.excerpt}
       image={post.banner ? post.banner.childImageSharp.resize.src : undefined}

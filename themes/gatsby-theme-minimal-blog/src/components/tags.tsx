@@ -1,11 +1,10 @@
 /** @jsx jsx */
-import { jsx, Link as TLink, Heading } from "theme-ui"
-import { Box, Flex } from "@theme-ui/components"
+import { jsx, Link as TLink, Heading, Box, Flex } from "theme-ui"
 import kebabCase from "lodash.kebabcase"
 import { Link } from "gatsby"
 import Layout from "./layout"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
-import SEO from "./seo"
+import Seo from "./seo"
 import replaceSlashes from "../utils/replaceSlashes"
 
 type PostsProps = {
@@ -20,7 +19,7 @@ const Tags = ({ list }: PostsProps) => {
 
   return (
     <Layout>
-      <SEO title="Tags" />
+      <Seo title="Tags" />
       <Heading as="h1" variant="styles.h1">
         Tags
       </Heading>

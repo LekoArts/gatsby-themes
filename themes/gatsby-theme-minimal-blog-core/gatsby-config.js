@@ -2,7 +2,6 @@ const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
   const options = withDefaults(themeOptions)
-  const { mdx = true } = themeOptions
 
   return {
     plugins: [
@@ -20,7 +19,7 @@ module.exports = (themeOptions) => {
           path: options.pagesPath,
         },
       },
-      mdx && {
+      options.mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
           lessBabel: true,
@@ -48,7 +47,10 @@ module.exports = (themeOptions) => {
         },
       },
       `gatsby-transformer-sharp`,
-      `gatsby-plugin-sharp`,
+      options.sharp && {
+        resolve: `gatsby-plugin-sharp`,
+        options: {},
+      },
     ].filter(Boolean),
   }
 }

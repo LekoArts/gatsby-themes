@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+import * as React from "react"
 
 type SkipNavLinkProps = {
   children: React.ReactNode

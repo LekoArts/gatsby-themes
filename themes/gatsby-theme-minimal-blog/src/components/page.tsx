@@ -2,7 +2,7 @@
 import { jsx, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type PageProps = {
   data: {
@@ -18,7 +18,7 @@ type PageProps = {
 
 const Page = ({ data: { page } }: PageProps) => (
   <Layout>
-    <SEO title={page.title} description={page.excerpt} />
+    <Seo title={page.title} description={page.excerpt} />
     <Heading as="h1" variant="styles.h1">
       {page.title}
     </Heading>

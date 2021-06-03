@@ -4,7 +4,7 @@ import HomepageComponent from "../components/homepage"
 export default HomepageComponent
 
 export const query = graphql`
-  query($formatString: String!) {
+  query ($formatString: String!) {
     allPost(sort: { fields: date, order: DESC }, limit: 3) {
       nodes {
         slug

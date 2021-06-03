@@ -10,6 +10,8 @@ module.exports = (themeOptions) => {
   const showLineNumbers = themeOptions.showLineNumbers !== false
   const showCopyButton = themeOptions.showCopyButton !== false
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
+  const mdx = themeOptions.mdx ?? true
+  const sharp = themeOptions.sharp ?? true
 
   return {
     basePath,
@@ -23,5 +25,7 @@ module.exports = (themeOptions) => {
     showLineNumbers,
     showCopyButton,
     formatString,
+    mdx,
+    sharp,
   }
 }

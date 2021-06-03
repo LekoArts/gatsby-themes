@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
-import React from "react"
+import * as React from "react"
 import { preToCodeBlock } from "mdx-utils"
-import { Text } from "@theme-ui/components"
+import { Text } from "theme-ui"
 import Code from "../components/code"
 import Title from "../components/title"
 
