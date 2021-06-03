@@ -4,4 +4,5 @@ const { name } = require(`./package`)
 module.exports = {
   ...base,
   displayName: name,
+  testEnvironment: `jsdom`,
 }
