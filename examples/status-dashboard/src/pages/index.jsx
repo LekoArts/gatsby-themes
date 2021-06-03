@@ -141,6 +141,7 @@ const Index = ({
                 text-decoration: underline;
               }
             `}
+            data-testid="footer"
             href="https://www.lekoarts.de?utm_source=status-dashboard&utm_medium=Starter"
           >
             LekoArts

@@ -68,10 +68,10 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should render the bottom part`, () => {
     cy.findByText(/Projects/i)
-    cy.findByText(/Instagram Project "Proprius"/i).should(
+    cy.findByText(/3D Art with Cinema4D/i).should(
       `have.attr`,
       `href`,
-      `https://www.lekoarts.de/en/projects/private-instagram-project-proprius`
+      `https://www.lekoarts.de/art/3d?utm_source=minimal-blog&utm_medium=Theme`
     )
   })
   it(`should render the footer`, () => {
@@ -114,11 +114,11 @@ describe(`gatsby-theme-minimal-blog`, () => {
     cy.findByLabelText(/Activate Dark Mode/i)
   })
   it(`should have functioning dark mode toggle`, () => {
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/Activate Dark Mode/i).click()
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(203, 213, 224)`)
       .should(`have.css`, `background`, `rgb(26, 32, 44) none repeat scroll 0% 0% / auto padding-box border-box`)
   })

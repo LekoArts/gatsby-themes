@@ -17,13 +17,11 @@ describe(`gatsby-theme-jodie`, () => {
     cy.findByTestId(`page-title`)
     cy.should(`have.text`, `Projects`)
     cy.get(`nav`).within(() => {
-      cy.findByText(/instagram/i)
-        .click()
-        .waitForRouteChange()
+      cy.findByText(/art/i).click().waitForRouteChange()
     })
-    cy.assertRoute(`/instagram`)
+    cy.assertRoute(`/art`)
     cy.findByTestId(`page-title`)
-    cy.should(`have.text`, `Instagram`)
+    cy.should(`have.text`, `Art`)
     cy.get(`nav`).within(() => {
       cy.findByText(/about/i).click().waitForRouteChange()
     })
@@ -57,12 +55,12 @@ describe(`gatsby-theme-jodie`, () => {
   })
 
   it(`should accept "custom" flag in frontmatter of pages`, () => {
-    cy.visit(`/instagram`).waitForRouteChange()
+    cy.visit(`/art`).waitForRouteChange()
     cy.findByTestId(`page-content`).should(`have.css`, `margin`, `0px`).should(`have.css`, `padding`, `0px`)
   })
 
   it(`should use the "color" flag in frontmatter`, () => {
-    cy.visit(`/instagram`).waitForRouteChange()
+    cy.visit(`/art`).waitForRouteChange()
     cy.findByTestId(`sidebar`).should(
       `have.css`,
       `background`,
