@@ -4,7 +4,7 @@ import * as React from "react"
 import { PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type DataProps = {
   page: {
@@ -26,7 +26,7 @@ type DataProps = {
 
 const Page: React.FC<PageProps<DataProps>> = ({ data: { page }, location }) => (
   <Layout color={page.color || undefined}>
-    <SEO
+    <Seo
       title={page.title}
       description={page.excerpt}
       pathname={location.pathname}

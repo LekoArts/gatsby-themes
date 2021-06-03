@@ -2,9 +2,8 @@
 import { jsx } from "theme-ui"
 import React from "react"
 import { PageProps } from "gatsby"
-import Img from "gatsby-image"
+import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "./layout"
-import { ChildImageSharp } from "../types"
 import GridItem from "./grid-item"
 import { itemListWrapperStyles, itemStyles } from "../styles/item-list"
 import locales from "../locales"
@@ -16,7 +15,11 @@ type DataProps = {
     nodes: {
       slug: string
       title: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
       __typename: "MdxProject"
     }[]
   }
@@ -24,7 +27,11 @@ type DataProps = {
     nodes: {
       slug: string
       title: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
       __typename: "MdxPage"
     }[]
   }
@@ -57,7 +64,7 @@ const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } })
           {items.length > 0 ? (
             items.map((item) => (
               <GridItem to={item.slug} className="item" key={item.title} sx={itemStyles} data-testid={item.title}>
-                <Img fluid={item.cover.childImageSharp.fluid} />
+                <GatsbyImage image={item.cover.childImageSharp.gatsbyImageData} alt="" />
                 <span>{item.title}</span>
               </GridItem>
             ))

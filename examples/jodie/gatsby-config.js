@@ -1,10 +1,15 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
+
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
+  },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   plugins: [
     {
@@ -13,12 +18,12 @@ module.exports = {
       options: {
         navigation: [
           { name: `Projects`, slug: `/projects` },
-          { name: `Instagram`, slug: `/instagram` },
+          { name: `Art`, slug: `/art` },
           { name: `About`, slug: `/about` },
         ],
       },
     },
-    {
+    googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
@@ -67,5 +72,13 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
-  ],
+    shouldAnalyseBundle && {
+      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      options: {
+        analyzerMode: `static`,
+        reportFilename: `_bundle.html`,
+        openAnalyzer: false,
+      },
+    },
+  ].filter(Boolean),
 }

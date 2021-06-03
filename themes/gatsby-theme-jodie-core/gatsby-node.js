@@ -62,7 +62,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   })
 
   createTypes(`
-    interface Project @nodeInterface {
+    interface Project implements Node {
       id: ID!
       title: String!
       shortTitle: String!
@@ -87,7 +87,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       body: String! @mdxpassthrough(fieldName: "body")
     }
 
-    interface Page @nodeInterface {
+    interface Page implements Node {
       id: ID!
       slug: String!
       title: String!
@@ -199,9 +199,8 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
   const { createNode } = actions
 
-  const { projectsPrefix, basePath, formatString, navigation, pagesPath, projectsPath, projectsUrl } = withDefaults(
-    themeOptions
-  )
+  const { projectsPrefix, basePath, formatString, navigation, pagesPath, projectsPath, projectsUrl } =
+    withDefaults(themeOptions)
 
   const jodieConfig = {
     projectsPrefix,
@@ -236,9 +235,8 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, projectsUrl, projectsPrefix, formatString, homepagePageLimit, homepageProjectLimit } = withDefaults(
-    themeOptions
-  )
+  const { basePath, projectsUrl, projectsPrefix, formatString, homepagePageLimit, homepageProjectLimit } =
+    withDefaults(themeOptions)
 
   createPage({
     path: basePath,

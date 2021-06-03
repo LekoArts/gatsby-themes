@@ -4,7 +4,7 @@ import ProjectComponent from "../components/project"
 export default ProjectComponent
 
 export const query = graphql`
-  query($slug: String!, $formatString: String!, $relativeDirectory: String!) {
+  query ($slug: String!, $formatString: String!, $relativeDirectory: String!) {
     project(slug: { eq: $slug }) {
       body
       excerpt
@@ -31,9 +31,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          fluid(maxWidth: 1600, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(width: 1600, quality: 90)
         }
       }
     }

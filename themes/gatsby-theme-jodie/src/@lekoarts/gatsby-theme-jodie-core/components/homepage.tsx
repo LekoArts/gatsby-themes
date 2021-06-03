@@ -1,14 +1,18 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import Homepage from "../../../components/homepage"
-import { ChildImageSharp } from "../../../types"
 
 type DataProps = {
   projects: {
     nodes: {
       slug: string
       title: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
       __typename: "MdxProject"
     }[]
   }
@@ -16,7 +20,11 @@ type DataProps = {
     nodes: {
       slug: string
       title: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
       __typename: "MdxPage"
     }[]
   }
