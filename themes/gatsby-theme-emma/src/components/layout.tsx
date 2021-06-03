@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Global } from "@emotion/react"
 import { Box } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"

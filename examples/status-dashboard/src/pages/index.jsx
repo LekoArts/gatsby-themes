@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Global, css } from "@emotion/react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"

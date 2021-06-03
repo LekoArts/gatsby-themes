@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+import * as React from "react"
 import { PageProps } from "gatsby"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "./layout"

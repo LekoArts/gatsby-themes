@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx, Themed } from "theme-ui"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 

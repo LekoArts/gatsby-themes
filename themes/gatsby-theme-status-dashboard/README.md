@@ -108,7 +108,7 @@ This theme doesn't setup an individual page but rather exposes two React compone
 Import the components into your file and use them like normal React components (see [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard/src/pages/index.jsx)):
 
 ```jsx
-import React from "react";
+import * as React from "react";
 
 import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard";
 

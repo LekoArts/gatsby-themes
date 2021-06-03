@@ -3,7 +3,7 @@
 
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
+import * as React from "react"
 import {
   Alert,
   Audio,

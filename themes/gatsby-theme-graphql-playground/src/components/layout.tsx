@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx } from "theme-ui"
 import { Global } from "@emotion/react"
 import Seo from "./seo"

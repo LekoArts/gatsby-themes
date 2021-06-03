@@ -101,7 +101,7 @@ export default Layout
 Code block with code highlighting:
 
 ```jsx:title=src/components/post.jsx {5-7,10}
-import React from "react";
+import * as React from "react";
 
 const Post = ({ data: { post } }) => (
   <Layout>
@@ -184,7 +184,7 @@ Here will `inline code` go, just inside the text. Wow!
 Code block without line numbers but with highlighting, language, and title:
 
 ```tsx:title=src/components/blog.tsx {7-9,16} noLineNumbers
-import React from "react";
+import * as React from "react";
 
 const Blog = ({ posts }: PostsProps) => {
   const { tagsPath, basePath } = useSiteMetadata();

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 const CircleCI = (props: any) => (
   <svg role="img" viewBox="0 0 24 24" width="22px" height="22px" xmlns="http://www.w3.org/2000/svg" {...props}>

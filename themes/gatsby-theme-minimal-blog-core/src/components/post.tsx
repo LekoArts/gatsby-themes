@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 export default function Post({ data, pageContext }: { data: any; pageContext: any }) {
   return (

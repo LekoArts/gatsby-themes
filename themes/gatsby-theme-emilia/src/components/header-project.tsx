@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { Flex, jsx, Container, Heading, Themed } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql, Link } from "gatsby"
