@@ -30,9 +30,8 @@ const Header = ({ meta, nav }: HeaderProps) => {
         sx={{
           fontWeight: `bold`,
           fontSize: 4,
-          flex: navEmpty ? 1 : [`1 0 100%`, 1],
-          justifyContent: navEmpty ? `flex-start` : `center`,
-          order: [1, 2],
+          flex: navEmpty ? 1 : [`1 0 50%`, 1],
+          justifyContent: navEmpty ? `flex-start` : [`flex-end`, `center`],
         }}
       >
         <TLink

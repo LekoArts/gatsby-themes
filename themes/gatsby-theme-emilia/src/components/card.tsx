@@ -16,12 +16,13 @@ type CardProps = {
   }
   overlay?: string
   shadow?: string[]
+  eager?: boolean
 }
 
 const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
 const shadowArray = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
-const Card = ({ item, overlay = `#000`, shadow = shadowArray }: CardProps) => (
+const Card = ({ item, overlay = `#000`, shadow = shadowArray, eager }: CardProps) => (
   <TLink
     as={Link}
     aria-label={`Visit ${item.title} project page`}
@@ -62,7 +63,7 @@ const Card = ({ item, overlay = `#000`, shadow = shadowArray }: CardProps) => (
         {item.title}
       </Heading>
     </div>
-    <GatsbyImage image={item.cover.childImageSharp.gatsbyImageData} alt="" />
+    <GatsbyImage loading={eager ? `eager` : `lazy`} image={item.cover.childImageSharp.gatsbyImageData} alt="" />
   </TLink>
 )
 

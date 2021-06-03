@@ -18,9 +18,10 @@ type ProjectItemProps = {
     }
   }
   style: any
+  eager?: boolean
 }
 
-const ProjectItem = ({ node, style }: ProjectItemProps) => (
+const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
   <animated.div
     sx={{
       position: `relative`,
@@ -73,7 +74,7 @@ const ProjectItem = ({ node, style }: ProjectItemProps) => (
           },
         }}
       >
-        <GatsbyImage image={node.cover.childImageSharp.gatsbyImageData} alt="" />
+        <GatsbyImage loading={eager ? `eager` : `lazy`} image={node.cover.childImageSharp.gatsbyImageData} alt="" />
       </div>
       <Link to={node.slug} aria-label={`View detail page of ${node.title}`}>
         <div

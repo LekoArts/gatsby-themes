@@ -62,9 +62,13 @@ const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } })
       <div className={`item-list-wrapper`} sx={itemListWrapperStyles}>
         <div className={`item-list div${divisor}`}>
           {items.length > 0 ? (
-            items.map((item) => (
+            items.map((item, index) => (
               <GridItem to={item.slug} className="item" key={item.title} sx={itemStyles} data-testid={item.title}>
-                <GatsbyImage image={item.cover.childImageSharp.gatsbyImageData} alt="" />
+                <GatsbyImage
+                  loading={index === 0 ? `eager` : `lazy`}
+                  image={item.cover.childImageSharp.gatsbyImageData}
+                  alt=""
+                />
                 <span>{item.title}</span>
               </GridItem>
             ))

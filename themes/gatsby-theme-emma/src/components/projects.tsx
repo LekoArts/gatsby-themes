@@ -70,7 +70,7 @@ const Projects = ({ projects }: ProjectsProps) => {
       }}
     >
       {trail.map((style, index) => (
-        <ProjectItem style={style} node={projects[index]} key={projects[index].slug} />
+        <ProjectItem style={style} eager={index === 0} node={projects[index]} key={projects[index].slug} />
       ))}
     </Layout>
   )

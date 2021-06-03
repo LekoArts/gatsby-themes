@@ -84,7 +84,7 @@ const Projects = ({ projects }: Props) => {
               const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
               const shadowArray = px.map((v) => `${shadow} 0px ${v} ${v} 0px`)
 
-              return <Card key={project.slug} item={project} overlay={val} shadow={shadowArray} />
+              return <Card key={project.slug} eager={index === 0} item={project} overlay={val} shadow={shadowArray} />
             })}
           </Container>
         </animated.div>
