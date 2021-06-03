@@ -34,6 +34,11 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByLabelText(/toggle dark mode/i)
   })
   it(`should have functioning dark mode toggle`, () => {
+    cy.findByLabelText(/toggle dark mode/i).then((button) => {
+      if (button.text().includes(`Dark`)) {
+        cy.findByLabelText(/toggle dark mode/i).click()
+      }
+    })
     cy.get(`html`)
       .should(`have.css`, `color`, `rgb(226, 232, 240)`)
       .should(`have.css`, `background`, `rgb(20, 24, 33) none repeat scroll 0% 0% / auto padding-box border-box`)
