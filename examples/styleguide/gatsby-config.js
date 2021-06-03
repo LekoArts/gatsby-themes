@@ -1,6 +1,4 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
@@ -14,6 +12,10 @@ module.exports = {
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
+  },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   plugins: [
     `gatsby-plugin-theme-ui`,

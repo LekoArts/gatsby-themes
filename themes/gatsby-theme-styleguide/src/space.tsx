@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
+import { Themed, jsx } from "theme-ui"
 import { Space as SpaceSpecimen } from "@lekoarts/gatsby-theme-specimens"
 import { useTheme } from "./context"
 
@@ -8,7 +8,7 @@ const Space = () => {
 
   return (
     <section id="styleguide-colors">
-      <Styled.h2>Space</Styled.h2>
+      <Themed.h2>Space</Themed.h2>
       <SpaceSpecimen space={space} />
     </section>
   )

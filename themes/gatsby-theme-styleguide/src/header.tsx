@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
+import { Themed, jsx } from "theme-ui"
 
 const Header = () => (
   <header sx={{ my: 4 }}>
-    <Styled.h1>Style Guide</Styled.h1>
+    <Themed.h1>Style Guide</Themed.h1>
   </header>
 )
 
