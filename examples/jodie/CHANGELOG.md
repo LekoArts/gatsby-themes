@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [[`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288)]:
+  - @lekoarts/gatsby-theme-jodie@2.0.0
+
 ## 0.1.3
 
 ### Patch Changes
