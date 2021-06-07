@@ -11,7 +11,6 @@ module.exports = {
     siteUrl: `https://specimens.lekoarts.de`,
   },
   flags: {
-    DEV_SSR: false,
     FAST_DEV: true,
   },
   plugins: [

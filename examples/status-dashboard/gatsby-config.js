@@ -1,6 +1,4 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
@@ -11,7 +9,6 @@ module.exports = {
     siteDescription: process.env.SITE_DESCRIPTION || `Showing the statuses of my Netlify deploys & CircleCI tests.`,
   },
   flags: {
-    DEV_SSR: false,
     FAST_DEV: true,
   },
   plugins: [

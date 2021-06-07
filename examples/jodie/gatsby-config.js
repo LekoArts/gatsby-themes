@@ -8,7 +8,6 @@ module.exports = {
     siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
   },
   flags: {
-    DEV_SSR: false,
     FAST_DEV: true,
   },
   plugins: [

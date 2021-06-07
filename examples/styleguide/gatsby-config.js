@@ -14,7 +14,6 @@ module.exports = {
     author: `@lekoarts_de`,
   },
   flags: {
-    DEV_SSR: false,
     FAST_DEV: true,
   },
   plugins: [

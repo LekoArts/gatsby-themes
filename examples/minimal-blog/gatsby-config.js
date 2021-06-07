@@ -8,7 +8,6 @@ module.exports = {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   flags: {
-    DEV_SSR: false,
     FAST_DEV: true,
   },
   plugins: [
