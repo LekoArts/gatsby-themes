@@ -1,7 +1,5 @@
-/** @jsx jsx */
-import React from "react"
-import { Global } from "@emotion/core"
-import { jsx } from "theme-ui"
+import * as React from "react"
+import { Global } from "@emotion/react"
 import SEO from "./seo"
 
 type LayoutProps = { children: React.ReactNode; className?: string }

@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
 import useSiteMetadata from "../hooks/use-site-metadata"
@@ -12,7 +12,7 @@ type SEOProps = {
   canonicalUrl?: string
 }
 
-const SEO = ({
+const Seo = ({
   title = ``,
   description = ``,
   pathname = ``,
@@ -66,4 +66,4 @@ const SEO = ({
   )
 }
 
-export default SEO
+export default Seo

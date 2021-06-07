@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import * as React from "react"
-import "fontsource-work-sans/latin.css"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 import Wrapper from "./layout-wrapper"
 import Sidebar from "./sidebar"
 import Footer from "./footer"
-import SEO from "./seo"
+import Seo from "./seo"
 import { SkipNavTarget, SkipNavTrigger } from "./skip-nav"
 
 type LayoutProps = { children: React.ReactNode; color?: string }
@@ -48,7 +47,7 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
         },
       })}
     />
-    <SEO />
+    <Seo />
     <SkipNavTrigger />
     <Wrapper>
       <Sidebar bg={color} />

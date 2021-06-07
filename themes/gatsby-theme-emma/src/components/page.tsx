@@ -2,9 +2,9 @@
 import { animated, useSpring, config } from "react-spring"
 import { Container, jsx, Flex, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import SEO from "./seo"
-import { ChildImageSharp } from "../types"
 import Hero from "./hero"
 
 type PageProps = {
@@ -14,7 +14,11 @@ type PageProps = {
       slug: string
       excerpt: string
       body: string
-      cover: ChildImageSharp
+      cover: {
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
+      }
     }
   }
   [key: string]: any
@@ -31,7 +35,7 @@ const Page = ({ data: { page } }: PageProps) => {
   return (
     <Layout>
       <SEO title={page.title} description={page.excerpt} pathname={page.slug} />
-      <Hero image={page.cover.childImageSharp.fluid} slim>
+      <Hero image={page.cover.childImageSharp.gatsbyImageData} slim>
         <Flex
           sx={{
             position: `absolute`,

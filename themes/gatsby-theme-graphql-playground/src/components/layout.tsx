@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx } from "theme-ui"
-import { Global } from "@emotion/core"
-import SEO from "./seo"
+import { Global } from "@emotion/react"
+import Seo from "./seo"
 import Sidebar from "./sidebar"
 
 type LayoutProps = {
@@ -35,7 +35,7 @@ const Layout = ({ children, title }: LayoutProps) => (
         },
       })}
     />
-    <SEO title={title} />
+    <Seo title={title} />
     <div sx={{ display: `grid`, gridTemplateColumns: [`200px 1fr`, `200px 1fr`, `250px 1fr`], minHeight: `100vh` }}>
       <Sidebar />
       <main sx={{ backgroundColor: `backgroundContent`, padding: [3, 3, 4, 5] }}>{children}</main>

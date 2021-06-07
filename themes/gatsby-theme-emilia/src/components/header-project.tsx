@@ -1,14 +1,13 @@
 /** @jsx jsx */
-import React from "react"
-import { Flex, jsx, Container, Heading, Styled } from "theme-ui"
+import * as React from "react"
+import { Flex, jsx, Container, Heading, Themed } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import Img from "gatsby-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import HeaderBackground from "./header-background"
 import LeftArrow from "../assets/left-arrow"
 import useEmiliaConfig from "../hooks/use-emilia-config"
-import { ChildImageSharpFixed } from "../types"
 
 type HeaderProjectProps = {
   title: string
@@ -19,7 +18,9 @@ type HeaderProjectProps = {
 
 type AvatarStaticQuery = {
   file: {
-    childImageSharp: ChildImageSharpFixed
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
   }
 }
 
@@ -29,9 +30,7 @@ const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectPr
     query {
       file(name: { eq: "avatar" }) {
         childImageSharp {
-          fixed(width: 40, height: 40, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
+          gatsbyImageData(layout: FIXED, width: 40, height: 40, quality: 100)
         }
       }
     }
@@ -80,7 +79,9 @@ const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectPr
                 mx: 2,
               }}
             >
-              {avatar?.file?.childImageSharp?.fixed && <Img fixed={avatar.file.childImageSharp.fixed} />}
+              {avatar?.file?.childImageSharp?.gatsbyImageData && (
+                <GatsbyImage image={avatar.file.childImageSharp.gatsbyImageData} alt="Avatar" />
+              )}
             </div>
             <span sx={{ fontWeight: `medium` }}>{name}</span>
           </Link>
@@ -92,7 +93,7 @@ const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectPr
             </Heading>
           </animated.div>
           <animated.div style={infoProps}>
-            <Styled.p sx={{ mb: 0, mt: 4 }}>{date}</Styled.p>
+            <Themed.p sx={{ mb: 0, mt: 4 }}>{date}</Themed.p>
             <div>
               {areas.map((area, index) => (
                 <React.Fragment key={area}>

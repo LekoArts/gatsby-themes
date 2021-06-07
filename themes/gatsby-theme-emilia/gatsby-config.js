@@ -5,8 +5,7 @@ module.exports = (options) => ({
       options,
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-theme-ui`,
   ],
 })

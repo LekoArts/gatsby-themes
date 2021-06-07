@@ -33,7 +33,10 @@ const Footer = () => {
         {` `}
         by
         {` `}
-        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+        <Link
+          aria-label="Link to the theme author's website"
+          href="https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Theme"
+        >
           LekoArts
         </Link>
       </div>

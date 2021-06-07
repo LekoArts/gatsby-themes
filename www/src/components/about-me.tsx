@@ -70,7 +70,7 @@ const AboutMe = () => {
         sx={{
           width: [70, 70, 90],
           height: [70, 70, 90],
-          top: `105px`,
+          top: `112px`,
           right: [`40px`, `40px`, `240px`],
           position: `absolute`,
           color: `white`,

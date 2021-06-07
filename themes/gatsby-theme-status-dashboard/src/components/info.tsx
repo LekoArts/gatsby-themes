@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx, Flex } from "theme-ui"
 import Package from "../icons/package"
 import Bug from "../icons/bug"

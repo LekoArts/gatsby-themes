@@ -34,7 +34,7 @@ const ThoughtsArchive = () => {
     <section data-name="newsletter-archive">
       <Container>
         <div sx={{ display: `flex`, alignItems: `center`, flexWrap: `wrap` }}>
-          <Themed.h2 sx={{ mr: 3 }}>Thoughts Archive</Themed.h2>
+          <Themed.h2 sx={{ mr: 3 }}>Archive</Themed.h2>
           <a
             href="/rss.xml"
             title="RSS Feed of 'Newsletter Archive'"

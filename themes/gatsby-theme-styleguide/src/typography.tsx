@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
+import { Themed, jsx } from "theme-ui"
 import { FontFamily, FontSize, Heading, filterStyles, FontWeight } from "@lekoarts/gatsby-theme-specimens"
 import { useTheme } from "./context"
 
@@ -8,14 +8,14 @@ const Typography = () => {
 
   return (
     <section id="styleguide-typography">
-      <Styled.h2>Typography</Styled.h2>
-      <Styled.h3>Font Family</Styled.h3>
+      <Themed.h2>Typography</Themed.h2>
+      <Themed.h3>Font Family</Themed.h3>
       <FontFamily fonts={fonts} />
-      <Styled.h3>Font Weights</Styled.h3>
+      <Themed.h3>Font Weights</Themed.h3>
       <FontWeight fontWeights={fontWeights} />
-      <Styled.h3>Font Sizes</Styled.h3>
+      <Themed.h3>Font Sizes</Themed.h3>
       <FontSize fontSizes={fontSizes} />
-      <Styled.h3>Headings</Styled.h3>
+      <Themed.h3>Headings</Themed.h3>
       <Heading
         config={useTheme()}
         styles={filterStyles({

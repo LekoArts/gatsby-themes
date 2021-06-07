@@ -1,15 +1,17 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
-    // Of course you can also add new values here to query them like usual
+    // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-cara/gatsby-config.js
     siteTitleAlt: `Cara - Gatsby Starter Portfolio`,
+  },
+  flags: {
+    FAST_DEV: true,
   },
   plugins: [
     {
@@ -17,7 +19,7 @@ module.exports = {
       // See the theme's README for all available options
       options: {},
     },
-    {
+    googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,

@@ -5,12 +5,14 @@ import useSiteMetadata from "../hooks/use-site-metadata"
 
 const Footer = ({ bg }: { bg: string }) => {
   const { siteTitle } = useSiteMetadata()
-  const { theme } = useThemeUI()
+  const {
+    theme: { rawColors },
+  } = useThemeUI()
 
   const text = readableColor(
     bg,
-    theme!.colors!.textMuted as string | undefined,
-    theme!.colors!.textMutedLight as string | undefined
+    rawColors!.textMuted as string | undefined,
+    rawColors!.textMutedLight as string | undefined
   )
 
   return (
@@ -45,7 +47,10 @@ const Footer = ({ bg }: { bg: string }) => {
         {` `}
         by
         {` `}
-        <Link aria-label="Link to the theme author's website" href="https://www.lekoarts.de/en">
+        <Link
+          aria-label="Link to the theme author's website"
+          href="https://www.lekoarts.de?utm_source=jodie&utm_medium=Theme"
+        >
           LekoArts
         </Link>
       </div>

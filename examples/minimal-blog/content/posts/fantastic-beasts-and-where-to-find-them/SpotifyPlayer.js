@@ -8,7 +8,7 @@
  * @see https://developer.spotify.com/technologies/widgets/spotify-play-button/
  */
 
-import React from "react"
+import * as React from "react"
 
 // Size presets, defined by Spotify
 const sizePresets = {

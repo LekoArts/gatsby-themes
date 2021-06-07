@@ -10,13 +10,19 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByText(/hi, i'm jane doe/i)
   })
   it(`should render project content`, () => {
-    cy.findByText(/freiheit/i)
-    cy.findByText(/this project is my entry to adobe's #challengeyourperspective contest./i)
+    cy.findByText(/tips & tricks for gatsby/i)
+    cy.findByText(
+      /A collection of short, but useful quick tips shared by me and the community about Gatsby. From GraphQL over local development to deployment./i
+    )
   })
   it(`should render project cards with links`, () => {
-    cy.findByText(/freiheit/i)
+    cy.findByText(/tips & tricks for gatsby/i)
       .parent()
-      .should(`have.attr`, `href`, `https://www.behance.net/gallery/58937147/Freiheit`)
+      .should(
+        `have.attr`,
+        `href`,
+        `https://www.lekoarts.de/gatsby/tips-and-tricks-for-gatsby?utm_source=cara&utm_medium=Theme`
+      )
   })
   it(`should render about content`, () => {
     cy.findByText(/winky face./i)
@@ -28,11 +34,16 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByLabelText(/toggle dark mode/i)
   })
   it(`should have functioning dark mode toggle`, () => {
-    cy.get(`body`)
+    cy.findByLabelText(/toggle dark mode/i).then((button) => {
+      if (button.text().includes(`Dark`)) {
+        cy.findByLabelText(/toggle dark mode/i).click()
+      }
+    })
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(226, 232, 240)`)
       .should(`have.css`, `background`, `rgb(20, 24, 33) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/toggle dark mode/i).click()
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)
   })

@@ -20,10 +20,12 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-status-dashboard?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-status-dashboard.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=status-dashboard&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
 Show the live statuses of your Netlify and CircleCI builds on your website! Easily integrate the customizable components into your site and adapt them to your theme (utilizing Theme UI).
@@ -32,7 +34,7 @@ Show the live statuses of your Netlify and CircleCI builds on your website! Easi
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-status-dashboard).
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=status-dashboard&utm_medium=Theme).
 
 ## Features
 
@@ -87,17 +89,17 @@ module.exports = {
 
 ### Environment variables
 
-You **must** have two environment variables configured in your project as the theme relies on them: `NETLIFY_ACCESS_KEY` and `CIRCLECI_KEY`. Otherwise the theme can't access information from the source plugins.
+You **must** have two environment variables configured in your project as the theme relies on them: `NETLIFY_ACCESS_KEY` and `CIRCLECI_KEY`. Otherwise, the theme can't access information from the source plugins.
 
 You can read [`gatsby-source-netlify`'s documentation](https://github.com/LekoArts/gatsby-source-netlify#prerequisites) and [`gatsby-source-circleci`'s documentation](https://github.com/LekoArts/gatsby-source-circleci#prerequisites) to learn how to obtain your API keys.
 
-Gatsby also has [official documentation](https://www.gatsbyjs.org/docs/environment-variables/) on environment variables.
+Gatsby also has [official documentation](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/) on environment variables.
 
 Lastly you should have a look at the [example site](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard) if you need further help.
 
 ### Components
 
-This theme doesn't setup an individual page but rather exposes two React components:
+This theme doesn't set up an individual page but rather exposes two React components:
 
 - `Info`: Displays the number of Netlify websites and CircleCI projects (e.g. "18 Websites" and "7 CircleCI Projects")
 
@@ -108,7 +110,7 @@ This theme doesn't setup an individual page but rather exposes two React compone
 Import the components into your file and use them like normal React components (see [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard/src/pages/index.jsx)):
 
 ```jsx
-import React from "react";
+import * as React from "react";
 
 import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard";
 
@@ -128,11 +130,11 @@ export default Index;
 
 The Netlify API doesn't update the paths to GitHub when you e.g. change your username (it'll keep the one from the time you created the Netlify project). As the theme will use the GitHub URLs from Netlify projects to check against CircleCI (to see if it can find CircleCI projects with the same GitHub URL), they need to be the same.
 
-Hence this theme allows to shadow a `formatters` file. It'll be used to replace words in the URL, e.g. replace `LeKoArts` with `LekoArts`. You can find the file in `src/utils`.
+Hence, this theme allows to shadow a `formatters` file. It'll be used to replace words in the URL, e.g. replace `LeKoArts` with `LekoArts`. You can find the file in `src/utils`.
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-status-dashboard/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-status-dashboard/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ## 🌟 Supporting me
 

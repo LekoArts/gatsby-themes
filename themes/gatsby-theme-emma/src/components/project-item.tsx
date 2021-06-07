@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { animated } from "react-spring"
-import { ChildImageSharp } from "../types"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 type ProjectItemProps = {
   node: {
@@ -12,12 +11,17 @@ type ProjectItemProps = {
     slug: string
     service: string
     client: string
-    cover: ChildImageSharp
+    cover: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
+    }
   }
   style: any
+  eager?: boolean
 }
 
-const ProjectItem = ({ node, style }: ProjectItemProps) => (
+const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
   <animated.div
     sx={{
       position: `relative`,
@@ -70,26 +74,9 @@ const ProjectItem = ({ node, style }: ProjectItemProps) => (
           },
         }}
       >
-        <Img fluid={node.cover.childImageSharp.fluid} />
+        <GatsbyImage loading={eager ? `eager` : `lazy`} image={node.cover.childImageSharp.gatsbyImageData} alt="" />
       </div>
       <Link to={node.slug} aria-label={`View detail page of ${node.title}`}>
-        <img
-          alt=""
-          src={node.cover.childImageSharp.fluid.tracedSVG}
-          sx={{
-            position: `absolute`,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            width: `100%`,
-            height: `100%`,
-            filter: `invert(100%)`,
-            zIndex: -1,
-            opacity: 0.08,
-            objectFit: `cover`,
-          }}
-        />
         <div
           sx={{
             backgroundColor: node.color,

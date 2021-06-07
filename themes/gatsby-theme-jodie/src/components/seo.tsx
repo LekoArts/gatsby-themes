@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
@@ -10,7 +10,7 @@ type Props = {
   children?: React.ReactNode
 }
 
-const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: Props) => {
+const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: Props) => {
   const site = useSiteMetadata()
 
   const {
@@ -56,4 +56,4 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
   )
 }
 
-export default SEO
+export default Seo

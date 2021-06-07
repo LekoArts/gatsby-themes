@@ -2,7 +2,6 @@ const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
   const options = withDefaults(themeOptions)
-  const { mdx = true } = themeOptions
 
   return {
     siteMetadata: {
@@ -14,7 +13,7 @@ module.exports = (themeOptions) => {
       siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
-      graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
+      graphiQLUrl: `https://yx3py-8000.sse.codesandbox.io/___graphql`,
       basePath: options.basePath,
       docsPath: options.docsPath,
     },
@@ -26,13 +25,14 @@ module.exports = (themeOptions) => {
           path: options.docsPath,
         },
       },
-      mdx && {
+      options.mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {},
+        options: {
+          lessBabel: true,
+        },
       },
       `gatsby-plugin-react-helmet`,
       `gatsby-plugin-theme-ui`,
-      `gatsby-plugin-typescript`,
     ].filter(Boolean),
   }
 }

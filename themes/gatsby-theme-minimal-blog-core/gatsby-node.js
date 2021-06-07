@@ -48,7 +48,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   })
 
   createTypes(`
-    interface Post @nodeInterface {
+    interface Post implements Node {
       id: ID!
       slug: String! @slugify
       title: String!
@@ -68,7 +68,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       slug: String
     }
 
-    interface Page @nodeInterface {
+    interface Page implements Node {
       id: ID!
       slug: String!
       title: String!

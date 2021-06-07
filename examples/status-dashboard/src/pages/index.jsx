@@ -1,5 +1,5 @@
-import React from "react"
-import { Global, css } from "@emotion/core"
+import * as React from "react"
+import { Global, css } from "@emotion/react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard"
@@ -84,27 +84,67 @@ const Index = ({
         {siteDescription}
       </p>
       <Info />
-      <div css={css({ marginTop: `1rem` })} />
+      <div
+        css={css`
+          margin-top: 1rem;
+        `}
+      />
       <Grid />
       <footer
-        css={css({
-          textAlign: `center`,
-          marginTop: `4rem`,
-          color: `#525f74`,
-          fontFamily: `-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif`,
-          fontWeight: `400`,
-        })}
+        css={css`
+          text-align: center;
+          margin-top: 4rem;
+          color: #525f74;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+            "Helvetica Neue", sans-serif;
+          font-weight: 400;
+        `}
       >
         Copyright &copy; {new Date().getFullYear()}. All rights reserved.
         <br />
-        <div css={css({ display: `flex`, justifyContent: `center`, alignItems: `center`, marginTop: `1rem` })}>
-          <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_w30.png" alt="LekoArts Logo" />
+        <div
+          css={css`
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+          `}
+        >
+          <img width="30" height="30" src="https://img.lekoarts.de/gatsby/logo_v2_w30.png" alt="LekoArts Logo" />
           {` `}
           <a
-            css={css({ color: `#525f74`, marginLeft: `1rem`, textDecoration: `none` })}
+            css={css`
+              color: #525f74;
+              margin-left: 1rem;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            `}
             href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard"
           >
-            Theme by LekoArts
+            Theme
+          </a>
+          <div
+            css={css`
+              margin-left: 0.25rem;
+              margin-right: 0.25rem;
+            `}
+          >
+            by
+          </div>
+          <a
+            css={css`
+              color: #525f74;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            `}
+            data-testid="footer"
+            href="https://www.lekoarts.de?utm_source=status-dashboard&utm_medium=Starter"
+          >
+            LekoArts
           </a>
         </div>
       </footer>

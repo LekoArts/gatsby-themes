@@ -17,7 +17,11 @@ describe(`gatsby-theme-emilia`, () => {
   it(`should render the social links in the header`, () => {
     cy.findByTestId(`social-header`).within(() => {
       cy.findByText(/Twitter/i).should(`have.attr`, `href`, `https://twitter.com/lekoarts_de`)
-      cy.findByText(/Instagram/i).should(`have.attr`, `href`, `https://www.instagram.com/lekoarts.de/`)
+      cy.findByText(/Homepage/i).should(
+        `have.attr`,
+        `href`,
+        `https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme`
+      )
     })
   })
   it(`should render about me`, () => {
@@ -25,11 +29,11 @@ describe(`gatsby-theme-emilia`, () => {
     cy.findByText(/Boggarts lavender robes/i)
   })
   it(`should have functioning theme toggle`, () => {
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/activate dark mode/i).click()
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(203, 213, 224)`)
       .should(`have.css`, `background`, `rgb(26, 32, 44) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/activate light mode/i)

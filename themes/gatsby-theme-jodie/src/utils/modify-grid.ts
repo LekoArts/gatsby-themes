@@ -1,9 +1,13 @@
-import { ChildImageSharp } from "../types"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 export interface IGridItem {
   slug: string
   title: string
-  cover: ChildImageSharp
+  cover: {
+    childImageSharp: {
+      gatsbyImageData: IGatsbyImageData
+    }
+  }
   __typename: "MdxProject" | "MdxPage"
 }
 

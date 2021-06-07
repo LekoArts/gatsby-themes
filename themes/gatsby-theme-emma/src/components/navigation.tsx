@@ -13,9 +13,8 @@ const Navigation = ({ nav }: NavigationProps) => (
   <Flex
     as="nav"
     sx={{
-      flex: 1,
+      flex: [`1 0 50%`, 1],
       justifyContent: `flex-start`,
-      order: [2, 1],
       "a:not(:last-of-type)": {
         mr: 3,
       },

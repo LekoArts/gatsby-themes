@@ -8,6 +8,8 @@ module.exports = (themeOptions) => {
   const navigation = themeOptions.navigation || []
   const homepagePageLimit = themeOptions.homepagePageLimit || 9999
   const homepageProjectLimit = themeOptions.homepageProjectLimit || 3
+  const mdx = themeOptions.mdx ?? true
+  const sharp = themeOptions.sharp ?? true
 
   return {
     basePath,
@@ -19,5 +21,7 @@ module.exports = (themeOptions) => {
     navigation,
     homepagePageLimit,
     homepageProjectLimit,
+    mdx,
+    sharp,
   }
 }

@@ -2,12 +2,11 @@
 import { jsx, Heading } from "theme-ui"
 import * as React from "react"
 import { PageProps } from "gatsby"
-import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { transparentize } from "polished"
+import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "./layout"
-import SEO from "./seo"
-import { ChildImageSharp } from "../types"
+import Seo from "./seo"
 
 type DataProps = {
   project: {
@@ -30,14 +29,16 @@ type DataProps = {
   images: {
     nodes: {
       name: string
-      childImageSharp: ChildImageSharp["childImageSharp"]
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
     }[]
   }
 }
 
 const Project: React.FC<PageProps<DataProps>> = ({ data: { project, images }, location }) => (
   <Layout color={project.color || undefined}>
-    <SEO
+    <Seo
       title={project.title}
       description={project.excerpt}
       pathname={location.pathname}
@@ -55,7 +56,7 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { project, images }, lo
     <div sx={{ backgroundColor: transparentize(0.9, project.color) }}>
       <div sx={{ variant: `content.imageList` }}>
         {images.nodes.map((image) => (
-          <Img key={image.name} alt={image.name} fluid={image.childImageSharp.fluid} />
+          <GatsbyImage key={image.name} alt={image.name} image={image.childImageSharp.gatsbyImageData} />
         ))}
       </div>
     </div>

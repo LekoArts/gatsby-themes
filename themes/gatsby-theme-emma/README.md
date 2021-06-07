@@ -20,7 +20,9 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-emma?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-emma.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=emma&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
       <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
     </a>
@@ -32,7 +34,7 @@ Minimalistic portfolio with full-width grid, page transitions, support for addit
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-emma).
 
-Also be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=emma&utm_medium=Theme).
 
 ## Features
 
@@ -61,13 +63,14 @@ gatsby new emma LekoArts/gatsby-starter-portfolio-emma
 
 ### Theme options
 
-| Key            | Default Value      | Description                                                                                               |
-| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `basePath`     | `/`                | Root url for the theme                                                                                    |
-| `projectsPath` | `content/projects` | Location of projects                                                                                      |
-| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                   |
-| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
-| `formatString` | `DD.MM.YYYY`       | Configure the date format for Date fields                                                                 |
+| Key            | Default Value      | Description                                                                                                 |
+| -------------- | ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `basePath`     | `/`                | Root url for the theme                                                                                      |
+| `projectsPath` | `content/projects` | Location of projects                                                                                        |
+| `pagesPath`    | `content/pages`    | Location of additional pages (optional)                                                                     |
+| `mdx`          | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)   |
+| `sharp`        | `true`             | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off) |
+| `formatString` | `DD.MM.YYYY`       | Configure the date format for Date fields                                                                   |
 
 The usage of `content/pages` is optional. If no page/MDX file is found the navigation will be hidden.
 
@@ -120,7 +123,7 @@ module.exports = {
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.org/docs/themes/shadowing/) to understand how to customize the this theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the theme! Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-emma/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Adding content
 

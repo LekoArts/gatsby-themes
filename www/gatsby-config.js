@@ -1,9 +1,8 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const thoughtsFeed = require(`./src/utils/feed`)
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 const githubToken = process.env.GITHUB_TOKEN
 
 module.exports = {
@@ -16,6 +15,10 @@ module.exports = {
     language: `en`,
     image: `/banner.png`,
     author: `@lekoarts_de`,
+  },
+  flags: {
+    DEV_SSR: false,
+    FAST_DEV: true,
   },
   plugins: [
     {
@@ -63,11 +66,10 @@ module.exports = {
         `,
       },
     },
-    {
+    googleAnalyticsTrackingId && {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
-        anonymize: true,
       },
     },
     {
@@ -75,7 +77,6 @@ module.exports = {
       options: {
         lessBabel: true,
         gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
-        // TODO: Remove once this is fixed
         plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
       },
     },
@@ -91,8 +92,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-typescript`,
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-feed`,

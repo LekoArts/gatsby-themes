@@ -157,7 +157,7 @@ const ThoughtTemplate: React.FC<PageProps<ThoughtTemplateProps>> = ({ data: { th
 export default ThoughtTemplate
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     thought(slug: { eq: $slug }) {
       slug
       title

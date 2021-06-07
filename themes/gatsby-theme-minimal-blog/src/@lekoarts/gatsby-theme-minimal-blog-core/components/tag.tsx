@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import Tag from "../../../components/tag"
 
 type Props = {

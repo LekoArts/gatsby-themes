@@ -1,11 +1,11 @@
-import React from "react"
-import { Global } from "@emotion/core"
+import * as React from "react"
+import { Global } from "@emotion/react"
 import { Box } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import useNavigation from "../hooks/use-navigation"
 import Footer from "./footer"
 import Header from "./header"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -42,7 +42,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
           },
         })}
       />
-      <SEO />
+      <Seo />
       <Header meta={meta} nav={nav} />
       <Box as="main" variant="layout.main" className={className}>
         {children}

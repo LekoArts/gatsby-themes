@@ -1,23 +1,14 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx } from "theme-ui"
-import Img from "gatsby-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import BGImage from "./bg-image"
 
 type HeroProps = {
   children: React.ReactNode
   color?: string
   slim?: boolean
-  image: {
-    aspectRatio: number
-    src: string
-    srcSet: string
-    sizes: string
-    base64: string
-    tracedSVG: string
-    srcWebp: string
-    srcSetWebp: string
-  }
+  image: IGatsbyImageData
 }
 
 const Hero = ({ children, color = ``, image, slim = false }: HeroProps) => (
@@ -31,7 +22,7 @@ const Hero = ({ children, color = ``, image, slim = false }: HeroProps) => (
     }}
   >
     <BGImage color={color} slim={slim}>
-      <Img fluid={image} />
+      <GatsbyImage image={image} alt="" />
     </BGImage>
     {children}
   </section>

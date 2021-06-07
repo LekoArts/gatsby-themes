@@ -48,7 +48,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   })
 
   createTypes(`
-    interface Project @nodeInterface {
+    interface Project implements Node {
       id: ID!
       slug: String! @slugify
       title: String!
@@ -60,8 +60,8 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
-    
-    interface Page @nodeInterface {
+
+    interface Page implements Node {
       id: ID!
       slug: String!
       title: String!
@@ -69,7 +69,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
-    
+
     type MdxProject implements Node & Project {
       title: String!
       slug: String! @slugify
@@ -81,7 +81,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
-    
+
     type MdxPage implements Node & Page {
       slug: String!
       title: String!

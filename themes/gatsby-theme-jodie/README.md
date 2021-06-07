@@ -20,10 +20,12 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-jodie?minimal=true">
     <img src="https://img.shields.io/npm/dt/@lekoarts/gatsby-theme-jodie.svg" alt="Total downloads on npm." />
   </a>
-  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
+  <a href="https://www.lekoarts.de?utm_source=jodie&utm_medium=Theme">
+    <img alt="Website" src="https://img.shields.io/badge/-website-blue">
+  </a>
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
+  </a>
 </p>
 
 Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.
@@ -32,7 +34,7 @@ Image-heavy photography portfolio with colorful accents & customizable pages. In
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-portfolio-jodie).
 
-Also, be sure to checkout other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de)
+Also, be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=jodie&utm_medium=Theme).
 
 ## Features
 
@@ -40,7 +42,7 @@ Also, be sure to checkout other [Free & Open Source Gatsby Themes](https://theme
 - Theme UI-based theming
 - Create a project by creating an MDX file and dropping the images into the same folder
 - Extensible custom pages
-- Define colors for each page and the sidebar & content will adapt while maintaining WCAG 2 AA contrast ratios
+- Define colors for each page, and the sidebar & content will adapt while maintaining WCAG 2 AA contrast ratios
 
 ## Installation
 
@@ -62,17 +64,19 @@ gatsby new jodie LekoArts/gatsby-starter-portfolio-jodie
 
 ### Theme options
 
-| Key                    | Default Value      | Description                                                                                  |
-| ---------------------- | ------------------ | -------------------------------------------------------------------------------------------- |
-| `basePath`             | `/`                | Root url for the theme                                                                       |
-| `projectsPath`         | `content/projects` | Location of projects                                                                         |
-| `projectsUrl`          | `/projects`        | url for the projects overview                                                                |
-| `projectsPrefix`       | `/`                | Prefix for all individual projects                                                           |
-| `pagesPath`            | `content/pages`    | Location of pages                                                                            |
-| `formatString`         | `DD.MM.YYYY`       | Configure the date format for Date fields                                                    |
-| `navigation`           | `[]`               | Add links to your internal sites to the sidebar                                              |
-| `homepagePageLimit`    | `9999`             | Configure how many pages (defined in `pagesPath` should be shown on the homepage (`/`)       |
-| `homepageProjectLimit` | `3`                | Configure how many projects (defined in `projectsPath` should be shown on the homepage (`/`) |
+| Key                    | Default Value      | Description                                                                                                 |
+| ---------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `basePath`             | `/`                | Root url for the theme                                                                                      |
+| `projectsPath`         | `content/projects` | Location of projects                                                                                        |
+| `projectsUrl`          | `/projects`        | url for the projects overview                                                                               |
+| `projectsPrefix`       | `/`                | Prefix for all individual projects                                                                          |
+| `pagesPath`            | `content/pages`    | Location of pages                                                                                           |
+| `formatString`         | `DD.MM.YYYY`       | Configure the date format for Date fields                                                                   |
+| `navigation`           | `[]`               | Add links to your internal sites to the sidebar                                                             |
+| `homepagePageLimit`    | `9999`             | Configure how many pages (defined in `pagesPath` should be shown on the homepage (`/`)                      |
+| `homepageProjectLimit` | `3`                | Configure how many projects (defined in `projectsPath` should be shown on the homepage (`/`)                |
+| `mdx`                  | `true`             | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)   |
+| `sharp`                | `true`             | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off) |
 
 #### Example usage
 

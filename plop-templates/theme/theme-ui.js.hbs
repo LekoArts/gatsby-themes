@@ -3,7 +3,9 @@ import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
   initialColorModeName: `light`,
-  useCustomProperties: true,
+  config: {
+    useCustomProperties: true,
+  },
   colors: {
     primary: tailwind.colors.pink[7],
     secondary: tailwind.colors.indigo[6],

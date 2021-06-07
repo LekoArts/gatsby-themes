@@ -49,7 +49,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   })
 
   createTypes(`
-    interface Project @nodeInterface {
+    interface Project implements Node {
       id: ID!
       title: String!
       slug: String! @slugify
@@ -59,7 +59,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 160): String!
       body: String!
     }
-    
+
     type MdxProject implements Node & Project {
       title: String!
       slug: String! @slugify
@@ -69,13 +69,13 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
-    
+
     type EmiliaConfig implements Node {
       name: String
       location: String
       socialMedia: [socialMediaEntry!]
     }
-    
+
     type socialMediaEntry {
       title: String
       href: String
@@ -136,7 +136,7 @@ exports.sourceNodes = (
     location = `Germany`,
     socialMedia = [
       { title: `Twitter`, href: `https://twitter.com/lekoarts_de` },
-      { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` },
+      { title: `Homepage`, href: `https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme` },
     ],
     showThemeAuthor = true,
     assetsPath = `content/assets`,
@@ -195,15 +195,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           title
           cover {
             childImageSharp {
-              fluid(maxWidth: 770, quality: 90) {
-                aspectRatio
-                base64
-                src
-                srcSet
-                srcSetWebp
-                srcWebp
-                sizes
-              }
+              gatsbyImageData(width: 770, quality: 90, aspectRatio: 1.777778)
             }
           }
         }

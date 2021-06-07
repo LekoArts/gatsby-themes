@@ -1,6 +1,4 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
@@ -9,6 +7,9 @@ module.exports = {
     siteUrl: process.env.SITE_URL || `https://status.lekoarts.de`,
     siteName: process.env.SITE_TITLE || `Status Dashboard - LekoArts`,
     siteDescription: process.env.SITE_DESCRIPTION || `Showing the statuses of my Netlify deploys & CircleCI tests.`,
+  },
+  flags: {
+    FAST_DEV: true,
   },
   plugins: [
     // See the theme's README for all available components

@@ -11,9 +11,7 @@ export const query = graphql`
         slug
         cover {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(width: 1200, quality: 90)
           }
         }
       }

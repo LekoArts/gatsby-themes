@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 
 const Volume = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="icon-volume-up" aria-hidden focusable="false">

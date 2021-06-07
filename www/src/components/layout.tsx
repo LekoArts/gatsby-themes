@@ -58,14 +58,16 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
         {children}
       </Box>
       <Box as="footer" variant="layout.footer">
-        &copy; {new Date().getFullYear()} by <Themed.a href="https://www.lekoarts.de/en">LekoArts</Themed.a>. All rights
-        reserved.{` `}
-        <Themed.a rel="nofollow" href="https://www.lekoarts.de/en/imprint">
-          Imprint
+        &copy; {new Date().getFullYear()} by{` `}
+        <Themed.a href="https://www.lekoarts.de?utm_source=gatsby-themes&utm_medium=www">LekoArts</Themed.a>. All rights
+        reserved.
+        {` `}
+        <Themed.a rel="nofollow" href="https://www.lekoarts.de/legal-notice">
+          Legal Notice
         </Themed.a>
         .{` `}
-        <Themed.a rel="nofollow" href="https://www.lekoarts.de/en/privacy">
-          Privacy
+        <Themed.a rel="nofollow" href="https://www.lekoarts.de/privacy-policy">
+          Privacy Policy
         </Themed.a>
         .<br />
         This website is open source on{` `}

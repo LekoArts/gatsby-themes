@@ -1,11 +1,11 @@
 /* eslint react/destructuring-assignment: 0 */
-import React from "react"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/vsDark"
 import loadable from "@loadable/component"
 import { useMDXScope } from "gatsby-plugin-mdx/context"
 import { useMDXComponents } from "@mdx-js/react"
-import { css } from "@emotion/core"
 
 const badgeStyle = {
   marginBottom: `0.5rem`,
@@ -24,11 +24,11 @@ const LazyLiveProvider = loadable(async () => {
   const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
   return (props) => (
     <LiveProvider {...props}>
-      <div css={css(badgeStyle)}>Editor</div>
-      <LiveEditor css={css({ marginBottom: `1rem`, borderRadius: `0.25rem` })} />
+      <div sx={badgeStyle}>Editor</div>
+      <LiveEditor sx={{ marginBottom: `1rem`, borderRadius: `0.25rem` }} />
       <LiveError />
-      <div css={css(badgeStyle)}>Preview</div>
-      <LivePreview css={css({ marginBottom: `3rem` })} />
+      <div sx={badgeStyle}>Preview</div>
+      <LivePreview sx={{ marginBottom: `3rem` }} />
     </LiveProvider>
   )
 })

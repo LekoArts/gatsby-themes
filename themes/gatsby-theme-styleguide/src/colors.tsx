@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import React from "react"
-import { Styled, jsx } from "theme-ui"
+import * as React from "react"
+import { Themed, jsx } from "theme-ui"
 import { Palette, normalizeThemeUIColors } from "@lekoarts/gatsby-theme-specimens"
 import { useTheme } from "./context"
 import ColorsPalette from "./colors-palettes"
 
 const Colors = () => {
-  const { colors } = useTheme()
+  const { rawColors: colors } = useTheme()
   const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]))
   const filteredColors = Object.keys(colors)
     .filter((key) => filteredKeys.includes(key))
@@ -22,7 +22,7 @@ const Colors = () => {
   return (
     <React.Fragment>
       <section id="styleguide-colors">
-        <Styled.h2>Colors</Styled.h2>
+        <Themed.h2>Colors</Themed.h2>
         <Palette colors={normalizeThemeUIColors({ colors })} single mode="swatch" />
       </section>
       {hasPalettes && <ColorsPalette colors={filteredColors} />}

@@ -4,7 +4,7 @@ import ProjectComponent from "../components/project"
 export default ProjectComponent
 
 export const query = graphql`
-  query($slug: String!, $formatString: String!) {
+  query ($slug: String!, $formatString: String!) {
     project(slug: { eq: $slug }) {
       body
       excerpt
@@ -16,9 +16,7 @@ export const query = graphql`
       title
       cover {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 90) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(quality: 90, layout: FULL_WIDTH)
           resize(width: 800) {
             src
           }

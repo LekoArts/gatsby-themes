@@ -1,17 +1,20 @@
 /** @jsx jsx */
-import { Styled, jsx } from "theme-ui"
+import { Themed, jsx } from "theme-ui"
 
 const Footer = () => (
   <footer
     sx={{ pt: 2, my: 4, color: `secondary`, borderTopColor: `muted`, borderTopStyle: `solid`, borderTopWidth: `1px` }}
   >
-    <Styled.p>
+    <Themed.p>
       Created with{` `}
-      <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide">
+      <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide">
         @lekoarts/gatsby-theme-styleguide
-      </Styled.a>
-      .
-    </Styled.p>
+      </Themed.a>
+      {` `}
+      by
+      {` `}
+      <Themed.a href="https://www.lekoarts.de?utm_source=styleguide&utm_medium=Theme">LekoArts</Themed.a>.
+    </Themed.p>
   </footer>
 )
 

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx } from "theme-ui"
 import { hidden } from "../styles/utils"
 
@@ -79,7 +79,7 @@ type SVGProps = {
   hiddenMobile?: boolean
 }
 
-const SVG = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile = false }: SVGProps) => (
+const Svg = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile = false }: SVGProps) => (
   <svg
     sx={{
       position: `absolute`,
@@ -97,4 +97,4 @@ const SVG = ({ stroke = false, color = ``, width, icon, left, top, hiddenMobile 
   </svg>
 )
 
-export default SVG
+export default Svg

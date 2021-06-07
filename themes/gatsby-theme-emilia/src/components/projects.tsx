@@ -1,9 +1,9 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
-import { jsx, Container, Styled, Box } from "theme-ui"
+import { jsx, Container, Themed, Box } from "theme-ui"
 import { useSpring, animated, config } from "react-spring"
-import { graphql, useStaticQuery } from "gatsby"
-import { ChildImageSharpFluid } from "../types"
+import { rgba } from "polished"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import Header from "./header"
 import Card from "./card"
@@ -13,43 +13,14 @@ type Props = {
     slug: string
     title: string
     cover: {
-      childImageSharp: ChildImageSharpFluid
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
     }
   }[]
 }
 
-type ProjecsStaticQuery = {
-  allProject: {
-    nodes: {
-      parent: {
-        fields: {
-          colorThief: string[]
-        }
-      }
-    }[]
-  }
-  [key: string]: string
-}
-
 const Projects = ({ projects }: Props) => {
-  const data = useStaticQuery<ProjecsStaticQuery>(graphql`
-    query {
-      allProject(sort: { fields: date, order: DESC }) {
-        nodes {
-          ... on MdxProject {
-            parent {
-              ... on Mdx {
-                fields {
-                  colorThief
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
   const fadeUpProps = useSpring({
     config: config.slow,
     delay: 600,
@@ -62,7 +33,7 @@ const Projects = ({ projects }: Props) => {
       <Layout>
         <Header />
         <Container>
-          <Styled.p>
+          <Themed.p>
             Hi!{` `}
             <span role="img" aria-label="Wave emoji">
               👋
@@ -71,22 +42,22 @@ const Projects = ({ projects }: Props) => {
             <br />
             Thanks for using <b>@lekoarts/gatsby-theme-emilia</b>. You currently don't have any content in your{` `}
             <i>projects</i> folder - that's why this page displays a placeholder text. Head over to the{` `}
-            <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
+            <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
               README
-            </Styled.a>
+            </Themed.a>
             {` `}
             to learn how to setup them.
-          </Styled.p>
-          <Styled.p>
+          </Themed.p>
+          <Themed.p>
             <b>TL;DR:</b> <br />
             The starter automatically created the folder <code>content/projects</code>. Go into this folder, create a
             new folder called <code>example</code> and create an <code>index.mdx</code> file there and place an image.
             Edit the frontmatter like described in the{` `}
-            <Styled.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
+            <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
               README
-            </Styled.a>
+            </Themed.a>
             .
-          </Styled.p>
+          </Themed.p>
         </Container>
       </Layout>
     )
@@ -102,17 +73,18 @@ const Projects = ({ projects }: Props) => {
               mt: `-8rem`,
               display: `grid`,
               gridTemplateColumns: [`1fr`, `repeat(auto-fill, minmax(350px, 1fr))`],
-              gridColumnGap: 4,
+              gridGap: 4,
+              alignItems: `flex-start`,
             }}
           >
             {projects.map((project, index) => {
-              const val = data.allProject.nodes[index].parent.fields.colorThief
-              const shadow = `${val[0]}, ${val[1]}, ${val[2]}`
+              const val = project.cover.childImageSharp.gatsbyImageData.backgroundColor as string
+              const shadow = rgba(val, 0.15)
 
               const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
-              const shadowArray = px.map((v) => `rgba(${shadow}, 0.15) 0px ${v} ${v} 0px`)
+              const shadowArray = px.map((v) => `${shadow} 0px ${v} ${v} 0px`)
 
-              return <Card key={project.slug} item={project} overlay={shadow} shadow={shadowArray} inGrid />
+              return <Card key={project.slug} eager={index === 0} item={project} overlay={val} shadow={shadowArray} />
             })}
           </Container>
         </animated.div>

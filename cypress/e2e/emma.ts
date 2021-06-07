@@ -21,16 +21,16 @@ describe(`gatsby-theme-emma`, () => {
         cy.findByLabelText(/toggle dark mode/i).click()
       }
     })
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box`)
     cy.findByLabelText(/toggle dark mode/i).click()
-    cy.get(`body`)
+    cy.get(`html`)
       .should(`have.css`, `color`, `rgb(255, 255, 255)`)
       .should(`have.css`, `background`, `rgb(45, 55, 72) none repeat scroll 0% 0% / auto padding-box border-box`)
   })
   it(`should render social media icons in header`, () => {
-    cy.findByLabelText(/instagram/i)
+    cy.findByLabelText(/twitter/i)
     cy.findByLabelText(/dribbble/i)
   })
   it(`should render the footer`, () => {

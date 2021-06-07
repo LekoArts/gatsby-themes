@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container } from "theme-ui"
 import { animated, useSpring, config } from "react-spring"
-import Img from "gatsby-image"
-import { ChildImageSharpFluid } from "../types"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import HeaderProject from "./header-project"
 import ProjectPagination from "./project-pagination"
@@ -28,7 +27,9 @@ type ProjectProps = {
     images: {
       nodes: {
         name: string
-        childImageSharp: ChildImageSharpFluid
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
       }[]
     }
   }
@@ -40,7 +41,9 @@ type ProjectProps = {
       }
       title: string
       cover: {
-        childImageSharp: ChildImageSharpFluid
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
       }
     }
     next: {
@@ -50,7 +53,9 @@ type ProjectProps = {
       }
       title: string
       cover: {
-        childImageSharp: ChildImageSharpFluid
+        childImageSharp: {
+          gatsbyImageData: IGatsbyImageData
+        }
       }
     }
   }
@@ -72,7 +77,11 @@ const Project = ({ data: { project, images }, pageContext: { prev, next } }: Pro
       <Container sx={{ mt: [`-6rem`, `-6rem`, `-8rem`] }}>
         {images.nodes.map((image) => (
           <animated.div key={image.name} style={imageFade}>
-            <Img fluid={image.childImageSharp.fluid} alt={image.name} sx={{ mb: [4, 4, 5], boxShadow: `xl` }} />
+            <GatsbyImage
+              image={image.childImageSharp.gatsbyImageData}
+              alt={image.name}
+              sx={{ mb: [4, 4, 5], boxShadow: `xl` }}
+            />
           </animated.div>
         ))}
         <ProjectPagination prev={prev} next={next} />

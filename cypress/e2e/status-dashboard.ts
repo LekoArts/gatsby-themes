@@ -33,6 +33,6 @@ describe(`gatsby-theme-status-dashboard`, () => {
     cy.findByAltText(/circleci status of gatsby-themes-by-lekoarts/i)
   })
   it(`should render the footer`, () => {
-    cy.findByText(/theme by lekoarts/i)
+    cy.findByTestId(/footer/i).should(`have.text`, `LekoArts`)
   })
 })

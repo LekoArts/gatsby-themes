@@ -1,5 +1,5 @@
-import React from "react"
-import { Styled } from "theme-ui"
+import * as React from "react"
+import { Themed } from "theme-ui"
 import { useStaticQuery, graphql } from "gatsby"
 
 const TableOfContents = () => {
@@ -19,7 +19,7 @@ const TableOfContents = () => {
         {toc &&
           toc.map((entry) => (
             <li key={entry.url}>
-              <Styled.a href={entry.url}>{entry.title}</Styled.a>
+              <Themed.a href={entry.url}>{entry.title}</Themed.a>
             </li>
           ))}
       </ul>

@@ -1,5 +1,6 @@
-import { keyframes, css } from "@emotion/core"
-import styled from "@emotion/styled"
+/** @jsx jsx */
+import * as React from "react"
+import { keyframes, css, jsx } from "@emotion/react"
 
 const wave = keyframes`
   0% {
@@ -39,24 +40,38 @@ const upDownWideAnimation = css`
   ${upDownWide} 18s ease-in-out infinite alternate;
 `
 
-export const UpDown = styled.div`
-  animation: ${upDownAnimation};
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`
+export function UpDown({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      css={css`
+        animation: ${upDownAnimation};
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      `}
+    >
+      {children}
+    </div>
+  )
+}
 
-export const UpDownWide = styled.div`
-  animation: ${upDownWideAnimation};
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`
+export function UpDownWide({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      css={css`
+        animation: ${upDownWideAnimation};
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      `}
+    >
+      {children}
+    </div>
+  )
+}
 
-export const waveAnimation = (length: string) => css`
-  animation: ${wave} ${length} linear infinite alternate;
-`
+export const waveAnimation = (length: string) => `${wave} ${length} linear infinite alternate`

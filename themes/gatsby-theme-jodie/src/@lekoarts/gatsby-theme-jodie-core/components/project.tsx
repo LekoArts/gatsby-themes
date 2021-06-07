@@ -1,5 +1,6 @@
 import * as React from "react"
 import { PageProps } from "gatsby"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import Project from "../../../components/project"
 
 type DataProps = {
@@ -12,6 +13,21 @@ type DataProps = {
     title: string
     shortTitle: string
     category: string
+    cover: {
+      childImageSharp: {
+        resize: {
+          src: string
+        }
+      }
+    }
+  }
+  images: {
+    nodes: {
+      name: string
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+      }
+    }[]
   }
 }
 

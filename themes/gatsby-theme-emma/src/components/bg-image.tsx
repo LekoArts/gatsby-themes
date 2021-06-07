@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from "react"
+import * as React from "react"
 import { jsx, useColorMode, useThemeUI } from "theme-ui"
 import { rgba } from "polished"
 
@@ -7,9 +7,11 @@ type BGImageProps = { children: React.ReactNode; color?: string; slim: boolean }
 
 const BGImage = ({ children, color = ``, slim }: BGImageProps) => {
   const [colorMode] = useColorMode()
-  const { theme } = useThemeUI()
+  const {
+    theme: { rawColors },
+  } = useThemeUI()
 
-  const bg = colorMode === `light` ? theme!.colors!.background : theme!.colors!.modes!.dark.background
+  const bg = colorMode === `light` ? (rawColors?.background as string) : (rawColors?.modes?.dark?.background as string)
   const shade = rgba(bg, 0.4)
 
   return (

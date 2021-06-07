@@ -1,9 +1,9 @@
-import React from "react"
+import * as React from "react"
 import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
-const SEO = ({ title = ``, description = false, pathname = false, image = false, children = null }) => {
+const Seo = ({ title = ``, description = false, pathname = false, image = false, children = null }) => {
   const site = useSiteMetadata()
 
   const {
@@ -49,4 +49,4 @@ const SEO = ({ title = ``, description = false, pathname = false, image = false,
   )
 }
 
-export default SEO
+export default Seo

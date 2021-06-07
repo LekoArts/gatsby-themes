@@ -11,10 +11,7 @@ export const query = graphql`
         title
         cover {
           childImageSharp {
-            fluid(maxWidth: 770, quality: 95) {
-              ...GatsbyImageSharpFluid_withWebp
-              presentationHeight
-            }
+            gatsbyImageData(width: 770, quality: 90)
           }
         }
       }

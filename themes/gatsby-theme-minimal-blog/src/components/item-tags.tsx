@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { Link as TLink } from "theme-ui"
 import { Link } from "gatsby"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"

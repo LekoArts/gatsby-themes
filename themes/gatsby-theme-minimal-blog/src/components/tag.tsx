@@ -1,12 +1,11 @@
 /** @jsx jsx */
-import { jsx, Heading, Link as TLink } from "theme-ui"
-import { Flex } from "@theme-ui/components"
+import { jsx, Heading, Link as TLink, Flex } from "theme-ui"
 import { Link } from "gatsby"
 import Layout from "./layout"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import Listing from "./listing"
 import replaceSlashes from "../utils/replaceSlashes"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type TagProps = {
   posts: {
@@ -34,7 +33,7 @@ const Tag = ({ posts, pageContext }: TagProps) => {
 
   return (
     <Layout>
-      <SEO title={`Tag: ${pageContext.name}`} />
+      <Seo title={`Tag: ${pageContext.name}`} />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
           {pageContext.name}

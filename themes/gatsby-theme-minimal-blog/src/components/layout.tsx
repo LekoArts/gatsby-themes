@@ -1,9 +1,8 @@
 /** @jsx jsx */
-import React from "react"
-import { Global } from "@emotion/core"
+import * as React from "react"
+import { Global } from "@emotion/react"
 import { Box, Container, jsx } from "theme-ui"
-import "typeface-ibm-plex-sans"
-import SEO from "./seo"
+import Seo from "./seo"
 import Header from "./header"
 import Footer from "./footer"
 import CodeStyles from "../styles/code"
@@ -41,7 +40,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         },
       })}
     />
-    <SEO />
+    <Seo />
     <SkipNavLink>Skip to content</SkipNavLink>
     <Container>
       <Header />

@@ -1,6 +1,4 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
+require(`dotenv`).config()
 
 module.exports = ({ netlifyOptions = {} }) => ({
   plugins: [
@@ -17,7 +15,6 @@ module.exports = ({ netlifyOptions = {} }) => ({
         apiKey: process.env.CIRCLECI_KEY,
       },
     },
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-theme-ui`,
   ],
 })

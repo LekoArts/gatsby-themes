@@ -1,7 +1,6 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
-import { ParallaxLayer } from "react-spring/renderprops-addons.cjs"
+import { ParallaxLayer } from "@react-spring/parallax"
 
 type ContentProps = {
   speed: number
