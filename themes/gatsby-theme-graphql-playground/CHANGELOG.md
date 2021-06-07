@@ -4,26 +4,28 @@
 
 ### Major Changes
 
-- [#599](https://github.com/LekoArts/gatsby-themes/pull/599) [`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288) Thanks [@LekoArts](https://github.com/LekoArts)! - ### Breaking Changes
+[#599](https://github.com/LekoArts/gatsby-themes/pull/599) [`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288) Thanks [@LekoArts](https://github.com/LekoArts)!
 
-  1. Using `lessBabel` option for `gatsby-plugin-mdx`
-  1. Removed `gatsby-plugin-typescript` & `gatsby-plugin-emotion`
+### Breaking Changes
 
-  #### Migrating
+1. Using `lessBabel` option for `gatsby-plugin-mdx`
+1. Removed `gatsby-plugin-typescript` & `gatsby-plugin-emotion`
 
-  1. The `lessBabel` option might break your setup in some edge cases. If it doesn't work, turn on the `mdx` option and choose your own config for `gatsby-plugin-mdx`
-  1. The TypeScript plugin isn't necessary anymore with Gatsby v3
+#### Migrating
 
-  ### Improvements
+1. The `lessBabel` option might break your setup in some edge cases. If it doesn't work, turn on the `mdx` option and choose your own config for `gatsby-plugin-mdx`
+1. The TypeScript plugin isn't necessary anymore with Gatsby v3
 
-  - Performance improvements from `theme-ui` upgrade
+### Improvements
 
-  ### Updates to Starter
+- Performance improvements from `theme-ui` upgrade
 
-  If you only cloned the starter (https://github.com/LekoArts/gatsby-starter-graphql-playground) and didn't change anything else this section will be more relevant to you.
+### Updates to Starter
 
-  - Add `FAST_DEV` flag
-  - Update to all latest Gatsby (+ plugins) versions
+If you only cloned the starter (https://github.com/LekoArts/gatsby-starter-graphql-playground) and didn't change anything else this section will be more relevant to you.
+
+- Add `FAST_DEV` flag
+- Update to all latest Gatsby (+ plugins) versions
 
 ## 1.1.21
 

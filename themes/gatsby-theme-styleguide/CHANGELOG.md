@@ -4,21 +4,23 @@
 
 ### Major Changes
 
-- [#599](https://github.com/LekoArts/gatsby-themes/pull/599) [`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288) Thanks [@LekoArts](https://github.com/LekoArts)! - ### Breaking Changes
+[#599](https://github.com/LekoArts/gatsby-themes/pull/599) [`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288) Thanks [@LekoArts](https://github.com/LekoArts)!
 
-  1. `peerDependencies` of `theme-ui` v0.9, React v17 and Gatsby v3
+### Breaking Changes
 
-  #### Migrating
+1. `peerDependencies` of `theme-ui` v0.9, React v17 and Gatsby v3
 
-  1. Update your packages to the necessary `peerDependency` versions
+#### Migrating
 
-  ### Updates to Starter
+1. Update your packages to the necessary `peerDependency` versions
 
-  If you only cloned the starter (https://github.com/LekoArts/gatsby-starter-styleguide) and didn't change anything else this section will be more relevant to you.
+### Updates to Starter
 
-  - Add `FAST_DEV` flag
-  - Update to all latest Gatsby (+ plugins) versions
-  - Update `emotion` from v10 to v11
+If you only cloned the starter (https://github.com/LekoArts/gatsby-starter-styleguide) and didn't change anything else this section will be more relevant to you.
+
+- Add `FAST_DEV` flag
+- Update to all latest Gatsby (+ plugins) versions
+- Update `emotion` from v10 to v11
 
 ### Patch Changes
 

@@ -4,27 +4,29 @@
 
 ### Major Changes
 
-- [#599](https://github.com/LekoArts/gatsby-themes/pull/599) [`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288) Thanks [@LekoArts](https://github.com/LekoArts)! - ### Breaking Changes
+[#599](https://github.com/LekoArts/gatsby-themes/pull/599) [`1785dcf`](https://github.com/LekoArts/gatsby-themes/commit/1785dcfad131ab9270c401e6a3bb450f7cb01288) Thanks [@LekoArts](https://github.com/LekoArts)!
 
-  1. Removed `gatsby-plugin-typescript`
-  1. Updating `theme-ui` from v0.3 to v0.9 and thus also `emotion` from v10 to v11
+### Breaking Changes
 
-  #### Migrating
+1. Removed `gatsby-plugin-typescript`
+1. Updating `theme-ui` from v0.3 to v0.9 and thus also `emotion` from v10 to v11
 
-  1. The TypeScript plugin isn't necessary anymore with Gatsby v3
-  1. The changelog/migration guide for `theme-ui` is here: https://theme-ui.com/migrating and for `emotion` here: https://emotion.sh/docs/emotion-11
+#### Migrating
 
-  ### Improvements
+1. The TypeScript plugin isn't necessary anymore with Gatsby v3
+1. The changelog/migration guide for `theme-ui` is here: https://theme-ui.com/migrating and for `emotion` here: https://emotion.sh/docs/emotion-11
 
-  - Performance improvements from `theme-ui` upgrade
+### Improvements
 
-  ### Updates to Starter
+- Performance improvements from `theme-ui` upgrade
 
-  If you only cloned the starter (https://github.com/LekoArts/gatsby-status-dashboard) and didn't change anything else this section will be more relevant to you.
+### Updates to Starter
 
-  - Add `FAST_DEV` flag
-  - Update to all latest Gatsby (+ plugins) versions
-  - Update `emotion` from v10 to v11
+If you only cloned the starter (https://github.com/LekoArts/gatsby-status-dashboard) and didn't change anything else this section will be more relevant to you.
+
+- Add `FAST_DEV` flag
+- Update to all latest Gatsby (+ plugins) versions
+- Update `emotion` from v10 to v11
 
 ## 1.1.16
 
