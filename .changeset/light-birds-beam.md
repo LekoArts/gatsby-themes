@@ -24,6 +24,7 @@
 
 - You can use the `sharp` theme option to be able to configure `gatsby-plugin-sharp` on your own (helpful for defaults for `gatsby-plugin-image`)
 - Performance improvements from `react-spring` and `theme-ui` upgrades
+- Additional props to the `ProjectCard` component are now spread by default in the `components` config of `gatsby-plugin-theme-ui`
 
 ### Updates to Starter
 
