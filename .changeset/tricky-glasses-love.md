@@ -24,6 +24,7 @@
 ### Improvements
 
 - Performance improvements from `theme-ui` upgrade
+- Fixed https://github.com/LekoArts/gatsby-themes/issues/415
 
 ### Updates to Starter
 
