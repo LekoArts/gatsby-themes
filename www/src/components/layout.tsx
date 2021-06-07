@@ -59,7 +59,8 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
       </Box>
       <Box as="footer" variant="layout.footer">
         &copy; {new Date().getFullYear()} by{` `}
-        <Themed.a href="https://www.lekoarts.de?utm_source=gatsby-themes-www">LekoArts</Themed.a>. All rights reserved.
+        <Themed.a href="https://www.lekoarts.de?utm_source=gatsby-themes&utm_medium=www">LekoArts</Themed.a>. All rights
+        reserved.
         {` `}
         <Themed.a rel="nofollow" href="https://www.lekoarts.de/legal-notice">
           Legal Notice

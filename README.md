@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.lekoarts.de/en">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/lekoarts-monogram.svg" width="80" />
+    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/lekoarts-monogram-v2.svg" width="100" />
   </a>
 </p>
 <h1 align="center">
@@ -75,10 +75,10 @@ Please star this project, share it on Social Media or consider supporting me on 
 
 ### Articles from lekoarts.de
 
-- [How I used Theme UI to build my Gatsby Themes library](https://www.lekoarts.de/en/blog/how-i-used-theme-ui-to-build-my-gatsby-themes-library)
-- [Setting up a Gatsby Themes workspace with TypeScript, ESLint & Cypress](https://www.lekoarts.de/en/blog/setting-up-a-gatsby-themes-workspace-with-typescript-eslint-and-cypress)
-- [Specimens for Gatsby powered Design Systems](https://www.lekoarts.de/en/blog/specimens-for-gatsby-powered-design-systems)
-- [Creating your own Status Dashboard with Gatsby](https://www.lekoarts.de/en/blog/creating-your-own-status-dashboard-with-gatsby)
+- [How I used Theme UI to build my Gatsby Themes library](https://www.lekoarts.de/javascript/how-i-used-theme-ui-to-seamlessly-convert-design-to-code?utm_source=gatsby-themes&utm_medium=README)
+- [Setting up a Gatsby Themes workspace with TypeScript, ESLint & Cypress](https://www.lekoarts.de/javascript/setting-up-a-yarn-workspace-with-typescript-eslint-and-cypress?utm_source=gatsby-themes&utm_medium=README)
+- [Specimens for Gatsby powered Design Systems](https://www.lekoarts.de/garden/specimens-for-gatsby-powered-design-systems?utm_source=gatsby-themes&utm_medium=README)
+- [Creating your own Status Dashboard with Gatsby](https://www.lekoarts.de/garden/creating-your-own-status-dashboard-with-gatsby?utm_source=gatsby-themes&utm_medium=README)
 
 ### Official resources
 
