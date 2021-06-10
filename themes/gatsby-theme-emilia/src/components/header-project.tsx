@@ -103,7 +103,7 @@ const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectPr
               ))}
             </div>
             {description && (
-              <div sx={{ maxWidth: `900px`, mx: `auto`, mt: 5, p: { textAlign: `left` } }}>
+              <div sx={{ maxWidth: `900px`, mx: `auto`, mt: 5, p: { textAlign: `left`, overflowWrap: `break-word` } }}>
                 <MDXRenderer>{description}</MDXRenderer>
               </div>
             )}
