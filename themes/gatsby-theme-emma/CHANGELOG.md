@@ -1,5 +1,31 @@
 # Change Log
 
+## 2.0.1
+
+### Patch Changes
+
+- [#597](https://github.com/LekoArts/gatsby-themes/pull/597) [`e1aec09`](https://github.com/LekoArts/gatsby-themes/commit/e1aec0984a39e834ae81001bf41bb2813a30bf33) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update packages
+
+  Renovate Bot updates:
+
+  - `@react-spring/parallax` ^9.1.2 -> ^9.2.3
+  - `@react-spring/web` ^9.1.2 -> ^9.2.3
+  - `gatsby-plugin-catch-links` ^3.6.0 -> ^3.7.0
+  - `gatsby-plugin-image` ^1.6.0 -> ^1.7.0
+  - `gatsby-plugin-mdx` ^2.6.0 -> ^2.7.0
+  - `gatsby-plugin-react-helmet` ^4.6.0 -> ^4.7.0
+  - `gatsby-plugin-sharp` ^3.6.0 -> ^3.7.0
+  - `gatsby-remark-images` ^5.3.0 -> ^5.4.0
+  - `gatsby-source-filesystem` ^3.6.0 -> ^3.7.0
+  - `gatsby-transformer-sharp` ^3.6.0 -> ^3.7.0
+
+* [#605](https://github.com/LekoArts/gatsby-themes/pull/605) [`b2822c0`](https://github.com/LekoArts/gatsby-themes/commit/b2822c0f6bef8f7d74d1846160659e8ddb0a6c36) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Don't use nullish coalescing
+
+  Support for Node versions older than 14+
+
+* Updated dependencies [[`e1aec09`](https://github.com/LekoArts/gatsby-themes/commit/e1aec0984a39e834ae81001bf41bb2813a30bf33), [`b2822c0`](https://github.com/LekoArts/gatsby-themes/commit/b2822c0f6bef8f7d74d1846160659e8ddb0a6c36)]:
+  - @lekoarts/gatsby-theme-emma-core@2.0.1
+
 ## 2.0.0
 
 ### Major Changes
