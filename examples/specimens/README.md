@@ -44,24 +44,26 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 
 [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/LekoArts/gatsby-starter-specimens)
 
-1. **Create a Gatsby site.**
+### 1. **Create a Gatsby site.**
 
-Use the Gatsby CLI to create a new site, specifying this project
-
-```sh
-gatsby new project-name https://github.com/LekoArts/gatsby-starter-specimens
-```
-
-2. **Start developing.**
-
-Navigate into your new site's directory and start it up.
+Use `git` to clone the site and navigate into it:
 
 ```sh
+git clone https://github.com/LekoArts/gatsby-starter-specimens project-name
 cd project-name
-gatsby develop
 ```
 
-3. **Open the code and start customizing!**
+### 2. **Install dependencies.**
+
+If you use npm 7 or above use the `--legacy-peer-deps` flag. If you use npm 6 you can use `npm install`.
+
+```sh
+npm install --legacy-peer-deps
+```
+
+### 3. **Open the code and start customizing!**
+
+Start the site by running `npm run develop`.
 
 Your site is now running at `http://localhost:8000`!
 

@@ -7,9 +7,6 @@ module.exports = {
   siteMetadata: {
     siteTitleAlt: `Emilia - Gatsby Starter Portfolio`,
   },
-  flags: {
-    FAST_DEV: true,
-  },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia`,

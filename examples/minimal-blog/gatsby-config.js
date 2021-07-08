@@ -7,9 +7,6 @@ module.exports = {
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
-  flags: {
-    FAST_DEV: true,
-  },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,

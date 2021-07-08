@@ -10,9 +10,6 @@ module.exports = {
     banner: `https://specimens.lekoarts.de/banner.jpg`,
     siteUrl: `https://specimens.lekoarts.de`,
   },
-  flags: {
-    FAST_DEV: true,
-  },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-specimens`,
