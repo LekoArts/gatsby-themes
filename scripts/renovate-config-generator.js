@@ -139,7 +139,7 @@ const renovateConfig = {
     `config:base`,
     `:disablePeerDependencies`,
     `:ignoreModulesAndTests`,
-    `:seperateMajorReleases`,
+    `:separateMajorReleases`,
     `:combinePatchMinorReleases`,
   ],
   includePaths: [`package.json`, `examples/**`, `themes/**`, `www`],
