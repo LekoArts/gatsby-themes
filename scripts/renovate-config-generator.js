@@ -54,6 +54,7 @@ const globalPackageRules = [
     ],
     matchUpdateTypes: [`major`, `minor`, `patch`],
     matchDepTypes: [`dependencies`, `devDependencies`],
+    dependencyDashboardApproval: true,
   },
 ]
 
