@@ -1,86 +1,1047 @@
 {
-  extends: ["config:base", ":disablePeerDependencies"],
-  includePaths: ["package.json", "examples/**", "themes/**"],
-  dependencyDashboard: true,
-  packageRules: [
-    {
-      groupName: "packages",
-      paths: ["package.json", "themes/**"],
-    },
-    {
-      groupName: "starters",
-      paths: ["examples/**"],
-    },
-    {
-      groupName: "types",
-      packagePatterns: ["^@types/"],
-      // only upgrade types with approval as they can break transitives
-      dependencyDashboardApproval: true,
-    },
-    // these rules define dependencies that we have special handling for
-    {
-      updateTypes: ["minor"],
-      excludePackageNames: [
-        // below is list of packages that use 0.X version range, any minor bump there can contain breaking changes, so we just ignore minor bumps for those packages and will need to bump them manually
-        "@reach/skip-nav",
-        "@theme-ui/color",
-        "@theme-ui/components",
-        "@theme-ui/presets",
-        "@theme-ui/prism",
-        "@theme-ui/sidenav",
-        "@theme-ui/typography",
-        "axios",
-        "gatsby-plugin-theme-ui",
-        "theme-ui",
-      ],
-    },
-    // we need to replicate this so that it goes to a separate group
-    {
-      // minor updates in packages <1.0.0 - need master issue approval
-      // not grouped
-      groupName: "packages (<1.0.0 minor)",
-      paths: ["package.json", "themes/**"],
-      dependencyDashboardApproval: true,
-      updateTypes: ["minor"],
-      packageNames: [
-        // below is list of packages that use 0.X version range, any minor bump there can contain breaking changes, so we just ignore minor bumps for those packages and will need to bump them manually
-        "@reach/skip-nav",
-        "@theme-ui/color",
-        "@theme-ui/components",
-        "@theme-ui/presets",
-        "@theme-ui/prism",
-        "@theme-ui/sidenav",
-        "@theme-ui/typography",
-        "axios",
-        "gatsby-plugin-theme-ui",
-        "theme-ui",
-      ],
-    },
-    {
-      // minor updates in packages <1.0.0 - need master issue approval
-      // not grouped
-      groupName: "starters (<1.0.0 minor)",
-      paths: ["examples/**"],
-      dependencyDashboardApproval: true,
-      updateTypes: ["minor"],
-      packageNames: [
-        // below is list of packages that use 0.X version range, any minor bump there can contain breaking changes, so we just ignore minor bumps for those packages and will need to bump them manually
-        "@reach/skip-nav",
-        "@theme-ui/prism",
-        "@theme-ui/typography",
-        "axios",
-        "gatsby-plugin-theme-ui",
-        "theme-ui",
-      ],
-    },
+  "extends": [
+    "config:base",
+    ":disablePeerDependencies",
+    ":ignoreModulesAndTests",
+    ":seperateMajorReleases",
+    ":combinePatchMinorReleases"
   ],
-  labels: ["renovate"],
-  prHourlyLimit: 4,
-  prConcurrentLimit: 15,
-  rangeStrategy: "bump",
-  bumpVersion: null,
-  semanticCommits: true,
-  timezone: "GMT",
-  schedule: ["before 10am on the first day of the month"],
-  automerge: false,
+  "includePaths": [
+    "package.json",
+    "examples/**",
+    "themes/**",
+    "www"
+  ],
+  "dependencyDashboard": true,
+  "labels": [
+    "renovate"
+  ],
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 15,
+  "rangeStrategy": "bump",
+  "bumpVersion": null,
+  "semanticCommits": true,
+  "timezone": "GMT",
+  "schedule": [
+    "before 10am on the first day of the month"
+  ],
+  "automerge": false,
+  "ignoreDeps": [
+    "react",
+    "react-dom"
+  ],
+  "postUpdateOptions": [
+    "yarnDedupeHighest"
+  ],
+  "packageRules": [
+    {
+      "groupName": "starters",
+      "commitMessageTopic": "starters",
+      "groupSlug": "starters-minor",
+      "matchPaths": [
+        "examples/**"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "starters",
+      "commitMessageTopic": "starters",
+      "groupSlug": "starters-major",
+      "matchPaths": [
+        "examples/**"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "www",
+      "commitMessageTopic": "www",
+      "groupSlug": "www-minor",
+      "matchPaths": [
+        "www"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "www",
+      "commitMessageTopic": "www",
+      "groupSlug": "www-major",
+      "matchPaths": [
+        "www"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "monorepo",
+      "commitMessageTopic": "monorepo",
+      "groupSlug": "monorepo",
+      "matchPaths": [
+        "+(package.json)"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "formatting & linting",
+      "commitMessageTopic": "Formatting & linting",
+      "matchPaths": [
+        "+(package.json)"
+      ],
+      "matchPackageNames": [
+        "eslint",
+        "prettier"
+      ],
+      "matchPackagePatterns": [
+        "^eslint-"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "typescript",
+      "matchPaths": [
+        "+(package.json)"
+      ],
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "matchPackagePatterns": [
+        "^@typescript-eslint/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "testing library",
+      "matchPaths": [
+        "+(package.json)"
+      ],
+      "matchPackagePatterns": [
+        "^@testing-library/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchDepTypes": [
+        "devDependencies"
+      ]
+    },
+    {
+      "groupName": "theme-ui",
+      "commitMessageTopic": "theme-ui",
+      "matchPaths": [
+        "themes/**",
+        "examples/**"
+      ],
+      "matchPackageNames": [
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ]
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-cara/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-cara",
+      "groupSlug": "gatsby-theme-cara-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-cara{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-cara/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-cara",
+      "groupSlug": "gatsby-theme-cara-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-cara{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emilia-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-emilia-core",
+      "groupSlug": "gatsby-theme-emilia-core-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emilia-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-emilia-core",
+      "groupSlug": "gatsby-theme-emilia-core-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emilia/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-emilia",
+      "groupSlug": "gatsby-theme-emilia-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emilia/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-emilia",
+      "groupSlug": "gatsby-theme-emilia-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emma-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-emma-core",
+      "groupSlug": "gatsby-theme-emma-core-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emma-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-emma-core",
+      "groupSlug": "gatsby-theme-emma-core-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emma/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-emma",
+      "groupSlug": "gatsby-theme-emma-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-emma/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-emma",
+      "groupSlug": "gatsby-theme-emma-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-graphql-playground/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-graphql-playground",
+      "groupSlug": "gatsby-theme-graphql-playground-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-graphql-playground{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-graphql-playground/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-graphql-playground",
+      "groupSlug": "gatsby-theme-graphql-playground-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-graphql-playground{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-jodie-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-jodie-core",
+      "groupSlug": "gatsby-theme-jodie-core-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-jodie-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-jodie-core",
+      "groupSlug": "gatsby-theme-jodie-core-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-jodie/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-jodie",
+      "groupSlug": "gatsby-theme-jodie-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-jodie/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-jodie",
+      "groupSlug": "gatsby-theme-jodie-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-minimal-blog-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-minimal-blog-core",
+      "groupSlug": "gatsby-theme-minimal-blog-core-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-minimal-blog-core/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-minimal-blog-core",
+      "groupSlug": "gatsby-theme-minimal-blog-core-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog-core{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-minimal-blog/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-minimal-blog",
+      "groupSlug": "gatsby-theme-minimal-blog-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-minimal-blog/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-minimal-blog",
+      "groupSlug": "gatsby-theme-minimal-blog-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-specimens/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-specimens",
+      "groupSlug": "gatsby-theme-specimens-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-specimens{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-specimens/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-specimens",
+      "groupSlug": "gatsby-theme-specimens-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-specimens{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-status-dashboard/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-status-dashboard",
+      "groupSlug": "gatsby-theme-status-dashboard-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-status-dashboard{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-status-dashboard/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-status-dashboard",
+      "groupSlug": "gatsby-theme-status-dashboard-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-status-dashboard{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-styleguide/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "minor and patch dependencies for gatsby-theme-styleguide",
+      "groupSlug": "gatsby-theme-styleguide-prod-minor",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-styleguide{{/unless}}"
+    },
+    {
+      "matchPaths": [
+        "themes/gatsby-theme-styleguide/package.json"
+      ],
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies for gatsby-theme-styleguide",
+      "groupSlug": "gatsby-theme-styleguide-prod-major",
+      "excludePackageNames": [
+        "eslint",
+        "prettier",
+        "typescript",
+        "@theme-ui/color",
+        "@theme-ui/components",
+        "@theme-ui/presets",
+        "@theme-ui/prism",
+        "@theme-ui/sidenav",
+        "@theme-ui/typography",
+        "gatsby-plugin-theme-ui",
+        "theme-ui"
+      ],
+      "excludePackagePatterns": [
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^@testing-library/"
+      ],
+      "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-styleguide{{/unless}}"
+    }
+  ]
 }
