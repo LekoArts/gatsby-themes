@@ -8,7 +8,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should render the title`, () => {
     cy.get(`h1`).within(() => {
-      cy.findByText(/Lupin/i)
+      cy.findByText(/Minimal Blog/i)
     })
   })
   it(`should link the about page`, () => {
