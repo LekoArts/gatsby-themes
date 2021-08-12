@@ -203,6 +203,51 @@ To edit the hero text ("Hi, I'm Lupin...), create a file at `src/@lekoarts/gatsb
 
 To edit the projects part below "Latest posts", create a file at `src/@lekoarts/gatsby-theme-minimal-blog/texts/bottom.mdx` to edit the contents.
 
+### Changing your fonts
+
+By default, the underlying theme and thus this starter uses "IBM Plex Sans" as its font. It's used throughout the site and set as a `font-family` on the `html` element.
+
+If you want to change your default font or add any additional fonts, you'll need to change two things:
+
+1. The configuration for `gatsby-omni-font-loader` => Responsible for loading the font CSS files
+1. The Theme UI config and its `fonts` key (see [Theme UI Typography Docs](https://theme-ui.com/theming#typography)) => Responsible for setting the `font-family` in the example
+
+After adjusting the configuration for `gatsby-omni-font-loader` you'll need to shadow the theme's Theme UI config and overwrite the `fonts` key. For the sake of this explanation it's assumed that you replaced "IBM Plex Sans" with "Roboto Mono".
+
+Create a file at `src/gatsby-plugin-theme-ui/index.js` with the following contents:
+
+```js
+import { merge } from "theme-ui";
+import originalTheme from "@lekoarts/gatsby-theme-minimal-blog/src/gatsby-plugin-theme-ui/index";
+
+const theme = merge(originalTheme, {
+  fonts: {
+    body: `"Roboto Mono", monospace`,
+  },
+});
+
+export default theme;
+```
+
+As defined in the [Theme Specification](https://theme-ui.com/theme-spec#typography) `body` is the default body font family.
+
+**Another example:** You didn't replace "IBM Plex Sans" but added "Roboto Mono" additionally since you want to use it for your headings.
+
+Then you'd not overwrite `body` but add a `heading` key:
+
+```js
+import { merge } from "theme-ui";
+import originalTheme from "@lekoarts/gatsby-theme-minimal-blog/src/gatsby-plugin-theme-ui/index";
+
+const theme = merge(originalTheme, {
+  fonts: {
+    heading: `"Roboto Mono", monospace`,
+  },
+});
+
+export default theme;
+```
+
 ### Change your `static` folder
 
 The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!

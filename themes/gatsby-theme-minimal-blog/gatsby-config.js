@@ -1,6 +1,6 @@
 module.exports = (options) => ({
   siteMetadata: {
-    siteTitle: `Lupin`,
+    siteTitle: `Minimal Blog`,
     siteTitleAlt: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
     siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
     siteUrl: `https://minimal-blog.lekoarts.de`,

@@ -5,6 +5,9 @@ const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
+    // You can overwrite values here that are used for the SEO component
+    // You can also add new values here to query them like usual
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog/gatsby-config.js
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   plugins: [
@@ -41,6 +44,8 @@ module.exports = {
         preconnect: [`https://fonts.gstatic.com`],
         interval: 300,
         timeout: 30000,
+        // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
+        // See: https://github.com/LekoArts/gatsby-themes/tree/master/examples/minimal-blog#changing-your-fonts
         web: [
           {
             name: `IBM Plex Sans`,
