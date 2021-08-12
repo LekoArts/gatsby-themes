@@ -32,6 +32,8 @@ module.exports = {
         preconnect: [`https://fonts.gstatic.com`],
         interval: 300,
         timeout: 30000,
+        // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
+        // See: https://github.com/LekoArts/gatsby-themes/tree/master/examples/jodie#changing-your-fonts
         web: [
           {
             name: `Work Sans`,

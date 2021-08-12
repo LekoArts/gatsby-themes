@@ -5,6 +5,9 @@ const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 
 module.exports = {
   siteMetadata: {
+    // You can overwrite values here that are used for the SEO component
+    // You can also add new values here to query them like usual
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-emma-core/gatsby-config.js
     siteTitleAlt: `Emma - Gatsby Starter Portfolio`,
   },
   plugins: [
