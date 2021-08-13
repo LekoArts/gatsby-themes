@@ -1,8 +1,3 @@
-<p align="center">
-  <a href="https://themes.lekoarts.de">
-    <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/gatsby-themes-by-lekoarts.svg" />
-  </a>
-</p>
 <h1 align="center">
   themes.lekoarts.de
 </h1>
@@ -27,5 +22,4 @@
 - [react-share](https://github.com/nygardk/react-share)
 - [react-three-fiber](https://github.com/drcmda/react-three-fiber)
 - [three](http://threejs.org)
-- [Gatsby Cloud](https://gatsbyjs.com) for CI/CD
-- [Netlify](http://netlify.com) as CDN
+- [Gatsby Cloud](https://gatsbyjs.com) for CI/CD and Hosting (powered by Fastly)

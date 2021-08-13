@@ -181,7 +181,7 @@ const Listing = () => {
               <Themed.h1 as="h3">{theme.title}</Themed.h1>
               <Themed.p>{theme.description}</Themed.p>
               <a href={theme.url} sx={{ variant: `buttons.primary`, mt: 3, ...buttonStyles }}>
-                Get the Theme
+                Get Started
               </a>
             </Flex>
           </Box>
