@@ -22,11 +22,11 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "gatsby-plugin-mdx": "^2.10.1",
-    "gatsby-plugin-sharp": "^3.10.2",
-    "gatsby-remark-images": "^5.7.0",
-    "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-transformer-sharp": "^3.10.0",
+    "gatsby-plugin-mdx": "alpha-9689ff",
+    "gatsby-plugin-sharp": "alpha-9689ff",
+    "gatsby-remark-images": "alpha-9689ff",
+    "gatsby-source-filesystem": "alpha-9689ff",
+    "gatsby-transformer-sharp": "alpha-9689ff",
     "lodash.kebabcase": "^4.1.1"
   },
   "keywords": [
@@ -43,5 +43,8 @@
     "type": "git",
     "url": "https://github.com/LekoArts/gatsby-themes.git",
     "directory": "themes/gatsby-theme-emma-core"
+  },
+  "engines": {
+    "node": ">=14.15.0"
   }
 }
