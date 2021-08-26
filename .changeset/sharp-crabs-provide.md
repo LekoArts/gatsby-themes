@@ -1,6 +1,6 @@
 ---
-"@lekoarts/gatsby-theme-minimal-blog-core": patch
-"@lekoarts/gatsby-theme-minimal-blog": patch
+"@lekoarts/gatsby-theme-minimal-blog-core": minor
+"@lekoarts/gatsby-theme-minimal-blog": minor
 ---
 
 **feat(minimal-blog-core): Set `backgroundColor` in gatsby-remark-images to `transparent`**
