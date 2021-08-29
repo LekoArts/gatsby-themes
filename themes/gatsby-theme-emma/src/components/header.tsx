@@ -21,7 +21,7 @@ const Header = ({ meta, nav }: HeaderProps) => {
     setColorMode(isDark ? `light` : `dark`)
   }
 
-  const navEmpty = nav.length === 0
+  const navEmpty = typeof nav === `undefined` || nav.length < 1
 
   return (
     <Flex as="header" variant="layout.header">
