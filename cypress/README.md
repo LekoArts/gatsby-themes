@@ -6,7 +6,9 @@ The Gatsby sites inside `examples` should be tested to ensure functionality of t
 
 1. Add a file with the name of the example (from `name` in `package.json`) inside `e2e`
 2. Write your tests. Ensure that every integral part of the theme is tested (it renders, it has its functionality)
-   - When possible also test the `themeOptions`
+
+- When possible also test the `themeOptions`
+
 3. Add a job to the CircleCI config
 
 ```

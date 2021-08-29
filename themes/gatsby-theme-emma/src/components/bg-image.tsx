@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
+// noinspection ES6UnusedImports
 import { jsx, useColorMode, useThemeUI } from "theme-ui"
 import { rgba } from "polished"
 
