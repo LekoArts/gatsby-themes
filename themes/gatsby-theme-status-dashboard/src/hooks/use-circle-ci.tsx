@@ -8,6 +8,8 @@ type UseCircleCIProps = {
   circleci: {
     nodes: {
       vcs_url: string
+      reponame: string
+      username: string
     }[]
   }
 }
@@ -20,6 +22,8 @@ const useCircleCi = () => {
       }
       circleci: allCircleCiProjects {
         nodes {
+          reponame
+          username
           vcs_url
         }
       }
