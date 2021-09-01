@@ -1,5 +1,28 @@
 # Change Log
 
+## 2.0.4
+
+### Patch Changes
+
+- [#657](https://github.com/LekoArts/gatsby-themes/pull/657) [`abbd114`](https://github.com/LekoArts/gatsby-themes/commit/abbd1142adecf81edea488798aca9de420ffd4c0) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia-core
+
+  | Package                                                          | Change                                                                                             |
+  | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+  | [gatsby-plugin-mdx](https://togithub.com/gatsbyjs/gatsby)        | [`^2.10.1` -> `^2.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-mdx/2.10.1/2.13.0)        |
+  | [gatsby-plugin-sharp](https://togithub.com/gatsbyjs/gatsby)      | [`^3.10.2` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-sharp/3.10.2/3.13.0)      |
+  | [gatsby-source-filesystem](https://togithub.com/gatsbyjs/gatsby) | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-source-filesystem/3.10.0/3.13.0) |
+  | [gatsby-transformer-sharp](https://togithub.com/gatsbyjs/gatsby) | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-transformer-sharp/3.10.0/3.13.0) |
+
+* [#656](https://github.com/LekoArts/gatsby-themes/pull/656) [`ea1a9b2`](https://github.com/LekoArts/gatsby-themes/commit/ea1a9b286b7eeeb2417857fb85ccad7e7074f35d) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia
+
+  | Package                                                            | Change                                                                                               |
+  | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+  | [gatsby-plugin-image](https://togithub.com/gatsbyjs/gatsby)        | [`^1.10.1` -> `^1.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-image/1.10.1/1.13.0)        |
+  | [gatsby-plugin-react-helmet](https://togithub.com/gatsbyjs/gatsby) | [`^4.10.0` -> `^4.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-react-helmet/4.13.0/4.13.0) |
+
+* Updated dependencies [[`abbd114`](https://github.com/LekoArts/gatsby-themes/commit/abbd1142adecf81edea488798aca9de420ffd4c0)]:
+  - @lekoarts/gatsby-theme-emilia-core@2.0.4
+
 ## 2.0.3
 
 ### Patch Changes

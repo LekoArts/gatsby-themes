@@ -1,5 +1,30 @@
 # Change Log
 
+## 3.1.1
+
+### Patch Changes
+
+- [#664](https://github.com/LekoArts/gatsby-themes/pull/664) [`2ca7855`](https://github.com/LekoArts/gatsby-themes/commit/2ca7855e1e8854352bac8052bb90b74c8463c595) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog-core
+
+  | Package                                                          | Change                                                                                             |
+  | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+  | [gatsby-plugin-mdx](https://togithub.com/gatsbyjs/gatsby)        | [`^2.10.1` -> `^2.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-mdx/2.13.0/2.13.0)        |
+  | [gatsby-plugin-sharp](https://togithub.com/gatsbyjs/gatsby)      | [`^3.10.2` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-sharp/3.13.0/3.13.0)      |
+  | [gatsby-remark-images](https://togithub.com/gatsbyjs/gatsby)     | [`^5.7.0` -> `^5.10.0`](https://renovatebot.com/diffs/npm/gatsby-remark-images/5.10.0/5.10.0)      |
+  | [gatsby-source-filesystem](https://togithub.com/gatsbyjs/gatsby) | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-source-filesystem/3.13.0/3.13.0) |
+  | [gatsby-transformer-sharp](https://togithub.com/gatsbyjs/gatsby) | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-transformer-sharp/3.13.0/3.13.0) |
+
+* [#663](https://github.com/LekoArts/gatsby-themes/pull/663) [`f0ba317`](https://github.com/LekoArts/gatsby-themes/commit/f0ba317cfbda893cfac30ba46b809cfc4398d7d3) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+  | Package                                                            | Change                                                                                               |
+  | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+  | [gatsby-plugin-catch-links](https://togithub.com/gatsbyjs/gatsby)  | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-catch-links/3.13.0/3.13.0)  |
+  | [gatsby-plugin-react-helmet](https://togithub.com/gatsbyjs/gatsby) | [`^4.10.0` -> `^4.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-react-helmet/4.13.0/4.13.0) |
+  | [react-live](https://togithub.com/philpl/react-live)               | [`^2.2.3` -> `^2.3.0`](https://renovatebot.com/diffs/npm/react-live/2.2.3/2.3.0)                     |
+
+* Updated dependencies [[`2ca7855`](https://github.com/LekoArts/gatsby-themes/commit/2ca7855e1e8854352bac8052bb90b74c8463c595)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@3.1.1
+
 ## 3.1.0
 
 ### Minor Changes

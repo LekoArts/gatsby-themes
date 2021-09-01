@@ -1,5 +1,17 @@
 # Change Log
 
+## 2.0.4
+
+### Patch Changes
+
+- [#660](https://github.com/LekoArts/gatsby-themes/pull/660) [`5deed2d`](https://github.com/LekoArts/gatsby-themes/commit/5deed2d81183f7425b502eef63f015c14b3df72a) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-graphql-playground
+
+  | Package                                                            | Change                                                                                               |
+  | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
+  | [gatsby-plugin-mdx](https://togithub.com/gatsbyjs/gatsby)          | [`^2.10.1` -> `^2.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-mdx/2.13.0/2.13.0)          |
+  | [gatsby-plugin-react-helmet](https://togithub.com/gatsbyjs/gatsby) | [`^4.10.0` -> `^4.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-react-helmet/4.13.0/4.13.0) |
+  | [gatsby-source-filesystem](https://togithub.com/gatsbyjs/gatsby)   | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-source-filesystem/3.13.0/3.13.0)   |
+
 ## 2.0.3
 
 ### Patch Changes
