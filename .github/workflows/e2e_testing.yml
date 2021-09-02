@@ -39,7 +39,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           record: true
-          parallel: true
+          tag: ${{ matrix.containers }}
           spec: cypress/e2e/build/${{ matrix.containers }}.js
           browser: chrome
           build: yarn workspace ${{ matrix.containers }} build:cypress
