@@ -1,5 +1,73 @@
 # Change Log
 
+## 3.1.1
+
+### Patch Changes
+
+- [#664](https://github.com/LekoArts/gatsby-themes/pull/664) [`2ca7855`](https://github.com/LekoArts/gatsby-themes/commit/2ca7855e1e8854352bac8052bb90b74c8463c595) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog-core
+
+  | Package                                                          | Change                                                                                             |
+  | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+  | [gatsby-plugin-mdx](https://togithub.com/gatsbyjs/gatsby)        | [`^2.10.1` -> `^2.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-mdx/2.13.0/2.13.0)        |
+  | [gatsby-plugin-sharp](https://togithub.com/gatsbyjs/gatsby)      | [`^3.10.2` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-plugin-sharp/3.13.0/3.13.0)      |
+  | [gatsby-remark-images](https://togithub.com/gatsbyjs/gatsby)     | [`^5.7.0` -> `^5.10.0`](https://renovatebot.com/diffs/npm/gatsby-remark-images/5.10.0/5.10.0)      |
+  | [gatsby-source-filesystem](https://togithub.com/gatsbyjs/gatsby) | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-source-filesystem/3.13.0/3.13.0) |
+  | [gatsby-transformer-sharp](https://togithub.com/gatsbyjs/gatsby) | [`^3.10.0` -> `^3.13.0`](https://renovatebot.com/diffs/npm/gatsby-transformer-sharp/3.13.0/3.13.0) |
+
+## 3.1.0
+
+### Minor Changes
+
+- [#644](https://github.com/LekoArts/gatsby-themes/pull/644) [`4fccc44`](https://github.com/LekoArts/gatsby-themes/commit/4fccc4412f4531c9b1063db3f8c6e41f4bda8ee0) Thanks [@LekoArts](https://github.com/LekoArts)! - **feat(minimal-blog-core): Set `backgroundColor` in gatsby-remark-images to `transparent`**
+
+  By default the plugin has `white` as a `backgroundColor`. This is a problem for transparent images (PNG) that are viewed in the dark theme version of the site.
+  So as a sensible default I'll set this to `transparent` now. If you relied on this being white and want to restore the old behavior, set the `mdx` option to `false` for the theme, [copy/paste the existing `gatsby-plugin-mdx` config](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog-core/gatsby-config.js#L22-L48) into your own site.
+
+  For example, your `gatsby-config.js` then will look like this:
+
+  ```js
+  module.exports = {
+    // + Rest of your config
+    plugins: [
+      // + rest of your plugins
+      {
+        resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+        options: {
+          mdx: false
+          // + rest of the options you want to set
+        }
+      },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          lessBabel: true,
+          extensions: [`.mdx`, `.md`],
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 960,
+                quality: 90,
+                linkImagesToOriginal: false
+              }
+            }
+          ],
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 960,
+                quality: 90,
+                linkImagesToOriginal: false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  };
+  ```
+
 ## 3.0.3
 
 ### Patch Changes
