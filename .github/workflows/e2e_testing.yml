@@ -1,0 +1,50 @@
+name: E2E Testing
+on: pull_request
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        uses: cypress-io/github-action@v2
+        with:
+          runTests: false
+      - name: Compile Cypress tests from JS to TS
+        run: yarn tsc:compile
+      - name: Save Cypress artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: cypress
+          if-no-files-found: error
+          path: cypress/e2e/build
+  e2e_tests:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node14.17.0-chrome91-ff89
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [cara, emilia, emma, graphql-playground, jodie, minimal-blog, status-dashboard, styleguide]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download Cypress artifacts
+        with:
+          name: cypress
+          path: cypress/e2e/build
+      - name: Cypress Tests
+        uses: cypress-io/github-action@v2
+        with:
+          record: true
+          parallel: true
+          spec: cypress/e2e/build/${{ matrix.containers }}.js
+          browser: chrome
+          build: yarn workspace ${{ matrix.containers }} build:cypress
+          start: yarn workspace ${{ matrix.containers }} serve
+          wait-on: "http://localhost:9000"
+          wait-on-timeout: 120
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
