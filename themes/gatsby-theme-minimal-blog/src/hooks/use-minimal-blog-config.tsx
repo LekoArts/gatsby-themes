@@ -4,6 +4,7 @@ type UseMinimalBlogConfigProps = {
   minimalBlogConfig: {
     basePath: string
     blogPath: string
+    blogHeadline: string
     postsPath: string
     pagesPath: string
     tagsPath: string
@@ -26,6 +27,7 @@ const useMinimalBlogConfig = () => {
       minimalBlogConfig {
         basePath
         blogPath
+        blogHeadline
         postsPath
         pagesPath
         tagsPath

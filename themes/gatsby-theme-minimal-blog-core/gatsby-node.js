@@ -100,6 +100,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     type MinimalBlogConfig implements Node {
       basePath: String
       blogPath: String
+      blogHeadline: String
       postsPath: String
       pagesPath: String
       tagsPath: String
@@ -126,6 +127,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
   const {
     basePath,
     blogPath,
+    blogHeadline,
     postsPath,
     pagesPath,
     tagsPath,
@@ -138,6 +140,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
   const minimalBlogConfig = {
     basePath,
     blogPath,
+    blogHeadline,
     postsPath,
     pagesPath,
     tagsPath,
