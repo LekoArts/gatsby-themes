@@ -45,8 +45,8 @@ npm install @lekoarts/gatsby-theme-minimal-blog-core
 | Key            | Default Value   | Description                                                                                                 |
 | -------------- | --------------- | ----------------------------------------------------------------------------------------------------------- |
 | `basePath`     | `/`             | Root url for the theme                                                                                      |
-| `blogPath`     | `/blog`         | url for the blog post overview page
-| `blogHeadline`    | `Blog`          | Headline for the blog post overview page|
+| `blogPath`     | `/blog`         | url for the blog post overview page                                                                         |
+| `blogHeadline` | `Blog`          | Headline for the blog post overview page                                                                    |
 | `tagsPath`     | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                    |
 | `postsPath`    | `content/posts` | Location of posts                                                                                           |
 | `postsPrefix`  | `/`             | Prefix for all individual blog posts                                                                        |
