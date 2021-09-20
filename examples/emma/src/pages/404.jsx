@@ -1,9 +1,9 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { Container, Themed, Link as TLink } from "theme-ui"
-import Header from "@lekoarts/gatsby-theme-emilia/src/components/header"
-import Layout from "@lekoarts/gatsby-theme-emilia/src/components/layout"
-import Seo from "@lekoarts/gatsby-theme-emilia/src/components/seo"
+import Header from "@lekoarts/gatsby-theme-emma/src/components/header"
+import Layout from "@lekoarts/gatsby-theme-emma/src/components/layout"
+import Seo from "@lekoarts/gatsby-theme-emma/src/components/seo"
 
 const NotFound = () => (
   <Layout>
@@ -15,7 +15,7 @@ const NotFound = () => (
         <br />
         You found a page that doesn't exist.{` `}
         <TLink as={Link} to="/">
-          Do you want to visit the homepage?
+          Jump to the homepage?
         </TLink>
         .
       </Themed.p>
