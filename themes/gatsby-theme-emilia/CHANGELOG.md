@@ -1,5 +1,16 @@
 # Change Log
 
+## 2.0.5
+
+### Patch Changes
+
+- [#686](https://github.com/LekoArts/gatsby-themes/pull/686) [`67ea91f`](https://github.com/LekoArts/gatsby-themes/commit/67ea91ff1c1d6627193141b0b60be8fb80e61170) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia-core
+
+* [#695](https://github.com/LekoArts/gatsby-themes/pull/695) [`afba2ff`](https://github.com/LekoArts/gatsby-themes/commit/afba2fff5d97e5a27c3110c078a2c804557cbf56) Thanks [@LekoArts](https://github.com/LekoArts)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia
+
+* Updated dependencies [[`67ea91f`](https://github.com/LekoArts/gatsby-themes/commit/67ea91ff1c1d6627193141b0b60be8fb80e61170)]:
+  - @lekoarts/gatsby-theme-emilia-core@2.0.5
+
 ## 2.0.4
 
 ### Patch Changes
