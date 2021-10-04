@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.5
+
+### Patch Changes
+
+- [#691](https://github.com/LekoArts/gatsby-themes/pull/691) [`6b8a950`](https://github.com/LekoArts/gatsby-themes/commit/6b8a95045c99743e152b88471bc78f93621b3099) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-jodie-core
+
 ## 2.0.4
 
 ### Patch Changes

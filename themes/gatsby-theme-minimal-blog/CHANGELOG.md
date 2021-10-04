@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.1.2
+
+### Patch Changes
+
+- [#692](https://github.com/LekoArts/gatsby-themes/pull/692) [`4d01e21`](https://github.com/LekoArts/gatsby-themes/commit/4d01e21bea0f0afc64445804402c54857b115517) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+- Updated dependencies [[`afba2ff`](https://github.com/LekoArts/gatsby-themes/commit/afba2fff5d97e5a27c3110c078a2c804557cbf56)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@3.1.2
+
 ## 3.1.1
 
 ### Patch Changes

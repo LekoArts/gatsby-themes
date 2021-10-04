@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.2
+
+### Patch Changes
+
+- [#695](https://github.com/LekoArts/gatsby-themes/pull/695) [`afba2ff`](https://github.com/LekoArts/gatsby-themes/commit/afba2fff5d97e5a27c3110c078a2c804557cbf56) Thanks [@LekoArts](https://github.com/LekoArts)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog-core
+
 ## 3.1.1
 
 ### Patch Changes
