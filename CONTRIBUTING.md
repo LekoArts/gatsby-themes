@@ -2,13 +2,13 @@
 
 Hi! I'm excited that you're interested in contributing to this project! Contributing should be enjoyable and productive for everyone, so please be kind to others and reach out if you have any questions or concerns (this project follows a [Code of Conduct](CODE_OF_CONDUCT.md)).
 
-All contributions are welcome, including opening and commenting on issues and pull requests, adding or updating the docs, bug fixes, blog posts, and suggestions for new features.
+All contributions are welcome, including opening and commenting on issues and pull requests, adding or updating the docs, bug fixes, and suggestions for new features.
 
 Changes to themes need to evaluated in more detail (e.g. if they would be breaking). The time to review a pull request depends on the complexity involved, so please be patient if a particular feature takes longer to review than others. Especially since this project is currently only maintained by me, LekoArts.
 
 ## Prerequisites
 
-- [Node.js](http://nodejs.org/) >= v12 must be installed.
+- [Node.js](http://nodejs.org/) >= v14 must be installed.
 - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Local Development
@@ -69,7 +69,7 @@ In the case of `examples/emma` the "example-name" would be "emma".
 
 The script starts `tsc` in _watch_ mode (for the files in `cypress/e2e`) and outputs them to `cypress/e2e/build` + starts `start-server-and-test` with Gatsby's development server and Cypress. Once the Cypress GUI opens select the fitting test (the others won't work, only the respective test + `smoke.js`!).
 
-CircleCI will run the `e2e-build.sh` script — you can use it to run the tests headless.
+GitHub Actions will run the `e2e-build.sh` script — you can use it to run the tests headless.
 
 You can skip the e2e tests if you use `docs` or `www` in your branch name, e.g. `docs/improve-readme` or `www/add-new-entry`.
 
