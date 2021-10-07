@@ -17,7 +17,6 @@ const NotFound = () => (
         <TLink as={Link} to="/">
           Do you want to visit the homepage?
         </TLink>
-        .
       </Themed.p>
     </Container>
   </Layout>
