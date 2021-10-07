@@ -1,14 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { Container, Themed, Link as TLink } from "theme-ui"
-import Header from "@lekoarts/gatsby-theme-emilia/src/components/header"
-import Layout from "@lekoarts/gatsby-theme-emilia/src/components/layout"
-import Seo from "@lekoarts/gatsby-theme-emilia/src/components/seo"
+import Layout from "@lekoarts/gatsby-theme-emma/src/components/layout"
+import Seo from "@lekoarts/gatsby-theme-emma/src/components/seo"
 
 const NotFound = () => (
   <Layout>
     <Seo title="404 - Not found" />
-    <Header />
     <Container>
       <Themed.p>
         Oh, no!
