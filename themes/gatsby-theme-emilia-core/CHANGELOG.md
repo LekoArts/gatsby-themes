@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.0.6
+
+### Patch Changes
+
+- [#696](https://github.com/LekoArts/gatsby-themes/pull/696) [`d0b7944`](https://github.com/LekoArts/gatsby-themes/commit/d0b79444bb75631bbbf83db0af21be811f648f60) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Improve READMEs with more instructions
+
+  Links to changelogs and places to ask questions were added.
+
 ## 2.0.5
 
 ### Patch Changes
