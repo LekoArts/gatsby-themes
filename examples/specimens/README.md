@@ -79,11 +79,11 @@ Have a look at the theme's README and files to see what options are available an
 
 ### Change your `static` folder
 
-The `static` folder contains the icons, social media images and robots.txt. Don't forget to change these files, too!
+The `static` folder contains the icons, social media images and `robots.txt`. Don't forget to change these files, too!
 
 ## 🤔 Questions or problems?
 
-Please open up an issue on the main repository: [LekoArts/gatsby-themes](https://github.com/LekoArts/gatsby-themes). Thanks!
+If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this project, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
 
 ## 🎓 Learning Gatsby
 
@@ -91,13 +91,13 @@ Looking for more guidance? Full documentation for Gatsby lives [on Gatsby's webs
 
 ### Themes
 
-- To learn more about Gatsby themes specifically, we recommend checking out the [theme docs](https://www.gatsbyjs.com/docs/themes/).
+To learn more about Gatsby themes specifically, I recommend checking out the [theme docs](https://www.gatsbyjs.com/docs/themes/).
 
 ### General
 
 - **For most developers, I recommend starting with the [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Reference Guides_ and _Gatsby API_ sections in the sidebar.
+- **To dive straight into code samples, head [to Gatsby's documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _How-to Guides_ and _Reference_ items in the primary navigation.
 
 ## 🌟 Supporting me
 
