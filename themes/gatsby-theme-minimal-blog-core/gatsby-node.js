@@ -260,7 +260,7 @@ const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, blogPath, tagsPath, formatString, postsPrefix } = withDefaults(themeOptions)
+  const { basePath, blogPath, tagsPath, formatString } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
