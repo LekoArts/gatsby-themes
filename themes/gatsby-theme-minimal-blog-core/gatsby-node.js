@@ -15,15 +15,15 @@ const mdxResolverPassthrough = (fieldName) => async (source, args, context, info
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
+exports.createSchemaCustomization = ({ actions }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, postsPrefix } = withDefaults(themeOptions)
 
   const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+    return `/${basePath}/${postsPrefix}/${slug}`.replace(/\/\/+/g, `/`)
   }
 
   createFieldExtension({
@@ -102,6 +102,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       blogPath: String
       postsPath: String
       pagesPath: String
+      postsPrefix: String
       tagsPath: String
       externalLinks: [ExternalLink]
       navigation: [NavigationEntry]
@@ -128,6 +129,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
     blogPath,
     postsPath,
     pagesPath,
+    postsPrefix,
     tagsPath,
     externalLinks,
     navigation,
@@ -140,6 +142,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
     blogPath,
     postsPath,
     pagesPath,
+    postsPrefix,
     tagsPath,
     externalLinks,
     navigation,
@@ -309,7 +312,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   posts.forEach((post) => {
     createPage({
-      path: `/${postsPrefix}${post.slug}`.replace(/\/\/+/g, `/`),
+      path: post.slug,
       component: postTemplate,
       context: {
         slug: post.slug,
