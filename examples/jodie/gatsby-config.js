@@ -12,11 +12,8 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-jodie`,
       // See the theme's README for all available options
       options: {
-        basePath: `/jodie`,
-        projectsUrl: `/artworks`,
-        projectsPrefix: `/stuff`,
         navigation: [
-          { name: `Projects`, slug: `/artworks` },
+          { name: `Projects`, slug: `/projects` },
           { name: `Art`, slug: `/art` },
           { name: `About`, slug: `/about` },
         ],
