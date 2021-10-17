@@ -18,12 +18,12 @@ const mdxResolverPassthrough = (fieldName) => async (source, args, context, info
 exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, projectsPrefix } = withDefaults(themeOptions)
 
   const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+    return `/${basePath}/${projectsPrefix}/${slug}`.replace(/\/\/+/g, `/`)
   }
 
   createFieldExtension({
@@ -122,7 +122,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
-  const { projectsPath, pagesPath } = withDefaults(themeOptions)
+  const { projectsPath, pagesPath, basePath } = withDefaults(themeOptions)
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -170,7 +170,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   if (node.internal.type === `Mdx` && source === pagesPath) {
     const fieldData = {
       title: node.frontmatter.title,
-      slug: node.frontmatter.slug,
+      slug: `/${basePath}/${node.frontmatter.slug}`.replace(/\/\/+/g, `/`),
       color: node.frontmatter.color ? node.frontmatter.color : undefined,
       custom: node.frontmatter.custom,
       cover: node.frontmatter.cover,
@@ -235,8 +235,7 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, projectsUrl, projectsPrefix, formatString, homepagePageLimit, homepageProjectLimit } =
-    withDefaults(themeOptions)
+  const { basePath, projectsUrl, formatString, homepagePageLimit, homepageProjectLimit } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -288,7 +287,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (projects.length > 0) {
     projects.forEach((project) => {
       createPage({
-        path: `/${basePath}${projectsPrefix}${project.slug}`.replace(/\/\/+/g, `/`),
+        path: project.slug,
         component: projectTemplate,
         context: {
           slug: project.slug,
@@ -304,7 +303,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (pages.length > 0) {
     pages.forEach((page) => {
       createPage({
-        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
+        path: page.slug,
         component: pageTemplate,
         context: {
           slug: page.slug,

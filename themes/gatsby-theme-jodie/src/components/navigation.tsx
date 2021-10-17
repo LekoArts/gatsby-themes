@@ -3,10 +3,11 @@ import { jsx, Link as TLink } from "theme-ui"
 import * as React from "react"
 import { Link } from "gatsby"
 import { readableColor } from "polished"
+import { replaceSlashes } from "../utils/replace-slashes"
 import useJodieConfig from "../hooks/use-jodie-config"
 
 const Navigation = ({ bg }: { bg: string }) => {
-  const { navigation } = useJodieConfig()
+  const { navigation, basePath } = useJodieConfig()
 
   return (
     <nav
@@ -35,7 +36,7 @@ const Navigation = ({ bg }: { bg: string }) => {
       <ul>
         {navigation.map((navItem) => (
           <li key={navItem.slug}>
-            <TLink as={Link} to={navItem.slug}>
+            <TLink as={Link} to={replaceSlashes(`/${basePath}/${navItem.slug}`)}>
               {navItem.name}
             </TLink>
           </li>
