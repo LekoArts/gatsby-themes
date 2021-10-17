@@ -59,6 +59,14 @@ npm install @lekoarts/gatsby-theme-jodie-core
 
 Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/themes/shadowing/) to understand how to customize this theme! You can also have a look at [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie-core/` to shadow/override files.
 
+## Changelog
+
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-jodie-core/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+
+## Questions?
+
+If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this theme, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
+
 ## 🌟 Supporting me
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.

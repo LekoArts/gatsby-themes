@@ -232,6 +232,14 @@ This way you are able to use the components directly in your MDX file without im
 <Alert type="success">Make it so!</Alert>
 ```
 
+## Changelog
+
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-specimens/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+
+## Questions?
+
+If you have general questions or need help with Gatsby, please go to one of the [support platforms](https://www.gatsbyjs.com/contributing/community/#where-to-get-support) mentioned in Gatsby's documentation. If you have a specific question about this theme, you can head to the [GitHub Discussions](https://github.com/LekoArts/gatsby-themes/discussions) of the repository.
+
 ## 🌟Supporting me
 
 Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.

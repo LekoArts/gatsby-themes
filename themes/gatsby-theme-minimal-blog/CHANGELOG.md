@@ -1,5 +1,25 @@
 # Change Log
 
+## 3.1.3
+
+### Patch Changes
+
+- [#696](https://github.com/LekoArts/gatsby-themes/pull/696) [`d0b7944`](https://github.com/LekoArts/gatsby-themes/commit/d0b79444bb75631bbbf83db0af21be811f648f60) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Improve READMEs with more instructions
+
+  Links to changelogs and places to ask questions were added.
+
+- Updated dependencies [[`d0b7944`](https://github.com/LekoArts/gatsby-themes/commit/d0b79444bb75631bbbf83db0af21be811f648f60)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@3.1.3
+
+## 3.1.2
+
+### Patch Changes
+
+- [#692](https://github.com/LekoArts/gatsby-themes/pull/692) [`4d01e21`](https://github.com/LekoArts/gatsby-themes/commit/4d01e21bea0f0afc64445804402c54857b115517) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+- Updated dependencies [[`afba2ff`](https://github.com/LekoArts/gatsby-themes/commit/afba2fff5d97e5a27c3110c078a2c804557cbf56)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@3.1.2
+
 ## 3.1.1
 
 ### Patch Changes

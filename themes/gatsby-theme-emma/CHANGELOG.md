@@ -1,5 +1,27 @@
 # Change Log
 
+## 2.0.6
+
+### Patch Changes
+
+- [#696](https://github.com/LekoArts/gatsby-themes/pull/696) [`d0b7944`](https://github.com/LekoArts/gatsby-themes/commit/d0b79444bb75631bbbf83db0af21be811f648f60) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Improve READMEs with more instructions
+
+  Links to changelogs and places to ask questions were added.
+
+- Updated dependencies [[`d0b7944`](https://github.com/LekoArts/gatsby-themes/commit/d0b79444bb75631bbbf83db0af21be811f648f60)]:
+  - @lekoarts/gatsby-theme-emma-core@2.0.6
+
+## 2.0.5
+
+### Patch Changes
+
+- [#695](https://github.com/LekoArts/gatsby-themes/pull/695) [`afba2ff`](https://github.com/LekoArts/gatsby-themes/commit/afba2fff5d97e5a27c3110c078a2c804557cbf56) Thanks [@LekoArts](https://github.com/LekoArts)! - fix(deps): update minor and patch dependencies for gatsby-theme-emma
+
+* [#688](https://github.com/LekoArts/gatsby-themes/pull/688) [`8d3018e`](https://github.com/LekoArts/gatsby-themes/commit/8d3018e4e937bdb5cfd8fa2e49551a4d52d9b816) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emma-core
+
+* Updated dependencies [[`8d3018e`](https://github.com/LekoArts/gatsby-themes/commit/8d3018e4e937bdb5cfd8fa2e49551a4d52d9b816)]:
+  - @lekoarts/gatsby-theme-emma-core@2.0.5
+
 ## 2.0.4
 
 ### Patch Changes

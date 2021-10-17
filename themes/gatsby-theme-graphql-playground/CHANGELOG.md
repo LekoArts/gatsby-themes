@@ -1,5 +1,19 @@
 # Change Log
 
+## 2.0.6
+
+### Patch Changes
+
+- [#696](https://github.com/LekoArts/gatsby-themes/pull/696) [`d0b7944`](https://github.com/LekoArts/gatsby-themes/commit/d0b79444bb75631bbbf83db0af21be811f648f60) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Improve READMEs with more instructions
+
+  Links to changelogs and places to ask questions were added.
+
+## 2.0.5
+
+### Patch Changes
+
+- [#689](https://github.com/LekoArts/gatsby-themes/pull/689) [`0daa3b2`](https://github.com/LekoArts/gatsby-themes/commit/0daa3b20b82b8bfa984fe08c58c0dc105e284205) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-graphql-playground
+
 ## 2.0.4
 
 ### Patch Changes
