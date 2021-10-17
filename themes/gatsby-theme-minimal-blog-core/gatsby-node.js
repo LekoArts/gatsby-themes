@@ -167,7 +167,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
-  const { postsPath, pagesPath } = withDefaults(themeOptions)
+  const { postsPath, pagesPath, basePath } = withDefaults(themeOptions)
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -226,7 +226,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   if (node.internal.type === `Mdx` && source === pagesPath) {
     const fieldData = {
       title: node.frontmatter.title,
-      slug: node.frontmatter.slug,
+      slug: `/${basePath}/${node.frontmatter.slug}`.replace(/\/\/+/g, `/`),
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -326,7 +326,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (pages.length > 0) {
     pages.forEach((page) => {
       createPage({
-        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
+        path: page.slug,
         component: pageTemplate,
         context: {
           slug: page.slug,

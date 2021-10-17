@@ -5,10 +5,6 @@
 "@lekoarts/gatsby-theme-emma": major
 "@lekoarts/gatsby-theme-emma-core": major
 "@lekoarts/gatsby-theme-graphql-playground": major
-"@lekoarts/gatsby-theme-jodie": major
-"@lekoarts/gatsby-theme-jodie-core": major
-"@lekoarts/gatsby-theme-minimal-blog": major
-"@lekoarts/gatsby-theme-minimal-blog-core": major
 "@lekoarts/gatsby-theme-specimens": major
 "@lekoarts/gatsby-theme-styleguide": major
 ---
