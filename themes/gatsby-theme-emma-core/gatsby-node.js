@@ -47,11 +47,26 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     },
   })
 
+  createFieldExtension({
+    name: `defaultFalse`,
+    extend() {
+      return {
+        resolve(source, _args, _context, info) {
+          if (source[info.fieldName] == null) {
+            return false
+          }
+          return source[info.fieldName]
+        },
+      }
+    },
+  })
+
   createTypes(`
     interface Project implements Node {
       id: ID!
       slug: String! @slugify
       title: String!
+      defer: Boolean @defaultFalse
       client: String!
       service: String!
       color: String!
@@ -64,6 +79,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     interface Page implements Node {
       id: ID!
       slug: String!
+      defer: Boolean @defaultFalse
       title: String!
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
@@ -72,6 +88,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
     type MdxProject implements Node & Project {
       title: String!
+      defer: Boolean @defaultFalse
       slug: String! @slugify
       client: String!
       service: String!
@@ -84,6 +101,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 
     type MdxPage implements Node & Page {
       slug: String!
+      defer: Boolean @defaultFalse
       title: String!
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
@@ -118,6 +136,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       date: node.frontmatter.date,
       service: node.frontmatter.service,
       color: node.frontmatter.color,
+      defer: node.frontmatter.defer,
     }
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
@@ -145,6 +164,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       title: node.frontmatter.title,
       slug: node.frontmatter.slug,
       cover: node.frontmatter.cover,
+      defer: node.frontmatter.defer,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -187,11 +207,13 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
           slug
+          defer
         }
       }
       allPage {
         nodes {
           slug
+          defer
         }
       }
     }
@@ -212,6 +234,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         slug: project.slug,
         formatString,
       },
+      defer: project.defer,
     })
   })
 
@@ -225,6 +248,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         context: {
           slug: page.slug,
         },
+        defer: page.defer,
       })
     })
   }

@@ -143,6 +143,7 @@ New projects will be shown on the index page of this theme and can be added by c
 1. Add images to the created folder (from step 1)
 1. Reference your desired images as your `cover` in the frontmatter
 1. Write your content below the frontmatter (optional)
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
 1. Add a `slug` to the frontmatter to use a custom slug, e.g. `slug: "/my-slug"` (Optional)
 
 **Frontmatter reference:**
@@ -152,6 +153,8 @@ New projects will be shown on the index page of this theme and can be added by c
 cover: "./sean-foley-0JD7kvxAq0Y-unsplash.jpg"
 date: "2019-09-10"
 title: "Emilia"
+defer: false
+slug: "/my-slug"
 areas:
   - Neon
   - Lights

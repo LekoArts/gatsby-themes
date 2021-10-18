@@ -35,9 +35,8 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - Create a project by creating an MDX file and dropping the images into the same folder
 - Extensible custom pages
 - Define colors for each page and the sidebar & content will adapt while maintaining WCAG 2 AA contrast ratios
-- Google Analytics Support
 - SEO (Sitemap, OpenGraph tags, Twitter tags)
-- Offline Support & WebApp Manifest
+- WebApp Manifest
 
 ## 🚀 Getting Started
 

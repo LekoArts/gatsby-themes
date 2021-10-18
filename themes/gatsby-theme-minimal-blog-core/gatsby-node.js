@@ -47,11 +47,26 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
     },
   })
 
+  createFieldExtension({
+    name: `defaultFalse`,
+    extend() {
+      return {
+        resolve(source, args, context, info) {
+          if (source[info.fieldName] == null) {
+            return false
+          }
+          return source[info.fieldName]
+        },
+      }
+    },
+  })
+
   createTypes(`
     interface Post implements Node {
       id: ID!
       slug: String! @slugify
       title: String!
+      defer: Boolean @defaultFalse
       date: Date! @dateformat
       excerpt(pruneLength: Int = 160): String!
       body: String!
@@ -71,6 +86,7 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
     interface Page implements Node {
       id: ID!
       slug: String!
+      defer: Boolean @defaultFalse
       title: String!
       excerpt(pruneLength: Int = 160): String!
       body: String!
@@ -80,6 +96,7 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
       slug: String! @slugify
       title: String!
       date: Date! @dateformat
+      defer: Boolean @defaultFalse
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
       html: String! @mdxpassthrough(fieldName: "html")
@@ -93,6 +110,7 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
     type MdxPage implements Node & Page {
       slug: String!
       title: String!
+      defer: Boolean @defaultFalse
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
     }
@@ -201,6 +219,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       banner: node.frontmatter.banner,
       description: node.frontmatter.description,
       canonicalUrl: node.frontmatter.canonicalUrl,
+      defer: node.frontmatter.defer,
     }
 
     const mdxPostId = createNodeId(`${node.id} >>> MdxPost`)
@@ -227,6 +246,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     const fieldData = {
       title: node.frontmatter.title,
       slug: `/${basePath}/${node.frontmatter.slug}`.replace(/\/\/+/g, `/`),
+      defer: node.frontmatter.defer,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -288,11 +308,13 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allPost(sort: { fields: date, order: DESC }) {
         nodes {
           slug
+          defer
         }
       }
       allPage {
         nodes {
           slug
+          defer
         }
       }
       tags: allPost(sort: { fields: tags___name, order: DESC }) {
@@ -318,6 +340,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         slug: post.slug,
         formatString,
       },
+      defer: post.defer,
     })
   })
 
@@ -331,6 +354,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         context: {
           slug: page.slug,
         },
+        defer: page.defer,
       })
     })
   }

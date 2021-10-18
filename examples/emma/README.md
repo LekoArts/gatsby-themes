@@ -35,9 +35,8 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - Optional MDX pages which automatically get added to the navigation
 - Fully customizable through the usage of Gatsby Themes (and Theme UI)
 - Light Mode / Dark Mode
-- Google Analytics Support
 - SEO (Sitemap, OpenGraph tags, Twitter tags)
-- Offline Support & WebApp Manifest
+- WebApp Manifest
 
 ## 🚀 Getting Started
 
@@ -86,6 +85,7 @@ New projects will be shown on the index page of this theme and can be added by c
 1. Create a new `index.mdx` file, and add the frontmatter
 1. Add an image to the created folder (from step 1)
 1. Reference this image as your `cover` in the frontmatter
+1. Use `defer` to opt-in into Deferred Static Generation (DSG)
 1. Write your content below the frontmatter
 
 **Frontmatter reference:**
@@ -98,6 +98,7 @@ cover: "./image.jpg"
 date: "2019-06-10"
 service: "Theme"
 color: "#8e9d31"
+defer: false
 ---
 ```
 
@@ -109,6 +110,7 @@ Additional pages will be shown in the navigation (left side) and allow you to di
 1. Create a new `index.mdx` file, and add the frontmatter
 1. Add an image to the created folder (from step 1)
 1. Reference this image as your `cover` in the frontmatter
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
 1. Write your content below the frontmatter
 
 **Frontmatter reference:**
@@ -118,6 +120,7 @@ Additional pages will be shown in the navigation (left side) and allow you to di
 title: "Name"
 slug: "/name"
 cover: "./name.jpg"
+defer: false
 ---
 ```
 

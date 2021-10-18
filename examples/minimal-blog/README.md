@@ -37,9 +37,8 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - Tags/Categories support
 - Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Also allows adding line numbers, line highlighting, language tabs, and file titles.
 - RSS Feed for blog posts
-- Google Analytics Support
 - SEO (Sitemap, OpenGraph tags, Twitter tags)
-- Offline Support & WebApp Manifest
+- WebApp Manifest
 
 ## 🚀 Getting Started
 
@@ -158,6 +157,8 @@ New blog posts will be shown on the index page (the three most recent ones) of t
 1. Add images to the created folder (from step 1) you want to reference in your blog post
 1. Reference an image as your `banner` in the frontmatter
 1. Write your content below the frontmatter
+1. Add a `slug` to the frontmatter to use a custom slug, e.g. `slug: "/my-slug"` (Optional)
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
 
 **Frontmatter reference:**
 
@@ -166,25 +167,28 @@ New blog posts will be shown on the index page (the three most recent ones) of t
 title: Introduction to "Defence against the Dark Arts"
 date: 2019-11-07
 description: Defence Against the Dark Arts (abbreviated as DADA) is a subject taught at Hogwarts School of Witchcraft and Wizardry and Ilvermorny School of Witchcraft and Wizardry.
+defer: false
 tags:
   - Tutorial
   - Dark Arts
 banner: ./defence-against-the-dark-arts.jpg
+canonicalUrl: https://random-blog-about-curses.com/curses-counter-curses-and-more
 ---
 ```
 
-**The fields `description` and `banner` are optional!** If no description is provided, an excerpt of the blog post will be used. If no banner is provided, the default `siteImage` (from `siteMetadata`) is used.
+**The fields `description`, `banner`, `defer` and `canonicalUrl` are optional!** If no description is provided, an excerpt of the blog post will be used. If no banner is provided, the default `siteImage` (from `siteMetadata`) is used. If no `canonicalUrl` is provided, it will not be included in the header.
 
 The `date` field has to be written in the format `YYYY-MM-DD`!
 
 #### Adding a new page
 
-Additional pages can be created by placing MDX files inside `contents/pages`, e.g. an "About" or "Contact" page. You'll manually need to link to those pages, for example by adding them to the navigation (in `navigation` option of the theme). General instructions:
+Additional pages can be created by placing MDX files inside `contents/pages`, e.g. an "About" or "Contact" page. You'll manually need to link to those pages, for example by adding them to the navigation (in `siteMetadata`). General instructions:
 
 1. Create a new folder inside `content/pages`
 1. Create a new `index.mdx` file, and add the frontmatter
 1. Write your content below the frontmatter
 1. Optionally add files/images to the folder you want to reference from the page
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
 
 **Frontmatter reference:**
 
@@ -192,6 +196,7 @@ Additional pages can be created by placing MDX files inside `contents/pages`, e.
 ---
 title: About
 slug: "/about"
+defer: false
 ---
 ```
 

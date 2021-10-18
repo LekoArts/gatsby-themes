@@ -48,11 +48,26 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     },
   })
 
+  createFieldExtension({
+    name: `defaultFalse`,
+    extend() {
+      return {
+        resolve(source, _args, _context, info) {
+          if (source[info.fieldName] == null) {
+            return false
+          }
+          return source[info.fieldName]
+        },
+      }
+    },
+  })
+
   createTypes(`
     interface Project implements Node {
       id: ID!
       title: String!
       slug: String! @slugify
+      defer: Boolean @defaultFalse
       date: Date! @dateformat
       areas: [String!]!
       cover: File! @fileByRelativePath
@@ -63,6 +78,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     type MdxProject implements Node & Project {
       title: String!
       slug: String! @slugify
+      defer: Boolean @defaultFalse
       date: Date! @dateformat
       areas: [String!]!
       cover: File! @fileByRelativePath
@@ -107,6 +123,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       cover: node.frontmatter.cover,
       date: node.frontmatter.date,
       areas: node.frontmatter.areas,
+      defer: node.frontmatter.defer,
     }
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
@@ -198,6 +215,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
               gatsbyImageData(width: 770, quality: 90, aspectRatio: 1.777778)
             }
           }
+          defer
         }
       }
     }
@@ -226,6 +244,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         next,
         formatString,
       },
+      defer: project.defer,
     })
   })
 }
