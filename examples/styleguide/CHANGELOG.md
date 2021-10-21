@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.2.11
+
+### Patch Changes
+
+- Updated dependencies [[`1598dd6`](https://github.com/LekoArts/gatsby-themes/commit/1598dd660e3ba795b50c4aeb11550806e0b7b6ba)]:
+  - @lekoarts/gatsby-theme-styleguide@3.0.0
+
 ## 0.2.10
 
 ### Patch Changes
