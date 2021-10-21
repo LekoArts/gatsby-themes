@@ -4,26 +4,28 @@
 
 ### Major Changes
 
-- [#641](https://github.com/LekoArts/gatsby-themes/pull/641) [`1598dd6`](https://github.com/LekoArts/gatsby-themes/commit/1598dd660e3ba795b50c4aeb11550806e0b7b6ba) Thanks [@LekoArts](https://github.com/LekoArts)! - Compatibility with **Gatsby 4**. Upgrade your theme to be able to use the new Gatsby release. Leverage Deferred Static Generation (DSG), Server-Side Rendering (SSR) and Parallel Query Running (PQR) with this new release. [Learn more about Gatsby 4](https://www.gatsbyjs.com/gatsby-4/).
+[#641](https://github.com/LekoArts/gatsby-themes/pull/641) [`1598dd6`](https://github.com/LekoArts/gatsby-themes/commit/1598dd660e3ba795b50c4aeb11550806e0b7b6ba)
 
-  All Gatsby related packages were also upgraded to their latest new major version.
+Compatibility with **Gatsby 4**. Upgrade your theme to be able to use the new Gatsby release. Leverage Deferred Static Generation (DSG), Server-Side Rendering (SSR) and Parallel Query Running (PQR) with this new release. [Learn more about Gatsby 4](https://www.gatsbyjs.com/gatsby-4/).
 
-  [See Gatsby 4 Migration Guide](https://gatsbyjs.com/docs/reference/release-notes/migrating-from-v3-to-v4/)
+All Gatsby related packages were also upgraded to their latest new major version.
 
-  **BREAKING CHANGES:**
+[See Gatsby 4 Migration Guide](https://gatsbyjs.com/docs/reference/release-notes/migrating-from-v3-to-v4/)
 
-  - Minimum required Node.js version: `>=14.15.0`
-  - Minimum required `gatsby` version: `^4.0.0`
-  - Upgraded Theme UI (packages) from `^0.9.0` to `^0.11.0`
+**BREAKING CHANGES:**
 
-  **Features:**
+- Minimum required Node.js version: `>=14.15.0`
+- Minimum required `gatsby` version: `^4.0.0`
+- Upgraded Theme UI (packages) from `^0.9.0` to `^0.11.0`
 
-  - You can now use `defer: true` in the frontmatter of your page/post to mark the page as deferred (for Deferred Static Generation)
+**Features:**
 
-  **Migration:**
+- You can now use `defer: true` in the frontmatter of your page/post to mark the page as deferred (for Deferred Static Generation)
 
-  - If you used Theme UI in custom components, check the [Theme UI changelog](https://github.com/system-ui/theme-ui/blob/develop/CHANGELOG.md)
-  - Update CI/local environment to account for the new Node.js requirement
+**Migration:**
+
+- If you used Theme UI in custom components, check the [Theme UI changelog](https://github.com/system-ui/theme-ui/blob/develop/CHANGELOG.md)
+- Update CI/local environment to account for the new Node.js requirement
 
 ### Patch Changes
 
