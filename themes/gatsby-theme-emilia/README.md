@@ -64,18 +64,18 @@ gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
 
 ### Theme options
 
-| Key               | Default Value                                                                                                                                 | Description                                                                                                                                       |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `basePath`        | `/`                                                                                                                                           | Root url for the theme                                                                                                                            |
-| `projectsPath`    | `content/projects`                                                                                                                            | Location of projects                                                                                                                              |
-| `assetsPath`      | `content/assets`                                                                                                                              | Location of assets (such as the avatar in the header)                                                                                             |
-| `mdx`             | `true`                                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
-| `sharp`           | `true`                                                                                                                                        | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off)                                       |
-| `name`            | `LekoArts`                                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
-| `location`        | `Germany`                                                                                                                                     | Shown below the title                                                                                                                             |
-| `socialMedia`     | `` [{ title: `Twitter`, href: `https://twitter.com/lekoarts_de` }, { title: `Instagram`, href: `https://www.instagram.com/lekoarts.de/` }] `` | An array of objects (with the keys "title" and "href" display on the homepage. Can of course hold any kind of links (not limited to social media) |
-| `showThemeAuthor` | `true`                                                                                                                                        | Show the "Theme by LekoArts" in the footer                                                                                                        |
-| `formatString`    | `DD.MM.YYYY`                                                                                                                                  | Configure the date format for Date fields                                                                                                         |
+| Key               | Default Value                                                                                                                 | Description                                                                                                                                       |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`                                                                                                                           | Root url for the theme                                                                                                                            |
+| `projectsPath`    | `content/projects`                                                                                                            | Location of projects                                                                                                                              |
+| `assetsPath`      | `content/assets`                                                                                                              | Location of assets (such as the avatar in the header)                                                                                             |
+| `mdx`             | `true`                                                                                                                        | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)                                         |
+| `sharp`           | `true`                                                                                                                        | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off)                                       |
+| `name`            | `LekoArts`                                                                                                                    | The name displayed as the title on the homepage, and the link to the homepage (top left corner)                                                   |
+| `location`        | `Germany`                                                                                                                     | Shown below the title                                                                                                                             |
+| `socialMedia`     | `` [{ title: `Twitter`, href: `https://twitter.com/lekoarts_de` }, { title: `Homepage`, href: `https://www.lekoarts.de` }] `` | An array of objects (with the keys "title" and "href" display on the homepage. Can of course hold any kind of links (not limited to social media) |
+| `showThemeAuthor` | `true`                                                                                                                        | Show the "Theme by LekoArts" in the footer                                                                                                        |
+| `formatString`    | `DD.MM.YYYY`                                                                                                                  | Configure the date format for Date fields                                                                                                         |
 
 #### Example usage
 
@@ -143,6 +143,7 @@ New projects will be shown on the index page of this theme and can be added by c
 1. Add images to the created folder (from step 1)
 1. Reference your desired images as your `cover` in the frontmatter
 1. Write your content below the frontmatter (optional)
+1. Use `defer` to opt-in into Deferred Static Generation (DSG) (optional)
 1. Add a `slug` to the frontmatter to use a custom slug, e.g. `slug: "/my-slug"` (Optional)
 
 **Frontmatter reference:**
@@ -152,6 +153,8 @@ New projects will be shown on the index page of this theme and can be added by c
 cover: "./sean-foley-0JD7kvxAq0Y-unsplash.jpg"
 date: "2019-09-10"
 title: "Emilia"
+defer: false
+slug: "/my-slug"
 areas:
   - Neon
   - Lights

@@ -44,7 +44,9 @@ module.exports = {
         description: `Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not on how to showcase it. Works seamlessly with MDX.`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#5a67d8`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#5a67d8`,
         display: `standalone`,
         icons: [
           {
@@ -60,9 +62,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

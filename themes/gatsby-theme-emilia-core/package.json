@@ -15,17 +15,17 @@
     "clean": "gatsby clean"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0",
+    "gatsby": "^4.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "gatsby-plugin-mdx": "^2.14.0",
-    "gatsby-plugin-sharp": "^3.14.0",
-    "gatsby-source-filesystem": "^3.14.0",
-    "gatsby-transformer-sharp": "^3.14.0",
+    "gatsby-plugin-mdx": "^3.0.0",
+    "gatsby-plugin-sharp": "^4.0.0",
+    "gatsby-source-filesystem": "^4.0.0",
+    "gatsby-transformer-sharp": "^4.0.0",
     "lodash.kebabcase": "^4.1.1"
   },
   "keywords": [
@@ -42,5 +42,8 @@
     "type": "git",
     "url": "https://github.com/LekoArts/gatsby-themes.git",
     "directory": "themes/gatsby-theme-emilia-core"
+  },
+  "engines": {
+    "node": ">=14.15.0"
   }
 }

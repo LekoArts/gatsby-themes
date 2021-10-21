@@ -18,12 +18,12 @@ const mdxResolverPassthrough = (fieldName) => async (source, args, context, info
 exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
-  const { basePath } = withDefaults(themeOptions)
+  const { basePath, projectsPrefix } = withDefaults(themeOptions)
 
   const slugify = (source) => {
     const slug = source.slug ? source.slug : kebabCase(source.title)
 
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+    return `/${basePath}/${projectsPrefix}/${slug}`.replace(/\/\/+/g, `/`)
   }
 
   createFieldExtension({
@@ -51,7 +51,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     name: `defaultFalse`,
     extend() {
       return {
-        resolve(source, args, context, info) {
+        resolve(source, _args, _context, info) {
           if (source[info.fieldName] == null) {
             return false
           }
@@ -66,6 +66,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       id: ID!
       title: String!
       shortTitle: String!
+      defer: Boolean @defaultFalse
       category: String!
       slug: String! @slugify
       date: Date! @dateformat
@@ -79,6 +80,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       title: String!
       shortTitle: String!
       category: String!
+      defer: Boolean @defaultFalse
       slug: String! @slugify
       date: Date! @dateformat
       color: String
@@ -90,6 +92,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
     interface Page implements Node {
       id: ID!
       slug: String!
+      defer: Boolean @defaultFalse
       title: String!
       color: String
       custom: Boolean @defaultFalse
@@ -102,6 +105,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       slug: String!
       title: String!
       color: String
+      defer: Boolean @defaultFalse
       custom: Boolean @defaultFalse
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
@@ -122,7 +126,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
 exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
-  const { projectsPath, pagesPath } = withDefaults(themeOptions)
+  const { projectsPath, pagesPath, basePath } = withDefaults(themeOptions)
 
   // Make sure that it's an MDX node
   if (node.internal.type !== `Mdx`) {
@@ -145,6 +149,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       date: node.frontmatter.date,
       category: node.frontmatter.category,
       color: node.frontmatter.color ? node.frontmatter.color : undefined,
+      defer: node.frontmatter.defer,
     }
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
@@ -170,10 +175,11 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   if (node.internal.type === `Mdx` && source === pagesPath) {
     const fieldData = {
       title: node.frontmatter.title,
-      slug: node.frontmatter.slug,
+      slug: `/${basePath}/${node.frontmatter.slug}`.replace(/\/\/+/g, `/`),
       color: node.frontmatter.color ? node.frontmatter.color : undefined,
       custom: node.frontmatter.custom,
       cover: node.frontmatter.cover,
+      defer: node.frontmatter.defer,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -235,8 +241,7 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, projectsUrl, projectsPrefix, formatString, homepagePageLimit, homepageProjectLimit } =
-    withDefaults(themeOptions)
+  const { basePath, projectsUrl, formatString, homepagePageLimit, homepageProjectLimit } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
@@ -257,6 +262,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
           slug
+          defer
           ... on MdxProject {
             parent {
               ... on Mdx {
@@ -273,6 +279,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allPage {
         nodes {
           slug
+          defer
         }
       }
     }
@@ -288,13 +295,14 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (projects.length > 0) {
     projects.forEach((project) => {
       createPage({
-        path: `/${basePath}${projectsPrefix}${project.slug}`.replace(/\/\/+/g, `/`),
+        path: project.slug,
         component: projectTemplate,
         context: {
           slug: project.slug,
           formatString,
           relativeDirectory: project.parent.parent.relativeDirectory,
         },
+        defer: project.defer,
       })
     })
   }
@@ -304,11 +312,12 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   if (pages.length > 0) {
     pages.forEach((page) => {
       createPage({
-        path: `/${basePath}/${page.slug}`.replace(/\/\/+/g, `/`),
+        path: page.slug,
         component: pageTemplate,
         context: {
           slug: page.slug,
         },
+        defer: page.defer,
       })
     })
   }

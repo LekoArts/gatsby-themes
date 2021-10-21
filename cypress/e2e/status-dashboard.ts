@@ -20,17 +20,11 @@ describe(`gatsby-theme-status-dashboard`, () => {
   it(`should render the repository title`, () => {
     cy.findByText(/chakra-ui-advanced-components/i)
   })
-  it.skip(`should render the circleci icon`, () => {
-    cy.findByLabelText(/view gatsby-themes on circleci/i)
-  })
   it(`should render the github icon`, () => {
     cy.findByLabelText(/view chakra-ui-advanced-components source on github/i)
   })
   it(`should render the netlify status badge`, () => {
     cy.findByAltText(/netlify deploy status of chakra-ui-advanced-components/i)
-  })
-  it.skip(`should render the circleci status badge`, () => {
-    cy.findByAltText(/circleci status of gatsby-themes/i)
   })
   it(`should render the footer`, () => {
     cy.findByTestId(/footer/i).should(`have.text`, `LekoArts`)

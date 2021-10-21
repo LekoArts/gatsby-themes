@@ -21,14 +21,14 @@ module.exports = {
         description: process.env.SITE_DESCRIPTION,
         start_url: `/`,
         background_color: `#f0f2fd`,
-        theme_color: `#3490dc`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#3490dc`,
         display: `standalone`,
         icon: `assets/favicon.png`,
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

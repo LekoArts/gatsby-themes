@@ -1,6 +1,5 @@
 require(`dotenv`).config()
 
-const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
@@ -17,12 +16,6 @@ module.exports = {
           { name: `Art`, slug: `/art` },
           { name: `About`, slug: `/about` },
         ],
-      },
-    },
-    googleAnalyticsTrackingId && {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
     {
@@ -51,7 +44,9 @@ module.exports = {
         description: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#b75e09`,
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#b75e09`,
         display: `standalone`,
         icons: [
           {
@@ -67,9 +62,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
