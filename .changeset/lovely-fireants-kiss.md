@@ -9,7 +9,7 @@ Compatibility with **Gatsby 4**. Upgrade your theme to be able to use the new Ga
 
 All Gatsby related packages were also upgraded to their latest new major version.
 
-[See Gatsby 4 Migration Guide](https://v4.gatsbyjs.com/docs/reference/release-notes/migrating-from-v3-to-v4/)
+[See Gatsby 4 Migration Guide](https://gatsbyjs.com/docs/reference/release-notes/migrating-from-v3-to-v4/)
 
 **BREAKING CHANGES:**
 
