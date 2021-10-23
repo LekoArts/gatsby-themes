@@ -14,6 +14,7 @@ export const query = graphql`
             gatsbyImageData(width: 1200, quality: 90)
           }
         }
+        __typename
       }
     }
     projects: allProject(sort: { fields: date, order: DESC }, limit: $homepageProjectLimit) {
@@ -25,6 +26,7 @@ export const query = graphql`
             gatsbyImageData(width: 1200, quality: 90)
           }
         }
+        __typename
       }
     }
   }

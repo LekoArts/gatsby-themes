@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-status-dashboard is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-status-dashboard">
@@ -95,7 +95,7 @@ You can read [`gatsby-source-netlify`'s documentation](https://github.com/LekoAr
 
 Gatsby also has [official documentation](https://www.gatsbyjs.com/docs/how-to/local-development/environment-variables/) on environment variables.
 
-Lastly you should have a look at the [example site](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard) if you need further help.
+Lastly you should have a look at the [example site](https://github.com/LekoArts/gatsby-themes/tree/main/examples/status-dashboard) if you need further help.
 
 ### Components
 
@@ -107,7 +107,7 @@ This theme doesn't set up an individual page but rather exposes two React compon
 
 #### Usage
 
-Import the components into your file and use them like normal React components (see [example](https://github.com/LekoArts/gatsby-themes/tree/master/examples/status-dashboard/src/pages/index.jsx)):
+Import the components into your file and use them like normal React components (see [example](https://github.com/LekoArts/gatsby-themes/tree/main/examples/status-dashboard/src/pages/index.jsx)):
 
 ```jsx
 import * as React from "react";
@@ -138,7 +138,7 @@ Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs
 
 ## Changelog
 
-You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-status-dashboard/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-status-dashboard/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
 
 ## Questions?
 

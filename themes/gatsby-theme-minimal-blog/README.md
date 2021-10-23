@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-minimal-blog is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-minimal-blog">
@@ -150,7 +150,7 @@ If you want to add additional items to the navigation or external links (left an
 
 ### Code Highlighting
 
-Since this theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/master/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
+Since this theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
 
 **Language tabs:**
 
@@ -285,7 +285,7 @@ To edit the projects part below "Latest posts", create a file at `src/@lekoarts/
 
 ## Changelog
 
-You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
 
 ## Questions?
 

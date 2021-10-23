@@ -26,7 +26,7 @@ const Footer = () => {
       <div>
         <Link
           aria-label="Link to the theme's GitHub repository"
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-minimal-blog"
+          href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog"
         >
           Theme
         </Link>

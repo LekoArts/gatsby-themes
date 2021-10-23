@@ -42,7 +42,7 @@ const Projects = ({ projects }: Props) => {
             <br />
             Thanks for using <b>@lekoarts/gatsby-theme-emilia</b>. You currently don't have any content in your{` `}
             <i>projects</i> folder - that's why this page displays a placeholder text. Head over to the{` `}
-            <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
+            <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emilia">
               README
             </Themed.a>
             {` `}
@@ -53,7 +53,7 @@ const Projects = ({ projects }: Props) => {
             The starter automatically created the folder <code>content/projects</code>. Go into this folder, create a
             new folder called <code>example</code> and create an <code>index.mdx</code> file there and place an image.
             Edit the frontmatter like described in the{` `}
-            <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emilia">
+            <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emilia">
               README
             </Themed.a>
             .

@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-specimens is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-specimens">
@@ -234,7 +234,7 @@ This way you are able to use the components directly in your MDX file without im
 
 ## Changelog
 
-You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-specimens/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-specimens/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
 
 ## Questions?
 

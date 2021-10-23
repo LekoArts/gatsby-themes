@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-jodie-core is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-jodie-core">
@@ -28,7 +28,7 @@
   </a>
 </p>
 
-Core Theme for [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie). This theme implements the `Project` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
+Core Theme for [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-jodie). This theme implements the `Project` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
 
 Also, be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=jodie&utm_medium=Theme).
 
@@ -57,11 +57,11 @@ npm install @lekoarts/gatsby-theme-jodie-core
 
 ### Shadowing
 
-Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/themes/shadowing/) to understand how to customize this theme! You can also have a look at [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-jodie) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie-core/` to shadow/override files.
+Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/themes/shadowing/) to understand how to customize this theme! You can also have a look at [`@lekoarts/gatsby-theme-jodie`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-jodie) to see it in action. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-jodie-core/` to shadow/override files.
 
 ## Changelog
 
-You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-jodie-core/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie-core/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
 
 ## Questions?
 

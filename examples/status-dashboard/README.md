@@ -22,7 +22,7 @@
   </a>
 </p>
 
-Showing the statuses of Netlify deploys & CircleCI projects. Using the Gatsby Theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard). Made with [gatsby-source-netlify](https://github.com/LekoArts/gatsby-source-netlify) and [gatsby-source-circleci](https://github.com/LekoArts/gatsby-source-circleci).
+Showing the statuses of Netlify deploys & CircleCI projects. Using the Gatsby Theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-status-dashboard). Made with [gatsby-source-netlify](https://github.com/LekoArts/gatsby-source-netlify) and [gatsby-source-circleci](https://github.com/LekoArts/gatsby-source-circleci).
 
 [**Demo Website**](https://status.lekoarts.de)
 
@@ -61,13 +61,13 @@ If you want to learn more about how you can use a Gatsby starter that is configu
 
 **Important Note:** Please read the guide [Shadowing in Gatsby Themes](https://www.gatsbyjs.com/docs/how-to/plugins-and-themes/shadowing/) to understand how to customize the underlying theme!
 
-This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard).
+This starter creates a new Gatsby site that installs and configures the theme [`@lekoarts/gatsby-theme-status-dashboard`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-status-dashboard).
 
 Have a look at the theme's README and files to see what options are available and how you can shadow the various components including Theme UI. Generally speaking you will want to place your files into `src/@lekoarts/gatsby-theme-status-dashboard/` to shadow/override files. The Theme UI config can be configured by shadowing its files in `src/gatsby-plugin-theme-ui/`.
 
 ### Change your `static` / `assets` folder
 
-The `static` & `assets` folders contain the icons, social media images and `robots.txt`. Don't forget to change these files, too!
+The `static` & `assets` folders contain the icons, social media images and `robots.txt`. Don't forget to change these files, too! You can use [Real Favicon Generator](https://realfavicongenerator.net/) to generate the image files inside `static`.
 
 ## 🤔 Questions or problems?
 

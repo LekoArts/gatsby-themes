@@ -8,10 +8,10 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-themes is released under the MIT license." />
   </a>
-  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-minimal-blog,@lekoarts/gatsby-theme-cara,@lekoarts/gatsby-theme-emma,@lekoarts/gatsby-theme-emilia,@lekoarts/gatsby-theme-styleguide,@lekoarts/gatsby-theme-status-dashboard,@lekoarts/gatsby-theme-specimens,@lekoarts/gatsby-theme-graphql-playground?interval=30&minimal=true">
+  <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-minimal-blog,@lekoarts/gatsby-theme-cara,@lekoarts/gatsby-theme-emma,@lekoarts/gatsby-theme-emilia,@lekoarts/gatsby-theme-styleguide,@lekoarts/gatsby-theme-status-dashboard,@lekoarts/gatsby-theme-specimens,@lekoarts/gatsby-theme-graphql-playground,@lekoarts/gatsby-theme-jodie?interval=30&minimal=true">
     <img src="https://img.shields.io/badge/-npmcharts-red" alt="npmcharts.com Overview" />
   </a>
   <a href="https://circleci.com/gh/LekoArts/gatsby-themes">

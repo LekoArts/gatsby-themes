@@ -28,7 +28,7 @@ const Footer = () => {
         <Link
           aria-label="Link to the theme's GitHub repository"
           sx={{ ml: 2 }}
-          href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-emma"
+          href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-emma"
         >
           Theme
         </Link>
