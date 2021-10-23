@@ -71,7 +71,7 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
         </Themed.a>
         .<br />
         This website is open source on{` `}
-        <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/www">GitHub</Themed.a>.
+        <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/main/www">GitHub</Themed.a>.
       </Box>
     </>
   )

@@ -17,7 +17,7 @@ describe(`gatsby-theme-styleguide`, () => {
     cy.findByText(`@lekoarts/gatsby-theme-styleguide`).should(
       `have.attr`,
       `href`,
-      `https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide`
+      `https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-styleguide`
     )
   })
 })

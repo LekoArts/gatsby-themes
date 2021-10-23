@@ -7,7 +7,7 @@ const Footer = () => (
   >
     <Themed.p>
       Created with{` `}
-      <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-styleguide">
+      <Themed.a href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-styleguide">
         @lekoarts/gatsby-theme-styleguide
       </Themed.a>
       {` `}

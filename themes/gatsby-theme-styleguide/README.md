@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/LekoArts/gatsby-themes/blob/master/LICENSE">
+  <a href="https://github.com/LekoArts/gatsby-themes/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="@lekoarts/gatsby-theme-styleguide is released under the MIT license." />
   </a>
   <a href="https://www.npmjs.org/package/@lekoarts/gatsby-theme-styleguide">
@@ -40,7 +40,7 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 
 - Automatic styleguide based on your Theme UI configuration
 - Displays colors (individual and palettes), typography (font family, weights, sizes, headings), and a spacing scale
-- Uses [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-specimens) under the hood. You can use components from it to extend your styleguide page
+- Uses [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-specimens) under the hood. You can use components from it to extend your styleguide page
 
 ## Installation
 
@@ -105,7 +105,7 @@ Please keep in mind that you can shadow `.tsx` files also with `.js`/`.jsx` file
 
 ## Changelog
 
-You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-styleguide/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
+You can find the extensive [changelog of changes on GitHub](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-styleguide/CHANGELOG.md). You'll be able to see each patch, minor, and major changes and what pull requests contributed to them.
 
 ## Questions?
 

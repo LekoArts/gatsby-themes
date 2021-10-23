@@ -121,7 +121,7 @@ const Index = ({
                 text-decoration: underline;
               }
             `}
-            href="https://github.com/LekoArts/gatsby-themes/tree/master/themes/gatsby-theme-status-dashboard"
+            href="https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-status-dashboard"
           >
             Theme
           </a>

@@ -7,7 +7,7 @@ describe(`gatsby-theme-cara`, () => {
     cy.visit(`/`).waitForRouteChange()
   })
   it(`should render hero content`, () => {
-    cy.findByText(/hi, i'm jane doe/i)
+    cy.findByText(/hi, i'm lekoarts/i)
   })
   it(`should render project content`, () => {
     cy.findByText(/tips & tricks for gatsby/i)
@@ -28,7 +28,7 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByText(/winky face./i)
   })
   it(`should render contact content`, () => {
-    cy.findByText(/Dribbble/i)
+    cy.findByText(/LinkedIn/i)
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/toggle dark mode/i)

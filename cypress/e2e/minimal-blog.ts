@@ -59,7 +59,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     })
   })
   it(`should render the hero`, () => {
-    cy.findByText(/Those nasty Dementors/i)
+    cy.findByText(/designer turned software engineer/i)
   })
   it(`should render the latest posts`, () => {
     cy.findByText(/Latest Posts/i)

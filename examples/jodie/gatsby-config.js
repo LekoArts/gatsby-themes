@@ -4,7 +4,17 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
+    // You can overwrite values here that are used for the SEO component
+    // You can also add new values here to query them like usual
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/gatsby-config.js
+    siteTitle: `Jodie`,
     siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
+    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
+    siteUrl: `https://jodie.lekoarts.de`,
+    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@lekoarts_de`,
   },
   plugins: [
     {
@@ -26,7 +36,7 @@ module.exports = {
         interval: 300,
         timeout: 30000,
         // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
-        // See: https://github.com/LekoArts/gatsby-themes/tree/master/examples/jodie#changing-your-fonts
+        // See: https://github.com/LekoArts/gatsby-themes/tree/main/examples/jodie#changing-your-fonts
         web: [
           {
             name: `Work Sans`,
