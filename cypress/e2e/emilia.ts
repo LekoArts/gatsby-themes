@@ -26,7 +26,7 @@ describe(`gatsby-theme-emilia`, () => {
   })
   it(`should render about me`, () => {
     cy.findByText(/about me/i)
-    cy.findByText(/Boggarts lavender robes/i)
+    cy.findByText(/masonry grid/i)
   })
   it(`should have functioning theme toggle`, () => {
     cy.get(`html`)
