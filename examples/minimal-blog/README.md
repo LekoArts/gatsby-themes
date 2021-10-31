@@ -200,13 +200,17 @@ defer: false
 ---
 ```
 
-#### Changing the "Hero" text
+### Changing the "Hero" text
 
 To edit the hero text ("Hi, I'm Lupin...), create a file at `src/@lekoarts/gatsby-theme-minimal-blog/texts/hero.mdx` to edit the text.
 
-#### Changing the "Projects" part
+### Changing the "Projects" part
 
 To edit the projects part below "Latest posts", create a file at `src/@lekoarts/gatsby-theme-minimal-blog/texts/bottom.mdx` to edit the contents.
+
+### Extending the footer of the post
+
+Inside the [`<Post />` component](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/src/components/post.tsx) there's also a `<PostFooter />` component that you can shadow to display elements between the end of the post and the global footer. By default it returns `null`. Create a file at `src/@lekoarts/gatsby-theme-minimal-blog/components/post-footer.jsx` to edit this section. The `<PostFooter />` component receives the complete `post` prop that `<Post />` also receives.
 
 ### Changing your fonts
 
