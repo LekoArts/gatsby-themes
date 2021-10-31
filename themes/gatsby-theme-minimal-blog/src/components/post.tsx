@@ -5,6 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import ItemTags from "./item-tags"
 import Seo from "./seo"
+import PostFooter from "./post-footer"
 
 type PostProps = {
   data: {
@@ -40,7 +41,7 @@ const Post = ({ data: { post } }: PostProps) => (
     <Seo
       title={post.title}
       description={post.description ? post.description : post.excerpt}
-      image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
+      image={post.banner ? post.banner?.childImageSharp?.resize?.src : undefined}
       pathname={post.slug}
       canonicalUrl={post.canonicalUrl}
     />
@@ -67,6 +68,7 @@ const Post = ({ data: { post } }: PostProps) => (
     >
       <MDXRenderer>{post.body}</MDXRenderer>
     </section>
+    <PostFooter post={post} />
   </Layout>
 )
 
