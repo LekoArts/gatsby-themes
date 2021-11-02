@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#714](https://github.com/LekoArts/gatsby-themes/pull/714) [`2c9ec99`](https://github.com/LekoArts/gatsby-themes/commit/2c9ec9965b01ad07552504b35226677a584ec905) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency react-spring to ^9.3.0 for gatsby-theme-emilia
+
+- Updated dependencies [[`93cb821`](https://github.com/LekoArts/gatsby-themes/commit/93cb82182b5e1f6c3ba6067bf87bb019acb174ae)]:
+  - @lekoarts/gatsby-theme-emilia-core@3.0.1
+
 ## 3.0.0
 
 ### Major Changes

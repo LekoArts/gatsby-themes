@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#712](https://github.com/LekoArts/gatsby-themes/pull/712) [`68a5dba`](https://github.com/LekoArts/gatsby-themes/commit/68a5dba6398ea1fec961ce02551166986b180b88) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency gatsby-plugin-sharp to ^4.0.1 for gatsby-theme-jodie-core
+
 ## 3.0.0
 
 ### Major Changes

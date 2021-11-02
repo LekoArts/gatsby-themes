@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#711](https://github.com/LekoArts/gatsby-themes/pull/711) [`f8a9ba3`](https://github.com/LekoArts/gatsby-themes/commit/f8a9ba3dc03de0e49d82818c95135e97fa4d2bb6) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency gatsby-plugin-sharp to ^4.0.1 for gatsby-theme-emma-core
+
 ## 3.0.0
 
 ### Major Changes

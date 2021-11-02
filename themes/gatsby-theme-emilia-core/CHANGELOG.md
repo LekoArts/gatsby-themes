@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#710](https://github.com/LekoArts/gatsby-themes/pull/710) [`93cb821`](https://github.com/LekoArts/gatsby-themes/commit/93cb82182b5e1f6c3ba6067bf87bb019acb174ae) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency gatsby-plugin-sharp to ^4.0.1 for gatsby-theme-emilia-core
+
 ## 3.0.0
 
 ### Major Changes

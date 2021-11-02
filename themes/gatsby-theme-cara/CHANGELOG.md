@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#716](https://github.com/LekoArts/gatsby-themes/pull/716) [`25c783a`](https://github.com/LekoArts/gatsby-themes/commit/25c783a52fb22733d5e9be2d7988ef51fd182d15) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update `@react-spring/parallax` and `@react-spring/web` for gatsby-theme-cara to ^9.3.0
+
 ## 3.0.0
 
 ### Major Changes
