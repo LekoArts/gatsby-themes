@@ -1,5 +1,18 @@
 # Change Log
 
+## 4.1.0
+
+### Minor Changes
+
+- [#705](https://github.com/LekoArts/gatsby-themes/pull/705) [`158b1f0`](https://github.com/LekoArts/gatsby-themes/commit/158b1f08fa6782151cab1f4b1d337d266d5e75c4) Thanks [@LekoArts](https://github.com/LekoArts)! - **Feature:** The `<Post />` component now has a `<PostFooter />` component at the bottom of the page (between the end of the post content and the global footer). You can shadow this to e.g. display a comment section below a post. The component receives its data through the `post` prop which holds the same data as what `<Post />` receives.
+
+  Fixes https://github.com/LekoArts/gatsby-themes/discussions/698.
+
+### Patch Changes
+
+- Updated dependencies [[`71e15ca`](https://github.com/LekoArts/gatsby-themes/commit/71e15ca705be9aad95cbdd8baabe77b93cbbb77b)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@4.1.0
+
 ## 4.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.0
+
+### Patch Changes
+
+- [#713](https://github.com/LekoArts/gatsby-themes/pull/713) [`71e15ca`](https://github.com/LekoArts/gatsby-themes/commit/71e15ca705be9aad95cbdd8baabe77b93cbbb77b) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency gatsby-plugin-sharp to ^4.0.1 for gatsby-theme-minimal-blog-core
+
 ## 4.0.0
 
 ### Major Changes
