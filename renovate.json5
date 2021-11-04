@@ -97,6 +97,13 @@
       ]
     },
     {
+      "matchDepTypes": [
+        "engines",
+        "@types/node"
+      ],
+      "enabled": false
+    },
+    {
       "groupName": "monorepo",
       "commitMessageTopic": "monorepo",
       "groupSlug": "monorepo",
@@ -143,7 +150,8 @@
         "typescript"
       ],
       "matchPackagePatterns": [
-        "^@typescript-eslint/"
+        "^@typescript-eslint/",
+        "^@types"
       ],
       "matchUpdateTypes": [
         "major",
@@ -228,6 +236,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-cara{{/unless}}"
@@ -260,6 +269,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-cara{{/unless}}"
@@ -293,6 +303,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia-core{{/unless}}"
@@ -325,6 +336,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia-core{{/unless}}"
@@ -358,6 +370,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia{{/unless}}"
@@ -390,6 +403,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emilia{{/unless}}"
@@ -423,6 +437,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma-core{{/unless}}"
@@ -455,6 +470,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma-core{{/unless}}"
@@ -488,6 +504,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma{{/unless}}"
@@ -520,6 +537,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-emma{{/unless}}"
@@ -553,6 +571,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-graphql-playground{{/unless}}"
@@ -585,6 +604,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-graphql-playground{{/unless}}"
@@ -618,6 +638,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie-core{{/unless}}"
@@ -650,6 +671,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie-core{{/unless}}"
@@ -683,6 +705,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie{{/unless}}"
@@ -715,6 +738,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-jodie{{/unless}}"
@@ -748,6 +772,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog-core{{/unless}}"
@@ -780,6 +805,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog-core{{/unless}}"
@@ -813,6 +839,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog{{/unless}}"
@@ -845,6 +872,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-minimal-blog{{/unless}}"
@@ -878,6 +906,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-specimens{{/unless}}"
@@ -910,6 +939,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-specimens{{/unless}}"
@@ -943,6 +973,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-status-dashboard{{/unless}}"
@@ -975,6 +1006,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-status-dashboard{{/unless}}"
@@ -1008,6 +1040,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-styleguide{{/unless}}"
@@ -1040,6 +1073,7 @@
       "excludePackagePatterns": [
         "^eslint-",
         "^@typescript-eslint/",
+        "^@types",
         "^@testing-library/"
       ],
       "commitMessageSuffix": "{{#unless groupName}} for gatsby-theme-styleguide{{/unless}}"

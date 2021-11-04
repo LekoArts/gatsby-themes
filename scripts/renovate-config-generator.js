@@ -27,7 +27,7 @@ const globalPackageRules = [
     groupName: `typescript`,
     matchPaths: [`+(package.json)`],
     matchPackageNames: [`typescript`],
-    matchPackagePatterns: [`^@typescript-eslint/`],
+    matchPackagePatterns: [`^@typescript-eslint/`, `^@types`],
     matchUpdateTypes: [`major`, `minor`, `patch`],
     matchDepTypes: [`devDependencies`],
   },
@@ -102,6 +102,10 @@ const defaultPackageRules = [
     matchPaths: [`www`],
     matchUpdateTypes: [`major`],
     matchDepTypes: [`dependencies`, `devDependencies`],
+  },
+  {
+    matchDepTypes: [`engines`, `@types/node`],
+    enabled: false,
   },
   ...globalPackageRules,
 ]
