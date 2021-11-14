@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.1.1
+
+### Patch Changes
+
+- [#729](https://github.com/LekoArts/gatsby-themes/pull/729) [`a934df5`](https://github.com/LekoArts/gatsby-themes/commit/a934df564cba63c20688d4a41a6fd8c77f39a1d0) Thanks [@LekoArts](https://github.com/LekoArts)! - fix(gatsby-theme-minimal-blog): Incorrect link styling in bottom section
+
+  Links were rendered at a bigger size in the `<Bottom />` section. The styles were changed to only apply this bigger `fontSize` for links inside `<li>` items.
+
 ## 4.1.0
 
 ### Minor Changes
