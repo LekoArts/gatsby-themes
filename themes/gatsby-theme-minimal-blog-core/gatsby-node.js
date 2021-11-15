@@ -100,7 +100,7 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
       body: String! @mdxpassthrough(fieldName: "body")
       html: String! @mdxpassthrough(fieldName: "html")
-      timeToRead: Int @mdxpassthrough(fieldName: "timeToRead")
+      timeToRead: Int
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -220,6 +220,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       description: node.frontmatter.description,
       canonicalUrl: node.frontmatter.canonicalUrl,
       defer: node.frontmatter.defer,
+      timeToRead: node.frontmatter.timeToRead,
     }
 
     const mdxPostId = createNodeId(`${node.id} >>> MdxPost`)
