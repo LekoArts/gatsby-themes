@@ -16,10 +16,6 @@ module.exports = {
     image: `/banner.png`,
     author: `@lekoarts_de`,
   },
-  flags: {
-    DEV_SSR: false,
-    FAST_DEV: true,
-  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -105,7 +101,6 @@ module.exports = {
         description: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#5A67D8`,
         display: `standalone`,
         icons: [
           {
@@ -121,8 +116,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

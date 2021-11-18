@@ -15,9 +15,12 @@ const sharedHeadingStyles = {
   color: `heading`,
 }
 
-export default merge(tailwind, {
-  initialColorModeName: `light`,
-  useCustomProperties: true,
+const theme = merge(tailwind, {
+  config: {
+    initialColorModeName: `light`,
+    useCustomProperties: true,
+    useColorSchemeMediaQuery: `system`,
+  },
   colors: {
     primary: tailwind.colors.indigo[6],
     shadow: tailwind.colors.indigo[2],
@@ -283,3 +286,5 @@ export default merge(tailwind, {
     },
   },
 })
+
+export default theme
