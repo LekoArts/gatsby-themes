@@ -4112,10 +4112,10 @@ async@1.5.2:
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
 
-async@^3.2.0, async@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/async/-/async-3.2.1.tgz#d3274ec66d107a47476a4c49136aacdb00665fc8"
-  integrity sha512-XdD5lRO/87udXCMC9meWdYiR+Nq6ZjUfXidViUZGu2F1MO4T3XwZ1et0hb2++BgLfhyJwy44BGB/yx80ABx8hg==
+async@^3.2.0, async@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.2.2.tgz#2eb7671034bb2194d45d30e31e24ec7e7f9670cd"
+  integrity sha512-H0E+qZaDEfx/FY4t7iLRv1W2fFI6+pyCeTw1uN20AQPiwqwM6ojPxHxdLv4z8hi2DtnW9BOckSspLucW7pIE5g==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -5970,13 +5970,6 @@ decompress-response@^3.3.0:
   dependencies:
     mimic-response "^1.0.0"
 
-decompress-response@^4.2.0:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/decompress-response/-/decompress-response-4.2.1.tgz#414023cc7a302da25ce2ec82d0d5238ccafd8986"
-  integrity sha512-jOSne2qbyE+/r8G1VU+G/82LBs2Fs4LAsTiLSHOCOMZQl2OKZ6i8i4IyHemTe+/yIXOtTcRQMzPcgyhoFlqPkw==
-  dependencies:
-    mimic-response "^2.0.0"
-
 decompress-response@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/decompress-response/-/decompress-response-6.0.0.tgz#ca387612ddb7e104bd16d85aab00d5ecf09c66fc"
@@ -7296,7 +7289,7 @@ fastest-levenshtein@^1.0.12:
   resolved "https://registry.yarnpkg.com/fastest-levenshtein/-/fastest-levenshtein-1.0.12.tgz#9990f7d3a88cc5a9ffd1f1745745251700d497e2"
   integrity sha512-On2N+BpYJ15xIC974QNVuYGMOlEVt4s0EOI3wwMqOmK1fdDY+FN/zltPV8vosq4ad4c/gJ1KHScUn/6AWIgiow==
 
-fastq@^1.11.1, fastq@^1.13.0, fastq@^1.6.0:
+fastq@^1.13.0, fastq@^1.6.0:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.13.0.tgz#616760f88a7526bdfc596b7cab8c18938c36b98c"
   integrity sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==
@@ -7710,10 +7703,10 @@ gatsby-cli@^4.0.0:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.0.0.tgz#5a0fccd9118acb874dd64324fcc3c1b407a5c16e"
-  integrity sha512-MEQAgP+/ddDTOjcfRhyZenLfr6q3nyh01muI6QTgz0qAFsbS50lZh9SbczgpuKnb6qiST1KR0OUIYTaBFXfB2g==
+gatsby-core-utils@^3.0.0, gatsby-core-utils@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.2.0.tgz#4dbf67f016c27345fc4a8f3c140ef9fcd9d2918b"
+  integrity sha512-gPz02QD1kOGQmu49TZL8Fdo9rX8QBsA7XID0oXyIkZqkK80Tm1Uq1pOOfPE3cWSMEkzc71M79iKISCntk/wNuw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -7721,7 +7714,7 @@ gatsby-core-utils@^3.0.0:
     file-type "^16.5.3"
     fs-extra "^10.0.0"
     got "^11.8.2"
-    node-object-hash "^2.3.9"
+    node-object-hash "^2.3.10"
     proper-lockfile "^4.1.2"
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
@@ -7849,10 +7842,10 @@ gatsby-plugin-manifest@^4.0.0:
     semver "^7.3.5"
     sharp "^0.29.1"
 
-gatsby-plugin-mdx@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.0.0.tgz#908c9a452174f9ab626edcf44fd091f5faf4f87a"
-  integrity sha512-f5HT5oXtHjx9PQ2L+WlcV2TcruXi4dKnzMxFlv5uthO7ZTHEnPNOBoV4ezuwxJYRspHgUBd5gOnwfAFbMzjj4A==
+gatsby-plugin-mdx@^3.0.0, gatsby-plugin-mdx@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.2.0.tgz#afac39e92e1aaadfc1f6a10437e3bb972f337fe2"
+  integrity sha512-hxk8LE127ip9jj6QtMVNEdu+m2nbMna1phUR0ownTha4viCSEAGAAIySd9yyR0k7CljJ7LEQLCMs9/DkAdU0DQ==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/generator" "^7.15.4"
@@ -7870,7 +7863,7 @@ gatsby-plugin-mdx@^3.0.0:
     escape-string-regexp "^1.0.5"
     eval "^0.1.4"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.0.0"
+    gatsby-core-utils "^3.2.0"
     gray-matter "^4.0.2"
     json5 "^2.1.3"
     loader-utils "^1.4.0"
@@ -7878,6 +7871,7 @@ gatsby-plugin-mdx@^3.0.0:
     mdast-util-to-string "^1.1.0"
     mdast-util-toc "^3.1.0"
     mime "^2.4.6"
+    mkdirp "^1.0.4"
     p-queue "^6.6.2"
     pretty-bytes "^5.3.0"
     remark "^10.0.1"
@@ -7916,27 +7910,27 @@ gatsby-plugin-react-helmet@^5.0.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.0.1.tgz#342f5234f288ded8adade7cd9ef2680e2b7f4f50"
-  integrity sha512-j9rw5uZeYQJ3b60l4mtwTkcvmxeQ0TFID7mZw0ULovMwOJvT5R6xerXMbj57SjAom8+RK1NvWlfQcWRAg9aypg==
+gatsby-plugin-sharp@^4.0.1, gatsby-plugin-sharp@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.2.0.tgz#b76bfe51d62f4610ffd20b1fd20d9fd39070e722"
+  integrity sha512-Xqs4MzwgkUH0KusJAsUWnGdR6etEheOxCBzDHAd9Do6aNYQ5Hm1ljxYc+lUNuITR4aIjaBtdsY/in96s3iGESA==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    async "^3.2.1"
+    async "^3.2.2"
     bluebird "^3.7.2"
     filenamify "^4.3.0"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.0.0"
-    gatsby-plugin-utils "^2.0.0"
-    gatsby-telemetry "^3.0.0"
+    gatsby-core-utils "^3.2.0"
+    gatsby-plugin-utils "^2.2.0"
+    gatsby-telemetry "^3.2.0"
     got "^11.8.2"
     lodash "^4.17.21"
-    mini-svg-data-uri "^1.3.3"
+    mini-svg-data-uri "^1.4.3"
     potrace "^2.1.8"
     probe-image-size "^6.0.0"
     progress "^2.0.3"
     semver "^7.3.5"
-    sharp "^0.29.1"
+    sharp "^0.29.2"
     svgo "1.3.2"
     uuid "3.4.0"
 
@@ -7973,10 +7967,10 @@ gatsby-plugin-typescript@^4.0.0:
     "@babel/runtime" "^7.15.4"
     babel-plugin-remove-graphql-queries "^4.0.0"
 
-gatsby-plugin-utils@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-2.0.0.tgz#555a8d8122a1716148a71b52cb3adb97d9e09bc4"
-  integrity sha512-RN++hR/gU6orPHlnDM3CUd4DnDdTcGS3vkjHnAvo+Wli7H8yHEt4baoK20f/V3AOOCxwen8TypFH3Uy5iVAjyg==
+gatsby-plugin-utils@^2.0.0, gatsby-plugin-utils@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-2.2.0.tgz#87690d8031fc23454c05bae4b8c81c8db67d362e"
+  integrity sha512-VcrvYk6LxsTs7DqzNCT7iYaqEoMuKr2gXO5HFG1sBMwS6XxLWUe47+CuenOvUcKn71C9a/Ir2pove62+0Xphjw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     joi "^17.4.2"
@@ -8085,24 +8079,24 @@ gatsby-source-circleci@^2.0.0:
   dependencies:
     circleci-api "^4.1.4"
 
-gatsby-source-filesystem@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.0.0.tgz#08fb8679f535e7c60c915c227d8c3a037a1424a8"
-  integrity sha512-LQPTaAOt2i740qzAtR9oFk8h2a60JZv90nJqfLxgVbHdbRiH1KnCbXLYMmzhsLfhfOUiwG5KMOT7icZpESRNnA==
+gatsby-source-filesystem@^4.0.0, gatsby-source-filesystem@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.2.0.tgz#165f4da48167c9db87579e4a558eae1264d6f1f1"
+  integrity sha512-+KKyjPP2M9WaP/KsClRPdrv7wy4MtFo64WWy4A+zA7cL7Bk1b7DMJprLFYG2DHQ85ObCQdmUc257R1+otnnxQQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chokidar "^3.5.2"
-    fastq "^1.11.1"
+    fastq "^1.13.0"
     file-type "^16.5.3"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.0.0"
+    gatsby-core-utils "^3.2.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
     pretty-bytes "^5.4.1"
     progress "^2.0.3"
     valid-url "^1.0.9"
-    xstate "^4.14.0"
+    xstate "^4.25.0"
 
 gatsby-source-netlify@^2.0.0:
   version "2.0.0"
@@ -8112,10 +8106,10 @@ gatsby-source-netlify@^2.0.0:
     "@babel/runtime" "^7.15.3"
     netlify "^8.0.0"
 
-gatsby-telemetry@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.0.0.tgz#d3ed8c36742942d97b5639f9cc499d5c24921158"
-  integrity sha512-qUFH5B48R0adY3AiEVOGZ0Lu4bOBmuHtAbAdzAMLMlXvIubSfc3VvxyB64jKQfZ3l1FyAIddSHz8i5yKAXekWA==
+gatsby-telemetry@^3.0.0, gatsby-telemetry@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.2.0.tgz#2f51deca2c38c0fa8c81742e60b0d9ff4abd2cf0"
+  integrity sha512-nLs/PPTPn7xPOiJxRe1Lmd8C0EVaH4rPT3KRT36ftaJBVDT5XhKfhR/tW9zirADD1k6pYW6vYvAQNFfKG5dpDg==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/runtime" "^7.15.4"
@@ -8125,16 +8119,16 @@ gatsby-telemetry@^3.0.0:
     boxen "^4.2.0"
     configstore "^5.0.1"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.0.0"
+    gatsby-core-utils "^3.2.0"
     git-up "^4.0.5"
     is-docker "^2.2.1"
     lodash "^4.17.21"
-    node-fetch "^2.6.1"
+    node-fetch "^2.6.6"
 
-gatsby-transformer-sharp@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.0.0.tgz#23f0f30b1df3dbec543c38f1b8608a2720dd2223"
-  integrity sha512-YCaqE7WJDsLV0g3r6gAIQO1glUf6JL+ET52mm+3xg3B3YX7ufSqF5hb91cQFgDAM++o4GSMl6TiMD/GORbgLww==
+gatsby-transformer-sharp@^4.0.0, gatsby-transformer-sharp@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.2.0.tgz#1378570fa7815e9e84216e6104a31fe5e7d40546"
+  integrity sha512-G3Wa6wmYQ2l3jSAIgfrKfq7EwH+3C3qNqF9Zpi7x96rVLWUz56Az03Mwfj2ViSSAB/5tQBDmgk0sImuxv/0PLg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     bluebird "^3.7.2"
@@ -8143,7 +8137,7 @@ gatsby-transformer-sharp@^4.0.0:
     potrace "^2.1.8"
     probe-image-size "^6.0.0"
     semver "^7.3.5"
-    sharp "^0.29.1"
+    sharp "^0.29.2"
 
 gatsby-worker@^1.0.0:
   version "1.0.0"
@@ -11743,11 +11737,6 @@ mimic-response@^1.0.0, mimic-response@^1.0.1:
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
   integrity sha512-j5EctnkH7amfV/q5Hgmoal1g2QHFJRraOtmx0JpIqkxhBhI/lJSl1nMpQ45hVarwNETOoWEimndZ4QK0RHxuxQ==
 
-mimic-response@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-2.1.0.tgz#d13763d35f613d09ec37ebb30bac0469c0ee8f43"
-  integrity sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==
-
 mimic-response@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-3.1.0.tgz#2d1d59af9c1b129815accc2c46a022a5ce1fa3c9"
@@ -11774,7 +11763,7 @@ mini-css-extract-plugin@1.6.2:
     schema-utils "^3.0.0"
     webpack-sources "^1.1.0"
 
-mini-svg-data-uri@^1.3.3:
+mini-svg-data-uri@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/mini-svg-data-uri/-/mini-svg-data-uri-1.4.3.tgz#43177b2e93766ba338931a3e2a84a3dfd3a222b8"
   integrity sha512-gSfqpMRC8IxghvMcxzzmMnWpXAChSA+vy4cia33RgerMS8Fex95akUyQZPbxJJmeBGiGmK7n/1OpUX8ksRjIdA==
@@ -12015,12 +12004,12 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
-node-abi@^2.21.0:
-  version "2.30.1"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-2.30.1.tgz#c437d4b1fe0e285aaf290d45b45d4d7afedac4cf"
-  integrity sha512-/2D0wOQPgaUWzVSVgRMx+trKJRC2UG4SUc4oCJoXx9Uxjtp0Vy3/kt7zcbxHF8+Z/pK3UloLWzBISg72brfy1w==
+node-abi@^3.3.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.5.0.tgz#26e8b7b251c3260a5ac5ba5aef3b4345a0229248"
+  integrity sha512-LtHvNIBgOy5mO8mPEUtkCW/YCRWYEKshIvqhe1GHHyXEHEB5mgICyYnAcl4qan3uFeRROErKGzatFHPf6kDxWw==
   dependencies:
-    semver "^5.4.1"
+    semver "^7.3.5"
 
 node-addon-api@^4.2.0:
   version "4.2.0"
@@ -12037,10 +12026,10 @@ node-fetch@2.6.1:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
-node-fetch@^2.5.0, node-fetch@^2.6.1, node-fetch@^2.6.5:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.5.tgz#42735537d7f080a7e5f78b6c549b7146be1742fd"
-  integrity sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
+node-fetch@^2.5.0, node-fetch@^2.6.1, node-fetch@^2.6.5, node-fetch@^2.6.6:
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.6.tgz#1751a7c01834e8e1697758732e9efb6eeadfaf89"
+  integrity sha512-Z8/6vRlTUChSdIgMa51jxQ4lrw/Jy5SOW10ObaA47/RElsAN2c5Pn8bTgFGWn/ibwzXTE8qwr1Yzx28vsecXEA==
   dependencies:
     whatwg-url "^5.0.0"
 
@@ -12059,7 +12048,7 @@ node-modules-regexp@^1.0.0:
   resolved "https://registry.yarnpkg.com/node-modules-regexp/-/node-modules-regexp-1.0.0.tgz#8d9dbe28964a4ac5712e9131642107c71e90ec40"
   integrity sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA=
 
-node-object-hash@^2.3.9:
+node-object-hash@^2.3.10:
   version "2.3.10"
   resolved "https://registry.yarnpkg.com/node-object-hash/-/node-object-hash-2.3.10.tgz#4b0c1a3a8239e955f0db71f8e00b38b5c0b33992"
   integrity sha512-jY5dPJzw6NHd/KPSfPKJ+IHoFS81/tJ43r34ZeNMXGzCOM8jwQDCD12HYayKIB6MuznrnqIYy2e891NA2g0ibA==
@@ -13248,10 +13237,10 @@ potrace@^2.1.8:
   dependencies:
     jimp "^0.14.0"
 
-prebuild-install@^6.1.4:
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-6.1.4.tgz#ae3c0142ad611d58570b89af4986088a4937e00f"
-  integrity sha512-Z4vpywnK1lBg+zdPCVCsKq0xO66eEV9rWo2zrROGGiRS4JtueBOdlB1FnY8lcy7JsUud/Q3ijUxyWN26Ika0vQ==
+prebuild-install@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-7.0.0.tgz#3c5ce3902f1cb9d6de5ae94ca53575e4af0c1574"
+  integrity sha512-IvSenf33K7JcgddNz2D5w521EgO+4aMMjFt73Uk9FRzQ7P+QZPKrp7qPsDydsSwjGt3T5xRNnM1bj1zMTD5fTA==
   dependencies:
     detect-libc "^1.0.3"
     expand-template "^2.0.3"
@@ -13259,11 +13248,11 @@ prebuild-install@^6.1.4:
     minimist "^1.2.3"
     mkdirp-classic "^0.5.3"
     napi-build-utils "^1.0.1"
-    node-abi "^2.21.0"
+    node-abi "^3.3.0"
     npmlog "^4.0.1"
     pump "^3.0.0"
     rc "^1.2.7"
-    simple-get "^3.0.3"
+    simple-get "^4.0.0"
     tar-fs "^2.0.0"
     tunnel-agent "^0.6.0"
 
@@ -14489,17 +14478,17 @@ shallow-compare@^1.2.2:
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-sharp@^0.29.1:
-  version "0.29.2"
-  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.29.2.tgz#e8c003cd9cb321585b32dbda6eed3baa7d6f2308"
-  integrity sha512-XWRdiYLIJ3tDUejRyG24KERnJzMfIoyiJBntd2S6/uj3NEeNgRFRLgiBlvPxMa8aml14dKKD98yHinSNKp1xzQ==
+sharp@^0.29.1, sharp@^0.29.2:
+  version "0.29.3"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.29.3.tgz#0da183d626094c974516a48fab9b3e4ba92eb5c2"
+  integrity sha512-fKWUuOw77E4nhpyzCCJR1ayrttHoFHBT2U/kR/qEMRhvPEcluG4BKj324+SCO1e84+knXHwhJ1HHJGnUt4ElGA==
   dependencies:
     color "^4.0.1"
     detect-libc "^1.0.3"
     node-addon-api "^4.2.0"
-    prebuild-install "^6.1.4"
+    prebuild-install "^7.0.0"
     semver "^7.3.5"
-    simple-get "^3.1.0"
+    simple-get "^4.0.0"
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
 
@@ -14551,12 +14540,12 @@ simple-concat@^1.0.0:
   resolved "https://registry.yarnpkg.com/simple-concat/-/simple-concat-1.0.1.tgz#f46976082ba35c2263f1c8ab5edfe26c41c9552f"
   integrity sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==
 
-simple-get@^3.0.3, simple-get@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/simple-get/-/simple-get-3.1.0.tgz#b45be062435e50d159540b576202ceec40b9c6b3"
-  integrity sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==
+simple-get@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/simple-get/-/simple-get-4.0.0.tgz#73fa628278d21de83dadd5512d2cc1f4872bd675"
+  integrity sha512-ZalZGexYr3TA0SwySsr5HlgOOinS4Jsa8YB2GJ6lUNAazyAu4KG/VmzMTwAt2YVXzzVj8QmefmAonZIK2BSGcQ==
   dependencies:
-    decompress-response "^4.2.0"
+    decompress-response "^6.0.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
 
@@ -16852,7 +16841,7 @@ xss@^1.0.6:
     commander "^2.20.3"
     cssfilter "0.0.10"
 
-xstate@^4.14.0, xstate@^4.25.0, xstate@^4.9.1:
+xstate@^4.25.0, xstate@^4.9.1:
   version "4.25.0"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.25.0.tgz#d902ef33137532043f7a88597af8e5e1c7ad6bdf"
   integrity sha512-qP7lc/ypOuuWME4ArOBnzaCa90TfHkjiqYDmxpiCjPy6FcXstInA2vH6qRVAHbPXRK4KQIYfIEOk1X38P+TldQ==
