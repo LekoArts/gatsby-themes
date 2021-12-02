@@ -203,7 +203,7 @@ const exampleActions = [
   },
 ]
 
-module.exports = function (plop) {
+const plopfile = (plop) => {
   // Add a new theme + example to get going with theme development
   plop.setGenerator(`theme & example`, {
     description: `Sets up a theme inside /themes, an example inside /examples, and a Cypress test.`,
@@ -239,3 +239,5 @@ module.exports = function (plop) {
     actions: [...exampleActions].filter(Boolean),
   })
 }
+
+export default plopfile
