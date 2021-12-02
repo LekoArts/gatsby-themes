@@ -19,6 +19,6 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Run ESLint
-        run: yarn lint:ci
+        run: yarn lint
       - name: Run Jest
         run: yarn test:ci
