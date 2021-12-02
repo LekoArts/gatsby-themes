@@ -20,7 +20,7 @@ jobs:
         run: yarn --frozen-lockfile
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@main
+        uses: changesets/action@v1
         with:
           commit: "chore(release): Publish"
           title: "Changesets: Version Packages"
