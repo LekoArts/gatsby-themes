@@ -5,7 +5,10 @@ import { useState } from "react"
 import copyToClipboard from "../utils/copy-to-clipboard"
 import { visuallyHidden } from "../styles/utils"
 
-const delay = (duration: number) => new Promise((resolve) => setTimeout(resolve, duration))
+const delay = (duration: number) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, duration)
+  })
 
 type CopyProps = {
   content: string

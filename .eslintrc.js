@@ -93,6 +93,8 @@ module.exports = {
     "react/jsx-fragments": 0,
     "react/jsx-curly-brace-presence": 0,
     "react/jsx-pascal-case": 0,
+    "react/function-component-definition": 0,
+    "react/jsx-no-useless-fragment": 0,
     "react/jsx-filename-extension": [
       1,
       {
