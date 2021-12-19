@@ -46,16 +46,6 @@ module.exports = (themeOptions) => {
               },
             },
           ],
-          plugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 820,
-                quality: 90,
-                linkImagesToOriginal: false,
-              },
-            },
-          ],
         },
       },
       `gatsby-transformer-sharp`,
