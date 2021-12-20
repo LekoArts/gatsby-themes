@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+* [#769](https://github.com/LekoArts/gatsby-themes/pull/769) [`9d8db19`](https://github.com/LekoArts/gatsby-themes/commit/9d8db19b457aadb8fdd6d4fa89df9e943a008700) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia
+
+- [#743](https://github.com/LekoArts/gatsby-themes/pull/743) [`78c1f53`](https://github.com/LekoArts/gatsby-themes/commit/78c1f53d308eff9badac20b26970728d61eaa91d) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia
+
+- Updated dependencies [[`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b), [`c23c4d8`](https://github.com/LekoArts/gatsby-themes/commit/c23c4d8c1125bde28dd86759649449b197f27948)]:
+  - @lekoarts/gatsby-theme-emilia-core@3.0.2
+
 ## 3.0.1
 
 ### Patch Changes

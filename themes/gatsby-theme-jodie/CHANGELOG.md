@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+* [#748](https://github.com/LekoArts/gatsby-themes/pull/748) [`0c9022d`](https://github.com/LekoArts/gatsby-themes/commit/0c9022d08d358b3fa8f2adc1325bbe52a65413a7) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-jodie
+
+- [#774](https://github.com/LekoArts/gatsby-themes/pull/774) [`49e212c`](https://github.com/LekoArts/gatsby-themes/commit/49e212c06a8668ae7a4e7f1eb8d5bfe7de445d24) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-jodie
+
+- Updated dependencies [[`5e7fab3`](https://github.com/LekoArts/gatsby-themes/commit/5e7fab3a383865de9d60842c079e3a6d9cf64da3), [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b)]:
+  - @lekoarts/gatsby-theme-jodie-core@3.0.2
+
 ## 3.0.0
 
 ### Major Changes

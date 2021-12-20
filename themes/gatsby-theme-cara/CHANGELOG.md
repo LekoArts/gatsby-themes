@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+* [#767](https://github.com/LekoArts/gatsby-themes/pull/767) [`290489b`](https://github.com/LekoArts/gatsby-themes/commit/290489bde0e931365c7290e7ac844a5b86f54975) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-cara
+
 ## 3.0.1
 
 ### Patch Changes

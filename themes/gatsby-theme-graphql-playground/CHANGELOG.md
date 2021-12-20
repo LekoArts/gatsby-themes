@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.1
+
+### Patch Changes
+
+- [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+* [#773](https://github.com/LekoArts/gatsby-themes/pull/773) [`a93281b`](https://github.com/LekoArts/gatsby-themes/commit/a93281bd53323afaf0cfa26a1e8f01887215953d) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-graphql-playground
+
 ## 3.0.0
 
 ### Major Changes

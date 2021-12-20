@@ -1,5 +1,18 @@
 # Change Log
 
+## 4.1.2
+
+### Patch Changes
+
+- [#768](https://github.com/LekoArts/gatsby-themes/pull/768) [`4f58e93`](https://github.com/LekoArts/gatsby-themes/commit/4f58e933cf3df7c6f107cf32c5c933e24f9d0218) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+* [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+- [#750](https://github.com/LekoArts/gatsby-themes/pull/750) [`658668f`](https://github.com/LekoArts/gatsby-themes/commit/658668fc28142b8faf83405d75c04bacc1768ea5) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+- Updated dependencies [[`d60f9cd`](https://github.com/LekoArts/gatsby-themes/commit/d60f9cdc38e0b9430012bf3ca30336e6e32d7ff4), [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@4.1.2
+
 ## 4.1.1
 
 ### Patch Changes
