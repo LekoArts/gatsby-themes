@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#771](https://github.com/LekoArts/gatsby-themes/pull/771) [`70af783`](https://github.com/LekoArts/gatsby-themes/commit/70af783a7dfeecc48a82e0bc5cf51240f09b2642) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emma
+
+* [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+- [#745](https://github.com/LekoArts/gatsby-themes/pull/745) [`4ce5ea8`](https://github.com/LekoArts/gatsby-themes/commit/4ce5ea8c86e87d870ce3fc8dfed778751bdabbf4) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emma
+
+- Updated dependencies [[`980bb1c`](https://github.com/LekoArts/gatsby-themes/commit/980bb1c6f6028f8042c32948f61e84b1a83ede9b), [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b)]:
+  - @lekoarts/gatsby-theme-emma-core@3.0.2
+
 ## 3.0.1
 
 ### Patch Changes

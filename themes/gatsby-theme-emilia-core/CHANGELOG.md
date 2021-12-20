@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#777](https://github.com/LekoArts/gatsby-themes/pull/777) [`090dfc2`](https://github.com/LekoArts/gatsby-themes/commit/090dfc23e55605ba7311e7ffe14e37294d27d26b) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Update gatsby-plugin-mdx and gatsby
+
+* [#770](https://github.com/LekoArts/gatsby-themes/pull/770) [`c23c4d8`](https://github.com/LekoArts/gatsby-themes/commit/c23c4d8c1125bde28dd86759649449b197f27948) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia-core
+
 ## 3.0.1
 
 ### Patch Changes
