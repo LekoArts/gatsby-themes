@@ -22,6 +22,7 @@ const globalPackageRules = [
     matchPackagePatterns: [`^eslint-`],
     matchUpdateTypes: [`major`, `minor`, `patch`],
     matchDepTypes: [`dependencies`, `devDependencies`],
+    automerge: true,
   },
   {
     groupName: `typescript`,
@@ -30,6 +31,7 @@ const globalPackageRules = [
     matchPackagePatterns: [`^@typescript-eslint/`, `^@types`],
     matchUpdateTypes: [`major`, `minor`, `patch`],
     matchDepTypes: [`devDependencies`],
+    automerge: true,
   },
   {
     groupName: `testing library`,
@@ -94,6 +96,7 @@ const defaultPackageRules = [
     matchPaths: [`www`],
     matchUpdateTypes: [`patch`, `minor`],
     matchDepTypes: [`dependencies`, `devDependencies`],
+    automerge: true,
   },
   {
     groupName: `www`,
