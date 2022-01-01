@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.3
+
+### Patch Changes
+
+- [#786](https://github.com/LekoArts/gatsby-themes/pull/786) [`32f10a8`](https://github.com/LekoArts/gatsby-themes/commit/32f10a8f140044cb26071fdd49e881b423e3d6d1) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies (react-spring) for gatsby-theme-cara to ^9.3.2
+
 ## 3.0.2
 
 ### Patch Changes

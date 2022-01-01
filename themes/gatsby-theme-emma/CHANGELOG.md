@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.3
+
+### Patch Changes
+
+- [#785](https://github.com/LekoArts/gatsby-themes/pull/785) [`9491a2b`](https://github.com/LekoArts/gatsby-themes/commit/9491a2b4adcc6986e9370c6446b3fa53e6a2adeb) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency react-spring to ^9.3.3 for gatsby-theme-emma
+
 ## 3.0.2
 
 ### Patch Changes
