@@ -27,7 +27,6 @@ const Header = () => {
             </a>
             <Box
               aria-hidden="true"
-              focusable="false"
               sx={{ height: 12, width: 1, backgroundColor: `primary`, borderRadius: `full`, mx: 3 }}
             />
             <Flex sx={{ flexDirection: `column` }}>

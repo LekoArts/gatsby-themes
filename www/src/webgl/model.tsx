@@ -44,7 +44,7 @@ type GLTFResult = GLTF & {
 
 export default function Model(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group>()
-  const { nodes, materials } = useGLTF(`/model/dracoGatsby.gltf`) as GLTFResult
+  const { nodes, materials } = useGLTF(`/model/dracoGatsby.gltf`) as unknown as GLTFResult
   return (
     <group ref={group} {...props} dispose={null}>
       <group position={[0.21, 8.75, 59.69]}>

@@ -1,6 +1,6 @@
 import React from "react"
 import { Global } from "@emotion/react"
-import { Themed, Box, useColorMode } from "theme-ui"
+import { Themed, Box, useColorMode, get } from "theme-ui"
 import SEO from "./seo"
 import Header from "./header"
 import "../fonts/benguiat.css"
@@ -29,13 +29,13 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
   return (
     <>
       <Global
-        styles={(theme) => ({
+        styles={(t) => ({
           "*": {
             boxSizing: `inherit`,
           },
           "::selection": {
-            backgroundColor: theme.colors.text,
-            color: theme.colors.background,
+            backgroundColor: get(t, `colors.text`),
+            color: get(t, `colors.background`),
           },
           "#___gatsby": {
             position: `relative`,
@@ -46,7 +46,7 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
             textDecoration: `none`,
             outline: `none`,
             "&:focus": {
-              boxShadow: theme.shadows.outline,
+              boxShadow: get(t, `shadows.outline`),
             },
           },
           ...headingStyles,

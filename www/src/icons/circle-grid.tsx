@@ -13,7 +13,7 @@ type Props = {
 const CircleGrid = ({ className = ``, color, size, top, left = ``, right = `` }: Props) => {
   const { theme } = useThemeUI()
 
-  const fillColor = theme.colors[color][2]
+  const fillColor = theme?.colors?.[color]?.[2]
 
   return (
     <svg

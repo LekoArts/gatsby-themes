@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, jsx, Themed, Box, Flex, useColorMode } from "theme-ui"
+import { Container, jsx, Themed, Box, Flex, useColorMode, get } from "theme-ui"
 import { Circle, Donut } from "./shapes"
 import { down, upWide } from "../styles/animations"
 import Logo from "../icons/logo"
@@ -89,7 +89,7 @@ const AboutMe = () => {
             variant: isStrange ? `gradients.strangerThings` : `gradients.indigo`,
             p: [4, 4, 5],
             color: `white`,
-            boxShadow: (t: { colors: { [key: string]: any[] } }) => `0px 20px 25px ${t.colors.shadow}`,
+            boxShadow: (t) => `0px 20px 25px ${get(t, `colors.shadow`)}`,
           }}
         >
           <h3

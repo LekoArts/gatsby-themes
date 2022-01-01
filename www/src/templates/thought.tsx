@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { graphql, Link, PageProps } from "gatsby"
-import { Container, jsx, Themed, Flex } from "theme-ui"
+import { Container, jsx, Themed, Flex, get } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { TwitterShareButton } from "react-share"
 import Layout from "../components/layout"
@@ -111,7 +111,7 @@ const ThoughtTemplate: React.FC<PageProps<ThoughtTemplateProps>> = ({ data: { th
           alignItems: `center`,
           backgroundColor: `primary`,
           borderRadius: `xl`,
-          boxShadow: (t: { colors: { [key: string]: any[] } }) => `0px 20px 25px ${t.colors.shadow}`,
+          boxShadow: (t) => `0px 20px 25px ${get(t, `colors.shadow`)}`,
           p: 4,
           mt: [5, 6],
           mb: 4,
