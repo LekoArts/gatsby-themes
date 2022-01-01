@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useColorMode, get, ThemeUIStyleObject } from "theme-ui"
+import { jsx, useColorMode, get, ThemeUICSSObject } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
 import { OrbitControls } from "@react-three/drei/core/OrbitControls"
@@ -24,7 +24,7 @@ const RectAreaLightDecl = ({
   />
 )
 
-const sharedDiskStyles: ThemeUIStyleObject = {
+const sharedDiskStyles: ThemeUICSSObject = {
   position: `absolute`,
   left: `50%`,
   top: `50%`,

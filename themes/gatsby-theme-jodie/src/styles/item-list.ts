@@ -1,6 +1,6 @@
-import type { ThemeUIStyleObject } from "theme-ui"
+import type { ThemeUICSSObject } from "theme-ui"
 
-export const itemListWrapperStyles: ThemeUIStyleObject = {
+export const itemListWrapperStyles: ThemeUICSSObject = {
   ".item-list": {
     display: `grid`,
     gridAutoRows: `auto`,
@@ -29,6 +29,6 @@ export const itemListWrapperStyles: ThemeUIStyleObject = {
   },
 }
 
-export const itemStyles: ThemeUIStyleObject = {
+export const itemStyles: ThemeUICSSObject = {
   minHeight: [`500px`, `700px`],
 }

@@ -1,20 +1,22 @@
+import type { IGatsbyImageData } from "gatsby-plugin-image"
 import { shuffle, filterBySlug } from "../resolver-templates"
 import { IGridItem } from "../modify-grid"
 
-const testString = `foobar`
+const gatsbyImageData: IGatsbyImageData = {
+  layout: `fullWidth`,
+  width: 600,
+  height: 600,
+  images: {
+    sources: [],
+  },
+  placeholder: {
+    sources: [],
+  },
+}
 
 const testImage = {
   childImageSharp: {
-    fluid: {
-      aspectRatio: 1.5,
-      src: testString,
-      srcSet: testString,
-      sizes: testString,
-      base64: testString,
-      tracedSVG: testString,
-      srcWebp: testString,
-      srcSetWebp: testString,
-    },
+    gatsbyImageData,
   },
 }
 

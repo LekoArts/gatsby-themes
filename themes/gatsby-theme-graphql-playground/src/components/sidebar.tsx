@@ -10,7 +10,7 @@ const Sidebar = () => {
   const { siteTitle } = useSiteMetadata()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e: any) => {
+  const toggleColorMode = (e: React.SyntheticEvent) => {
     e.preventDefault()
     setColorMode(isDark ? `light` : `dark`)
   }
@@ -25,6 +25,7 @@ const Sidebar = () => {
       </div>
       <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
       <Sidenav
+        // @ts-ignore
         sx={{
           a: {
             fontWeight: `normal !important`,
