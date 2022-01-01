@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Link as TLink, Heading } from "theme-ui"
+import { jsx, Heading } from "theme-ui"
 import { Link } from "gatsby"
 import { rgba } from "polished"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
@@ -23,10 +23,10 @@ const px = [`64px`, `32px`, `16px`, `8px`, `4px`]
 const shadowArray = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
 const Card = ({ item, overlay = `#000`, shadow = shadowArray, eager }: CardProps) => (
-  <TLink
-    as={Link}
+  <Link
     aria-label={`Visit ${item.title} project page`}
-    sx={{
+    sx={(t) => ({
+      ...t.styles?.a,
       outline: `none`,
       "&:focus": {
         boxShadow: `${shadow.join(`, `)}, ${rgba(overlay, 0.5)} 0px 0px 0px 10px`,
@@ -38,7 +38,7 @@ const Card = ({ item, overlay = `#000`, shadow = shadowArray, eager }: CardProps
       },
       boxShadow: shadow.join(`, `),
       position: `relative`,
-    }}
+    })}
     to={item.slug}
   >
     <div
@@ -64,7 +64,7 @@ const Card = ({ item, overlay = `#000`, shadow = shadowArray, eager }: CardProps
       </Heading>
     </div>
     <GatsbyImage loading={eager ? `eager` : `lazy`} image={item.cover.childImageSharp.gatsbyImageData} alt="" />
-  </TLink>
+  </Link>
 )
 
 export default Card

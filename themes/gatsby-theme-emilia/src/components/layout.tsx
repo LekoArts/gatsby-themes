@@ -1,4 +1,5 @@
 import * as React from "react"
+import { get } from "theme-ui"
 import { Global } from "@emotion/react"
 import Footer from "./footer"
 import SEO from "./seo"
@@ -8,7 +9,7 @@ type LayoutProps = { children: React.ReactNode }
 const Layout = ({ children }: LayoutProps) => (
   <React.Fragment>
     <Global
-      styles={(theme) => ({
+      styles={(t) => ({
         "*": {
           boxSizing: `inherit`,
         },
@@ -27,8 +28,8 @@ const Layout = ({ children }: LayoutProps) => (
           display: `none`,
         },
         "::selection": {
-          background: theme.colors.text,
-          color: theme.colors.background,
+          background: get(t, `colors.text`),
+          color: get(t, `colors.background`),
         },
         "@media(max-width: 600px)": {
           html: {
