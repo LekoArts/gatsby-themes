@@ -23,4 +23,4 @@ jobs:
       - name: Run Jest
         run: yarn test:ci
       - name: Run TypeScript
-        run: yarn typecheck
+        run: yarn typecheck:ci

@@ -10,6 +10,7 @@
   "scripts": {
     "tsc": "tsc",
     "typecheck": "tsc --noEmit",
+    "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
     "tsc:compile": "tsc --project cypress/tsconfig.json",
     "tsc:compile:watch": "tsc --watch --project cypress/tsconfig.json",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js",
