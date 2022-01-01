@@ -163,6 +163,7 @@ const renovateConfig = {
   automerge: false,
   ignoreDeps: [`react`, `react-dom`],
   postUpdateOptions: [`yarnDedupeHighest`],
+  updateNotScheduled: false,
   packageRules: defaultPackageRules.concat(Array.from(packageRules.values()).flat()),
 }
 
