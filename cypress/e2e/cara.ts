@@ -7,7 +7,7 @@ describe(`gatsby-theme-cara`, () => {
     cy.visit(`/`).waitForRouteChange()
   })
   it(`should render hero content`, () => {
-    cy.findByText(/hi, i'm lekoarts/i)
+    cy.findByText(/hi, i'm your name/i)
   })
   it(`should render project content`, () => {
     cy.findByText(/tips & tricks for gatsby/i)
