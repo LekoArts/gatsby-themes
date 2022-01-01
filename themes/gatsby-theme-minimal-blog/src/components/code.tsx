@@ -19,9 +19,14 @@ type CodeProps = {
 function getParams(className = ``) {
   const [lang = ``, params = ``] = className.split(`:`)
 
-  return [lang.split(`language-`).pop().split(`{`).shift()].concat(
+  return [
+    // @ts-ignore
+    lang.split(`language-`).pop().split(`{`).shift(),
+  ].concat(
+    // @ts-ignore
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
+      // @ts-ignore
       merged[key] = value
       return merged
     }, {})
@@ -68,6 +73,7 @@ const Code = ({
 }: CodeProps) => {
   const { showLineNumbers, showCopyButton } = useMinimalBlogConfig()
 
+  // @ts-ignore
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
 
@@ -81,6 +87,7 @@ const Code = ({
     )
   }
   return (
+    // @ts-ignore
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <React.Fragment>

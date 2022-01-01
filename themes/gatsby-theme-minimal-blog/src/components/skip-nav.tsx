@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, ThemeUICSSObject } from "theme-ui"
 import * as React from "react"
 
 type SkipNavLinkProps = {
   children: React.ReactNode
 }
 
-const skipNavStyles = {
+const skipNavStyles: ThemeUICSSObject = {
   border: 0,
   clip: `react(0 0 0 0)`,
   height: `1px`,
@@ -31,7 +31,7 @@ const skipNavStyles = {
 }
 
 const SkipNavLink = ({ children, ...props }: SkipNavLinkProps) => (
-  <a {...props} sx={{ ...skipNavStyles }} href="#skip-nav" data-skip-link="true">
+  <a {...props} sx={skipNavStyles} href="#skip-nav" data-skip-link="true">
     {children}
   </a>
 )

@@ -10,7 +10,7 @@ const Header = () => {
   const { navigation: nav } = useMinimalBlogConfig()
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e: any) => {
+  const toggleColorMode = (e: React.SyntheticEvent) => {
     e.preventDefault()
     setColorMode(isDark ? `light` : `dark`)
   }

@@ -4,7 +4,7 @@ import { jsx, Box } from "theme-ui"
 
 type TitleProps = {
   children: React.ReactNode
-  as?: string
+  as?: React.ElementType<any> | undefined
   className?: string
   text: string
 }

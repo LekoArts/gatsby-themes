@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, get } from "theme-ui"
 
 type Props = {
   isDark: boolean
-  toggle: (e: any) => void
+  toggle: (e: React.SyntheticEvent) => void
 }
 
 // Adapted from: https://codepen.io/aaroniker/pen/KGpXZo and https://github.com/narative/gatsby-theme-novela/blob/714b6209c5bd61b220370e8a7ad84c0b1407946a/%40narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header.tsx
@@ -39,12 +39,12 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
         width: `24px`,
         height: `24px`,
         borderRadius: `50%`,
-        border: (t) => (isDark ? `4px solid ${t.colors.toggleIcon}` : `none`),
+        border: (t) => (isDark ? `4px solid ${get(t, `colors.toggleIcon`)}` : `none`),
         backgroundColor: isDark ? `toggleIcon` : `transparent`,
         transform: isDark ? `scale(0.55)` : `scale(1)`,
         transition: `all 0.45s ease`,
         overflow: isDark ? `visible` : `hidden`,
-        boxShadow: (t) => (isDark ? `none` : `inset 8px -8px 0px 0px ${t.colors.toggleIcon}`),
+        boxShadow: (t) => (isDark ? `none` : `inset 8px -8px 0px 0px ${get(t, `colors.toggleIcon`)}`),
         "&:before": {
           content: `""`,
           position: `absolute`,
@@ -52,7 +52,7 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
           top: `-9px`,
           height: `24px`,
           width: `24px`,
-          border: (t) => (isDark ? `2px solid ${t.colors.toggleIcon}` : `none`),
+          border: (t) => (isDark ? `2px solid ${get(t, `colors.toggleIcon`)}` : `none`),
           borderRadius: `50%`,
           transform: isDark ? `translate(14px, -14px)` : `translate(0, 0)`,
           opacity: isDark ? 0 : 1,
@@ -68,7 +68,16 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
           top: `50%`,
           left: `50%`,
           boxShadow: (t) =>
-            `0 -23px 0 ${t.colors.toggleIcon}, 0 23px 0 ${t.colors.toggleIcon}, 23px 0 0 ${t.colors.toggleIcon}, -23px 0 0 ${t.colors.toggleIcon}, 15px 15px 0 ${t.colors.toggleIcon}, -15px 15px 0 ${t.colors.toggleIcon}, 15px -15px 0 ${t.colors.toggleIcon}, -15px -15px 0 ${t.colors.toggleIcon}`,
+            `0 -23px 0 ${get(t, `colors.toggleIcon`)}, 0 23px 0 ${get(t, `colors.toggleIcon`)}, 23px 0 0 ${get(
+              t,
+              `colors.toggleIcon`
+            )}, -23px 0 0 ${get(t, `colors.toggleIcon`)}, 15px 15px 0 ${get(
+              t,
+              `colors.toggleIcon`
+            )}, -15px 15px 0 ${get(t, `colors.toggleIcon`)}, 15px -15px 0 ${get(
+              t,
+              `colors.toggleIcon`
+            )}, -15px -15px 0 ${get(t, `colors.toggleIcon`)}`,
           transform: isDark ? `scale(1)` : `scale(0)`,
           transition: `all 0.35s ease`,
         },

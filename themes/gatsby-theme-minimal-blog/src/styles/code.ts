@@ -1,6 +1,7 @@
 import { tint } from "@theme-ui/color"
+import type { ThemeUICSSObject } from "theme-ui"
 
-const code = {
+const code: ThemeUICSSObject = {
   "[data-name='live-editor']": {
     fontSize: 1,
     "textarea, pre": {
