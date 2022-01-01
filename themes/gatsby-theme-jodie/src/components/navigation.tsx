@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, get } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import { readableColor } from "polished"
 import { replaceSlashes } from "../utils/replace-slashes"

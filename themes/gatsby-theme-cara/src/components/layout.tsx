@@ -1,4 +1,5 @@
 import * as React from "react"
+import { get } from "theme-ui"
 import { Global } from "@emotion/react"
 import SEO from "./seo"
 
@@ -7,7 +8,7 @@ type LayoutProps = { children: React.ReactNode; className?: string }
 const Layout = ({ children, className = `` }: LayoutProps) => (
   <React.Fragment>
     <Global
-      styles={(theme) => ({
+      styles={(t) => ({
         "*": {
           boxSizing: `inherit`,
           "&:before": {
@@ -32,8 +33,8 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
           display: `none`,
         },
         "::selection": {
-          backgroundColor: theme.colors.primary,
-          color: theme.colors.background,
+          backgroundColor: get(t, `colors.primary`),
+          color: get(t, `colors.background`),
         },
       })}
     />
