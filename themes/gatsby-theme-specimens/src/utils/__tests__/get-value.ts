@@ -16,4 +16,10 @@ describe(`removeLastThree`, () => {
   test(`should return px value as number`, () => {
     expect(getValue(`20px`)).toBe(20)
   })
+  test(`should return 16 for undefined`, () => {
+    expect(getValue(undefined)).toBe(16)
+  })
+  test(`should return 0 for 0 input`, () => {
+    expect(getValue(0)).toBe(0)
+  })
 })

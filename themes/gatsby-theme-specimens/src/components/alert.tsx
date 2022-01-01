@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { jsx } from "theme-ui"
+import { jsx, ThemeUICSSObject } from "theme-ui"
 import Check from "../icons/check"
 import ChevronRight from "../icons/chevron-right"
 import Announcement from "../icons/announcement"
@@ -15,7 +15,7 @@ type AlertProps = {
   type: AlertTypes
 }
 
-const commonAlertStyles = {
+const commonAlertStyles: ThemeUICSSObject = {
   p: theme.space[3],
   borderRadius: theme.radii.lg,
   borderWidth: `2px`,
@@ -39,7 +39,7 @@ const commonAlertStyles = {
   },
 }
 
-const alerts = {
+const alerts: Record<string, ThemeUICSSObject> = {
   success: {
     backgroundColor: theme.colors.green[1],
     borderColor: theme.colors.green[2],

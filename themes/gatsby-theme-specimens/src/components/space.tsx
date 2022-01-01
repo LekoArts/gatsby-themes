@@ -11,9 +11,13 @@ type SpaceProps = {
 
 const Space = ({ space = undefined }: SpaceProps) => {
   const specimensConfig = useSpecimensConfig()
-  const formattedSpace = Array.isArray(space)
-    ? space.map((entry, index) => ({ size: entry, token: index }))
-    : Object.entries(space).map((entry) => ({ token: entry[0], size: entry[1] }))
+  let formattedSpace
+  if (Array.isArray(space)) {
+    formattedSpace = space.map((entry, index) => ({ size: entry, token: index }))
+  } else {
+    // @ts-ignore
+    formattedSpace = Object.entries(space).map((entry) => ({ token: entry[0], size: entry[1] }))
+  }
 
   return (
     <Table
@@ -22,19 +26,23 @@ const Space = ({ space = undefined }: SpaceProps) => {
       titles={[`Token`, `Size`, `Preview`]}
     >
       {space ? (
-        formattedSpace.map(({ size, token }) => (
-          <div key={size}>
-            <div>{token}</div>
-            <div>{size}</div>
-            <div
-              sx={{
-                width: `${specimensConfig.rootFontSize * getValue(size)}px`,
-                height: `${specimensConfig.rootFontSize * getValue(size)}px`,
-                backgroundColor: theme.colors.primary,
-              }}
-            />
-          </div>
-        ))
+        formattedSpace.map(({ size, token }) => {
+          const calculatedValue = getValue(size as number | string)
+
+          return (
+            <div key={`${size}`}>
+              <div>{token}</div>
+              <div>{size}</div>
+              <div
+                sx={{
+                  width: `${specimensConfig.rootFontSize * calculatedValue}px`,
+                  height: `${specimensConfig.rootFontSize * calculatedValue}px`,
+                  backgroundColor: theme.colors.primary,
+                }}
+              />
+            </div>
+          )
+        })
       ) : (
         <div sx={{ gridTemplateColumns: `1fr !important` }}>No space defined</div>
       )}

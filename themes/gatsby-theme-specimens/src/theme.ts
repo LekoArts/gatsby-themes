@@ -424,6 +424,9 @@ const variants = {
     space: {},
     specimens: {},
   },
+  families: {
+    specimens: {},
+  },
   rows: {
     specimens: {},
   },

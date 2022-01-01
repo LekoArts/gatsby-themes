@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, ThemeUICSSObject } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"
 import theme from "../theme"
@@ -28,7 +28,7 @@ const Palette = ({
   prefix = ``,
   className = ``,
 }: PaletteProps) => {
-  let wrapperStyles: Record<string, unknown>
+  let wrapperStyles: ThemeUICSSObject
 
   if (mode === `list`) {
     wrapperStyles = {
@@ -60,7 +60,7 @@ const Palette = ({
   }
 
   return (
-    <div sx={{ ...wrapperStyles }} className={className}>
+    <div sx={wrapperStyles} className={className}>
       {colors.map(({ name, color }) => {
         if (!color) return false
 

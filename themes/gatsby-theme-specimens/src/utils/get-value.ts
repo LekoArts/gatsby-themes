@@ -7,7 +7,9 @@
  * @return {number} Number without last three characters
  * @example removeLastThree('6rem') => 6
  */
-const getValue = (input: string | number, rootFontSize = 16) => {
+const getValue = (input: string | number | undefined, rootFontSize = 16) => {
+  if (typeof input === `undefined`) return 16
+  if (typeof input === `number` && input === 0) return 0
   if (typeof input === `number`) {
     return input / rootFontSize
   }
