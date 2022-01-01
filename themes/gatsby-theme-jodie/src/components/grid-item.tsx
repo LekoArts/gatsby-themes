@@ -1,14 +1,14 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, get } from "theme-ui"
 import * as React from "react"
 import { Link } from "gatsby"
 
 const GridItem: React.FC<{ to: string; className?: string }> = ({ children, to, ...props }) => (
-  // @ts-ignore
   <Link
     to={to}
     sx={{
       position: `relative`,
+      // @ts-ignore
       "> div": {
         position: `absolute !important`,
         top: 0,
@@ -33,7 +33,7 @@ const GridItem: React.FC<{ to: string; className?: string }> = ({ children, to, 
         left: 0,
         right: 0,
         bottom: 0,
-        boxShadow: (t) => `inset 0 0 0 0px ${t.colors.white}`,
+        boxShadow: (t) => `inset 0 0 0 0px ${get(t, `colors.white`)}`,
         transition: `all 0.3s ease-in-out`,
       },
       "> div img": {
@@ -59,7 +59,7 @@ const GridItem: React.FC<{ to: string; className?: string }> = ({ children, to, 
       "&:focus": {
         outline: `none`,
         "> div:after": {
-          boxShadow: (t) => `inset 0 0 0 7px ${t.colors.white}`,
+          boxShadow: (t) => `inset 0 0 0 7px ${get(t, `colors.white`)}`,
           zIndex: 10,
         },
       },
@@ -69,7 +69,7 @@ const GridItem: React.FC<{ to: string; className?: string }> = ({ children, to, 
             transform: `scale(1)`,
           },
           "> div:after": {
-            boxShadow: (t) => `inset 0 0 0 7px ${t.colors.white}`,
+            boxShadow: (t) => `inset 0 0 0 7px ${get(t, `colors.white`)}`,
             zIndex: 10,
           },
         },

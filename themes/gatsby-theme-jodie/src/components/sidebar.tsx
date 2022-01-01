@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, get } from "theme-ui"
 import { Link } from "gatsby"
 import { readableColor } from "polished"
 import Logo from "../icons/logo"
@@ -17,7 +17,7 @@ const Sidebar = ({ bg }: SidebarProps) => {
     <header
       sx={{
         p: [3, 3, 4],
-        width: (t: any): any => [`100%`, `100%`, `100%`, t.sidebar.normal, t.sidebar.wide],
+        width: (t) => [`100%`, `100%`, `100%`, get(t, `sidebar.normal`), get(t, `sidebar.wide`)],
         backgroundColor: bg,
         position: [`relative`, `relative`, `relative`, `fixed`],
         height: `100%`,

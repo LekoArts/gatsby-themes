@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, get } from "theme-ui"
 import * as React from "react"
 import { Global } from "@emotion/react"
 import Wrapper from "./layout-wrapper"
@@ -13,7 +13,7 @@ type LayoutProps = { children: React.ReactNode; color?: string }
 const Layout = ({ children, color = `white` }: LayoutProps) => (
   <React.Fragment>
     <Global
-      styles={(theme) => ({
+      styles={(t) => ({
         "*,*:after,*:before": {
           boxSizing: `border-box`,
         },
@@ -32,8 +32,8 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
           display: `none`,
         },
         "::selection": {
-          background: theme.colors.primary,
-          color: theme.colors.white,
+          background: get(t, `colors.primary`),
+          color: get(t, `colors.white`),
         },
         "ul > li > code, ol > li > code, p > code": {
           color: `#393A34`,

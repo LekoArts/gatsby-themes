@@ -19,14 +19,9 @@ type CodeProps = {
 function getParams(className = ``) {
   const [lang = ``, params = ``] = className.split(`:`)
 
-  return [
-    // @ts-ignore
-    lang.split(`language-`).pop().split(`{`).shift(),
-  ].concat(
-    // @ts-ignore
+  return [lang.split(`language-`).pop().split(`{`).shift()].concat(
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
-      // @ts-ignore
       merged[key] = value
       return merged
     }, {})
