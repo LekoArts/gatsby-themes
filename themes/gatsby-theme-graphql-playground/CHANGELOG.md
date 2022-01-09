@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.2
+
+### Patch Changes
+
+- [#792](https://github.com/LekoArts/gatsby-themes/pull/792) [`75d43d0`](https://github.com/LekoArts/gatsby-themes/commit/75d43d0b01772e3e80144c245ba0e93c99ebd434) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: TypeScript updates
+
 ## 3.0.1
 
 ### Patch Changes
