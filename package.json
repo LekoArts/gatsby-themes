@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "tsc": "tsc",
-    "type-check": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
     "tsc:compile": "tsc --project cypress/tsconfig.json",
     "tsc:compile:watch": "tsc --watch --project cypress/tsconfig.json",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js",
@@ -46,6 +47,7 @@
     "@types/react-helmet": "^6.1.5",
     "@types/styled-system": "^5.1.14",
     "@types/styled-system__css": "^5.0.16",
+    "@types/three": "^0.135.0",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "concurrently": "^6.5.1",

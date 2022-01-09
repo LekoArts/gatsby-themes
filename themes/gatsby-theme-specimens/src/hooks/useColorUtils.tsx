@@ -12,7 +12,6 @@ const useColorUtils = (color: string) => {
   let RGB
   let CMYK
 
-  // @ts-ignore
   if (chroma.valid(color)) {
     hex = chroma(color).hex()
     RGB = `${chroma(color).rgb()[0]}, ${chroma(color).rgb()[1]}, ${chroma(color).rgb()[2]}`

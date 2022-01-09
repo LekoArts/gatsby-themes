@@ -62,6 +62,7 @@ const ProjectItem = ({ node, style, eager }: ProjectItemProps) => (
     >
       <div
         sx={{
+          // @ts-ignore
           "> div": {
             height: `100%`,
             left: 0,

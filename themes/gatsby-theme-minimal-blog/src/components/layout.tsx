@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from "react"
 import { Global } from "@emotion/react"
-import { Box, Container, jsx } from "theme-ui"
+import { Box, Container, jsx, get } from "theme-ui"
 import Seo from "./seo"
 import Header from "./header"
 import Footer from "./footer"
@@ -13,7 +13,7 @@ type LayoutProps = { children: React.ReactNode; className?: string }
 const Layout = ({ children, className = `` }: LayoutProps) => (
   <React.Fragment>
     <Global
-      styles={(theme) => ({
+      styles={(t) => ({
         "*": {
           boxSizing: `inherit`,
         },
@@ -31,8 +31,8 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
           display: `none`,
         },
         "::selection": {
-          backgroundColor: theme.colors.text,
-          color: theme.colors.background,
+          backgroundColor: get(t, `colors.text`),
+          color: get(t, `colors.background`),
         },
         a: {
           transition: `all 0.3s ease-in-out`,

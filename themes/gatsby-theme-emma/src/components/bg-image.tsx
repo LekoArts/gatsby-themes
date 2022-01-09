@@ -21,6 +21,7 @@ const BGImage = ({ children, color = ``, slim }: BGImageProps) => {
         height: slim ? [`400px`, `500px`] : [`500px`, `600px`, `700px`, `40vw`],
         maxHeight: `1200px`,
         zIndex: 1,
+        // @ts-ignore
         ".gatsby-image-wrapper": {
           position: `static !important`,
           filter: `grayscale(100%)`,

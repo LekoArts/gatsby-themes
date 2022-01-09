@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Flex, jsx, useColorMode, Link as TLink } from "theme-ui"
+import { Flex, jsx, useColorMode } from "theme-ui"
 import { Link } from "gatsby"
 import Navigation from "./navigation"
 import SocialLinks from "./social-links"
@@ -17,7 +17,7 @@ type HeaderProps = {
 const Header = ({ meta, nav }: HeaderProps) => {
   const [colorMode, setColorMode] = useColorMode()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e: any) => {
+  const toggleColorMode = (e: React.SyntheticEvent) => {
     setColorMode(isDark ? `light` : `dark`)
   }
 
@@ -34,14 +34,13 @@ const Header = ({ meta, nav }: HeaderProps) => {
           justifyContent: navEmpty ? `flex-start` : [`flex-end`, `center`],
         }}
       >
-        <TLink
+        <Link
           aria-label={`${meta.siteTitle}, Back to homepage`}
-          as={Link}
-          sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
+          sx={(t) => ({ ...t.styles?.a, color: `text`, ":hover": { color: `primary`, textDecoration: `none` } })}
           to="/"
         >
           {meta.siteTitle}
-        </TLink>
+        </Link>
       </Flex>
       <div
         sx={{

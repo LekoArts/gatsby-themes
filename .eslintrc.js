@@ -111,6 +111,7 @@ module.exports = {
         semi: false,
         singleQuote: false,
         printWidth: 120,
+        endOfLine: `auto`,
       },
     ],
     "jsx-a11y/href-no-hash": `off`,

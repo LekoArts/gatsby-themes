@@ -73,6 +73,7 @@ const Code = ({
 }: CodeProps) => {
   const { showLineNumbers, showCopyButton } = useMinimalBlogConfig()
 
+  // @ts-ignore
   const [language, { title = `` }] = getParams(blockClassName)
   const shouldHighlightLine = calculateLinesToHighlight(metastring)
 
@@ -86,6 +87,7 @@ const Code = ({
     )
   }
   return (
+    // @ts-ignore
     <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <React.Fragment>

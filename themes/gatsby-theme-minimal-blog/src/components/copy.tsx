@@ -41,7 +41,7 @@ const Copy = ({ content, duration = 5000, fileName = ``, trim = false }: CopyPro
       }}
     >
       {copied ? `Copied` : `Copy`}
-      <span sx={{ ...visuallyHidden }} aria-roledescription="status">
+      <span sx={visuallyHidden} aria-roledescription="status">
         {label}
       </span>
     </button>

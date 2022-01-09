@@ -7,6 +7,15 @@ import ColorsPalette from "./colors-palettes"
 
 const Colors = () => {
   const { rawColors: colors } = useTheme()
+
+  if (!colors) {
+    return (
+      <React.Fragment>
+        <section id="styleguide-colors">No colors are defined or could be found.</section>
+      </React.Fragment>
+    )
+  }
+
   const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]))
   const filteredColors = Object.keys(colors)
     .filter((key) => filteredKeys.includes(key))

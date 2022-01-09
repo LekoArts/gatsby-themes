@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Link as TLink, Flex } from "theme-ui"
+import { jsx, Flex } from "theme-ui"
 import { Link } from "gatsby"
 
 type NavigationProps = {
@@ -22,14 +22,13 @@ const Navigation = ({ nav }: NavigationProps) => (
     aria-label="Primary Navigation"
   >
     {nav.map((n) => (
-      <TLink
-        as={Link}
-        sx={{ color: `text`, ":hover": { color: `primary`, textDecoration: `none` } }}
+      <Link
+        sx={(t) => ({ ...t.styles?.a, color: `text`, ":hover": { color: `primary`, textDecoration: `none` } })}
         key={n.slug}
         to={n.slug}
       >
         {n.title}
-      </TLink>
+      </Link>
     ))}
   </Flex>
 )

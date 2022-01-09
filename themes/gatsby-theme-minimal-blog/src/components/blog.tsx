@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Heading, Link as TLink, Flex } from "theme-ui"
+import { jsx, Heading, Flex } from "theme-ui"
 import { Link } from "gatsby"
 import Layout from "./layout"
 import Listing from "./listing"
@@ -32,13 +32,12 @@ const Blog = ({ posts }: PostsProps) => {
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
           Blog
         </Heading>
-        <TLink
-          as={Link}
-          sx={{ variant: `links.secondary`, marginY: 2 }}
+        <Link
+          sx={(t) => ({ ...t.styles?.a, variant: `links.secondary`, marginY: 2 })}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
           View all tags
-        </TLink>
+        </Link>
       </Flex>
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>

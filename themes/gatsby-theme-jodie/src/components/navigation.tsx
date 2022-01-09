@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, Link as TLink } from "theme-ui"
-import * as React from "react"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import { readableColor } from "polished"
 import { replaceSlashes } from "../utils/replace-slashes"
@@ -36,9 +35,9 @@ const Navigation = ({ bg }: { bg: string }) => {
       <ul>
         {navigation.map((navItem) => (
           <li key={navItem.slug}>
-            <TLink as={Link} to={replaceSlashes(`/${basePath}/${navItem.slug}`)}>
+            <Link sx={(t) => ({ ...t.styles?.a })} to={replaceSlashes(`/${basePath}/${navItem.slug}`)}>
               {navItem.name}
-            </TLink>
+            </Link>
           </li>
         ))}
       </ul>

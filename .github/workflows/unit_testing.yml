@@ -22,3 +22,5 @@ jobs:
         run: yarn lint
       - name: Run Jest
         run: yarn test:ci
+      - name: Run TypeScript
+        run: yarn typecheck:ci

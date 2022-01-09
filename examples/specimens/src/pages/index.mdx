@@ -131,6 +131,33 @@ const radii = {
 render(<BorderRadius radii={radii} />);
 ```
 
+### Color Families
+
+Variant: `families.specimens`
+
+Available props:
+
+- colors (Record<string, string[]>)
+
+colors has to be in the following format:
+
+```
+colors: {
+  [key: string]: string[]
+}
+```
+
+---
+
+```jsx live noInline
+const colors = {
+  blue: ["#60a5fa", "#2563eb"],
+  teal: ["#2dd4bf", "#0d9488"],
+};
+
+render(<ColorFamilies colors={colors} />);
+```
+
 ### Color Row
 
 Variant: `rows.specimens`

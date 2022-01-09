@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Flex, Box, jsx, Themed, Container, useColorMode } from "theme-ui"
+import { Flex, Box, jsx, Themed, Container, useColorMode, ThemeUICSSObject } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage as Img, IGatsbyImageData } from "gatsby-plugin-image"
 import { Circle, Donut } from "./shapes"
@@ -42,7 +42,7 @@ type Props = {
   }
 }
 
-const cardStyle = {
+const cardStyle: ThemeUICSSObject = {
   position: `relative`,
   transition: `all 0.3s ease-in-out`,
   display: `block`,
@@ -71,8 +71,8 @@ const Listing = () => {
 
   const [mode] = useColorMode()
 
-  let buttonStyles = {}
-  let overlayStyles = {}
+  let buttonStyles: ThemeUICSSObject = {}
+  let overlayStyles: ThemeUICSSObject = {}
 
   if (mode === `strangerThings`) {
     buttonStyles = {

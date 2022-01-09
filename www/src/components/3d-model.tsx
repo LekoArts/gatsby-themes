@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from "theme-ui"
+import { jsx, useColorMode, get, ThemeUICSSObject } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
 import { OrbitControls } from "@react-three/drei/core/OrbitControls"
@@ -24,7 +24,7 @@ const RectAreaLightDecl = ({
   />
 )
 
-const sharedDiskStyles = {
+const sharedDiskStyles: ThemeUICSSObject = {
   position: `absolute`,
   left: `50%`,
   top: `50%`,
@@ -39,7 +39,7 @@ const Disks = () => (
         ...sharedDiskStyles,
         width: `150px`,
         height: `150px`,
-        background: (t: { colors: { [key: string]: any } }) => t.colors.model.four,
+        background: (t) => get(t, `colors.model.four`),
         zIndex: 4,
       }}
     />
@@ -48,7 +48,7 @@ const Disks = () => (
         ...sharedDiskStyles,
         width: `200px`,
         height: `200px`,
-        background: (t: { colors: { [key: string]: any } }) => t.colors.model.three,
+        background: (t) => get(t, `colors.model.three`),
         zIndex: 3,
       }}
     />
@@ -57,7 +57,7 @@ const Disks = () => (
         ...sharedDiskStyles,
         width: `450px`,
         height: `450px`,
-        background: (t: { colors: { [key: string]: any } }) => t.colors.model.two,
+        background: (t) => get(t, `colors.model.two`),
         zIndex: 2,
       }}
     />
@@ -66,7 +66,7 @@ const Disks = () => (
         ...sharedDiskStyles,
         width: `500px`,
         height: `500px`,
-        background: (t: { colors: { [key: string]: any } }) => t.colors.model.one,
+        background: (t) => get(t, `colors.model.one`),
         zIndex: 1,
       }}
     />
@@ -95,8 +95,7 @@ const ThreeDModel = () => {
       <Canvas
         orthographic
         camera={{ position: [0, 0, 150], zoom: 3.5 }}
-        shadowMap
-        colorManagement
+        shadows
         title="Spin the Model"
         aria-label="Schematic 3D model of a Gatsby theme"
         sx={{ background: `transparent`, zIndex: 100 }}

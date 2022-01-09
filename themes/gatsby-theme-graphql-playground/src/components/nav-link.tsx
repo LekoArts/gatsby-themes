@@ -1,10 +1,10 @@
 /* eslint jsx-a11y/anchor-has-content: 0 */
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, ThemeUICSSObject } from "theme-ui"
 import { Link } from "gatsby"
 import isAbsoluteURL from "is-absolute-url"
 
-const styles = {
+const styles: ThemeUICSSObject = {
   color: `inherit`,
   textDecoration: `none`,
   fontWeight: `normal`,

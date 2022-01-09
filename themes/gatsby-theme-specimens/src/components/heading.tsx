@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { jsx, Theme } from "theme-ui"
+import { jsx, Theme, ThemeUICSSObject } from "theme-ui"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
 import getValue from "../utils/get-value"
@@ -12,7 +12,7 @@ type HeadingProps = {
   previewText?: string
 }
 
-const infoStyles = {
+const infoStyles: ThemeUICSSObject = {
   display: `flex`,
   flexDirection: `column`,
   alignItems: `flex-start`,
@@ -31,9 +31,13 @@ const Heading = ({ styles = undefined, config, previewText = `Heading` }: Headin
         Object.entries(styles).map(([key, value]) => {
           const type = {
             level: key,
+            // @ts-ignore
             fontFamily: value.fontFamily,
+            // @ts-ignore
             size: value.fontSize,
+            // @ts-ignore
             weight: value.fontWeight,
+            // @ts-ignore
             lineHeight: value.lineHeight,
           }
 
@@ -58,7 +62,7 @@ const Heading = ({ styles = undefined, config, previewText = `Heading` }: Headin
                 data-name="heading-level-preview"
                 sx={{
                   fontFamily: type.fontFamily,
-                  fontSize: `${specimensConfig.rootFontSize * getValue(config.fontSizes[type.size])}px`,
+                  fontSize: `${specimensConfig.rootFontSize * getValue(config?.fontSizes?.[type.size])}px`,
                   fontWeight: type.weight,
                   lineHeight: type.lineHeight,
                   mb: themeConfig.space[4],
@@ -93,15 +97,15 @@ const Heading = ({ styles = undefined, config, previewText = `Heading` }: Headin
                 </div>
                 <div sx={{ ...infoStyles, minWidth: `80px` }}>
                   <Badge>Size</Badge>
-                  {config.fontSizes[type.size]}
+                  {config?.fontSizes?.[type.size]}
                 </div>
                 <div sx={{ ...infoStyles, minWidth: `80px` }}>
                   <Badge>Line Height</Badge>
-                  {config.lineHeights[type.lineHeight]}
+                  {config?.lineHeights?.[type.lineHeight]}
                 </div>
                 <div sx={{ ...infoStyles }}>
                   <Badge>Weight</Badge>
-                  {config.fontWeights[type.weight]}
+                  {config?.fontWeights?.[type.weight]}
                 </div>
               </div>
               {specimensConfig.codeExample && (

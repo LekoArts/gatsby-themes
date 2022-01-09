@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx, useColorMode } from "theme-ui"
+import { jsx, ThemeUICSSObject, useColorMode } from "theme-ui"
 import Curved from "../icons/curved"
 import Listing from "./listing"
 
-const bigHeadingStyle = {
+const bigHeadingStyle: ThemeUICSSObject = {
   fontSize: [`72px`, `96px`, `144px`],
   fontFamily: `heading`,
   fontWeight: `heading`,

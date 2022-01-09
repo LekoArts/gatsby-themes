@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, ThemeUICSSObject } from "theme-ui"
 import useColorUtils from "../hooks/useColorUtils"
 import useSpecimensConfig from "../hooks/useSpecimensConfig"
 import Badge from "./badge"
 import theme from "../theme"
 
-const swatchContentStyles = {
+const swatchContentStyles: ThemeUICSSObject = {
   flexBasis: `50%`,
   display: `flex`,
   flexDirection: `column`,

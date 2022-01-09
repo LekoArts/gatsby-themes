@@ -1,4 +1,6 @@
-export const visuallyHidden = {
+import type { ThemeUICSSObject } from "theme-ui"
+
+export const visuallyHidden: ThemeUICSSObject = {
   // include `px` so we can use it with `sx`
   border: 0,
   clip: `rect(0, 0, 0, 0)`,

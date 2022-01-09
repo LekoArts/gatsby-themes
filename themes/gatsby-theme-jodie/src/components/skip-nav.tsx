@@ -1,9 +1,9 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, ThemeUICSSObject } from "theme-ui"
 import * as React from "react"
 import { visuallyHidden } from "../styles/utils"
 
-const triggerCss = {
+const triggerCss: ThemeUICSSObject = {
   ...visuallyHidden,
   position: `fixed`,
   zIndex: 9999999,
@@ -49,7 +49,6 @@ export function SkipNavTrigger({ children = `Skip to content`, targetId = SKIP_T
   }
 
   return (
-    // @ts-ignore
     <a href={`#${targetId}`} sx={triggerCss}>
       {children}
     </a>
