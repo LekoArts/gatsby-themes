@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.1.3
+
+### Patch Changes
+
+- [#796](https://github.com/LekoArts/gatsby-themes/pull/796) [`fd16886`](https://github.com/LekoArts/gatsby-themes/commit/fd16886bc07356155da773586e8ad8c84de1779a) Thanks [@simpixelated](https://github.com/simpixelated)! - Add main landmark to layout component
+
 ## 4.1.2
 
 ### Patch Changes
