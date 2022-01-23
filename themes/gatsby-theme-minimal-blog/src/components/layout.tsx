@@ -44,7 +44,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
     <SkipNavLink>Skip to content</SkipNavLink>
     <Container>
       <Header />
-      <Box id="skip-nav" sx={{ ...CodeStyles }} className={className}>
+      <Box id="skip-nav" as="main" variant="layout.main" sx={{ ...CodeStyles }} className={className}>
         {children}
       </Box>
       <Footer />
