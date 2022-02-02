@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.3
+
+### Patch Changes
+
+- [#808](https://github.com/LekoArts/gatsby-themes/pull/808) [`49f7440`](https://github.com/LekoArts/gatsby-themes/commit/49f7440ea520d65bfee45dbc193078e6ed60a2e2) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-graphql-playground
+
 ## 3.0.2
 
 ### Patch Changes
