@@ -4291,13 +4291,13 @@ babel-plugin-polyfill-regenerator@^0.2.2:
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.2.2"
 
-babel-plugin-remove-graphql-queries@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.4.0.tgz#6f301477a4b617253b877455fb54a9eb9c58f026"
-  integrity sha512-wxDR1WrpLbF0qyXvNBsGKYLJk+Z7nG8+UM+bEeyxi7YepwVjgfm4CFQgbSytQbk0X+qGRCqpmq4VZVIxVTyGYQ==
+babel-plugin-remove-graphql-queries@^4.4.0, babel-plugin-remove-graphql-queries@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-4.6.0.tgz#cdda606988fd1d0e0fc2377ea8e4103d461b45e2"
+  integrity sha512-QMbjJhHOkVHBfFDfAXQp1MFSzLWOJdPMe7Dk3+AF8L+dlLcf2Z7zbIrlRoRPEROyoW4CCPzLDi0Vam5leR/+gw==
   dependencies:
     "@babel/runtime" "^7.15.4"
-    gatsby-core-utils "^3.4.0"
+    gatsby-core-utils "^3.6.0"
 
 babel-plugin-transform-react-remove-prop-types@^0.4.24:
   version "0.4.24"
@@ -7808,22 +7808,22 @@ gatsby-plugin-gatsby-cloud@^4.0.0:
     lodash "^4.17.21"
     webpack-assets-manifest "^5.0.6"
 
-gatsby-plugin-image@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.4.0.tgz#fd960393043e856eb70d998dc34ad96a738162a8"
-  integrity sha512-PKhbefaamdahm1ysKO1d54vnzmIsjR+/qtyFnZumGu8E7O9lN5is0RlXgpNCvsckL+XzcqyMljytt/bYf8L5WA==
+gatsby-plugin-image@^2.4.0, gatsby-plugin-image@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.6.0.tgz#5342507be7fdd0109fc815c0f2906b0407a55e14"
+  integrity sha512-rWbIdkcopB02YIhR3UidoYhe2SDOFTpxzJSABq5TcLZ38FD8kth8QavvOO0h1ap9tWjaUNIjCvKRu2M3NvuC1g==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/parser" "^7.15.5"
     "@babel/runtime" "^7.15.4"
     "@babel/traverse" "^7.15.4"
     babel-jsx-utils "^1.1.0"
-    babel-plugin-remove-graphql-queries "^4.4.0"
+    babel-plugin-remove-graphql-queries "^4.6.0"
     camelcase "^5.3.1"
     chokidar "^3.5.2"
     common-tags "^1.8.2"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.4.0"
+    gatsby-core-utils "^3.6.0"
     objectFitPolyfill "^2.3.5"
     prop-types "^15.7.2"
 
