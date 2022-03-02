@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#840](https://github.com/LekoArts/gatsby-themes/pull/840) [`a0f89bf`](https://github.com/LekoArts/gatsby-themes/commit/a0f89bf52223e0e3a2aad061a7499f1e148d5e70) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency chroma-js to ^2.4.2 for gatsby-theme-specimens
+
 ## 4.0.1
 
 ### Patch Changes
