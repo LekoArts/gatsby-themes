@@ -47,6 +47,10 @@ const exampleStyles: Theme["styles"] = {
 }
 
 describe(`filter styles`, () => {
+  it(`should return undefined for no input styles`, () => {
+    // @ts-ignore - Want to test no input styles
+    expect(filterStyles({})).toStrictEqual(undefined)
+  })
   it(`should only return filtered keys with nested children`, () => {
     expect(filterStyles({ input: exampleStyles, allowed: [`h1`, `h2`, `a`] })).toStrictEqual({
       h1: {
@@ -75,6 +79,11 @@ describe(`filter styles`, () => {
   })
   it(`should return key-value pairs`, () => {
     expect(filterStyles({ input: exampleStyles, allowed: [`single`] })).toStrictEqual({
+      single: { key: `harry-potter` },
+    })
+  })
+  it(`should ignore allowed keys that are not in the input`, () => {
+    expect(filterStyles({ input: exampleStyles, allowed: [`single`, `other`] })).toStrictEqual({
       single: { key: `harry-potter` },
     })
   })
