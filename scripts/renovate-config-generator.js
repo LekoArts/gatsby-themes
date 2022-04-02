@@ -97,6 +97,7 @@ const defaultPackageRules = [
     matchUpdateTypes: [`patch`, `minor`],
     matchDepTypes: [`dependencies`, `devDependencies`],
     automerge: true,
+    additionalBranchPrefix: `www-`,
   },
   {
     groupName: `www`,
@@ -105,6 +106,7 @@ const defaultPackageRules = [
     matchPaths: [`www/package.json`],
     matchUpdateTypes: [`major`],
     matchDepTypes: [`dependencies`, `devDependencies`],
+    additionalBranchPrefix: `www-`,
   },
   {
     matchDepTypes: [`engines`, `@types/node`],
