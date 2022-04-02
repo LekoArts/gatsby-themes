@@ -2,8 +2,7 @@
 import { jsx, useColorMode, get, ThemeUICSSObject } from "theme-ui"
 import { Suspense } from "react"
 import { Canvas } from "react-three-fiber"
-import { OrbitControls } from "@react-three/drei/core/OrbitControls"
-import { Shadow } from "@react-three/drei/core/Shadow"
+import { OrbitControls, Shadow } from "@react-three/drei"
 import Model from "../webgl/model"
 
 const RectAreaLightDecl = ({
@@ -113,7 +112,15 @@ const ThreeDModel = () => {
         <Suspense fallback={null}>
           <Model />
         </Suspense>
-        <Shadow color="#000" scale={[100, 100, 1]} rotation={[-Math.PI / 2, 0, 0]} opacity={0.5} position={[0, 0, 0]} />
+        {/* @ts-ignore - Some weird type thing*/}
+        <Shadow
+          color="#000"
+          fog={false}
+          scale={[100, 100, 1]}
+          rotation={[-Math.PI / 2, 0, 0]}
+          opacity={0.75}
+          position={[0, 0, 0]}
+        />
         <OrbitControls
           autoRotate
           enablePan={false}

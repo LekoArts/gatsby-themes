@@ -69,7 +69,12 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
