@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
-import useBuildTime from "../hooks/use-build-time"
 
 type SEOProps = {
   description?: string
@@ -20,23 +19,10 @@ type SEOProps = {
   pathname?: string
   image?: string
   title?: string
-  thought?: boolean
-  datePublished?: string
-  info?: string
 }
 
-const SEO = ({
-  description = ``,
-  meta = [],
-  pathname = ``,
-  image = ``,
-  title = ``,
-  thought = false,
-  datePublished = ``,
-  info = ``,
-}: SEOProps) => {
+const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `` }: SEOProps) => {
   const site = useSiteMetadata()
-  const buildTime = useBuildTime()
 
   const {
     title: defaultTitle,
@@ -69,7 +55,6 @@ const SEO = ({
     creator: {
       "@id": `${siteUrl}/#creator`,
     },
-    dateModified: buildTime,
     datePublished: `2019-07-17T23:33:12-05:00`,
     description: defaultDescription,
     headline,
@@ -125,67 +110,6 @@ const SEO = ({
     ],
   })
 
-  const schemaNewsletter = {
-    "@context": `http://schema.org`,
-    "@type": `Article`,
-    articleSection: `Newsletter`,
-    author: {
-      "@id": `${siteUrl}/#identity`,
-    },
-    copyrightHolder: {
-      "@id": `${siteUrl}/#identity`,
-    },
-    copyrightYear: `2019`,
-    creator: {
-      "@id": `${siteUrl}/#creator`,
-    },
-    dateModified: buildTime,
-    datePublished,
-    description: seo.description,
-    genre: `Technology`,
-    headline: info,
-    image: {
-      "@type": `ImageObject`,
-      url: seo.image,
-    },
-    inLanguage: `en`,
-    mainEntityOfPage: seo.url,
-    name: seo.title,
-    publisher: {
-      "@id": `${siteUrl}/#creator`,
-    },
-    speakable: {
-      "@type": `SpeakableSpecification`,
-      cssSelector: [`.thought-speakable`],
-    },
-    url: seo.url,
-  }
-
-  const breadcrumbs = {
-    "@context": `http://schema.org`,
-    "@type": `BreadcrumbList`,
-    description: `Breadcrumbs list`,
-    itemListElement: [
-      {
-        "@type": `ListItem`,
-        item: {
-          "@id": siteUrl,
-          name: `Homepage`,
-        },
-        position: 1,
-      },
-      {
-        "@type": `ListItem`,
-        item: {
-          "@id": seo.url,
-          name: seo.title,
-        },
-        position: 2,
-      },
-    ],
-    name: `Breadcrumbs`,
-  }
-
   return (
     <Helmet meta={meta}>
       <html lang={language} />
@@ -211,19 +135,12 @@ const SEO = ({
       <meta name="twitter:data2" value="https://www.lekoarts.de" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a67d8" />
       <link rel="preload" href="/fonts/Benguiat-Bold.woff2" as="font" type="font/woff2" crossOrigin="true" />
       <meta name="msapplication-TileColor" content="#f7fafc" />
-      {thought && <meta name="article:published_time" content={datePublished} />}
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`identity`))}</script>
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`creator`))}</script>
-      {thought ? (
-        <script type="application/ld+json">{JSON.stringify(schemaNewsletter)}</script>
-      ) : (
-        <script type="application/ld+json">{JSON.stringify(schemaHomepage)}</script>
-      )}
-      {thought && <script type="application/ld+json">{JSON.stringify(breadcrumbs)}</script>}
+      <script type="application/ld+json">{JSON.stringify(schemaHomepage)}</script>
     </Helmet>
   )
 }

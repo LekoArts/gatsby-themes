@@ -1,11 +1,12 @@
-require(`dotenv`).config()
+import type { GatsbyConfig } from "gatsby"
+import path from "path"
+import "dotenv/config"
 
-const thoughtsFeed = require(`./src/utils/feed`)
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
-const googleAnalyticsTrackingId = process.env.GOOGLE_ANALYTICS_ID
+const googleTagId = process.env.GOOGLE_PROPERTY_ID
 const githubToken = process.env.GITHUB_TOKEN
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Gatsby Themes by LekoArts`,
     titleAlt: `Free & Open Source Gatsby Themes by LekoArts`,
@@ -21,14 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/data`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `thoughts`,
-        path: `${__dirname}/thoughts`,
+        path: path.resolve(`data`),
       },
     },
     {
@@ -36,8 +30,6 @@ module.exports = {
       options: {
         enableListener: true,
         preconnect: [`https://fonts.gstatic.com`],
-        interval: 300,
-        timeout: 30000,
         web: [
           {
             name: `IBM Plex Sans`,
@@ -62,18 +54,13 @@ module.exports = {
         `,
       },
     },
-    googleAnalyticsTrackingId && {
-      resolve: `gatsby-plugin-google-analytics`,
+    googleTagId && {
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        lessBabel: true,
-        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
-        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-smartypants`],
+        trackingIds: [process.env.GOOGLE_PROPERTY_ID],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
@@ -84,15 +71,16 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`,
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: thoughtsFeed,
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -126,3 +114,5 @@ module.exports = {
     },
   ].filter(Boolean),
 }
+
+export default config

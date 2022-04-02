@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { PageProps, Link } from "gatsby"
-import { jsx, Themed, Container } from "theme-ui"
+import { jsx, Themed, Container, get } from "theme-ui"
 import Layout from "../components/layout"
 
 const Index: React.FC<PageProps> = () => (
@@ -10,9 +10,9 @@ const Index: React.FC<PageProps> = () => (
       <Themed.p>
         Page not found <br />
         Go back to{` `}
-        <Themed.a as={Link} to="/">
+        <Link sx={(t) => get(t, `styles.a`)} to="/">
           Home
-        </Themed.a>
+        </Link>
       </Themed.p>
     </Container>
   </Layout>
