@@ -10,7 +10,7 @@
     "package.json",
     "examples/**",
     "themes/**",
-    "www"
+    "www/package.json"
   ],
   "dependencyDashboard": true,
   "labels": [
@@ -71,7 +71,7 @@
       "commitMessageTopic": "www",
       "groupSlug": "www-minor",
       "matchPaths": [
-        "www"
+        "www/package.json"
       ],
       "matchUpdateTypes": [
         "patch",
@@ -88,7 +88,7 @@
       "commitMessageTopic": "www",
       "groupSlug": "www-major",
       "matchPaths": [
-        "www"
+        "www/package.json"
       ],
       "matchUpdateTypes": [
         "major"

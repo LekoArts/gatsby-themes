@@ -1,13 +1,14 @@
+import { describe, it, expect, vi } from "vitest"
 import useColorUtils from "../useColorUtils"
 
-jest.mock(`../useSpecimensConfig`, () =>
-  jest.fn(() => ({
+vi.mock(`../useSpecimensConfig`, () => ({
+  default: vi.fn(() => ({
     contrastGuidelines: `AAA`,
     CMYK: true,
     codeExample: true,
     rootFontSize: 16,
-  }))
-)
+  })),
+}))
 
 describe(`useColorUtils`, () => {
   it(`should return fallback values for non-valid colors`, () => {

@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest"
 import type { IGatsbyImageData } from "gatsby-plugin-image"
 import modifyGrid, { IGridItem } from "../modify-grid"
 import { onlyPages, onlyProjects } from "../resolver-templates"
@@ -42,10 +43,10 @@ const data: IGridItem[] = [
 ]
 
 describe(`modifyGrid`, () => {
-  test(`should return original in default configuration`, () => {
+  it(`should return original in default configuration`, () => {
     expect(modifyGrid(data)).toStrictEqual(data)
   })
-  test(`should accept custom resolver`, () => {
+  it(`should accept custom resolver`, () => {
     expect(modifyGrid(data, onlyPages)).toStrictEqual([
       {
         slug: `/page-01`,

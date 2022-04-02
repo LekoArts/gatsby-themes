@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest"
 import type { IGatsbyImageData } from "gatsby-plugin-image"
 import { shuffle, filterBySlug } from "../resolver-templates"
 import { IGridItem } from "../modify-grid"
@@ -72,17 +73,17 @@ const data: IGridItem[] = [
 ]
 
 describe(`resolver-templates`, () => {
-  test(`shuffle should reorder array`, () => {
+  it(`shuffle should reorder array`, () => {
     const shuffled = shuffle(data)
     expect(shuffled).not.toStrictEqual(data)
   })
-  test(`shuffle should accept a custom seed`, () => {
+  it(`shuffle should accept a custom seed`, () => {
     const shuffledDefault = shuffle(data)
     const shuffledCustom = shuffle(data, 3)
     expect(shuffledCustom).not.toStrictEqual(data)
     expect(shuffledDefault).not.toStrictEqual(shuffledCustom)
   })
-  test(`filterBySlug works`, () => {
+  it(`filterBySlug works`, () => {
     expect(filterBySlug(data, [`/page-01`])).toStrictEqual([
       {
         slug: `/page-01`,
