@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest"
 import { Theme } from "theme-ui"
 import normalizeThemeUIColors from "../normalize-theme-ui-colors"
 
@@ -15,19 +16,19 @@ const exampleTheme: Theme["colors"] = {
 }
 
 describe(`Normalize ThemeUI`, () => {
-  test(`should transform with default options (omitting values and ordering arrays to bottom)`, () => {
+  it(`should transform with default options (omitting values and ordering arrays to bottom)`, () => {
     expect(normalizeThemeUIColors({ colors: exampleTheme })).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "color": "#000",
           "name": "black",
         },
-        Object {
+        {
           "color": "#fff",
           "name": "white",
         },
-        Object {
-          "color": Array [
+        {
+          "color": [
             null,
             "#ebf4ff",
             "#c3dafe",
@@ -44,23 +45,23 @@ describe(`Normalize ThemeUI`, () => {
       ]
     `)
   })
-  test(`should transform without omitting fields`, () => {
+  it(`should transform without omitting fields`, () => {
     expect(normalizeThemeUIColors({ colors: exampleTheme, omit: [] })).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "color": "transparent",
           "name": "transparent",
         },
-        Object {
+        {
           "color": "#000",
           "name": "black",
         },
-        Object {
+        {
           "color": "#fff",
           "name": "white",
         },
-        Object {
-          "color": Array [
+        {
+          "color": [
             null,
             "#ebf4ff",
             "#c3dafe",
@@ -74,9 +75,9 @@ describe(`Normalize ThemeUI`, () => {
           ],
           "name": "indigo",
         },
-        Object {
-          "color": Object {
-            "dark": Object {
+        {
+          "color": {
+            "dark": {
               "black": "#fff",
             },
           },

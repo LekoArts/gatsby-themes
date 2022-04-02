@@ -1,18 +1,19 @@
+import { describe, it, expect, vi } from "vitest"
 import RGBToCMYK from "../rgb-to-cmyk"
 
 describe(`rgb-to-cymk`, () => {
-  test(`should convert white correctly`, () => {
+  it(`should convert white correctly`, () => {
     expect(RGBToCMYK(255, 255, 255)).toStrictEqual({ C: 0, M: 0, Y: 0, K: 0 })
   })
-  test(`should convert black correctly`, () => {
+  it(`should convert black correctly`, () => {
     expect(RGBToCMYK(0, 0, 0)).toStrictEqual({ C: 0, M: 0, Y: 0, K: 100 })
   })
-  test(`should convert RGB color (84,142,204) correctly`, () => {
+  it(`should convert RGB color (84,142,204) correctly`, () => {
     // Used https://www.rapidtables.com/convert/color/rgb-to-cmyk.html to convert
     expect(RGBToCMYK(84, 142, 204)).toStrictEqual({ C: 59, M: 30, Y: 0, K: 20 })
   })
-  test(`should warn for invalid RGB color (non-numeric value)`, () => {
-    const warn = jest.spyOn(global.console, `warn`).mockImplementation(() => {})
+  it(`should warn for invalid RGB color (non-numeric value)`, () => {
+    const warn = vi.spyOn(global.console, `warn`).mockImplementation(() => {})
     // @ts-ignore
     RGBToCMYK(`84`, `test`, 204)
     // @ts-ignore
@@ -21,8 +22,8 @@ describe(`rgb-to-cymk`, () => {
 
     warn.mockRestore()
   })
-  test(`should warn for invalid RGB color (value outside of 0 & 255)`, () => {
-    const warn = jest.spyOn(global.console, `warn`).mockImplementation(() => {})
+  it(`should warn for invalid RGB color (value outside of 0 & 255)`, () => {
+    const warn = vi.spyOn(global.console, `warn`).mockImplementation(() => {})
     // @ts-ignore
     RGBToCMYK(-5, 300, 204)
     // @ts-ignore
