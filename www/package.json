@@ -13,9 +13,10 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
+    "@emotion/react": "^11.8.2",
+    "@mdx-js/mdx": "v1",
     "@react-three/drei": "^9.0.1",
-    "@theme-ui/presets": "^0.11.1",
+    "@theme-ui/presets": "^0.14.2",
     "gatsby": "^4.11.1",
     "gatsby-omni-font-loader": "^2.0.0",
     "gatsby-plugin-catch-links": "^4.11.0",
@@ -25,7 +26,7 @@
     "gatsby-plugin-react-helmet": "^5.11.0",
     "gatsby-plugin-sharp": "^4.11.1",
     "gatsby-plugin-sitemap": "^5.11.1",
-    "gatsby-plugin-theme-ui": "^0.12.0",
+    "gatsby-plugin-theme-ui": "^0.14.2",
     "gatsby-source-filesystem": "^4.11.1",
     "gatsby-source-github-api": "^1.0.0",
     "gatsby-transformer-sharp": "^4.11.0",
@@ -36,14 +37,10 @@
     "react-responsive": "^8.2.0",
     "react-share": "^4.4.0",
     "react-three-fiber": "^6.0.13",
-    "theme-ui": "^0.12.0",
+    "theme-ui": "^0.14.2",
     "three": "^0.139.2"
   },
   "devDependencies": {
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.27"
-  },
-  "resolutions": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22"
   }
 }

@@ -14,7 +14,7 @@ const AboutMe = () => {
     <section data-name="about-me" sx={{ position: `relative`, py: 6 }}>
       <Container>
         <div sx={{ maxWidth: `760px` }}>
-          <Themed.h1 as="h2">About Me</Themed.h1>
+          <h2 sx={(t) => get(t, `styles.h1`)}>About Me</h2>
           <Themed.p>Hi 👋</Themed.p>
           <Themed.p>
             I’m Lennart — also known as LekoArts — and I’m a designer turned software engineer from Germany. I’m

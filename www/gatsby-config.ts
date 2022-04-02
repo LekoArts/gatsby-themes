@@ -1,10 +1,12 @@
-require(`dotenv`).config()
+import type { GatsbyConfig } from "gatsby"
+import path from "path"
+import "dotenv/config"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 const googleTagId = process.env.GOOGLE_PROPERTY_ID
 const githubToken = process.env.GITHUB_TOKEN
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `Gatsby Themes by LekoArts`,
     titleAlt: `Free & Open Source Gatsby Themes by LekoArts`,
@@ -20,7 +22,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: `${__dirname}/data`,
+        path: path.resolve(`data`),
       },
     },
     {
@@ -112,3 +114,5 @@ module.exports = {
     },
   ].filter(Boolean),
 }
+
+export default config

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Flex, Box, jsx, Themed, Container, useColorMode, ThemeUICSSObject } from "theme-ui"
+import { Flex, Box, jsx, Themed, Container, useColorMode, ThemeUICSSObject, get } from "theme-ui"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage as Img, IGatsbyImageData } from "gatsby-plugin-image"
 import { Circle, Donut } from "./shapes"
@@ -178,7 +178,7 @@ const Listing = () => {
               </a>
             </div>
             <Flex sx={{ flexDirection: `column`, alignItems: `flex-start`, order: isEven ? 2 : [2, 2, 1] }}>
-              <Themed.h1 as="h3">{theme.title}</Themed.h1>
+              <h3 sx={(t) => get(t, `styles.h3`)}>{theme.title}</h3>
               <Themed.p>{theme.description}</Themed.p>
               <a href={theme.url} sx={{ variant: `buttons.primary`, mt: 3, ...buttonStyles }}>
                 Get Started
