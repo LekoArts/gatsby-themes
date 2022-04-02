@@ -1,5 +1,16 @@
 # Change Log
 
+## 3.0.5
+
+### Patch Changes
+
+- [#863](https://github.com/LekoArts/gatsby-themes/pull/863) [`fa83c71`](https://github.com/LekoArts/gatsby-themes/commit/fa83c71b61e615540b661de212d4991c9fbe4dcc) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-jodie
+
+* [#869](https://github.com/LekoArts/gatsby-themes/pull/869) [`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Update peerDependencies to include React 18
+
+* Updated dependencies [[`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52), [`9571909`](https://github.com/LekoArts/gatsby-themes/commit/95719091f9698a5110ae6f6a7f31ffa393815eac)]:
+  - @lekoarts/gatsby-theme-jodie-core@3.0.5
+
 ## 3.0.4
 
 ### Patch Changes

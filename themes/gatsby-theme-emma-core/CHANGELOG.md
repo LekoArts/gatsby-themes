@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.7
+
+### Patch Changes
+
+- [#861](https://github.com/LekoArts/gatsby-themes/pull/861) [`ee959d7`](https://github.com/LekoArts/gatsby-themes/commit/ee959d705c2c51416fb4d0e330af2f783e4eecba) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emma-core
+
+* [#869](https://github.com/LekoArts/gatsby-themes/pull/869) [`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Update peerDependencies to include React 18
+
 ## 3.0.6
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.6
+
+### Patch Changes
+
+- [#856](https://github.com/LekoArts/gatsby-themes/pull/856) [`f8de317`](https://github.com/LekoArts/gatsby-themes/commit/f8de317e3944fdd958040777a40ac7851de3b79f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-cara
+
+* [#869](https://github.com/LekoArts/gatsby-themes/pull/869) [`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Update peerDependencies to include React 18
+
 ## 3.0.5
 
 ### Patch Changes

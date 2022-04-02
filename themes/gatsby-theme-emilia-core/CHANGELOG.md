@@ -1,5 +1,13 @@
 # Change Log
 
+## 3.0.7
+
+### Patch Changes
+
+- [#869](https://github.com/LekoArts/gatsby-themes/pull/869) [`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Update peerDependencies to include React 18
+
+* [#859](https://github.com/LekoArts/gatsby-themes/pull/859) [`11892d7`](https://github.com/LekoArts/gatsby-themes/commit/11892d78d5be7b7568a29800d62ab18b69ed8a0a) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia-core
+
 ## 3.0.6
 
 ### Patch Changes
