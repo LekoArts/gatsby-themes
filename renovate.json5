@@ -6,18 +6,12 @@
     ":separateMajorReleases",
     ":combinePatchMinorReleases"
   ],
-  "includePaths": [
-    "package.json",
-    "examples/**",
-    "themes/**",
-    "www/package.json"
-  ],
   "dependencyDashboard": true,
   "labels": [
     "renovate"
   ],
   "prHourlyLimit": 4,
-  "prConcurrentLimit": 15,
+  "prConcurrentLimit": 16,
   "rangeStrategy": "bump",
   "bumpVersion": null,
   "semanticCommits": true,
