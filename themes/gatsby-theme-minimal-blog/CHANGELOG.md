@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.1.5
+
+### Patch Changes
+
+- [#869](https://github.com/LekoArts/gatsby-themes/pull/869) [`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Update peerDependencies to include React 18
+
+* [#865](https://github.com/LekoArts/gatsby-themes/pull/865) [`12b2ced`](https://github.com/LekoArts/gatsby-themes/commit/12b2ceda479e915c4293234220a2b75949bb3094) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+* Updated dependencies [[`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52), [`dff0be1`](https://github.com/LekoArts/gatsby-themes/commit/dff0be15daeaa37dd67e3af23087a3dab3d13f65)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@4.1.5
+
 ## 4.1.4
 
 ### Patch Changes

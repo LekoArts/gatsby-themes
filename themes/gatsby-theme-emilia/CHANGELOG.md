@@ -1,5 +1,18 @@
 # Change Log
 
+## 3.0.7
+
+### Patch Changes
+
+- [#848](https://github.com/LekoArts/gatsby-themes/pull/848) [`57aa145`](https://github.com/LekoArts/gatsby-themes/commit/57aa1450d00ad17fe98ef0c1e3606c8117344abc) Thanks [@gowrath](https://github.com/gowrath)! - chore(gatsby-theme-emilia): Update README
+
+* [#858](https://github.com/LekoArts/gatsby-themes/pull/858) [`de78b18`](https://github.com/LekoArts/gatsby-themes/commit/de78b180c4e14fc90a1424c2d4d3d42266007ad9) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia
+
+- [#869](https://github.com/LekoArts/gatsby-themes/pull/869) [`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Update peerDependencies to include React 18
+
+- Updated dependencies [[`dbe1a0e`](https://github.com/LekoArts/gatsby-themes/commit/dbe1a0e854271cc1a8f0694199b323cbe1953c52), [`11892d7`](https://github.com/LekoArts/gatsby-themes/commit/11892d78d5be7b7568a29800d62ab18b69ed8a0a)]:
+  - @lekoarts/gatsby-theme-emilia-core@3.0.7
+
 ## 3.0.6
 
 ### Patch Changes
