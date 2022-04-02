@@ -87,7 +87,7 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-emilia`,
       options: {
           name: `Emilia`,
-          location: "Paris",
+          location: `Paris`,
           socialMedia: [
             {
               title: `Instagram`,
