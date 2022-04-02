@@ -152,6 +152,7 @@ const renovateConfig = {
     `:separateMajorReleases`,
     `:combinePatchMinorReleases`,
   ],
+  includePaths: [`package.json`, `examples/**`, `themes/**`, `www/package.json`],
   dependencyDashboard: true,
   labels: [`renovate`],
   prHourlyLimit: 4,
