@@ -1,16 +1,20 @@
+/**
+ * @vitest-environment jsdom
+ */
+
+import { describe, it, expect, vi } from "vitest"
 import * as React from "react"
 import { render } from "@testing-library/react"
-import "@testing-library/jest-dom/extend-expect"
 import ColorRow from "../color-row"
 
-jest.mock(`../../hooks/useSpecimensConfig`, () =>
-  jest.fn(() => ({
+vi.mock(`../../hooks/useSpecimensConfig`, () => ({
+  default: vi.fn(() => ({
     contrastGuidelines: `AA`,
     CMYK: true,
     codeExample: true,
     rootFontSize: 16,
-  }))
-)
+  })),
+}))
 
 describe(`Color Row`, () => {
   it(`should display with standard values`, () => {
