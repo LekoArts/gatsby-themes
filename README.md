@@ -14,9 +14,6 @@
   <a href="https://npmcharts.com/compare/@lekoarts/gatsby-theme-minimal-blog,@lekoarts/gatsby-theme-cara,@lekoarts/gatsby-theme-emma,@lekoarts/gatsby-theme-emilia,@lekoarts/gatsby-theme-styleguide,@lekoarts/gatsby-theme-status-dashboard,@lekoarts/gatsby-theme-specimens,@lekoarts/gatsby-theme-graphql-playground,@lekoarts/gatsby-theme-jodie?interval=30&minimal=true">
     <img src="https://img.shields.io/badge/-npmcharts-red" alt="npmcharts.com Overview" />
   </a>
-  <a href="https://circleci.com/gh/LekoArts/gatsby-themes">
-    <img src="https://circleci.com/gh/LekoArts/gatsby-themes.svg?style=svg" alt="CircleCI Status" />
-  </a>
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
   <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
     <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
@@ -31,17 +28,17 @@ Get **high-quality** and **customizable** Gatsby themes to quickly bootstrap you
 
 ## 💼 Contents
 
-This repository is a collection of my Gatsby themes, managed as a [monorepo](https://trunkbaseddevelopment.com/monorepos/) with [Lerna](https://github.com/lerna/lerna) and [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
+This repository is a collection of my Gatsby themes, managed as a [monorepo](https://trunkbaseddevelopment.com/monorepos/) with [Changesets](https://github.com/changesets/changesets) and [yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/).
 
-- `.circleci`: Contains the configuration file for CircleCI
-- `.github`: GitHub actions, templates for issues, and FUNDING file. A GitHub action will publish the `/examples` as starters to individual GitHub repositories.
-- `cypress`: Contains the Cypress tests for `examples`
-- `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`
-- `jest`: Primarily files for mocking functions/files in Jest tests
-- `plop-templates`: Template for [plop.js](https://plopjs.com/)
-- `scripts`: In order to run the tests on CircleCI some utility bash scripts are needed which are located here
-- `themes`: Contains the themes themselves. They should only have the bare minimum of plugins installed (as `examples` can expand them) and also use `Theme UI` for styling. The naming of the folders must be `gatsby-theme-[name-with-dashes]` and the package name under the scope of `@lekoarts`
-- `www`: Contains the source code for [themes.lekoarts.de](http://themes.lekoarts.de)
+- `.changeset`: Changeset files and configuration.
+- `.github`: GitHub actions, templates for issues, and FUNDING file. A GitHub action will publish the `/examples` as starters to individual GitHub repositories. Another GitHub action will handle the publishing of packages.
+- `cypress`: Contains the Cypress tests for `examples`.
+- `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`.
+- `plop-templates`: Template for [plop.js](https://plopjs.com/).
+- `scripts`: In order to run the tests on GitHub Actions some utility bash scripts are needed which are located here.
+- `themes`: Contains the themes themselves. They should only have the bare minimum of plugins installed (as `examples` can expand them) and also use `Theme UI` for styling. The naming of the folders must be `gatsby-theme-[name-with-dashes]` and the package name under the scope of `@lekoarts`.
+- `www`: Contains the source code for [themes.lekoarts.de](http://themes.lekoarts.de).
+- `vite.config.ts` & `vitest-setup.ts`: [Vitest](https://vitest.dev/) is used for Unit Testing.
 
 ## 🤝 How to Contribute
 
