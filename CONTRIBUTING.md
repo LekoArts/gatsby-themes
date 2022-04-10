@@ -18,7 +18,7 @@ This repository uses [Yarn Workspaces][] and [changesets][] to develop multiple 
 Clone the repository:
 
 ```sh
-git clone git@github.com:LekoArts/gatsby-themes.git --depth=1
+git clone git@github.com:LekoArts/gatsby-themes.git
 ```
 
 Install the dependencies:
@@ -41,14 +41,14 @@ yarn workspace emilia develop
 
 ## Tests
 
-### Jest
+### Vitest
 
-Unit tests are run with [Jest][], and are included where appropriate (mostly for utils/helper functions). Feel free to improve the code base with additional tests!
+Unit tests are run with [Vitest][], and are included where appropriate (mostly for utils/helper functions). Feel free to improve the code base with additional tests!
 
 Running tests:
 
 ```sh
-yarn test
+yarn test:ci
 ```
 
 Running tests in watch mode:
@@ -75,14 +75,14 @@ You can skip the e2e tests if you use `docs` or `www` in your branch name, e.g. 
 
 ## Pull Requests
 
-When opening a pull request, please be sure to update any relevant documentation in the READMEs or write some additional Jest/Cypress tests to ensure functionality. Also include a high-level list of changes.
+When opening a pull request, please be sure to update any relevant documentation in the READMEs or write some additional Vitest/Cypress tests to ensure functionality. Also include a high-level list of changes.
 
 ### Changesets
 
-This repository uses [changesets](https://github.com/Noviny/changesets) to do versioning. What that means for contributors is that you need to add a changeset by running `yarn changeset` which contains what packages should be bumped, their associated semver bump types, and some markdown which will be inserted into changelogs.
+This repository uses [changesets][] to do versioning. What that means for contributors is that you need to add a changeset by running `yarn changeset` which contains what packages should be bumped, their associated semver bump types, and some markdown which will be inserted into changelogs.
 
 [yarn]: https://yarnpkg.com
 [yarn workspaces]: https://yarnpkg.com/en/docs/workspaces
-[changesets]: https://github.com/atlassian/changesets
-[jest]: https://jestjs.io/
+[changesets]: https://github.com/changesets/changesets
+[vitest]: https://vitest.dev/
 [cypress]: https://cypress.io
