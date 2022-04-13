@@ -7,6 +7,9 @@ import * as React from "react"
 import { render } from "@testing-library/react"
 import Audio from "../audio"
 
+// @ts-ignore
+global.IS_REACT_ACT_ENVIRONMENT = true
+
 describe(`Audio`, () => {
   it(`should display with standard values`, () => {
     const { getByLabelText, container } = render(<Audio src="sounds/wingardium-leviosa.mp3" />)

@@ -18,6 +18,7 @@ const BorderRadius = ({ radii = undefined }: BorderRadiusProps) => {
         Object.entries(radii).map(([key, value]) => (
           <div key={key}>
             <div>{key}</div>
+            {/* @ts-ignore */}
             <div>{value}</div>
             <div
               sx={{

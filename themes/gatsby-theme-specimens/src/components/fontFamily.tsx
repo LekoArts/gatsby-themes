@@ -26,6 +26,7 @@ const FontFamily = ({
       Object.entries(fonts).map(([key, value]) => (
         <div key={key}>
           <div>{key}</div>
+          {/* @ts-ignore */}
           <div sx={{ fontSize: theme.fontSizes[0] }}>{value}</div>
           <div sx={{ fontFamily: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>{previewText}</div>
         </div>

@@ -7,6 +7,9 @@ import * as React from "react"
 import { render } from "@testing-library/react"
 import Video from "../video"
 
+// @ts-ignore
+global.IS_REACT_ACT_ENVIRONMENT = true
+
 describe(`Video`, () => {
   it(`should display with standard values`, () => {
     const { getByLabelText } = render(<Video src="videos/lekoarts-intro.mp4" />)

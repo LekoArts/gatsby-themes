@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 const mergeArrByKey = <A, B>(arr1: A[], arr2: B[], key: string) => {
   const obj: Record<string, any> = {}
 

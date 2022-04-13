@@ -7,6 +7,9 @@ import * as React from "react"
 import { render } from "@testing-library/react"
 import Table from "../table"
 
+// @ts-ignore
+global.IS_REACT_ACT_ENVIRONMENT = true
+
 describe(`Table`, () => {
   it(`should render with default config`, () => {
     const { getByTestId, getByText } = render(
