@@ -7,6 +7,9 @@ import * as React from "react"
 import { render } from "@testing-library/react"
 import ColorRow from "../color-row"
 
+// @ts-ignore
+global.IS_REACT_ACT_ENVIRONMENT = true
+
 vi.mock(`../../hooks/useSpecimensConfig`, () => ({
   default: vi.fn(() => ({
     contrastGuidelines: `AA`,
