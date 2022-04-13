@@ -32,6 +32,7 @@ const Space = ({ space = undefined }: SpaceProps) => {
           return (
             <div key={`${size}`}>
               <div>{token}</div>
+              {/* @ts-ignore */}
               <div>{size}</div>
               <div
                 sx={{

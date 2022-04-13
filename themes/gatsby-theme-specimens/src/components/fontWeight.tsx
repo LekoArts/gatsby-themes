@@ -27,6 +27,7 @@ const FontWeight = ({
       Object.entries(fontWeights).map(([key, value]) => (
         <div key={key}>
           <div>{key}</div>
+          {/* @ts-ignore */}
           <div>{value}</div>
           <div sx={{ fontWeight: value, fontSize: [theme.fontSizes[1], theme.fontSizes[2]] }}>{previewText}</div>
         </div>
