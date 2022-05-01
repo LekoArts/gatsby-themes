@@ -7869,10 +7869,10 @@ gatsby-cli@^4.12.1:
     yoga-layout-prebuilt "^1.10.0"
     yurnalist "^2.1.0"
 
-gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.8.2:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.12.1.tgz#590ec08de7168b086b7d49128732b9ada95b985f"
-  integrity sha512-jBG1MfR6t2MZNIl8LQ3Cwc92F6uFNcEC091IK+qKVy9FNT0+WzcKQ6Olip6u1NSvCatfrg1FqrH0K78a6lmnLQ==
+gatsby-core-utils@^3.11.1, gatsby-core-utils@^3.12.1, gatsby-core-utils@^3.13.0, gatsby-core-utils@^3.8.2:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.13.0.tgz#b6137bbd285e41a6811ccd33fcd5d5f6a5a17aef"
+  integrity sha512-uAyy54t9dYAUHjLq38QfX/pxyWxsqDiWN/+Ppg/KXTbE83LUQlD0PctdNxz9jFmJ8CgE1BUbfUKpmemh8BLkjw==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -8038,10 +8038,10 @@ gatsby-plugin-manifest@^4.12.1:
     semver "^7.3.5"
     sharp "^0.30.3"
 
-gatsby-plugin-mdx@^3.11.1, gatsby-plugin-mdx@^3.12.1:
-  version "3.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.12.1.tgz#adcb8e8e953d6cedeb3ab80de98923e77b25a332"
-  integrity sha512-Ojhm50eTARhbbX0K3pedNKNXyF9sdQh//LmJ5Bg7jAuXa1KifkjcNXgERssAi9olrF+JpAOpP1+LTR/AYckerg==
+gatsby-plugin-mdx@^3.11.1, gatsby-plugin-mdx@^3.12.1, gatsby-plugin-mdx@^3.13.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-3.13.0.tgz#7a1d1b5eea77eb431d725a0557dac3a91b43676f"
+  integrity sha512-becJF14ChRlkQkeYOR7GzuDNCK0yqax5/BkDHo3pNorh5arxe2jMZm7Kvru8CQa+R9fSHZQY16IEivT9/08QOQ==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/generator" "^7.15.4"
@@ -8059,7 +8059,7 @@ gatsby-plugin-mdx@^3.11.1, gatsby-plugin-mdx@^3.12.1:
     escape-string-regexp "^1.0.5"
     eval "^0.1.4"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.12.1"
+    gatsby-core-utils "^3.13.0"
     gray-matter "^4.0.2"
     json5 "^2.1.3"
     loader-utils "^1.4.0"
@@ -8099,10 +8099,10 @@ gatsby-plugin-page-creator@^4.12.1:
     globby "^11.1.0"
     lodash "^4.17.21"
 
-gatsby-plugin-react-helmet@^5.11.0, gatsby-plugin-react-helmet@^5.12.1:
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.12.1.tgz#98205abb73cd7a522f2891b3a42514ae2b41ca57"
-  integrity sha512-lW9uRpkccSj0NC41dunFM4AoDuQockgpWHcvLivzGWMnWYtGWPNci7zy8+NUL1+6CchQqWTr0LZEeGYgpHym+w==
+gatsby-plugin-react-helmet@^5.11.0, gatsby-plugin-react-helmet@^5.12.1, gatsby-plugin-react-helmet@^5.13.0:
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-5.13.0.tgz#4c27c0a95dce5744d9eb3c0d4f5a8696ba8ebd24"
+  integrity sha512-gdb2occ2GHnMhKXkzaWNoosht+CVFiSrUr06jYgXBLPRpcuzv/7Hh2LI0i8h4GzIFFLEGQnJsPG/AbSOcFD94w==
   dependencies:
     "@babel/runtime" "^7.15.4"
 
@@ -8226,16 +8226,16 @@ gatsby-source-circleci@^2.0.0:
   dependencies:
     circleci-api "^4.1.4"
 
-gatsby-source-filesystem@^4.11.1, gatsby-source-filesystem@^4.12.1:
-  version "4.12.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.12.1.tgz#86f45cc047b0b9ca06b5e4ef5c48e69fa3ec2206"
-  integrity sha512-lbtKa7oR2Q+8Qa8gZych/JaRBeoIW/dk4rfy13DOrSgUJK9gZFkpLuFQ471Z0JiHitDPswienBW60HjYvymOCw==
+gatsby-source-filesystem@^4.11.1, gatsby-source-filesystem@^4.12.1, gatsby-source-filesystem@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-4.13.0.tgz#b42bffeaa7d157988d01c95fcf2feed60f6f0001"
+  integrity sha512-PRr/6tWY5BtnfVv67JSWvQTorfWteWBxzbcs7DvgoP7zHfIWR1tH6saONwuPbo9tCwQ73ZlLYz1LgGdOfJGPzA==
   dependencies:
     "@babel/runtime" "^7.15.4"
     chokidar "^3.5.2"
     file-type "^16.5.3"
     fs-extra "^10.0.0"
-    gatsby-core-utils "^3.12.1"
+    gatsby-core-utils "^3.13.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.5.2"
