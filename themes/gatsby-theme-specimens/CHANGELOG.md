@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.4
+
+### Patch Changes
+
+- [#882](https://github.com/LekoArts/gatsby-themes/pull/882) [`67f9529`](https://github.com/LekoArts/gatsby-themes/commit/67f9529530aa20f7f44c82ffd140c92c22a7adc0) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency polished to ^4.2.2 for gatsby-theme-specimens
+
 ## 4.0.3
 
 ### Patch Changes

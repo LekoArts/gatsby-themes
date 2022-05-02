@@ -1,5 +1,14 @@
 # Change Log
 
+## 3.0.6
+
+### Patch Changes
+
+- [#892](https://github.com/LekoArts/gatsby-themes/pull/892) [`4016afc`](https://github.com/LekoArts/gatsby-themes/commit/4016afc3085e9dbffddd73802e3a6845396b977a) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-jodie
+
+- Updated dependencies [[`2eac6d4`](https://github.com/LekoArts/gatsby-themes/commit/2eac6d44bab4d5fb376b4a8d67d4f8ae9450c5ed)]:
+  - @lekoarts/gatsby-theme-jodie-core@3.0.6
+
 ## 3.0.5
 
 ### Patch Changes
