@@ -17,7 +17,7 @@
     "test:ci": "vitest run",
     "test:coverage": "vitest run --coverage",
     "plop": "plop",
-    "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/cypress/result.xml'",
+    "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome",
     "cy:open": "cypress open --browser chrome --e2e",
     "start-server-and-test": "start-server-and-test",
     "changeset": "changeset",
