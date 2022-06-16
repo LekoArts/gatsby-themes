@@ -59,7 +59,7 @@ yarn test:watch
 
 ### Cypress
 
-Most of the themes' functionality is tested with [Cypress][] as it allows real-world testing which is most important for me when developing themes. The tests are written in TypeScript, too, and hence need to be compiled before usage. Run the following script for development:
+Most of the themes' functionality is tested with [Cypress][] as it allows real-world testing which is most important for me when developing themes. Run the following script for development:
 
 ```sh
 bash ./scripts/e2e-dev.sh "example-name"
@@ -67,9 +67,9 @@ bash ./scripts/e2e-dev.sh "example-name"
 
 In the case of `examples/emma` the "example-name" would be "emma".
 
-The script starts `tsc` in _watch_ mode (for the files in `cypress/e2e`) and outputs them to `cypress/e2e/build` + starts `start-server-and-test` with Gatsby's development server and Cypress. Once the Cypress GUI opens select the fitting test (the others won't work, only the respective test + `smoke.js`!).
+The script starts starts `start-server-and-test` with Gatsby's development server and Cypress. Once the Cypress GUI opens select the fitting test (the others won't work, only the respective test).
 
-GitHub Actions will run the `e2e-build.sh` script — you can use it to run the tests headless.
+You can use the `e2e-build.sh` script to test the headless mode that is run in GitHub Actions.
 
 You can skip the e2e tests if you use `docs` or `www` in your branch name, e.g. `docs/improve-readme` or `www/add-new-entry`.
 

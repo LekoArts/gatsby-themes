@@ -8,11 +8,8 @@
     "examples/*"
   ],
   "scripts": {
-    "tsc": "tsc",
     "typecheck": "tsc --noEmit",
     "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
-    "tsc:compile": "tsc --project cypress/tsconfig.json",
-    "tsc:compile:watch": "tsc --watch --project cypress/tsconfig.json",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js",
     "lint:fix": "yarn lint --fix",
     "format": "prettier \"**/*.{md,mdx,json,yaml}\" --write",
@@ -20,10 +17,9 @@
     "test:ci": "vitest run",
     "test:coverage": "vitest run --coverage",
     "plop": "plop",
-    "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome --reporter junit --reporter-options 'mochaFile=results/cypress/result.xml'",
-    "cy:open": "cypress open",
+    "cy:run": "cross-env CYPRESS_baseUrl=http://localhost:9000 cypress run --browser chrome",
+    "cy:open": "cypress open --browser chrome --e2e",
     "start-server-and-test": "start-server-and-test",
-    "concurrently": "concurrently",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish",
@@ -33,7 +29,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.4",
     "@changesets/cli": "^2.22.0",
-    "@testing-library/cypress": "^8.0.2",
+    "@testing-library/cypress": "^8.0.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@types/chroma-js": "^2.1.3",
@@ -48,9 +44,8 @@
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "c8": "^7.11.3",
-    "concurrently": "^7.2.1",
     "cross-env": "^7.0.3",
-    "cypress": "^9.7.0",
+    "cypress": "^10.1.0",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -73,7 +68,7 @@
     "vitest": "^0.13.1"
   },
   "resolutions": {
-    "cypress": "^9.7.0",
+    "cypress": "^10.1.0",
     "@emotion/react": "^11.9.0",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22"
