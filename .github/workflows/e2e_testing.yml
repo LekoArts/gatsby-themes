@@ -44,10 +44,9 @@ jobs:
           build: yarn workspace ${{ matrix.containers }} build:cypress
           start: yarn workspace ${{ matrix.containers }} serve
           config: "baseUrl=http://localhost:9000"
-          cache-key: node-v${{ matrix.containers }}-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
+          cache-key: node-${{ matrix.containers }}-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          CYPRESS_CACHE_FOLDER: '${GITHUB_WORKSPACE}/.cypress-cache'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CIRCLECI_KEY: ${{ secrets.CIRCLECI_KEY }}
           NETLIFY_ACCESS_KEY: ${{ secrets.NETLIFY_ACCESS_KEY }}
