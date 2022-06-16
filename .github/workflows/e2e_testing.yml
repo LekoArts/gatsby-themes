@@ -15,9 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Install
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         with:
           runTests: false
   e2e_tests:
@@ -33,7 +33,7 @@ jobs:
         containers: [cara, emilia, emma, graphql-playground, jodie, minimal-blog, status-dashboard, styleguide]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Cypress Test
         uses: cypress-io/github-action@v4
         with:
