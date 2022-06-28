@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.7
+
+### Patch Changes
+
+- [#925](https://github.com/LekoArts/gatsby-themes/pull/925) [`bc8997a`](https://github.com/LekoArts/gatsby-themes/commit/bc8997ad78cbd37dcdcdfcd02e30ad4bb5272996) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Pass full `info` object to resolver
+
 ## 3.0.6
 
 ### Patch Changes
