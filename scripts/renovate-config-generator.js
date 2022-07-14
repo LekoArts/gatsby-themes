@@ -163,7 +163,7 @@ const renovateConfig = {
   schedule: [`before 10am on the first day of the month`],
   automerge: false,
   ignoreDeps: [`react`, `react-dom`],
-  ignorePaths: [`**/node_modules/**`],
+  ignorePaths: [`**/node_modules/**`, `.nvmrc`],
   postUpdateOptions: [`yarnDedupeHighest`],
   updateNotScheduled: false,
   packageRules: defaultPackageRules.concat(Array.from(packageRules.values()).flat()),
