@@ -8195,10 +8195,10 @@ gatsby-plugin-react-helmet@^5.12.1, gatsby-plugin-react-helmet@^5.15.0, gatsby-p
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-plugin-sharp@^4.15.1:
-  version "4.15.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.15.1.tgz#5daeb44e72993c138a29755c7461b059ae22b6e4"
-  integrity sha512-RXQkLP9D6Aa0X1eK+2lKjcxXnZZhm3m5mH3hMTfBU8DHKOojK8nUk/Uf2Kw+eVmlUONulSG+1SiH2ayAokvSJQ==
+gatsby-plugin-sharp@^4.15.1, gatsby-plugin-sharp@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-4.17.0.tgz#157901c4e3ac728f562d08d4a846fa1bd888a81c"
+  integrity sha512-+wP4hskMBSNgPYqBX2uqoqb5JUtMMvaZTzYNkZmnKkg85rHeDpUy+eMoCqrhh8wpW/NgcbQ9o6uK43jj2qv0xQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
@@ -8207,9 +8207,9 @@ gatsby-plugin-sharp@^4.15.1:
     debug "^4.3.4"
     filenamify "^4.3.0"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.15.0"
-    gatsby-plugin-utils "^3.9.1"
-    gatsby-telemetry "^3.15.0"
+    gatsby-core-utils "^3.17.0"
+    gatsby-plugin-utils "^3.11.0"
+    gatsby-telemetry "^3.17.0"
     got "^11.8.3"
     lodash "^4.17.21"
     mini-svg-data-uri "^1.4.4"
@@ -8285,16 +8285,16 @@ gatsby-react-router-scroll@^5.12.1:
     "@babel/runtime" "^7.15.4"
     prop-types "^15.8.1"
 
-gatsby-remark-images@^6.15.1:
-  version "6.15.1"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.15.1.tgz#f8f4b879dc47fb482a2b0f8eae6f76621e710b67"
-  integrity sha512-haFfwV2qzpw8iaSnE4Sh8ZLfSodryIQShEfZw/Fjkc2c+oNvZqJSRayYo2QDUNzP63EYR0QfPY/FAhZhwPy9cw==
+gatsby-remark-images@^6.15.1, gatsby-remark-images@^6.17.0:
+  version "6.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-6.17.0.tgz#d666466f4674b29bf1bc7bb001e122a11ebf229e"
+  integrity sha512-pjUBNCfKT8mo1mXztHlxB5OYGSUUr8snTKvBOlKkDQUpQmyDp9BKTYcTMdhlrGqJEpkmMjFpXQSJPSxoTqw+7A==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     chalk "^4.1.2"
     cheerio "^1.0.0-rc.10"
-    gatsby-core-utils "^3.15.0"
+    gatsby-core-utils "^3.17.0"
     is-relative-url "^3.0.0"
     lodash "^4.17.21"
     mdast-util-definitions "^4.0.0"
@@ -8351,10 +8351,10 @@ gatsby-source-netlify@^2.0.0:
     "@babel/runtime" "^7.15.3"
     netlify "^8.0.0"
 
-gatsby-telemetry@^3.12.1, gatsby-telemetry@^3.15.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.15.0.tgz#10a211b2b74d04ec94cade5230f21d779abda0fd"
-  integrity sha512-pXHnw79qmfN5bAVkgdQMCnq7rZFxfGU1YkZJQAG+gCsLRpDgYxgxZYhkbdRJzyF8vMYiCp7HlNsCMvBA75Rpug==
+gatsby-telemetry@^3.12.1, gatsby-telemetry@^3.17.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-3.17.0.tgz#de5b094340d714969ac5a5f01ed19999d3b9557e"
+  integrity sha512-1N4uKj2Yj7AykLmwjsdOmNirf3UmP8CBXjj/LmWf5cLDVbdPqkirAlyD6uTeEliG5UFHPTlBsRi26v558mFYJQ==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/runtime" "^7.15.4"
@@ -8364,23 +8364,23 @@ gatsby-telemetry@^3.12.1, gatsby-telemetry@^3.15.0:
     boxen "^4.2.0"
     configstore "^5.0.1"
     fs-extra "^10.1.0"
-    gatsby-core-utils "^3.15.0"
+    gatsby-core-utils "^3.17.0"
     git-up "^4.0.5"
     is-docker "^2.2.1"
     lodash "^4.17.21"
     node-fetch "^2.6.7"
 
-gatsby-transformer-sharp@^4.15.1:
-  version "4.15.1"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.15.1.tgz#c1fe3086832ab458ca7c8c89c996a9ce499ef88c"
-  integrity sha512-udQeC1Wbq28BDETe3GFr7HFh6yYx6o8lkBQqDVaS/8y3hqiyHCDwinHFwO/OEfsH/oGJ1wGIBxgVOmUicqWvkQ==
+gatsby-transformer-sharp@^4.15.1, gatsby-transformer-sharp@^4.17.0:
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.17.0.tgz#abc2eddd4b28d268eeca6363d22b3e416a33ac53"
+  integrity sha512-yaBzgqpjMqpy1ZuJ4CRbYh8rdiyvuSlMS0aMRiGlcjgUmKuT5qGJsQWsuhihbKWqn8OPhNzrAsnWvWnOVjAeCg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     "@gatsbyjs/potrace" "^2.2.0"
     bluebird "^3.7.2"
     common-tags "^1.8.2"
     fs-extra "^10.1.0"
-    gatsby-plugin-utils "^3.9.1"
+    gatsby-plugin-utils "^3.11.0"
     probe-image-size "^7.2.3"
     semver "^7.3.7"
     sharp "^0.30.3"
