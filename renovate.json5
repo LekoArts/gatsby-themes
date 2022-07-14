@@ -25,7 +25,8 @@
     "react-dom"
   ],
   "ignorePaths": [
-    "**/node_modules/**"
+    "**/node_modules/**",
+    ".nvmrc"
   ],
   "postUpdateOptions": [
     "yarnDedupeHighest"
