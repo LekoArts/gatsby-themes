@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.9
+
+### Patch Changes
+
+- [#933](https://github.com/LekoArts/gatsby-themes/pull/933) [`4c940ab`](https://github.com/LekoArts/gatsby-themes/commit/4c940abd06f9d08fdf5a81f0a14f244c32462e30) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-cara
+
 ## 3.0.8
 
 ### Patch Changes
