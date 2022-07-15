@@ -23,6 +23,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish",
+    "release-update-lockfile": "changeset version && yarn install --mode update-lockfile",
     "prepare": "husky install",
     "update-renovate": "node ./scripts/renovate-config-generator.js"
   },

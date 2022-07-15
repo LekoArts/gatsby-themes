@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '14'
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        run: yarn --immutable
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -25,6 +25,8 @@ jobs:
           commit: "chore(release): Publish"
           title: "Changesets: Version Packages"
           publish: yarn release
+          # Workaround for https://github.com/changesets/changesets/issues/421
+          version: yarn release-update-lockfile
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
