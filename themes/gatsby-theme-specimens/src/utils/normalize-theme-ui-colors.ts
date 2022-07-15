@@ -1,5 +1,5 @@
 import { get } from "@styled-system/css"
-import { Theme } from "theme-ui"
+import type { Theme } from "theme-ui"
 
 interface NormalizeProps extends Theme {
   omit?: string[]

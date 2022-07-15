@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { ColorModesScale } from "@theme-ui/css"
-import { jsx } from "theme-ui"
+import { jsx, ColorModesScale } from "theme-ui"
 import Palette from "./palette"
 import normalizeThemeUIColors from "../utils/normalize-theme-ui-colors"
 import theme from "../theme"
