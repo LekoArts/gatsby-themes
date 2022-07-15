@@ -23,6 +23,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish",
+    "release-update-lockfile": "changeset version && yarn install --mode update-lockfile",
     "prepare": "husky install",
     "update-renovate": "node ./scripts/renovate-config-generator.js"
   },
@@ -72,5 +73,6 @@
     "@emotion/react": "^11.9.3",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }

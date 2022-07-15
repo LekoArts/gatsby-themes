@@ -17,5 +17,6 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_EMAIL: lekoarts@gmail.com
         with:
           args: examples LekoArts starter-name master
