@@ -3191,10 +3191,10 @@ __metadata:
     "@theme-ui/presets": ^0.11.1
     "@theme-ui/prism": ^0.11.1
     "@theme-ui/sidenav": ^0.11.1
-    gatsby-plugin-mdx: ^3.17.0
-    gatsby-plugin-react-helmet: ^5.17.0
+    gatsby-plugin-mdx: ^3.19.0
+    gatsby-plugin-react-helmet: ^5.19.0
     gatsby-plugin-theme-ui: ^0.11.1
-    gatsby-source-filesystem: ^4.17.0
+    gatsby-source-filesystem: ^4.19.0
     is-absolute-url: ^3.0.3
     re-resizable: ^6.9.9
     react-helmet: ^6.1.0
@@ -11472,9 +11472,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^3.17.0, gatsby-core-utils@npm:^3.18.1":
-  version: 3.18.1
-  resolution: "gatsby-core-utils@npm:3.18.1"
+"gatsby-core-utils@npm:^3.17.0, gatsby-core-utils@npm:^3.18.1, gatsby-core-utils@npm:^3.19.0":
+  version: 3.19.0
+  resolution: "gatsby-core-utils@npm:3.19.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     ci-info: 2.0.0
@@ -11491,7 +11491,7 @@ __metadata:
     resolve-from: ^5.0.0
     tmp: ^0.2.1
     xdg-basedir: ^4.0.0
-  checksum: 2f8152d922401f652a6a92657bf42ea482a06653d4cda4483f51f0ecdc88708d70218570d350d81823892f3d4900997c96066c8b22ed7c5f90638fc69a3dada3
+  checksum: 80c1f069d29195636d211fc900e40db8dfb855c6221206cf2b4d401ac137d0c9df790938a9f3830d2ea3049157bca7c661b5b4ab07ac00bc6b71e3beb3c2254d
   languageName: node
   linkType: hard
 
@@ -11702,9 +11702,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-mdx@npm:^3.15.2, gatsby-plugin-mdx@npm:^3.17.0, gatsby-plugin-mdx@npm:^3.18.1":
-  version: 3.18.1
-  resolution: "gatsby-plugin-mdx@npm:3.18.1"
+"gatsby-plugin-mdx@npm:^3.15.2, gatsby-plugin-mdx@npm:^3.17.0, gatsby-plugin-mdx@npm:^3.18.1, gatsby-plugin-mdx@npm:^3.19.0":
+  version: 3.19.0
+  resolution: "gatsby-plugin-mdx@npm:3.19.0"
   dependencies:
     "@babel/core": ^7.15.5
     "@babel/generator": ^7.15.4
@@ -11722,7 +11722,7 @@ __metadata:
     escape-string-regexp: ^1.0.5
     eval: ^0.1.4
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.18.1
+    gatsby-core-utils: ^3.19.0
     gray-matter: ^4.0.2
     json5: ^2.1.3
     loader-utils: ^1.4.0
@@ -11750,7 +11750,7 @@ __metadata:
     gatsby: ^4.0.0-next
     react: ^16.9.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
-  checksum: 396de38e3598c640cd4814224813c8fc04039f9fffa5015423c33d8b9ac1dc5a7c7d4c0a3cc0187a001aa817ec5ab96eed173560eafb532adb1d675b3e7d2c4b
+  checksum: ad712bf550460a89bce460b929f282b00ded8d00bd083847b018387b0bb239fa5ad36392784eec655f6592ebd2188a6ece946b655b49939f9d4e882a12603427
   languageName: node
   linkType: hard
 
@@ -11775,15 +11775,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-helmet@npm:^5.15.0, gatsby-plugin-react-helmet@npm:^5.17.0, gatsby-plugin-react-helmet@npm:^5.18.0":
-  version: 5.18.0
-  resolution: "gatsby-plugin-react-helmet@npm:5.18.0"
+"gatsby-plugin-react-helmet@npm:^5.15.0, gatsby-plugin-react-helmet@npm:^5.17.0, gatsby-plugin-react-helmet@npm:^5.18.0, gatsby-plugin-react-helmet@npm:^5.19.0":
+  version: 5.19.0
+  resolution: "gatsby-plugin-react-helmet@npm:5.19.0"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
     gatsby: ^4.0.0-next
     react-helmet: ^5.1.3 || ^6.0.0
-  checksum: 0070958c7f8ddb3b8b5c6f0267f111fc05a52d1f33641b5654caa621943f8aeb3948d56b5b4c14551456295d261661f254eb624674804d3d31919105cced6ecf
+  checksum: 7890d998b7a8c2f5b577bc2baa86545d995bce1f441a8b838052aa08cd25ff00b7fc5dcef52a732647951a052068367623a8838d574498c95443ad86bed806ee
   languageName: node
   linkType: hard
 
@@ -11968,15 +11968,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^4.15.0, gatsby-source-filesystem@npm:^4.17.0, gatsby-source-filesystem@npm:^4.18.1":
-  version: 4.18.1
-  resolution: "gatsby-source-filesystem@npm:4.18.1"
+"gatsby-source-filesystem@npm:^4.15.0, gatsby-source-filesystem@npm:^4.17.0, gatsby-source-filesystem@npm:^4.18.1, gatsby-source-filesystem@npm:^4.19.0":
+  version: 4.19.0
+  resolution: "gatsby-source-filesystem@npm:4.19.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     chokidar: ^3.5.3
     file-type: ^16.5.3
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.18.1
+    gatsby-core-utils: ^3.19.0
     got: ^9.6.0
     md5-file: ^5.0.0
     mime: ^2.5.2
@@ -11986,7 +11986,7 @@ __metadata:
     xstate: ^4.26.1
   peerDependencies:
     gatsby: ^4.0.0-next
-  checksum: d576eb16addf2afd7d1120796dbaa8efb6d1d1351ca013544acf73b489831cc87f1fc0567056a51d6a817e0d55239db3aba3e7d9dbe7bbc0552a7113bf0b555c
+  checksum: b609e5ec45100f5df881faddf38aafdc78309cd6ef03236ed0440746a54afdeadb3e872f8e1bc3b47074ed0097f85e2156f5fd02213cca09fb9d1ffda3f7b7c7
   languageName: node
   linkType: hard
 
