@@ -3182,13 +3182,13 @@ __metadata:
     "@lekoarts/gatsby-theme-emma-core": ^3.0.11
     "@mdx-js/mdx": ^1.6.22
     "@theme-ui/presets": ^0.11.1
-    gatsby-plugin-catch-links: ^4.17.0
-    gatsby-plugin-image: ^2.17.0
-    gatsby-plugin-react-helmet: ^5.17.0
+    gatsby-plugin-catch-links: ^4.20.0
+    gatsby-plugin-image: ^2.20.0
+    gatsby-plugin-react-helmet: ^5.20.0
     gatsby-plugin-theme-ui: ^0.11.1
     polished: ^4.2.2
     react-helmet: ^6.1.0
-    react-spring: ^9.4.5
+    react-spring: ^9.5.2
     theme-ui: ^0.11.1
   peerDependencies:
     gatsby: ^4.0.0
@@ -4287,18 +4287,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-spring/animated@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/animated@npm:9.4.5"
-  dependencies:
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
-  peerDependencies:
-    react: ^16.8.0  || >=17.0.0 || >=18.0.0
-  checksum: e85c0bd65bd76e1c8ca830b22e31956401e29593cbc1df7560f5b77bd7b31acded61e1732717803cdfd993f30c2559ffbd6fb5f0d48b1c749323bee3597d7834
-  languageName: node
-  linkType: hard
-
 "@react-spring/animated@npm:~9.5.2":
   version: 9.5.2
   resolution: "@react-spring/animated@npm:9.5.2"
@@ -4308,20 +4296,6 @@ __metadata:
   peerDependencies:
     react: ^16.8.0  || >=17.0.0 || >=18.0.0
   checksum: d2cf4fb5b91002747358aedbea8f7e4a9b3a48620404c7a0dc70e5c2d088851588c366952d14b509dbf5dbe9425128af72fa8a8e46cdf4611e6090cdfb6abc4f
-  languageName: node
-  linkType: hard
-
-"@react-spring/core@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/core@npm:9.4.5"
-  dependencies:
-    "@react-spring/animated": ~9.4.5
-    "@react-spring/rafz": ~9.4.5
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
-  peerDependencies:
-    react: ^16.8.0  || >=17.0.0 || >=18.0.0
-  checksum: e5aee7f68f15c9d5d6f230703d22cb34edb8aae3ba0d70c01847f7c78e47f9f8177f87c095aff5ed1b98c2a218238d5ec28f9bf451f3e13bfdad6e3170a60226
   languageName: node
   linkType: hard
 
@@ -4339,34 +4313,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-spring/konva@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/konva@npm:9.4.5"
+"@react-spring/konva@npm:~9.5.2":
+  version: 9.5.2
+  resolution: "@react-spring/konva@npm:9.5.2"
   dependencies:
-    "@react-spring/animated": ~9.4.5
-    "@react-spring/core": ~9.4.5
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
+    "@react-spring/animated": ~9.5.2
+    "@react-spring/core": ~9.5.2
+    "@react-spring/shared": ~9.5.2
+    "@react-spring/types": ~9.5.2
   peerDependencies:
     konva: ">=2.6"
     react: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-konva: ^16.8.0  || ^17.0.0
-  checksum: 9f8658dafe7d5b2f6532183851c169220766098017d3ffd10d0e35c542f931123aad6d239d498f08ae5a4bf15367c892b526367fc72f052f9f32567c6fdc3122
+  checksum: a2d8bafe3a9ac62c2d8966ece05ed4d9a860ad1465afdf0558faceaf3426c415fad4640c9f648958cb072b18ff66b978b0f5605c871c4ae0113375ed6adb801d
   languageName: node
   linkType: hard
 
-"@react-spring/native@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/native@npm:9.4.5"
+"@react-spring/native@npm:~9.5.2":
+  version: 9.5.2
+  resolution: "@react-spring/native@npm:9.5.2"
   dependencies:
-    "@react-spring/animated": ~9.4.5
-    "@react-spring/core": ~9.4.5
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
+    "@react-spring/animated": ~9.5.2
+    "@react-spring/core": ~9.5.2
+    "@react-spring/shared": ~9.5.2
+    "@react-spring/types": ~9.5.2
   peerDependencies:
     react: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-native: ">=0.58"
-  checksum: 7e3e5d17e4b61024e4d1155be20c0d9a7ee38b893d4fc3cc64aacc331fb98344b4a2e4ca7d6eba5f43d528bbc81852f3dd6b8be0c3c14091f1021ca8c65edab0
+  checksum: 6936fc3b939d8d8c8c8d5286866d19f1e32d67c34aeada51ed462d8ba26cabf21271366e9a757f4cd55ffcde7786d8da5e7df18b74e9fa3cf6f6acec9786ba88
   languageName: node
   linkType: hard
 
@@ -4383,29 +4357,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-spring/rafz@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/rafz@npm:9.4.5"
-  checksum: 0ac722881b107baf55338a0123bc889d88faca53f034eb6d26ebab3ae6e4dc1717654b09d0e6e5e9bf587c2ba182d6aae90ca22c833dc55024ee52d88f8579a2
-  languageName: node
-  linkType: hard
-
 "@react-spring/rafz@npm:~9.5.2":
   version: 9.5.2
   resolution: "@react-spring/rafz@npm:9.5.2"
   checksum: 669fcfd098b2ced1bc0259933bc8afbd748f5e10191337ed5f73bc798f29bcd6b7eba7db55035440724bc01dffc90f33e1e2abe8080554723ef75d4a699eebf4
-  languageName: node
-  linkType: hard
-
-"@react-spring/shared@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/shared@npm:9.4.5"
-  dependencies:
-    "@react-spring/rafz": ~9.4.5
-    "@react-spring/types": ~9.4.5
-  peerDependencies:
-    react: ^16.8.0  || >=17.0.0 || >=18.0.0
-  checksum: 2f20e410c03166de19b2d668d6841d24778c37da3083d37fe70acfcf2cf0cb3bd4a5cf92d42f1590b9de5d0a6603dc75cf8c319c0089df4e713226364a204b51
   languageName: node
   linkType: hard
 
@@ -4421,26 +4376,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-spring/three@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/three@npm:9.4.5"
+"@react-spring/three@npm:~9.5.2":
+  version: 9.5.2
+  resolution: "@react-spring/three@npm:9.5.2"
   dependencies:
-    "@react-spring/animated": ~9.4.5
-    "@react-spring/core": ~9.4.5
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
+    "@react-spring/animated": ~9.5.2
+    "@react-spring/core": ~9.5.2
+    "@react-spring/shared": ~9.5.2
+    "@react-spring/types": ~9.5.2
   peerDependencies:
     "@react-three/fiber": ">=6.0"
     react: ^16.11.0  || >=17.0.0 || >=18.0.0
     three: ">=0.126"
-  checksum: 704e560c0d7df25db8aaf6ded0b9598b465370db3ec1704b784b6f36318ff8486fc399f5b3e9729ee0ef04958903f72d267bee48e9a1abb320a10a72273fcecc
-  languageName: node
-  linkType: hard
-
-"@react-spring/types@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/types@npm:9.4.5"
-  checksum: f8fecb54015de23899cc595d949e3676835e612d4dda05af470cab9ee20dd98c86ebca1c4ba75d2a9f63a4acba4b75febf6bab71da0b2e9556e6ff684b22f139
+  checksum: f85b1ce8b0282d61ff4a9408f4c9adfa170b8725dd9c4cd22a993d6e2933981f9ae66c124e259a5a5f32a42eace9743caa5646f52d7e6b1b25544aaedd3f9a07
   languageName: node
   linkType: hard
 
@@ -4466,35 +4414,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-spring/web@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/web@npm:9.4.5"
+"@react-spring/zdog@npm:~9.5.2":
+  version: 9.5.2
+  resolution: "@react-spring/zdog@npm:9.5.2"
   dependencies:
-    "@react-spring/animated": ~9.4.5
-    "@react-spring/core": ~9.4.5
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
-  peerDependencies:
-    react: ^16.8.0  || >=17.0.0 || >=18.0.0
-    react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
-  checksum: 9d7eea4b8b0399c205743acade141679f3f729a64631f8480d44d14bb59781ea807977a4671cbe1d56e31389b69ef325ec975275446f08997f555f2981d220c8
-  languageName: node
-  linkType: hard
-
-"@react-spring/zdog@npm:~9.4.5":
-  version: 9.4.5
-  resolution: "@react-spring/zdog@npm:9.4.5"
-  dependencies:
-    "@react-spring/animated": ~9.4.5
-    "@react-spring/core": ~9.4.5
-    "@react-spring/shared": ~9.4.5
-    "@react-spring/types": ~9.4.5
+    "@react-spring/animated": ~9.5.2
+    "@react-spring/core": ~9.5.2
+    "@react-spring/shared": ~9.5.2
+    "@react-spring/types": ~9.5.2
   peerDependencies:
     react: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-dom: ^16.8.0  || >=17.0.0 || >=18.0.0
     react-zdog: ">=1.0"
     zdog: ">=1.0"
-  checksum: b4b58b565c44a2c88b5be0862f97636ae3968c4b5a331660e21dbb084f9193d2a634991236e18204947d2486414d884421379bb910e9a99b3fa48564926ebca0
+  checksum: c50798835c5d4d2839d7be82e703fea3088ef05d4a65c03e783605abf412db116d1af6eb83cda6bbb04e3017783c6681610c7cf10fdbe5d87856c4775498008d
   languageName: node
   linkType: hard
 
@@ -6861,16 +6794,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-remove-graphql-queries@npm:^4.18.1, babel-plugin-remove-graphql-queries@npm:^4.19.0":
-  version: 4.19.0
-  resolution: "babel-plugin-remove-graphql-queries@npm:4.19.0"
+"babel-plugin-remove-graphql-queries@npm:^4.18.1, babel-plugin-remove-graphql-queries@npm:^4.20.0":
+  version: 4.20.0
+  resolution: "babel-plugin-remove-graphql-queries@npm:4.20.0"
   dependencies:
     "@babel/runtime": ^7.15.4
-    gatsby-core-utils: ^3.19.0
+    "@babel/types": ^7.15.4
+    gatsby-core-utils: ^3.20.0
   peerDependencies:
     "@babel/core": ^7.0.0
     gatsby: ^4.0.0-next
-  checksum: de1c912382ee9484bc0e864aaf28cfea2650f1855903fdd52d5f8c58ff56afebf7b515028c4fba8861966d46a123c8a6c3ec3daaa7c69974b99aa8cd19c7811b
+  checksum: f383d4232baf9c49c51cd480cee467e03f1dd4ef83dae91597462b4648ce7f54580674909cf34768ee28d921c751298f87f1f623fde64d3193273aafa814b8bb
   languageName: node
   linkType: hard
 
@@ -11546,9 +11480,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^3.18.1, gatsby-core-utils@npm:^3.19.0":
-  version: 3.19.0
-  resolution: "gatsby-core-utils@npm:3.19.0"
+"gatsby-core-utils@npm:^3.18.1, gatsby-core-utils@npm:^3.19.0, gatsby-core-utils@npm:^3.20.0":
+  version: 3.20.0
+  resolution: "gatsby-core-utils@npm:3.20.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     ci-info: 2.0.0
@@ -11565,7 +11499,7 @@ __metadata:
     resolve-from: ^5.0.0
     tmp: ^0.2.1
     xdg-basedir: ^4.0.0
-  checksum: 80c1f069d29195636d211fc900e40db8dfb855c6221206cf2b4d401ac137d0c9df790938a9f3830d2ea3049157bca7c661b5b4ab07ac00bc6b71e3beb3c2254d
+  checksum: 9570a4fba57f14ee70229cfe1fd24191597c728520493303c42dd8ae3da5c0e50736ea7e554e9ac7e569fa12d00675a0988e2ee5d7b119a649ae3d4ca102dba0
   languageName: node
   linkType: hard
 
@@ -11669,15 +11603,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-catch-links@npm:^4.15.0, gatsby-plugin-catch-links@npm:^4.17.0, gatsby-plugin-catch-links@npm:^4.18.0":
-  version: 4.18.0
-  resolution: "gatsby-plugin-catch-links@npm:4.18.0"
+"gatsby-plugin-catch-links@npm:^4.15.0, gatsby-plugin-catch-links@npm:^4.18.0, gatsby-plugin-catch-links@npm:^4.20.0":
+  version: 4.20.0
+  resolution: "gatsby-plugin-catch-links@npm:4.20.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     escape-string-regexp: ^1.0.5
   peerDependencies:
     gatsby: ^4.0.0-next
-  checksum: 48c0936b4bafb34e85585cf3f78d27181771c25b9ec84ef1aca9c09347c14e9902a9e42356b729ab361ba6ff240c7309acd6d3ab291cd8ae5247dc6724228ef7
+  checksum: 6d6e5d584dc06d040a83b2df5342715289366b754f34d7f7b8b0d80f6200bc19f091abdc5183f51dfd27226f57434461faf9222014c6cbc1bbdd934195cc4bd8
   languageName: node
   linkType: hard
 
@@ -11732,22 +11666,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-image@npm:^2.17.0, gatsby-plugin-image@npm:^2.19.0":
-  version: 2.19.0
-  resolution: "gatsby-plugin-image@npm:2.19.0"
+"gatsby-plugin-image@npm:^2.17.0, gatsby-plugin-image@npm:^2.19.0, gatsby-plugin-image@npm:^2.20.0":
+  version: 2.20.0
+  resolution: "gatsby-plugin-image@npm:2.20.0"
   dependencies:
     "@babel/code-frame": ^7.14.0
     "@babel/parser": ^7.15.5
     "@babel/runtime": ^7.15.4
     "@babel/traverse": ^7.15.4
     babel-jsx-utils: ^1.1.0
-    babel-plugin-remove-graphql-queries: ^4.19.0
+    babel-plugin-remove-graphql-queries: ^4.20.0
     camelcase: ^5.3.1
     chokidar: ^3.5.3
     common-tags: ^1.8.2
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.19.0
-    gatsby-plugin-utils: ^3.13.0
+    gatsby-core-utils: ^3.20.0
+    gatsby-plugin-utils: ^3.14.0
     objectFitPolyfill: ^2.3.5
     prop-types: ^15.8.1
   peerDependencies:
@@ -11757,7 +11691,7 @@ __metadata:
     gatsby-source-filesystem: ^4.0.0-next
     react: ^16.9.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
-  checksum: d24ee0e40385be48f5cbb574a9dcc233ac22d4145a14a4732bd6050588e472496acb21b14f8e7dfc9da8ecd43a6ee2eafff4a676acbc0f2c9c3141805d189da9
+  checksum: 063f924c1fc1b8be7d7d7c5ee935a7f8911c8f924161e179e7b1601e3239e3f239ddd8e65ee5c820f453ebd5fbcb7ab779374c8f5009e0ac39d280b02fc9d80e
   languageName: node
   linkType: hard
 
@@ -11849,15 +11783,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-helmet@npm:^5.15.0, gatsby-plugin-react-helmet@npm:^5.17.0, gatsby-plugin-react-helmet@npm:^5.18.0, gatsby-plugin-react-helmet@npm:^5.19.0":
-  version: 5.19.0
-  resolution: "gatsby-plugin-react-helmet@npm:5.19.0"
+"gatsby-plugin-react-helmet@npm:^5.15.0, gatsby-plugin-react-helmet@npm:^5.17.0, gatsby-plugin-react-helmet@npm:^5.18.0, gatsby-plugin-react-helmet@npm:^5.19.0, gatsby-plugin-react-helmet@npm:^5.20.0":
+  version: 5.20.0
+  resolution: "gatsby-plugin-react-helmet@npm:5.20.0"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
     gatsby: ^4.0.0-next
     react-helmet: ^5.1.3 || ^6.0.0
-  checksum: 7890d998b7a8c2f5b577bc2baa86545d995bce1f441a8b838052aa08cd25ff00b7fc5dcef52a732647951a052068367623a8838d574498c95443ad86bed806ee
+  checksum: d028dea0aadc8b489b9bd912e53d93df8580c48fc070492a4fad09039e8a64e90456f94c7459dbd1d2543e03ca2a18e73ad39dedba6cf11ffba42c5a2c8022a1
   languageName: node
   linkType: hard
 
@@ -11942,15 +11876,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^3.12.1, gatsby-plugin-utils@npm:^3.13.0":
-  version: 3.13.0
-  resolution: "gatsby-plugin-utils@npm:3.13.0"
+"gatsby-plugin-utils@npm:^3.12.1, gatsby-plugin-utils@npm:^3.13.0, gatsby-plugin-utils@npm:^3.14.0":
+  version: 3.14.0
+  resolution: "gatsby-plugin-utils@npm:3.14.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     "@gatsbyjs/potrace": ^2.2.0
+    fastq: ^1.13.0
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.19.0
-    gatsby-sharp: ^0.13.0
+    gatsby-core-utils: ^3.20.0
+    gatsby-sharp: ^0.14.0
     graphql-compose: ^9.0.7
     import-from: ^4.0.0
     joi: ^17.4.2
@@ -11959,7 +11894,8 @@ __metadata:
     svgo: ^2.8.0
   peerDependencies:
     gatsby: ^4.0.0-next
-  checksum: 292f27280b52de32260a686746824948822da8081412c4d49c0f841daa718608e61f6be0b76020e846618ca186d244c8360cff6d39b21ef1775af1fd295a2b45
+    graphql: ^15.0.0
+  checksum: b194d10d5e2b6cf77144d019c1fb18e02360acb50e03e3b002c65e7ba1c702284d751ae7db297cd5c4db856e1a7dacd0790d63bc65b87f2168bf54ccb8b677c1
   languageName: node
   linkType: hard
 
@@ -12031,13 +11967,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-sharp@npm:^0.13.0":
-  version: 0.13.0
-  resolution: "gatsby-sharp@npm:0.13.0"
+"gatsby-sharp@npm:^0.14.0":
+  version: 0.14.0
+  resolution: "gatsby-sharp@npm:0.14.0"
   dependencies:
     "@types/sharp": ^0.30.0
     sharp: ^0.30.3
-  checksum: 49897bddf83cfaa701654f27cea03c759307b2da7fab87a0f83ac4b301126a3cacb7686e30c162dedc46ff6d9d90beadfe6653e0fe3cfbc950db36e6e2ad00c6
+  checksum: 753e43bba753e73723987eb9cb0db909e01e1b0353ac0f0e732961050d23f97226aac2f329700ac366b5b33ede6f5100cdffefe537f890af2393d0d720d6e36d
   languageName: node
   linkType: hard
 
@@ -18586,17 +18522,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-spring@npm:^9.4.5":
-  version: 9.4.5
-  resolution: "react-spring@npm:9.4.5"
+"react-spring@npm:^9.4.5, react-spring@npm:^9.5.2":
+  version: 9.5.2
+  resolution: "react-spring@npm:9.5.2"
   dependencies:
-    "@react-spring/core": ~9.4.5
-    "@react-spring/konva": ~9.4.5
-    "@react-spring/native": ~9.4.5
-    "@react-spring/three": ~9.4.5
-    "@react-spring/web": ~9.4.5
-    "@react-spring/zdog": ~9.4.5
-  checksum: 0bcf67cb0a1ddcf16f863418306060988c5a8fa3634d56818e4f8bda53fedba95071260c155a6614fbdd2ca9b987717283c5fcdda391678db99f83e412f75952
+    "@react-spring/core": ~9.5.2
+    "@react-spring/konva": ~9.5.2
+    "@react-spring/native": ~9.5.2
+    "@react-spring/three": ~9.5.2
+    "@react-spring/web": ~9.5.2
+    "@react-spring/zdog": ~9.5.2
+  checksum: 19a899ae49989f589ff4a38faf0797b1453283da571124362438403db3dc64966d2e143d261930ba2e7f1b26f4d35c1cae183d08b736b5cfc46ecdc9f444d804
   languageName: node
   linkType: hard
 
