@@ -5,6 +5,9 @@ describe(`gatsby-theme-cara`, () => {
   beforeEach(() => {
     cy.visit(`/`).waitForRouteChange()
   })
+  it(`should have correct title in head`, () => {
+    cy.title().should(`eq`, `Cara - Gatsby Starter Portfolio`)
+  })
   it(`should render hero content`, () => {
     cy.findByText(/hi, i'm your name/i)
   })

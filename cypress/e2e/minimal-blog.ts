@@ -5,6 +5,9 @@ describe(`gatsby-theme-minimal-blog`, () => {
   beforeEach(() => {
     cy.visit(`/`).waitForRouteChange()
   })
+  it(`should have correct title in head`, () => {
+    cy.title().should(`eq`, `Minimal Blog - Gatsby Theme`)
+  })
   it(`should render the title`, () => {
     cy.get(`h1`).within(() => {
       cy.findByText(/Minimal Blog/i)
@@ -13,6 +16,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
   it(`should link the about page`, () => {
     cy.get(`nav`).within(() => {
       cy.findByText(/About/i).click().waitForRouteChange().assertRoute(`/about`)
+      cy.title().should(`eq`, `About | Minimal Blog`)
     })
   })
   it(`should link the blog page`, () => {
@@ -27,6 +31,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
       })
     cy.findByText(/Fantastic Beasts and Where to Find Them/i)
     cy.findByText(/View all tags/i)
+    cy.title().should(`eq`, `Blog | Minimal Blog`)
   })
   it(`should have functioning tags in list items`, () => {
     cy.visit(`/blog`).waitForRouteChange()
@@ -39,6 +44,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
         cy.findByText(/Tutorial/i)
       })
     cy.findByText(/Introduction to "Defence against the Dark Arts"/i)
+    cy.title().should(`eq`, `Tag: Tutorial | Minimal Blog`)
   })
   it(`should have functioning tags overview page`, () => {
     cy.visit(`/blog`).waitForRouteChange()
@@ -51,6 +57,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
         cy.findByText(/Tags/i)
       })
     cy.findByText(/Novel/i)
+    cy.title().should(`eq`, `Tags | Minimal Blog`)
   })
   it(`should have social media links`, () => {
     cy.get(`header`).within(() => {
@@ -92,6 +99,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     cy.findByText(
       /Thestral dirigible plums, Viktor Krum hexed memory charm Animagus Invisibility Cloak three-headed Dog./i
     )
+    cy.title().should(`eq`, `Introduction to "Defence against the Dark Arts" | Minimal Blog`)
   })
   it(`should render blogpost with code component`, () => {
     cy.visit(`/fantastic-beasts-and-where-to-find-them`)
@@ -108,6 +116,10 @@ describe(`gatsby-theme-minimal-blog`, () => {
       .click()
       .waitForRouteChange()
       .assertRoute(`/curses-counter-curses-and-more`)
+    cy.title().should(
+      `eq`,
+      `Curses and Counter-curses (Bewitch Your Friends and Befuddle Your Enemies with the Latest Revenges: Hair Loss, Jelly-Legs, Tongue-Tying, and Much, Much More) | Minimal Blog`
+    )
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByLabelText(/Activate Dark Mode/i)

@@ -5,6 +5,9 @@ describe(`gatsby-theme-graphql-playground`, () => {
   it(`should work`, () => {
     cy.visit(`/`).assertRoute(`/`)
   })
+  it(`should have correct title in head`, () => {
+    cy.title().should(`eq`, `GraphQL Playground - @lekoarts/gatsby-theme-graphql-playground`)
+  })
   it(`should contain the title`, () => {
     cy.findByTestId(`Title`).contains(`GraphQL Playground`)
   })
@@ -25,6 +28,7 @@ describe(`gatsby-theme-graphql-playground`, () => {
     cy.findByTestId(`item-title`)
     cy.findByText(/Start with the basics, pulling up the site/i)
     cy.findByTestId(/iFrame-Get the Site Title/i)
+    cy.title().should(`eq`, `Get the Site Title | GraphQL Playground`)
   })
   it(`should have functioning theme toggle`, () => {
     cy.get(`html`)
