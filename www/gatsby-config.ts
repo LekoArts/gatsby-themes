@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig, PluginRef } from "gatsby"
 import path from "path"
 import "dotenv/config"
 
@@ -77,7 +77,6 @@ const config: GatsbyConfig = {
         output: `/`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`,
@@ -112,7 +111,7 @@ const config: GatsbyConfig = {
         openAnalyzer: false,
       },
     },
-  ].filter(Boolean),
+  ].filter(Boolean) as PluginRef[],
 }
 
 export default config

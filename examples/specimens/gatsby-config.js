@@ -34,7 +34,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-manifest`,

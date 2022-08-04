@@ -24,7 +24,6 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
         lessBabel: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
   ].filter(Boolean),
 })

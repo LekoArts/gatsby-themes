@@ -31,7 +31,6 @@ module.exports = (themeOptions) => {
           lessBabel: true,
         },
       },
-      `gatsby-plugin-react-helmet`,
       `gatsby-plugin-theme-ui`,
     ].filter(Boolean),
   }

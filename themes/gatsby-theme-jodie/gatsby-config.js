@@ -14,7 +14,6 @@ module.exports = (options) => ({
       resolve: `@lekoarts/gatsby-theme-jodie-core`,
       options,
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-theme-ui`,
   ],

@@ -11,7 +11,6 @@ module.exports = {
   plugins: [
     // See the theme's README for all available components
     `@lekoarts/gatsby-theme-status-dashboard`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-manifest`,
