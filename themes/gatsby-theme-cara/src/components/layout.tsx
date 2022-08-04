@@ -1,7 +1,6 @@
 import * as React from "react"
 import { get } from "theme-ui"
 import { Global } from "@emotion/react"
-import SEO from "./seo"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -38,7 +37,6 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         },
       })}
     />
-    <SEO />
     <main className={className}>{children}</main>
   </React.Fragment>
 )

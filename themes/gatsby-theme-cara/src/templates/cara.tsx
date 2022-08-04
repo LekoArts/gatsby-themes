@@ -5,6 +5,7 @@ import Hero from "../components/hero"
 import Projects from "../components/projects"
 import About from "../components/about"
 import Contact from "../components/contact"
+import SEO from "../components/seo"
 
 const Cara = () => (
   <Layout>
@@ -18,3 +19,5 @@ const Cara = () => (
 )
 
 export default Cara
+
+export const Head = () => <SEO />
