@@ -1,5 +1,7 @@
+import { HeadFC } from "gatsby"
 import * as React from "react"
 import Projects from "../../../components/projects"
+import SEO from "../../../components/seo"
 
 type Props = {
   data: {
@@ -16,3 +18,5 @@ export default function EmiliaCoreProjects({ ...props }: Props) {
 
   return <Projects projects={allProject.nodes} {...props} />
 }
+
+export const Head: HeadFC = () => <SEO />

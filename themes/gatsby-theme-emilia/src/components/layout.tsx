@@ -2,7 +2,6 @@ import * as React from "react"
 import { get } from "theme-ui"
 import { Global } from "@emotion/react"
 import Footer from "./footer"
-import SEO from "./seo"
 
 type LayoutProps = { children: React.ReactNode }
 
@@ -38,7 +37,6 @@ const Layout = ({ children }: LayoutProps) => (
         },
       })}
     />
-    <SEO />
     {children}
     <Footer />
   </React.Fragment>
