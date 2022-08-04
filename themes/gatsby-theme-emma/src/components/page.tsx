@@ -4,7 +4,6 @@ import { Container, jsx, Flex, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
-import SEO from "./seo"
 import Hero from "./hero"
 
 type PageProps = {
@@ -34,7 +33,6 @@ const Page = ({ data: { page } }: PageProps) => {
 
   return (
     <Layout>
-      <SEO title={page.title} description={page.excerpt} pathname={page.slug} />
       <Hero image={page.cover.childImageSharp.gatsbyImageData} slim>
         <Flex
           sx={{

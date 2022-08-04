@@ -1,7 +1,9 @@
 import { graphql } from "gatsby"
-import PageComponent from "../components/page"
+import PageComponent, { Head } from "../components/page"
 
 export default PageComponent
+
+export { Head }
 
 export const query = graphql`
   query ($slug: String!) {

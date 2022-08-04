@@ -4,7 +4,6 @@ import { Container, jsx, Flex, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
-import SEO from "./seo"
 import Hero from "./hero"
 import ProjectInfo from "./project-info"
 
@@ -43,17 +42,6 @@ const Project = ({ data: { project } }: ProjectProps) => {
 
   return (
     <Layout>
-      <SEO
-        title={project.title}
-        description={project.excerpt}
-        pathname={project.slug}
-        image={project.cover.childImageSharp.resize!.src}
-      >
-        <meta name="twitter:label1" value="Client" />
-        <meta name="twitter:label2" value="Date" />
-        <meta name="twitter:data1" value={project.client} />
-        <meta name="twitter:data2" value={project.date} />
-      </SEO>
       <Hero image={project.cover.childImageSharp.gatsbyImageData} color={project.color}>
         <Flex
           sx={{

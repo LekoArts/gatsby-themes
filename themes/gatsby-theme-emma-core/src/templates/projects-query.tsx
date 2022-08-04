@@ -1,7 +1,9 @@
 import { graphql } from "gatsby"
-import ProjectsComponent from "../components/projects"
+import ProjectsComponent, { Head } from "../components/projects"
 
 export default ProjectsComponent
+
+export { Head }
 
 export const query = graphql`
   query {
