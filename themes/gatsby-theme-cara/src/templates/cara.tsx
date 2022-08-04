@@ -1,4 +1,5 @@
 import * as React from "react"
+import type { HeadFC } from "gatsby"
 import { Parallax } from "@react-spring/parallax"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
@@ -20,4 +21,4 @@ const Cara = () => (
 
 export default Cara
 
-export const Head = () => <SEO />
+export const Head: HeadFC = () => <SEO />

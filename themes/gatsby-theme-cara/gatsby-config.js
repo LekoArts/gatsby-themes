@@ -5,7 +5,6 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
     siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
     siteUrl: `https://cara.lekoarts.de`,
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-    // Change the gatsby-ssr.js to change the <html> element's lang attribute
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
