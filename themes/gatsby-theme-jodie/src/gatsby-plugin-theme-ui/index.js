@@ -10,9 +10,8 @@ const contentStyles = {
 }
 
 const theme = merge(tailwind, {
-  initialColorModeName: `light`,
   config: {
-    useCustomProperties: true,
+    initialColorModeName: `light`,
   },
   colors: {
     primary: `#b75e09`,

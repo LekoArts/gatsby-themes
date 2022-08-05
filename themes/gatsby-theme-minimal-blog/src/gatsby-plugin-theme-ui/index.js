@@ -3,9 +3,8 @@ import { transparentize } from "@theme-ui/color"
 import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
-  initialColorModeName: `light`,
   config: {
-    useCustomProperties: true,
+    initialColorModeName: `light`,
   },
   colors: {
     primary: tailwind.colors.purple[7],

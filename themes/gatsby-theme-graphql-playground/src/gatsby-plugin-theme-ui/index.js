@@ -3,9 +3,8 @@ import { tailwind } from "@theme-ui/presets"
 import nightOwl from "@theme-ui/prism/presets/night-owl"
 
 const theme = merge(tailwind, {
-  initialColorModeName: `light`,
   config: {
-    useCustomProperties: true,
+    initialColorModeName: `light`,
   },
   colors: {
     primary: tailwind.colors.indigo[7],

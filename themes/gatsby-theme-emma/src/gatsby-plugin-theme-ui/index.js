@@ -2,9 +2,8 @@ import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
 export default merge(tailwind, {
-  initialColorModeName: `light`,
   config: {
-    useCustomProperties: true,
+    initialColorModeName: `light`,
   },
   colors: {
     primary: tailwind.colors.pink[7],
