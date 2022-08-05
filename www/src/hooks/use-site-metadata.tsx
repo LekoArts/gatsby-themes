@@ -8,7 +8,6 @@ type UseSiteMetadataProps = {
       siteUrl: string
       description: string
       headline: string
-      language: string
       image: string
       author: string
     }
@@ -25,7 +24,6 @@ const useSiteMetadata = () => {
           siteUrl
           description
           headline
-          language
           image
           author
         }

@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { PageProps, Link } from "gatsby"
+import { PageProps, Link, HeadFC } from "gatsby"
 import { jsx, Themed, Container, get } from "theme-ui"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const Index: React.FC<PageProps> = () => (
   <Layout>
@@ -19,3 +20,5 @@ const Index: React.FC<PageProps> = () => (
 )
 
 export default Index
+
+export const Head: HeadFC = () => <SEO title="404 - Page Not Found" />

@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 type SEOProps = {
@@ -30,7 +29,6 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
     siteUrl,
     description: defaultDescription,
     headline,
-    language,
     image: defaultImage,
     author,
   } = site
@@ -111,8 +109,7 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
   })
 
   return (
-    <Helmet meta={meta}>
-      <html lang={language} />
+    <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
@@ -141,7 +138,7 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`identity`))}</script>
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`creator`))}</script>
       <script type="application/ld+json">{JSON.stringify(schemaHomepage)}</script>
-    </Helmet>
+    </>
   )
 }
 
