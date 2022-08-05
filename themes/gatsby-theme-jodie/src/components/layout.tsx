@@ -5,7 +5,6 @@ import { Global } from "@emotion/react"
 import Wrapper from "./layout-wrapper"
 import Sidebar from "./sidebar"
 import Footer from "./footer"
-import Seo from "./seo"
 import { SkipNavTarget, SkipNavTrigger } from "./skip-nav"
 
 type LayoutProps = { children: React.ReactNode; color?: string }
@@ -47,7 +46,6 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
         },
       })}
     />
-    <Seo />
     <SkipNavTrigger />
     <Wrapper>
       <Sidebar bg={color} />

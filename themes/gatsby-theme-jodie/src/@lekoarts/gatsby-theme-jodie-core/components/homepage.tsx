@@ -1,35 +1,9 @@
 import * as React from "react"
-import { PageProps } from "gatsby"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import Homepage from "../../../components/homepage"
+import type { PageProps } from "gatsby"
+import Homepage, { Head, JodieHomepageProps } from "../../../components/homepage"
 
-type DataProps = {
-  projects: {
-    nodes: {
-      slug: string
-      title: string
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-        }
-      }
-      __typename: "MdxProject"
-    }[]
-  }
-  pages: {
-    nodes: {
-      slug: string
-      title: string
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-        }
-      }
-      __typename: "MdxPage"
-    }[]
-  }
-}
-
-export default function JodieCoreHomepage({ children, ...props }: PageProps<DataProps>) {
+export default function JodieCoreHomepage({ children, ...props }: PageProps<JodieHomepageProps>) {
   return <Homepage {...props}>{children}</Homepage>
 }
+
+export { Head }

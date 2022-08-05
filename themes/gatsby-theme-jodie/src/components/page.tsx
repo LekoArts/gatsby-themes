@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import * as React from "react"
-import { PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import Seo from "./seo"
 
-type DataProps = {
+export type JodiePageProps = {
   page: {
     title: string
     slug: string
@@ -24,14 +24,8 @@ type DataProps = {
   }
 }
 
-const Page: React.FC<PageProps<DataProps>> = ({ data: { page }, location }) => (
+const Page: React.FC<PageProps<JodiePageProps>> = ({ data: { page } }) => (
   <Layout color={page.color || undefined}>
-    <Seo
-      title={page.title}
-      description={page.excerpt}
-      pathname={location.pathname}
-      image={page.cover.childImageSharp.resize.src}
-    />
     <div
       sx={{
         variant: page.custom ? `content.custom` : `content.page`,
@@ -44,3 +38,12 @@ const Page: React.FC<PageProps<DataProps>> = ({ data: { page }, location }) => (
 )
 
 export default Page
+
+export const Head: HeadFC<JodiePageProps> = ({ data: { page }, location }) => (
+  <Seo
+    title={page.title}
+    description={page.excerpt}
+    pathname={location.pathname}
+    image={page.cover.childImageSharp.resize.src}
+  />
+)

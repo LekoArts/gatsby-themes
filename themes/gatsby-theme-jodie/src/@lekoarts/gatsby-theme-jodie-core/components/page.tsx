@@ -1,25 +1,9 @@
 import * as React from "react"
-import { PageProps } from "gatsby"
-import Page from "../../../components/page"
+import type { PageProps } from "gatsby"
+import Page, { Head, JodiePageProps } from "../../../components/page"
 
-type DataProps = {
-  page: {
-    title: string
-    slug: string
-    excerpt: string
-    body: string
-    color: string
-    custom: boolean
-    cover: {
-      childImageSharp: {
-        resize: {
-          src: string
-        }
-      }
-    }
-  }
-}
-
-export default function JodieCorePage({ children, ...props }: PageProps<DataProps>) {
+export default function JodieCorePage({ children, ...props }: PageProps<JodiePageProps>) {
   return <Page {...props}>{children}</Page>
 }
+
+export { Head }

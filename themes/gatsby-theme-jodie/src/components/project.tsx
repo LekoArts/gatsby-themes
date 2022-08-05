@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui"
 import * as React from "react"
-import { PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { transparentize } from "polished"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "./layout"
 import Seo from "./seo"
 
-type DataProps = {
+export type JodieProjectProps = {
   project: {
     body: string
     excerpt: string
@@ -36,14 +36,8 @@ type DataProps = {
   }
 }
 
-const Project: React.FC<PageProps<DataProps>> = ({ data: { project, images }, location }) => (
+const Project: React.FC<PageProps<JodieProjectProps>> = ({ data: { project, images } }) => (
   <Layout color={project.color || undefined}>
-    <Seo
-      title={project.title}
-      description={project.excerpt}
-      pathname={location.pathname}
-      image={project.cover.childImageSharp.resize.src}
-    />
     <div sx={{ variant: `content.project` }}>
       <div sx={{ fontSize: 2, textTransform: `uppercase`, letterSpacing: `wider`, mb: 2 }}>{project.category}</div>
       <Heading as="h1" variant="styles.h1" sx={{ mt: 0 }}>
@@ -64,3 +58,12 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { project, images }, lo
 )
 
 export default Project
+
+export const Head: HeadFC<JodieProjectProps> = ({ data: { project }, location }) => (
+  <Seo
+    title={project.title}
+    description={project.excerpt}
+    pathname={location.pathname}
+    image={project.cover.childImageSharp.resize.src}
+  />
+)
