@@ -1,6 +1,6 @@
-require(`dotenv`).config()
+import { GatsbyConfig } from "gatsby"
 
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteTitleAlt: `{{readme-name}} - TODO`,
   },
@@ -8,12 +8,6 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-{{kebabCase name}}`,
       options: {},
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
-      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -39,8 +33,8 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-netlify`,
   ],
 }
+
+export default config
