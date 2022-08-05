@@ -5,6 +5,9 @@ describe(`gatsby-theme-cara`, () => {
   beforeEach(() => {
     cy.visit(`/`).waitForRouteChange()
   })
+  it(`should have correct html[lang] attribute`, () => {
+    cy.get(`html`).should(`have.attr`, `lang`, `en`)
+  })
   it(`should have correct title in head`, () => {
     cy.title().should(`eq`, `Cara - Gatsby Starter Portfolio`)
   })
