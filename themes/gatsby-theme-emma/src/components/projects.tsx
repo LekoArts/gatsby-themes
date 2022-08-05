@@ -1,11 +1,13 @@
 /** @jsx jsx */
+import type { HeadFC } from "gatsby"
 import { jsx, Container, Themed } from "theme-ui"
 import { useTrail } from "react-spring"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import ProjectItem from "./project-item"
+import SEO from "./seo"
 
-type ProjectsProps = {
+export type EmmaProjectsProps = {
   projects: {
     color: string
     slug: string
@@ -18,10 +20,9 @@ type ProjectsProps = {
       }
     }
   }[]
-  [key: string]: any
 }
 
-const Projects = ({ projects }: ProjectsProps) => {
+const Projects: React.FC<EmmaProjectsProps> = ({ projects }) => {
   const trail = useTrail(projects.length, {
     from: { height: `0%` },
     to: { height: `100%` },
@@ -77,3 +78,5 @@ const Projects = ({ projects }: ProjectsProps) => {
 }
 
 export default Projects
+
+export const Head: HeadFC = () => <SEO />

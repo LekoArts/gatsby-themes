@@ -1,37 +1,36 @@
 /** @jsx jsx */
 import { animated, useSpring, config } from "react-spring"
+import type { HeadFC, PageProps } from "gatsby"
 import { Container, jsx, Flex, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import Hero from "./hero"
 import ProjectInfo from "./project-info"
+import SEO from "./seo"
 
-type ProjectProps = {
-  data: {
-    project: {
-      body: string
-      excerpt: string
-      client: string
-      color: string
-      date: string
-      service: string
-      slug: string
-      title: string
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-          resize: {
-            src: string
-          }
+export type EmmaProjectProps = {
+  project: {
+    body: string
+    excerpt: string
+    client: string
+    color: string
+    date: string
+    service: string
+    slug: string
+    title: string
+    cover: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+        resize: {
+          src: string
         }
       }
     }
   }
-  [key: string]: any
 }
 
-const Project = ({ data: { project } }: ProjectProps) => {
+const Project: React.FC<PageProps<EmmaProjectProps>> = ({ data: { project } }) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -76,3 +75,17 @@ const Project = ({ data: { project } }: ProjectProps) => {
 }
 
 export default Project
+
+export const Head: HeadFC<EmmaProjectProps> = ({ data: { project } }) => (
+  <SEO
+    title={project.title}
+    description={project.excerpt}
+    pathname={project.slug}
+    image={project.cover.childImageSharp.resize!.src}
+  >
+    <meta name="twitter:label1" value="Client" />
+    <meta name="twitter:label2" value="Date" />
+    <meta name="twitter:data1" value={project.client} />
+    <meta name="twitter:data2" value={project.date} />
+  </SEO>
+)

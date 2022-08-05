@@ -3,27 +3,26 @@ import { animated, useSpring, config } from "react-spring"
 import { Container, jsx, Flex, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
+import { HeadFC, PageProps } from "gatsby"
 import Layout from "./layout"
 import Hero from "./hero"
+import SEO from "./seo"
 
-type PageProps = {
-  data: {
-    page: {
-      title: string
-      slug: string
-      excerpt: string
-      body: string
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-        }
+export type EmmaPageProps = {
+  page: {
+    title: string
+    slug: string
+    excerpt: string
+    body: string
+    cover: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
       }
     }
   }
-  [key: string]: any
 }
 
-const Page = ({ data: { page } }: PageProps) => {
+const Page: React.FC<PageProps<EmmaPageProps>> = ({ data: { page } }) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -64,3 +63,7 @@ const Page = ({ data: { page } }: PageProps) => {
 }
 
 export default Page
+
+export const Head: HeadFC<EmmaPageProps> = ({ data: { page } }) => (
+  <SEO title={page.title} description={page.excerpt} pathname={page.slug} />
+)

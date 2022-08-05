@@ -1,7 +1,5 @@
-import type { HeadFC } from "gatsby"
 import * as React from "react"
-import Projects from "../../../components/projects"
-import SEO from "../../../components/seo"
+import Projects, { Head } from "../../../components/projects"
 
 type Props = {
   data: {
@@ -19,4 +17,4 @@ export default function EmmaCoreProjects({ ...props }: Props) {
   return <Projects projects={allProject.nodes} {...props} />
 }
 
-export const Head: HeadFC = () => <SEO />
+export { Head }
