@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx, Heading, Flex } from "theme-ui"
-import { Link } from "gatsby"
+import { HeadFC, Link } from "gatsby"
 import Layout from "./layout"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import Listing from "./listing"
 import replaceSlashes from "../utils/replaceSlashes"
 import Seo from "./seo"
 
-type TagProps = {
+export type MBTagProps = {
   posts: {
     slug: string
     title: string
@@ -24,16 +24,14 @@ type TagProps = {
     isCreatedByStatefulCreatePages: boolean
     slug: string
     name: string
-    [key: string]: any
   }
 }
 
-const Tag = ({ posts, pageContext }: TagProps) => {
+const Tag = ({ posts, pageContext }: MBTagProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig()
 
   return (
     <Layout>
-      <Seo title={`Tag: ${pageContext.name}`} />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
           {pageContext.name}
@@ -51,3 +49,5 @@ const Tag = ({ posts, pageContext }: TagProps) => {
 }
 
 export default Tag
+
+export const Head: HeadFC<unknown, { name: string }> = ({ pageContext }) => <Seo title={`Tag: ${pageContext.name}`} />

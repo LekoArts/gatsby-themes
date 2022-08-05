@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import type { HeadFC, PageProps } from "gatsby"
 import * as React from "react"
 import { jsx, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -7,26 +8,24 @@ import ItemTags from "./item-tags"
 import Seo from "./seo"
 import PostFooter from "./post-footer"
 
-type PostProps = {
-  data: {
-    post: {
+export type MBPostProps = {
+  post: {
+    slug: string
+    title: string
+    date: string
+    tags?: {
+      name: string
       slug: string
-      title: string
-      date: string
-      tags?: {
-        name: string
-        slug: string
-      }[]
-      description?: string
-      canonicalUrl?: string
-      body: string
-      excerpt: string
-      timeToRead?: number
-      banner?: {
-        childImageSharp: {
-          resize: {
-            src: string
-          }
+    }[]
+    description?: string
+    canonicalUrl?: string
+    body: string
+    excerpt: string
+    timeToRead?: number
+    banner?: {
+      childImageSharp: {
+        resize: {
+          src: string
         }
       }
     }
@@ -36,15 +35,8 @@ type PostProps = {
 const px = [`32px`, `16px`, `8px`, `4px`]
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 
-const Post = ({ data: { post } }: PostProps) => (
+const Post: React.FC<PageProps<MBPostProps>> = ({ data: { post } }) => (
   <Layout>
-    <Seo
-      title={post.title}
-      description={post.description ? post.description : post.excerpt}
-      image={post.banner ? post.banner?.childImageSharp?.resize?.src : undefined}
-      pathname={post.slug}
-      canonicalUrl={post.canonicalUrl}
-    />
     <Heading as="h1" variant="styles.h1">
       {post.title}
     </Heading>
@@ -73,3 +65,13 @@ const Post = ({ data: { post } }: PostProps) => (
 )
 
 export default Post
+
+export const Head: HeadFC<MBPostProps> = ({ data: { post } }) => (
+  <Seo
+    title={post.title}
+    description={post.description ? post.description : post.excerpt}
+    image={post.banner ? post.banner?.childImageSharp?.resize?.src : undefined}
+    pathname={post.slug}
+    canonicalUrl={post.canonicalUrl}
+  />
+)

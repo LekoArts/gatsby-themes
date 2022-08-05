@@ -8,3 +8,5 @@ export default function Tag({ data, pageContext }: { data: any; pageContext: any
     </div>
   )
 }
+
+export const Head = () => <title>Tag</title>

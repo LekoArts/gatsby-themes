@@ -1,14 +1,9 @@
+import type { PageProps } from "gatsby"
 import * as React from "react"
-import Post from "../../../components/post"
+import Post, { Head, MBPostProps } from "../../../components/post"
 
-type Props = {
-  data: {
-    post: any
-    [key: string]: any
-  }
-  [key: string]: any
-}
-
-export default function MinimalBlogCorePost({ ...props }: Props) {
+export default function MinimalBlogCorePost({ ...props }: PageProps<MBPostProps>) {
   return <Post {...props} />
 }
+
+export { Head }

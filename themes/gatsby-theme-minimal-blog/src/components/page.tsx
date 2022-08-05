@@ -1,24 +1,21 @@
 /** @jsx jsx */
+import type { HeadFC, PageProps } from "gatsby"
 import { jsx, Heading } from "theme-ui"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import Seo from "./seo"
 
-type PageProps = {
-  data: {
-    page: {
-      title: string
-      slug: string
-      excerpt: string
-      body: string
-    }
+export type MBPageProps = {
+  page: {
+    title: string
+    slug: string
+    excerpt: string
+    body: string
   }
-  [key: string]: any
 }
 
-const Page = ({ data: { page } }: PageProps) => (
+const Page: React.FC<PageProps<MBPageProps>> = ({ data: { page } }) => (
   <Layout>
-    <Seo title={page.title} description={page.excerpt} />
     <Heading as="h1" variant="styles.h1">
       {page.title}
     </Heading>
@@ -29,3 +26,5 @@ const Page = ({ data: { page } }: PageProps) => (
 )
 
 export default Page
+
+export const Head: HeadFC<MBPageProps> = ({ data: { page } }) => <Seo title={page.title} description={page.excerpt} />

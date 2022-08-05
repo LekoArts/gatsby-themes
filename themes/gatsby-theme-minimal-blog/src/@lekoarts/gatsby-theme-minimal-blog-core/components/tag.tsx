@@ -1,5 +1,5 @@
 import * as React from "react"
-import Tag from "../../../components/tag"
+import Tag, { Head } from "../../../components/tag"
 
 type Props = {
   data: {
@@ -22,3 +22,5 @@ export default function MinimalBlogCoreTag({ ...props }: Props) {
 
   return <Tag posts={allPost.nodes} {...props} />
 }
+
+export { Head }

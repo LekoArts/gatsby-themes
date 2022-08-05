@@ -1,5 +1,5 @@
 import * as React from "react"
-import Blog from "../../../components/blog"
+import Blog, { Head } from "../../../components/blog"
 
 type Props = {
   data: {
@@ -16,3 +16,5 @@ export default function MinimalBlogCoreBlog({ ...props }: Props) {
 
   return <Blog posts={allPost.nodes} {...props} />
 }
+
+export { Head }

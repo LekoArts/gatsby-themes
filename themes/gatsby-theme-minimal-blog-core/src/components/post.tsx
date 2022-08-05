@@ -8,3 +8,5 @@ export default function Post({ data, pageContext }: { data: any; pageContext: an
     </div>
   )
 }
+
+export const Head = () => <title>Post</title>
