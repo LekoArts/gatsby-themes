@@ -19,3 +19,5 @@ const Template = () => (
 )
 
 export default Template
+
+export const Head = () => <title>Homepage</title>

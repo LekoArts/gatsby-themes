@@ -2,7 +2,6 @@
 import * as React from "react"
 import { jsx } from "theme-ui"
 import { Global } from "@emotion/react"
-import Seo from "../../components/seo"
 
 const Layout = ({ children }) => (
   <React.Fragment>
@@ -25,7 +24,6 @@ const Layout = ({ children }) => (
         },
       })}
     />
-    <Seo />
     <div sx={{ p: 3, maxWidth: 1024, margin: `0 auto` }}>{children}</div>
   </React.Fragment>
 )
