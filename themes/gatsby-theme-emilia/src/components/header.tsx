@@ -5,8 +5,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 import HeaderBackground from "./header-background"
-import Location from "../assets/location"
 import SocialMediaList from "./social-media-list"
+import Svg from "./svg"
 
 type AvatarStaticQuery = {
   file: {
@@ -90,19 +90,22 @@ const Header = () => {
         <animated.div style={fadeUpPropsDelay}>
           <Flex
             sx={{
-              svg: {
-                width: `20px`,
-                height: `20px`,
-                ".primary": { color: `iconPrimary` },
-                ".secondary": { color: `iconSecondary` },
-                mr: 2,
-              },
               justifyContent: `center`,
               alignItems: `center`,
               color: `text`,
             }}
           >
-            <Location /> {location}
+            <Svg
+              id="location"
+              width="20px"
+              height="20px"
+              sx={{
+                color: `iconPrimary`,
+                mr: 2,
+              }}
+            />
+            {` `}
+            {location}
           </Flex>
         </animated.div>
         <div data-testid="social-header" sx={{ mt: 4, mb: 6, a: { mx: 2 } }}>
