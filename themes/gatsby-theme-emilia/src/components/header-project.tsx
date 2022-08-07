@@ -6,8 +6,8 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import HeaderBackground from "./header-background"
-import LeftArrow from "../assets/left-arrow"
 import useEmiliaConfig from "../hooks/use-emilia-config"
+import Svg from "./svg"
 
 type HeaderProjectProps = {
   title: string
@@ -67,7 +67,7 @@ const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectPr
               "&:hover, &:focus": { svg: { transform: `translateX(-6px)` } },
             }}
           >
-            <LeftArrow />
+            <Svg id="leftArrow" width="20" height="18" />
             <div
               sx={{
                 overflow: `hidden`,
