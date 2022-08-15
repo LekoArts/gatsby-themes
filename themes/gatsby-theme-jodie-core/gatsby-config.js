@@ -21,9 +21,7 @@ module.exports = (themeOptions) => {
       },
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {
-          lessBabel: true,
-        },
+        options: {},
       },
       `gatsby-transformer-sharp`,
       options.sharp && {

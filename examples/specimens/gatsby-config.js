@@ -28,9 +28,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        lessBabel: true,
-        extensions: [`.mdx`],
-        remarkPlugins,
+        mdxOptions: {
+          remarkPlugins,
+        },
       },
     },
     `gatsby-plugin-catch-links`,

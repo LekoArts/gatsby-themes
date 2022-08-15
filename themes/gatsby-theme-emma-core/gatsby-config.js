@@ -35,7 +35,6 @@ module.exports = (themeOptions) => {
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
-          lessBabel: true,
           gatsbyRemarkPlugins: [
             {
               resolve: `gatsby-remark-images`,

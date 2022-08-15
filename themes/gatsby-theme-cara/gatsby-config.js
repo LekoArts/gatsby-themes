@@ -20,9 +20,7 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
     },
     mdx && {
       resolve: `gatsby-plugin-mdx`,
-      options: {
-        lessBabel: true,
-      },
+      options: {},
     },
     `gatsby-plugin-theme-ui`,
   ].filter(Boolean),
