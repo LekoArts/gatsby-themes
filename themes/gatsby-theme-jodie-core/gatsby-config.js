@@ -1,3 +1,5 @@
+// eslint-disable-next-line global-require
+const remarkPlugins = [require(`remark-gfm`)]
 const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
@@ -21,7 +23,11 @@ module.exports = (themeOptions) => {
       },
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {},
+        options: {
+          mdxOptions: {
+            remarkPlugins,
+          },
+        },
       },
       `gatsby-transformer-sharp`,
       options.sharp && {
