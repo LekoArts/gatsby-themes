@@ -15,7 +15,7 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sections`,
-        path: `${__dirname}/src/sections`,
+        path: `./src/`,
       },
     },
     mdx && {
