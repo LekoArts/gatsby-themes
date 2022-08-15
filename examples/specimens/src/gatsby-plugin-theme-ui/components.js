@@ -22,8 +22,23 @@ import {
   Table,
   Video,
 } from "@lekoarts/gatsby-theme-specimens"
-import { preToCodeBlock } from "mdx-utils"
 import Code from "../components/code"
+
+const preToCodeBlock = (preProps) => {
+  if (preProps?.children?.type === `code`) {
+    const { children: codeString, className = ``, ...props } = preProps.children.props
+
+    const match = className.match(/language-([\0-\uFFFF]*)/)
+    return {
+      codeString: codeString.trim(),
+      className,
+      language: match !== null ? match[1] : ``,
+      ...props,
+    }
+  }
+
+  return undefined
+}
 
 const heading = (Tag) => (props) =>
   props.id ? (
@@ -94,7 +109,6 @@ const components = {
     // it's possible to have a pre without a code in it
     return <pre {...preProps} />
   },
-  wrapper: ({ children }) => <React.Fragment>{children}</React.Fragment>,
 }
 
 export default components
