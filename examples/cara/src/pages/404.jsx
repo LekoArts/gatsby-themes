@@ -12,7 +12,6 @@ import Inner from "@lekoarts/gatsby-theme-cara/src/elements/inner"
 
 const NotFound = () => (
   <Layout>
-    <Seo title="404 - Not Found" />
     <Parallax pages={1}>
       <div>
         <Divider speed={0.2} offset={0} factor={1}>
@@ -57,3 +56,5 @@ const NotFound = () => (
 )
 
 export default NotFound
+
+export const Head = () => <Seo title="404 - Not Found" />

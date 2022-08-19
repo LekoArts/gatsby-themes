@@ -117,8 +117,6 @@ module.exports = {
     siteUrl: `https://jodie.lekoarts.de`,
     // Used for SEO
     siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
-    // Will be set on the html tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

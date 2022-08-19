@@ -119,8 +119,6 @@ module.exports = {
     siteUrl: `https://emilia.lekoarts.de`,
     // Used for SEO
     siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

@@ -13,6 +13,7 @@ type CardProps = {
       }
     }
     title: string
+    contentFilePath?: string
   }
   overlay?: string
   shadow?: string[]
