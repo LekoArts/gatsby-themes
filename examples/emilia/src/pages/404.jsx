@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Link } from "gatsby"
 import { Container, Themed, Link as TLink } from "theme-ui"
 import Header from "@lekoarts/gatsby-theme-emilia/src/components/header"
