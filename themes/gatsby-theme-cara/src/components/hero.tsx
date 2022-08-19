@@ -11,7 +11,7 @@ const Hero = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>
     <Divider speed={0.2} offset={offset} factor={factor}>
       <UpDown>
-        <Svg icon="triangle" hiddenMobile width={48} stroke color="icon_orange" left="10%" top="20%" />
+        <Svg icon="triangle" hiddenMobile width={56} stroke color="icon_orange" left="10%" top="20%" />
         <Svg icon="hexa" width={48} stroke color="icon_red" left="60%" top="70%" />
         <Svg icon="box" width={6} color="icon_darker" left="60%" top="15%" />
       </UpDown>
