@@ -22,7 +22,6 @@ export const query = graphql`
       }
     }
     project(slug: { eq: $slug }) {
-      body
       excerpt
       date(formatString: $formatString)
       slug

@@ -6,9 +6,7 @@ import Card from "./card"
 type ProjectPaginationProps = {
   prev: {
     slug: string
-    parent: {
-      fileAbsolutePath: string
-    }
+    contentFilePath: string
     title: string
     cover: {
       childImageSharp: {
@@ -18,9 +16,7 @@ type ProjectPaginationProps = {
   }
   next: {
     slug: string
-    parent: {
-      fileAbsolutePath: string
-    }
+    contentFilePath: string
     title: string
     cover: {
       childImageSharp: {

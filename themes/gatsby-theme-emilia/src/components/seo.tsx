@@ -10,7 +10,7 @@ type SEOProps = {
   children?: React.ReactNode
 }
 
-const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: SEOProps) => {
+const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children = null }: SEOProps) => {
   const site = useSiteMetadata()
 
   const {
@@ -55,4 +55,4 @@ const SEO = ({ title = ``, description = ``, pathname = ``, image = ``, children
   )
 }
 
-export default SEO
+export default Seo
