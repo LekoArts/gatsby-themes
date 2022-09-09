@@ -31,10 +31,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Wait for NPM package propagation
-        if: steps.changesets.outputs.published == 'true'
-        uses: kibertoad/wait-action@1.0.1
-        with:
-          time: "30s"
+        run: sleep 30s
+        shell: bash
       - name: Publish Starters
         if: steps.changesets.outputs.published == 'true'
         uses: LekoArts/actions-push-subdirectories@master
