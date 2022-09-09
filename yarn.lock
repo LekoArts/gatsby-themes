@@ -3122,10 +3122,10 @@ __metadata:
     "@react-spring/parallax": ^9.5.2
     "@react-spring/web": ^9.5.2
     "@theme-ui/presets": ^0.11.1
-    gatsby-plugin-mdx: ^3.19.0
-    gatsby-plugin-react-helmet: ^5.19.0
+    gatsby-plugin-mdx: ^3.20.0
+    gatsby-plugin-react-helmet: ^5.22.0
     gatsby-plugin-theme-ui: ^0.11.1
-    gatsby-source-filesystem: ^4.19.0
+    gatsby-source-filesystem: ^4.22.0
     react-helmet: ^6.1.0
     theme-ui: ^0.11.1
   peerDependencies:
@@ -10966,14 +10966,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-type@npm:^16.5.3":
-  version: 16.5.3
-  resolution: "file-type@npm:16.5.3"
+"file-type@npm:^16.5.3, file-type@npm:^16.5.4":
+  version: 16.5.4
+  resolution: "file-type@npm:16.5.4"
   dependencies:
     readable-web-to-node-stream: ^3.0.0
     strtok3: ^6.2.4
     token-types: ^4.1.1
-  checksum: 38a4443d0f7b9b3de8a44a1d75d441f9ddb544a1adbf22ec7bc07d135452c3464000c64daa51220ffec6a38ceec7565a1290337bd81aab2e6273c79db5ed9ef3
+  checksum: d983c0f36491c57fcb6cc70fcb02c36d6b53f312a15053263e1924e28ca8314adf0db32170801ad777f09432c32155f31715ceaee66310947731588120d7ec27
   languageName: node
   linkType: hard
 
@@ -11478,9 +11478,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^3.18.1, gatsby-core-utils@npm:^3.19.0, gatsby-core-utils@npm:^3.20.0":
-  version: 3.20.0
-  resolution: "gatsby-core-utils@npm:3.20.0"
+"gatsby-core-utils@npm:^3.18.1, gatsby-core-utils@npm:^3.19.0, gatsby-core-utils@npm:^3.20.0, gatsby-core-utils@npm:^3.22.0":
+  version: 3.22.0
+  resolution: "gatsby-core-utils@npm:3.22.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     ci-info: 2.0.0
@@ -11497,7 +11497,7 @@ __metadata:
     resolve-from: ^5.0.0
     tmp: ^0.2.1
     xdg-basedir: ^4.0.0
-  checksum: 9570a4fba57f14ee70229cfe1fd24191597c728520493303c42dd8ae3da5c0e50736ea7e554e9ac7e569fa12d00675a0988e2ee5d7b119a649ae3d4ca102dba0
+  checksum: 3659656d95d307313dd81dae6fac36df46c233b3b2a125306cb692ac75a30bfb906beb57dbec8fb1b1193d39c579a1c733dbee9a59071baea072b98bbc935efc
   languageName: node
   linkType: hard
 
@@ -11781,15 +11781,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-react-helmet@npm:^5.15.0, gatsby-plugin-react-helmet@npm:^5.18.0, gatsby-plugin-react-helmet@npm:^5.19.0, gatsby-plugin-react-helmet@npm:^5.20.0":
-  version: 5.20.0
-  resolution: "gatsby-plugin-react-helmet@npm:5.20.0"
+"gatsby-plugin-react-helmet@npm:^5.15.0, gatsby-plugin-react-helmet@npm:^5.18.0, gatsby-plugin-react-helmet@npm:^5.19.0, gatsby-plugin-react-helmet@npm:^5.20.0, gatsby-plugin-react-helmet@npm:^5.22.0":
+  version: 5.22.0
+  resolution: "gatsby-plugin-react-helmet@npm:5.22.0"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
     gatsby: ^4.0.0-next
     react-helmet: ^5.1.3 || ^6.0.0
-  checksum: d028dea0aadc8b489b9bd912e53d93df8580c48fc070492a4fad09039e8a64e90456f94c7459dbd1d2543e03ca2a18e73ad39dedba6cf11ffba42c5a2c8022a1
+  checksum: e4d5eca4947495f7b3b513c6508d1eb6c56d6a8a2f3f26fe242c99fed88cad1d18cea69992942122752ee2a6afff4741d7a311105eb29dd3fbd281d27f2b554e
   languageName: node
   linkType: hard
 
@@ -11986,25 +11986,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^4.15.0, gatsby-source-filesystem@npm:^4.18.1, gatsby-source-filesystem@npm:^4.19.0, gatsby-source-filesystem@npm:^4.20.0":
-  version: 4.20.0
-  resolution: "gatsby-source-filesystem@npm:4.20.0"
+"gatsby-source-filesystem@npm:^4.15.0, gatsby-source-filesystem@npm:^4.18.1, gatsby-source-filesystem@npm:^4.19.0, gatsby-source-filesystem@npm:^4.20.0, gatsby-source-filesystem@npm:^4.22.0":
+  version: 4.22.0
+  resolution: "gatsby-source-filesystem@npm:4.22.0"
   dependencies:
     "@babel/runtime": ^7.15.4
     chokidar: ^3.5.3
-    file-type: ^16.5.3
+    file-type: ^16.5.4
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.20.0
-    got: ^9.6.0
+    gatsby-core-utils: ^3.22.0
     md5-file: ^5.0.0
     mime: ^2.5.2
     pretty-bytes: ^5.4.1
-    progress: ^2.0.3
     valid-url: ^1.0.9
-    xstate: ^4.26.1
+    xstate: 4.32.1
   peerDependencies:
     gatsby: ^4.0.0-next
-  checksum: 16c0eed83cafe879a5117b2abd1e8c3f4b20825e98583ceeb8479dfa1ed6e5f43074b02d7ad64dcbf3fee9b6bcab47e96c1fe0e5f6ecac4aac0efc809974f967
+  checksum: 183c7a298cd6cacb79780066656d259159d48b7536e1874c21088fdfe4104150a63312ab7d201fc812dd8393454b709427e6a0f7ffc7c014ecc0add2d3894e31
   languageName: node
   linkType: hard
 
@@ -22600,10 +22598,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xstate@npm:^4.26.0, xstate@npm:^4.26.1":
-  version: 4.26.1
-  resolution: "xstate@npm:4.26.1"
-  checksum: b31a0f2033ec5c9d50f5e15682b3a0b8977f972a02ab33c22f29e3b3d931d07eda75e5c823377bd6a32b46d4467ec8eee4e711d2d2948330ae73bbd828e12920
+"xstate@npm:4.32.1, xstate@npm:^4.26.0":
+  version: 4.32.1
+  resolution: "xstate@npm:4.32.1"
+  checksum: c16298b2b3dab7689da99d5b1e5128d2ca3bf381f37c8cb95e4af83bb1044b9251629fc00758f7f31785a72c2ddddd26f602b2801e6068cd78373b7f6dd6c28b
   languageName: node
   linkType: hard
 
