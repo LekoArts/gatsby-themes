@@ -2,4 +2,4 @@
 "@lekoarts/gatsby-theme-emilia": patch
 ---
 
-Align text on card in center
+Set `text-align: center` on text in cards
