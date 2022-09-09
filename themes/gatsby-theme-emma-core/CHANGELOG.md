@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.13
+
+### Patch Changes
+
+- [#981](https://github.com/LekoArts/gatsby-themes/pull/981) [`d4be529`](https://github.com/LekoArts/gatsby-themes/commit/d4be529a1f2f350c5b57a533ffafff93a96aad4f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emma-core
+
 ## 3.0.12
 
 ### Patch Changes
