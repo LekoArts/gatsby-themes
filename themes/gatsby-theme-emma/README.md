@@ -111,8 +111,7 @@ module.exports = {
     siteUrl: `https://emma.lekoarts.de`,
     // Used for SEO
     siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
+
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

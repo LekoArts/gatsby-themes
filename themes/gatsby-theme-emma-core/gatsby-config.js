@@ -10,7 +10,6 @@ module.exports = (themeOptions) => {
       siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
       siteUrl: `https://emma.lekoarts.de`,
       siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-      siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
       basePath: options.basePath,

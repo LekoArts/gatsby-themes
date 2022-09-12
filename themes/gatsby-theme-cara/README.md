@@ -103,8 +103,6 @@ module.exports = {
     siteUrl: `https://cara.lekoarts.de`,
     // Used for SEO
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

@@ -10,7 +10,6 @@ module.exports = (themeOptions) => {
       siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
       siteUrl: `https://gatsby-theme-graphql-playground.netlify.com`,
       siteDescription: `GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).`,
-      siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
       graphiQLUrl: `https://yx3py-8000.sse.codesandbox.io/___graphql`,
