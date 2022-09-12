@@ -2,6 +2,9 @@ require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   plugins: [
     {

@@ -3,6 +3,9 @@ const remarkPlugins = [require(`remark-slug`)]
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     siteTitle: `Specimens for Design Systems - @lekoarts/gatsby-theme-specimens`,

@@ -6,7 +6,6 @@ import Seo from "@lekoarts/gatsby-theme-emma/src/components/seo"
 
 const NotFound = () => (
   <Layout>
-    <Seo title="404 - Not found" />
     <Container>
       <Themed.p>
         Oh, no!
@@ -21,3 +20,5 @@ const NotFound = () => (
 )
 
 export default NotFound
+
+export const Head = () => <Seo title="404 - Not Found" />

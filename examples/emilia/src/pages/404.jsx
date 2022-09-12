@@ -22,5 +22,13 @@ const NotFound = () => (
 )
 
 export default NotFound
+<<<<<<< HEAD
 
 export const Head = () => <Seo title="404 - Not found" />
+||||||| cd9c9a6
+=======
+
+export const Head = () => <Seo title="404 - Not Found" />
+>>>>>>> new-major-q3-22
+
+export const Head = () => <Seo title="404 - Not Found" />
