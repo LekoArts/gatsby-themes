@@ -104,7 +104,6 @@ module.exports = {
     siteUrl: `https://gatsby-theme-graphql-playground.netlify.com`,
     // Used for SEO
     siteDescription: `Stub description for graphql-playground`,
-
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

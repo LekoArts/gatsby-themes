@@ -8,7 +8,7 @@ import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import Header from "./header"
 import Card from "./card"
-import SEO from "./seo"
+import Seo from "./seo"
 
 type Props = {
   projects: {
@@ -97,4 +97,4 @@ const Projects = ({ projects }: Props) => {
 
 export default Projects
 
-export const Head: HeadFC = () => <SEO />
+export const Head: HeadFC = () => <Seo />

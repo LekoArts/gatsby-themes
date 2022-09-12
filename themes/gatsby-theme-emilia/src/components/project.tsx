@@ -6,7 +6,7 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import HeaderProject from "./header-project"
 import ProjectPagination from "./project-pagination"
-import SEO from "./seo"
+import Seo from "./seo"
 
 export type EmiliaProjectProps = {
   project: {
@@ -89,7 +89,7 @@ const Project: React.FC<PageProps<EmiliaProjectProps, EmiliaProjectPageContext>>
 export default Project
 
 export const Head: HeadFC<EmiliaProjectProps> = ({ data: { project } }) => (
-  <SEO
+  <Seo
     title={project.title}
     description={project.excerpt}
     pathname={project.slug}
