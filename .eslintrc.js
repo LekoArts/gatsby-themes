@@ -88,6 +88,7 @@ module.exports = {
     "react/require-default-props": 0,
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
+    "react/no-unknown-property": [`error`, { ignore: [`sx`] }],
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/jsx-fragments": 0,
