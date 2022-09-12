@@ -123,4 +123,21 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: `*.mdx`,
+      parser: `eslint-mdx`,
+      extends: [`plugin:mdx/recommended`],
+      rules: {
+        indent: 0,
+        "react/jsx-no-undef": 0,
+        "react/jsx-filename-extension": 0,
+        "react/self-closing-comp": 0,
+        "jsx-a11y/heading-has-content": 0,
+        "import/no-named-as-default": 0,
+        "import/no-named-as-default-member": 0,
+        "@typescript-eslint/no-unused-vars": 0,
+      },
+    },
+  ],
 }

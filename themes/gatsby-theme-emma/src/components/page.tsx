@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { animated, useSpring, config } from "react-spring"
 import { Container, jsx, Flex, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { HeadFC, PageProps } from "gatsby"
 import Layout from "./layout"
@@ -13,7 +12,6 @@ export type EmmaPageProps = {
     title: string
     slug: string
     excerpt: string
-    body: string
     cover: {
       childImageSharp: {
         gatsbyImageData: IGatsbyImageData
@@ -22,7 +20,7 @@ export type EmmaPageProps = {
   }
 }
 
-const Page: React.FC<PageProps<EmmaPageProps>> = ({ data: { page } }) => {
+const Page: React.FC<React.PropsWithChildren<PageProps<EmmaPageProps>>> = ({ data: { page }, children }) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -54,9 +52,7 @@ const Page: React.FC<PageProps<EmmaPageProps>> = ({ data: { page } }) => {
         </Flex>
       </Hero>
       <Container>
-        <animated.div style={contentProps}>
-          <MDXRenderer>{page.body}</MDXRenderer>
-        </animated.div>
+        <animated.div style={contentProps}>{children}</animated.div>
       </Container>
     </Layout>
   )
