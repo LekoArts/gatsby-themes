@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.0.13
+
+### Patch Changes
+
+- [#987](https://github.com/LekoArts/gatsby-themes/pull/987) [`d422ca1`](https://github.com/LekoArts/gatsby-themes/commit/d422ca1e1748034e0cc10e48e3e9fbfa45368903) Thanks [@LekoArts](https://github.com/LekoArts)! - Set `text-align: center` on text in cards
+
 ## 3.0.12
 
 ### Patch Changes
