@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { FontFamily, FontSize, Heading, filterStyles, FontWeight } from "@lekoarts/gatsby-theme-specimens"
 import { useTheme } from "./context"
 

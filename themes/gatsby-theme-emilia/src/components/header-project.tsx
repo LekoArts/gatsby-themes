@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from "react"
-import { Flex, jsx, Container, Heading, Themed } from "theme-ui"
+import { Flex, jsx, Container, Heading } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"

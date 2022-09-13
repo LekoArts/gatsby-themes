@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Container, Themed, Link as TLink } from "theme-ui"
+import { Container, Link as TLink } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import Layout from "@lekoarts/gatsby-theme-emma/src/components/layout"
 import Seo from "@lekoarts/gatsby-theme-emma/src/components/seo"
 

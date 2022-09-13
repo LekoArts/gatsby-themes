@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Flex, Box, jsx, Themed, Container, useColorMode, ThemeUICSSObject, get } from "theme-ui"
+import { Flex, Box, jsx, Container, useColorMode, ThemeUICSSObject, get } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage as Img, IGatsbyImageData } from "gatsby-plugin-image"
 import { Circle, Donut } from "./shapes"

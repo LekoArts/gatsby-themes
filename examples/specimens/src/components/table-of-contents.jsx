@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Themed } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { useStaticQuery, graphql } from "gatsby"
 
 const TableOfContents = () => {

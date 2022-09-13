@@ -1,7 +1,8 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
 import type { HeadFC } from "gatsby"
-import { jsx, Container, Themed, Box } from "theme-ui"
+import { jsx, Container, Box } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { useSpring, animated, config } from "react-spring"
 import { rgba } from "polished"
 import { IGatsbyImageData } from "gatsby-plugin-image"

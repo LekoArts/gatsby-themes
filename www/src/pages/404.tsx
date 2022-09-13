@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { PageProps, Link, HeadFC } from "gatsby"
-import { jsx, Themed, Container, get } from "theme-ui"
+import { jsx, Container, get } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
