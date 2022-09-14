@@ -1,6 +1,5 @@
 import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
-import nightOwl from "@theme-ui/prism/presets/night-owl"
 
 const theme = merge(tailwind, {
   config: {
@@ -61,7 +60,6 @@ const theme = merge(tailwind, {
       MozOsxFontSmoothing: `grayscale`,
     },
     pre: {
-      ...nightOwl,
       padding: 3,
     },
     p: {

@@ -1,3 +1,4 @@
+const rehypePrism = require(`@mapbox/rehype-prism`)
 const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
@@ -24,10 +25,26 @@ module.exports = (themeOptions) => {
           path: options.docsPath,
         },
       },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `data`,
+          path: `${__dirname}/src/data`,
+        },
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `theme-overrides`,
+          path: `./src/@lekoarts/gatsby-theme-graphql-playground`,
+        },
+      },
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
-          lessBabel: true,
+          mdxOptions: {
+            rehypePlugins: [rehypePrism],
+          },
         },
       },
       `gatsby-plugin-theme-ui`,

@@ -3,8 +3,7 @@ import { Sidenav } from "@theme-ui/sidenav"
 import { jsx, useColorMode } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import ColorModeToggle from "./colormode-toggle"
-// @ts-ignore
-import Navigation from "../data/navigation"
+import Navigation from "../data/navigation.mdx"
 
 const Sidebar = () => {
   const { siteTitle } = useSiteMetadata()
@@ -30,7 +29,11 @@ const Sidebar = () => {
           a: {
             fontWeight: `normal !important`,
             "&:hover": {
+              color: `primary`,
               textDecoration: `none !important`,
+            },
+            "&.active": {
+              color: `primary`,
             },
           },
           ul: {
