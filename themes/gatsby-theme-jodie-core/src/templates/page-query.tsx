@@ -11,7 +11,6 @@ export const query = graphql`
       title
       slug
       excerpt
-      body
       color
       custom
       cover {

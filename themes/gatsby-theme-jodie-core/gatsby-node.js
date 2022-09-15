@@ -13,7 +13,7 @@ const mdxResolverPassthrough = (fieldName) => async (source, args, context, info
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
+exports.createSchemaCustomization = ({ actions }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
   const { basePath, projectsPrefix } = withDefaults(themeOptions)
@@ -71,7 +71,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       color: String
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
     }
 
     type MdxProject implements Node & Project {
@@ -84,7 +84,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       color: String
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
     }
 
     interface Page implements Node {
@@ -96,7 +96,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       custom: Boolean @defaultFalse
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
     }
 
     type MdxPage implements Node & Page {
@@ -107,7 +107,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       custom: Boolean @defaultFalse
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
     }
 
     type JodieConfig implements Node {
@@ -148,6 +148,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       category: node.frontmatter.category,
       color: node.frontmatter.color ? node.frontmatter.color : undefined,
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
     }
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
@@ -178,6 +179,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       custom: node.frontmatter.custom,
       cover: node.frontmatter.cover,
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -261,6 +263,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         nodes {
           slug
           defer
+          contentFilePath
           ... on MdxProject {
             parent {
               ... on Mdx {
@@ -278,6 +281,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         nodes {
           slug
           defer
+          contentFilePath
         }
       }
     }
@@ -294,7 +298,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     projects.forEach((project) => {
       createPage({
         path: project.slug,
-        component: projectTemplate,
+        component: `${projectTemplate}?__contentFilePath=${project.contentFilePath}`,
         context: {
           slug: project.slug,
           formatString,
@@ -311,7 +315,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     pages.forEach((page) => {
       createPage({
         path: page.slug,
-        component: pageTemplate,
+        component: `${pageTemplate}?__contentFilePath=${page.contentFilePath}`,
         context: {
           slug: page.slug,
         },

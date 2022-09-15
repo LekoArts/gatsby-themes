@@ -2,7 +2,6 @@
 import { jsx } from "theme-ui"
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import Seo from "./seo"
 
@@ -11,7 +10,6 @@ export type JodiePageProps = {
     title: string
     slug: string
     excerpt: string
-    body: string
     color: string
     custom: boolean
     cover: {
@@ -24,7 +22,7 @@ export type JodiePageProps = {
   }
 }
 
-const Page: React.FC<PageProps<JodiePageProps>> = ({ data: { page } }) => (
+const Page: React.FC<React.PropsWithChildren<PageProps<JodiePageProps>>> = ({ data: { page }, children }) => (
   <Layout color={page.color || undefined}>
     <div
       sx={{
@@ -32,7 +30,7 @@ const Page: React.FC<PageProps<JodiePageProps>> = ({ data: { page } }) => (
       }}
       data-testid="page-content"
     >
-      <MDXRenderer>{page.body}</MDXRenderer>
+      {children}
     </div>
   </Layout>
 )

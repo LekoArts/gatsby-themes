@@ -33,8 +33,8 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `texts`,
-          path: `./src/`,
+          name: `theme-overrides`,
+          path: `./src/@lekoarts`,
         },
       },
       options.mdx && {
