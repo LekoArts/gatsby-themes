@@ -1,5 +1,4 @@
-// eslint-disable-next-line global-require
-const remarkPlugins = [require(`remark-slug`)]
+const remarkGfm = require(`remark-gfm`)
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
@@ -32,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         mdxOptions: {
-          remarkPlugins,
+          remarkPlugins: [remarkGfm],
         },
       },
     },

@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import type { HeadFC, PageProps } from "gatsby"
 import { jsx, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import Seo from "./seo"
 
@@ -10,18 +9,15 @@ export type MBPageProps = {
     title: string
     slug: string
     excerpt: string
-    body: string
   }
 }
 
-const Page: React.FC<PageProps<MBPageProps>> = ({ data: { page } }) => (
+const Page: React.FC<React.PropsWithChildren<PageProps<MBPageProps>>> = ({ data: { page }, children }) => (
   <Layout>
     <Heading as="h1" variant="styles.h1">
       {page.title}
     </Heading>
-    <section sx={{ my: 5, variant: `layout.content` }}>
-      <MDXRenderer>{page.body}</MDXRenderer>
-    </section>
+    <section sx={{ my: 5, variant: `layout.content` }}>{children}</section>
   </Layout>
 )
 

@@ -2546,6 +2546,7 @@ __metadata:
     gatsby-transformer-sharp: ^4.22.0
     lodash.kebabcase: ^4.1.1
     remark-gfm: ^1
+    remark-unwrap-images: ^2.0.0
   peerDependencies:
     gatsby: ^4.0.0
     react: ^18.0.0
@@ -2644,7 +2645,9 @@ __metadata:
     gatsby-source-filesystem: ^4.22.0
     gatsby-transformer-sharp: ^4.22.0
     lodash.kebabcase: ^4.1.1
+    reading-time: ^1.5.0
     remark-gfm: ^1
+    remark-unwrap-images: ^2.0.0
   peerDependencies:
     gatsby: ^4.0.0
     react: ^18.0.0
@@ -12366,6 +12369,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hast-util-whitespace@npm:^1.0.0":
+  version: 1.0.4
+  resolution: "hast-util-whitespace@npm:1.0.4"
+  checksum: b7f4a1942bc78239a6fe4741aca34e3e7f84487e15e2cd2b6ca07bbba3055571763d877d7c077d7a2a029ede7500bc50a62af7b6dfe88e0644b16228b91dee0d
+  languageName: node
+  linkType: hard
+
 "hast-util-whitespace@npm:^2.0.0":
   version: 2.0.0
   resolution: "hast-util-whitespace@npm:2.0.0"
@@ -18396,6 +18406,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"reading-time@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "reading-time@npm:1.5.0"
+  checksum: e27bc5a70ba0f4ac337896b18531b914d38f4bee67cbad48029d0c11dd0a7a847b2a6bba895ab7ce2ad3e7ecb86912bdc477d8fa2d48405a3deda964be54d09b
+  languageName: node
+  linkType: hard
+
 "readme-badger@npm:^0.3.0":
   version: 0.3.0
   resolution: "readme-badger@npm:0.3.0"
@@ -18710,6 +18727,16 @@ __metadata:
     mdast-util-to-markdown: ^1.0.0
     unified: ^10.0.0
   checksum: 25424201e698353f6c0afc9ec29a8cac1dac8c06750d92214e3216bd76ac37902a0ba3702ac2a11c1040938a667b3bc22d6949af1d35e8fc81a3572643cdc263
+  languageName: node
+  linkType: hard
+
+"remark-unwrap-images@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "remark-unwrap-images@npm:2.1.0"
+  dependencies:
+    hast-util-whitespace: ^1.0.0
+    unist-util-visit: ^2.0.0
+  checksum: 7c662c536f076f4cfe3c871875f15d321a5a460e1ddbe171321835d49f4c37584e476d079564d3e6f0a63f07724758c8ec4945856438e9032579ae0e471d59d7
   languageName: node
   linkType: hard
 

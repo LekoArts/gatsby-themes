@@ -13,6 +13,13 @@ module.exports = (options) => ({
       resolve: `@lekoarts/gatsby-theme-minimal-blog-core`,
       options,
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `texts`,
+        path: `${__dirname}/src/texts`,
+      },
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-theme-ui`,
   ],

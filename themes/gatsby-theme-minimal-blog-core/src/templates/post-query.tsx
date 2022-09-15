@@ -17,7 +17,6 @@ export const query = graphql`
       }
       description
       canonicalUrl
-      body
       excerpt
       timeToRead
       banner {
