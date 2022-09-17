@@ -17,7 +17,7 @@ const ColorModeToggle = ({ isDark, toggle }: Props) => (
     sx={{
       opacity: 0.65,
       position: `relative`,
-      borderRadius: `5px`,
+      borderRadius: `4px`,
       width: `40px`,
       height: `25px`,
       display: `flex`,

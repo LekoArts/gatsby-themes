@@ -30,8 +30,8 @@ export type MBPostProps = {
   }
 }
 
-const px = [`32px`, `16px`, `8px`, `4px`]
-const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+const px = [`16px`, `8px`, `4px`]
+const shadow = px.map((v) => `rgba(0, 0, 0, 0.1) 0px ${v} ${v} 0px`)
 
 const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data: { post }, children }) => (
   <Layout>
@@ -52,7 +52,14 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data:
     <section
       sx={{
         my: 5,
-        ".gatsby-resp-image-wrapper": { my: [4, 4, 5], boxShadow: shadow.join(`, `) },
+        ".gatsby-resp-image-wrapper": {
+          my: [4, 4, 5],
+          borderRadius: `4px`,
+          boxShadow: shadow.join(`, `),
+          ".gatsby-resp-image-image": {
+            borderRadius: `4px`,
+          },
+        },
         variant: `layout.content`,
       }}
     >

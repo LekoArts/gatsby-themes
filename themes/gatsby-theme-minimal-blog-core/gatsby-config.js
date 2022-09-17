@@ -1,5 +1,6 @@
 const remarkGfm = require(`remark-gfm`)
 const remarkUnwrapImages = require(`remark-unwrap-images`)
+const rehypeMetaAsAttributes = require(`@lekoarts/rehype-meta-as-attributes`)
 const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
@@ -33,6 +34,7 @@ module.exports = (themeOptions) => {
         options: {
           mdxOptions: {
             remarkPlugins: [remarkGfm, remarkUnwrapImages],
+            rehypePlugins: [rehypeMetaAsAttributes],
           },
           extensions: [`.mdx`, `.md`],
           gatsbyRemarkPlugins: [

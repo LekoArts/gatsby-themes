@@ -66,21 +66,21 @@ gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
 
 ### Theme options
 
-| Key               | Default Value   | Description                                                                                                 |
-| ----------------- | --------------- | ----------------------------------------------------------------------------------------------------------- |
-| `basePath`        | `/`             | Root url for the theme                                                                                      |
-| `blogPath`        | `/blog`         | url for the blog post overview page                                                                         |
-| `tagsPath`        | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                    |
-| `postsPath`       | `content/posts` | Location of posts                                                                                           |
-| `postsPrefix`     | `/`             | Prefix for all individual blog posts                                                                        |
-| `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                     |
-| `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)   |
-| `sharp`           | `true`          | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off) |
-| `formatString`    | `DD.MM.YYYY`    | Configure the date format for Date fields                                                                   |
-| `showLineNumbers` | `true`          | Show line numbers in code blocks                                                                            |
-| `showCopyButton`  | `true`          | Show copy button in code blocks                                                                             |
-| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                             |
-| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                            |
+| Key               | Default Value   | Description                                                                                                    |
+| ----------------- | --------------- | -------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`             | Root url for the theme                                                                                         |
+| `blogPath`        | `/blog`         | url for the blog post overview page                                                                            |
+| `tagsPath`        | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                       |
+| `postsPath`       | `content/posts` | Location of posts                                                                                              |
+| `postsPrefix`     | `/`             | Prefix for all individual blog posts                                                                           |
+| `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                        |
+| `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)      |
+| `sharp`           | `true`          | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off)    |
+| `formatString`    | `DD.MM.YYYY`    | Configure the date format for Date fields                                                                      |
+| `showLineNumbers` | `false`         | Show line numbers in code blocks. This can also be enabled on a block-by-block basis (see "Code Highlighting") |
+| `showCopyButton`  | `true`          | Show copy button in code blocks                                                                                |
+| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                                |
+| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                               |
 
 #### Example usage
 
@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
-        showLineNumbers: false,
+        showLineNumbers: true,
         navigation: [
           {
             title: `Blog`,
@@ -165,7 +165,7 @@ When you add a language (such as e.g. `js` or `javascript`) to the code block, a
 You can display a title (e.g. the file path) above the code block.
 
 ````
-```jsx:title=your-title
+```jsx title=your-title
 // code goes here
 ```
 ````
@@ -173,7 +173,7 @@ You can display a title (e.g. the file path) above the code block.
 Or without a specific language:
 
 ````
-```:title=your-title
+```title=your-title
 // code goes here
 ```
 ````
@@ -183,7 +183,7 @@ Or without a specific language:
 You can highlight single or multiple (or both) lines in a code block. You need to add a language.
 
 ````
-```js {2,4-5}
+```js highlight=2,4-5
 const test = 3
 const foo = 'bar'
 const harry = 'potter'
@@ -192,26 +192,13 @@ const ron = 'weasley'
 ```
 ````
 
-**Hide line numbers:**
+**Show line numbers:**
 
-If you want to hide line numbers you can either globally disable them (see Theme options) or on a block-by-block basis. You can also combine that with the other attributes.
+If you want to show line numbers you can either globally enable them (see theme options) or on a block-by-block basis. You can also combine that with the other attributes.
 
 ````
-```noLineNumbers
+```withLineNumbers
 // code goes here
-```
-````
-
-**react-live:**
-
-Add `react-live` to the code block (and render the component) to see a preview below it.
-
-````
-```js react-live
-const onClick = () => {
-  alert("You opened me");
-};
-render(<button onClick={onClick}>Alohomora!</button>);
 ```
 ````
 

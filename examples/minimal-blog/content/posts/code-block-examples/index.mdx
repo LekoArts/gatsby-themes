@@ -1,8 +1,8 @@
 ---
-title: Fantastic Beasts and Where to Find Them
-date: 2019-11-01
+title: Code Block Examples
+date: 2022-09-11
 tags:
-  - Novel
+  - Code
 ---
 
 import SpotifyPlayer from "./SpotifyPlayer";
@@ -15,15 +15,6 @@ Here will a React component go:
   theme="black"
   view="list"
 />
-
-Here will a live code example go:
-
-```js react-live
-const onClick = () => {
-  alert("You opened me");
-};
-render(<button onClick={onClick}>Alohomora!</button>);
-```
 
 Here will a normal code block go:
 
@@ -38,14 +29,14 @@ var dependencies = {};
 
 var treeURL = 'https://api.github.com/repos/PrismJS/prism/git/trees/gh-pages?recursive=1';
 var treePromise = new Promise(function(resolve) {
-	$u.xhr({
-		url: treeURL,
-		callback: function(xhr) {
-			if (xhr.status < 400) {
-				resolve(JSON.parse(xhr.responseText).tree);
-			}
-		}
-	});
+  $u.xhr({
+    url: treeURL,
+    callback: function(xhr) {
+      if (xhr.status < 400) {
+        resolve(JSON.parse(xhr.responseText).tree);
+      }
+    }
+  });
 });
 ```
 
@@ -100,7 +91,7 @@ export default Layout
 
 Code block with code highlighting:
 
-```jsx:title=src/components/post.jsx {5-7,10}
+```jsx title=src/components/post.jsx highlight=5-7,10
 import * as React from "react";
 
 const Post = ({ data: { post } }) => (
@@ -145,33 +136,33 @@ Code block without title:
 Harry Potter and the Philosopher's Stone
 ```
 
-Code block without lineNumbers (but lang):
+Code block with lineNumbers (and lang):
 
-```text noLineNumbers
+```text withLineNumbers
 Harry Potter and the Chamber of Secrets
 ```
 
-Code block without lineNumbers (and without lang):
+Code block with lineNumbers (and without lang):
 
-```noLineNumbers
+```none withLineNumbers
 Harry Potter and the Chamber of Secrets
 ```
 
 Code block with only the title:
 
-```:title=src/utils/scream.js
+```none title=src/utils/scream.js
 const scream = (input) => window.alert(input)
 ```
 
-Code block with only the title but without lineNumbers:
+Code block with only the title and with lineNumbers:
 
-```:title=src/utils/scream.js noLineNumbers
+```none title=src/utils/scream.js withLineNumbers
 const scream = (input) => window.alert(input)
 ```
 
 Line highlighting without code title:
 
-```js {2,4-5}
+```js highlight=2,4-5
 const test = 3;
 const foo = "bar";
 const harry = "potter";
@@ -181,9 +172,9 @@ const ron = "weasley";
 
 Here will `inline code` go, just inside the text. Wow!
 
-Code block without line numbers but with highlighting, language, and title:
+Code block with line numbers, highlighting, language, and title:
 
-```tsx:title=src/components/blog.tsx {7-9,16} noLineNumbers
+```tsx title=src/components/blog.tsx highlight=7-9,16 withLineNumbers
 import * as React from "react";
 
 const Blog = ({ posts }: PostsProps) => {

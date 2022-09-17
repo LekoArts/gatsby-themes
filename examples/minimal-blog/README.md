@@ -35,7 +35,7 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - Light Mode / Dark Mode
 - Typography driven, minimal style
 - Tags/Categories support
-- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Also allows adding line numbers, line highlighting, language tabs, and file titles.
+- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer). Also allows adding line numbers, line highlighting, language tabs, and file titles.
 - RSS Feed for blog posts
 - SEO (Sitemap, OpenGraph tags, Twitter tags)
 - WebApp Manifest
@@ -79,7 +79,7 @@ Have a look at the theme's README and files to see what options are available an
 
 ### Code Highlighting
 
-Since the underlying theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
+Since the underlying theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
 
 **Language tabs:**
 
@@ -96,7 +96,7 @@ When you add a language (such as e.g. `js` or `javascript`) to the code block, a
 You can display a title (e.g. the file path) above the code block.
 
 ````
-```jsx:title=your-title
+```jsx title=your-title
 // code goes here
 ```
 ````
@@ -104,7 +104,7 @@ You can display a title (e.g. the file path) above the code block.
 Or without a specific language:
 
 ````
-```:title=your-title
+```title=your-title
 // code goes here
 ```
 ````
@@ -114,7 +114,7 @@ Or without a specific language:
 You can highlight single or multiple (or both) lines in a code block. You need to add a language.
 
 ````
-```js {2,4-5}
+```js highlight=2,4-5
 const test = 3
 const foo = 'bar'
 const harry = 'potter'
@@ -123,26 +123,13 @@ const ron = 'weasley'
 ```
 ````
 
-**Hide line numbers:**
+**Show line numbers:**
 
-If you want to hide line numbers you can either globally disable them (see Theme options) or on a block-by-block basis. You can also combine that with the other attributes.
+If you want to show line numbers you can either globally enable them (see theme options) or on a block-by-block basis. You can also combine that with the other attributes.
 
 ````
-```noLineNumbers
+```withLineNumbers
 // code goes here
-```
-````
-
-**react-live:**
-
-Add `react-live` to the code block (and render the component) to see a preview below it.
-
-````
-```js react-live
-const onClick = () => {
-  alert("You opened me");
-};
-render(<button onClick={onClick}>Alohomora!</button>);
 ```
 ````
 
