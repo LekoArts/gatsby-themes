@@ -171,7 +171,7 @@ const code: ThemeUICSSObject = {
     backgroundColor: `primary`,
   },
   ".gatsby-highlight pre::-webkit-scrollbar-track": {
-    background: `rgb(1, 22, 39)`,
+    background: `muted`,
   },
   ".line-number-style": {
     display: `inline-block`,
