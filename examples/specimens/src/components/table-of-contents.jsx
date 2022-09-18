@@ -5,13 +5,15 @@ import { useStaticQuery, graphql } from "gatsby"
 const TableOfContents = () => {
   const result = useStaticQuery(graphql`
     query {
-      mdx(fileAbsolutePath: { regex: "/index.mdx/" }) {
-        tableOfContents
+      file(name: { eq: "index" }) {
+        childMdx {
+          tableOfContents
+        }
       }
     }
   `)
 
-  const toc = result.mdx.tableOfContents.items[0].items[2].items || false
+  const toc = result.file.childMdx.tableOfContents.items[0].items[2].items || false
 
   return (
     <ul>

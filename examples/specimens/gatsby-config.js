@@ -1,4 +1,6 @@
 const remarkGfm = require(`remark-gfm`)
+const remarkSlug = require(`remark-slug`)
+const rehypeMetaAsAttributes = require(`@lekoarts/rehype-meta-as-attributes`)
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
@@ -31,7 +33,8 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         mdxOptions: {
-          remarkPlugins: [remarkGfm],
+          remarkPlugins: [remarkGfm, remarkSlug],
+          rehypePlugins: [rehypeMetaAsAttributes],
         },
       },
     },
