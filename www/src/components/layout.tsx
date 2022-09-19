@@ -1,6 +1,7 @@
 import React from "react"
 import { Global } from "@emotion/react"
-import { Themed, Box, useColorMode, get } from "theme-ui"
+import { Box, useColorMode, get } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import Header from "./header"
 import "../fonts/benguiat.css"
 

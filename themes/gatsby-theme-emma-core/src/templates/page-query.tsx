@@ -11,7 +11,6 @@ export const query = graphql`
       title
       slug
       excerpt
-      body
       cover {
         childImageSharp {
           gatsbyImageData(quality: 90, layout: FULL_WIDTH)

@@ -1,4 +1,6 @@
+const { compileMDXWithCustomOptions } = require(`gatsby-plugin-mdx`)
 const withDefaults = require(`./utils/default-options`)
+const { remarkGetPreviewQuery } = require(`./utils/remark-get-preview-query`)
 
 const mdxResolverPassthrough = async ({ fieldName, source, args, context, info }) => {
   const type = info.schema.getType(`Mdx`)
@@ -35,7 +37,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       id: ID!
       slug: String!
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
       query: String!
       title: String!
     }
@@ -43,7 +45,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MdxPlayground implements Node & Playground {
       slug: String!
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
       query: String!
       title: String!
     }
@@ -51,17 +53,43 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 // Find the 'graphql' code tags and add an encoded string to the field 'query'
-exports.createResolvers = ({ createResolvers }) => {
+exports.createResolvers = ({ createResolvers, getNode, getNodesByType, reporter, cache, pathPrefix, store }) => {
   const resolvers = {
     MdxPlayground: {
       query: {
-        async resolve(source, args, context, info) {
-          const node = await mdxResolverPassthrough({ fieldName: `mdxAST`, source, args, context, info })
-          const block = node.children.find(
-            (ast) => ast.type === `code` && ast.lang === `graphql` && ast.meta === `preview`
+        async resolve(mdxNode) {
+          const fileNode = getNode(mdxNode.parent)
+
+          if (!fileNode) {
+            return null
+          }
+
+          const result = await compileMDXWithCustomOptions(
+            {
+              source: fileNode.body,
+              absolutePath: fileNode.absolutePath,
+            },
+            {
+              pluginOptions: {},
+              customOptions: {
+                mdxOptions: {
+                  remarkPlugins: [remarkGetPreviewQuery],
+                },
+              },
+              getNode,
+              getNodesByType,
+              pathPrefix,
+              reporter,
+              cache,
+              store,
+            }
           )
 
-          return encodeURI(block.value)
+          if (!result) {
+            return null
+          }
+
+          return encodeURI(result.metadata.previewQuery)
         },
       },
     },
@@ -91,6 +119,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     const fieldData = {
       slug: `/${basePath}/${fileNode.name}`.replace(/\/\/+/g, `/`),
       title: node.frontmatter.title,
+      contentFilePath: fileNode.absolutePath,
     }
 
     const mdxID = createNodeId(`${node.id} >>> MdxPlayground`)
@@ -132,6 +161,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allPlayground {
         nodes {
           slug
+          contentFilePath
         }
       }
     }
@@ -148,7 +178,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     items.forEach((page) => {
       createPage({
         path: page.slug,
-        component: itemTemplate,
+        component: `${itemTemplate}?__contentFilePath=${page.contentFilePath}`,
         context: {
           slug: page.slug,
         },

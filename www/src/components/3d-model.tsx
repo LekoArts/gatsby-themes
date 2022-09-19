@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /** @jsx jsx */
 import { jsx, useColorMode, get, ThemeUICSSObject } from "theme-ui"
 import { Suspense } from "react"

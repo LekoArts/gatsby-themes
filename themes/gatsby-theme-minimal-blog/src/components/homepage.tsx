@@ -10,10 +10,8 @@ import useSiteMetadata from "../hooks/use-site-metadata"
 import replaceSlashes from "../utils/replaceSlashes"
 import { visuallyHidden } from "../styles/utils"
 import Seo from "./seo"
-// @ts-ignore
-import Hero from "../texts/hero"
-// @ts-ignore
-import Bottom from "../texts/bottom"
+import Hero from "../texts/hero.mdx"
+import Bottom from "../texts/bottom.mdx"
 
 export type MBHomepageProps = {
   posts: {

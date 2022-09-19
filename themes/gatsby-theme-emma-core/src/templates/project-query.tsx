@@ -8,7 +8,6 @@ export { Head }
 export const query = graphql`
   query ($slug: String!, $formatString: String!) {
     project(slug: { eq: $slug }) {
-      body
       excerpt
       client
       color

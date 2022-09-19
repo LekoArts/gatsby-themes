@@ -3,9 +3,9 @@
 import { jsx } from "theme-ui"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/vsDark"
-import loadable from "@loadable/component"
-import { useMDXScope } from "gatsby-plugin-mdx/context"
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useMDXComponents } from "@mdx-js/react"
+import { normalizeThemeUIColors, filterStyles } from "@lekoarts/gatsby-theme-specimens"
 
 const badgeStyle = {
   marginBottom: `0.5rem`,
@@ -19,34 +19,59 @@ const badgeStyle = {
   letterSpacing: `0.05em`,
 }
 
-const LazyLiveProvider = loadable(async () => {
-  const Module = await import(`react-live`)
-  const { LiveProvider, LiveEditor, LiveError, LivePreview } = Module
-  return (props) => (
-    <LiveProvider {...props}>
-      <div sx={badgeStyle}>Editor</div>
-      <LiveEditor sx={{ marginBottom: `1rem`, borderRadius: `0.25rem` }} />
-      <LiveError />
-      <div sx={badgeStyle}>Preview</div>
-      <LivePreview sx={{ marginBottom: `3rem` }} />
-    </LiveProvider>
-  )
-})
-
 const Code = ({ codeString, language, live, noInline }) => {
-  const imported = useMDXScope()
-  const defined = useMDXComponents()
-
-  delete defined.delete
+  const {
+    Alert,
+    Audio,
+    BorderRadius,
+    ColorFamilies,
+    ColorRow,
+    ColorSwatch,
+    Download,
+    FontFamily,
+    FontSize,
+    FontWeight,
+    Heading,
+    Palette,
+    Shadow,
+    Space,
+    Table,
+    Video,
+  } = useMDXComponents()
 
   if (live) {
     return (
-      <LazyLiveProvider
+      <LiveProvider
         code={codeString}
         theme={theme}
         noInline={noInline || false}
-        scope={{ ...defined, ...imported }}
-      />
+        scope={{
+          Alert,
+          Audio,
+          BorderRadius,
+          ColorFamilies,
+          ColorRow,
+          ColorSwatch,
+          Download,
+          FontFamily,
+          FontSize,
+          FontWeight,
+          Heading,
+          Palette,
+          Shadow,
+          Space,
+          Table,
+          Video,
+          normalizeThemeUIColors,
+          filterStyles,
+        }}
+      >
+        <div sx={badgeStyle}>Editor</div>
+        <LiveEditor sx={{ marginBottom: `1rem`, borderRadius: `0.25rem` }} />
+        <LiveError />
+        <div sx={badgeStyle}>Preview</div>
+        <LivePreview sx={{ marginBottom: `3rem` }} />
+      </LiveProvider>
     )
   }
   return (

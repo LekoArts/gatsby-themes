@@ -17,11 +17,16 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
         path: `${__dirname}/src/sections`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `theme-overrides`,
+        path: `./src/@lekoarts/gatsby-theme-cara`,
+      },
+    },
     mdx && {
       resolve: `gatsby-plugin-mdx`,
-      options: {
-        lessBabel: true,
-      },
+      options: {},
     },
     `gatsby-plugin-theme-ui`,
   ].filter(Boolean),

@@ -2,8 +2,7 @@ import type { HeadFC } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// @ts-ignore
-import Index from "../data/index"
+import Index from "../data/index.mdx"
 
 const Homepage = () => (
   <Layout>

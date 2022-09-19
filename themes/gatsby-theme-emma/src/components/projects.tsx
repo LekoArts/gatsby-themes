@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import type { HeadFC } from "gatsby"
-import { jsx, Container, Themed } from "theme-ui"
+import { jsx, Container } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { useTrail } from "react-spring"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"

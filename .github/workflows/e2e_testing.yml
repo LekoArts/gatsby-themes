@@ -35,6 +35,7 @@ jobs:
           start: yarn workspace ${{ matrix.containers }} serve
           config: "baseUrl=http://localhost:9000"
           cache-key: node-${{ matrix.containers }}-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
+          install-command: yarn --immutable --silent
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

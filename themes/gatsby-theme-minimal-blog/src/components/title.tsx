@@ -31,16 +31,18 @@ const Title = ({ text, children, as = `h2`, className = `` }: TitleProps) => (
     >
       {text}
     </Box>
-    <div
-      sx={{
-        color: `secondary`,
-        a: {
-          variant: `links.secondary`,
-        },
-      }}
-    >
-      {children}
-    </div>
+    {children ? (
+      <div
+        sx={{
+          color: `secondary`,
+          a: {
+            variant: `links.secondary`,
+          },
+        }}
+      >
+        {children}
+      </div>
+    ) : null}
   </div>
 )
 

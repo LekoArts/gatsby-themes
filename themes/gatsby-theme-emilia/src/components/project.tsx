@@ -10,7 +10,6 @@ import Seo from "./seo"
 
 export type EmiliaProjectProps = {
   project: {
-    body: string
     excerpt: string
     date: string
     slug: string
@@ -37,9 +36,7 @@ export type EmiliaProjectProps = {
 export type EmiliaProjectPageContext = {
   prev: {
     slug: string
-    parent: {
-      fileAbsolutePath: string
-    }
+    contentFilePath: string
     title: string
     cover: {
       childImageSharp: {
@@ -49,9 +46,7 @@ export type EmiliaProjectPageContext = {
   }
   next: {
     slug: string
-    parent: {
-      fileAbsolutePath: string
-    }
+    contentFilePath: string
     title: string
     cover: {
       childImageSharp: {
@@ -61,15 +56,16 @@ export type EmiliaProjectPageContext = {
   }
 }
 
-const Project: React.FC<PageProps<EmiliaProjectProps, EmiliaProjectPageContext>> = ({
+const Project: React.FC<React.PropsWithChildren<PageProps<EmiliaProjectProps, EmiliaProjectPageContext>>> = ({
   data: { project, images },
   pageContext: { prev, next },
+  children,
 }) => {
   const imageFade = useSpring({ config: config.slow, delay: 800, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
     <Layout>
-      <HeaderProject title={project.title} description={project.body} areas={project.areas} date={project.date} />
+      <HeaderProject title={project.title} description={children} areas={project.areas} date={project.date} />
       <Container sx={{ mt: [`-6rem`, `-6rem`, `-8rem`] }}>
         {images.nodes.map((image) => (
           <animated.div key={image.name} style={imageFade}>

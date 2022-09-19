@@ -1,6 +1,5 @@
 import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
-import prismPreset from "@theme-ui/prism/presets/github"
 
 const contentStyles = {
   px: [3, 3, 4, 5, 6],
@@ -115,7 +114,6 @@ const theme = merge(tailwind, {
       mb: 2,
     },
     pre: {
-      ...prismPreset,
       padding: 2,
       whiteSpace: `pre-wrap`,
       wordBreak: `keep-all`,

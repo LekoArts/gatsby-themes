@@ -2,7 +2,6 @@
 import type { HeadFC, PageProps } from "gatsby"
 import * as React from "react"
 import { jsx, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "./layout"
 import ItemTags from "./item-tags"
 import Seo from "./seo"
@@ -19,7 +18,6 @@ export type MBPostProps = {
     }[]
     description?: string
     canonicalUrl?: string
-    body: string
     excerpt: string
     timeToRead?: number
     banner?: {
@@ -32,10 +30,10 @@ export type MBPostProps = {
   }
 }
 
-const px = [`32px`, `16px`, `8px`, `4px`]
-const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
+const px = [`16px`, `8px`, `4px`]
+const shadow = px.map((v) => `rgba(0, 0, 0, 0.1) 0px ${v} ${v} 0px`)
 
-const Post: React.FC<PageProps<MBPostProps>> = ({ data: { post } }) => (
+const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data: { post }, children }) => (
   <Layout>
     <Heading as="h1" variant="styles.h1">
       {post.title}
@@ -54,11 +52,18 @@ const Post: React.FC<PageProps<MBPostProps>> = ({ data: { post } }) => (
     <section
       sx={{
         my: 5,
-        ".gatsby-resp-image-wrapper": { my: [4, 4, 5], boxShadow: shadow.join(`, `) },
+        ".gatsby-resp-image-wrapper": {
+          my: [4, 4, 5],
+          borderRadius: `4px`,
+          boxShadow: shadow.join(`, `),
+          ".gatsby-resp-image-image": {
+            borderRadius: `4px`,
+          },
+        },
         variant: `layout.content`,
       }}
     >
-      <MDXRenderer>{post.body}</MDXRenderer>
+      {children}
     </section>
     <PostFooter post={post} />
   </Layout>

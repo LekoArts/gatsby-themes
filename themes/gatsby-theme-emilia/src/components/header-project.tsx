@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import * as React from "react"
-import { Flex, jsx, Container, Heading, Themed } from "theme-ui"
+import { Flex, jsx, Container, Heading } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { animated, useSpring, config } from "react-spring"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import HeaderBackground from "./header-background"
 import useEmiliaConfig from "../hooks/use-emilia-config"
@@ -104,7 +104,7 @@ const HeaderProject = ({ title, areas, description = ``, date }: HeaderProjectPr
             </div>
             {description && (
               <div sx={{ maxWidth: `900px`, mx: `auto`, mt: 5, p: { textAlign: `left`, overflowWrap: `break-word` } }}>
-                <MDXRenderer>{description}</MDXRenderer>
+                {description}
               </div>
             )}
           </animated.div>

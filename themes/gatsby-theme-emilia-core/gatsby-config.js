@@ -30,11 +30,16 @@ module.exports = (themeOptions) => {
           path: options.assetsPath,
         },
       },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `theme-overrides`,
+          path: `./src/@lekoarts`,
+        },
+      },
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {
-          lessBabel: true,
-        },
+        options: {},
       },
       `gatsby-transformer-sharp`,
       options.sharp && {

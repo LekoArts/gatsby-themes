@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 import isAbsoluteURL from "is-absolute-url"
 
 const styles: ThemeUICSSObject = {
-  color: `inherit`,
+  color: `primary`,
   textDecoration: `none`,
   fontWeight: `normal`,
-  "&.active": {
-    color: `primary`,
+  "&:hover": {
+    textDecoration: `underline`,
   },
 }
 

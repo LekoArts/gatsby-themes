@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from "react"
-import { Themed, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { Palette, normalizeThemeUIColors } from "@lekoarts/gatsby-theme-specimens"
 import { useTheme } from "./context"
 import ColorsPalette from "./colors-palettes"
@@ -16,7 +17,7 @@ const Colors = () => {
     )
   }
 
-  const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]))
+  const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]) || typeof colors[k] === `object`)
   const filteredColors = Object.keys(colors)
     .filter((key) => filteredKeys.includes(key))
     .reduce(
