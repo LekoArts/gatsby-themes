@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Heading, Box, Flex } from "theme-ui"
 // @ts-ignore
-import kebabCase from "lodash.kebabcase"
+import { kebabCase } from "@lekoarts/themes-utils"
 import { HeadFC, Link } from "gatsby"
 import Layout from "./layout"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"

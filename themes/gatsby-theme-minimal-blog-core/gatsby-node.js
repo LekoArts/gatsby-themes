@@ -1,16 +1,6 @@
-const kebabCase = require(`lodash.kebabcase`)
 const readingTime = require(`reading-time`)
+const { mdxResolverPassthrough, slugify, kebabCase } = require(`@lekoarts/themes-utils`)
 const withDefaults = require(`./utils/default-options`)
-
-const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
-  const type = info.schema.getType(`Mdx`)
-  const mdxNode = context.nodeModel.getNodeById({
-    id: source.parent,
-  })
-  const resolver = type.getFields()[fieldName].resolve
-  const result = await resolver(mdxNode, args, context, info)
-  return result
-}
 
 const roundReadingTime = (minutesFloat) => (minutesFloat < 1 ? Math.ceil(minutesFloat) : Math.round(minutesFloat))
 
@@ -21,17 +11,13 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
 
   const { basePath, postsPrefix } = withDefaults(themeOptions)
 
-  const slugify = (source) => {
-    const slug = source.slug ? source.slug : kebabCase(source.title)
-
-    return `/${basePath}/${postsPrefix}/${slug}`.replace(/\/\/+/g, `/`)
-  }
-
   createFieldExtension({
     name: `slugify`,
     extend() {
       return {
-        resolve: slugify,
+        resolve(source) {
+          return slugify(source, `${basePath}/${postsPrefix}`)
+        },
       }
     },
   })

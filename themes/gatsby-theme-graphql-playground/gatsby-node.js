@@ -1,16 +1,7 @@
 const { compileMDXWithCustomOptions } = require(`gatsby-plugin-mdx`)
+const { mdxResolverPassthrough } = require(`@lekoarts/themes-utils`)
 const withDefaults = require(`./utils/default-options`)
 const { remarkGetPreviewQuery } = require(`./utils/remark-get-preview-query`)
-
-const mdxResolverPassthrough = async ({ fieldName, source, args, context, info }) => {
-  const type = info.schema.getType(`Mdx`)
-  const mdxNode = context.nodeModel.getNodeById({
-    id: source.parent,
-  })
-  const resolver = type.getFields()[fieldName].resolve
-  const result = await resolver(mdxNode, args, context, info)
-  return result
-}
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
