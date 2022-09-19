@@ -17,7 +17,7 @@ const Colors = () => {
     )
   }
 
-  const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]))
+  const filteredKeys = Object.keys(colors).filter((k) => Array.isArray(colors[k]) || typeof colors[k] === `object`)
   const filteredColors = Object.keys(colors)
     .filter((key) => filteredKeys.includes(key))
     .reduce(

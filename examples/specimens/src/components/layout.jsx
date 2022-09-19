@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
           marginTop: `2rem !important`,
           marginBottom: `1rem !important`,
         },
-        h3: { marginTop: `6rem !important` },
+        h3: { marginTop: `4rem !important` },
         ".sizes-table": {
           "> div:not(:first-of-type)": {
             paddingTop: `0.5rem !important`,

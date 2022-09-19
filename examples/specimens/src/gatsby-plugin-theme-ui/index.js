@@ -4,17 +4,6 @@ const theme = {
   ...system,
   styles: {
     ...system.styles,
-    "h1, h2, h3, h4, h5, h6": {
-      marginTop: `2rem !important`,
-      marginBottom: `1rem !important`,
-    },
-    h3: { marginTop: `6rem !important` },
-    ".sizes-table": {
-      "> div:not(:first-of-type)": {
-        paddingTop: `0.5rem !important`,
-        paddingBottom: `0.5rem !important`,
-      },
-    },
     pre: {
       ...system.styles.pre,
       padding: `0.75rem`,

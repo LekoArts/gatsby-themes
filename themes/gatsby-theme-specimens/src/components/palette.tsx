@@ -3,16 +3,14 @@ import { jsx, ThemeUICSSObject } from "theme-ui"
 import ColorSwatch from "./color-swatch"
 import ColorRow from "./color-row"
 import theme from "../theme"
+import type { INormalizeResult } from "../utils/normalize-theme-ui-colors"
 
 const join = (...args: any) => args.filter(Boolean).join(`.`)
 
 type ModeTypes = "list" | "swatch"
 
 type PaletteProps = {
-  colors: {
-    name: string
-    color: string | []
-  }[]
+  colors: INormalizeResult[]
   mode?: ModeTypes
   single?: boolean
   minimal?: boolean
@@ -64,7 +62,7 @@ const Palette = ({
       {colors.map(({ name, color }) => {
         if (!color) return false
 
-        if (single && Array.isArray(color)) {
+        if (single && (Array.isArray(color) || typeof color === `object`)) {
           return false
         }
 

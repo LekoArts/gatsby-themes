@@ -17,7 +17,7 @@ const ColorFamilies = ({ colors = undefined }: ColorFamiliesProps) => (
   <div sx={{ ...theme.families.specimens }}>
     {colors ? (
       Object.entries(colors).map(([key, color]) => {
-        if (!color || !Array.isArray(color)) return null
+        if (!color || (!Array.isArray(color) && typeof color !== `object`)) return null
 
         return (
           <React.Fragment key={key}>
