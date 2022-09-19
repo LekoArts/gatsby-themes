@@ -13,7 +13,7 @@ export const query = graphql`
         title
         cover {
           childImageSharp {
-            gatsbyImageData(width: 1200, quality: 90)
+            gatsbyImageData(width: 1200, quality: 90, formats: [AUTO, WEBP, AVIF])
           }
         }
         __typename
@@ -25,7 +25,7 @@ export const query = graphql`
         title: shortTitle
         cover {
           childImageSharp {
-            gatsbyImageData(width: 1200, quality: 90)
+            gatsbyImageData(width: 1200, quality: 90, formats: [AUTO, WEBP, AVIF])
           }
         }
         __typename

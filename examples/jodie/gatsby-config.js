@@ -31,21 +31,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [`https://fonts.gstatic.com`],
-        // If you plan on changing the font you'll also need to adjust the Theme UI config to edit the CSS
-        // See: https://github.com/LekoArts/gatsby-themes/tree/main/examples/jodie#changing-your-fonts
-        web: [
-          {
-            name: `Work Sans`,
-            file: `https://fonts.googleapis.com/css2?family=Work+Sans:wght@400..700&display=swap`,
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         output: `/`,
