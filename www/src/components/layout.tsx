@@ -3,7 +3,6 @@ import { Global } from "@emotion/react"
 import { Box, useColorMode, get } from "theme-ui"
 import { Themed } from "@theme-ui/mdx"
 import Header from "./header"
-import "../fonts/benguiat.css"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 

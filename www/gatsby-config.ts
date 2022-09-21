@@ -24,19 +24,6 @@ const config: GatsbyConfig = {
         path: path.resolve(`data`),
       },
     },
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [`https://fonts.gstatic.com`],
-        web: [
-          {
-            name: `IBM Plex Sans`,
-            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
-          },
-        ],
-      },
-    },
     githubToken && {
       resolve: `gatsby-source-github-api`,
       options: {
