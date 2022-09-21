@@ -11,8 +11,6 @@ const code: ThemeUICSSObject = {
     mt: 0,
     position: `relative`,
     overflow: `auto`,
-    borderBottomLeftRadius: `4px`,
-    borderBottomRightRadius: `4px`,
     '&[data-linenumber="false"]': {
       ".token-line": {
         pl: 3,
@@ -33,13 +31,14 @@ const code: ThemeUICSSObject = {
     px: 2,
     py: 1,
     borderRadius: `4px`,
+    fontSize: `0.95em`,
   },
   ".gatsby-highlight": {
     fontSize: [1, 1, 2],
     position: `relative`,
     webkitOverflowScrolling: `touch`,
-    bg: `rgb(1, 22, 39)`,
-    borderRadius: `5px`,
+    borderRadius: `4px`,
+    overflow: `hidden`,
     mx: [0, 0, 0, -3],
     ".token-line": {
       mx: -3,
@@ -51,7 +50,7 @@ const code: ThemeUICSSObject = {
     },
     'pre[class*="language-"]:before': {
       bg: `white`,
-      borderRadius: `0 0 0.25rem 0.25rem`,
+      borderRadius: `0 0 4px 4px`,
       color: `black`,
       fontSize: `12px`,
       letterSpacing: `0.035rem`,
@@ -188,8 +187,6 @@ const code: ThemeUICSSObject = {
     px: 3,
     py: 2,
     fontFamily: `body`,
-    borderTopRightRadius: `4px`,
-    borderTopLeftRadius: `4px`,
   },
   ".token-line": {
     pr: 3,
