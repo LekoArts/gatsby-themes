@@ -173,7 +173,7 @@ You can display a title (e.g. the file path) above the code block.
 Or without a specific language:
 
 ````
-```title=your-title
+```none title=your-title
 // code goes here
 ```
 ````
@@ -197,7 +197,7 @@ const ron = 'weasley'
 If you want to show line numbers you can either globally enable them (see theme options) or on a block-by-block basis. You can also combine that with the other attributes.
 
 ````
-```withLineNumbers
+```js withLineNumbers
 // code goes here
 ```
 ````
