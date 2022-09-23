@@ -12,7 +12,6 @@ module.exports = {
       // See the theme's README for all available options
       options: {},
     },
-    `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
