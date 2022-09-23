@@ -64,7 +64,6 @@ interface CustomTheme extends Theme {
 const customTheme: CustomTheme = {
   config: {
     initialColorModeName: `light`,
-    useCustomProperties: true,
     useColorSchemeMediaQuery: `system`,
   },
   colors: {

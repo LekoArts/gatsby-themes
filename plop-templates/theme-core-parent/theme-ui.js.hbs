@@ -2,8 +2,10 @@ import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
-  initialColorModeName: `light`,
-  useCustomProperties: true,
+  config: {
+    initialColorModeName: `light`,
+    useColorSchemeMediaQuery: `system`,
+  },
   colors: {
     primary: tailwind.colors.pink[7],
     secondary: tailwind.colors.indigo[6],

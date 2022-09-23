@@ -4,6 +4,7 @@ import { tailwind } from "@theme-ui/presets"
 export default merge(tailwind, {
   config: {
     initialColorModeName: `light`,
+    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     primary: tailwind.colors.pink[7],
