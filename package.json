@@ -9,8 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "packages:build": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --include @lekoarts/themes-utils --interlaced run build",
-    "packages:watch": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --include @lekoarts/themes-utils --interlaced run watch",
+    "packages:build": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --interlaced run package:build",
+    "packages:watch": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --interlaced run package:watch",
     "typecheck": "tsc --noEmit",
     "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js,.mdx",

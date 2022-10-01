@@ -14,9 +14,9 @@
     "dist/*"
   ],
   "scripts": {
-    "build": "tsup",
-    "watch": "yarn build --watch",
-    "prepare": "yarn build"
+    "package:build": "tsup",
+    "package:watch": "yarn package:build --watch",
+    "prepare": "yarn package:build"
   },
   "dependencies": {
     "lodash.kebabcase": "^4.1.1"
