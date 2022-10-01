@@ -5,6 +5,12 @@ describe(`gatsby-theme-emma`, () => {
   beforeEach(() => {
     cy.visit(`/`).waitForRouteChange()
   })
+  it(`should have correct html[lang] attribute`, () => {
+    cy.get(`html`).should(`have.attr`, `lang`, `en`)
+  })
+  it(`should have correct title in head`, () => {
+    cy.title().should(`eq`, `Emma - Gatsby Starter Portfolio`)
+  })
   it(`should render the site title`, () => {
     cy.findByLabelText(/emma, back to homepage/i)
   })
@@ -54,13 +60,16 @@ describe(`gatsby-theme-emma`, () => {
     cy.findByText(/hogwarts/i)
     cy.findByText(/10.06.2019/i)
     cy.findByText(/witchcraft/i)
+    cy.title().should(`eq`, `Hermione Granger | Emma`)
   })
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.findByLabelText(/View detail page of Proprius: steady, individual, personal/i)
       .click()
       .assertRoute(`/proprius`)
+    cy.title().should(`eq`, `Proprius: steady, individual, personal | Emma`)
   })
   it(`should link and display the about page`, () => {
     cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
+    cy.title().should(`eq`, `About | Emma`)
   })
 })

@@ -1,0 +1,29 @@
+{
+  "name": "@lekoarts/rehype-meta-as-attributes",
+  "description": "Pass MDX metadata as prop to React components",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "LekoArts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "unist-util-visit": "^2.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "packages/rehype-meta-as-attributes"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  }
+}

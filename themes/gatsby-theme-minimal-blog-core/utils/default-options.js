@@ -7,7 +7,7 @@ module.exports = (themeOptions) => {
   const tagsPath = themeOptions.tagsPath || `/tags`
   const externalLinks = themeOptions.externalLinks || []
   const navigation = themeOptions.navigation || []
-  const showLineNumbers = themeOptions.showLineNumbers !== false
+  const showLineNumbers = !!themeOptions.showLineNumbers
   const showCopyButton = themeOptions.showCopyButton !== false
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
   const mdx = typeof themeOptions.mdx === `undefined` ? true : themeOptions.mdx

@@ -48,10 +48,10 @@ npm install @lekoarts/gatsby-theme-{{kebabCase name}}
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new {{kebabCase name}} LekoArts/{{kebabCase starter-name}}
+npx gatsby new {{kebabCase starter-name}} https://github.com/LekoArts/{{kebabCase starter-name}}
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/{{kebabCase starter-name}})
@@ -99,8 +99,6 @@ module.exports = {
     siteUrl: `https://{{kebabCase name}}.lekoarts.de`,
     // Used for SEO
     siteDescription: `TODO`,
-    // Will be set on the html tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

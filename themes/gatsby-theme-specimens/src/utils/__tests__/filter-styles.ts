@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { Theme } from "theme-ui"
+import type { Theme } from "theme-ui"
 import filterStyles from "../filter-styles"
 
 const exampleStyles: Theme["styles"] = {

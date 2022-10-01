@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.13.2-chrome100-ff98
+      image: cypress/browsers:node16.14.2-slim-chrome103-ff102
       options: --user 1001
     strategy:
       fail-fast: false
@@ -35,6 +35,7 @@ jobs:
           start: yarn workspace ${{ matrix.containers }} serve
           config: "baseUrl=http://localhost:9000"
           cache-key: node-${{ matrix.containers }}-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
+          install-command: yarn --immutable --silent
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

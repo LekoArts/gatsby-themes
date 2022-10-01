@@ -1,13 +1,12 @@
 import React from "react"
 import { Global } from "@emotion/react"
-import { Themed, Box, useColorMode, get } from "theme-ui"
-import SEO from "./seo"
+import { Box, useColorMode, get } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import Header from "./header"
-import "../fonts/benguiat.css"
 
-type LayoutProps = { children: React.ReactNode; className?: string; thought?: boolean }
+type LayoutProps = { children: React.ReactNode; className?: string }
 
-const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
+const Layout = ({ children, className = `` }: LayoutProps) => {
   const [mode] = useColorMode()
 
   let headingStyles = {}
@@ -52,7 +51,6 @@ const Layout = ({ children, className = ``, thought = false }: LayoutProps) => {
           ...headingStyles,
         })}
       />
-      {!thought && <SEO />}
       <Header />
       <Box as="main" className={className}>
         {children}

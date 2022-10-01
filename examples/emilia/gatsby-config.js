@@ -2,6 +2,9 @@ require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
@@ -12,7 +15,6 @@ module.exports = {
     siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
     siteUrl: `https://emilia.lekoarts.de`,
     siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
-    siteLanguage: `en`,
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
   },
@@ -54,7 +56,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

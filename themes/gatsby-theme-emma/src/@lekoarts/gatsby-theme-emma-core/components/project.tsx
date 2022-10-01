@@ -1,14 +1,9 @@
+import type { PageProps } from "gatsby"
 import * as React from "react"
-import Project from "../../../components/project"
+import Project, { Head, EmmaProjectProps } from "../../../components/project"
 
-type Props = {
-  data: {
-    project: any
-    [key: string]: any
-  }
-  [key: string]: any
-}
-
-export default function EmmaCoreProject({ ...props }: Props) {
+export default function EmmaCoreProject({ ...props }: PageProps<EmmaProjectProps>) {
   return <Project {...props} />
 }
+
+export { Head }

@@ -1,34 +1,20 @@
-const kebabCase = require(`lodash.kebabcase`)
+const { mdxResolverPassthrough, slugify } = require(`@lekoarts/themes-utils`)
 const withDefaults = require(`./utils/default-options`)
-
-const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
-  const type = info.schema.getType(`Mdx`)
-  const mdxNode = context.nodeModel.getNodeById({
-    id: source.parent,
-  })
-  const resolver = type.getFields()[fieldName].resolve
-  const result = await resolver(mdxNode, args, context, info)
-  return result
-}
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
+exports.createSchemaCustomization = ({ actions }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
   const { basePath } = withDefaults(themeOptions)
-
-  const slugify = (source) => {
-    const slug = source.slug ? source.slug : kebabCase(source.title)
-
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
-  }
 
   createFieldExtension({
     name: `slugify`,
     extend() {
       return {
-        resolve: slugify,
+        resolve(source) {
+          return slugify(source, basePath)
+        },
       }
     },
   })
@@ -71,7 +57,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
     }
 
     interface Page implements Node {
@@ -81,7 +67,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       title: String!
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
     }
 
     type MdxProject implements Node & Project {
@@ -94,7 +80,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       date: Date! @dateformat
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
     }
 
     type MdxPage implements Node & Page {
@@ -103,7 +89,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       title: String!
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
     }
   `)
 }
@@ -135,6 +121,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       service: node.frontmatter.service,
       color: node.frontmatter.color,
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
     }
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
@@ -163,6 +150,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       slug: node.frontmatter.slug,
       cover: node.frontmatter.cover,
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -206,12 +194,14 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         nodes {
           slug
           defer
+          contentFilePath
         }
       }
       allPage {
         nodes {
           slug
           defer
+          contentFilePath
         }
       }
     }
@@ -227,7 +217,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   projects.forEach((project) => {
     createPage({
       path: project.slug,
-      component: projectTemplate,
+      component: `${projectTemplate}?__contentFilePath=${project.contentFilePath}`,
       context: {
         slug: project.slug,
         formatString,
@@ -242,7 +232,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     pages.forEach((page) => {
       createPage({
         path: page.slug,
-        component: pageTemplate,
+        component: `${pageTemplate}?__contentFilePath=${page.contentFilePath}`,
         context: {
           slug: page.slug,
         },

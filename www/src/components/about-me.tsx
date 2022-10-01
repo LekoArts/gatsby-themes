@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Container, jsx, Themed, Box, Flex, useColorMode, get } from "theme-ui"
+import { Container, jsx, Box, Flex, useColorMode, get } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { Circle, Donut } from "./shapes"
 import { down, upWide } from "../styles/animations"
 import Logo from "../icons/logo"

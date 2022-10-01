@@ -1,7 +1,9 @@
 import { graphql } from "gatsby"
-import PageComponent from "../components/page"
+import PageComponent, { Head } from "../components/page"
 
 export default PageComponent
+
+export { Head }
 
 export const query = graphql`
   query ($slug: String!) {
@@ -9,7 +11,6 @@ export const query = graphql`
       title
       slug
       excerpt
-      body
       cover {
         childImageSharp {
           gatsbyImageData(quality: 90, layout: FULL_WIDTH)

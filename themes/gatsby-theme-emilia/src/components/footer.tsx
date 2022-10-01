@@ -3,8 +3,7 @@ import { Box, jsx, Container, Flex, Link, useColorMode } from "theme-ui"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 import SocialMediaList from "./social-media-list"
 import ColorModeToggle from "./colormode-toggle"
-// @ts-ignore
-import AboutMeMDX from "../texts/about-me"
+import AboutMeMDX from "../texts/about-me.mdx"
 
 const Footer = () => {
   const { showThemeAuthor } = useEmiliaConfig()

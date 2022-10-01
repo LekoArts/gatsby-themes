@@ -1,35 +1,21 @@
-const kebabCase = require(`lodash.kebabcase`)
 const path = require(`path`)
+const { mdxResolverPassthrough, slugify } = require(`@lekoarts/themes-utils`)
 const withDefaults = require(`./utils/default-options`)
-
-const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
-  const type = info.schema.getType(`Mdx`)
-  const mdxNode = context.nodeModel.getNodeById({
-    id: source.parent,
-  })
-  const resolver = type.getFields()[fieldName].resolve
-  const result = await resolver(mdxNode, args, context, info)
-  return result
-}
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
+exports.createSchemaCustomization = ({ actions }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
   const { basePath } = withDefaults(themeOptions)
-
-  const slugify = (source) => {
-    const slug = source.slug ? source.slug : kebabCase(source.title)
-
-    return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
-  }
 
   createFieldExtension({
     name: `slugify`,
     extend() {
       return {
-        resolve: slugify,
+        resolve(source) {
+          return slugify(source, basePath)
+        },
       }
     },
   })
@@ -70,7 +56,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       areas: [String!]!
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
     }
 
     type MdxProject implements Node & Project {
@@ -81,7 +67,7 @@ exports.createSchemaCustomization = ({ actions, schema }, themeOptions) => {
       areas: [String!]!
       cover: File! @fileByRelativePath
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
     }
 
     type EmiliaConfig implements Node {
@@ -122,6 +108,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       date: node.frontmatter.date,
       areas: node.frontmatter.areas,
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
     }
 
     const mdxProjectId = createNodeId(`${node.id} >>> MdxProject`)
@@ -200,13 +187,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       allProject(sort: { fields: date, order: DESC }) {
         nodes {
           slug
-          ... on MdxProject {
-            parent {
-              ... on Mdx {
-                fileAbsolutePath
-              }
-            }
-          }
+          contentFilePath
           title
           cover {
             childImageSharp {
@@ -227,17 +208,15 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const projects = result.data.allProject.nodes
 
   projects.forEach((project, index) => {
-    const { fileAbsolutePath } = project.parent
-
     const next = index === 0 ? null : projects[index - 1]
     const prev = index === projects.length - 1 ? null : projects[index + 1]
 
     createPage({
       path: project.slug,
-      component: projectTemplate,
+      component: `${projectTemplate}?__contentFilePath=${project.contentFilePath}`,
       context: {
         slug: project.slug,
-        absolutePathRegex: `/^${path.dirname(fileAbsolutePath)}/`,
+        absolutePathRegex: `/^${path.dirname(project.contentFilePath)}/`,
         prev,
         next,
         formatString,

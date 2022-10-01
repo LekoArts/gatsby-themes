@@ -2,6 +2,9 @@ require(`dotenv`).config()
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     siteUrl: process.env.SITE_URL || `https://status.lekoarts.de`,
@@ -11,7 +14,6 @@ module.exports = {
   plugins: [
     // See the theme's README for all available components
     `@lekoarts/gatsby-theme-status-dashboard`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -28,7 +30,6 @@ module.exports = {
         icon: `assets/favicon.png`,
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

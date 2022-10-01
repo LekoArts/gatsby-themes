@@ -1,7 +1,7 @@
 // Based on https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 // and https://tailwindcss.com/components
 
-const borderWidths = {
+export const borderWidths = {
   px: `1px`,
   0: `0`,
   2: `2px`,
@@ -9,57 +9,138 @@ const borderWidths = {
   8: `8px`,
 }
 
-const breakpoints = [`640px`, `768px`, `1024px`, `1280px`]
+export const breakpoints = [`640px`, `758px`, `1024px`, `1280px`]
 
-const baseColors = {
+export const baseColors = {
+  transparent: `transparent`,
   black: `#000`,
   white: `#fff`,
-  gray: [null, `#f7fafc`, `#edf2f7`, `#e2e8f0`, `#cbd5e0`, `#a0aec0`, `#718096`, `#4a5568`, `#2d3748`, `#1a202c`],
-  red: [null, `#fff5f5`, `#fed7d7`, `#feb2b2`, `#fc8181`, `#f56565`, `#e53e3e`, `#c53030`, `#9b2c2c`, `#742a2a`],
-  blue: [null, `#ebf8ff`, `#bee3f8`, `#90cdf4`, `#63b3ed`, `#4299e1`, `#3182ce`, `#2b6cb0`, `#2c5282`, `#2a4365`],
+  gray: {
+    50: `#f9fafb`,
+    100: `#f3f4f6`,
+    200: `#e5e7eb`,
+    300: `#d1d5db`,
+    400: `#9ca3af`,
+    500: `#6b7280`,
+    600: `#4b5563`,
+    700: `#374151`,
+    800: `#1f2937`,
+    900: `#111827`,
+  },
+  red: {
+    50: `#fef2f2`,
+    100: `#fee2e2`,
+    200: `#fecaca`,
+    300: `#fca5a5`,
+    400: `#f87171`,
+    500: `#ef4444`,
+    600: `#dc2626`,
+    700: `#b91c1c`,
+    800: `#991b1b`,
+    900: `#7f1d1d`,
+  },
+  orange: {
+    50: `#fff7ed`,
+    100: `#ffedd5`,
+    200: `#fed7aa`,
+    300: `#fdba74`,
+    400: `#fb923c`,
+    500: `#f97316`,
+    600: `#ea580c`,
+    700: `#c2410c`,
+    800: `#9a3412`,
+    900: `#7c2d12`,
+  },
+  green: {
+    50: `#f0fdf4`,
+    100: `#dcfce7`,
+    200: `#bbf7d0`,
+    300: `#86efac`,
+    400: `#4ade80`,
+    500: `#22c55e`,
+    600: `#16a34a`,
+    700: `#15803d`,
+    800: `#166534`,
+    900: `#14532d`,
+  },
+  blue: {
+    50: `#eff6ff`,
+    100: `#dbeafe`,
+    200: `#bfdbfe`,
+    300: `#93c5fd`,
+    400: `#60a5fa`,
+    500: `#3b82f6`,
+    600: `#2563eb`,
+    700: `#1d4ed8`,
+    800: `#1e40af`,
+    900: `#1e3a8a`,
+  },
+  indigo: [
+    `#eef2ff`,
+    `#e0e7ff`,
+    `#c7d2fe`,
+    `#a5b4fc`,
+    `#818cf8`,
+    `#6366f1`,
+    `#4f46e5`,
+    `#4338ca`,
+    `#3730a3`,
+    `#312e81`,
+  ],
 }
 
-const colors = {
+export const colors = {
   ...baseColors,
-  text: baseColors.gray[8],
+  grayDark: baseColors.gray[800],
+  text: baseColors.gray[800],
   background: baseColors.white,
-  primary: baseColors.blue[7],
-  secondary: baseColors.gray[6],
-  muted: baseColors.gray[3],
-  info: baseColors.blue[4],
-  danger: baseColors.red[3],
+  primary: baseColors.blue[700],
+  primaryHover: baseColors.blue[800],
+  secondary: baseColors.gray[600],
+  muted: baseColors.gray[300],
+  success: baseColors.green[300],
+  info: baseColors.blue[400],
+  warning: baseColors.orange[300],
+  danger: baseColors.red[300],
+  light: baseColors.gray[100],
+  dark: baseColors.gray[800],
+  textMuted: baseColors.gray[600],
 }
 
-const baseFonts = {
+export const baseFonts = {
   sans: `-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   serif: `Georgia, Cambria, "Times New Roman", Times, serif`,
   mono: `Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
 }
 
-const fonts = {
+export const fonts = {
   ...baseFonts,
   body: baseFonts.sans,
   heading: `inherit`,
   monospace: baseFonts.mono,
 }
 
-const fontSizes = [`0.875rem`, `1rem`, `1.25rem`, `1.5rem`, `1.875rem`, `2.25rem`, `3rem`]
+export const fontSizes = [`0.875rem`, `1rem`, `1.25rem`, `1.5rem`, `1.875rem`, `2.25rem`, `3rem`, `4rem`, `4.5rem`]
 
-const baseFontWeights = {
+export const baseFontWeights = {
+  hairline: `100`,
+  thin: `200`,
   light: `300`,
   normal: `400`,
   medium: `500`,
+  semibold: `600`,
   bold: `700`,
+  extrabold: `800`,
   black: `900`,
 }
 
-const fontWeights = {
+export const fontWeights = {
   ...baseFontWeights,
   body: baseFontWeights.normal,
   heading: baseFontWeights.bold,
 }
 
-const letterSpacings = {
+export const letterSpacings = {
   tighter: `-0.05em`,
   tight: `-0.025em`,
   normal: `0`,
@@ -68,7 +149,7 @@ const letterSpacings = {
   widest: `0.1em`,
 }
 
-const baseLineHeights = {
+export const baseLineHeights = {
   none: `1`,
   tight: `1.25`,
   snug: `1.375`,
@@ -77,13 +158,13 @@ const baseLineHeights = {
   loose: `2`,
 }
 
-const lineHeights = {
+export const lineHeights = {
   ...baseLineHeights,
   body: baseLineHeights.relaxed,
   heading: baseLineHeights.tight,
 }
 
-const radii = {
+export const radii = {
   none: `0`,
   sm: `0.125rem`,
   default: `0.25rem`,
@@ -91,7 +172,7 @@ const radii = {
   full: `9999px`,
 }
 
-const sizes = {
+export const sizes = {
   px: `1px`,
   0: `0`,
   1: `0.25rem`,
@@ -107,12 +188,26 @@ const sizes = {
   20: `5rem`,
   24: `6rem`,
   32: `8rem`,
+  40: `10rem`,
+  48: `12rem`,
+  56: `14rem`,
+  64: `16rem`,
+  xs: `20rem`,
+  sm: `24rem`,
+  md: `28rem`,
+  lg: `32rem`,
+  xl: `36rem`,
+  "2xl": `42rem`,
+  "3xl": `48rem`,
+  "4xl": `56rem`,
+  "5xl": `64rem`,
+  "6xl": `72rem`,
   full: `100%`,
   screenHeight: `100vh`,
   screenWidth: `100vw`,
 }
 
-const shadows = {
+export const shadows = {
   default: `0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)`,
   md: `0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)`,
   lg: `0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)`,
@@ -123,9 +218,9 @@ const shadows = {
   none: `none`,
 }
 
-const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`, `16rem`]
+export const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`, `16rem`, `32rem`]
 
-const zIndices = {
+export const zIndices = {
   auto: `auto`,
   0: `0`,
   10: `10`,
@@ -143,7 +238,7 @@ const heading = {
   mb: 1,
 }
 
-const styles = {
+export const styles = {
   root: {
     fontFamily: `body`,
     lineHeight: `body`,
@@ -185,7 +280,7 @@ const styles = {
   },
 }
 
-const tailwind = {
+export const theme = {
   borderWidths,
   breakpoints,
   colors,
@@ -202,4 +297,4 @@ const tailwind = {
   styles,
 }
 
-export default tailwind
+export default theme

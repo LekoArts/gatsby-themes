@@ -1,8 +1,13 @@
-import { theme } from "../../theme";
 import {
   normalizeThemeUIColors,
   filterStyles,
 } from "@lekoarts/gatsby-theme-specimens";
+import { theme } from "../../theme";
+import PageLayout from "../components/layout";
+import Seo from "../components/seo";
+
+export const Head = () => <Seo />;
+export default PageLayout;
 
 # Specimens for Design Systems (Preview)
 

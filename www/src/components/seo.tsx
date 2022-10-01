@@ -1,5 +1,4 @@
 import React from "react"
-import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
 type SEOProps = {
@@ -30,7 +29,6 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
     siteUrl,
     description: defaultDescription,
     headline,
-    language,
     image: defaultImage,
     author,
   } = site
@@ -111,8 +109,7 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
   })
 
   return (
-    <Helmet meta={meta}>
-      <html lang={language} />
+    <>
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
@@ -136,12 +133,11 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5a67d8" />
-      <link rel="preload" href="/fonts/Benguiat-Bold.woff2" as="font" type="font/woff2" crossOrigin="true" />
       <meta name="msapplication-TileColor" content="#f7fafc" />
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`identity`))}</script>
       <script type="application/ld+json">{JSON.stringify(orgaCreator(`creator`))}</script>
       <script type="application/ld+json">{JSON.stringify(schemaHomepage)}</script>
-    </Helmet>
+    </>
   )
 }
 

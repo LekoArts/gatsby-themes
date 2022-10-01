@@ -1,8 +1,9 @@
+import PageLayout from "../components/layout";
 import TableOfContents from "../components/table-of-contents";
-import {
-  normalizeThemeUIColors,
-  filterStyles,
-} from "@lekoarts/gatsby-theme-specimens";
+import Seo from "../components/seo";
+
+export const Head = () => <Seo />;
+export default PageLayout;
 
 # Specimens for Design Systems
 
@@ -63,7 +64,7 @@ Variants: `alerts.success`, `alerts.hint`, `alerts.warning`, `alerts.info`, `ale
 
 Available props:
 
-- type (string) (optional) (Default: "hint")
+- type (`string`) (optional) (Default: "hint")
 
 ```jsx live
 <Alert>Neutral hint - Default</Alert>
@@ -87,9 +88,9 @@ Variant: `audio.specimens`
 
 Available props:
 
-- src (string) - Must be a valid path on your webserver, e.g. the sound file below is placed inside src/static/sounds
-- name (string) (optional) (Default: "")
-- desc (string) (optional) (Default: "")
+- src (`string`) - Must be a valid path on your webserver, e.g. the sound file below is placed inside src/static/sounds
+- name (`string`) (optional) (Default: "")
+- desc (`string`) (optional) (Default: "")
 
 ```jsx live
 <Audio
@@ -137,7 +138,7 @@ Variant: `families.specimens`
 
 Available props:
 
-- colors (Record<string, string[]>)
+- colors (`Record<string, string[]>`)
 
 colors has to be in the following format:
 
@@ -153,6 +154,13 @@ colors: {
 const colors = {
   blue: ["#60a5fa", "#2563eb"],
   teal: ["#2dd4bf", "#0d9488"],
+  orange: {
+    50: `#fff7ed`,
+    100: `#ffedd5`,
+    200: `#fed7aa`,
+    300: `#fdba74`,
+    400: `#fb923c`,
+  },
 };
 
 render(<ColorFamilies colors={colors} />);
@@ -164,9 +172,9 @@ Variant: `rows.specimens`
 
 Available props:
 
-- color (string) - Must be in HEX format
-- name (string)
-- prefix (string) (optional) (Default: "")
+- color (`string`) - Must be in HEX format
+- name (`string`)
+- prefix (`string`) (optional) (Default: "")
 
 ```jsx live
 <ColorRow color="#000" name="Blackness" prefix="Dark - " />
@@ -178,10 +186,10 @@ Variant: `swatches.specimens`
 
 Available props:
 
-- color (string) - Must be in HEX format
-- name (string) (optional) (Default: "")
-- minimal (boolean) (optional) (Default: false)
-- prefix (string) (optional) (Default: "")
+- color (`string`) - Must be in HEX format
+- name (`string`) (optional) (Default: "")
+- minimal (`boolean`) (optional) (Default: false)
+- prefix (`string`) (optional) (Default: "")
 
 ```jsx live noInline
 render(
@@ -200,8 +208,8 @@ Variant: `download.specimens`
 
 Available props:
 
-- src (string) - Must be a valid path on your webserver, e.g. the file below is placed inside src/static/downloads
-- name (string)
+- src (`string`) - Must be a valid path on your webserver, e.g. the file below is placed inside src/static/downloads
+- name (`string`)
 
 ```jsx live
 <Download
@@ -222,7 +230,7 @@ Variant: `typography.fontFamily`
 Available props:
 
 - fonts
-- previewText (string) (optional) - Replace "The quick brown fox jumps over the lazy dog" with something custom
+- previewText (`string`) (optional) - Replace "The quick brown fox jumps over the lazy dog" with something custom
 
 fonts has to be in the following format:
 
@@ -273,7 +281,7 @@ Variant: `typography.fontWeight`
 Available props:
 
 - fontWeights
-- previewText (string) (optional) - Replace "The quick brown fox jumps over the lazy dog" with something custom
+- previewText (`string`) (optional) - Replace "The quick brown fox jumps over the lazy dog" with something custom
 
 fontWeights has to be in the following format:
 
@@ -305,7 +313,7 @@ Available props:
 
 - styles
 - theme
-- previewText (string) (optional) - Replace "Heading" with something custom
+- previewText (`string`) (optional) - Replace "Heading" with something custom
 
 If you're already using Theme UI your theme file already has all necessary keys (styles, fontSizes, fontWeights, fonts). As you can see in the below example the `theme.styles` has entries like `h1` which then will be used to display.
 
@@ -391,7 +399,7 @@ render(
 Available props:
 
 - colors - If you use Theme UI you can use the helper function `normalizeThemeUIColors({ colors })` to convert the array of color strings to the necessary format
-- prefix (string) (optional) (Default: "")
+- prefix (`string`) (optional) (Default: "")
 
 colors has to be in the following format:
 
@@ -439,10 +447,10 @@ render(
 Available props:
 
 - colors - If you use Theme UI you can use the helper function `normalizeThemeUIColors({ colors })` to convert the array of color strings to the necessary format
-- prefix (string) (optional) (Default: "")
-- single (boolean) (optional) (Default: false) - When passing in the colors object you can filter out all keys that have arrays as children
-- minimal (boolean) (optional) (Default: false) - Hide RGB and CMYK label
-- mode (string) (optional) (Default: "list")
+- prefix (`string`) (optional) (Default: "")
+- single (`boolean`) (optional) (Default: false) - When passing in the colors object you can filter out all keys that have arrays as children
+- minimal (`boolean`) (optional) (Default: false) - Hide RGB and CMYK label
+- mode (`string`) (optional) (Default: "list")
 
 colors has to be in the following format:
 
@@ -481,9 +489,9 @@ Variant: `tables.space`
 
 This theme also exposes a `Table` component. It is used in this case to showcase the different `sizes` of the theme. Generally speaking the `Table` component has the following props:
 
-- columns (string[])
-- titles (string[])
-- children (React.ReactNode)
+- columns (`string[]`)
+- titles (`string[]`)
+- children (`React.ReactNode`)
 
 The `columns` prop is defining the `grid-template-columns` of the table in the fashion of Theme UI ([Responsive Styles](https://theme-ui.com/getting-started#responsive-styles)). The `titles` should be the same count as columns.
 
@@ -578,12 +586,12 @@ Variant: `video.specimens`
 
 Available props:
 
-- src (string) - Must be a valid path on your webserver, e.g. the video file below is placed inside src/static/videos
-- poster (string) (optional) (Default: "") - By default the video tag will use the first frame of the video as a preview. With the poster you can define a custom preview image
-- name (string) (optional) (Default: "")
-- muted (boolean) (optional) (Default: false)
-- loop (boolean) (optional) (Default: false)
-- autoplay (boolean) (optional) (Default: false)
+- src (`string`) - Must be a valid path on your webserver, e.g. the video file below is placed inside src/static/videos
+- poster (`string`) (optional) (Default: "") - By default the video tag will use the first frame of the video as a preview. With the poster you can define a custom preview image
+- name (`string`) (optional) (Default: "")
+- muted (`boolean`) (optional) (Default: false)
+- loop (`boolean`) (optional) (Default: false)
+- autoplay (`boolean`) (optional) (Default: false)
 
 ```jsx live
 <Video

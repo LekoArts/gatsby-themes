@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import * as React from "react"
 import { jsx, useColorMode } from "theme-ui"
-import BGPattern from "../assets/bg-pattern"
+import Svg from "./svg"
 
 const HeaderBackground = () => {
   const [colorMode] = useColorMode()
@@ -19,13 +19,9 @@ const HeaderBackground = () => {
           width: `100%`,
           height: `100%`,
           color: `backgroundPattern`,
-          svg: {
-            height: `100%`,
-            width: `100%`,
-          },
         }}
       >
-        <BGPattern />
+        <Svg id="bgPattern" height="100%" width="100%" />
       </div>
       <div
         sx={{

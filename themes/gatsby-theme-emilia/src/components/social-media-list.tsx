@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from "react"
-import { jsx, Themed } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import useEmiliaConfig from "../hooks/use-emilia-config"
 
 const SocialMediaList = () => {

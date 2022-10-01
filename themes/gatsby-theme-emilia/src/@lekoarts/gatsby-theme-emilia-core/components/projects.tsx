@@ -1,5 +1,5 @@
 import * as React from "react"
-import Projects from "../../../components/projects"
+import Projects, { Head } from "../../../components/projects"
 
 type Props = {
   data: {
@@ -16,3 +16,5 @@ export default function EmiliaCoreProjects({ ...props }: Props) {
 
   return <Projects projects={allProject.nodes} {...props} />
 }
+
+export { Head }

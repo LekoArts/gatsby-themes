@@ -2,16 +2,16 @@
 import * as React from "react"
 import { jsx } from "theme-ui"
 import { Global } from "@emotion/react"
-import Seo from "./seo"
+import { MDXProvider } from "@mdx-js/react"
 import Sidebar from "./sidebar"
+import MdxComponents from "./mdx-components"
 
 type LayoutProps = {
   children: React.ReactNode
-  title?: string
 }
 
-const Layout = ({ children, title }: LayoutProps) => (
-  <React.Fragment>
+const Layout = ({ children }: LayoutProps) => (
+  <MDXProvider components={MdxComponents}>
     <Global
       styles={(theme) => ({
         "*": {
@@ -35,12 +35,11 @@ const Layout = ({ children, title }: LayoutProps) => (
         },
       })}
     />
-    <Seo title={title} />
     <div sx={{ display: `grid`, gridTemplateColumns: [`200px 1fr`, `200px 1fr`, `250px 1fr`], minHeight: `100vh` }}>
       <Sidebar />
       <main sx={{ backgroundColor: `backgroundContent`, padding: [3, 3, 4, 5] }}>{children}</main>
     </div>
-  </React.Fragment>
+  </MDXProvider>
 )
 
 export default Layout

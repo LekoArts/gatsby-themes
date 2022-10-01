@@ -1,5 +1,5 @@
 import React from "react"
-import Homepage from "../../../components/homepage"
+import Homepage, { Head } from "../../../components/homepage"
 
 type Props = {
   data: {
@@ -12,3 +12,5 @@ export default function MinimalBlogCoreHomepage({ data }: Props) {
 
   return <Homepage posts={TODO} />
 }
+
+export { Head }

@@ -1,0 +1,29 @@
+{
+  "name": "@lekoarts/themes-utils",
+  "description": "Utilities to build my themes",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "LekoArts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "lodash.kebabcase": "^4.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/LekoArts/gatsby-themes/issues"
+  },
+  "homepage": "https://themes.lekoarts.de",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LekoArts/gatsby-themes.git",
+    "directory": "packages/rehype-meta-as-attributes"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  }
+}

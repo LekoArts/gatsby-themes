@@ -52,10 +52,10 @@ npm install @lekoarts/gatsby-theme-emilia
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
+npx gatsby new gatsby-starter-portfolio-emilia https://github.com/LekoArts/gatsby-starter-portfolio-emilia
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)
@@ -119,8 +119,6 @@ module.exports = {
     siteUrl: `https://emilia.lekoarts.de`,
     // Used for SEO
     siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

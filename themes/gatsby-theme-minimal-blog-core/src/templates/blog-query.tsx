@@ -1,7 +1,9 @@
 import { graphql } from "gatsby"
-import BlogComponent from "../components/blog"
+import BlogComponent, { Head } from "../components/blog"
 
 export default BlogComponent
+
+export { Head }
 
 export const query = graphql`
   query ($formatString: String!) {

@@ -1,8 +1,12 @@
-// eslint-disable-next-line global-require
-const remarkPlugins = [require(`remark-slug`)]
+const remarkGfm = require(`remark-gfm`)
+const remarkSlug = require(`remark-slug`)
+const rehypeMetaAsAttributes = require(`@lekoarts/rehype-meta-as-attributes`)
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
     siteTitle: `Specimens for Design Systems - @lekoarts/gatsby-theme-specimens`,
@@ -28,13 +32,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        lessBabel: true,
-        extensions: [`.mdx`],
-        remarkPlugins,
+        mdxOptions: {
+          remarkPlugins: [remarkGfm, remarkSlug],
+          rehypePlugins: [rehypeMetaAsAttributes],
+        },
       },
     },
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -62,7 +66,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {

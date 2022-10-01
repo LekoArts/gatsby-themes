@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import * as React from "react"
-import { Themed, jsx, ColorModesScale } from "theme-ui"
+import { jsx, ColorModesScale } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { Palette, normalizeThemeUIColors } from "@lekoarts/gatsby-theme-specimens"
 
 type ColorsPaletteProps = {

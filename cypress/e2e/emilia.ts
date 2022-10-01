@@ -5,6 +5,12 @@ describe(`gatsby-theme-emilia`, () => {
   beforeEach(() => {
     cy.visit(`/`).waitForRouteChange()
   })
+  it(`should have correct html[lang] attribute`, () => {
+    cy.get(`html`).should(`have.attr`, `lang`, `en`)
+  })
+  it(`should have correct title in head`, () => {
+    cy.title().should(`eq`, `Emilia - Gatsby Starter Portfolio`)
+  })
   it(`should render the name`, () => {
     cy.get(`h1`).within(() => {
       cy.findByText(/lekoarts/i)
@@ -56,11 +62,13 @@ describe(`gatsby-theme-emilia`, () => {
     cy.findByText(/more projects/i)
     cy.findByLabelText(/visit jodie project page/i)
     cy.findByText(/About Me/i)
+    cy.title().should(`eq`, `Emilia | Emilia`)
   })
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.findByLabelText(/Visit Ars Aurea project page/i)
       .click()
       .waitForRouteChange()
       .assertRoute(`/ars-aurea-goldene-kunst`)
+    cy.title().should(`eq`, `Ars Aurea | Emilia`)
   })
 })

@@ -1,19 +1,9 @@
+import type { PageProps } from "gatsby"
 import * as React from "react"
-import Project from "../../../components/project"
+import Project, { Head, EmiliaProjectProps, EmiliaProjectPageContext } from "../../../components/project"
 
-type Props = {
-  data: {
-    project: any
-    images: any
-    [key: string]: any
-  }
-  pageContext: {
-    prev: any
-    next: any
-  }
-  [key: string]: any
-}
-
-export default function EmiliaCoreProject({ ...props }: Props) {
+export default function EmiliaCoreProject({ ...props }: PageProps<EmiliaProjectProps, EmiliaProjectPageContext>) {
   return <Project {...props} />
 }
+
+export { Head }

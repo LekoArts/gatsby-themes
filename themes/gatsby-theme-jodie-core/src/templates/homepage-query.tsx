@@ -1,7 +1,9 @@
 import { graphql } from "gatsby"
-import HomepageComponent from "../components/homepage"
+import HomepageComponent, { Head } from "../components/homepage"
 
 export default HomepageComponent
+
+export { Head }
 
 export const query = graphql`
   query ($homepagePageLimit: Int!, $homepageProjectLimit: Int!) {
@@ -11,7 +13,7 @@ export const query = graphql`
         title
         cover {
           childImageSharp {
-            gatsbyImageData(width: 1200, quality: 90)
+            gatsbyImageData(width: 1200, quality: 90, formats: [AUTO, WEBP, AVIF])
           }
         }
         __typename
@@ -23,7 +25,7 @@ export const query = graphql`
         title: shortTitle
         cover {
           childImageSharp {
-            gatsbyImageData(width: 1200, quality: 90)
+            gatsbyImageData(width: 1200, quality: 90, formats: [AUTO, WEBP, AVIF])
           }
         }
         __typename

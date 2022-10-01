@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Container, Themed, Link as TLink } from "theme-ui"
+import { Container, Link as TLink } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import Layout from "@lekoarts/gatsby-theme-emma/src/components/layout"
 import Seo from "@lekoarts/gatsby-theme-emma/src/components/seo"
 
 const NotFound = () => (
   <Layout>
-    <Seo title="404 - Not found" />
     <Container>
       <Themed.p>
         Oh, no!
@@ -21,3 +21,5 @@ const NotFound = () => (
 )
 
 export default NotFound
+
+export const Head = () => <Seo title="404 - Not Found" />

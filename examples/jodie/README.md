@@ -44,19 +44,16 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 
 ### 1. **Create a Gatsby site.**
 
-Use `git` to clone the site and navigate into it:
+Use the Gatsby CLI to clone the site and install dependencies:
 
 ```sh
-git clone https://github.com/LekoArts/gatsby-starter-portfolio-jodie project-name
-cd project-name
+npx gatsby new gatsby-starter-portfolio-jodie https://github.com/LekoArts/gatsby-starter-portfolio-jodie
 ```
 
-### 2. **Install dependencies.**
-
-If you use npm 7 or above use the `--legacy-peer-deps` flag. If you use npm 6 you can use `npm install`.
+### 2. **Navigate to your new project.**
 
 ```sh
-npm install --legacy-peer-deps
+cd gatsby-starter-portfolio-jodie
 ```
 
 ### 3. **Open the code and start customizing!**
@@ -83,16 +80,19 @@ Edit the file at `src/@lekoarts/gatsby-theme-jodie/icons/logo.jsx`.
 
 By default, the underlying theme and thus this starter uses "Work Sans" as its font. It's used throughout the site and set as a `font-family` on the `html` element.
 
-If you want to change your default font or add any additional fonts, you'll need to change two things:
+If you want to change your default font or add any additional fonts, you'll need to change a couple of things:
 
-1. The configuration for `gatsby-omni-font-loader` => Responsible for loading the font CSS files
-1. The Theme UI config and its `fonts` key (see [Theme UI Typography Docs](https://theme-ui.com/theming#typography)) => Responsible for setting the `font-family` in the example
+1. Font file inside `static/fonts`
+1. Preload link inside `gatsby-ssr.js` (the name of the font file)
+1. CSS in `global.css`
+1. The Theme UI config and its `fonts` key (see [Theme UI Typography Docs](https://theme-ui.com/theming#typography))
 
-After adjusting the configuration for `gatsby-omni-font-loader` you'll need to shadow the theme's Theme UI config and overwrite the `fonts` key. For the sake of this explanation it's assumed that you replaced "Work Sans" with "Roboto Mono".
+For the sake of this explanation it's assumed that you replaced "Work Sans" with "Roboto Mono".
 
-Create a file at `src/gatsby-plugin-theme-ui/index.js` with the following contents:
+Change the file `src/gatsby-plugin-theme-ui/index.js` with the following contents:
 
 ```js
+// Inside src/gatsby-plugin-theme-ui/index.js
 import { merge } from "theme-ui";
 import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index";
 
@@ -112,6 +112,7 @@ As defined in the [Theme Specification](https://theme-ui.com/theme-spec#typograp
 Then you'd not overwrite `body` but add a `heading` key:
 
 ```js
+// Inside src/gatsby-plugin-theme-ui/index.js
 import { merge } from "theme-ui";
 import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index";
 

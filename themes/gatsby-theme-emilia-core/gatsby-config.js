@@ -10,7 +10,6 @@ module.exports = (themeOptions) => {
       siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
       siteUrl: `https://emilia.lekoarts.de`,
       siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
-      siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
       basePath: options.basePath,
@@ -31,11 +30,16 @@ module.exports = (themeOptions) => {
           path: options.assetsPath,
         },
       },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `theme-overrides`,
+          path: `./src/@lekoarts`,
+        },
+      },
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
-        options: {
-          lessBabel: true,
-        },
+        options: {},
       },
       `gatsby-transformer-sharp`,
       options.sharp && {

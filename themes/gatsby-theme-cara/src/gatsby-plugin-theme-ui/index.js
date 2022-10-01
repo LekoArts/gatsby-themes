@@ -2,9 +2,9 @@ import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
-  initialColorModeName: `dark`,
   config: {
-    useCustomProperties: true,
+    initialColorModeName: `dark`,
+    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     primary: tailwind.colors.orange[4],

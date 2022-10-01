@@ -51,10 +51,10 @@ npm install @lekoarts/gatsby-theme-emma
 
 ### Install as a starter
 
-This will generate a new site (with the folder name "emma") that pre-configures use of the theme including example content.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new emma LekoArts/gatsby-starter-portfolio-emma
+npx gatsby new gatsby-starter-portfolio-emma https://github.com/LekoArts/gatsby-starter-portfolio-emma
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
@@ -111,8 +111,6 @@ module.exports = {
     siteUrl: `https://emma.lekoarts.de`,
     // Used for SEO
     siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

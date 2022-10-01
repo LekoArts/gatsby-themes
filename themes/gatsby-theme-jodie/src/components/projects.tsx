@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import * as React from "react"
-import { PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "./layout"
 import Seo from "./seo"
@@ -9,7 +9,7 @@ import GridItem from "./grid-item"
 import locales from "../locales"
 import { visuallyHidden } from "../styles/utils"
 
-type DataProps = {
+export type JodieProjectsProps = {
   projects: {
     nodes: {
       shortTitle: string
@@ -23,9 +23,8 @@ type DataProps = {
   }
 }
 
-const Project: React.FC<PageProps<DataProps>> = ({ data: { projects }, location }) => (
+const Projects: React.FC<PageProps<JodieProjectsProps>> = ({ data: { projects } }) => (
   <Layout>
-    <Seo title="Projects" pathname={location.pathname} />
     <h1 sx={visuallyHidden} data-testid="page-title">
       {locales.projects}
     </h1>
@@ -50,4 +49,6 @@ const Project: React.FC<PageProps<DataProps>> = ({ data: { projects }, location 
   </Layout>
 )
 
-export default Project
+export default Projects
+
+export const Head: HeadFC<JodieProjectsProps> = ({ location }) => <Seo title="Projects" pathname={location.pathname} />

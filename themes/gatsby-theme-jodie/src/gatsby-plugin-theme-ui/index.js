@@ -1,6 +1,5 @@
 import { merge } from "theme-ui"
 import { tailwind } from "@theme-ui/presets"
-import prismPreset from "@theme-ui/prism/presets/github"
 
 const contentStyles = {
   px: [3, 3, 4, 5, 6],
@@ -10,9 +9,9 @@ const contentStyles = {
 }
 
 const theme = merge(tailwind, {
-  initialColorModeName: `light`,
   config: {
-    useCustomProperties: true,
+    initialColorModeName: `light`,
+    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     primary: `#b75e09`,
@@ -29,7 +28,7 @@ const theme = merge(tailwind, {
     wide: `375px`,
   },
   fonts: {
-    body: `"Work Sans", -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
+    body: `-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"`,
   },
   content: {
     page: {
@@ -116,7 +115,6 @@ const theme = merge(tailwind, {
       mb: 2,
     },
     pre: {
-      ...prismPreset,
       padding: 2,
       whiteSpace: `pre-wrap`,
       wordBreak: `keep-all`,

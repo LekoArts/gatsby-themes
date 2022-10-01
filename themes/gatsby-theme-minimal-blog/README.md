@@ -43,7 +43,7 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - Light Mode / Dark Mode
 - Typography driven, minimal style
 - Tags/Categories support
-- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support. Also allows adding line numbers, line highlighting, language tabs, and file titles.
+- Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer). Also allows adding line numbers, line highlighting, language tabs, and file titles.
 - RSS Feed for blog posts
 
 ## Installation
@@ -54,10 +54,10 @@ npm install @lekoarts/gatsby-theme-minimal-blog
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
+npx gatsby new gatsby-starter-minimal-blog https://github.com/LekoArts/gatsby-starter-minimal-blog
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-minimal-blog)
@@ -66,21 +66,21 @@ gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
 
 ### Theme options
 
-| Key               | Default Value   | Description                                                                                                 |
-| ----------------- | --------------- | ----------------------------------------------------------------------------------------------------------- |
-| `basePath`        | `/`             | Root url for the theme                                                                                      |
-| `blogPath`        | `/blog`         | url for the blog post overview page                                                                         |
-| `tagsPath`        | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                    |
-| `postsPath`       | `content/posts` | Location of posts                                                                                           |
-| `postsPrefix`     | `/`             | Prefix for all individual blog posts                                                                        |
-| `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                     |
-| `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)   |
-| `sharp`           | `true`          | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off) |
-| `formatString`    | `DD.MM.YYYY`    | Configure the date format for Date fields                                                                   |
-| `showLineNumbers` | `true`          | Show line numbers in code blocks                                                                            |
-| `showCopyButton`  | `true`          | Show copy button in code blocks                                                                             |
-| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                             |
-| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                            |
+| Key               | Default Value   | Description                                                                                                    |
+| ----------------- | --------------- | -------------------------------------------------------------------------------------------------------------- |
+| `basePath`        | `/`             | Root url for the theme                                                                                         |
+| `blogPath`        | `/blog`         | url for the blog post overview page                                                                            |
+| `tagsPath`        | `/tags`         | url for the tags overview page and prefix for tags (e.g. `/tags/my-tag`)                                       |
+| `postsPath`       | `content/posts` | Location of posts                                                                                              |
+| `postsPrefix`     | `/`             | Prefix for all individual blog posts                                                                           |
+| `pagesPath`       | `content/pages` | Location of additional pages (optional)                                                                        |
+| `mdx`             | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)      |
+| `sharp`           | `true`          | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off)    |
+| `formatString`    | `DD.MM.YYYY`    | Configure the date format for Date fields                                                                      |
+| `showLineNumbers` | `false`         | Show line numbers in code blocks. This can also be enabled on a block-by-block basis (see "Code Highlighting") |
+| `showCopyButton`  | `true`          | Show copy button in code blocks                                                                                |
+| `navigation`      | `[]`            | Add links to your internal sites to the left part of the header                                                |
+| `externalLinks`   | `[]`            | Add links to your external sites to the right part of the header                                               |
 
 #### Example usage
 
@@ -91,7 +91,7 @@ module.exports = {
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       options: {
-        showLineNumbers: false,
+        showLineNumbers: true,
         navigation: [
           {
             title: `Blog`,
@@ -136,8 +136,6 @@ module.exports = {
     siteUrl: `https://minimal-blog.lekoarts.de`,
     // Used for SEO
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle
@@ -150,7 +148,7 @@ If you want to add additional items to the navigation or external links (left an
 
 ### Code Highlighting
 
-Since this theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
+Since this theme ships with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) certain additional features were added to code blocks. You can find an overview / usage example in the [example repository](https://github.com/LekoArts/gatsby-themes/tree/main/examples/minimal-blog/content/posts/fantastic-beasts-and-where-to-find-them/index.mdx)! If you want to change certain code styles or add additional language tabs, you need to shadow the file `src/@lekoarts/gatsby-theme-minimal-blog/styles/code.js`.
 
 **Language tabs:**
 
@@ -167,7 +165,7 @@ When you add a language (such as e.g. `js` or `javascript`) to the code block, a
 You can display a title (e.g. the file path) above the code block.
 
 ````
-```jsx:title=your-title
+```jsx title=your-title
 // code goes here
 ```
 ````
@@ -175,7 +173,7 @@ You can display a title (e.g. the file path) above the code block.
 Or without a specific language:
 
 ````
-```:title=your-title
+```none title=your-title
 // code goes here
 ```
 ````
@@ -185,7 +183,7 @@ Or without a specific language:
 You can highlight single or multiple (or both) lines in a code block. You need to add a language.
 
 ````
-```js {2,4-5}
+```js highlight=2,4-5
 const test = 3
 const foo = 'bar'
 const harry = 'potter'
@@ -194,26 +192,13 @@ const ron = 'weasley'
 ```
 ````
 
-**Hide line numbers:**
+**Show line numbers:**
 
-If you want to hide line numbers you can either globally disable them (see Theme options) or on a block-by-block basis. You can also combine that with the other attributes.
+If you want to show line numbers you can either globally enable them (see theme options) or on a block-by-block basis. You can also combine that with the other attributes.
 
 ````
-```noLineNumbers
+```js withLineNumbers
 // code goes here
-```
-````
-
-**react-live:**
-
-Add `react-live` to the code block (and render the component) to see a preview below it.
-
-````
-```js react-live
-const onClick = () => {
-  alert("You opened me");
-};
-render(<button onClick={onClick}>Alohomora!</button>);
 ```
 ````
 

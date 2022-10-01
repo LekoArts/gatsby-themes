@@ -4,7 +4,13 @@ module.exports = (options) => ({
       resolve: `@lekoarts/gatsby-theme-emilia-core`,
       options,
     },
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `texts`,
+        path: `${__dirname}/src/texts`,
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-theme-ui`,
   ],

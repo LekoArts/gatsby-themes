@@ -1,7 +1,8 @@
+import type { HeadFC } from "gatsby"
 import * as React from "react"
 import Layout from "../components/layout"
-// @ts-ignore
-import Index from "../data/index"
+import SEO from "../components/seo"
+import Index from "../data/index.mdx"
 
 const Homepage = () => (
   <Layout>
@@ -10,3 +11,5 @@ const Homepage = () => (
 )
 
 export default Homepage
+
+export const Head: HeadFC = () => <SEO />

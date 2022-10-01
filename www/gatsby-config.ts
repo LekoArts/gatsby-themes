@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby"
+import type { GatsbyConfig, PluginRef } from "gatsby"
 import path from "path"
 import "dotenv/config"
 
@@ -13,7 +13,6 @@ const config: GatsbyConfig = {
     siteUrl: `https://themes.lekoarts.de`,
     description: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website! Choose from many professionally created and impressive designs with a wide variety of features and customization options. Use Gatsby Themes to take your project to the next level and let you and your customers take advantage of the many benefits Gatsby has to offer.`,
     headline: `Get high-quality and customizable Gatsby themes to quickly bootstrap your website`,
-    language: `en`,
     image: `/banner.png`,
     author: `@lekoarts_de`,
   },
@@ -23,19 +22,6 @@ const config: GatsbyConfig = {
       options: {
         name: `data`,
         path: path.resolve(`data`),
-      },
-    },
-    {
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [`https://fonts.gstatic.com`],
-        web: [
-          {
-            name: `IBM Plex Sans`,
-            file: `https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap`,
-          },
-        ],
       },
     },
     githubToken && {
@@ -77,7 +63,6 @@ const config: GatsbyConfig = {
         output: `/`,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-theme-ui`,
@@ -112,7 +97,7 @@ const config: GatsbyConfig = {
         openAnalyzer: false,
       },
     },
-  ].filter(Boolean),
+  ].filter(Boolean) as PluginRef[],
 }
 
 export default config

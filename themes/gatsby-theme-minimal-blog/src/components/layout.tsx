@@ -2,7 +2,8 @@
 import * as React from "react"
 import { Global } from "@emotion/react"
 import { Box, Container, jsx, get } from "theme-ui"
-import Seo from "./seo"
+import { MDXProvider } from "@mdx-js/react"
+import MdxComponents from "./mdx-components"
 import Header from "./header"
 import Footer from "./footer"
 import CodeStyles from "../styles/code"
@@ -11,7 +12,7 @@ import SkipNavLink from "./skip-nav"
 type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className = `` }: LayoutProps) => (
-  <React.Fragment>
+  <MDXProvider components={MdxComponents}>
     <Global
       styles={(t) => ({
         "*": {
@@ -40,7 +41,6 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         },
       })}
     />
-    <Seo />
     <SkipNavLink>Skip to content</SkipNavLink>
     <Container>
       <Header />
@@ -49,7 +49,7 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
       </Box>
       <Footer />
     </Container>
-  </React.Fragment>
+  </MDXProvider>
 )
 
 export default Layout

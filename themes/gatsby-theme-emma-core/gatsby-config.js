@@ -1,3 +1,5 @@
+const remarkGfm = require(`remark-gfm`)
+const remarkUnwrapImages = require(`remark-unwrap-images`)
 const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
@@ -10,7 +12,6 @@ module.exports = (themeOptions) => {
       siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
       siteUrl: `https://emma.lekoarts.de`,
       siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-      siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
       basePath: options.basePath,
@@ -35,7 +36,9 @@ module.exports = (themeOptions) => {
       options.mdx && {
         resolve: `gatsby-plugin-mdx`,
         options: {
-          lessBabel: true,
+          mdxOptions: {
+            remarkPlugins: [remarkGfm, remarkUnwrapImages],
+          },
           gatsbyRemarkPlugins: [
             {
               resolve: `gatsby-remark-images`,

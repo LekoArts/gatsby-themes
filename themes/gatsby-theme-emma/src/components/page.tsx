@@ -1,30 +1,26 @@
 /** @jsx jsx */
 import { animated, useSpring, config } from "react-spring"
 import { Container, jsx, Flex, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
+import { HeadFC, PageProps } from "gatsby"
 import Layout from "./layout"
-import SEO from "./seo"
 import Hero from "./hero"
+import SEO from "./seo"
 
-type PageProps = {
-  data: {
-    page: {
-      title: string
-      slug: string
-      excerpt: string
-      body: string
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-        }
+export type EmmaPageProps = {
+  page: {
+    title: string
+    slug: string
+    excerpt: string
+    cover: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
       }
     }
   }
-  [key: string]: any
 }
 
-const Page = ({ data: { page } }: PageProps) => {
+const Page: React.FC<React.PropsWithChildren<PageProps<EmmaPageProps>>> = ({ data: { page }, children }) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -34,7 +30,6 @@ const Page = ({ data: { page } }: PageProps) => {
 
   return (
     <Layout>
-      <SEO title={page.title} description={page.excerpt} pathname={page.slug} />
       <Hero image={page.cover.childImageSharp.gatsbyImageData} slim>
         <Flex
           sx={{
@@ -57,12 +52,14 @@ const Page = ({ data: { page } }: PageProps) => {
         </Flex>
       </Hero>
       <Container>
-        <animated.div style={contentProps}>
-          <MDXRenderer>{page.body}</MDXRenderer>
-        </animated.div>
+        <animated.div style={contentProps}>{children}</animated.div>
       </Container>
     </Layout>
   )
 }
 
 export default Page
+
+export const Head: HeadFC<EmmaPageProps> = ({ data: { page } }) => (
+  <SEO title={page.title} description={page.excerpt} pathname={page.slug} />
+)

@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Themed, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 
 const Header = () => (
   <header sx={{ my: 4 }}>

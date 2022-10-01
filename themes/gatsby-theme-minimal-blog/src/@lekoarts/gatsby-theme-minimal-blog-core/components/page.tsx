@@ -1,14 +1,9 @@
+import type { PageProps } from "gatsby"
 import * as React from "react"
-import Page from "../../../components/page"
+import Page, { Head, MBPageProps } from "../../../components/page"
 
-type Props = {
-  data: {
-    page: any
-    [key: string]: any
-  }
-  [key: string]: any
-}
-
-export default function MinimalBlogCorePage({ ...props }: Props) {
+export default function MinimalBlogCorePage({ ...props }: PageProps<MBPageProps>) {
   return <Page {...props} />
 }
+
+export { Head }

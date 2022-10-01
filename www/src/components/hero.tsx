@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { Box, Container, Flex, jsx, Themed } from "theme-ui"
+import { Box, Container, Flex, jsx } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { useStaticQuery, graphql } from "gatsby"
 import ThreeDModel from "./3d-model"
 import { Circle, Donut } from "./shapes"

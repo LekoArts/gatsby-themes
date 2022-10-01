@@ -1,12 +1,15 @@
 /** @jsx jsx */
 /* eslint no-shadow: 0 */
-import { jsx, Container, Themed, Box } from "theme-ui"
+import type { HeadFC } from "gatsby"
+import { jsx, Container, Box } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import { useSpring, animated, config } from "react-spring"
 import { rgba } from "polished"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
 import Header from "./header"
 import Card from "./card"
+import Seo from "./seo"
 
 type Props = {
   projects: {
@@ -94,3 +97,5 @@ const Projects = ({ projects }: Props) => {
 }
 
 export default Projects
+
+export const Head: HeadFC = () => <Seo />

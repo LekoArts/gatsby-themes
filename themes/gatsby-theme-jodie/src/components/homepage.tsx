@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import * as React from "react"
-import { PageProps } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import { IGatsbyImageData, GatsbyImage } from "gatsby-plugin-image"
 import Layout from "./layout"
 import GridItem from "./grid-item"
@@ -9,8 +9,9 @@ import { itemListWrapperStyles, itemStyles } from "../styles/item-list"
 import locales from "../locales"
 import { visuallyHidden } from "../styles/utils"
 import modifyGrid from "../utils/modify-grid"
+import Seo from "./seo"
 
-type DataProps = {
+export type JodieHomepageProps = {
   projects: {
     nodes: {
       slug: string
@@ -37,7 +38,7 @@ type DataProps = {
   }
 }
 
-const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } }) => {
+const Homepage: React.FC<PageProps<JodieHomepageProps>> = ({ data: { pages, projects } }) => {
   const rawItems = [...pages.nodes, ...projects.nodes]
   const items = modifyGrid(rawItems)
   const itemsCount = items.length
@@ -84,3 +85,5 @@ const Homepage: React.FC<PageProps<DataProps>> = ({ data: { pages, projects } })
 }
 
 export default Homepage
+
+export const Head: HeadFC = () => <Seo />

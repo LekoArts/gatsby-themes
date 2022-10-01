@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import * as React from "react"
-import { ColorModesScale } from "@theme-ui/css"
-import { jsx } from "theme-ui"
+import { jsx, ColorModesScale } from "theme-ui"
 import Palette from "./palette"
 import normalizeThemeUIColors from "../utils/normalize-theme-ui-colors"
 import theme from "../theme"
@@ -18,7 +17,7 @@ const ColorFamilies = ({ colors = undefined }: ColorFamiliesProps) => (
   <div sx={{ ...theme.families.specimens }}>
     {colors ? (
       Object.entries(colors).map(([key, color]) => {
-        if (!color || !Array.isArray(color)) return null
+        if (!color || (!Array.isArray(color) && typeof color !== `object`)) return null
 
         return (
           <React.Fragment key={key}>

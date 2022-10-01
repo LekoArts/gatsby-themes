@@ -1,15 +1,8 @@
-const kebabCase = require(`lodash.kebabcase`)
+const readingTime = require(`reading-time`)
+const { mdxResolverPassthrough, slugify, kebabCase } = require(`@lekoarts/themes-utils`)
 const withDefaults = require(`./utils/default-options`)
 
-const mdxResolverPassthrough = (fieldName) => async (source, args, context, info) => {
-  const type = info.schema.getType(`Mdx`)
-  const mdxNode = context.nodeModel.getNodeById({
-    id: source.parent,
-  })
-  const resolver = type.getFields()[fieldName].resolve
-  const result = await resolver(mdxNode, args, context, info)
-  return result
-}
+const roundReadingTime = (minutesFloat) => (minutesFloat < 1 ? Math.ceil(minutesFloat) : Math.round(minutesFloat))
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
@@ -18,17 +11,13 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
 
   const { basePath, postsPrefix } = withDefaults(themeOptions)
 
-  const slugify = (source) => {
-    const slug = source.slug ? source.slug : kebabCase(source.title)
-
-    return `/${basePath}/${postsPrefix}/${slug}`.replace(/\/\/+/g, `/`)
-  }
-
   createFieldExtension({
     name: `slugify`,
     extend() {
       return {
-        resolve: slugify,
+        resolve(source) {
+          return slugify(source, `${basePath}/${postsPrefix}`)
+        },
       }
     },
   })
@@ -67,9 +56,10 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
       defer: Boolean @defaultFalse
       date: Date! @dateformat
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
       html: String
-      timeToRead: Int
+      timeToRead: Float
+      wordCount: Int
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -87,7 +77,9 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
       defer: Boolean @defaultFalse
       title: String!
       excerpt(pruneLength: Int = 160): String!
-      body: String!
+      contentFilePath: String!
+      timeToRead: Float
+      wordCount: Int
     }
 
     type MdxPost implements Node & Post {
@@ -96,9 +88,10 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
       date: Date! @dateformat
       defer: Boolean @defaultFalse
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
       html: String! @mdxpassthrough(fieldName: "html")
-      timeToRead: Int @mdxpassthrough(fieldName: "timeToRead")
+      timeToRead: Float
+      wordCount: Int
       tags: [PostTag]
       banner: File @fileByRelativePath
       description: String
@@ -110,7 +103,9 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
       title: String!
       defer: Boolean @defaultFalse
       excerpt(pruneLength: Int = 140): String! @mdxpassthrough(fieldName: "excerpt")
-      body: String! @mdxpassthrough(fieldName: "body")
+      contentFilePath: String!
+      timeToRead: Float
+      wordCount: Int
     }
 
     type MinimalBlogConfig implements Node {
@@ -190,6 +185,12 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
     return
   }
 
+  let readingTimeResult
+
+  if (node.internal.type === `Mdx`) {
+    readingTimeResult = readingTime(node.body)
+  }
+
   // Create a source field
   // And grab the sourceInstanceName to differentiate the different sources
   // In this case "postsPath" and "pagesPath"
@@ -218,6 +219,9 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       description: node.frontmatter.description,
       canonicalUrl: node.frontmatter.canonicalUrl,
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
+      timeToRead: roundReadingTime(readingTimeResult.minutes),
+      wordCount: readingTimeResult.words,
     }
 
     const mdxPostId = createNodeId(`${node.id} >>> MdxPost`)
@@ -245,6 +249,9 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
       title: node.frontmatter.title,
       slug: `/${basePath}/${node.frontmatter.slug}`.replace(/\/\/+/g, `/`),
       defer: node.frontmatter.defer,
+      contentFilePath: fileNode.absolutePath,
+      timeToRead: roundReadingTime(readingTimeResult.minutes),
+      wordCount: readingTimeResult.words,
     }
 
     const mdxPageId = createNodeId(`${node.id} >>> MdxPage`)
@@ -307,12 +314,14 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         nodes {
           slug
           defer
+          contentFilePath
         }
       }
       allPage {
         nodes {
           slug
           defer
+          contentFilePath
         }
       }
       tags: allPost(sort: { fields: tags___name, order: DESC }) {
@@ -333,7 +342,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   posts.forEach((post) => {
     createPage({
       path: post.slug,
-      component: postTemplate,
+      component: `${postTemplate}?__contentFilePath=${post.contentFilePath}`,
       context: {
         slug: post.slug,
         formatString,
@@ -348,7 +357,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
     pages.forEach((page) => {
       createPage({
         path: page.slug,
-        component: pageTemplate,
+        component: `${pageTemplate}?__contentFilePath=${page.contentFilePath}`,
         context: {
           slug: page.slug,
         },

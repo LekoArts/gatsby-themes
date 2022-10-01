@@ -1,7 +1,9 @@
 import { graphql } from "gatsby"
-import TagComponent from "../components/tag"
+import TagComponent, { Head } from "../components/tag"
 
 export default TagComponent
+
+export { Head }
 
 export const query = graphql`
   query ($slug: String!, $formatString: String!) {

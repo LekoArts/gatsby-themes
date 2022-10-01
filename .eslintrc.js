@@ -88,6 +88,7 @@ module.exports = {
     "react/require-default-props": 0,
     "react/forbid-prop-types": 0,
     "react/no-unescaped-entities": 0,
+    "react/no-unknown-property": [`error`, { ignore: [`sx`, `css`] }],
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/jsx-fragments": 0,
@@ -122,4 +123,22 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: `*.mdx`,
+      parser: `eslint-mdx`,
+      extends: [`plugin:mdx/recommended`],
+      rules: {
+        indent: 0,
+        "react/jsx-no-undef": 0,
+        "react/jsx-filename-extension": 0,
+        "react/self-closing-comp": 0,
+        "jsx-a11y/heading-has-content": 0,
+        "import/no-named-as-default": 0,
+        "import/no-named-as-default-member": 0,
+        "@typescript-eslint/no-unused-vars": 0,
+        "react/no-children-prop": 0,
+      },
+    },
+  ],
 }

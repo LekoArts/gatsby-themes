@@ -5,6 +5,12 @@ describe(`gatsby-theme-status-dashboard`, () => {
   beforeEach(() => {
     cy.visit(`/`).waitForRouteChange()
   })
+  it(`should have correct html[lang] attribute`, () => {
+    cy.get(`html`).should(`have.attr`, `lang`, `en`)
+  })
+  it(`should have correct title in head`, () => {
+    cy.title().should(`eq`, `Status Dashboard - LekoArts`)
+  })
   it(`should render the title`, () => {
     cy.get(`h1`).within(() => {
       cy.findByText(/status dashboard - lekoarts/i)

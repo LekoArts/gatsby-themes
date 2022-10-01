@@ -1,12 +1,13 @@
 import { graphql } from "gatsby"
-import ProjectComponent from "../components/project"
+import ProjectComponent, { Head } from "../components/project"
 
 export default ProjectComponent
+
+export { Head }
 
 export const query = graphql`
   query ($slug: String!, $formatString: String!) {
     project(slug: { eq: $slug }) {
-      body
       excerpt
       client
       color

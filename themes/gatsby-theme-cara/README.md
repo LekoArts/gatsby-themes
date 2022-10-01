@@ -51,10 +51,10 @@ npm install @lekoarts/gatsby-theme-cara
 
 ### Install as a starter
 
-This will generate a new site (with the folder name "cara") that pre-configures use of the theme including example content and additional plugins.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new cara LekoArts/gatsby-starter-portfolio-cara
+npx gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-starter-portfolio-cara
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
@@ -103,8 +103,6 @@ module.exports = {
     siteUrl: `https://cara.lekoarts.de`,
     // Used for SEO
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-    // Will be set on the <html /> tag
-    siteLanguage: `en`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
     // Twitter Handle

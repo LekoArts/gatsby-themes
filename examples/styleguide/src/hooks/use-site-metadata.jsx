@@ -10,7 +10,6 @@ const useSiteMetadata = () => {
           siteHeadline
           siteUrl
           siteDescription
-          siteLanguage
           siteImage
           author
         }

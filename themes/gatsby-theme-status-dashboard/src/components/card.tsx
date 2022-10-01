@@ -1,6 +1,7 @@
 /** @jsx jsx */
 /* eslint-disable camelcase */
-import { jsx, Link, Themed } from "theme-ui"
+import { jsx, Link } from "theme-ui"
+import { Themed } from "@theme-ui/mdx"
 import CircleCI from "../icons/circle-ci"
 import GitHub from "../icons/github"
 

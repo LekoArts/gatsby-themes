@@ -1,38 +1,34 @@
 /** @jsx jsx */
 import { animated, useSpring, config } from "react-spring"
+import type { HeadFC, PageProps } from "gatsby"
 import { Container, jsx, Flex, Heading } from "theme-ui"
-import { MDXRenderer } from "gatsby-plugin-mdx"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import Layout from "./layout"
-import SEO from "./seo"
 import Hero from "./hero"
 import ProjectInfo from "./project-info"
+import SEO from "./seo"
 
-type ProjectProps = {
-  data: {
-    project: {
-      body: string
-      excerpt: string
-      client: string
-      color: string
-      date: string
-      service: string
-      slug: string
-      title: string
-      cover: {
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-          resize: {
-            src: string
-          }
+export type EmmaProjectProps = {
+  project: {
+    excerpt: string
+    client: string
+    color: string
+    date: string
+    service: string
+    slug: string
+    title: string
+    cover: {
+      childImageSharp: {
+        gatsbyImageData: IGatsbyImageData
+        resize: {
+          src: string
         }
       }
     }
   }
-  [key: string]: any
 }
 
-const Project = ({ data: { project } }: ProjectProps) => {
+const Project: React.FC<React.PropsWithChildren<PageProps<EmmaProjectProps>>> = ({ data: { project }, children }) => {
   const titleProps = useSpring({
     config: config.slow,
     from: { opacity: 0, transform: `translate3d(0, -30px, 0)` },
@@ -43,17 +39,6 @@ const Project = ({ data: { project } }: ProjectProps) => {
 
   return (
     <Layout>
-      <SEO
-        title={project.title}
-        description={project.excerpt}
-        pathname={project.slug}
-        image={project.cover.childImageSharp.resize!.src}
-      >
-        <meta name="twitter:label1" value="Client" />
-        <meta name="twitter:label2" value="Date" />
-        <meta name="twitter:data1" value={project.client} />
-        <meta name="twitter:data2" value={project.date} />
-      </SEO>
       <Hero image={project.cover.childImageSharp.gatsbyImageData} color={project.color}>
         <Flex
           sx={{
@@ -79,12 +64,24 @@ const Project = ({ data: { project } }: ProjectProps) => {
         </Flex>
       </Hero>
       <Container>
-        <animated.div style={contentProps}>
-          <MDXRenderer>{project.body}</MDXRenderer>
-        </animated.div>
+        <animated.div style={contentProps}>{children}</animated.div>
       </Container>
     </Layout>
   )
 }
 
 export default Project
+
+export const Head: HeadFC<EmmaProjectProps> = ({ data: { project } }) => (
+  <SEO
+    title={project.title}
+    description={project.excerpt}
+    pathname={project.slug}
+    image={project.cover.childImageSharp.resize!.src}
+  >
+    <meta name="twitter:label1" value="Client" />
+    <meta name="twitter:label2" value="Date" />
+    <meta name="twitter:data1" value={project.client} />
+    <meta name="twitter:data2" value={project.date} />
+  </SEO>
+)

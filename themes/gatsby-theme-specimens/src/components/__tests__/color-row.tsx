@@ -1,5 +1,5 @@
 /**
- * @vitest-environment jsdom
+ * @vitest-environment happy-dom
  */
 
 import { describe, it, expect, vi } from "vitest"
@@ -21,9 +21,8 @@ vi.mock(`../../hooks/useSpecimensConfig`, () => ({
 
 describe(`Color Row`, () => {
   it(`should display with standard values`, () => {
-    const { getByLabelText, getByText } = render(<ColorRow color="#5a67d8" name="Harry Potter" />)
+    const { getByText } = render(<ColorRow color="#5a67d8" name="Harry Potter" />)
 
-    expect(getByLabelText(`Color preview: Harry Potter`)).toHaveStyle(`background-color: rgb(90, 103, 216);`)
     expect(getByText(/harry potter/i))
     expect(getByText(/#5a67d8/i))
     expect(getByText(/RGB/i))
