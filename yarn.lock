@@ -2960,7 +2960,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.38.1
     c8: ^7.12.0
     cross-env: ^7.0.3
-    cypress: ^10.7.0
+    cypress: ^10.9.0
     eslint: ^8.21.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-prettier: ^8.5.0
@@ -2970,7 +2970,7 @@ __metadata:
     eslint-plugin-react: ^7.30.1
     eslint-plugin-react-hooks: ^4.6.0
     fs-extra: ^10.1.0
-    gatsby-cypress: ^2.22.0
+    gatsby-cypress: ^2.24.0
     glob: ^8.0.3
     husky: ^8.0.1
     jsdom: ^20.0.0
@@ -2979,7 +2979,7 @@ __metadata:
     prettier: ^2.7.1
     start-server-and-test: ^1.14.0
     typescript: ^4.8.4
-    vitest: ^0.22.1
+    vitest: ^0.23.4
   languageName: unknown
   linkType: soft
 
@@ -8286,9 +8286,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^10.7.0":
-  version: 10.7.0
-  resolution: "cypress@npm:10.7.0"
+"cypress@npm:^10.9.0":
+  version: 10.9.0
+  resolution: "cypress@npm:10.9.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -8309,7 +8309,7 @@ __metadata:
     dayjs: ^1.10.4
     debug: ^4.3.2
     enquirer: ^2.3.6
-    eventemitter2: ^6.4.3
+    eventemitter2: 6.4.7
     execa: 4.1.0
     executable: ^4.1.1
     extract-zip: 2.0.1
@@ -8334,7 +8334,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: ef8a5ae54f3404f7926e1e248ba7a27c7f66e654a9603bf9df6366731d8dd75455f6ec9cc34d7e55e1a8c3cb8e0e36ce59add81b7b14466f2063cfe45e6c00f4
+  checksum: 79e3dccbb82d0b0c92bb8888682766a9738374f473cf2e9a04825a6b3dbe4420c57948cabaf757af0929192a8e61b7f08b32d7f6ee0c3cddf2736cf4f408edc1
   languageName: node
   linkType: hard
 
@@ -10085,10 +10085,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eventemitter2@npm:^6.4.3":
-  version: 6.4.5
-  resolution: "eventemitter2@npm:6.4.5"
-  checksum: 84504f9cf0cc30205cdd46783fe9df3733435e5097f13070b678023110b5ef07847651808ae280cd94c42cd5976880211c7a40321a8ff8fa56f7c5f9c5c11960
+"eventemitter2@npm:6.4.7":
+  version: 6.4.7
+  resolution: "eventemitter2@npm:6.4.7"
+  checksum: 1b36a77e139d6965ebf3a36c01fa00c089ae6b80faa1911e52888f40b3a7057b36a2cc45dcd1ad87cda3798fe7b97a0aabcbb8175a8b96092a23bb7d0f039e66
   languageName: node
   linkType: hard
 
@@ -11010,15 +11010,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-cypress@npm:^2.22.0":
-  version: 2.22.0
-  resolution: "gatsby-cypress@npm:2.22.0"
+"gatsby-cypress@npm:^2.24.0":
+  version: 2.24.0
+  resolution: "gatsby-cypress@npm:2.24.0"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
     cypress: ^3.1.0
     gatsby: ^4.0.0-next
-  checksum: e97178a8dbfce4c7472901c0d52b5131cb1ef40d419f9a14933eaa3567619ad6e9a04211a50c483bf1c09ab7d60f016689e5040c3a8d07b132ab22be461f9489
+  checksum: e7fca30a619c8d34791606264d21abd42a8ba3f70f1111bd800bcc8637afdc4a14393bf324955d34299ce7be7db9a0ee16ece3a0ad898ae3cab0d7e4cb7cd794
   languageName: node
   linkType: hard
 
@@ -19706,6 +19706,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strip-literal@npm:^0.4.1":
+  version: 0.4.2
+  resolution: "strip-literal@npm:0.4.2"
+  dependencies:
+    acorn: ^8.8.0
+  checksum: 831cdcaba61bc82c14ef5ca423a64bb8044b3b128abd15dff454d3fd05b0dbc7b4403760a7a636923d3c2e71a8e65174cef28ee9aef61f9a66819f865da4fdda
+  languageName: node
+  linkType: hard
+
 "strip-outer@npm:^1.0.1":
   version: 1.0.1
   resolution: "strip-outer@npm:1.0.1"
@@ -20118,10 +20127,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinypool@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "tinypool@npm:0.2.4"
-  checksum: f050bd36c89529a2a0d3f9c1fdbba3f317114e3ee6eb5d5ba72c51e887d45ef3ef8d8533fb2ca2eba7189d19d2231712b81b3a75e099248532f5563369929c33
+"tinybench@npm:^2.1.5":
+  version: 2.2.1
+  resolution: "tinybench@npm:2.2.1"
+  checksum: bd210b7b282729ff94913242398b41449a93ed3712f4648718f225d7f39e31a7a9b6f7d0f87df1bf0d66492c75e12257c9888d3555924cbcec7129feb11f1972
+  languageName: node
+  linkType: hard
+
+"tinypool@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "tinypool@npm:0.3.0"
+  checksum: 92291c309ed8d004c1ee1ef7f610cd90352383f12c52b0ec16abd9ebc665c03626e7afbc9993df97f63e67fea002b5cc18ba5e8f90260643867cbcac278a183c
   languageName: node
   linkType: hard
 
@@ -21290,9 +21306,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^0.22.1":
-  version: 0.22.1
-  resolution: "vitest@npm:0.22.1"
+"vitest@npm:^0.23.4":
+  version: 0.23.4
+  resolution: "vitest@npm:0.23.4"
   dependencies:
     "@types/chai": ^4.3.3
     "@types/chai-subset": ^1.3.3
@@ -21300,7 +21316,9 @@ __metadata:
     chai: ^4.3.6
     debug: ^4.3.4
     local-pkg: ^0.4.2
-    tinypool: ^0.2.4
+    strip-literal: ^0.4.1
+    tinybench: ^2.1.5
+    tinypool: ^0.3.0
     tinyspy: ^1.0.2
     vite: ^2.9.12 || ^3.0.0-0
   peerDependencies:
@@ -21322,7 +21340,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: 7abe50ceb51181e77cd62eb3a07c2da17f13078f09be34cc2e98f1f94a77eba33a56c644d48ae16bb474945ffc1cfc8664b1f4976c3de495c5e474057420c4ca
+  checksum: c0356ff585d6f85678abe4e4f61362ea55af87b15f9b1fc478f5fed511627efa5f849a1530709fa2ca09a3f5e93dd16dfaf6570c9cd84ca6fd6ef387aa8ee512
   languageName: node
   linkType: hard
 
