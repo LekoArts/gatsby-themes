@@ -9,6 +9,8 @@
     "packages/*"
   ],
   "scripts": {
+    "packages:build": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --include @lekoarts/themes-utils --interlaced run build",
+    "packages:watch": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --include @lekoarts/themes-utils --interlaced run watch",
     "typecheck": "tsc --noEmit",
     "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js,.mdx",
@@ -23,10 +25,11 @@
     "start-server-and-test": "start-server-and-test",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish",
-    "release-update-lockfile": "changeset version && yarn install --mode update-lockfile",
+    "version-packages:ci": "changeset version && yarn install --mode update-lockfile",
+    "release": "yarn packages:build && changeset publish",
     "prepare": "husky install",
-    "update-renovate": "node -r @swc-node/register ./scripts/renovate-config-generator.ts"
+    "update-renovate": "node -r @swc-node/register ./scripts/renovate-config-generator.ts",
+    "postinstall": "yarn packages:build"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.6",

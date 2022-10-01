@@ -1,8 +1,7 @@
 import * as React from "react"
 import { useColorMode } from "theme-ui"
 import Highlight, { defaultProps } from "prism-react-renderer"
-// @ts-ignore - TODO
-import { calculateLinesToHighlight, getLanguage } from "@lekoarts/themes-utils"
+import { calculateLinesToHighlight, getLanguage, GetLanguageInput } from "@lekoarts/themes-utils"
 import lightTheme from "prism-react-renderer/themes/github"
 import darkTheme from "prism-react-renderer/themes/vsDark"
 import Copy from "./copy"
@@ -13,7 +12,7 @@ type CodeProps = {
   withLineNumbers?: boolean
   highlight?: string
   title?: string
-  className: string
+  className: GetLanguageInput
 }
 
 const Code = ({
@@ -32,6 +31,7 @@ const Code = ({
   const shouldShowLineNumbers = withLineNumbers || showLineNumbers
 
   return (
+    // @ts-ignore
     <Highlight {...defaultProps} code={codeString} language={language} theme={isDark ? darkTheme : lightTheme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <React.Fragment>
