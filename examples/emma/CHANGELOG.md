@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.3.12
+
+### Patch Changes
+
+- Updated dependencies [[`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0)]:
+  - @lekoarts/gatsby-theme-emma@4.0.0
+
 ## 0.3.11
 
 ### Patch Changes

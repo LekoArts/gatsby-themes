@@ -1,5 +1,117 @@
 # Change Log
 
+## 5.0.0
+
+### Major Changes
+
+[#967](https://github.com/LekoArts/gatsby-themes/pull/967) [`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0)
+
+In preparation for the upcoming [Gatsby 5 release](https://github.com/gatsbyjs/gatsby/discussions/36609) this release will focus on some breaking changes unrelated to the `gatsby` core package. Another new major version will follow once Gatsby 5 is out so that you can upgrade in steps.
+
+**Features:**
+
+- Update to [MDX 2](https://mdxjs.com/blog/v2/) and [`gatsby-plugin-mdx` 4](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/) (**Breaking Change**)
+- Update [Theme UI](https://theme-ui.com/) from v0.11 to v0.15 ([Theme UI Changelog](https://github.com/system-ui/theme-ui/blob/develop/CHANGELOG.md)) (**Breaking Change**)
+- Replace [`react-helmet`](https://github.com/nfl/react-helmet) with [Gatsby Head API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) (**Breaking Change**)
+- Improved Typography on the overall site and especially for the blog content
+- Light/Dark Theme for code blocks and overall improved styling for code blocks
+
+**Breaking Changes:**
+
+- Any breaking changes from `theme-ui` between v0.11 and v0.15
+- Bump `react` & `react-dom` peerDependency to `>=18.0.0`
+- Removal of `siteLanguage` from `siteMetadata`
+- The MDX components are not managed by `gatsby-plugin-theme-ui/components` anymore but defined in a `<MDXProvider>` in `src/components/layout`
+- [`useColorSchemeMediaQuery`](https://theme-ui.com/color-modes#responding-to-the-prefers-color-scheme-media-query) in Theme UI config is set to `system`
+- Removal of `body` from the `Post` and `Page` type. The field `contentFilePath` was added.
+- Removal of `gatsby-omni-font-loader`
+- `body` font style is changed from `"IBM Plex Sans"` to a system font stack
+- Removal of `react-live`
+- Change in syntax of highlighting lines, adding code title, and adding line numbers
+- The `showLineNumbers` option is `false` by default now
+
+**Migration:**
+
+- Internally the necessary changes of the [gatsby-plugin-mdx migration guide](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#migrating-from-v3-to-v4) were made, but if you set the `mdx` option to `false` and/or shadowed the theme in any way, you'll need to read the migration guide to e.g. change your `gatsby-config`. You'll also need to add any `remarkPlugins` or `rehypePlugins` that the theme is adding by default.
+- MDX 2 is more strict about the allowed syntax, so you'll need to [update your MDX content](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#updating-mdx-content) to be compliant.
+- See [Theme UI's migration guide](https://github.com/system-ui/theme-ui/blob/develop/MIGRATING.md)
+- If you shadowed a file or used `react-helmet` in any form in your site, you'll either need to migrate to the Gatsby Head API or re-install the necessary dependencies. By default, the theme no longer ships with `react-helmet` as internally everything was migrated to Gatsby Head API. To have the `lang` tag work correctly on the `<html>` element you'll need to set it by using the [`setHtmlAttributes` API](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/#onRenderBody). The current starter already has this included (you can copy it from there). Thus the `<Seo>` component should only be used together with Gatsby Head API.
+- With the removal of `gatsby-omni-font-loader` in the example you'll now need to self-host your fonts and change the Theme UI config. The theme switched to a system font stack in its Theme UI config and the example doesn't provide any custom font anymore.
+- If you want to continue using `react-live`, you have to add the dependency and shadow the `<Code>` component.
+- The syntax for adding code titles changed.
+  Before:
+
+  ````md
+  ```js:title=test.js
+  // content
+  ```
+  ````
+
+  After:
+
+  ````md
+  ```js title=test.js
+  // content
+  ```
+  ````
+
+- The syntax for adding line highlighting changed.
+  Before:
+
+  ````md
+  ```js {1,2-3}
+  // content
+  ```
+  ````
+
+  After:
+
+  ````md
+  ```js highlight=1,2-3
+  // content
+  ```
+  ````
+
+- The syntax for adding line numbers changed. You no longer _negate_ line numbers (previously `noLineNumbers`) but opt-in.
+  Before:
+
+  ````md
+  ```js noLineNumbers
+  // content that had line numbers by default
+  ```
+  ````
+
+  After:
+
+  ````md
+  ```js withLineNumbers
+  // content
+  ```
+  ````
+
+- All syntax changes together.
+  Before:
+
+  ````md
+  ```js:title=test.js {1,2-3}
+  // content
+  ```
+  ````
+
+  After:
+
+  ````md
+  ```js title=test.js highlight=1,2-3 withLineNumbers
+  // content
+  ```
+  ````
+
+### Patch Changes
+
+- Updated dependencies [[`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0), [`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@5.0.0
+  - @lekoarts/themes-utils@1.0.0
+
 ## 4.1.7
 
 ### Patch Changes
@@ -182,9 +294,9 @@ All Gatsby related packages were also upgraded to their latest new major version
       {
         resolve: `@lekoarts/gatsby-theme-minimal-blog`,
         options: {
-          mdx: false
+          mdx: false,
           // + rest of the options you want to set
-        }
+        },
       },
       {
         resolve: `gatsby-plugin-mdx`,
@@ -197,9 +309,9 @@ All Gatsby related packages were also upgraded to their latest new major version
               options: {
                 maxWidth: 960,
                 quality: 90,
-                linkImagesToOriginal: false
-              }
-            }
+                linkImagesToOriginal: false,
+              },
+            },
           ],
           plugins: [
             {
@@ -207,13 +319,13 @@ All Gatsby related packages were also upgraded to their latest new major version
               options: {
                 maxWidth: 960,
                 quality: 90,
-                linkImagesToOriginal: false
-              }
-            }
-          ]
-        }
-      }
-    ]
+                linkImagesToOriginal: false,
+              },
+            },
+          ],
+        },
+      },
+    ],
   };
   ```
 
