@@ -8,7 +8,7 @@ Changes to themes need to evaluated in more detail (e.g. if they would be breaki
 
 ## Prerequisites
 
-- [Node.js](http://nodejs.org/) >= v14 must be installed.
+- [Node.js](http://nodejs.org/) >= v18 must be installed.
 - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Local Development

@@ -2488,7 +2488,7 @@ __metadata:
     "@react-spring/web": ^9.5.5
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-mdx: ^4.3.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     gatsby-source-filesystem: ^4.24.0
     theme-ui: ^0.15.1
   peerDependencies:
@@ -2523,7 +2523,7 @@ __metadata:
     "@lekoarts/gatsby-theme-emilia-core": ^3.0.12
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-image: ^2.24.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     polished: ^4.2.2
     react-spring: ^9.5.5
     theme-ui: ^0.15.1
@@ -2563,7 +2563,7 @@ __metadata:
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-catch-links: ^4.24.0
     gatsby-plugin-image: ^2.24.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     polished: ^4.2.2
     react-spring: ^9.5.5
     theme-ui: ^0.15.1
@@ -2585,7 +2585,7 @@ __metadata:
     "@theme-ui/presets": ^0.15.1
     "@theme-ui/sidenav": ^0.15.1
     gatsby-plugin-mdx: ^4.3.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     gatsby-source-filesystem: ^4.24.0
     is-absolute-url: ^3.0.3
     re-resizable: ^6.9.9
@@ -2624,7 +2624,7 @@ __metadata:
     "@lekoarts/gatsby-theme-jodie-core": ^3.0.7
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-image: ^2.24.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     polished: ^4.2.2
     react-helmet: ^6.1.0
     theme-ui: ^0.15.1
@@ -2668,7 +2668,7 @@ __metadata:
     "@theme-ui/color": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-catch-links: ^4.24.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     prism-react-renderer: ^1.3.5
     theme-ui: ^0.15.1
   peerDependencies:
@@ -2699,7 +2699,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@theme-ui/presets": ^0.15.1
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     gatsby-source-circleci: ^2.0.0
     gatsby-source-netlify: ^2.0.0
     theme-ui: ^0.15.1
@@ -2735,7 +2735,7 @@ __metadata:
     "@testing-library/react": ^13.4.0
     "@types/chroma-js": ^2.1.4
     "@types/loadable__component": ^5.13.4
-    "@types/node": ^17.0.45
+    "@types/node": ^18.7.23
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
     "@types/styled-system": ^5.1.15
@@ -4660,10 +4660,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^17.0.45, @types/node@npm:^17.0.5":
+"@types/node@npm:^17.0.5":
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
   checksum: aa04366b9103b7d6cfd6b2ef64182e0eaa7d4462c3f817618486ea0422984c51fc69fd0d436eae6c9e696ddfdbec9ccaa27a917f7c2e8c75c5d57827fe3d95e8
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.7.23":
+  version: 18.7.23
+  resolution: "@types/node@npm:18.7.23"
+  checksum: 2c8df0830d8345e5cd1ca17feb9cf43fa667aae749888e0a068c5c1b35eaedd2f9b24ed987a0758078395edf7a03681e5e0b7790a518ff7afe1ff6d8459f7b4a
   languageName: node
   linkType: hard
 
@@ -10925,18 +10932,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-theme-ui@npm:^0.15.2-canary.1":
-  version: 0.15.2-canary.1
-  resolution: "gatsby-plugin-theme-ui@npm:0.15.2-canary.1"
+"gatsby-plugin-theme-ui@npm:^0.15.1":
+  version: 0.15.1
+  resolution: "gatsby-plugin-theme-ui@npm:0.15.1"
   peerDependencies:
     "@emotion/react": ^11
-    "@mdx-js/react": ^1 || ^2
     "@theme-ui/css": ^0.15.1
     "@theme-ui/mdx": ^0.15.1
     gatsby: ^4
     react: ">=18"
     theme-ui: ^0.15.1
-  checksum: 8c8cfa290259920b1d72796b89f452ef999466bfb09aeebef2fc60da3978efff42e4c91765421fa96723aa369802852274df11d19c2ae470c4086c45faea4a54
+  checksum: 8d9fb7b32c630675cdf66d8b8e2e85831e3f6547e6cc89f72d18db422b3bab03892158347164e502001b5486a2763538948ddef4089018f064f9d3325b2b3df6
   languageName: node
   linkType: hard
 
@@ -19383,7 +19389,7 @@ __metadata:
     gatsby-plugin-catch-links: ^4.24.0
     gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-mdx: ^4.3.0
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
     gatsby-source-filesystem: ^4.24.0
     prism-react-renderer: ^1.3.5
@@ -19928,7 +19934,7 @@ __metadata:
     "@lekoarts/gatsby-theme-styleguide": ^3.0.0
     cross-env: ^7.0.3
     gatsby: ^4.24.1
-    gatsby-plugin-theme-ui: ^0.15.2-canary.1
+    gatsby-plugin-theme-ui: ^0.15.1
     gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
     react: ^18.2.0
     react-dom: ^18.2.0
