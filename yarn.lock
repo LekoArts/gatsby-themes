@@ -2737,10 +2737,13 @@ __metadata:
   dependencies:
     "@changesets/changelog-github": ^0.4.6
     "@changesets/cli": ^2.24.4
+    "@swc-node/register": ^1.5.2
+    "@swc/core": ^1.3.4
     "@testing-library/cypress": ^8.0.3
     "@testing-library/jest-dom": ^5.16.5
     "@testing-library/react": ^13.4.0
     "@types/chroma-js": ^2.1.4
+    "@types/fs-extra": ^9.0.13
     "@types/loadable__component": ^5.13.4
     "@types/node": ^18.7.23
     "@types/react": ^18.0.21
@@ -3844,12 +3847,213 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc-node/core@npm:^1.9.1":
+  version: 1.9.1
+  resolution: "@swc-node/core@npm:1.9.1"
+  peerDependencies:
+    "@swc/core": ">= 1.3"
+  checksum: 4e76fd36002a64aa386288771ddc2b3c0e9a0e09bb8a4fc32d3e358181ad4dc8b945658cc47af036ba0bff4320b347db10191f8ffce73069be7e17f9c5745859
+  languageName: node
+  linkType: hard
+
+"@swc-node/register@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "@swc-node/register@npm:1.5.2"
+  dependencies:
+    "@swc-node/core": ^1.9.1
+    "@swc-node/sourcemap-support": ^0.2.1
+    colorette: ^2.0.19
+    debug: ^4.3.4
+    pirates: ^4.0.5
+    tslib: ^2.4.0
+  peerDependencies:
+    typescript: ">= 4.3"
+  checksum: b4da0c107211b409c86ab6110462cdf84859f22dc61632a128c3ae8647844d7af774d3fb8f5b7e74e7042c66e4991e45fa09329c1af118f5d4a5eb06b39972aa
+  languageName: node
+  linkType: hard
+
+"@swc-node/sourcemap-support@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@swc-node/sourcemap-support@npm:0.2.1"
+  dependencies:
+    source-map-support: ^0.5.21
+  checksum: 766120209b48be080ca0b2b927fb16afb9739a11656f28ec62465c320a755ce797fd97f3ad56940303b73bcdc3b7e7b883940aa4e45b70fd44a200e2e083a807
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm-eabi@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-android-arm-eabi@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": 1.2.122
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-android-arm64@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": 1.2.130
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-arm64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-darwin-arm64@npm:1.3.4"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-darwin-x64@npm:1.3.4"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-freebsd-x64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-freebsd-x64@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": 1.2.130
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": 1.2.130
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.4"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.4"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.4"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.4"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": 1.2.130
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": 1.2.130
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-x64-msvc@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.4"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:^1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core@npm:1.3.4"
+  dependencies:
+    "@swc/core-android-arm-eabi": 1.3.4
+    "@swc/core-android-arm64": 1.3.4
+    "@swc/core-darwin-arm64": 1.3.4
+    "@swc/core-darwin-x64": 1.3.4
+    "@swc/core-freebsd-x64": 1.3.4
+    "@swc/core-linux-arm-gnueabihf": 1.3.4
+    "@swc/core-linux-arm64-gnu": 1.3.4
+    "@swc/core-linux-arm64-musl": 1.3.4
+    "@swc/core-linux-x64-gnu": 1.3.4
+    "@swc/core-linux-x64-musl": 1.3.4
+    "@swc/core-win32-arm64-msvc": 1.3.4
+    "@swc/core-win32-ia32-msvc": 1.3.4
+    "@swc/core-win32-x64-msvc": 1.3.4
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  bin:
+    swcx: run_swcx.js
+  checksum: 24b4ca4a096fea53056ed227a8aa09aa38cfe5eef344451397e66a2d183ded119872cf4fc8c671c0a6eb34985537cbf8d8a7e742b9e27dad0735426693d11dc8
+  languageName: node
+  linkType: hard
+
 "@swc/helpers@npm:^0.4.2":
   version: 0.4.11
   resolution: "@swc/helpers@npm:0.4.11"
   dependencies:
     tslib: ^2.4.0
   checksum: 736857d524b41a8a4db81094e9b027f554004e0fa3e86325d85bdb38f7e6459ce022db079edb6c61ba0f46fe8583b3e663e95f7acbd13e51b8da6c34e45bba2e
+  languageName: node
+  linkType: hard
+
+"@swc/wasm@npm:1.2.122":
+  version: 1.2.122
+  resolution: "@swc/wasm@npm:1.2.122"
+  checksum: 563345370c5ad18373d3b403590ab880fe52dcd8fc8c8601be263fcd9886520b28a7f4e46236cf49ca2b136c79d4ef50c960bc34b7cdc2068118b0d84dfca1f4
+  languageName: node
+  linkType: hard
+
+"@swc/wasm@npm:1.2.130":
+  version: 1.2.130
+  resolution: "@swc/wasm@npm:1.2.130"
+  checksum: 02203bfef3e382c64cbbd63c138c8fdf61865e74d923b317e9d9e9f33f5a3f0a9533b5fdbc9505e76d78e864be04a82fc847eb987a1e47ccac5850146c858292
   languageName: node
   linkType: hard
 
@@ -4426,6 +4630,15 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: f0c283fdef2dd7191168a37b9cb2625af3cfbd7f72b5a514f938bea0a135669f79d736186d434b9e81150b47ef1bf20d97b188014a00583556fad6ce59fb9bbf
+  languageName: node
+  linkType: hard
+
+"@types/fs-extra@npm:^9.0.13":
+  version: 9.0.13
+  resolution: "@types/fs-extra@npm:9.0.13"
+  dependencies:
+    "@types/node": "*"
+  checksum: add79e212acd5ac76b97b9045834e03a7996aef60a814185e0459088fd290519a3c1620865d588fa36c4498bf614210d2a703af5cf80aa1dbc125db78f6edac3
   languageName: node
   linkType: hard
 
@@ -7245,7 +7458,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"colorette@npm:^2.0.16, colorette@npm:^2.0.17":
+"colorette@npm:^2.0.16, colorette@npm:^2.0.17, colorette@npm:^2.0.19":
   version: 2.0.19
   resolution: "colorette@npm:2.0.19"
   checksum: 888cf5493f781e5fcf54ce4d49e9d7d698f96ea2b2ef67906834bb319a392c667f9ec69f4a10e268d2946d13a9503d2d19b3abaaaf174e3451bfe91fb9d82427
@@ -16918,6 +17131,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pirates@npm:^4.0.5":
+  version: 4.0.5
+  resolution: "pirates@npm:4.0.5"
+  checksum: c9994e61b85260bec6c4fc0307016340d9b0c4f4b6550a957afaaff0c9b1ad58fbbea5cfcf083860a25cb27a375442e2b0edf52e2e1e40e69934e08dcc52d227
+  languageName: node
+  linkType: hard
+
 "pkg-dir@npm:^4.1.0, pkg-dir@npm:^4.2.0":
   version: 4.2.0
   resolution: "pkg-dir@npm:4.2.0"
@@ -19298,7 +19518,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:~0.5.20":
+"source-map-support@npm:^0.5.21, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
