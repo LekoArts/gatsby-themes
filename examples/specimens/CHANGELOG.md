@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.3.13
+
+### Patch Changes
+
+- Updated dependencies [[`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0), [`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0), [`ee969f3`](https://github.com/LekoArts/gatsby-themes/commit/ee969f30037fa99232292014431854773735d0a0)]:
+  - @lekoarts/rehype-meta-as-attributes@1.0.0
+  - @lekoarts/themes-utils@1.0.0
+  - @lekoarts/gatsby-theme-specimens@5.0.0
+
 ## 0.3.12
 
 ### Patch Changes
