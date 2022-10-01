@@ -2486,6 +2486,7 @@ __metadata:
     "@mdx-js/react": ^2.1.3
     "@react-spring/parallax": ^9.5.5
     "@react-spring/web": ^9.5.5
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-mdx: ^4.3.0
     gatsby-plugin-theme-ui: ^0.15.1
@@ -2521,6 +2522,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@lekoarts/gatsby-theme-emilia-core": ^3.0.12
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-image: ^2.24.0
     gatsby-plugin-theme-ui: ^0.15.1
@@ -2560,6 +2562,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@lekoarts/gatsby-theme-emma-core": ^3.0.12
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-catch-links: ^4.24.0
     gatsby-plugin-image: ^2.24.0
@@ -2582,6 +2585,7 @@ __metadata:
     "@lekoarts/themes-utils": ^0.0.1
     "@mapbox/rehype-prism": ^0.8.0
     "@mdx-js/react": ^2.1.3
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     "@theme-ui/sidenav": ^0.15.1
     gatsby-plugin-mdx: ^4.3.0
@@ -2622,6 +2626,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@lekoarts/gatsby-theme-jodie-core": ^3.0.7
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-image: ^2.24.0
     gatsby-plugin-theme-ui: ^0.15.1
@@ -2666,6 +2671,7 @@ __metadata:
     "@lekoarts/themes-utils": ^0.0.1
     "@mdx-js/react": ^2.1.3
     "@theme-ui/color": ^0.15.1
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-catch-links: ^4.24.0
     gatsby-plugin-theme-ui: ^0.15.1
@@ -2698,6 +2704,7 @@ __metadata:
   resolution: "@lekoarts/gatsby-theme-status-dashboard@workspace:themes/gatsby-theme-status-dashboard"
   dependencies:
     "@emotion/react": ^11.10.4
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     gatsby-plugin-theme-ui: ^0.15.1
     gatsby-source-circleci: ^2.0.0
@@ -3984,6 +3991,20 @@ __metadata:
   peerDependencies:
     "@emotion/react": ^11
   checksum: dfcd99ac2ab264a2cfeca7a3efd89bcac6eb58b3fbbdfc4331b3993901a6f90c25527a2ff7f327cb5f64ba9601983adf833040bfcaf5d7472669b5550bf4b6f4
+  languageName: node
+  linkType: hard
+
+"@theme-ui/mdx@npm:^0.15.1":
+  version: 0.15.1
+  resolution: "@theme-ui/mdx@npm:0.15.1"
+  dependencies:
+    "@theme-ui/core": ^0.15.1
+    "@theme-ui/css": ^0.15.1
+  peerDependencies:
+    "@emotion/react": ^11
+    "@types/mdx": ^2.0.2
+    react: ">=18"
+  checksum: 6648d1235d1ac12694361a9b602e629c3749f1afb29df69eac4277a28929c4ffea4ee0f53176d2d8c1ab6b1d75fe951212215c11c35c0a3796c66ff12b96956b
   languageName: node
   linkType: hard
 
@@ -19383,6 +19404,7 @@ __metadata:
     "@lekoarts/themes-utils": ^0.0.1
     "@loadable/component": ^5.15.2
     "@mdx-js/react": ^2.1.3
+    "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     cross-env: ^7.0.3
     gatsby: ^4.24.1
@@ -19932,6 +19954,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.10.4
     "@lekoarts/gatsby-theme-styleguide": ^3.0.0
+    "@theme-ui/mdx": ^0.15.1
     cross-env: ^7.0.3
     gatsby: ^4.24.1
     gatsby-plugin-theme-ui: ^0.15.1
