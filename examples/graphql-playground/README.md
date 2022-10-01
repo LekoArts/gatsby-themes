@@ -41,19 +41,16 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 
 ### 1. **Create a Gatsby site.**
 
-Use `git` to clone the site and navigate into it:
+Use the Gatsby CLI to clone the site and install dependencies:
 
 ```sh
-git clone https://github.com/LekoArts/gatsby-starter-graphql-playground project-name
-cd project-name
+npx gatsby new gatsby-starter-graphql-playground https://github.com/LekoArts/gatsby-starter-graphql-playground
 ```
 
-### 2. **Install dependencies.**
-
-If you use npm 7 or above use the `--legacy-peer-deps` flag. If you use npm 6 you can use `npm install`.
+### 2. **Navigate to your new project.**
 
 ```sh
-npm install --legacy-peer-deps
+cd gatsby-starter-graphql-playground
 ```
 
 ### 3. **Open the code and start customizing!**

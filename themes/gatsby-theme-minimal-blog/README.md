@@ -54,10 +54,10 @@ npm install @lekoarts/gatsby-theme-minimal-blog
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new minimal-blog LekoArts/gatsby-starter-minimal-blog
+npx gatsby new gatsby-starter-minimal-blog https://github.com/LekoArts/gatsby-starter-minimal-blog
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-minimal-blog)

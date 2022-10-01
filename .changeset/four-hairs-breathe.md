@@ -12,6 +12,7 @@ In preparation for the upcoming [Gatsby 5 release](https://github.com/gatsbyjs/g
 
 **Breaking Changes:**
 
+- Any breaking changes from `theme-ui` between v0.11 and v0.15
 - Bump `react` & `react-dom` peerDependency to `>=18.0.0`
 - Bump `theme-ui` peerDependency to `>=0.15.0`
 - Add `@emotion/react` as peerDependency

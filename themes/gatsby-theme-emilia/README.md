@@ -52,10 +52,10 @@ npm install @lekoarts/gatsby-theme-emilia
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new emilia LekoArts/gatsby-starter-portfolio-emilia
+npx gatsby new gatsby-starter-portfolio-emilia https://github.com/LekoArts/gatsby-starter-portfolio-emilia
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)

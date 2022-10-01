@@ -13,6 +13,7 @@ In preparation for the upcoming [Gatsby 5 release](https://github.com/gatsbyjs/g
 
 **Breaking Changes:**
 
+- Any breaking changes from `theme-ui` between v0.11 and v0.15
 - Bump `react` & `react-dom` peerDependency to `>=18.0.0`
 - Removal of `siteLanguage` from `siteMetadata`
 - [`useColorSchemeMediaQuery`](https://theme-ui.com/color-modes#responding-to-the-prefers-color-scheme-media-query) in Theme UI config is set to `system`

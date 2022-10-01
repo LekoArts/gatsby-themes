@@ -15,6 +15,7 @@ In preparation for the upcoming [Gatsby 5 release](https://github.com/gatsbyjs/g
 
 **Breaking Changes:**
 
+- Any breaking changes from `theme-ui` between v0.11 and v0.15
 - Bump `react` & `react-dom` peerDependency to `>=18.0.0`
 - Removal of `siteLanguage` from `siteMetadata`
 - The MDX components are not managed by `gatsby-plugin-theme-ui/components` anymore but defined in a `<MDXProvider>` in `src/components/layout`

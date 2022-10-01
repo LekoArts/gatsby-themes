@@ -52,10 +52,10 @@ This theme has `theme-ui` defined as a `peerDependency` so make sure to also ins
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new styleguide LekoArts/gatsby-starter-styleguide
+npx gatsby new gatsby-starter-styleguide https://github.com/LekoArts/gatsby-starter-styleguide
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-styleguide)

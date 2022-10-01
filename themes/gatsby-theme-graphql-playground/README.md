@@ -51,10 +51,10 @@ npm install @lekoarts/gatsby-theme-graphql-playground
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new graphql-playground LekoArts/gatsby-starter-graphql-playground
+npx gatsby new gatsby-starter-graphql-playground https://github.com/LekoArts/gatsby-starter-graphql-playground
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-graphql-playground)

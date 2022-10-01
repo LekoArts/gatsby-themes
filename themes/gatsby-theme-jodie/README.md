@@ -52,10 +52,10 @@ npm install @lekoarts/gatsby-theme-jodie
 
 ### Install as a starter
 
-This will generate a new site that pre-configures use of the theme.
+This will generate a new site that pre-configures the theme including example content and additional plugins.
 
 ```sh
-gatsby new jodie LekoArts/gatsby-starter-portfolio-jodie
+npx gatsby new gatsby-starter-portfolio-jodie https://github.com/LekoArts/gatsby-starter-portfolio-jodie
 ```
 
 [**View the starter's code**](https://github.com/LekoArts/gatsby-starter-portfolio-jodie)
