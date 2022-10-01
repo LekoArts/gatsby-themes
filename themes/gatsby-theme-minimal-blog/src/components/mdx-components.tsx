@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Text } from "theme-ui"
-// @ts-ignore - TODO
 import { preToCodeBlock } from "@lekoarts/themes-utils"
 import Code from "./code"
 import Title from "./title"

@@ -1,11 +1,26 @@
-const path = require(`path`)
-const glob = require(`glob`)
-const fs = require(`fs-extra`)
+import path from "path"
+import glob from "glob"
+import fs from "fs-extra"
+
+interface IPackageRule {
+  groupName?: string
+  commitMessageTopic?: string
+  groupSlug?: string
+  matchPaths?: Array<string>
+  matchUpdateTypes?: Array<string>
+  matchDepTypes?: Array<string>
+  matchPackageNames?: Array<string>
+  matchPackagePatterns?: Array<string>
+  automerge?: boolean
+  dependencyDashboardApproval?: boolean
+  additionalBranchPrefix?: string
+  enabled?: boolean
+}
 
 const ROOT_DIR = path.join(__dirname, `..`)
 const packageRules = new Map()
 
-const globalPackageRules = [
+const globalPackageRules: Array<IPackageRule> = [
   {
     groupName: `monorepo`,
     commitMessageTopic: `monorepo`,
@@ -47,6 +62,7 @@ const globalPackageRules = [
     matchPackageNames: [
       `@theme-ui/color`,
       `@theme-ui/components`,
+      `@theme-ui/mdx`,
       `@theme-ui/presets`,
       `@theme-ui/prism`,
       `@theme-ui/sidenav`,
@@ -60,8 +76,8 @@ const globalPackageRules = [
   },
 ]
 
-const globalExcludePackages = []
-const globalExcludePackagePatterns = []
+const globalExcludePackages: Array<string> = []
+const globalExcludePackagePatterns: Array<string> = []
 
 globalPackageRules.forEach((group) => {
   if (group.matchPackagePatterns) {
@@ -72,7 +88,7 @@ globalPackageRules.forEach((group) => {
   }
 })
 
-const defaultPackageRules = [
+const defaultPackageRules: Array<IPackageRule> = [
   {
     groupName: `starters`,
     commitMessageTopic: `starters`,
@@ -115,7 +131,7 @@ const defaultPackageRules = [
   ...globalPackageRules,
 ]
 
-const themesPackages = glob.sync(`themes/*/package.json`).map((file) => file.match(/themes\/([^/]+)/)[1])
+const themesPackages = glob.sync(`themes/*/package.json`).map((file) => file.match(/themes\/([^/]+)/)?.[1])
 
 themesPackages.forEach((pkg) => {
   const packageRule = [

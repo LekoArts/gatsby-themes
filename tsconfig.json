@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "ES6",
+    "module": "esnext",
     "jsx": "react",
-    "lib": ["dom", "es2015", "es2017"],
+    "lib": ["dom", "es2016"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,6 +13,8 @@
     "esModuleInterop": true
   },
   "include": [
+    "./packages/**/*",
+    "./scripts/*",
     "./themes/**/src/**/*",
     "./www/src/**/*",
     "./examples/**/src/**/*",

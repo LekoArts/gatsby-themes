@@ -107,6 +107,20 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should render blogpost with code components`, () => {
     cy.visit(`/code-block-examples`)
+    cy.findByTestId(`code-block`).within(() => {
+      cy.get(`.gatsby-highlight`).should(`have.attr`, `data-language`, `tsx`)
+      cy.findByText(`src/components/blog.tsx`)
+      cy.get(`pre`).should(`have.attr`, `data-linenumber`, `true`)
+      cy.get(`pre`).then((el) => {
+        const win = el[0].ownerDocument.defaultView
+        const before = win?.getComputedStyle(el[0], `before`)
+        const contentValue = before?.getPropertyValue(`content`)
+
+        expect(contentValue).to.eq(`"tsx"`)
+      })
+      cy.get(`button`).should(`have.attr`, `name`, `src/components/blog.tsx: copy code to clipboard`)
+      cy.get(`.token-line.highlight-line`).should(`have.css`, `border-left`, `4px solid rgb(2, 155, 206)`)
+    })
   })
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.visit(`/blog`).waitForRouteChange()

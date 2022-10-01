@@ -9,6 +9,8 @@
     "packages/*"
   ],
   "scripts": {
+    "packages:build": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --interlaced run package:build",
+    "packages:watch": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --interlaced run package:watch",
     "typecheck": "tsc --noEmit",
     "typecheck:ci": "tsc -p tsconfig.ci.json --noEmit",
     "lint": "eslint . --ignore-path .gitignore --ignore-path .prettierignore --ext .ts,.tsx,.js,.mdx",
@@ -23,18 +25,22 @@
     "start-server-and-test": "start-server-and-test",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "changeset publish",
-    "release-update-lockfile": "changeset version && yarn install --mode update-lockfile",
+    "version-packages:ci": "changeset version && yarn install --mode update-lockfile",
+    "release": "yarn packages:build && changeset publish",
     "prepare": "husky install",
-    "update-renovate": "node ./scripts/renovate-config-generator.js"
+    "update-renovate": "node -r @swc-node/register ./scripts/renovate-config-generator.ts",
+    "postinstall": "yarn packages:build"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.6",
     "@changesets/cli": "^2.24.4",
+    "@swc-node/register": "^1.5.2",
+    "@swc/core": "^1.3.4",
     "@testing-library/cypress": "^8.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/chroma-js": "^2.1.4",
+    "@types/fs-extra": "^9.0.13",
     "@types/loadable__component": "^5.13.4",
     "@types/node": "^18.7.23",
     "@types/react": "^18.0.21",
