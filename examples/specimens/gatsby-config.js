@@ -1,6 +1,6 @@
 const remarkGfm = require(`remark-gfm`)
 const remarkSlug = require(`remark-slug`)
-const rehypeMetaAsAttributes = require(`@lekoarts/rehype-meta-as-attributes`)
+const { rehypeMetaAsAttributes } = require(`@lekoarts/rehype-meta-as-attributes`)
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 

@@ -18,6 +18,4 @@ const transformer: Transformer = (ast) => {
   })
 }
 
-const rehypeMetaAsAttributes: Plugin = () => transformer
-
-export default rehypeMetaAsAttributes
+export const rehypeMetaAsAttributes: Plugin = () => transformer
