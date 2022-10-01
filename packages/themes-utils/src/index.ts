@@ -31,9 +31,9 @@ type Language =
   | "html"
   | "text"
 
-export type GetLanguageInput = `language-${Language}` | ""
+type GetLanguageInput = `language-${Language}` | ""
 
-export const getLanguage = (className: GetLanguageInput = ``) => className.split(`language-`).pop() as Language
+const getLanguage = (className: GetLanguageInput = ``) => className.split(`language-`).pop() as Language
 
 interface IPreProps {
   children: {
@@ -49,7 +49,7 @@ interface IPreProps {
   }
 }
 
-export const preToCodeBlock = (preProps: IPreProps) => {
+const preToCodeBlock = (preProps: IPreProps) => {
   const { children: codeString, className = ``, ...props } = preProps.children.props
 
   const match = className.match(/language-([\0-\uFFFF]*)/)
@@ -61,7 +61,7 @@ export const preToCodeBlock = (preProps: IPreProps) => {
   }
 }
 
-export const calculateLinesToHighlight = (meta: string) => {
+const calculateLinesToHighlight = (meta: string) => {
   if (!meta) {
     return () => false
   }
@@ -72,19 +72,28 @@ export const calculateLinesToHighlight = (meta: string) => {
   }
 }
 
-export const mdxResolverPassthrough =
-  (fieldName: string) => async (source: any, args: any, context: any, info: any) => {
-    const type = info.schema.getType(`Mdx`)
-    const mdxNode = context.nodeModel.getNodeById({
-      id: source.parent,
-    })
-    const resolver = type.getFields()[fieldName].resolve
-    const result = await resolver(mdxNode, args, context, info)
-    return result
-  }
+const mdxResolverPassthrough = (fieldName: string) => async (source: any, args: any, context: any, info: any) => {
+  const type = info.schema.getType(`Mdx`)
+  const mdxNode = context.nodeModel.getNodeById({
+    id: source.parent,
+  })
+  const resolver = type.getFields()[fieldName].resolve
+  const result = await resolver(mdxNode, args, context, info)
+  return result
+}
 
-export const slugify = (source: { slug?: string; title: string }, basePath: string) => {
+const slugify = (source: { slug?: string; title: string }, basePath: string) => {
   const slug = source.slug ? source.slug : kebabCase(source.title)
 
   return `/${basePath}/${slug}`.replace(/\/\/+/g, `/`)
+}
+
+export {
+  kebabCase,
+  calculateLinesToHighlight,
+  getLanguage,
+  GetLanguageInput,
+  mdxResolverPassthrough,
+  preToCodeBlock,
+  slugify,
 }
