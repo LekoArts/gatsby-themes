@@ -2767,6 +2767,7 @@ __metadata:
     "@types/three": ^0.144.0
     "@typescript-eslint/eslint-plugin": ^5.38.1
     "@typescript-eslint/parser": ^5.38.1
+    "@vitest/coverage-c8": ^0.23.4
     c8: ^7.12.0
     cross-env: ^7.0.3
     cypress: ^10.9.0
@@ -5410,6 +5411,16 @@ __metadata:
   dependencies:
     resolve: ^1.10.0
   checksum: e4d761e82f5f389206b7261874cc232382984c84f9476fb1c90759507782f8cc8a414ec910e24e63075d28ca5999bdf9d8f3ef2b2e41ea05e477188e8b9669d6
+  languageName: node
+  linkType: hard
+
+"@vitest/coverage-c8@npm:^0.23.4":
+  version: 0.23.4
+  resolution: "@vitest/coverage-c8@npm:0.23.4"
+  dependencies:
+    c8: ^7.12.0
+    vitest: 0.23.4
+  checksum: ce0e4928074145db50d6600da19965c80af6859e901f5e759202c4ea326dde0fcca0d54a79c0872859c4d8b9630d7328d0cbb90150a625d447c761a6fbf0d6e0
   languageName: node
   linkType: hard
 
@@ -22044,7 +22055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^0.23.4":
+"vitest@npm:0.23.4, vitest@npm:^0.23.4":
   version: 0.23.4
   resolution: "vitest@npm:0.23.4"
   dependencies:

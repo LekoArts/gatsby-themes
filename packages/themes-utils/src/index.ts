@@ -50,15 +50,19 @@ interface IPreProps {
 }
 
 const preToCodeBlock = (preProps: IPreProps) => {
-  const { children: codeString, className = ``, ...props } = preProps.children.props
+  if (preProps?.children?.type === `code`) {
+    const { children: codeString, className = ``, ...props } = preProps.children.props
 
-  const match = className.match(/language-([\0-\uFFFF]*)/)
-  return {
-    codeString: codeString.trim(),
-    className,
-    language: match !== null ? match[1] : ``,
-    ...props,
+    const match = className.match(/language-([\0-\uFFFF]*)/)
+    return {
+      codeString: codeString.trim(),
+      className: className as GetLanguageInput,
+      language: match !== null ? match[1] : ``,
+      ...props,
+    }
   }
+
+  return undefined
 }
 
 const calculateLinesToHighlight = (meta: string) => {
@@ -72,6 +76,7 @@ const calculateLinesToHighlight = (meta: string) => {
   }
 }
 
+/* c8 ignore start */
 const mdxResolverPassthrough = (fieldName: string) => async (source: any, args: any, context: any, info: any) => {
   const type = info.schema.getType(`Mdx`)
   const mdxNode = context.nodeModel.getNodeById({
@@ -81,6 +86,7 @@ const mdxResolverPassthrough = (fieldName: string) => async (source: any, args: 
   const result = await resolver(mdxNode, args, context, info)
   return result
 }
+/* c8 ignore stop */
 
 const slugify = (source: { slug?: string; title: string }, basePath: string) => {
   const slug = source.slug ? source.slug : kebabCase(source.title)

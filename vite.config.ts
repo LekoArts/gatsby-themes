@@ -6,7 +6,7 @@ export default defineConfig({
   test: {
     globals: true,
     setupFiles: `./vitest-setup.ts`,
-    include: [`themes/**/__tests__/*.{ts,tsx}`],
+    include: [`themes/**/__tests__/*.{ts,tsx}`, `packages/**/__tests__/*.{ts,tsx}`],
     coverage: {
       reporter: [`text`, `json`, `html`],
     },
