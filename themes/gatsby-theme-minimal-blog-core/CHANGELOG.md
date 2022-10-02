@@ -1,5 +1,15 @@
 # Change Log
 
+## 5.0.1
+
+### Patch Changes
+
+- [`fa281b1a`](https://github.com/LekoArts/gatsby-themes/commit/fa281b1a96c04ea625cfb1e138dc08bf2e0043f2) Thanks [@LekoArts](https://github.com/LekoArts)! - Update README information and change some `package.json` details.
+
+- Updated dependencies [[`fa281b1a`](https://github.com/LekoArts/gatsby-themes/commit/fa281b1a96c04ea625cfb1e138dc08bf2e0043f2), [`fa281b1a`](https://github.com/LekoArts/gatsby-themes/commit/fa281b1a96c04ea625cfb1e138dc08bf2e0043f2)]:
+  - @lekoarts/themes-utils@1.1.1
+  - @lekoarts/rehype-meta-as-attributes@1.1.1
+
 ## 5.0.0
 
 ### Major Changes

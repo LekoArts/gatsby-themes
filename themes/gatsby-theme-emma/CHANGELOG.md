@@ -1,5 +1,14 @@
 # Change Log
 
+## 4.0.1
+
+### Patch Changes
+
+- [`fa281b1a`](https://github.com/LekoArts/gatsby-themes/commit/fa281b1a96c04ea625cfb1e138dc08bf2e0043f2) Thanks [@LekoArts](https://github.com/LekoArts)! - Update README information and change some `package.json` details.
+
+- Updated dependencies [[`fa281b1a`](https://github.com/LekoArts/gatsby-themes/commit/fa281b1a96c04ea625cfb1e138dc08bf2e0043f2)]:
+  - @lekoarts/gatsby-theme-emma-core@4.0.1
+
 ## 4.0.0
 
 ### Major Changes
