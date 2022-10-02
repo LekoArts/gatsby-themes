@@ -90,8 +90,8 @@ module.exports = {
           location: `Paris`,
           socialMedia: [
             {
-              title: `Instagram`,
-              href: `https://www.instagram.com/lekoarts.de`
+              title: `Twitter`,
+              href: `https://www.twitter.com/lekoarts_de`
             }
           ]
         }

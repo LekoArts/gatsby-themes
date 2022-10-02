@@ -108,8 +108,8 @@ module.exports = {
             url: `https://twitter.com/lekoarts_de`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Homepage`,
+            url: `https://www.lekoarts.de`,
           },
         ],
       },

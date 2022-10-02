@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.lekoarts.de/en">
+  <a href="https://www.lekoarts.de?utm_source=gatsby-themes&utm_medium=README">
     <img alt="LekoArts" src="https://img.lekoarts.de/gatsby/lekoarts-monogram-v2.svg" width="100" />
   </a>
 </p>
@@ -33,7 +33,8 @@ This repository is a collection of my Gatsby themes, managed as a [monorepo](htt
 - `.changeset`: Changeset files and configuration.
 - `.github`: GitHub actions, templates for issues, and FUNDING file. A GitHub action will publish the `/examples` as starters to individual GitHub repositories. Another GitHub action will handle the publishing of packages.
 - `cypress`: Contains the Cypress tests for `examples`.
-- `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest` and `gatsby-plugin-offline`). The folder names are the contents after `gatsby-theme-*`.
+- `examples`: Contains the corresponding example sites for the `themes`. These projects can and should be used as a starter and will be copied over to their own repository. Hence they contain example data and additional Gatsby plugins (e.g. `gatsby-plugin-manifest`). The folder names are the contents after `gatsby-theme-*`.
+- `packages`: Shared helpers and utilities for the themes. Compiled with [tsup](https://github.com/egoist/tsup).
 - `plop-templates`: Template for [plop.js](https://plopjs.com/).
 - `scripts`: In order to run the tests on GitHub Actions some utility bash scripts are needed which are located here.
 - `themes`: Contains the themes themselves. They should only have the bare minimum of plugins installed (as `examples` can expand them) and also use `Theme UI` for styling. The naming of the folders must be `gatsby-theme-[name-with-dashes]` and the package name under the scope of `@lekoarts`.
