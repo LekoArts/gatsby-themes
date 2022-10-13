@@ -1,5 +1,11 @@
 # @lekoarts/themes-utils
 
+## 1.1.2
+
+### Patch Changes
+
+- [#1018](https://github.com/LekoArts/gatsby-themes/pull/1018) [`13be1159`](https://github.com/LekoArts/gatsby-themes/commit/13be115995e0b5f02017db26a50eaf81c877d77f) Thanks [@LekoArts](https://github.com/LekoArts)! - Fix a subtle bug in `preToCodeBlock`. The `preToCodeBlock` was checking for a `type` that could never occur. So the syntax highlighting was broken for sites using `preToCodeBlock`. The check was changed now to see if `preProps?.children?.props` exists.
+
 ## 1.1.1
 
 ### Patch Changes
