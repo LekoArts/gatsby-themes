@@ -45,15 +45,14 @@ interface IPreProps {
       withLineNumbers?: boolean
       [key: string]: any
     }
-    type: string
   }
 }
 
 const preToCodeBlock = (preProps: IPreProps) => {
-  if (preProps?.children?.type === `code`) {
+  if (preProps?.children?.props) {
     const { children: codeString, className = ``, ...props } = preProps.children.props
-
     const match = className.match(/language-([\0-\uFFFF]*)/)
+
     return {
       codeString: codeString.trim(),
       className: className as GetLanguageInput,

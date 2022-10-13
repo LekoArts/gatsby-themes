@@ -8,7 +8,6 @@ const preProps = {
       className: `language-javascript` as GetLanguageInput,
       otherProps: `Hello World`,
     },
-    type: `code`,
   },
 }
 
@@ -56,9 +55,7 @@ describe(`preToCodeBlock`, () => {
     })
   })
   it(`handles minimal shape`, () => {
-    expect(
-      preToCodeBlock({ children: { props: { children: `This is the code string` }, type: `code` } })
-    ).toStrictEqual({
+    expect(preToCodeBlock({ children: { props: { children: `This is the code string` } } })).toStrictEqual({
       className: ``,
       codeString: preProps.children.props.children,
       language: ``,
