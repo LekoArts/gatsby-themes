@@ -24,7 +24,7 @@
 
 GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox). Using the Gatsby Theme [`@lekoarts/gatsby-theme-graphql-playground`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-graphql-playground).
 
-[**Demo Website**](https://gatsby-theme-graphql-playground.netlify.com/)
+[**Demo Website**](https://gatsbystartergraphqlplayground.gatsbyjs.io)
 
 Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=graphql-playground&utm_medium=Starter).
 

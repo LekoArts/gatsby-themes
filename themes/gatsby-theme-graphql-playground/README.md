@@ -30,7 +30,7 @@
 
 GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with [MDX](https://mdxjs.com/) and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).
 
-[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://gatsby-theme-graphql-playground.netlify.com/)
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://gatsbystartergraphqlplayground.gatsbyjs.io)
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-graphql-playground).
 
@@ -101,7 +101,7 @@ module.exports = {
     // Can be used for e.g. JSONLD
     siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
     // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://gatsby-theme-graphql-playground.netlify.com`,
+    siteUrl: `https://gatsbystartergraphqlplayground.gatsbyjs.io`,
     // Used for SEO
     siteDescription: `Stub description for graphql-playground`,
     // Used for og:image and must be placed inside the `static` folder
