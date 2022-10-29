@@ -3,13 +3,11 @@ import type { ThemeUICSSObject } from "theme-ui"
 const code: ThemeUICSSObject = {
   ".prism-code": {
     fontSize: [1, 1, 2],
-    padding: `2rem 1rem 1rem 1rem`,
     webkitOverflowScrolling: `touch`,
     backgroundColor: `transparent`,
     minWidth: `100%`,
     mb: 0,
     mt: 0,
-    position: `relative`,
     overflow: `auto`,
     '&[data-linenumber="false"]': {
       ".token-line": {
@@ -18,9 +16,12 @@ const code: ThemeUICSSObject = {
     },
   },
   ".gatsby-highlight[data-language='none'], .gatsby-highlight[data-language='']": {
-    ".prism-code": {
+    ".code-content": {
       pt: `1rem`,
     },
+  },
+  ".code-content": {
+    padding: `2rem 1rem 1rem 1rem`,
   },
   ".token": {
     display: `inline-block`,
@@ -59,7 +60,6 @@ const code: ThemeUICSSObject = {
       left: `1rem`,
       textAlign: `right`,
       textTransform: `uppercase`,
-      top: 0,
       fontFamily: `body`,
       fontWeight: 600,
     },

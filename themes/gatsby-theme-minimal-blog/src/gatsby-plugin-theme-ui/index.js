@@ -179,7 +179,6 @@ const theme = merge(tailwind, {
       color: `white`,
     },
     position: `absolute`,
-    top: 0,
     right: 0,
     zIndex: 1,
     borderRadius: `0 0 0 0.25rem`,
