@@ -9,6 +9,7 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "yarn install && yarn packages:build",
     "packages:build": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --interlaced run package:build",
     "packages:watch": "cross-env FORCE_COLOR=1 yarn workspaces foreach --parallel --interlaced run package:watch",
     "typecheck": "tsc --noEmit",
