@@ -1,5 +1,13 @@
 # Change Log
 
+## 5.0.2
+
+### Patch Changes
+
+- [`2d8e5d17`](https://github.com/LekoArts/gatsby-themes/commit/2d8e5d178bead2c9589ff0176982b6af18d2e62c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Code block language & copy button positioning on scroll
+
+  When the code block horizontally scrolled the copy button stayed in its position and not in the top right. Same with the language label.
+
 ## 5.0.1
 
 ### Patch Changes
