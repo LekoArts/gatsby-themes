@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [`c1effd54`](https://github.com/LekoArts/gatsby-themes/commit/c1effd5435036cbf5de8c16408bd119f1e479e68) Thanks [@LekoArts](https://github.com/LekoArts)! - chore: Change public URL from Netlify to Gatsby Cloud Hosting
+
 ## 4.0.1
 
 ### Patch Changes
