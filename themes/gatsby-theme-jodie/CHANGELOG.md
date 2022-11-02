@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#1043](https://github.com/LekoArts/gatsby-themes/pull/1043) [`5ddaf82f`](https://github.com/LekoArts/gatsby-themes/commit/5ddaf82fc5e7643b841b60028bd7c566b6f9528f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update theme-ui to ^0.15.3
+
+- [#1028](https://github.com/LekoArts/gatsby-themes/pull/1028) [`fcda23c5`](https://github.com/LekoArts/gatsby-themes/commit/fcda23c5c6af6b87dde614bfa032648977f177f5) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @emotion/react to ^11.10.5 for gatsby-theme-jodie
+
+- Updated dependencies [[`28747a5d`](https://github.com/LekoArts/gatsby-themes/commit/28747a5d291aa0439738ff74c45e934772fc971b)]:
+  - @lekoarts/gatsby-theme-jodie-core@4.0.2
+
 ## 4.0.1
 
 ### Patch Changes

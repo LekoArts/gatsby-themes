@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.14
+
+### Patch Changes
+
+- [#1043](https://github.com/LekoArts/gatsby-themes/pull/1043) [`5ddaf82f`](https://github.com/LekoArts/gatsby-themes/commit/5ddaf82fc5e7643b841b60028bd7c566b6f9528f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update theme-ui to ^0.15.3
+
 ## 0.3.13
 
 ### Patch Changes

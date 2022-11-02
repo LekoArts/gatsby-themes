@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.3
+
+### Patch Changes
+
+- [`be91f14a`](https://github.com/LekoArts/gatsby-themes/commit/be91f14a186baa350b1e5360fd74af55f0906f5a) Thanks [@renovate[bot]](https://github.com/renovate%5Bbot%5D)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog-core
+
 ## 5.0.1
 
 ### Patch Changes

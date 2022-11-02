@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#1029](https://github.com/LekoArts/gatsby-themes/pull/1029) [`6d07da3e`](https://github.com/LekoArts/gatsby-themes/commit/6d07da3e1228bf6a13105489f1b005aaaceeb2d1) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @emotion/react to ^11.10.5 for gatsby-theme-status-dashboard
+
+- [#1043](https://github.com/LekoArts/gatsby-themes/pull/1043) [`5ddaf82f`](https://github.com/LekoArts/gatsby-themes/commit/5ddaf82fc5e7643b841b60028bd7c566b6f9528f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update theme-ui to ^0.15.3
+
 ## 4.0.1
 
 ### Patch Changes
