@@ -1426,12 +1426,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.15.3, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
-  version: 7.18.9
-  resolution: "@babel/runtime@npm:7.18.9"
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.15.3, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.0, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.9, @babel/runtime@npm:^7.19.4, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+  version: 7.20.1
+  resolution: "@babel/runtime@npm:7.20.1"
   dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: 36dd736baba7164e82b3cc9d43e081f0cb2d05ff867ad39cac515d99546cee75b7f782018b02a3dcf5f2ef3d27f319faa68965fdfec49d4912c60c6002353a2e
+    regenerator-runtime: ^0.13.10
+  checksum: 00567a333d3357925742a6f5e39394dcc0af6e6029103fe188158bf7ae8b0b3ee3c6c0f68fccc217f0a6cfa455f6be252298baf56b3f5ff37b34313b170cd9f6
   languageName: node
   linkType: hard
 
@@ -2016,7 +2016,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsbyjs/parcel-namer-relative-to-cwd@npm:^1.9.0":
+"@gatsbyjs/parcel-namer-relative-to-cwd@npm:1.9.0":
   version: 1.9.0
   resolution: "@gatsbyjs/parcel-namer-relative-to-cwd@npm:1.9.0"
   dependencies:
@@ -3386,6 +3386,16 @@ __metadata:
   peerDependencies:
     "@parcel/core": ^2.6.2
   checksum: 32a0480b2986b843d55e0c48a965ff842bf7e4d99325d77c1a7e451a1afc41f7f2602b5a61c79dda1d5382b75834b8e5a452cfb7242d029226f750236cbd3bcf
+  languageName: node
+  linkType: hard
+
+"@parcel/transformer-json@npm:2.6.2":
+  version: 2.6.2
+  resolution: "@parcel/transformer-json@npm:2.6.2"
+  dependencies:
+    "@parcel/plugin": 2.6.2
+    json5: ^2.2.0
+  checksum: 0b4162ba936999e10ad66a569d16b42947c7e2f98f3ac83fcabe20aefac8990797f8032115441a1d49ad01ccb2555b31d70c3cf7f202ba2a1fcc1bc7e4703fe0
   languageName: node
   linkType: hard
 
@@ -6942,9 +6952,9 @@ __metadata:
   dependencies:
     "@lekoarts/gatsby-theme-cara": ^4.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-manifest: ^4.24.0
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -8852,10 +8862,10 @@ __metadata:
   dependencies:
     "@lekoarts/gatsby-theme-emilia": ^4.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-sitemap: ^5.24.0
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -8867,10 +8877,10 @@ __metadata:
   dependencies:
     "@lekoarts/gatsby-theme-emma": ^4.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-sitemap: ^5.24.0
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -10972,24 +10982,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-link@npm:^4.24.0":
-  version: 4.24.0
-  resolution: "gatsby-link@npm:4.24.0"
+"gatsby-link@npm:^4.24.1":
+  version: 4.24.1
+  resolution: "gatsby-link@npm:4.24.1"
   dependencies:
     "@types/reach__router": ^1.3.10
-    gatsby-page-utils: ^2.24.0
+    gatsby-page-utils: ^2.24.1
     prop-types: ^15.8.1
   peerDependencies:
     "@gatsbyjs/reach-router": ^1.3.5
     react: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
     react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0 || ^0.0.0
-  checksum: 35aed9a2270de6144f4ee153790ebb90b71681348b12340c417c708fc26e7e8334e151e040517d5e20dccfb94a5c0274dd06411a9b1373c2a598cde9a5e4f316
+  checksum: 6ee4ba8c5a538c3bf8db02ab71dc222d9c0f52483bd59c6613815b248b08bf52805f698e91154e2f38fc61b3fdbdde17cbbae1dff7e3044d6ae3d1e8b004fed5
   languageName: node
   linkType: hard
 
-"gatsby-page-utils@npm:^2.24.0":
-  version: 2.24.0
-  resolution: "gatsby-page-utils@npm:2.24.0"
+"gatsby-page-utils@npm:^2.24.1":
+  version: 2.24.1
+  resolution: "gatsby-page-utils@npm:2.24.1"
   dependencies:
     "@babel/runtime": ^7.15.4
     bluebird: ^3.7.2
@@ -10999,15 +11009,15 @@ __metadata:
     glob: ^7.2.3
     lodash: ^4.17.21
     micromatch: ^4.0.5
-  checksum: 84d62150a2164f8f0ff80f5cd4996a7b413b1b88ef28588c963c236b9e86421006dd384d779b912deb7506d3fd8eee8c21b8ffc5ad7f0db20b0112ec57c153cb
+  checksum: ded1f97dbe3edc1e8c22f2e3e1925ddd7459d3215a288e49cc8d89a43761f1cbaee2a8238fe0207d4fda1b5c1323c319fbd4b7746976c4d4e8af74724a32f2ca
   languageName: node
   linkType: hard
 
-"gatsby-parcel-config@npm:0.15.0":
-  version: 0.15.0
-  resolution: "gatsby-parcel-config@npm:0.15.0"
+"gatsby-parcel-config@npm:0.15.1":
+  version: 0.15.1
+  resolution: "gatsby-parcel-config@npm:0.15.1"
   dependencies:
-    "@gatsbyjs/parcel-namer-relative-to-cwd": ^1.9.0
+    "@gatsbyjs/parcel-namer-relative-to-cwd": 1.9.0
     "@parcel/bundler-default": 2.6.2
     "@parcel/compressor-raw": 2.6.2
     "@parcel/namer-default": 2.6.2
@@ -11018,9 +11028,10 @@ __metadata:
     "@parcel/resolver-default": 2.6.2
     "@parcel/runtime-js": 2.6.2
     "@parcel/transformer-js": 2.6.2
+    "@parcel/transformer-json": 2.6.2
   peerDependencies:
     "@parcel/core": ^2.0.0
-  checksum: 8663bdfc005d2f2d95e4dccfea1f54350a2def0787abd2f8d1fc7bc2a4bf150c5c909c36b1edeffa9553bc628a78098d8ff8b9173dd1da15848854a4bfb5ec47
+  checksum: d1d906daeee447aee8709f1953b44a98c067c4971484c747881ead4fcf86206383b98e2ac05669aecca49ba6d1502e97d6a21efcd9c09c82a1d987691c21241c
   languageName: node
   linkType: hard
 
@@ -11145,9 +11156,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-page-creator@npm:^4.24.0":
-  version: 4.24.0
-  resolution: "gatsby-plugin-page-creator@npm:4.24.0"
+"gatsby-plugin-page-creator@npm:^4.24.1":
+  version: 4.24.1
+  resolution: "gatsby-plugin-page-creator@npm:4.24.1"
   dependencies:
     "@babel/runtime": ^7.15.4
     "@babel/traverse": ^7.15.4
@@ -11156,14 +11167,14 @@ __metadata:
     fs-exists-cached: ^1.0.0
     fs-extra: ^10.1.0
     gatsby-core-utils: ^3.24.0
-    gatsby-page-utils: ^2.24.0
+    gatsby-page-utils: ^2.24.1
     gatsby-plugin-utils: ^3.18.0
     gatsby-telemetry: ^3.24.0
     globby: ^11.1.0
     lodash: ^4.17.21
   peerDependencies:
     gatsby: ^4.0.0-next
-  checksum: a16516bcf6f9f57d0e12c431ca86d4578597de609a1b79db90b82b2faab53ffb2400928c59b2e3f2ab7d02401f54515bb2bb8489b3b66b434e1d90f827c5ac1e
+  checksum: 46b6944dd7de9fb3f5bcf39fc49932485e09331b0e3c67f71a4ee98013919a4773bd75fd106e66bfb87d45e782d93a68dd78a25bd37e637fd3cb834cc040ec69
   languageName: node
   linkType: hard
 
@@ -11262,15 +11273,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-webpack-bundle-analyser-v2@npm:^1.1.27":
-  version: 1.1.27
-  resolution: "gatsby-plugin-webpack-bundle-analyser-v2@npm:1.1.27"
+"gatsby-plugin-webpack-bundle-analyser-v2@npm:^1.1.30":
+  version: 1.1.30
+  resolution: "gatsby-plugin-webpack-bundle-analyser-v2@npm:1.1.30"
   dependencies:
-    "@babel/runtime": ^7.17.8
-    webpack-bundle-analyzer: ^4.5.0
+    "@babel/runtime": ^7.19.4
+    webpack-bundle-analyzer: ^4.6.1
   peerDependencies:
     gatsby: ^2.0.0 || ^3.0.0 || ^4.0.0
-  checksum: 99bb315b9a64bddec0af64a7a040ab32391873a9636a209d18f3e923cd1434ea1250f8bc37bdfd156f69414227e2496cc44eeccb392f0da8e3bcc5089b527aee
+  checksum: 0a7d6eba493ea9613fd45daf8859e204a54646bb823fe5f908d5753939fe1ad93844cc97026a53c35cc73773292f2df9b0b879f4707b26c56e0ee54e50625b3c
   languageName: node
   linkType: hard
 
@@ -11424,9 +11435,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:^4.24.1":
-  version: 4.24.1
-  resolution: "gatsby@npm:4.24.1"
+"gatsby@npm:^4.24.6":
+  version: 4.24.6
+  resolution: "gatsby@npm:4.24.6"
   dependencies:
     "@babel/code-frame": ^7.14.0
     "@babel/core": ^7.15.5
@@ -11512,10 +11523,10 @@ __metadata:
     gatsby-core-utils: ^3.24.0
     gatsby-graphiql-explorer: ^2.24.0
     gatsby-legacy-polyfills: ^2.24.0
-    gatsby-link: ^4.24.0
-    gatsby-page-utils: ^2.24.0
-    gatsby-parcel-config: 0.15.0
-    gatsby-plugin-page-creator: ^4.24.0
+    gatsby-link: ^4.24.1
+    gatsby-page-utils: ^2.24.1
+    gatsby-parcel-config: 0.15.1
+    gatsby-plugin-page-creator: ^4.24.1
     gatsby-plugin-typescript: ^4.24.0
     gatsby-plugin-utils: ^3.18.0
     gatsby-react-router-scroll: ^5.24.0
@@ -11601,7 +11612,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: e5a1eecade215a40fef6b083793fcccb51c5751b496c831f514778c721b309586302fd574a3e0f743c6ca4c5ec228d5120c9262493e23dfbd1bcdf802da927a7
+  checksum: 3c70d3dc329237c6012114965fafea849406a06289fb53020f8b0c80765e3fed0d7e89a4d01cb51f4505a15c19a1afcc4eeddafae7f7a3f2519e500ea62ed163
   languageName: node
   linkType: hard
 
@@ -12067,8 +12078,8 @@ __metadata:
   dependencies:
     "@lekoarts/gatsby-theme-graphql-playground": ^4.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby: ^4.24.6
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -13701,10 +13712,10 @@ __metadata:
   dependencies:
     "@lekoarts/gatsby-theme-jodie": ^4.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-sitemap: ^5.24.0
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -15673,11 +15684,11 @@ __metadata:
   dependencies:
     "@lekoarts/gatsby-theme-minimal-blog": ^5.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-feed: ^4.24.0
     gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-sitemap: ^5.24.0
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
     react-helmet: ^6.1.0
@@ -18513,10 +18524,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
-  version: 0.13.9
-  resolution: "regenerator-runtime@npm:0.13.9"
-  checksum: 65ed455fe5afd799e2897baf691ca21c2772e1a969d19bb0c4695757c2d96249eb74ee3553ea34a91062b2a676beedf630b4c1551cc6299afb937be1426ec55e
+"regenerator-runtime@npm:^0.13.10, regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
+  version: 0.13.10
+  resolution: "regenerator-runtime@npm:0.13.10"
+  checksum: 09893f5a9e82932642d9a999716b6c626dc53ef2a01307c952ebbf8e011802360163a37c304c18a6c358548be5a72b448e37209954a18696f21e438c81cbb4b9
   languageName: node
   linkType: hard
 
@@ -19740,21 +19751,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "specimens@workspace:examples/specimens"
   dependencies:
-    "@emotion/react": ^11.10.4
+    "@emotion/react": ^11.10.5
     "@lekoarts/gatsby-theme-specimens": ^5.0.0
     "@lekoarts/rehype-meta-as-attributes": ^1.0.0
     "@lekoarts/themes-utils": ^1.0.0
     "@loadable/component": ^5.15.2
-    "@mdx-js/react": ^2.1.3
+    "@mdx-js/react": ^2.1.5
     "@theme-ui/mdx": ^0.15.1
     "@theme-ui/presets": ^0.15.1
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-catch-links: ^4.24.0
     gatsby-plugin-manifest: ^4.24.0
     gatsby-plugin-mdx: ^4.3.0
     gatsby-plugin-theme-ui: ^0.15.1
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     gatsby-source-filesystem: ^4.24.0
     prism-react-renderer: ^1.3.5
     react: ^18.2.0
@@ -19907,13 +19918,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "status-dashboard@workspace:examples/status-dashboard"
   dependencies:
-    "@emotion/react": ^11.10.4
+    "@emotion/react": ^11.10.5
     "@lekoarts/gatsby-theme-status-dashboard": ^4.0.0
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-emotion: ^7.24.0
     gatsby-plugin-manifest: ^4.24.0
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
   languageName: unknown
@@ -20294,13 +20305,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "styleguide@workspace:examples/styleguide"
   dependencies:
-    "@emotion/react": ^11.10.4
+    "@emotion/react": ^11.10.5
     "@lekoarts/gatsby-theme-styleguide": ^4.0.0
     "@theme-ui/mdx": ^0.15.1
     cross-env: ^7.0.3
-    gatsby: ^4.24.1
+    gatsby: ^4.24.6
     gatsby-plugin-theme-ui: ^0.15.1
-    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.27
+    gatsby-plugin-webpack-bundle-analyser-v2: ^1.1.30
     react: ^18.2.0
     react-dom: ^18.2.0
     theme-ui: ^0.15.1
@@ -21906,9 +21917,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-bundle-analyzer@npm:^4.5.0":
-  version: 4.6.1
-  resolution: "webpack-bundle-analyzer@npm:4.6.1"
+"webpack-bundle-analyzer@npm:^4.6.1":
+  version: 4.7.0
+  resolution: "webpack-bundle-analyzer@npm:4.7.0"
   dependencies:
     acorn: ^8.0.4
     acorn-walk: ^8.0.0
@@ -21921,7 +21932,7 @@ __metadata:
     ws: ^7.3.1
   bin:
     webpack-bundle-analyzer: lib/bin/analyzer.js
-  checksum: 4bc97ac6a1d9cd1f133444b0fc9d9091c97f4bd8388f97636ce27abd1ebffaa7dd45d29f6693661a666e77bcc08dff43ab7c2f5e2600a3101b956c94c1d038d0
+  checksum: 4ce3b379c61ce16b2219756843407cc99f2b82cd191f653043f1b705a3e32b3af03834af0dfded98ab852313a892a148bed1a8effaacd6440f028c19f41581f3
   languageName: node
   linkType: hard
 
