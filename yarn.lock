@@ -2603,7 +2603,7 @@ __metadata:
   resolution: "@lekoarts/gatsby-theme-jodie-core@workspace:themes/gatsby-theme-jodie-core"
   dependencies:
     "@lekoarts/themes-utils": ^1.1.1
-    "@mdx-js/react": ^2.1.3
+    "@mdx-js/react": ^2.1.5
     gatsby-plugin-mdx: ^4.3.0
     gatsby-plugin-sharp: ^4.24.0
     gatsby-source-filesystem: ^4.24.0
@@ -2972,15 +2972,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^2.1.3":
-  version: 2.1.3
-  resolution: "@mdx-js/react@npm:2.1.3"
+"@mdx-js/react@npm:^2.1.3, @mdx-js/react@npm:^2.1.5":
+  version: 2.1.5
+  resolution: "@mdx-js/react@npm:2.1.5"
   dependencies:
     "@types/mdx": ^2.0.0
     "@types/react": ">=16"
   peerDependencies:
-    react: ^16.13.1 || ^17.0.0
-  checksum: 206124b74b75d9c7e124be6bc6b27b9759875d5824e3c8a0249e6ec717b49fae4d84ccea35c4ade479f30781487c53cf965372409256ead8379850f6250908b3
+    react: ">=16"
+  checksum: e47fb7086a4dd3e4d75d9ef0bf530009f72437a5ea91048e65d2e2f53955015a8c81b5058ac56fa00f401843305518e9f298183645d56c7e34336df4cc0b62bf
   languageName: node
   linkType: hard
 
