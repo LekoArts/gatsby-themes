@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#1030](https://github.com/LekoArts/gatsby-themes/pull/1030) [`cba0f744`](https://github.com/LekoArts/gatsby-themes/commit/cba0f7449d2914e2a02e4ec7113d9ffb0de3ceaf) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @mdx-js/react to ^2.1.5 for gatsby-theme-emilia-core
+
 ## 4.0.1
 
 ### Patch Changes

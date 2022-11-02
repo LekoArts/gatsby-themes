@@ -1,5 +1,16 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#1043](https://github.com/LekoArts/gatsby-themes/pull/1043) [`5ddaf82f`](https://github.com/LekoArts/gatsby-themes/commit/5ddaf82fc5e7643b841b60028bd7c566b6f9528f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update theme-ui to ^0.15.3
+
+- [#1027](https://github.com/LekoArts/gatsby-themes/pull/1027) [`3866bee3`](https://github.com/LekoArts/gatsby-themes/commit/3866bee37d5fff1d7a90933ee1c1aa7fccd5ea5c) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @emotion/react to ^11.10.5 for gatsby-theme-emma
+
+- Updated dependencies [[`06ae70f0`](https://github.com/LekoArts/gatsby-themes/commit/06ae70f0b2112b2a124cadbdca9023f2117759c7)]:
+  - @lekoarts/gatsby-theme-emma-core@4.0.2
+
 ## 4.0.1
 
 ### Patch Changes
