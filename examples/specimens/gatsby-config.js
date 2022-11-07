@@ -14,6 +14,7 @@ module.exports = {
     banner: `https://specimens.lekoarts.de/banner.jpg`,
     siteUrl: `https://specimens.lekoarts.de`,
   },
+  trailingSlash: `never`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-specimens`,

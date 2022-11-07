@@ -15,6 +15,7 @@ module.exports = {
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
   },
+  trailingSlash: `never`,
   plugins: [
     `gatsby-plugin-theme-ui`,
     {

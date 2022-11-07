@@ -11,6 +11,7 @@ module.exports = {
     siteName: process.env.SITE_TITLE || `Status Dashboard - LekoArts`,
     siteDescription: process.env.SITE_DESCRIPTION || `Showing the statuses of my Netlify deploys & CircleCI tests.`,
   },
+  trailingSlash: `never`,
   plugins: [
     // See the theme's README for all available components
     `@lekoarts/gatsby-theme-status-dashboard`,
