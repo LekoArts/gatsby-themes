@@ -1,5 +1,11 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#1031](https://github.com/LekoArts/gatsby-themes/pull/1031) [`28747a5d`](https://github.com/LekoArts/gatsby-themes/commit/28747a5d291aa0439738ff74c45e934772fc971b) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @mdx-js/react to ^2.1.5 for gatsby-theme-jodie-core
+
 ## 4.0.1
 
 ### Patch Changes

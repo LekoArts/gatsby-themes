@@ -1,5 +1,24 @@
 # Change Log
 
+## 5.0.3
+
+### Patch Changes
+
+- [#1035](https://github.com/LekoArts/gatsby-themes/pull/1035) [`f64491cb`](https://github.com/LekoArts/gatsby-themes/commit/f64491cb1194f290b569dad149c486cfe20bbf02) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+- [#1043](https://github.com/LekoArts/gatsby-themes/pull/1043) [`5ddaf82f`](https://github.com/LekoArts/gatsby-themes/commit/5ddaf82fc5e7643b841b60028bd7c566b6f9528f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update theme-ui to ^0.15.3
+
+- Updated dependencies [[`be91f14a`](https://github.com/LekoArts/gatsby-themes/commit/be91f14a186baa350b1e5360fd74af55f0906f5a)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@5.0.3
+
+## 5.0.2
+
+### Patch Changes
+
+- [`2d8e5d17`](https://github.com/LekoArts/gatsby-themes/commit/2d8e5d178bead2c9589ff0176982b6af18d2e62c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Code block language & copy button positioning on scroll
+
+  When the code block horizontally scrolled the copy button stayed in its position and not in the top right. Same with the language label.
+
 ## 5.0.1
 
 ### Patch Changes

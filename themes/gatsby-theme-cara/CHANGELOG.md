@@ -1,5 +1,13 @@
 # Change Log
 
+## 4.0.2
+
+### Patch Changes
+
+- [#1032](https://github.com/LekoArts/gatsby-themes/pull/1032) [`d16584b2`](https://github.com/LekoArts/gatsby-themes/commit/d16584b2acde4acb1e663dff899147365c3974e1) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-cara
+
+- [#1043](https://github.com/LekoArts/gatsby-themes/pull/1043) [`5ddaf82f`](https://github.com/LekoArts/gatsby-themes/commit/5ddaf82fc5e7643b841b60028bd7c566b6f9528f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update theme-ui to ^0.15.3
+
 ## 4.0.1
 
 ### Patch Changes
