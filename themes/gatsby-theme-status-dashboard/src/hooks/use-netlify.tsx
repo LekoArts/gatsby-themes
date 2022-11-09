@@ -17,11 +17,8 @@ type UseNetlifyProps = {
 
 const useNetlify = () => {
   const data = useStaticQuery<UseNetlifyProps>(graphql`
-    query {
-      sites: allNetlifySites(
-        filter: { build_settings: { public_repo: { eq: true } } }
-        sort: { fields: [name], order: ASC }
-      ) {
+    {
+      sites: allNetlifySites(filter: { build_settings: { public_repo: { eq: true } } }, sort: { name: ASC }) {
         totalCount
         nodes {
           build_settings {
