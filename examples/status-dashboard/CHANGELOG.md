@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.2.12
+
+### Patch Changes
+
+- Updated dependencies [[`02872400`](https://github.com/LekoArts/gatsby-themes/commit/0287240022c308a7d1fcc8af348ee7d21bca0dd5)]:
+  - @lekoarts/gatsby-theme-status-dashboard@5.0.0
+
 ## 0.2.11
 
 ### Patch Changes

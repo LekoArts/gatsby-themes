@@ -1,5 +1,11 @@
 # @lekoarts/rehype-meta-as-attributes
 
+## 2.0.0
+
+### Major Changes
+
+- [#1045](https://github.com/LekoArts/gatsby-themes/pull/1045) [`02872400`](https://github.com/LekoArts/gatsby-themes/commit/0287240022c308a7d1fcc8af348ee7d21bca0dd5) Thanks [@LekoArts](https://github.com/LekoArts)! - Updating minimum required Node.js version to 18.
+
 ## 1.1.1
 
 ### Patch Changes

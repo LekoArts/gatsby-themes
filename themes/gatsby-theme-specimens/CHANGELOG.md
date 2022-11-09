@@ -1,5 +1,18 @@
 # Change Log
 
+## 6.0.0
+
+### Major Changes
+
+- [#1045](https://github.com/LekoArts/gatsby-themes/pull/1045) [`02872400`](https://github.com/LekoArts/gatsby-themes/commit/0287240022c308a7d1fcc8af348ee7d21bca0dd5) Thanks [@LekoArts](https://github.com/LekoArts)! - Update to [Gatsby 5](https://www.gatsbyjs.com/gatsby-5/). [Gatsby 5 Migration Guide](https://gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/).
+
+  **Breaking Changes:**
+
+  - Minimal Node.js version 18.0.0
+  - Minimal required React version is 18
+
+  For all other breaking changes, refer to the [Gatsby 5 Migration Guide](https://gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/).
+
 ## 5.0.1
 
 ### Patch Changes
