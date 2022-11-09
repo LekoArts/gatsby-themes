@@ -203,8 +203,8 @@ const Listing = () => {
 export default Listing
 
 const ListingQuery = graphql`
-  query {
-    allThemes(sort: { fields: title, order: ASC }) {
+  {
+    allThemes(sort: { title: ASC }) {
       nodes {
         title
         url
