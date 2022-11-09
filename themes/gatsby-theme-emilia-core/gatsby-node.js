@@ -183,8 +183,8 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   })
 
   const result = await graphql(`
-    query {
-      allProject(sort: { fields: date, order: DESC }) {
+    {
+      allProject(sort: { date: DESC }) {
         nodes {
           slug
           contentFilePath

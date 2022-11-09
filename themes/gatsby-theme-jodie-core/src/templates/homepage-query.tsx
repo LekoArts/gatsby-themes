@@ -7,7 +7,7 @@ export { Head }
 
 export const query = graphql`
   query ($homepagePageLimit: Int!, $homepageProjectLimit: Int!) {
-    pages: allPage(sort: { fields: title, order: ASC }, limit: $homepagePageLimit) {
+    pages: allPage(sort: { title: ASC }, limit: $homepagePageLimit) {
       nodes {
         slug
         title
@@ -19,7 +19,7 @@ export const query = graphql`
         __typename
       }
     }
-    projects: allProject(sort: { fields: date, order: DESC }, limit: $homepageProjectLimit) {
+    projects: allProject(sort: { date: DESC }, limit: $homepageProjectLimit) {
       nodes {
         slug
         title: shortTitle

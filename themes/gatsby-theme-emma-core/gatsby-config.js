@@ -1,5 +1,4 @@
 const remarkGfm = require(`remark-gfm`)
-const remarkUnwrapImages = require(`remark-unwrap-images`)
 const withDefaults = require(`./utils/default-options`)
 
 module.exports = (themeOptions) => {
@@ -37,7 +36,7 @@ module.exports = (themeOptions) => {
         resolve: `gatsby-plugin-mdx`,
         options: {
           mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkUnwrapImages],
+            remarkPlugins: [remarkGfm],
           },
           gatsbyRemarkPlugins: [
             {

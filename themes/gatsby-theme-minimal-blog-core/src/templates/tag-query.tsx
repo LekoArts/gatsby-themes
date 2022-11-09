@@ -7,7 +7,7 @@ export { Head }
 
 export const query = graphql`
   query ($slug: String!, $formatString: String!) {
-    allPost(sort: { fields: date, order: DESC }, filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
+    allPost(sort: { date: DESC }, filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
       nodes {
         slug
         title

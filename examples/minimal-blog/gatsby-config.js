@@ -18,6 +18,7 @@ module.exports = {
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
   },
+  trailingSlash: `never`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
@@ -108,18 +109,16 @@ module.exports = {
                   custom_elements: [{ "content:encoded": content }],
                 }
               }),
-            query: `
-              {
-                allPost(sort: { fields: date, order: DESC }) {
-                  nodes {
-                    title
-                    date(formatString: "MMMM D, YYYY")
-                    excerpt
-                    slug
-                  }
-                }
-              }
-            `,
+            query: `{
+  allPost(sort: {date: DESC}) {
+    nodes {
+      title
+      date(formatString: "MMMM D, YYYY")
+      excerpt
+      slug
+    }
+  }
+}`,
             output: `rss.xml`,
             title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
           },

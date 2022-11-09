@@ -309,8 +309,8 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   })
 
   const result = await graphql(`
-    query {
-      allPost(sort: { fields: date, order: DESC }) {
+    {
+      allPost(sort: { date: DESC }) {
         nodes {
           slug
           defer
@@ -324,8 +324,8 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           contentFilePath
         }
       }
-      tags: allPost(sort: { fields: tags___name, order: DESC }) {
-        group(field: tags___name) {
+      tags: allPost(sort: { tags: { name: DESC } }) {
+        group(field: { tags: { name: SELECT } }) {
           fieldValue
         }
       }

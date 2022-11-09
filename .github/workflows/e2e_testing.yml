@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.14.2-slim-chrome103-ff102
+      image: cypress/browsers:node18.12.0-chrome106-ff106
       options: --user 1001
     strategy:
       fail-fast: false

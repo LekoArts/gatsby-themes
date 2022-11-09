@@ -6,8 +6,8 @@ export default ProjectsComponent
 export { Head }
 
 export const query = graphql`
-  query {
-    allProject(sort: { fields: date, order: DESC }) {
+  {
+    allProject(sort: { date: DESC }) {
       nodes {
         color
         slug

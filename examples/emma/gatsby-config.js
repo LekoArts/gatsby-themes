@@ -18,6 +18,7 @@ module.exports = {
     siteImage: `/banner.jpg`,
     author: `@lekoarts_de`,
   },
+  trailingSlash: `never`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emma`,

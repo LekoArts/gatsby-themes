@@ -6,9 +6,9 @@ export default TagsComponent
 export { Head }
 
 export const query = graphql`
-  query {
-    allPost(sort: { fields: tags___name, order: DESC }) {
-      group(field: tags___name) {
+  {
+    allPost(sort: { tags: { name: DESC } }) {
+      group(field: { tags: { name: SELECT } }) {
         fieldValue
         totalCount
       }
