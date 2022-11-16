@@ -1,4 +1,4 @@
-import { system } from "@theme-ui/presets"
+import system from "@theme-ui/preset-system"
 
 const theme = {
   ...system,

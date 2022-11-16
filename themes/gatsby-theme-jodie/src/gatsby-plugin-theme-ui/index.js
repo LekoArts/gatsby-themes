@@ -1,5 +1,5 @@
 import { merge } from "theme-ui"
-import { tailwind } from "@theme-ui/presets"
+import tailwind from "@theme-ui/preset-tailwind"
 
 const contentStyles = {
   px: [3, 3, 4, 5, 6],
