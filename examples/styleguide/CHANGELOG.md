@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.2.15
+
+### Patch Changes
+
+- [#1051](https://github.com/LekoArts/gatsby-themes/pull/1051) [`4facf3d1`](https://github.com/LekoArts/gatsby-themes/commit/4facf3d1e45c8db320050607dd84a0c4a4a74a62) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Use minor pin and update to 0.15.4
+
 ## 0.2.14
 
 ### Patch Changes
