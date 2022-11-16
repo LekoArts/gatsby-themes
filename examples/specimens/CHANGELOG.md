@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.16
+
+### Patch Changes
+
+- [`b9148840`](https://github.com/LekoArts/gatsby-themes/commit/b91488404155c7a1965837d807c372131b68f6a0) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Pin @theme-ui/presets to 0.15.3 as 0.15.4 was a breaking change
+
 ## 0.3.15
 
 ### Patch Changes
