@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: "18"
       - name: Install Dependencies
-        run: yarn --immutable
+        uses: ./.github/actions/yarn-install
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
@@ -31,6 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Wait for NPM package propagation
+        if: steps.changesets.outputs.published == 'true'
         run: sleep 30s
         shell: bash
       - name: Publish Starters
