@@ -61,12 +61,10 @@ const globalPackageRules: Array<IPackageRule> = [
     matchPaths: [`themes/**`, `examples/**`],
     matchPackageNames: [
       `@theme-ui/color`,
-      `@theme-ui/components`,
       `@theme-ui/mdx`,
       `@theme-ui/presets`,
       `@theme-ui/prism`,
       `@theme-ui/sidenav`,
-      `@theme-ui/typography`,
       `gatsby-plugin-theme-ui`,
       `theme-ui`,
     ],
