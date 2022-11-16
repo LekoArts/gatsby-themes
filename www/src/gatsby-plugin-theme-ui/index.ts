@@ -1,5 +1,5 @@
 import { merge, Theme, get } from "theme-ui"
-import { tailwind } from "@theme-ui/presets"
+import tailwind from "@theme-ui/preset-tailwind"
 
 const sharedButtonStyles = {
   border: `none`,

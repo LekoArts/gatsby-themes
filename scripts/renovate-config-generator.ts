@@ -63,6 +63,8 @@ const globalPackageRules: Array<IPackageRule> = [
       `@theme-ui/color`,
       `@theme-ui/mdx`,
       `@theme-ui/presets`,
+      `@theme-ui/preset-system`,
+      `@theme-ui/preset-tailwind`,
       `@theme-ui/prism`,
       `@theme-ui/sidenav`,
       `gatsby-plugin-theme-ui`,
