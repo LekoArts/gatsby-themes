@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.3
+
+### Patch Changes
+
+- [#1057](https://github.com/LekoArts/gatsby-themes/pull/1057) [`1f4fb5c6`](https://github.com/LekoArts/gatsby-themes/commit/1f4fb5c61bd4029f70be5d9b5874830903eb0911) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Use withPrefix helper for icons.svg
+
 ## 5.0.2
 
 ### Patch Changes
