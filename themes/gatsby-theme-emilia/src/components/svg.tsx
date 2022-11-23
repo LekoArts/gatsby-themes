@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import { withPrefix } from "gatsby"
 
 type IconType = "bgPattern" | "leftArrow" | "location"
 
@@ -10,7 +11,7 @@ type SVGProps = {
 
 const Svg = ({ id, ...props }: SVGProps) => (
   <svg {...props}>
-    <use href={`/icons.svg#${id}`} />
+    <use href={withPrefix(`/icons.svg#${id}`)} />
   </svg>
 )
 
