@@ -2770,7 +2770,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@lekoarts/rehype-meta-as-attributes@workspace:packages/rehype-meta-as-attributes"
   dependencies:
-    tsup: ^6.3.0
+    tsup: ^6.5.0
     unified: ^10.1.2
     unist-util-visit: ^2.0.3
   languageName: unknown
@@ -2782,7 +2782,7 @@ __metadata:
   dependencies:
     "@types/lodash.kebabcase": ^4.1.7
     lodash.kebabcase: ^4.1.1
-    tsup: ^6.3.0
+    tsup: ^6.5.0
   languageName: unknown
   linkType: soft
 
@@ -6555,14 +6555,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bundle-require@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "bundle-require@npm:3.1.0"
+"bundle-require@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "bundle-require@npm:3.1.2"
   dependencies:
     load-tsconfig: ^0.2.0
   peerDependencies:
     esbuild: ">=0.13"
-  checksum: e433dd18ad2ccaf9d210040c5ce300a8c60f4caf0472856fd5162ec407f7b5b3e0559e540aa92b7381a18a6ff2b45bbe9270dc2fd7ace17e445e72a9cbc7fa95
+  checksum: 71f8cb81bcde97825317b0e516b7e479ec70bd2370f55a8f02795c0df6d541e6562c4b9ec0427cc7b5b835103a8dcf306da04e3846fa468146358471490fcf81
   languageName: node
   linkType: hard
 
@@ -18954,7 +18954,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.74.1, rollup@npm:^2.79.1":
+"rollup@npm:^2.79.1":
   version: 2.79.1
   resolution: "rollup@npm:2.79.1"
   dependencies:
@@ -18965,6 +18965,20 @@ __metadata:
   bin:
     rollup: dist/bin/rollup
   checksum: 6a2bf167b3587d4df709b37d149ad0300692cc5deb510f89ac7bdc77c8738c9546ae3de9322b0968e1ed2b0e984571f5f55aae28fa7de4cfcb1bc5402a4e2be6
+  languageName: node
+  linkType: hard
+
+"rollup@npm:^3.2.5":
+  version: 3.5.0
+  resolution: "rollup@npm:3.5.0"
+  dependencies:
+    fsevents: ~2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: 57aa8e17c7a8d5b80b7a26c8acd52779369826049dbc370b929d73a6015fb69161f5aca699e8c54f7ea410d4ce5b5a45b26b07d5c99724becd555eef0ffe35be
   languageName: node
   linkType: hard
 
@@ -20853,11 +20867,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:^6.3.0":
-  version: 6.3.0
-  resolution: "tsup@npm:6.3.0"
+"tsup@npm:^6.5.0":
+  version: 6.5.0
+  resolution: "tsup@npm:6.5.0"
   dependencies:
-    bundle-require: ^3.1.0
+    bundle-require: ^3.1.2
     cac: ^6.7.12
     chokidar: ^3.5.1
     debug: ^4.3.1
@@ -20867,7 +20881,7 @@ __metadata:
     joycon: ^3.0.1
     postcss-load-config: ^3.0.1
     resolve-from: ^5.0.0
-    rollup: ^2.74.1
+    rollup: ^3.2.5
     source-map: 0.8.0-beta.0
     sucrase: ^3.20.3
     tree-kill: ^1.2.2
@@ -20885,7 +20899,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: f1fccd555a77ff82b3b3d4ce28188f5703695af5e9d593a4edcfc3807cbebb5b04e619ad9ae0b0c92830cbbcbf6d76356365a8986ebe82d7389151a4f66a6c49
+  checksum: 625082f2a2afc63024ddd54f5aca28372a7b4ec4f7c402f8aacefd0c56d8da7250665dbb4097d40edcf2cbd4168d96ed4593ecb903ab36e625628f375980e266
   languageName: node
   linkType: hard
 
