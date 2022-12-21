@@ -74,7 +74,7 @@ const Disks = () => (
 )
 
 const ThreeDModel = () => {
-  const [mode] = useColorMode()
+  const [mode] = useColorMode<"light" | "dark" | "strangerThings">()
 
   const isStrange = mode === `strangerThings`
   const standardColor = isStrange ? `#E7251D` : `#663399`

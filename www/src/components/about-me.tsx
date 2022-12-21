@@ -7,7 +7,7 @@ import Logo from "../icons/logo"
 import CircleGrid from "../icons/circle-grid"
 
 const AboutMe = () => {
-  const [mode] = useColorMode()
+  const [mode] = useColorMode<"light" | "dark" | "strangerThings">()
 
   const isStrange = mode === `strangerThings`
 

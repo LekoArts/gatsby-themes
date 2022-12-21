@@ -23,7 +23,7 @@ const Code = ({
   highlight = ``,
 }: CodeProps) => {
   const { showLineNumbers, showCopyButton } = useMinimalBlogConfig()
-  const [colorMode] = useColorMode()
+  const [colorMode] = useColorMode<"light" | "dark">()
   const isDark = colorMode === `dark`
 
   const language = getLanguage(blockClassName)

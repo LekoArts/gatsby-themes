@@ -6,7 +6,7 @@ import { rgba } from "polished"
 type BGImageProps = { children: React.ReactNode; color?: string; slim: boolean }
 
 const BGImage = ({ children, color = ``, slim }: BGImageProps) => {
-  const [colorMode] = useColorMode()
+  const [colorMode] = useColorMode<"light" | "dark">()
   const {
     theme: { rawColors },
   } = useThemeUI()

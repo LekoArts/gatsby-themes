@@ -1,18 +1,12 @@
 /** @jsx jsx */
 import { Sidenav } from "@theme-ui/sidenav"
-import { jsx, useColorMode } from "theme-ui"
+import { jsx } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
 import ColorModeToggle from "./colormode-toggle"
 import Navigation from "../data/navigation.mdx"
 
 const Sidebar = () => {
   const { siteTitle } = useSiteMetadata()
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === `dark`
-  const toggleColorMode = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    setColorMode(isDark ? `light` : `dark`)
-  }
 
   return (
     <div>
@@ -22,7 +16,7 @@ const Sidebar = () => {
       >
         {siteTitle}
       </div>
-      <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
+      <ColorModeToggle />
       <Sidenav
         // @ts-ignore
         sx={{
