@@ -70,7 +70,7 @@ const Listing = () => {
     allThemes: { nodes: themes },
   } = useStaticQuery<Props>(ListingQuery)
 
-  const [mode] = useColorMode()
+  const [mode] = useColorMode<"light" | "dark" | "strangerThings">()
 
   let buttonStyles: ThemeUICSSObject = {}
   let overlayStyles: ThemeUICSSObject = {}

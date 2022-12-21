@@ -2,10 +2,9 @@ import * as React from "react"
 import { useColorMode } from "theme-ui"
 import Highlight, { defaultProps } from "prism-react-renderer"
 import { calculateLinesToHighlight, getLanguage, GetLanguageInput } from "@lekoarts/themes-utils"
-import lightTheme from "prism-react-renderer/themes/github"
-import darkTheme from "prism-react-renderer/themes/vsDark"
 import Copy from "./copy"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
+import { lightTheme, darkTheme } from "../utils/prism-themes"
 
 type CodeProps = {
   codeString: string
@@ -23,7 +22,7 @@ const Code = ({
   highlight = ``,
 }: CodeProps) => {
   const { showLineNumbers, showCopyButton } = useMinimalBlogConfig()
-  const [colorMode] = useColorMode()
+  const [colorMode] = useColorMode<"light" | "dark">()
   const isDark = colorMode === `dark`
 
   const language = getLanguage(blockClassName)
@@ -31,9 +30,14 @@ const Code = ({
   const shouldShowLineNumbers = withLineNumbers || showLineNumbers
 
   return (
-    // @ts-ignore
-    <Highlight {...defaultProps} code={codeString} language={language} theme={isDark ? darkTheme : lightTheme}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+    <Highlight
+      {...defaultProps}
+      code={codeString}
+      // @ts-ignore
+      language={language}
+      theme={isDark ? darkTheme : lightTheme}
+    >
+      {({ className, tokens, getLineProps, getTokenProps }) => (
         <React.Fragment>
           <div className="gatsby-highlight" data-language={language}>
             {title && (
@@ -41,7 +45,7 @@ const Code = ({
                 <div>{title}</div>
               </div>
             )}
-            <pre className={className} style={style} data-linenumber={shouldShowLineNumbers}>
+            <pre className={className} data-linenumber={shouldShowLineNumbers}>
               {showCopyButton && <Copy content={codeString} fileName={title} />}
               <code className={`code-content language-${language}`}>
                 {tokens.map((line, i) => {
@@ -51,7 +55,7 @@ const Code = ({
                     lineProps.className = `${lineProps.className} highlight-line`
                     lineProps.style = {
                       ...lineProps.style,
-                      backgroundColor: isDark ? `rgba(255, 255, 255, 0.1)` : `rgba(0, 0, 0, 0.035)`,
+                      backgroundColor: `var(--theme-ui-colors-highlightLineBg)`,
                     }
                   }
 

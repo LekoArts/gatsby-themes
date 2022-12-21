@@ -22,6 +22,8 @@ const code: ThemeUICSSObject = {
   },
   ".code-content": {
     padding: `2rem 1rem 1rem 1rem`,
+    color: `plain-color`,
+    backgroundColor: `plain-backgroundColor`,
   },
   ".token": {
     display: `inline-block`,

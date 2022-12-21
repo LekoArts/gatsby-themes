@@ -3,10 +3,10 @@ import { Container, jsx, Flex, Box, useColorMode } from "theme-ui"
 import Logo from "../icons/logo"
 import ThemeSwitch from "../icons/theme-switch"
 
-const modes = [`light`, `dark`, `strangerThings`]
+const modes = [`light`, `dark`, `strangerThings`] as const
 
 const Header = () => {
-  const [mode, setMode] = useColorMode()
+  const [mode, setMode] = useColorMode<"light" | "dark" | "strangerThings">()
 
   const cycleMode = (e: any) => {
     const i = (modes.indexOf(mode) + 1) % modes.length

@@ -7,12 +7,8 @@ import AboutMeMDX from "../texts/about-me.mdx"
 
 const Footer = () => {
   const { showThemeAuthor } = useEmiliaConfig()
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode] = useColorMode<"light" | "dark">()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    setColorMode(isDark ? `light` : `dark`)
-  }
 
   return (
     <Box
@@ -42,7 +38,7 @@ const Footer = () => {
               justifyContent: `space-between`,
             }}
           >
-            <ColorModeToggle isDark={isDark} toggle={toggleColorMode} />
+            <ColorModeToggle />
             <div sx={{ mt: [4, 4, 4, 0] }}>
               <div sx={{ a: { ml: [1, 1, 1, 2], mr: [1, 1, 1, 0] } }}>
                 <SocialMediaList />

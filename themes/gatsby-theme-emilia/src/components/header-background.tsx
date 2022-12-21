@@ -4,7 +4,7 @@ import { jsx, useColorMode } from "theme-ui"
 import Svg from "./svg"
 
 const HeaderBackground = () => {
-  const [colorMode] = useColorMode()
+  const [colorMode] = useColorMode<"light" | "dark">()
   const isDark = colorMode === `dark`
 
   return (

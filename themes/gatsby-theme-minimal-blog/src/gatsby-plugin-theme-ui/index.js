@@ -1,10 +1,10 @@
 import { merge } from "theme-ui"
 import tailwind from "@theme-ui/preset-tailwind"
+import { lightThemeVars, darkThemeVars } from "../utils/prism-themes"
 
 const theme = merge(tailwind, {
   config: {
     initialColorModeName: `light`,
-    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     primary: tailwind.colors.purple[7],
@@ -13,6 +13,8 @@ const theme = merge(tailwind, {
     heading: tailwind.colors.black,
     divide: tailwind.colors.gray[4],
     muted: tailwind.colors.gray[2],
+    highlightLineBg: `rgba(0, 0, 0, 0.035)`,
+    ...lightThemeVars,
     modes: {
       dark: {
         text: tailwind.colors.gray[4],
@@ -23,6 +25,8 @@ const theme = merge(tailwind, {
         heading: tailwind.colors.white,
         divide: tailwind.colors.gray[8],
         muted: tailwind.colors.gray[8],
+        highlightLineBg: `rgba(255, 255, 255, 0.1)`,
+        ...darkThemeVars,
       },
     },
   },

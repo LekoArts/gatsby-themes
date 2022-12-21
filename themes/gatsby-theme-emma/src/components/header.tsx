@@ -15,11 +15,8 @@ type HeaderProps = {
 }
 
 const Header = ({ meta, nav }: HeaderProps) => {
-  const [colorMode, setColorMode] = useColorMode()
+  const [colorMode, setColorMode] = useColorMode<"light" | "dark">()
   const isDark = colorMode === `dark`
-  const toggleColorMode = (e: React.SyntheticEvent) => {
-    setColorMode(isDark ? `light` : `dark`)
-  }
 
   const navEmpty = nav.length === 0
 
@@ -65,9 +62,13 @@ const Header = ({ meta, nav }: HeaderProps) => {
         <SocialLinks />
         <button
           sx={{ variant: `buttons.toggle`, fontWeight: `semibold` }}
-          onClick={toggleColorMode}
+          onClick={() => {
+            const next = isDark ? `light` : `dark`
+            setColorMode(next)
+          }}
           type="button"
-          aria-label="Toggle dark mode"
+          data-testid="color-mode-toggle"
+          aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
         >
           {isDark ? `Light` : `Dark`}
         </button>
