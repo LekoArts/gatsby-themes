@@ -55,7 +55,7 @@ const Code = ({
                     lineProps.className = `${lineProps.className} highlight-line`
                     lineProps.style = {
                       ...lineProps.style,
-                      backgroundColor: isDark ? `rgba(255, 255, 255, 0.1)` : `rgba(0, 0, 0, 0.035)`,
+                      backgroundColor: `highlightLineBg`,
                     }
                   }
 

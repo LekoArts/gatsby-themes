@@ -13,6 +13,7 @@ const theme = merge(tailwind, {
     heading: tailwind.colors.black,
     divide: tailwind.colors.gray[4],
     muted: tailwind.colors.gray[2],
+    highlightLineBg: `rgba(0, 0, 0, 0.035)`,
     ...lightThemeVars,
     modes: {
       dark: {
@@ -24,6 +25,7 @@ const theme = merge(tailwind, {
         heading: tailwind.colors.white,
         divide: tailwind.colors.gray[8],
         muted: tailwind.colors.gray[8],
+        highlightLineBg: `rgba(255, 255, 255, 0.1)`,
         ...darkThemeVars,
       },
     },
