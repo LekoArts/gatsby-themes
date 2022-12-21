@@ -41,21 +41,42 @@ const iconBaseStyles = {
   },
 } as const
 
+const buttonBaseStyles = {
+  opacity: 0.65,
+  position: `relative`,
+  borderRadius: `4px`,
+  width: `40px`,
+  height: `25px`,
+  display: `flex`,
+  alignItems: `center`,
+  justifyContent: `center`,
+  transition: `opacity 0.3s ease`,
+  border: `none`,
+  outline: `none`,
+  background: `none`,
+  cursor: `pointer`,
+  padding: 0,
+  appearance: `none`,
+  "&:hover, &:focus": { opacity: 1 },
+} as const
+
 const FallbackIcon = () => (
-  <div
-    sx={{
-      ...iconBaseStyles,
-      transform: `scale(0.55)`,
-      "&:before": {
-        ...iconBaseStyles[`&:before`],
-        opacity: 0,
-      },
-      "&:after": {
-        ...iconBaseStyles[`&:after`],
-        transform: `scale(0)`,
-      },
-    }}
-  />
+  <button type="button" sx={buttonBaseStyles}>
+    <div
+      sx={{
+        ...iconBaseStyles,
+        transform: `scale(0.55)`,
+        "&:before": {
+          ...iconBaseStyles[`&:before`],
+          opacity: 0,
+        },
+        "&:after": {
+          ...iconBaseStyles[`&:after`],
+          transform: `scale(0)`,
+        },
+      }}
+    />
+  </button>
 )
 
 interface ITogglePrimitiveProps {
@@ -96,24 +117,7 @@ const ColorModeToggle = () => {
         type="button"
         aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
         title={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
-        sx={{
-          opacity: 0.65,
-          position: `relative`,
-          borderRadius: `4px`,
-          width: `40px`,
-          height: `25px`,
-          display: `flex`,
-          alignItems: `center`,
-          justifyContent: `center`,
-          transition: `opacity 0.3s ease`,
-          border: `none`,
-          outline: `none`,
-          background: `none`,
-          cursor: `pointer`,
-          padding: 0,
-          appearance: `none`,
-          "&:hover, &:focus": { opacity: 1 },
-        }}
+        sx={buttonBaseStyles}
       >
         <div
           sx={{
