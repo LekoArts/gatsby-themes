@@ -67,6 +67,7 @@ const Header = ({ meta, nav }: HeaderProps) => {
             setColorMode(next)
           }}
           type="button"
+          data-testid="color-mode-toggle"
           aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
         >
           {isDark ? `Light` : `Dark`}
