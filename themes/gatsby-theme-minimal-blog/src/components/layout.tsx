@@ -8,7 +8,6 @@ import Header from "./header"
 import Footer from "./footer"
 import CodeStyles from "../styles/code"
 import SkipNavLink from "./skip-nav"
-import { lightThemeVars, darkThemeVars } from "../utils/prism-themes"
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
@@ -39,10 +38,6 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         a: {
           transition: `all 0.3s ease-in-out`,
           color: `text`,
-        },
-        ":root": lightThemeVars,
-        "@media (prefers-color-scheme: dark)": {
-          ":root": darkThemeVars,
         },
       })}
     />
