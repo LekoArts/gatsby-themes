@@ -4,7 +4,6 @@ import tailwind from "@theme-ui/preset-tailwind"
 const theme = merge(tailwind, {
   config: {
     initialColorModeName: `light`,
-    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     primary: tailwind.colors.indigo[7],

@@ -4,7 +4,6 @@ import tailwind from "@theme-ui/preset-tailwind"
 export default merge(tailwind, {
   config: {
     initialColorModeName: `light`,
-    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     text: tailwind.colors.gray[8],

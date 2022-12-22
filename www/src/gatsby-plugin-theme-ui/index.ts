@@ -64,7 +64,6 @@ interface CustomTheme extends Theme {
 const customTheme: CustomTheme = {
   config: {
     initialColorModeName: `light`,
-    useColorSchemeMediaQuery: `system`,
   },
   colors: {
     primary: tailwind.colors.indigo[6],

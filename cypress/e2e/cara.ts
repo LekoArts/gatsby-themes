@@ -36,18 +36,18 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByText(/LinkedIn/i)
   })
   it(`should render the light/dark mode toggle`, () => {
-    cy.findByLabelText(/toggle dark mode/i)
+    cy.findByTestId(`color-mode-toggle`)
   })
   it(`should have functioning dark mode toggle`, () => {
-    cy.findByLabelText(/toggle dark mode/i).then((button) => {
+    cy.findByTestId(`color-mode-toggle`).then((button) => {
       if (button.text().includes(`Dark`)) {
-        cy.findByLabelText(/toggle dark mode/i).click()
+        cy.findByTestId(`color-mode-toggle`).click()
       }
     })
     cy.get(`html`)
       .should(`have.css`, `color`, `rgb(226, 232, 240)`)
       .should(`have.css`, `background`, `rgb(20, 24, 33) none repeat scroll 0% 0% / auto padding-box border-box`)
-    cy.findByLabelText(/toggle dark mode/i).click()
+    cy.findByTestId(`color-mode-toggle`).click()
     cy.get(`html`)
       .should(`have.css`, `color`, `rgb(45, 55, 72)`)
       .should(`have.css`, `background`, `rgb(247, 250, 252) none repeat scroll 0% 0% / auto padding-box border-box`)

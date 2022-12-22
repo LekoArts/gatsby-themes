@@ -7,7 +7,7 @@ import Header from "./header"
 type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className = `` }: LayoutProps) => {
-  const [mode] = useColorMode()
+  const [mode] = useColorMode<"light" | "dark" | "strangerThings">()
 
   let headingStyles = {}
 
