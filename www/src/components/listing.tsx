@@ -158,7 +158,7 @@ const Listing = () => {
                     backgroundColor: `rgba(90, 103, 216, 0.9)`,
                     color: `white`,
                     fontFamily: `body`,
-                    fontSize: 4,
+                    fontSize: `3xl`,
                     display: `flex`,
                     justifyContent: `center`,
                     alignItems: `center`,
@@ -188,10 +188,9 @@ const Listing = () => {
           </Box>
         )
       })}
-      <p sx={{ mt: 6, fontSize: [1, 2, 2, 3], textAlign: `center` }}>
-        <span sx={{ fontWeight: `bold` }}>More Themes are coming soon ...</span> <br /> In the meantime you can have a
-        look at my already existing{` `}
-        <Themed.a href="https://github.com/LekoArts?utf8=%E2%9C%93&tab=repositories&q=gatsby&type=public&language=">
+      <p sx={{ mt: 6, fontSize: [`default`, `xl`, `xl`, `2xl`], textAlign: `center` }}>
+        <span sx={{ fontWeight: `bold` }}>Do you want more Gatsby content?</span> <br /> Check out my existing{` `}
+        <Themed.a href="https://github.com/LekoArts?tab=repositories&q=gatsby&type=source&language=&sort=stargazers">
           open source Gatsby projects
         </Themed.a>
         !

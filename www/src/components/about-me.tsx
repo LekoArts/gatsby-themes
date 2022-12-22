@@ -96,7 +96,7 @@ const AboutMe = () => {
           <h3
             sx={{
               fontWeight: `bold`,
-              fontSize: [2, 3, 4],
+              fontSize: [`xl`, `2xl`, `3xl`],
               textAlign: `center`,
               mb: 4,
               mt: 0,
