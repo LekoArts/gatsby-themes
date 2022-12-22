@@ -66,7 +66,7 @@ const customTheme: CustomTheme = {
     initialColorModeName: `light`,
   },
   colors: {
-    primary: tailwind.colors.indigo[6],
+    primary: tailwind.colors.indigo[5],
     shadow: tailwind.colors.indigo[2],
     secondary: tailwind.colors.orange[5],
     background: tailwind.colors.gray[1],
@@ -95,7 +95,7 @@ const customTheme: CustomTheme = {
         text: tailwind.colors.gray[3],
         grayDark: tailwind.colors.gray[1],
         heading: tailwind.colors.gray[2],
-        dark: tailwind.colors.gray[5],
+        dark: tailwind.colors.gray[4],
         light: tailwind.colors.gray[7],
         model: {
           one: tailwind.colors.gray[8],
@@ -161,7 +161,7 @@ const customTheme: CustomTheme = {
       fontWeight: `body`,
     },
     p: {
-      fontSize: [1, 2],
+      fontSize: [`default`, `xl`],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,
@@ -169,30 +169,30 @@ const customTheme: CustomTheme = {
     },
     h1: {
       ...sharedHeadingStyles,
-      fontSize: [5, 6],
+      fontSize: [`4xl`, `5xl`],
       mt: 2,
     },
     h2: {
       ...sharedHeadingStyles,
-      fontSize: [4, 5],
+      fontSize: [`3xl`, `4xl`],
       mt: 2,
     },
     h3: {
       ...sharedHeadingStyles,
-      fontSize: [3, 4],
+      fontSize: [`2xl`, `3xl`],
       mt: 3,
     },
     h4: {
       ...sharedHeadingStyles,
-      fontSize: [2, 3],
+      fontSize: [`xl`, `2xl`],
     },
     h5: {
       ...sharedHeadingStyles,
-      fontSize: [1, 2],
+      fontSize: [`default`, `xl`],
     },
     h6: {
       ...sharedHeadingStyles,
-      fontSize: 1,
+      fontSize: `default`,
       mb: 2,
     },
   },
@@ -200,8 +200,8 @@ const customTheme: CustomTheme = {
     primary: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      backgroundImage: (t) => `linear-gradient(45deg, ${get(t, `colors.indigo.6`)}, ${get(t, `colors.indigo.4`)})`,
-      fontSize: [1, 2],
+      backgroundImage: (t) => `linear-gradient(45deg, ${get(t, `colors.indigo.5`)}, ${get(t, `colors.indigo.3`)})`,
+      fontSize: [`default`, `xl`],
       px: 4,
       py: `0.6rem`,
       boxShadow: (t) => `0px 10px 15px ${get(t, `colors.shadow`)}`,
@@ -213,8 +213,8 @@ const customTheme: CustomTheme = {
     secondary: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      backgroundImage: (t) => `linear-gradient(45deg, ${get(t, `colors.gray.7`)}, ${get(t, `colors.gray.5`)})`,
-      fontSize: 1,
+      backgroundImage: (t) => `linear-gradient(45deg, ${get(t, `colors.gray.6`)}, ${get(t, `colors.gray.4`)})`,
+      fontSize: `default`,
       px: 4,
       py: 1,
       boxShadow: `default`,
@@ -224,7 +224,7 @@ const customTheme: CustomTheme = {
     },
     heroStars: {
       ...sharedButtonStyles,
-      fontSize: 1,
+      fontSize: `default`,
       boxShadow: `default`,
       borderRadius: `default`,
       "&:hover,&:focus": {
@@ -239,7 +239,7 @@ const customTheme: CustomTheme = {
       borderStyle: `solid`,
       borderRadius: `full`,
       textAlign: `center`,
-      fontSize: 1,
+      fontSize: `default`,
       fontWeight: `semibold`,
       px: 4,
       py: `0.7rem`,
@@ -251,7 +251,7 @@ const customTheme: CustomTheme = {
     white: {
       ...sharedButtonStyles,
       borderRadius: `full`,
-      fontSize: 1,
+      fontSize: `default`,
       fontWeight: `semibold`,
       px: 4,
       py: `0.75rem`,

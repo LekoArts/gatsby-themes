@@ -30,7 +30,7 @@ const Header = () => {
               sx={{ height: 12, width: 1, backgroundColor: `primary`, borderRadius: `full`, mx: 3 }}
             />
             <Flex sx={{ flexDirection: `column` }}>
-              <Box sx={{ fontSize: 3, fontWeight: `semibold`, lineHeight: `25px` }}>Gatsby Themes</Box>
+              <Box sx={{ fontSize: `2xl`, fontWeight: `semibold`, lineHeight: `25px` }}>Gatsby Themes</Box>
               <Box sx={{ color: `dark` }}>by LekoArts</Box>
             </Flex>
           </Flex>
