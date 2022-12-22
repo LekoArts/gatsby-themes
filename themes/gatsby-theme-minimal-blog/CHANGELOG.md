@@ -1,5 +1,20 @@
 # Change Log
 
+## 6.0.3
+
+### Patch Changes
+
+- [#1080](https://github.com/LekoArts/gatsby-themes/pull/1080) [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Remove `useColorSchemeMediaQuery` entry from Theme UI configuration since the "system" setting overwrote the preference of a user. We'd need to wait for Theme UI to implement a proper "system" color mode, see https://github.com/system-ui/theme-ui/discussions/2264. If you want to have the old behavior, define your own Theme UI configuration as shown in the docs.
+
+- [#1080](https://github.com/LekoArts/gatsby-themes/pull/1080) [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Use CSS variables for CSS styles of code blocks so that both in light/dark mode the correct styles are applied
+
+- [#1080](https://github.com/LekoArts/gatsby-themes/pull/1080) [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Improve useColorMode usage by: improving the TS types, adding a SSR fallback to the sun/moon icon toggle so that the correct one is displayed once React is hydrated
+
+- [#1067](https://github.com/LekoArts/gatsby-themes/pull/1067) [`804e8574`](https://github.com/LekoArts/gatsby-themes/commit/804e85747d500de65f3b4dc715923794fc3d5848) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+- Updated dependencies [[`8007bb38`](https://github.com/LekoArts/gatsby-themes/commit/8007bb387378291473f78bc64b7cc57998a6e984)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@6.0.3
+
 ## 6.0.2
 
 ### Patch Changes
