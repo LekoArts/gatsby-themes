@@ -2028,15 +2028,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gatsbyjs/potrace@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "@gatsbyjs/potrace@npm:2.3.0"
-  dependencies:
-    jimp-compact: ^0.16.1-2
-  checksum: 237d4ccb9ac1ee321f1b2351b48ad1082252af2c181634da634292ba8e4bb15cb56bdfec3984c5c2d203befe86e93058976d26f52c30dee46f994741ef4a7f30
-  languageName: node
-  linkType: hard
-
 "@gatsbyjs/reach-router@npm:^2.0.0-v2.0":
   version: 2.0.0-v2.0.3
   resolution: "@gatsbyjs/reach-router@npm:2.0.0-v2.0.3"
@@ -2633,12 +2624,12 @@ __metadata:
   dependencies:
     "@lekoarts/rehype-meta-as-attributes": ^2.0.0
     "@lekoarts/themes-utils": ^2.0.0
-    "@mdx-js/react": ^2.1.5
-    gatsby-plugin-mdx: ^5.0.0
-    gatsby-plugin-sharp: ^5.0.0
-    gatsby-remark-images: ^7.0.0
-    gatsby-source-filesystem: ^5.0.0
-    gatsby-transformer-sharp: ^5.0.0
+    "@mdx-js/react": ^2.2.1
+    gatsby-plugin-mdx: ^5.3.1
+    gatsby-plugin-sharp: ^5.3.2
+    gatsby-remark-images: ^7.3.1
+    gatsby-source-filesystem: ^5.3.1
+    gatsby-transformer-sharp: ^5.3.1
     reading-time: ^1.5.0
     remark-gfm: ^1
   peerDependencies:
@@ -10796,7 +10787,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^4.0.0, gatsby-core-utils@npm:^4.2.0, gatsby-core-utils@npm:^4.3.1":
+"gatsby-core-utils@npm:^4.2.0, gatsby-core-utils@npm:^4.3.1":
   version: 4.3.1
   resolution: "gatsby-core-utils@npm:4.3.1"
   dependencies:
@@ -11050,28 +11041,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "gatsby-plugin-sharp@npm:5.0.0"
+"gatsby-plugin-sharp@npm:^5.0.0, gatsby-plugin-sharp@npm:^5.3.2":
+  version: 5.3.2
+  resolution: "gatsby-plugin-sharp@npm:5.3.2"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@gatsbyjs/potrace": ^2.3.0
     async: ^3.2.4
     bluebird: ^3.7.2
     debug: ^4.3.4
     filenamify: ^4.3.0
     fs-extra: ^10.1.0
-    gatsby-core-utils: ^4.0.0
-    gatsby-plugin-utils: ^4.0.0
+    gatsby-core-utils: ^4.3.1
+    gatsby-plugin-utils: ^4.3.1
     lodash: ^4.17.21
-    mini-svg-data-uri: ^1.4.4
     probe-image-size: ^7.2.3
-    semver: ^7.3.7
-    sharp: ^0.30.7
-    svgo: ^2.8.0
+    semver: ^7.3.8
+    sharp: ^0.31.2
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: daadb39bbfff91028aba750fb50ac5b1b5910665cfbd89a4b5de449ddffbd907534103b8ef4ae7082dd664877524a7568f3eff7499253e500fefb8887f0cbd00
+  checksum: 5b365a9649764588f5dbfdf7fd62d7b91856b26863389c9afd8e608a4d88b85eb77d4f567bbe355de78850c5e10f8764a0953d68ffa543e1faf1ce017eae8b0b
   languageName: node
   linkType: hard
 
@@ -11123,7 +11111,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^4.0.0, gatsby-plugin-utils@npm:^4.2.0, gatsby-plugin-utils@npm:^4.3.1":
+"gatsby-plugin-utils@npm:^4.2.0, gatsby-plugin-utils@npm:^4.3.1":
   version: 4.3.1
   resolution: "gatsby-plugin-utils@npm:4.3.1"
   dependencies:
@@ -11169,15 +11157,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "gatsby-remark-images@npm:7.0.0"
+"gatsby-remark-images@npm:^7.0.0, gatsby-remark-images@npm:^7.3.1":
+  version: 7.3.1
+  resolution: "gatsby-remark-images@npm:7.3.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@gatsbyjs/potrace": ^2.3.0
     chalk: ^4.1.2
     cheerio: ^1.0.0-rc.10
-    gatsby-core-utils: ^4.0.0
+    gatsby-core-utils: ^4.3.1
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     mdast-util-definitions: ^4.0.0
@@ -11187,7 +11174,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: 3b66b5b3b44a56e6d8cbaa68f3d73c2d670a9dc2a240b30be143207f900d7bfd9ce56642ff05aecc3542e6ee9183cff021dced4d3dca517ec92fa9c5d4d53d31
+  checksum: ffecedc358192df65e9207e1648d3f2ff1dc0139e37257f49bc4d305455f7d4aa9faf640bcab7dc902244f7ab3b0d2a1d506f67ade368295be7642a016fdadc0
   languageName: node
   linkType: hard
 
@@ -11275,23 +11262,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-sharp@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "gatsby-transformer-sharp@npm:5.0.0"
+"gatsby-transformer-sharp@npm:^5.0.0, gatsby-transformer-sharp@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "gatsby-transformer-sharp@npm:5.3.1"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@gatsbyjs/potrace": ^2.3.0
     bluebird: ^3.7.2
     common-tags: ^1.8.2
     fs-extra: ^10.1.0
-    gatsby-plugin-utils: ^4.0.0
+    gatsby-plugin-utils: ^4.3.1
     probe-image-size: ^7.2.3
-    semver: ^7.3.7
-    sharp: ^0.30.7
+    semver: ^7.3.8
+    sharp: ^0.31.2
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: e98f9277c43b8a3f0b7b95256dda97b1650663768cc6ce7120b4eb7e1965ee934bb61306cddb665ea0c4a8f7dad7f9a761a90e3bc8c4723940e1a4295a814f64
+  checksum: 7ee8dbe3b7fc38f469de55b40315b6c2a9930c4acb8f6c0b141b2181e0c8fdebb029a9ccfd1ea0452c104f36d4ebd53d7d7561fc5ba928a7f1eb345b1a9ac2d3
   languageName: node
   linkType: hard
 
@@ -13559,13 +13545,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jimp-compact@npm:^0.16.1-2":
-  version: 0.16.1
-  resolution: "jimp-compact@npm:0.16.1"
-  checksum: 5a1c62d70881b31f79ea65fecfe03617be0eb56139bc451f37e8972365c99ac3b52c5176c446ff27144c98ab664a99107ae08d347044e94e1de637f165b41a57
-  languageName: node
-  linkType: hard
-
 "jodie@workspace:examples/jodie":
   version: 0.0.0-use.local
   resolution: "jodie@workspace:examples/jodie"
@@ -15542,15 +15521,6 @@ __metadata:
   peerDependencies:
     webpack: ^4.4.0 || ^5.0.0
   checksum: c2c1f3d7e5bc206b5bece0f37b65467ee58e0bb0b61d5e031bb818682b02db2552b296f5018af9058b18eb7127e00f6462fb718712a3d4432079dfa848b510cc
-  languageName: node
-  linkType: hard
-
-"mini-svg-data-uri@npm:^1.4.4":
-  version: 1.4.4
-  resolution: "mini-svg-data-uri@npm:1.4.4"
-  bin:
-    mini-svg-data-uri: cli.js
-  checksum: 997f1fbd8d59a70f03761e18626d335197a3479cb9d1ff75678e4b64b864d32a0b8fc18115eabde035e5299b8b4a354a78e57dd6ac10f9d604162a6170898d09
   languageName: node
   linkType: hard
 
@@ -20367,7 +20337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^2.7.0, svgo@npm:^2.8.0":
+"svgo@npm:^2.7.0":
   version: 2.8.0
   resolution: "svgo@npm:2.8.0"
   dependencies:
