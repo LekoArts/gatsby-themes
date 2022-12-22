@@ -1,5 +1,18 @@
 # Change Log
 
+## 5.0.3
+
+### Patch Changes
+
+- [#1069](https://github.com/LekoArts/gatsby-themes/pull/1069) [`5b1c7d5a`](https://github.com/LekoArts/gatsby-themes/commit/5b1c7d5ae4488694d910dd3b5ad4c34a001fada8) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency gatsby-plugin-image to ^3.3.2 for gatsby-theme-jodie
+
+- [#1080](https://github.com/LekoArts/gatsby-themes/pull/1080) [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Remove `useColorSchemeMediaQuery` entry from Theme UI configuration since the "system" setting overwrote the preference of a user. We'd need to wait for Theme UI to implement a proper "system" color mode, see https://github.com/system-ui/theme-ui/discussions/2264. If you want to have the old behavior, define your own Theme UI configuration as shown in the docs.
+
+- [#1080](https://github.com/LekoArts/gatsby-themes/pull/1080) [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Improve useColorMode usage by: improving the TS types, adding a SSR fallback to the sun/moon icon toggle so that the correct one is displayed once React is hydrated
+
+- Updated dependencies [[`6777294a`](https://github.com/LekoArts/gatsby-themes/commit/6777294a68c885b039d98236d636033aa71f19c5)]:
+  - @lekoarts/gatsby-theme-jodie-core@5.0.3
+
 ## 5.0.2
 
 ### Patch Changes
