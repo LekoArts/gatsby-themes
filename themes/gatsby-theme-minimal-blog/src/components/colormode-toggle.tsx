@@ -1,89 +1,147 @@
 /** @jsx jsx */
-import { jsx, get } from "theme-ui"
+import * as React from "react"
+import { jsx, get, useColorMode, Theme } from "theme-ui"
 
-type Props = {
-  isDark: boolean
-  toggle: (e: React.SyntheticEvent) => void
-}
+// CSS Styles adapted from: https://codepen.io/aaroniker/pen/KGpXZo
 
-// Adapted from: https://codepen.io/aaroniker/pen/KGpXZo and https://github.com/narative/gatsby-theme-novela/blob/714b6209c5bd61b220370e8a7ad84c0b1407946a/%40narative/gatsby-theme-novela/src/components/Navigation/Navigation.Header.tsx
+const iconBaseStyles = {
+  position: `relative`,
+  width: `24px`,
+  height: `24px`,
+  borderRadius: `50%`,
+  transition: `all 0.45s ease`,
+  "&:before": {
+    content: `""`,
+    position: `absolute`,
+    right: `-9px`,
+    top: `-9px`,
+    height: `24px`,
+    width: `24px`,
+    transition: `transform 0.45s ease`,
+    borderRadius: `50%`,
+  },
+  "&:after": {
+    content: `""`,
+    width: `8px`,
+    height: `8px`,
+    borderRadius: `50%`,
+    margin: `-4px 0 0 -4px`,
+    position: `absolute`,
+    top: `50%`,
+    left: `50%`,
+    transition: `all 0.35s ease`,
+    boxShadow: (t: Theme) =>
+      `0 -23px 0 ${get(t, `colors.toggleIcon`)}, 0 23px 0 ${get(t, `colors.toggleIcon`)}, 23px 0 0 ${get(
+        t,
+        `colors.toggleIcon`
+      )}, -23px 0 0 ${get(t, `colors.toggleIcon`)}, 15px 15px 0 ${get(t, `colors.toggleIcon`)}, -15px 15px 0 ${get(
+        t,
+        `colors.toggleIcon`
+      )}, 15px -15px 0 ${get(t, `colors.toggleIcon`)}, -15px -15px 0 ${get(t, `colors.toggleIcon`)}`,
+  },
+} as const
 
-const ColorModeToggle = ({ isDark, toggle }: Props) => (
-  <button
-    onClick={toggle}
-    type="button"
-    aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
-    title={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
-    sx={{
-      opacity: 0.65,
-      position: `relative`,
-      borderRadius: `4px`,
-      width: `40px`,
-      height: `25px`,
-      display: `flex`,
-      alignItems: `center`,
-      justifyContent: `center`,
-      transition: `opacity 0.3s ease`,
-      border: `none`,
-      outline: `none`,
-      background: `none`,
-      cursor: `pointer`,
-      padding: 0,
-      appearance: `none`,
-      "&:hover, &:focus": { opacity: 1 },
-    }}
-  >
+const buttonBaseStyles = {
+  opacity: 0.65,
+  position: `relative`,
+  borderRadius: `4px`,
+  width: `40px`,
+  height: `25px`,
+  display: `flex`,
+  alignItems: `center`,
+  justifyContent: `center`,
+  transition: `opacity 0.3s ease`,
+  border: `none`,
+  outline: `none`,
+  background: `none`,
+  cursor: `pointer`,
+  padding: 0,
+  appearance: `none`,
+  "&:hover, &:focus": { opacity: 1 },
+} as const
+
+const FallbackIcon = () => (
+  <button type="button" sx={buttonBaseStyles}>
     <div
       sx={{
-        position: `relative`,
-        width: `24px`,
-        height: `24px`,
-        borderRadius: `50%`,
-        border: (t) => (isDark ? `4px solid ${get(t, `colors.toggleIcon`)}` : `none`),
-        backgroundColor: isDark ? `toggleIcon` : `transparent`,
-        transform: isDark ? `scale(0.55)` : `scale(1)`,
-        transition: `all 0.45s ease`,
-        overflow: isDark ? `visible` : `hidden`,
-        boxShadow: (t) => (isDark ? `none` : `inset 8px -8px 0px 0px ${get(t, `colors.toggleIcon`)}`),
+        ...iconBaseStyles,
+        transform: `scale(0.55)`,
         "&:before": {
-          content: `""`,
-          position: `absolute`,
-          right: `-9px`,
-          top: `-9px`,
-          height: `24px`,
-          width: `24px`,
-          border: (t) => (isDark ? `2px solid ${get(t, `colors.toggleIcon`)}` : `none`),
-          borderRadius: `50%`,
-          transform: isDark ? `translate(14px, -14px)` : `translate(0, 0)`,
-          opacity: isDark ? 0 : 1,
-          transition: `transform 0.45s ease`,
+          ...iconBaseStyles[`&:before`],
+          opacity: 0,
         },
         "&:after": {
-          content: `""`,
-          width: `8px`,
-          height: `8px`,
-          borderRadius: `50%`,
-          margin: `-4px 0 0 -4px`,
-          position: `absolute`,
-          top: `50%`,
-          left: `50%`,
-          boxShadow: (t) =>
-            `0 -23px 0 ${get(t, `colors.toggleIcon`)}, 0 23px 0 ${get(t, `colors.toggleIcon`)}, 23px 0 0 ${get(
-              t,
-              `colors.toggleIcon`
-            )}, -23px 0 0 ${get(t, `colors.toggleIcon`)}, 15px 15px 0 ${get(
-              t,
-              `colors.toggleIcon`
-            )}, -15px 15px 0 ${get(t, `colors.toggleIcon`)}, 15px -15px 0 ${get(
-              t,
-              `colors.toggleIcon`
-            )}, -15px -15px 0 ${get(t, `colors.toggleIcon`)}`,
-          transform: isDark ? `scale(1)` : `scale(0)`,
-          transition: `all 0.35s ease`,
+          ...iconBaseStyles[`&:after`],
+          transform: `scale(0)`,
         },
       }}
     />
   </button>
 )
+
+interface ITogglePrimitiveProps {
+  fallback?: React.ReactNode
+}
+
+const TogglePrimitive: React.FC<React.PropsWithChildren<ITogglePrimitiveProps>> = ({
+  children,
+  fallback = undefined,
+}) => {
+  const [mounted, setMounted] = React.useState(false)
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    if (!fallback) {
+      return null
+    }
+    return <React.Fragment>{fallback}</React.Fragment>
+  }
+
+  return <React.Fragment>{children}</React.Fragment>
+}
+
+const ColorModeToggle = () => {
+  const [colorMode, setColorMode] = useColorMode<"light" | "dark">()
+  const isDark = colorMode === `dark`
+
+  return (
+    <TogglePrimitive fallback={<FallbackIcon />}>
+      <button
+        onClick={() => {
+          const next = isDark ? `light` : `dark`
+          setColorMode(next)
+        }}
+        type="button"
+        aria-label={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
+        title={isDark ? `Activate Light Mode` : `Activate Dark Mode`}
+        sx={buttonBaseStyles}
+      >
+        <div
+          sx={{
+            ...iconBaseStyles,
+            border: (t) => (isDark ? `4px solid ${get(t, `colors.toggleIcon`)}` : `none`),
+            backgroundColor: isDark ? `toggleIcon` : `transparent`,
+            transform: isDark ? `scale(0.55)` : `scale(1)`,
+            overflow: isDark ? `visible` : `hidden`,
+            boxShadow: (t) => (isDark ? `none` : `inset 8px -8px 0px 0px ${get(t, `colors.toggleIcon`)}`),
+            "&:before": {
+              ...iconBaseStyles[`&:before`],
+              border: (t) => (isDark ? `2px solid ${get(t, `colors.toggleIcon`)}` : `none`),
+              transform: isDark ? `translate(14px, -14px)` : `translate(0, 0)`,
+              opacity: isDark ? 0 : 1,
+            },
+            "&:after": {
+              ...iconBaseStyles[`&:after`],
+              transform: isDark ? `scale(1)` : `scale(0)`,
+            },
+          }}
+        />
+      </button>
+    </TogglePrimitive>
+  )
+}
 
 export default ColorModeToggle

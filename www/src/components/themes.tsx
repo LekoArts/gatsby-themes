@@ -16,7 +16,7 @@ const bigHeadingStyle: ThemeUICSSObject = {
 }
 
 const Themes = () => {
-  const [mode] = useColorMode()
+  const [mode] = useColorMode<"light" | "dark" | "strangerThings">()
 
   const isStrange = mode === `strangerThings`
 
