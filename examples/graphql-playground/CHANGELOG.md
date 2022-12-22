@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.2.14
+
+### Patch Changes
+
+- [#1080](https://github.com/LekoArts/gatsby-themes/pull/1080) [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Improve useColorMode usage by: improving the TS types, adding a SSR fallback to the sun/moon icon toggle so that the correct one is displayed once React is hydrated
+
+- Updated dependencies [[`ca2d8b20`](https://github.com/LekoArts/gatsby-themes/commit/ca2d8b209203fc5811837a21eb3c14a9296da5bd), [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c), [`296b41a1`](https://github.com/LekoArts/gatsby-themes/commit/296b41a1d783c649d4ec6bf40a32d38668ef385c)]:
+  - @lekoarts/gatsby-theme-graphql-playground@5.0.3
+
 ## 0.2.13
 
 ### Patch Changes
