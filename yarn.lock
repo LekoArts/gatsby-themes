@@ -2569,10 +2569,10 @@ __metadata:
     gatsby-plugin-mdx: ^5.3.1
     gatsby-plugin-theme-ui: ~0.15.3
     gatsby-source-filesystem: ^5.3.1
-    is-absolute-url: ^3.0.3
+    is-absolute-url: ^4.0.1
     re-resizable: ^6.9.9
     theme-ui: ~0.15.3
-    unist-util-visit: ^2
+    unist-util-visit: ^4
   peerDependencies:
     gatsby: ^5.0.0
     react: ^18.0.0
@@ -12743,10 +12743,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-absolute-url@npm:^3.0.0, is-absolute-url@npm:^3.0.3":
+"is-absolute-url@npm:^3.0.0":
   version: 3.0.3
   resolution: "is-absolute-url@npm:3.0.3"
   checksum: 5159b51d065d9ad29e16a2f78d6c0e41c43227caf90a45e659c54ea6fd50ef0595b1871ce392e84b1df7cfdcad9a8e66eec0813a029112188435abf115accb16
+  languageName: node
+  linkType: hard
+
+"is-absolute-url@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "is-absolute-url@npm:4.0.1"
+  checksum: de172a718439982a54477fdae55f21be69ec0e6a4b205db5484975d2f4ee749851fd46c28f3790dfc51a274c2ed1d0f8457b6d1fff02ab829069fd9cc761e48c
   languageName: node
   linkType: hard
 
@@ -21312,7 +21319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^2, unist-util-visit@npm:^2.0.0, unist-util-visit@npm:^2.0.3":
+"unist-util-visit@npm:^2.0.0, unist-util-visit@npm:^2.0.3":
   version: 2.0.3
   resolution: "unist-util-visit@npm:2.0.3"
   dependencies:
@@ -21334,7 +21341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.1":
+"unist-util-visit@npm:^4, unist-util-visit@npm:^4.0.0, unist-util-visit@npm:^4.1.1":
   version: 4.1.1
   resolution: "unist-util-visit@npm:4.1.1"
   dependencies:
