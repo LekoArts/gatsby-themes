@@ -2,8 +2,8 @@
 /// <reference types="@testing-library/cypress" />
 
 describe(`gatsby-theme-graphql-playground`, () => {
-  it(`should work`, () => {
-    cy.visit(`/`).assertRoute(`/`)
+  beforeEach(() => {
+    cy.visit(`/`).waitForRouteChange()
   })
   it(`should have correct html[lang] attribute`, () => {
     cy.get(`html`).should(`have.attr`, `lang`, `en`)
