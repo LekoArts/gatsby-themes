@@ -54,6 +54,7 @@ describe(`gatsby-theme-emma`, () => {
       .waitForRouteChange()
       .assertRoute(`/hermione-granger`)
       .get(`h1`)
+      .first()
       .within(() => {
         cy.findByText(/hermione granger/i)
       })
