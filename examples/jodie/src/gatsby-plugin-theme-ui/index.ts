@@ -1,4 +1,5 @@
 import { merge } from "theme-ui"
+// @ts-ignore - There are no types
 import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index"
 
 const theme = merge(originalTheme, {

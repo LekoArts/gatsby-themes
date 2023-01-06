@@ -1,4 +1,4 @@
-import { IGridItem } from "./modify-grid"
+import type { IGridItem } from "./modify-grid"
 
 // Only return nodes with the type "MdxPage"
 export function onlyPages(data: IGridItem[]) {
