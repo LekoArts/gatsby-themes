@@ -3,7 +3,7 @@ import { Global } from "@emotion/react"
 import { MDXProvider } from "@mdx-js/react"
 import MdxComponents from "./mdx-components"
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: { children: React.ReactNode }) => (
   <MDXProvider components={MdxComponents}>
     <Global
       styles={(theme) => ({

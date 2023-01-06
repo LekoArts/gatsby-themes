@@ -1,13 +1,12 @@
-const remarkGfm = require(`remark-gfm`)
-const remarkSlug = require(`remark-slug`)
-const { rehypeMetaAsAttributes } = require(`@lekoarts/rehype-meta-as-attributes`)
+import type { GatsbyConfig, PluginRef } from "gatsby"
+import remarkGfm from "remark-gfm"
+import remarkSlug from "remark-slug"
+import { rehypeMetaAsAttributes } from "@lekoarts/rehype-meta-as-attributes"
+import "dotenv/config"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteTitle: `Specimens for Design Systems - @lekoarts/gatsby-theme-specimens`,
     siteDescription: `Leverage the wide variety of powerful React components to build your design system. Display your colors, typography or any other design tokens with ease and focus on the design system itself, not how to showcase it. Works seamlessly with MDX.`,
@@ -75,5 +74,7 @@ module.exports = {
         openAnalyzer: false,
       },
     },
-  ].filter(Boolean),
+  ].filter(Boolean) as Array<PluginRef>,
 }
+
+export default config

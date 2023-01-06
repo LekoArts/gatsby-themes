@@ -1,13 +1,13 @@
 /* eslint react/destructuring-assignment: 0 */
 /** @jsx jsx */
-import { jsx } from "theme-ui"
-import Highlight, { defaultProps } from "prism-react-renderer"
+import { jsx, ThemeUIStyleObject } from "theme-ui"
+import Highlight, { defaultProps, Language } from "prism-react-renderer"
 import theme from "prism-react-renderer/themes/vsDark"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useMDXComponents } from "@mdx-js/react"
 import { normalizeThemeUIColors, filterStyles } from "@lekoarts/gatsby-theme-specimens"
 
-const badgeStyle = {
+const badgeStyle: ThemeUIStyleObject = {
   marginBottom: `0.5rem`,
   backgroundColor: `#4c51bf`,
   display: `inline-block`,
@@ -19,7 +19,14 @@ const badgeStyle = {
   letterSpacing: `0.05em`,
 }
 
-const Code = ({ codeString, language, live, noInline }) => {
+export interface ICodeProps {
+  codeString: string
+  language: Language
+  live: boolean
+  noInline: boolean
+}
+
+const Code = ({ codeString, language, live, noInline }: ICodeProps) => {
   const {
     Alert,
     Audio,

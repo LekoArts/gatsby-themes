@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
+import type { DetailedHTMLProps, HTMLAttributes } from "react"
 import { preToCodeBlock } from "@lekoarts/themes-utils"
 import {
   Alert,
@@ -19,7 +20,7 @@ import {
   Table,
   Video,
 } from "@lekoarts/gatsby-theme-specimens"
-import Code from "./code"
+import Code, { ICodeProps } from "./code"
 
 const headingProps = {
   h1: {
@@ -47,27 +48,30 @@ const headingProps = {
   },
 }
 
-const heading = (Tag) => (props) => {
-  const { id, children } = props
-  return id ? (
-    <Tag sx={headingProps[Tag]} {...props} id={id}>
-      <a
-        href={`#${id}`}
-        sx={{
-          color: `inherit`,
-          textDecoration: `none`,
-          ":hover": {
-            textDecoration: `underline`,
-          },
-        }}
-      >
-        {children}
-      </a>
-    </Tag>
-  ) : (
-    <Tag sx={headingProps[Tag]} {...props} />
-  )
-}
+type HeadingTag = `h1` | `h2` | `h3` | `h4` | `h5` | `h6`
+
+const heading =
+  (Tag: HeadingTag) => (props: DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>) => {
+    const { id, children } = props
+    return id ? (
+      <Tag sx={headingProps[Tag]} {...props} id={id}>
+        <a
+          href={`#${id}`}
+          sx={{
+            color: `inherit`,
+            textDecoration: `none`,
+            ":hover": {
+              textDecoration: `underline`,
+            },
+          }}
+        >
+          {children}
+        </a>
+      </Tag>
+    ) : (
+      <Tag sx={headingProps[Tag]} {...props} />
+    )
+  }
 
 const MdxComponents = {
   Alert,
@@ -91,8 +95,8 @@ const MdxComponents = {
   h4: heading(`h4`),
   h5: heading(`h5`),
   h6: heading(`h6`),
-  pre: (preProps) => {
-    const props = preToCodeBlock(preProps)
+  pre: (preProps: any) => {
+    const props = preToCodeBlock(preProps) as unknown as ICodeProps
     // if there's a codeString and some props, we passed the test
     if (props) {
       return <Code {...props} />

@@ -1,8 +1,19 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+interface ISiteSiteMetadata {
+  site: {
+    siteMetadata: {
+      banner: string
+      siteDescription: string
+      siteTitle: string
+      siteUrl: string
+    }
+  }
+}
+
 const Seo = () => {
-  const { site } = useStaticQuery(graphql`
+  const { site } = useStaticQuery<ISiteSiteMetadata>(graphql`
     {
       site {
         siteMetadata {
