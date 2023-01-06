@@ -2,7 +2,7 @@
 
 Hi! I'm excited that you're interested in contributing to this project! Contributing should be enjoyable and productive for everyone, so please be kind to others and reach out if you have any questions or concerns (this project follows a [Code of Conduct](CODE_OF_CONDUCT.md)).
 
-All contributions are welcome, including opening and commenting on issues and pull requests, adding or updating the docs, bug fixes, and suggestions for new features.
+All contributions are welcome, including opening and commenting on issues and pull requests, adding or updating the docs, bug fixes, and suggestions for new features. Since this project is mostly written in TypeScript any improvements around TypeScript are also appreciated.
 
 Changes to themes need to evaluated in more detail (e.g. if they would be breaking). The time to review a pull request depends on the complexity involved, so please be patient if a particular feature takes longer to review than others. Especially since this project is currently only maintained by me, LekoArts.
 
@@ -17,25 +17,25 @@ This repository uses [Yarn Workspaces][] and [changesets][] to develop multiple 
 
 Clone the repository:
 
-```sh
+```shell
 git clone git@github.com:LekoArts/gatsby-themes.git
 ```
 
 Install the dependencies:
 
-```sh
+```shell
 yarn
 ```
 
 After yarn has linked packages and installed the dependencies in the repo, you can inspect the locally available workspaces with:
 
-```sh
+```shell
 yarn workspaces info
 ```
 
 As all themes are set up with a respective example page (to view the theme/changes), you could for example run the "gatsby-theme-emilia" workspace with the example "emilia" like:
 
-```sh
+```shell
 yarn workspace emilia develop
 ```
 
@@ -47,13 +47,13 @@ Unit tests are run with [Vitest][], and are included where appropriate (mostly f
 
 Running tests:
 
-```sh
+```shell
 yarn test:ci
 ```
 
 Running tests in watch mode:
 
-```sh
+```shell
 yarn test:watch
 ```
 
