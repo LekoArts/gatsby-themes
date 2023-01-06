@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.0.3
+
+### Patch Changes
+
+- [`cbd0687a`](https://github.com/LekoArts/gatsby-themes/commit/cbd0687ac06640da36248d57904944824508a5a8) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Add missing `@mdx-js/react` dependency
+
 ## 5.0.2
 
 ### Patch Changes
