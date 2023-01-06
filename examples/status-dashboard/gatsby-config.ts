@@ -1,11 +1,9 @@
-require(`dotenv`).config()
+import type { GatsbyConfig, PluginRef } from "gatsby"
+import "dotenv/config"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
+const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: process.env.SITE_URL || `https://status.lekoarts.de`,
     siteName: process.env.SITE_TITLE || `Status Dashboard - LekoArts`,
@@ -39,5 +37,7 @@ module.exports = {
         openAnalyzer: false,
       },
     },
-  ].filter(Boolean),
+  ].filter(Boolean) as Array<PluginRef>,
 }
+
+export default config

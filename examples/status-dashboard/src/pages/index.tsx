@@ -1,7 +1,18 @@
 import * as React from "react"
 import { Global, css } from "@emotion/react"
-import { graphql } from "gatsby"
+import { graphql, HeadFC, PageProps } from "gatsby"
+// @ts-ignore - No types available
 import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard"
+
+interface IIndexProps {
+  config: {
+    siteMetadata: {
+      siteDescription: string
+      siteName: string
+      siteUrl: string
+    }
+  }
+}
 
 const Index = ({
   data: {
@@ -9,7 +20,7 @@ const Index = ({
       siteMetadata: { siteDescription, siteName },
     },
   },
-}) => (
+}: PageProps<IIndexProps>) => (
   <main
     css={css`
       max-width: 60rem;
@@ -138,7 +149,7 @@ const Index = ({
 
 export default Index
 
-export const Head = ({
+export const Head: HeadFC<IIndexProps> = ({
   data: {
     config: {
       siteMetadata: { siteDescription, siteName, siteUrl },
