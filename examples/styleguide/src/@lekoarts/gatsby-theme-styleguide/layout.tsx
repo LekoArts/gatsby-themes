@@ -3,7 +3,7 @@ import * as React from "react"
 import { jsx } from "theme-ui"
 import { Global } from "@emotion/react"
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: { children: React.ReactNode }) => (
   <React.Fragment>
     <Global
       styles={(theme) => ({

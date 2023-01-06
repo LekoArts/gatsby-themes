@@ -2,7 +2,23 @@ import * as React from "react"
 import { withPrefix } from "gatsby"
 import useSiteMetadata from "../hooks/use-site-metadata"
 
-const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children = null, canonicalUrl = `` }) => {
+interface ISeoProps {
+  title?: string
+  description?: string
+  pathname?: string
+  image?: string
+  children?: React.ReactNode
+  canonicalUrl?: string
+}
+
+const Seo = ({
+  title = ``,
+  description = ``,
+  pathname = ``,
+  image = ``,
+  children = null,
+  canonicalUrl = ``,
+}: ISeoProps) => {
   const site = useSiteMetadata()
 
   const {
