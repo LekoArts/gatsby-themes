@@ -65,6 +65,11 @@ const code: ThemeUICSSObject = {
       fontFamily: `body`,
       fontWeight: 600,
     },
+    'pre[class~="language-golang"]:before, pre[class~="language-go"]:before': {
+      content: `"go"`,
+      background: `#79d4fd`,
+      color: `black`,
+    },
     'pre[class~="language-javascript"]:before, pre[class~="language-js"]:before': {
       content: `"js"`,
       background: `#f7df1e`,
