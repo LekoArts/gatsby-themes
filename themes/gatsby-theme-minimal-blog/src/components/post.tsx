@@ -6,6 +6,7 @@ import Layout from "./layout"
 import ItemTags from "./item-tags"
 import Seo from "./seo"
 import PostFooter from "./post-footer"
+import Tocbot from "./toc"
 
 export type MBPostProps = {
   post: {
@@ -49,7 +50,8 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({ data:
       {post.timeToRead && ` — `}
       {post.timeToRead && <span>{post.timeToRead} min read</span>}
     </p>
-    <section
+    <Tocbot />
+    <section className="js-toc-content"
       sx={{
         my: 5,
         ".gatsby-resp-image-wrapper": {
