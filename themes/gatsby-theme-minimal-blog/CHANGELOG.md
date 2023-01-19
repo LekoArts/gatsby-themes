@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.0.4
+
+### Patch Changes
+
+- [#1108](https://github.com/LekoArts/gatsby-themes/pull/1108) [`de6ad02b`](https://github.com/LekoArts/gatsby-themes/commit/de6ad02b22026686fac15625d9d6fcc5cb2360a1) Thanks [@aaftio](https://github.com/aaftio)! - feat: Add golang tag to code blocks
+
 ## 6.0.3
 
 ### Patch Changes
