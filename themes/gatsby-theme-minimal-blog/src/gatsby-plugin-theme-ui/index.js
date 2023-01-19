@@ -6,6 +6,7 @@ const theme = merge(tailwind, {
   config: {
     initialColorModeName: `light`,
   },
+  breakpoints: [`640px`, `768px`, `1024px`, `1280px`, `1536px`],
   colors: {
     primary: tailwind.colors.purple[7],
     secondary: `#5f6c80`,
