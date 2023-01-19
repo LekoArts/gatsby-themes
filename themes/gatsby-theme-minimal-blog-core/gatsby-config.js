@@ -46,6 +46,7 @@ module.exports = (themeOptions) => {
                 backgroundColor: `transparent`,
               },
             },
+            `gatsby-remark-autolink-headers`,
           ],
         },
       },
