@@ -285,13 +285,14 @@ const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
-  const { basePath, blogPath, tagsPath, formatString } = withDefaults(themeOptions)
+  const { basePath, blogPath, tagsPath, formatString, maxLatestPostsOnHomepage } = withDefaults(themeOptions)
 
   createPage({
     path: basePath,
     component: homepageTemplate,
     context: {
       formatString,
+      maxLatestPostsOnHomepage,
     },
   })
 

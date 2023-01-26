@@ -53,6 +53,7 @@ npm install @lekoarts/gatsby-theme-minimal-blog-core
 | `mdx`          | `true`          | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off)   |
 | `sharp`        | `true`          | Configure `gatsby-plugin-sharp` (if your website already is using the plugin pass `false` to turn this off) |
 | `formatString` | `DD.MM.YYYY`    | Configure the date format for Date fields                                                                   |
+| `maxLatestPostsOnHomepage` | `3`    | Configure the maximum number of posts to show under "Latest Posts" on home page. |
 
 The usage of `content/pages` is optional.
 

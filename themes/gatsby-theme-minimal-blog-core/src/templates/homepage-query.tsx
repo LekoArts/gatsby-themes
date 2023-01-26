@@ -6,8 +6,8 @@ export default HomepageComponent
 export { Head }
 
 export const query = graphql`
-  query ($formatString: String!) {
-    allPost(sort: { date: DESC }, limit: 3) {
+  query ($formatString: String!, $maxLatestPostsOnHomepage: Int) {
+    allPost(sort: { date: DESC }, limit: $maxLatestPostsOnHomepage) {
       nodes {
         slug
         title
