@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.0.5
+
+### Patch Changes
+
+- [#1117](https://github.com/LekoArts/gatsby-themes/pull/1117) [`04980e78`](https://github.com/LekoArts/gatsby-themes/commit/04980e788d71991f859863c58ea376f53e606f00) Thanks [@LekoArts](https://github.com/LekoArts)! - fix: Add support for footnotes
+
+  Fixes https://github.com/LekoArts/gatsby-themes/issues/1107
+
+- [#1116](https://github.com/LekoArts/gatsby-themes/pull/1116) [`cf7d5122`](https://github.com/LekoArts/gatsby-themes/commit/cf7d51223a73387f12cac490e2a42f068b0ded26) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Various dependency updates
+
 ## 6.0.3
 
 ### Patch Changes

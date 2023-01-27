@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.18
+
+### Patch Changes
+
+- [#1116](https://github.com/LekoArts/gatsby-themes/pull/1116) [`cf7d5122`](https://github.com/LekoArts/gatsby-themes/commit/cf7d51223a73387f12cac490e2a42f068b0ded26) Thanks [@LekoArts](https://github.com/LekoArts)! - chore(deps): Various dependency updates
+
 ## 0.3.17
 
 ### Patch Changes
