@@ -28,6 +28,7 @@ const Seo = ({
     siteDescription: defaultDescription,
     siteImage: defaultImage,
     author,
+    siteLanguage,
   } = site
 
   const seo = {
@@ -38,6 +39,7 @@ const Seo = ({
   }
   return (
     <>
+      <html lang={siteLanguage} />
       <title>{seo.title}</title>
       <link
         rel="icon"

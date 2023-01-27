@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://cara.lekoarts.de`,
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
     siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
     author: `@lekoarts_de`,
   },
   trailingSlash: `never`,

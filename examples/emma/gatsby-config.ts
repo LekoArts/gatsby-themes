@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://emma.lekoarts.de`,
     siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
     siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
     author: `@lekoarts_de`,
   },
   trailingSlash: `never`,

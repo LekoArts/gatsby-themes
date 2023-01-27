@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://emilia.lekoarts.de`,
     siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
     siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
     author: `@lekoarts_de`,
   },
   trailingSlash: `never`,
