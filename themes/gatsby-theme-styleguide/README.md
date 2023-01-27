@@ -71,8 +71,8 @@ npx gatsby new gatsby-starter-styleguide https://github.com/LekoArts/gatsby-star
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-styleguide`,
@@ -82,7 +82,9 @@ module.exports = {
       }
     }
   ]
-};
+}
+
+export default config
 ```
 
 ### Shadowing

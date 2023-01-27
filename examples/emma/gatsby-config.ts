@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
-    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-emma-core/gatsby-config.js
+    // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-emma-core/gatsby-config.mjs
     siteTitle: `Emma`,
     siteTitleAlt: `Emma - Gatsby Starter Portfolio`,
     siteHeadline: `Emma - Gatsby Theme from @lekoarts`,

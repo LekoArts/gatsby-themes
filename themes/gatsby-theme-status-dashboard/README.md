@@ -71,8 +71,8 @@ npx gatsby new gatsby-status-dashboard https://github.com/LekoArts/gatsby-status
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-status-dashboard`,
@@ -85,6 +85,8 @@ module.exports = {
     },
   ],
 };
+
+export default config;
 ```
 
 ### Environment variables

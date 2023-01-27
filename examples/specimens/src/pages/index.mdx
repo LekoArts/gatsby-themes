@@ -35,11 +35,11 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 npm install @lekoarts/gatsby-theme-specimens
 ```
 
-And in your gatsby-config.js:
+And in your gatsby-config.mjs:
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-specimens`,
@@ -48,6 +48,8 @@ module.exports = {
     }
   ]
 }
+
+export default config
 ```
 
 View the [**theme's README**](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-specimens) to see more instructions on how to set up this theme!

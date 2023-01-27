@@ -85,8 +85,8 @@ npx gatsby new gatsby-starter-minimal-blog https://github.com/LekoArts/gatsby-st
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
@@ -116,15 +116,17 @@ module.exports = {
     },
   ],
 };
+
+export default config;
 ```
 
 #### Additional configuration
 
-In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.mjs`
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `Lupin`,
@@ -138,10 +140,14 @@ module.exports = {
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
+    // Set the default "lang" attribute on "html" element
+    siteLanguage: `en`,
     // Twitter Handle
     author: `@lekoarts_de`,
   },
 };
+
+export default config;
 ```
 
 If you want to add additional items to the navigation or external links (left and right side of header), add objects in the shape shown above to the arrays.

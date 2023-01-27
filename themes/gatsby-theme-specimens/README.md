@@ -80,8 +80,8 @@ npx gatsby new gatsby-starter-specimens https://github.com/LekoArts/gatsby-start
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-specimens`,
@@ -93,7 +93,9 @@ module.exports = {
       }
     }
   ]
-};
+}
+
+export default config
 ```
 
 ## Components

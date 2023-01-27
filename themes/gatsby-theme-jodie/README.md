@@ -81,8 +81,8 @@ npx gatsby new gatsby-starter-portfolio-jodie https://github.com/LekoArts/gatsby
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-jodie`,
@@ -96,16 +96,18 @@ module.exports = {
       }
     }
   ]
-};
+}
+
+export default config
 ```
 
 #### Additional configuration
 
-In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.mjs`
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `Jodie`,
@@ -119,10 +121,14 @@ module.exports = {
     siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
+    // Set the default "lang" attribute on "html" element
+    siteLanguage: `en`,
     // Twitter Handle
     author: `@lekoarts_de`,
   },
 };
+
+export default config;
 ```
 
 ### Customizing the homepage
