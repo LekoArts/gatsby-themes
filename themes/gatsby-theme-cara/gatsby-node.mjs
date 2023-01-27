@@ -1,6 +1,9 @@
+import { createRequire } from "module"
+
+const require = createRequire(import.meta.url)
 const standardBasePath = `/`
 
-exports.createPages = async ({ actions }, themeOptions) => {
+export const createPages = async ({ actions }, themeOptions) => {
   const { createPage } = actions
 
   const basePath = themeOptions.basePath || standardBasePath

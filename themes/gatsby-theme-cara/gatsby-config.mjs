@@ -1,4 +1,9 @@
-module.exports = ({ basePath = `/`, mdx = true }) => ({
+import path from "path"
+import { fileURLToPath } from "url"
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const config = ({ basePath = `/`, mdx = true }) => ({
   siteMetadata: {
     siteTitle: `Cara`,
     siteTitleAlt: `Cara - @lekoarts/gatsby-theme-cara`,
@@ -6,6 +11,7 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
     siteUrl: `https://cara.lekoarts.de`,
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
     siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
     author: `@lekoarts_de`,
     basePath,
   },
@@ -31,3 +37,5 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
     `gatsby-plugin-theme-ui`,
   ].filter(Boolean),
 })
+
+export default config
