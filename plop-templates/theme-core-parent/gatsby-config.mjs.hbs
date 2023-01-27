@@ -1,4 +1,4 @@
-module.exports = (options) => {
+const config = (options) => {
   return {
     siteMetadata: {
       siteTitle: `{{readme-name}}`,
@@ -7,6 +7,7 @@ module.exports = (options) => {
       siteUrl: `https://{{kebabCase name}}.lekoarts.de`,
       siteDescription: `Stub description for {{kebabCase name}}`,
       siteImage: `/banner.jpg`,
+      siteLanguage: `en`,
       author: `@lekoarts_de`,
     },
     plugins: [
@@ -18,3 +19,5 @@ module.exports = (options) => {
     ].filter(Boolean),
   }
 }
+
+export default config

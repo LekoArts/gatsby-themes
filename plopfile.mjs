@@ -24,13 +24,8 @@ const themeActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.js`,
-    templateFile: `plop-templates/theme/gatsby-config.js.hbs`,
-  },
-  {
-    type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-ssr.js`,
-    templateFile: `plop-templates/theme/gatsby-ssr.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.mjs`,
+    templateFile: `plop-templates/theme/gatsby-config.mjs.hbs`,
   },
   {
     type: `add`,
@@ -77,8 +72,8 @@ const themeCoreActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-config.js`,
-    templateFile: `plop-templates/theme-core/gatsby-config.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-config.mjs`,
+    templateFile: `plop-templates/theme-core/gatsby-config.mjs.hbs`,
   },
   {
     type: `add`,
@@ -120,13 +115,8 @@ const themeCoreParentActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.js`,
-    templateFile: `plop-templates/theme-core-parent/gatsby-config.js.hbs`,
-  },
-  {
-    type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-ssr.js`,
-    templateFile: `plop-templates/theme-core-parent/gatsby-ssr.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.mjs`,
+    templateFile: `plop-templates/theme-core-parent/gatsby-config.mjs.hbs`,
   },
   {
     type: `add`,
