@@ -1,11 +1,14 @@
-const { compileMDXWithCustomOptions } = require(`gatsby-plugin-mdx`)
-const { mdxResolverPassthrough } = require(`@lekoarts/themes-utils`)
-const withDefaults = require(`./utils/default-options`)
-const { remarkGetPreviewQuery } = require(`./utils/remark-get-preview-query`)
+import { createRequire } from "module"
+import { compileMDXWithCustomOptions } from "gatsby-plugin-mdx"
+import { mdxResolverPassthrough } from "@lekoarts/themes-utils"
+import { withDefaults } from "./utils/default-options.mjs"
+import remarkGetPreviewQuery from "./utils/remark-get-preview-query.mjs"
+
+const require = createRequire(import.meta.url)
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions }) => {
+export const createSchemaCustomization = ({ actions }) => {
   const { createTypes, createFieldExtension } = actions
 
   createFieldExtension({
@@ -44,7 +47,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 // Find the 'graphql' code tags and add an encoded string to the field 'query'
-exports.createResolvers = ({ createResolvers, getNode, getNodesByType, reporter, cache, pathPrefix, store }) => {
+// eslint-disable-next-line no-shadow
+export const createResolvers = ({ createResolvers, getNode, getNodesByType, reporter, cache, pathPrefix, store }) => {
   const resolvers = {
     MdxPlayground: {
       query: {
@@ -89,7 +93,7 @@ exports.createResolvers = ({ createResolvers, getNode, getNodesByType, reporter,
   createResolvers(resolvers)
 }
 
-exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
+export const onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
   const { docsPath, basePath } = withDefaults(themeOptions)
@@ -137,7 +141,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
 const itemTemplate = require.resolve(`./src/templates/item.tsx`)
 const homepageTemplate = require.resolve(`./src/templates/homepage.tsx`)
 
-exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
+export const createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
   const { basePath } = withDefaults(themeOptions)

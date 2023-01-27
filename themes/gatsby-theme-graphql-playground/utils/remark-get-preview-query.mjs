@@ -1,7 +1,7 @@
-const visit = require(`unist-util-visit`)
+import { visit } from "unist-util-visit"
 
 /** @type {import('unified').Plugin<Array<void>, import('hast').Root>} */
-exports.remarkGetPreviewQuery = function remarkGetPreviewQuery() {
+const remarkGetPreviewQuery = function remarkGetPreviewQuery() {
   return async function transformer(tree, file) {
     let query = ``
 
@@ -19,3 +19,5 @@ exports.remarkGetPreviewQuery = function remarkGetPreviewQuery() {
     mdxFile.data.meta.previewQuery = query
   }
 }
+
+export default remarkGetPreviewQuery

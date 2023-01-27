@@ -1,7 +1,11 @@
-const rehypePrism = require(`@mapbox/rehype-prism`)
-const withDefaults = require(`./utils/default-options`)
+import rehypePrism from "@mapbox/rehype-prism"
+import path from "path"
+import { fileURLToPath } from "url"
+import { withDefaults } from "./utils/default-options.mjs"
 
-module.exports = (themeOptions) => {
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const config = (themeOptions) => {
   const options = withDefaults(themeOptions)
 
   return {
@@ -12,6 +16,7 @@ module.exports = (themeOptions) => {
       siteUrl: `https://gatsbystartergraphqlplayground.gatsbyjs.io`,
       siteDescription: `GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).`,
       siteImage: `/banner.jpg`,
+      siteLanguage: `en`,
       author: `@lekoarts_de`,
       graphiQLUrl: `https://yx3py-8000.sse.codesandbox.io/___graphql`,
       basePath: options.basePath,
@@ -51,3 +56,5 @@ module.exports = (themeOptions) => {
     ].filter(Boolean),
   }
 }
+
+export default config
