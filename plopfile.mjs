@@ -67,8 +67,8 @@ const themeCoreActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}-core/utils/default-options.js`,
-    templateFile: `plop-templates/theme-core/default-options.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}-core/utils/default-options.mjs`,
+    templateFile: `plop-templates/theme-core/default-options.mjs.hbs`,
   },
   {
     type: `add`,
@@ -77,8 +77,8 @@ const themeCoreActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-node.js`,
-    templateFile: `plop-templates/theme-core/gatsby-node.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-node.mjs`,
+    templateFile: `plop-templates/theme-core/gatsby-node.mjs.hbs`,
   },
   {
     type: `add`,
