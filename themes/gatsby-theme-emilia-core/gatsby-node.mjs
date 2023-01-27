@@ -1,10 +1,13 @@
-const path = require(`path`)
-const { mdxResolverPassthrough, slugify } = require(`@lekoarts/themes-utils`)
-const withDefaults = require(`./utils/default-options`)
+import { mdxResolverPassthrough, slugify } from "@lekoarts/themes-utils"
+import path from "path"
+import { createRequire } from "module"
+import { withDefaults } from "./utils/default-options.mjs"
+
+const require = createRequire(import.meta.url)
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions }, themeOptions) => {
+export const createSchemaCustomization = ({ actions }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
   const { basePath } = withDefaults(themeOptions)
@@ -83,7 +86,7 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
   `)
 }
 
-exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
+export const onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
   const { projectsPath } = withDefaults(themeOptions)
@@ -131,7 +134,7 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDig
   }
 }
 
-exports.sourceNodes = (
+export const sourceNodes = (
   { actions, createContentDigest },
   {
     name = `LekoArts`,
@@ -172,7 +175,7 @@ exports.sourceNodes = (
 const projectsTemplate = require.resolve(`./src/templates/projects-query.tsx`)
 const projectTemplate = require.resolve(`./src/templates/project-query.tsx`)
 
-exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
+export const createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
   const { basePath, formatString } = withDefaults(themeOptions)

@@ -1,6 +1,6 @@
-const withDefaults = require(`./utils/default-options`)
+import { withDefaults } from "./utils/default-options.mjs"
 
-module.exports = (themeOptions) => {
+const config = (themeOptions) => {
   const options = withDefaults(themeOptions)
 
   return {
@@ -11,6 +11,7 @@ module.exports = (themeOptions) => {
       siteUrl: `https://emilia.lekoarts.de`,
       siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
       siteImage: `/banner.jpg`,
+      siteLanguage: `en`,
       author: `@lekoarts_de`,
       basePath: options.basePath,
       projectsPath: options.projectsPath,
@@ -49,3 +50,5 @@ module.exports = (themeOptions) => {
     ].filter(Boolean),
   }
 }
+
+export default config

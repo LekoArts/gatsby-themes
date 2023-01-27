@@ -1,4 +1,9 @@
-module.exports = (options) => ({
+import path from "path"
+import { fileURLToPath } from "url"
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const config = (options) => ({
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia-core`,
@@ -15,3 +20,5 @@ module.exports = (options) => ({
     `gatsby-plugin-theme-ui`,
   ],
 })
+
+export default config
