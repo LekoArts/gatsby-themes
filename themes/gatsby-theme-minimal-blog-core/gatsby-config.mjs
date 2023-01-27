@@ -1,9 +1,8 @@
-const remarkGfm = require(`remark-gfm`)
-const remarkFootnotes = require(`remark-footnotes`)
-const { rehypeMetaAsAttributes } = require(`@lekoarts/rehype-meta-as-attributes`)
-const withDefaults = require(`./utils/default-options`)
+import remarkGfm from "remark-gfm"
+import rehypeMetaAsAttributes from "@lekoarts/rehype-meta-as-attributes"
+import { withDefaults } from "./utils/default-options.mjs"
 
-module.exports = (themeOptions) => {
+const config = (themeOptions) => {
   const options = withDefaults(themeOptions)
 
   return {
@@ -33,7 +32,7 @@ module.exports = (themeOptions) => {
         resolve: `gatsby-plugin-mdx`,
         options: {
           mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkFootnotes],
+            remarkPlugins: [remarkGfm],
             rehypePlugins: [rehypeMetaAsAttributes],
           },
           extensions: [`.mdx`, `.md`],
@@ -58,3 +57,5 @@ module.exports = (themeOptions) => {
     ].filter(Boolean),
   }
 }
+
+export default config

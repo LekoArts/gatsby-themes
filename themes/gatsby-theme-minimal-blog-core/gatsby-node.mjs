@@ -1,12 +1,15 @@
-const readingTime = require(`reading-time`)
-const { mdxResolverPassthrough, slugify, kebabCase } = require(`@lekoarts/themes-utils`)
-const withDefaults = require(`./utils/default-options`)
+import { createRequire } from "module"
+import readingTime from "reading-time"
+import { mdxResolverPassthrough, slugify, kebabCase } from "@lekoarts/themes-utils"
+import { withDefaults } from "./utils/default-options.mjs"
+
+const require = createRequire(import.meta.url)
 
 const roundReadingTime = (minutesFloat) => (minutesFloat < 1 ? Math.ceil(minutesFloat) : Math.round(minutesFloat))
 
 // Create general interfaces that you could can use to leverage other data sources
 // The core theme sets up MDX as a type for the general interface
-exports.createSchemaCustomization = ({ actions }, themeOptions) => {
+export const createSchemaCustomization = ({ actions }, themeOptions) => {
   const { createTypes, createFieldExtension } = actions
 
   const { basePath, postsPrefix } = withDefaults(themeOptions)
@@ -133,7 +136,7 @@ exports.createSchemaCustomization = ({ actions }, themeOptions) => {
   `)
 }
 
-exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
+export const sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
   const { createNode } = actions
   const {
     basePath,
@@ -175,7 +178,7 @@ exports.sourceNodes = ({ actions, createContentDigest }, themeOptions) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
+export const onCreateNode = ({ node, actions, getNode, createNodeId, createContentDigest }, themeOptions) => {
   const { createNode, createParentChildLink } = actions
 
   const { postsPath, pagesPath, basePath } = withDefaults(themeOptions)
@@ -282,7 +285,7 @@ const pageTemplate = require.resolve(`./src/templates/page-query.tsx`)
 const tagTemplate = require.resolve(`./src/templates/tag-query.tsx`)
 const tagsTemplate = require.resolve(`./src/templates/tags-query.tsx`)
 
-exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
+export const createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
 
   const { basePath, blogPath, tagsPath, formatString } = withDefaults(themeOptions)

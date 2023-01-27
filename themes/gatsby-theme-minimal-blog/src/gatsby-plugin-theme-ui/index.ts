@@ -1,6 +1,13 @@
-import { merge } from "theme-ui"
+import { merge, ThemeUIStyleObject } from "theme-ui"
 import tailwind from "@theme-ui/preset-tailwind"
 import { lightThemeVars, darkThemeVars } from "../utils/prism-themes"
+
+declare module "theme-ui" {
+  interface Theme {
+    copyButton?: ThemeUIStyleObject
+    dividers?: ThemeUIStyleObject
+  }
+}
 
 const theme = merge(tailwind, {
   config: {
@@ -115,7 +122,15 @@ const theme = merge(tailwind, {
       my: 4,
       borderCollapse: `separate`,
       borderSpacing: 0,
-      [[`th`, `td`]]: {
+      th: {
+        textAlign: `left`,
+        py: `4px`,
+        pr: `4px`,
+        pl: 0,
+        borderColor: `muted`,
+        borderBottomStyle: `solid`,
+      },
+      td: {
         textAlign: `left`,
         py: `4px`,
         pr: `4px`,
