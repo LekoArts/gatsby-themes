@@ -2,8 +2,6 @@ import type { GatsbySSR } from "gatsby"
 import * as React from "react"
 
 export const onRenderBody: GatsbySSR["onRenderBody"] = ({ setHtmlAttributes, setHeadComponents }) => {
-  setHtmlAttributes({ lang: `en` })
-
   setHeadComponents([
     <link
       rel="preload"
