@@ -68,7 +68,7 @@ npx gatsby new {{kebabCase starter-name}} https://github.com/LekoArts/{{kebabCas
 
 ```js
 // gatsby-config.mjs
-module.exports = {
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-{{kebabCase name}}`,
@@ -78,7 +78,9 @@ module.exports = {
       }
     }
   ]
-};
+}
+
+export default config
 ```
 
 #### Additional configuration
@@ -87,7 +89,7 @@ In addition to the theme options, there are a handful of items you can customize
 
 ```js
 // gatsby-config.mjs
-module.exports = {
+const config = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `{{titleCase name}}`,
@@ -104,7 +106,9 @@ module.exports = {
     // Twitter Handle
     author: `@lekoarts_de`
   }
-};
+}
+
+export default config
 ```
 
 ### Shadowing
