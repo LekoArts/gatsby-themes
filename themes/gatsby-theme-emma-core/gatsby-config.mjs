@@ -1,7 +1,7 @@
-const remarkGfm = require(`remark-gfm`)
-const withDefaults = require(`./utils/default-options`)
+import remarkGfm from "remark-gfm"
+import { withDefaults } from "./utils/default-options.mjs"
 
-module.exports = (themeOptions) => {
+const config = (themeOptions) => {
   const options = withDefaults(themeOptions)
 
   return {
@@ -12,6 +12,7 @@ module.exports = (themeOptions) => {
       siteUrl: `https://emma.lekoarts.de`,
       siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
       siteImage: `/banner.jpg`,
+      siteLanguage: `en`,
       author: `@lekoarts_de`,
       basePath: options.basePath,
       projectsPath: options.projectsPath,
@@ -58,3 +59,5 @@ module.exports = (themeOptions) => {
     ].filter(Boolean),
   }
 }
+
+export default config

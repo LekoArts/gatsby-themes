@@ -1,4 +1,4 @@
-module.exports = (options) => ({
+const config = (options) => ({
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emma-core`,
@@ -9,3 +9,5 @@ module.exports = (options) => ({
     `gatsby-plugin-theme-ui`,
   ],
 })
+
+export default config
