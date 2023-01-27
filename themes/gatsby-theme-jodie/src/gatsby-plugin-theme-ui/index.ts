@@ -1,5 +1,12 @@
-import { merge } from "theme-ui"
+import { merge, ThemeUIStyleObject } from "theme-ui"
 import tailwind from "@theme-ui/preset-tailwind"
+
+declare module "theme-ui" {
+  interface Theme {
+    sidebar?: ThemeUIStyleObject
+    content?: ThemeUIStyleObject
+  }
+}
 
 const contentStyles = {
   px: [3, 3, 4, 5, 6],

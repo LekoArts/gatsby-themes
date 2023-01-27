@@ -1,7 +1,7 @@
-const remarkGfm = require(`remark-gfm`)
-const withDefaults = require(`./utils/default-options`)
+import remarkGfm from "remark-gfm"
+import { withDefaults } from "./utils/default-options.mjs"
 
-module.exports = (themeOptions) => {
+const config = (themeOptions) => {
   const options = withDefaults(themeOptions)
 
   return {
@@ -36,3 +36,5 @@ module.exports = (themeOptions) => {
     ].filter(Boolean),
   }
 }
+
+export default config
