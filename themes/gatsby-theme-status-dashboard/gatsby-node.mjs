@@ -1,4 +1,4 @@
-exports.onPreBootstrap = ({ reporter }) => {
+export const onPreBootstrap = ({ reporter }) => {
   if (!process.env.NETLIFY_ACCESS_KEY || !process.env.CIRCLECI_KEY) {
     reporter.panicOnBuild(`
 Please define both environment variables "NETLIFY_ACCESS_KEY" and "CIRCLECI_KEY".

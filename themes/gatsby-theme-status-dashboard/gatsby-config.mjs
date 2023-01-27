@@ -1,6 +1,6 @@
-require(`dotenv`).config()
+import "dotenv/config"
 
-module.exports = ({ netlifyOptions = {} }) => ({
+const config = ({ netlifyOptions = {} }) => ({
   plugins: [
     {
       resolve: `gatsby-source-netlify`,
@@ -18,3 +18,5 @@ module.exports = ({ netlifyOptions = {} }) => ({
     `gatsby-plugin-theme-ui`,
   ],
 })
+
+export default config
