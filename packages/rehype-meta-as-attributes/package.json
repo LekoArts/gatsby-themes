@@ -2,8 +2,8 @@
   "name": "@lekoarts/rehype-meta-as-attributes",
   "description": "Pass MDX metadata as prop to React components",
   "version": "2.0.0",
+  "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "author": "LekoArts",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "prepare": "yarn package:build"
   },
   "dependencies": {
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^4.1.2"
   },
   "devDependencies": {
     "tsup": "^6.5.0",
