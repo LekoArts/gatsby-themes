@@ -1,4 +1,4 @@
-exports.createSchemaCustomization = ({ actions }) => {
+export const createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
 
   createTypes(`
@@ -11,7 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   `)
 }
 
-exports.sourceNodes = (
+export const sourceNodes = (
   { actions, createContentDigest },
   { contrastGuidelines = `AA`, CMYK = true, codeExample = true, rootFontSize = 16 }
 ) => {
