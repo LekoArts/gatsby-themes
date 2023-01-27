@@ -1,4 +1,5 @@
 import type { ThemeUICSSObject } from "theme-ui"
+import { visuallyHidden } from "./utils"
 
 const code: ThemeUICSSObject = {
   ".prism-code": {
@@ -205,6 +206,15 @@ const code: ThemeUICSSObject = {
       opacity: 0.5,
       left: `-2px`,
     },
+  },
+  ".footnotes": {
+    borderTopStyle: `solid`,
+    borderTopWidth: `1px`,
+    borderTopColor: `divide`,
+    pt: 2,
+    mt: 5,
+    overflow: `auto`,
+    ".sr-only": visuallyHidden,
   },
 }
 

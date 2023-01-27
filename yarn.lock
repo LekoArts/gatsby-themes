@@ -3168,6 +3168,7 @@ __metadata:
     gatsby-source-filesystem: ^5.5.0
     gatsby-transformer-sharp: ^5.5.0
     reading-time: ^1.5.0
+    remark-footnotes: ^3
     remark-gfm: ^1
   peerDependencies:
     gatsby: ^5.0.0
@@ -15668,6 +15669,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdast-util-footnote@npm:^0.1.0":
+  version: 0.1.7
+  resolution: "mdast-util-footnote@npm:0.1.7"
+  dependencies:
+    mdast-util-to-markdown: ^0.6.0
+    micromark: ~2.11.0
+  checksum: 6d05396a9497c289fecf844d68d3210968750b215cf1df3fd1962c77d73560d8598cc4d79cef36a750d5b43f30b71fec079e0563f267b65072cfc38548d39eda
+  languageName: node
+  linkType: hard
+
 "mdast-util-from-markdown@npm:^0.8.5":
   version: 0.8.5
   resolution: "mdast-util-from-markdown@npm:0.8.5"
@@ -16047,6 +16058,15 @@ __metadata:
     micromark-util-types: ^1.0.1
     uvu: ^0.5.0
   checksum: 4b483c46077f696ed310f6d709bb9547434c218ceb5c1220fde1707175f6f68b44da15ab8668f9c801e1a123210071e3af883a7d1215122c913fd626f122bfc2
+  languageName: node
+  linkType: hard
+
+"micromark-extension-footnote@npm:^0.3.0":
+  version: 0.3.2
+  resolution: "micromark-extension-footnote@npm:0.3.2"
+  dependencies:
+    micromark: ~2.11.0
+  checksum: 476c7f7ae86d7b3c33a07cbf7286d2cce06aa9b348eed79867fd6abc98c37519464c335c522e85208c99e573c1abbbcb72a0a27897f2a0b505d993c76df7bd1d
   languageName: node
   linkType: hard
 
@@ -19711,6 +19731,16 @@ __metadata:
     fbjs: ^3.0.0
     invariant: ^2.2.4
   checksum: 51cdc8a5e04188982452ae4e7c6ac7d6375ee769130d24ce8e8f9cdd45aa7e11ecd68670f56e30dcee1b4974585e88ecce19e69a9868b80cda0db7678c3b8f0a
+  languageName: node
+  linkType: hard
+
+"remark-footnotes@npm:^3":
+  version: 3.0.0
+  resolution: "remark-footnotes@npm:3.0.0"
+  dependencies:
+    mdast-util-footnote: ^0.1.0
+    micromark-extension-footnote: ^0.3.0
+  checksum: 5e84afb47b57e512171f8af5146e8ba49817faff761c6cdd14abf26c9f018b497e69e79378d94b3ba529e491d3f0615c60851d3db86de785aa37641bf5bf7f8a
   languageName: node
   linkType: hard
 
