@@ -1,5 +1,21 @@
 # @lekoarts/themes-utils
 
+## 3.0.0
+
+### Major Changes
+
+- [#1119](https://github.com/LekoArts/gatsby-themes/pull/1119) [`02844608`](https://github.com/LekoArts/gatsby-themes/commit/02844608a2ebcbdbc12d8bba27c795ab350386e6) Thanks [@LekoArts](https://github.com/LekoArts)! - This package is ESM-only now. If you need to continue using the CommonJS version, stick to the previous major version.
+
+  ```js
+  // From CommonJS
+  const { slugify } = require("@lekoarts/themes-utils");
+
+  // To ESM
+  import { slugify } from "@lekoarts/themes-utils";
+  ```
+
+  Learn more about ESM in [this guide](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c)
+
 ## 2.0.0
 
 ### Major Changes
