@@ -8,6 +8,7 @@ interface ISiteSiteMetadata {
       siteDescription: string
       siteTitle: string
       siteUrl: string
+      siteLanguage: string
     }
   }
 }
@@ -21,6 +22,7 @@ const Seo = () => {
           siteDescription
           siteTitle
           siteUrl
+          siteLanguage
         }
       }
     }
@@ -30,6 +32,7 @@ const Seo = () => {
 
   return (
     <>
+      <html lang={meta.siteLanguage} />
       <title>{meta.siteTitle}</title>
       <meta name="description" content={meta.siteDescription} />
       <meta name="image" content={meta.banner} />

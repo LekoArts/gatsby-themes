@@ -72,8 +72,8 @@ npx gatsby new gatsby-starter-graphql-playground https://github.com/LekoArts/gat
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-graphql-playground`,
@@ -83,16 +83,18 @@ module.exports = {
       }
     }
   ]
-};
+}
+
+export default config
 ```
 
 #### Additional configuration
 
-In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.mjs`
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `GraphQL Playground`,
@@ -106,12 +108,16 @@ module.exports = {
     siteDescription: `Stub description for graphql-playground`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
+    // Set the default "lang" attribute on "html" element
+    siteLanguage: `en`,
     // Twitter Handle
     author: `@lekoarts_de`,
     // Will be the root URL for the iFrame
     graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
   },
 };
+
+export default config;
 ```
 
 ### Shadowing

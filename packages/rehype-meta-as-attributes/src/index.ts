@@ -1,5 +1,5 @@
 /* eslint-disable no-cond-assign */
-import visit from "unist-util-visit"
+import { visit } from "unist-util-visit"
 import type { Plugin, Transformer } from "unified"
 
 const re = /\b([-\w]+)(?:=(?:"([^"]*)"|'([^']*)'|([^"'\s]+)))?/g
@@ -18,4 +18,6 @@ const transformer: Transformer = (ast) => {
   })
 }
 
-export const rehypeMetaAsAttributes: Plugin = () => transformer
+const rehypeMetaAsAttributes: Plugin = () => transformer
+
+export default rehypeMetaAsAttributes

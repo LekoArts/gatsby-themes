@@ -24,13 +24,8 @@ const themeActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.js`,
-    templateFile: `plop-templates/theme/gatsby-config.js.hbs`,
-  },
-  {
-    type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-ssr.js`,
-    templateFile: `plop-templates/theme/gatsby-ssr.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.mjs`,
+    templateFile: `plop-templates/theme/gatsby-config.mjs.hbs`,
   },
   {
     type: `add`,
@@ -72,18 +67,18 @@ const themeCoreActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}-core/utils/default-options.js`,
-    templateFile: `plop-templates/theme-core/default-options.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}-core/utils/default-options.mjs`,
+    templateFile: `plop-templates/theme-core/default-options.mjs.hbs`,
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-config.js`,
-    templateFile: `plop-templates/theme-core/gatsby-config.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-config.mjs`,
+    templateFile: `plop-templates/theme-core/gatsby-config.mjs.hbs`,
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-node.js`,
-    templateFile: `plop-templates/theme-core/gatsby-node.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}-core/gatsby-node.mjs`,
+    templateFile: `plop-templates/theme-core/gatsby-node.mjs.hbs`,
   },
   {
     type: `add`,
@@ -120,13 +115,8 @@ const themeCoreParentActions = [
   },
   {
     type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.js`,
-    templateFile: `plop-templates/theme-core-parent/gatsby-config.js.hbs`,
-  },
-  {
-    type: `add`,
-    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-ssr.js`,
-    templateFile: `plop-templates/theme-core-parent/gatsby-ssr.js.hbs`,
+    path: `themes/gatsby-theme-{{kebabCase name}}/gatsby-config.mjs`,
+    templateFile: `plop-templates/theme-core-parent/gatsby-config.mjs.hbs`,
   },
   {
     type: `add`,

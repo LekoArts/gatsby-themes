@@ -71,8 +71,8 @@ npx gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-
 #### Example usage
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-cara`,
@@ -83,15 +83,17 @@ module.exports = {
     },
   ],
 };
+
+export default config;
 ```
 
 #### Additional configuration
 
-In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.mjs`
 
 ```js
-// gatsby-config.js
-module.exports = {
+// gatsby-config.mjs
+const config = {
   siteMetadata: {
     // Used for the title template on pages other than the index site
     siteTitle: `Cara`,
@@ -105,10 +107,14 @@ module.exports = {
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
     // Used for og:image and must be placed inside the `static` folder
     siteImage: `/banner.jpg`,
+    // Set the default "lang" attribute on "html" element
+    siteLanguage: `en`,
     // Twitter Handle
     author: `@lekoarts_de`,
   },
 };
+
+export default config;
 ```
 
 ### Shadowing

@@ -6,7 +6,8 @@ export default defineConfig({
   clean: true,
   dts: true,
   splitting: true,
-  format: [`cjs`, `esm`],
-  target: `node14`,
+  format: [`esm`],
+  target: `node18`,
   minify: true,
+  shims: true,
 })

@@ -20,6 +20,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
     siteDescription: defaultDescription,
     siteImage: defaultImage,
     author,
+    siteLanguage,
   } = site
 
   const seo = {
@@ -30,6 +31,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
   }
   return (
     <>
+      <html lang={siteLanguage} />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />

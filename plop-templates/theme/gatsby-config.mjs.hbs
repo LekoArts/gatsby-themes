@@ -1,0 +1,17 @@
+const config = (themeOptions) => ({
+  siteMetadata: {
+    siteTitle: `{{readme-name}}`,
+    siteTitleAlt: `{{readme-name}} - @lekoarts/gatsby-theme-{{kebabCase name}}`,
+    siteHeadline: `{{readme-name}} - Gatsby Theme from @lekoarts`,
+    siteUrl: `https://{{kebabCase name}}.lekoarts.de`,
+    siteDescription: `Stub description for {{kebabCase name}}`,
+    siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
+    author: `@lekoarts_de`,
+  },
+  plugins: [
+    `gatsby-plugin-theme-ui`,
+  ],
+})
+
+export default config

@@ -83,7 +83,7 @@ By default, the underlying theme and thus this starter uses "Work Sans" as its f
 If you want to change your default font or add any additional fonts, you'll need to change a couple of things:
 
 1. Font file inside `static/fonts`
-1. Preload link inside `gatsby-ssr.js` (the name of the font file)
+1. Preload link inside `gatsby-ssr.tsx` (the name of the font file)
 1. CSS in `global.css`
 1. The Theme UI config and its `fonts` key (see [Theme UI Typography Docs](https://theme-ui.com/theming#typography))
 

@@ -157,6 +157,7 @@ export const Head: HeadFC<IIndexProps> = ({
   },
 }) => (
   <>
+    <html lang="en" />
     <title>{siteName}</title>
     <meta name="description" content={siteDescription} />
     <meta name="image" content={`${siteUrl}/social.png`} />

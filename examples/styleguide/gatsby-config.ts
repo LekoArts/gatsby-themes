@@ -11,6 +11,7 @@ const config: GatsbyConfig = {
     siteUrl: `https://theme-ui-styleguide.netlify.com`,
     siteDescription: `Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner.`,
     siteImage: `/banner.jpg`,
+    siteLanguage: `en`,
     author: `@lekoarts_de`,
   },
   trailingSlash: `never`,
