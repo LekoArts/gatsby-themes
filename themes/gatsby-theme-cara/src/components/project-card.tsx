@@ -20,7 +20,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       textDecoration: `none`,
       borderRadius: `lg`,
       px: 4,
-      py: [4, 5],
+      py: 4,
       color: `white`,
       background: bg || `none`,
       transition: `all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important`,
@@ -36,9 +36,10 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
         opacity: 0.85,
         textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
         p: {
-          fontSize: 1,
+          fontSize: [1, 2],
           color: `white`,
           margin: 0,
+          lineHeight: 1.25,
         },
       }}
     >
@@ -49,9 +50,9 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
         textTransform: `uppercase`,
         letterSpacing: `wide`,
         pt: 4,
-        fontSize: [4, 5],
+        fontSize: [3, 4, 5],
         fontWeight: `medium`,
-        lineHeight: 1,
+        lineHeight: 1.125,
       }}
     >
       {title}
