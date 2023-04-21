@@ -15,7 +15,7 @@ const Navigation = ({ bg }: { bg: string }) => {
         a: {
           color: readableColor(bg),
           textDecoration: `none`,
-          fontSize: [1, 2, 2, 3],
+          fontSize: [1, 2, 3, 4],
           marginLeft: [2, 3, 3, 0],
           "&:hover,&:focus": {
             color: readableColor(bg, `primary`, `primaryLight`, false),

@@ -67,6 +67,14 @@ const theme = merge(tailwind, {
       textRendering: `optimizeLegibility`,
       WebkitFontSmoothing: `antialiased`,
       MozOsxFontSmoothing: `grayscale`,
+      WebkitTextSizeAdjust: `100%`,
+      img: {
+        borderStyle: `none`,
+      },
+      pre: {
+        fontFamily: `monospace`,
+        fontSize: `1em`,
+      },
     },
     a: {
       color: `primary`,

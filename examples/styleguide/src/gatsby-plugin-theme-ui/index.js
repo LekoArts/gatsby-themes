@@ -243,6 +243,11 @@ export const styles = {
     fontFamily: `body`,
     lineHeight: `body`,
     fontWeight: `body`,
+    WebkitTextSizeAdjust: `100%`,
+    "h1, h2, h3, h4, h5": {
+      marginTop: `4rem !important`,
+      marginBottom: `2rem !important`,
+    },
   },
   a: {
     color: `primary`,

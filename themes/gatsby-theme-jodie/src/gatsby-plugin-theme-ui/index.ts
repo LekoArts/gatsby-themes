@@ -69,6 +69,19 @@ const theme = merge(tailwind, {
     root: {
       color: `text`,
       backgroundColor: `background`,
+      WebkitTextSizeAdjust: `100%`,
+      img: {
+        borderStyle: `none`,
+      },
+      pre: {
+        fontFamily: `monospace`,
+        fontSize: `1em`,
+      },
+      "ul > li > code, ol > li > code, p > code": {
+        color: `#393A34`,
+        background: `#f6f8fa`,
+        padding: 2,
+      },
     },
     a: {
       transition: `all 0.3s ease-in-out`,

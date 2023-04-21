@@ -51,7 +51,7 @@ const GridItem: React.FC<React.PropsWithChildren<{ to: string; className?: strin
         right: 0,
         textAlign: `right`,
         fontWeight: `bold`,
-        fontSize: [3, 3, 4],
+        fontSize: [3, 4, 5],
         padding: 3,
         textShadow: `0 1px 4px rgba(0, 0, 0, 0.5)`,
       },

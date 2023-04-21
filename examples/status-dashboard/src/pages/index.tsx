@@ -50,7 +50,6 @@ const Index = ({
           padding: 0;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
             "Helvetica Neue", sans-serif;
-          font-size: 18px;
           color: #24242d;
           background: #f0f2fd;
           flex-grow: 1;
