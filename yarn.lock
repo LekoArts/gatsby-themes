@@ -2858,12 +2858,12 @@ __metadata:
   resolution: "@lekoarts/gatsby-theme-emma-core@workspace:themes/gatsby-theme-emma-core"
   dependencies:
     "@lekoarts/themes-utils": ^3.0.0
-    "@mdx-js/react": ^2.2.1
-    gatsby-plugin-mdx: ^5.5.0
-    gatsby-plugin-sharp: ^5.5.0
-    gatsby-remark-images: ^7.5.0
-    gatsby-source-filesystem: ^5.5.0
-    gatsby-transformer-sharp: ^5.5.0
+    "@mdx-js/react": ^2.3.0
+    gatsby-plugin-mdx: ^5.9.0
+    gatsby-plugin-sharp: ^5.9.0
+    gatsby-remark-images: ^7.9.0
+    gatsby-source-filesystem: ^5.9.0
+    gatsby-transformer-sharp: ^5.9.0
     remark-gfm: ^3.0.1
   peerDependencies:
     gatsby: ^5.5.0
@@ -11539,25 +11539,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-sharp@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "gatsby-plugin-sharp@npm:5.5.0"
+"gatsby-plugin-sharp@npm:^5.5.0, gatsby-plugin-sharp@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "gatsby-plugin-sharp@npm:5.9.0"
   dependencies:
-    "@babel/runtime": ^7.20.7
+    "@babel/runtime": ^7.20.13
     async: ^3.2.4
     bluebird: ^3.7.2
     debug: ^4.3.4
     filenamify: ^4.3.0
-    fs-extra: ^11.1.0
-    gatsby-core-utils: ^4.5.0
-    gatsby-plugin-utils: ^4.5.0
+    fs-extra: ^11.1.1
+    gatsby-core-utils: ^4.9.0
+    gatsby-plugin-utils: ^4.9.0
     lodash: ^4.17.21
     probe-image-size: ^7.2.3
     semver: ^7.3.8
     sharp: ^0.31.3
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 545e0f58e4b45eaf096ee75b90cdaff8904c519c88cddff529fc84e249c673c9d0bd795ea399b4b0c44363775ad327d65ae16aa3d940272bec0ddede7a32ec7d
+  checksum: 0ec3f8380ebe8bff487a02a6d2ce0eb6f616608e7f390f1466d111880659e54d8c554af63f906505c22b31362b70530986c922e0f2fead59282d6a1c51fa611c
   languageName: node
   linkType: hard
 
@@ -11655,14 +11655,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^7.5.0":
-  version: 7.5.0
-  resolution: "gatsby-remark-images@npm:7.5.0"
+"gatsby-remark-images@npm:^7.5.0, gatsby-remark-images@npm:^7.9.0":
+  version: 7.9.0
+  resolution: "gatsby-remark-images@npm:7.9.0"
   dependencies:
-    "@babel/runtime": ^7.20.7
+    "@babel/runtime": ^7.20.13
     chalk: ^4.1.2
     cheerio: ^1.0.0-rc.10
-    gatsby-core-utils: ^4.5.0
+    gatsby-core-utils: ^4.9.0
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     mdast-util-definitions: ^4.0.0
@@ -11672,7 +11672,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: 114679a64fa6a75775b6c529c2fee412f314b0a18c540df1e297b1e3f37352b9565461cca243e7fcfd2ba44b47fb739a248fe0d537fa4edf93e960067ee924b5
+  checksum: e82d597a57be9cbc0018c9da5b2436ec5b83a6a6a74ee905d31933ff00aeed787d120c311d39be4dc98ac3fbe670e591dddbb1590660df46206351973fa55b09
   languageName: node
   linkType: hard
 
@@ -11759,22 +11759,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-transformer-sharp@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "gatsby-transformer-sharp@npm:5.5.0"
+"gatsby-transformer-sharp@npm:^5.5.0, gatsby-transformer-sharp@npm:^5.9.0":
+  version: 5.9.0
+  resolution: "gatsby-transformer-sharp@npm:5.9.0"
   dependencies:
-    "@babel/runtime": ^7.20.7
+    "@babel/runtime": ^7.20.13
     bluebird: ^3.7.2
     common-tags: ^1.8.2
-    fs-extra: ^11.1.0
-    gatsby-plugin-utils: ^4.5.0
+    fs-extra: ^11.1.1
+    gatsby-plugin-utils: ^4.9.0
     probe-image-size: ^7.2.3
     semver: ^7.3.8
     sharp: ^0.31.3
   peerDependencies:
     gatsby: ^5.0.0-next
     gatsby-plugin-sharp: ^5.0.0-next
-  checksum: 7f1d8b56c831679906653a45380d7023591444c4eb77e5e559911d6a37ce8a0ee5bccb4428f55cbb45ae0341a12f6baa4380cbcfeb6a13c37c78bd21ea2182c0
+  checksum: 9cd82bea752f9c08da8828f551b2ccd84af68b3263178135d2e2af90392ef57e4fe508c0b8ab06e8420909335caaf7302d117a2287903d4c49ecf0d3a9b09046
   languageName: node
   linkType: hard
 
