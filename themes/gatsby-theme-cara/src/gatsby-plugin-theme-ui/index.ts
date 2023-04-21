@@ -55,6 +55,7 @@ const theme = merge(tailwind, {
       MozOsxFontSmoothing: `grayscale`,
       color: `text`,
       backgroundColor: `background`,
+      WebkitTextSizeAdjust: `100%`,
       a: {
         color: `primary`,
         textDecoration: `none`,
@@ -63,6 +64,13 @@ const theme = merge(tailwind, {
           color: `primary`,
           textDecoration: `none`,
         },
+      },
+      img: {
+        borderStyle: `none`,
+      },
+      pre: {
+        fontFamily: `monospace`,
+        fontSize: `1em`,
       },
     },
     p: {

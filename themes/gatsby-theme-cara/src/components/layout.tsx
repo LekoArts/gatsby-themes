@@ -19,17 +19,6 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
             boxSizing: `inherit`,
           },
         },
-        html: {
-          fontSize: `18px`,
-          WebkitTextSizeAdjust: `100%`,
-        },
-        img: {
-          borderStyle: `none`,
-        },
-        pre: {
-          fontFamily: `monospace`,
-          fontSize: `1em`,
-        },
         "[hidden]": {
           display: `none`,
         },
