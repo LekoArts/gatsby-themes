@@ -43,6 +43,9 @@ const theme = merge(tailwind, {
     custom: {
       margin: 0,
       padding: 0,
+      img: {
+        maxWidth: `100%`,
+      },
     },
     project: {
       ...contentStyles,
