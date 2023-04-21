@@ -16,33 +16,12 @@ const Layout = ({ children, color = `white` }: LayoutProps) => (
         "*,*:after,*:before": {
           boxSizing: `border-box`,
         },
-        html: {
-          fontSize: `18px`,
-          WebkitTextSizeAdjust: `100%`,
-        },
-        img: {
-          borderStyle: `none`,
-        },
-        pre: {
-          fontFamily: `monospace`,
-          fontSize: `1em`,
-        },
         "[hidden]": {
           display: `none`,
         },
         "::selection": {
           background: get(t, `colors.primary`),
           color: get(t, `colors.white`),
-        },
-        "ul > li > code, ol > li > code, p > code": {
-          color: `#393A34`,
-          background: `#f6f8fa`,
-          padding: 2,
-        },
-        "@media(max-width: 600px)": {
-          html: {
-            fontSize: `16px`,
-          },
         },
       })}
     />
