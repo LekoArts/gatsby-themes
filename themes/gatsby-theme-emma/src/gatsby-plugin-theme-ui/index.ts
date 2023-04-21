@@ -51,6 +51,17 @@ const config = merge(tailwind, {
       textRendering: `optimizeLegibility`,
       WebkitFontSmoothing: `antialiased`,
       MozOsxFontSmoothing: `grayscale`,
+      WebkitTextSizeAdjust: `100%`,
+      img: {
+        borderStyle: `none`,
+      },
+      pre: {
+        fontFamily: `monospace`,
+        fontSize: `1em`,
+      },
+      a: {
+        transition: `all 0.3s ease-in-out`,
+      },
     },
     p: {
       fontSize: [1, 2],

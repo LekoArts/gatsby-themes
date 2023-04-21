@@ -19,25 +19,12 @@ const Layout = ({ children, className = `` }: LayoutProps) => {
           "*": {
             boxSizing: `inherit`,
           },
-          html: {
-            WebkitTextSizeAdjust: `100%`,
-          },
-          img: {
-            borderStyle: `none`,
-          },
-          pre: {
-            fontFamily: `monospace`,
-            fontSize: `1em`,
-          },
           "[hidden]": {
             display: `none`,
           },
           "::selection": {
             backgroundColor: get(t, `colors.text`),
             color: get(t, `colors.background`),
-          },
-          a: {
-            transition: `all 0.3s ease-in-out`,
           },
         })}
       />
