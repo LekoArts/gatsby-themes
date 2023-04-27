@@ -1,5 +1,77 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - This theme had a fixed `font-size` of `18px` on the `<html>` element. This is a **bad** accessibility practice.
+  This explicitly set `font-size` is removed now.
+
+  This will make the overall font sizes and spacing for the theme smaller (since all other font sizes and padding/margin are derived from the root `font-size` through `rem`).
+
+  If you need the old font styles, you can adjust the [`fontSizes` inside the Theme UI configuration](https://theme-ui.com/theme-spec#font-sizes-typographic-scale).
+
+  Currently, the `fontSizes` array inside the Theme UI configuration you're using is:
+
+  ```js
+  const fontSizes = [
+    "0.875rem",
+    "1rem",
+    "1.25rem",
+    "1.5rem",
+    "1.875rem",
+    "2.25rem",
+    "3rem",
+    "4rem",
+    "4.5rem",
+  ];
+  ```
+
+  Previously, the `font-size` was set like this:
+
+  ```css
+  html {
+    font-size: 18px;
+  }
+  ```
+
+  So for the normal base of `16px`, `18px` is `1.125rem`. So you could change it to this:
+
+  ```js
+  const fontSizes = [
+    "1rem",
+    "1.125rem",
+    "1.375rem",
+    "1.625rem",
+    "2rem",
+    "2.375rem",
+    "3.125rem",
+    "4.125rem",
+    "4.625rem",
+  ];
+  ```
+
+- [#1165](https://github.com/LekoArts/gatsby-themes/pull/1165) [`b350a5a5`](https://github.com/LekoArts/gatsby-themes/commit/b350a5a5a4416fe6f30a16af629f0cb898ad9b6f) Thanks [@LekoArts](https://github.com/LekoArts)! - Ensure that the color mode toggle (light/dark mode) works correctly. This is done through adding the current color mode to the `<html>` element like so:
+
+  ```html
+  <html class="theme-ui-light"></html>
+  ```
+
+  When the button is pressed it'll change to:
+
+  ```html
+  <html class="theme-ui-dark"></html>
+  ```
+
+  In theory this shouldn't be necessary, but there is a weird interaction between [Theme UI](https://theme-ui.com/) and [Gatsby Head API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) that I currently don't have the time to deeply investigate.
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - Move some global styles from `<Global>` component to Theme UI's `styles.root`. This makes it easier to modify those directly through the Theme UI config.
+
+- [#1135](https://github.com/LekoArts/gatsby-themes/pull/1135) [`d2ffbf02`](https://github.com/LekoArts/gatsby-themes/commit/d2ffbf02b7a63aa5c1350048067a2a88f0c5556f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia
+
+- Updated dependencies [[`12e417f8`](https://github.com/LekoArts/gatsby-themes/commit/12e417f80a75cb41a89bbb28c03885ca5e747872)]:
+  - @lekoarts/gatsby-theme-emilia-core@5.1.1
+
 ## 5.1.0
 
 ### Minor Changes

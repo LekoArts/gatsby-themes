@@ -1,5 +1,65 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- [#1138](https://github.com/LekoArts/gatsby-themes/pull/1138) [`2b21e8a7`](https://github.com/LekoArts/gatsby-themes/commit/2b21e8a7428810533eb22feeaf12ac2ea90f8546) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-jodie
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - This theme had a fixed `font-size` of `18px` on the `<html>` element. This is a **bad** accessibility practice.
+  This explicitly set `font-size` is removed now.
+
+  This will make the overall font sizes and spacing for the theme smaller (since all other font sizes and padding/margin are derived from the root `font-size` through `rem`).
+
+  If you need the old font styles, you can adjust the [`fontSizes` inside the Theme UI configuration](https://theme-ui.com/theme-spec#font-sizes-typographic-scale).
+
+  Currently, the `fontSizes` array inside the Theme UI configuration you're using is:
+
+  ```js
+  const fontSizes = [
+    "0.875rem",
+    "1rem",
+    "1.25rem",
+    "1.5rem",
+    "1.875rem",
+    "2.25rem",
+    "3rem",
+    "4rem",
+    "4.5rem",
+  ];
+  ```
+
+  Previously, the `font-size` was set like this:
+
+  ```css
+  html {
+    font-size: 18px;
+  }
+  ```
+
+  So for the normal base of `16px`, `18px` is `1.125rem`. So you could change it to this:
+
+  ```js
+  const fontSizes = [
+    "1rem",
+    "1.125rem",
+    "1.375rem",
+    "1.625rem",
+    "2rem",
+    "2.375rem",
+    "3.125rem",
+    "4.125rem",
+    "4.625rem",
+  ];
+  ```
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - Move some global styles from `<Global>` component to Theme UI's `styles.root`. This makes it easier to modify those directly through the Theme UI config.
+
+- [#1163](https://github.com/LekoArts/gatsby-themes/pull/1163) [`641c865d`](https://github.com/LekoArts/gatsby-themes/commit/641c865d6f6c44936e6d7f7ca695362f8f0924a1) Thanks [@LekoArts](https://github.com/LekoArts)! - fix(gatsby-theme-jodie): Correct CSS for <img> on custom pages
+
+- Updated dependencies [[`d3d85067`](https://github.com/LekoArts/gatsby-themes/commit/d3d85067e57b7fb95817a510e307b99598aaaa43)]:
+  - @lekoarts/gatsby-theme-jodie-core@5.1.1
+
 ## 5.1.0
 
 ### Minor Changes

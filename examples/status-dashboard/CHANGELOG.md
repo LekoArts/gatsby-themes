@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.2.14
+
+### Patch Changes
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - Move some global styles from `<Global>` component to Theme UI's `styles.root`. This makes it easier to modify those directly through the Theme UI config.
+
+- Updated dependencies [[`49a98338`](https://github.com/LekoArts/gatsby-themes/commit/49a98338b0daf8e137c4d20298ae848a50b8d449)]:
+  - @lekoarts/gatsby-theme-status-dashboard@5.1.1
+
 ## 0.2.13
 
 ### Patch Changes

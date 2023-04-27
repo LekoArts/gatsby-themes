@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- [#1150](https://github.com/LekoArts/gatsby-themes/pull/1150) [`12e417f8`](https://github.com/LekoArts/gatsby-themes/commit/12e417f80a75cb41a89bbb28c03885ca5e747872) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-emilia-core
+
 ## 5.1.0
 
 ### Minor Changes

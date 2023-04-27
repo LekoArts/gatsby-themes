@@ -1,5 +1,27 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- [#1165](https://github.com/LekoArts/gatsby-themes/pull/1165) [`b350a5a5`](https://github.com/LekoArts/gatsby-themes/commit/b350a5a5a4416fe6f30a16af629f0cb898ad9b6f) Thanks [@LekoArts](https://github.com/LekoArts)! - Ensure that the color mode toggle (light/dark mode) works correctly. This is done through adding the current color mode to the `<html>` element like so:
+
+  ```html
+  <html class="theme-ui-light"></html>
+  ```
+
+  When the button is pressed it'll change to:
+
+  ```html
+  <html class="theme-ui-dark"></html>
+  ```
+
+  In theory this shouldn't be necessary, but there is a weird interaction between [Theme UI](https://theme-ui.com/) and [Gatsby Head API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) that I currently don't have the time to deeply investigate.
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - Move some global styles from `<Global>` component to Theme UI's `styles.root`. This makes it easier to modify those directly through the Theme UI config.
+
+- [#1137](https://github.com/LekoArts/gatsby-themes/pull/1137) [`a2514a8a`](https://github.com/LekoArts/gatsby-themes/commit/a2514a8afcbd72ac19060b57029a983338ee9f46) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-graphql-playground
+
 ## 5.1.0
 
 ### Minor Changes
