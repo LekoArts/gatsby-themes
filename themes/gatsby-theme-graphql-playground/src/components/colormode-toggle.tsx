@@ -10,6 +10,7 @@ const ColorModeToggle = () => {
       onClick={() => {
         const next = isDark ? `light` : `dark`
         setColorMode(next)
+        document.documentElement.classList.value = `theme-ui-${next}`
       }}
       type="button"
       aria-label={isDark ? `Activate Light mode` : `Activate Dark mode`}
