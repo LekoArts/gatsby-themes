@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.1
+
+### Patch Changes
+
+- [#1140](https://github.com/LekoArts/gatsby-themes/pull/1140) [`49a98338`](https://github.com/LekoArts/gatsby-themes/commit/49a98338b0daf8e137c4d20298ae848a50b8d449) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-status-dashboard
+
 ## 5.1.0
 
 ### Minor Changes

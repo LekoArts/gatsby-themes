@@ -1,5 +1,30 @@
 # Change Log
 
+## 6.1.1
+
+### Patch Changes
+
+- [#1165](https://github.com/LekoArts/gatsby-themes/pull/1165) [`b350a5a5`](https://github.com/LekoArts/gatsby-themes/commit/b350a5a5a4416fe6f30a16af629f0cb898ad9b6f) Thanks [@LekoArts](https://github.com/LekoArts)! - Ensure that the color mode toggle (light/dark mode) works correctly. This is done through adding the current color mode to the `<html>` element like so:
+
+  ```html
+  <html class="theme-ui-light"></html>
+  ```
+
+  When the button is pressed it'll change to:
+
+  ```html
+  <html class="theme-ui-dark"></html>
+  ```
+
+  In theory this shouldn't be necessary, but there is a weird interaction between [Theme UI](https://theme-ui.com/) and [Gatsby Head API](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/) that I currently don't have the time to deeply investigate.
+
+- [#1164](https://github.com/LekoArts/gatsby-themes/pull/1164) [`27abea13`](https://github.com/LekoArts/gatsby-themes/commit/27abea13fad5a8834e231e505fab4067de862b30) Thanks [@LekoArts](https://github.com/LekoArts)! - Move some global styles from `<Global>` component to Theme UI's `styles.root`. This makes it easier to modify those directly through the Theme UI config.
+
+- [#1139](https://github.com/LekoArts/gatsby-themes/pull/1139) [`dcbdefd5`](https://github.com/LekoArts/gatsby-themes/commit/dcbdefd517feac688658f87c805529d4711a1cbd) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog
+
+- Updated dependencies [[`6985b62e`](https://github.com/LekoArts/gatsby-themes/commit/6985b62ec1b410cd7824c86ca76d701414fc716c)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@6.1.1
+
 ## 6.1.0
 
 ### Minor Changes
