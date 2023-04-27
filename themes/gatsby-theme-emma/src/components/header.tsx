@@ -65,6 +65,7 @@ const Header = ({ meta, nav }: HeaderProps) => {
           onClick={() => {
             const next = isDark ? `light` : `dark`
             setColorMode(next)
+            document.documentElement.classList.value = `theme-ui-${next}`
           }}
           type="button"
           data-testid="color-mode-toggle"
