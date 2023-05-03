@@ -106,7 +106,7 @@
       "enabled": false
     },
     {
-      "groupName": "monorepo",
+      "groupName": "Monorepo",
       "commitMessageTopic": "monorepo",
       "groupSlug": "monorepo",
       "matchPaths": [
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "groupName": "formatting & linting",
+      "groupName": "Formatting & Linting",
       "commitMessageTopic": "Formatting & linting",
       "matchPaths": [
         "+(package.json)"
@@ -145,7 +145,7 @@
       "automerge": true
     },
     {
-      "groupName": "typescript",
+      "groupName": "TypeScript",
       "matchPaths": [
         "+(package.json)"
       ],
@@ -167,7 +167,7 @@
       "automerge": true
     },
     {
-      "groupName": "testing library",
+      "groupName": "Testing Library",
       "matchPaths": [
         "+(package.json)"
       ],
@@ -184,7 +184,7 @@
       ]
     },
     {
-      "groupName": "theme-ui",
+      "groupName": "Theme UI",
       "commitMessageTopic": "theme-ui",
       "matchPaths": [
         "themes/**",
@@ -213,6 +213,29 @@
       "dependencyDashboardApproval": true
     },
     {
+      "groupName": "Emotion",
+      "commitMessageTopic": "emotion",
+      "matchPaths": [
+        "themes/**",
+        "examples/**"
+      ],
+      "matchPackageNames": [
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies"
+      ],
+      "automerge": true
+    },
+    {
       "matchPaths": [
         "themes/gatsby-theme-cara/package.json"
       ],
@@ -237,7 +260,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -271,7 +297,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -306,7 +335,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -340,7 +372,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -375,7 +410,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -409,7 +447,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -444,7 +485,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -478,7 +522,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -513,7 +560,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -547,7 +597,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -582,7 +635,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -616,7 +672,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -651,7 +710,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -685,7 +747,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -720,7 +785,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -754,7 +822,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -789,7 +860,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -823,7 +897,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -858,7 +935,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -892,7 +972,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -927,7 +1010,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -961,7 +1047,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -996,7 +1085,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -1030,7 +1122,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -1065,7 +1160,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",
@@ -1099,7 +1197,10 @@
         "@theme-ui/prism",
         "@theme-ui/sidenav",
         "gatsby-plugin-theme-ui",
-        "theme-ui"
+        "theme-ui",
+        "@emotion/core",
+        "@emotion/styled",
+        "@emotion/react"
       ],
       "excludePackagePatterns": [
         "^eslint-",

@@ -22,7 +22,7 @@ const packageRules = new Map()
 
 const globalPackageRules: Array<IPackageRule> = [
   {
-    groupName: `monorepo`,
+    groupName: `Monorepo`,
     commitMessageTopic: `monorepo`,
     groupSlug: `monorepo`,
     matchPaths: [`+(package.json)`],
@@ -30,7 +30,7 @@ const globalPackageRules: Array<IPackageRule> = [
     matchDepTypes: [`devDependencies`],
   },
   {
-    groupName: `formatting & linting`,
+    groupName: `Formatting & Linting`,
     commitMessageTopic: `Formatting & linting`,
     matchPaths: [`+(package.json)`],
     matchPackageNames: [`eslint`, `prettier`],
@@ -40,7 +40,7 @@ const globalPackageRules: Array<IPackageRule> = [
     automerge: true,
   },
   {
-    groupName: `typescript`,
+    groupName: `TypeScript`,
     matchPaths: [`+(package.json)`],
     matchPackageNames: [`typescript`],
     matchPackagePatterns: [`^@typescript-eslint/`, `^@types`],
@@ -49,14 +49,14 @@ const globalPackageRules: Array<IPackageRule> = [
     automerge: true,
   },
   {
-    groupName: `testing library`,
+    groupName: `Testing Library`,
     matchPaths: [`+(package.json)`],
     matchPackagePatterns: [`^@testing-library/`],
     matchUpdateTypes: [`major`, `minor`, `patch`],
     matchDepTypes: [`devDependencies`],
   },
   {
-    groupName: `theme-ui`,
+    groupName: `Theme UI`,
     commitMessageTopic: `theme-ui`,
     matchPaths: [`themes/**`, `examples/**`],
     matchPackageNames: [
@@ -73,6 +73,15 @@ const globalPackageRules: Array<IPackageRule> = [
     matchUpdateTypes: [`major`, `minor`, `patch`],
     matchDepTypes: [`dependencies`, `devDependencies`],
     dependencyDashboardApproval: true,
+  },
+  {
+    groupName: `Emotion`,
+    commitMessageTopic: `emotion`,
+    matchPaths: [`themes/**`, `examples/**`],
+    matchPackageNames: [`@emotion/core`, `@emotion/styled`, `@emotion/react`],
+    matchUpdateTypes: [`major`, `minor`, `patch`],
+    matchDepTypes: [`dependencies`, `devDependencies`],
+    automerge: true,
   },
 ]
 
