@@ -12,7 +12,7 @@ const config: GatsbyConfig = {
       options: {},
     },
     // You can remove this plugin if you don't need it
-shouldAnalyseBundle && {
+    shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-statoscope`,
       options: {
         saveReportTo: `${__dirname}/public/.statoscope/_bundle.html`,
