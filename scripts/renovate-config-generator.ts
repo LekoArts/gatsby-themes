@@ -1,5 +1,5 @@
 import path from "path"
-import glob from "glob"
+import { globSync } from "glob"
 import fs from "fs-extra"
 
 interface IPackageRule {
@@ -131,7 +131,9 @@ const defaultPackageRules: Array<IPackageRule> = [
   ...globalPackageRules,
 ]
 
-const themesPackages = glob.sync(`themes/*/package.json`).map((file) => file.match(/themes\/([^/]+)/)?.[1])
+const themesPackages = globSync(`themes/*/package.json`)
+  .sort()
+  .map((file) => file.match(/themes\/([^/]+)/)?.[1])
 
 themesPackages.forEach((pkg) => {
   const packageRule = [
