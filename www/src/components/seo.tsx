@@ -105,6 +105,7 @@ const SEO = ({ description = ``, meta = [], pathname = ``, image = ``, title = `
       `https://dribbble.com/LekoArts`,
       `https://youtube.de/LekoArtsDE`,
       `https://twitter.com/lekoarts_de`,
+      `https://mastodon.social/@lekoarts`,
     ],
   })
 
