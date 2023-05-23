@@ -34,9 +34,13 @@ Also be sure to check out other [Free & Open Source Gatsby Themes](https://theme
 - Displays colors (individual and palettes), typography (font family, weights, sizes, headings), and a spacing scale
 - Uses [`@lekoarts/gatsby-theme-specimens`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-specimens) under the hood. You can use components from it to extend your styleguide page
 
-## 🚀 Getting Started
+## ⏱️ Quick Start
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/LekoArts/gatsby-starter-styleguide)
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-styleguide)
+
+## 🚀 Getting Started
 
 ### 1. **Create a Gatsby site.**
 

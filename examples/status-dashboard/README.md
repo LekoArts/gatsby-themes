@@ -28,9 +28,13 @@ Showing the statuses of Netlify deploys & CircleCI projects. Using the Gatsby Th
 
 Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=status-dashboard&utm_medium=Starter).
 
-## 🚀 Getting Started
+## ⏱️ Quick Start
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/LekoArts/gatsby-status-dashboard)
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-status-dashboard)
+
+## 🚀 Getting Started
 
 ### 1. **Create a Gatsby site.**
 
