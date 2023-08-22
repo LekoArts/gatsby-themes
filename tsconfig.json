@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "esnext",
+    "target": "ES2020",
+    "module": "CommonJS",
     "jsx": "react",
-    "lib": ["dom", "es2016"],
+    "lib": ["dom", "es2020"],
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
   },
   "include": [
     "./packages/**/*",
@@ -20,5 +20,5 @@
     "./examples/**/src/**/*",
     "./vitest-setup.ts"
   ],
-  "exclude": ["node_modules", "themes/**/node_modules"]
+  "exclude": ["node_modules", "themes/**/node_modules"],
 }

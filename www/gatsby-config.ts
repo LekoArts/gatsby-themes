@@ -3,7 +3,6 @@ import path from "path"
 import "dotenv/config"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
-const googleTagId = process.env.GOOGLE_PROPERTY_ID
 const githubToken = process.env.GITHUB_TOKEN
 
 const config: GatsbyConfig = {
@@ -38,15 +37,6 @@ const config: GatsbyConfig = {
             }
           }
         `,
-      },
-    },
-    googleTagId && {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [process.env.GOOGLE_PROPERTY_ID],
-        pluginConfig: {
-          head: true,
-        },
       },
     },
     {
