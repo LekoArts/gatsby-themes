@@ -3,7 +3,7 @@ import type { GatsbySSR } from "gatsby"
 
 const SITE_DOMAIN = `themes.lekoarts.de`
 const PLAUSIBLE_DOMAIN = `plausible.io`
-const SCRIPT_URI = `/js/plausible.js`
+const SCRIPT_URI = `/js/script.js`
 
 export const onRenderBody: GatsbySSR["onRenderBody"] = ({ setHeadComponents }) => {
   setHeadComponents([
