@@ -17,7 +17,7 @@ const config = {
     siteUrl: `https://specimens.lekoarts.de`,
     siteLanguage: `en`,
   },
-  trailingSlash: `never`,
+  trailingSlash: `always`,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-specimens`,

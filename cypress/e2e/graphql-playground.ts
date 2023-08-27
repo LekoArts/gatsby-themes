@@ -27,7 +27,7 @@ describe(`gatsby-theme-graphql-playground`, () => {
     cy.findByText(/Get the site title/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/get-the-site-title`)
+      .assertRoute(`/get-the-site-title/`)
     cy.findByTestId(`item-title`)
     cy.findByText(/Start with the basics, pulling up the site/i)
     cy.findByTestId(/iFrame-Get the Site Title/i)

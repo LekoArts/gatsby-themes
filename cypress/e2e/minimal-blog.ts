@@ -18,7 +18,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should link the about page`, () => {
     cy.get(`nav`).within(() => {
-      cy.findByText(/About/i).click().waitForRouteChange().assertRoute(`/about`)
+      cy.findByText(/About/i).click().waitForRouteChange().assertRoute(`/about/`)
       cy.title().should(`eq`, `About | Minimal Blog`)
     })
   })
@@ -27,7 +27,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
       cy.findByText(/Blog/i).click()
     })
     cy.waitForRouteChange()
-      .assertRoute(`/blog`)
+      .assertRoute(`/blog/`)
       .get(`h1`)
       .within(() => {
         cy.findByText(/Blog/i)
@@ -41,7 +41,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     cy.findByText(/Tutorial/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/tags/tutorial`)
+      .assertRoute(`/tags/tutorial/`)
       .get(`h1`)
       .within(() => {
         cy.findByText(/Tutorial/i)
@@ -54,7 +54,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     cy.findByText(/View all tags/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/tags`)
+      .assertRoute(`/tags/`)
       .get(`h1`)
       .within(() => {
         cy.findByText(/Tags/i)
@@ -91,7 +91,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     cy.findByText(/Markdown Reference/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/markdown-reference`)
+      .assertRoute(`/markdown-reference/`)
       .get(`h1`)
       .within(() => {
         cy.findByText(/Markdown Reference/i)
@@ -124,7 +124,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.visit(`/blog`).waitForRouteChange()
-    cy.findByText(`Normal Text`).click().waitForRouteChange().assertRoute(`/normal-text-override`)
+    cy.findByText(`Normal Text`).click().waitForRouteChange().assertRoute(`/normal-text-override/`)
     cy.title().should(`eq`, `Normal Text | Minimal Blog`)
   })
   it(`should render the light/dark mode toggle`, () => {

@@ -15,7 +15,7 @@ describe(`gatsby-theme-emma`, () => {
     cy.findByLabelText(/emma, back to homepage/i)
   })
   it(`should render additional page in navigation`, () => {
-    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
+    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about/`)
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByTestId(`color-mode-toggle`)
@@ -52,7 +52,7 @@ describe(`gatsby-theme-emma`, () => {
     cy.findByLabelText(/view detail page of hermione granger/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/hermione-granger`)
+      .assertRoute(`/hermione-granger/`)
       .get(`h1`)
       .first()
       .within(() => {
@@ -66,11 +66,11 @@ describe(`gatsby-theme-emma`, () => {
   it(`should accept custom slug in frontmatter and use that as URL`, () => {
     cy.findByLabelText(/View detail page of Proprius: steady, individual, personal/i)
       .click()
-      .assertRoute(`/proprius`)
+      .assertRoute(`/proprius/`)
     cy.title().should(`eq`, `Proprius: steady, individual, personal | Emma`)
   })
   it(`should link and display the about page`, () => {
-    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about`)
+    cy.findByText(/about/i).click().waitForRouteChange().assertRoute(`/about/`)
     cy.title().should(`eq`, `About | Emma`)
   })
 })

@@ -51,7 +51,7 @@ describe(`gatsby-theme-emilia`, () => {
     cy.findByLabelText(/visit emilia project page/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/emilia`)
+      .assertRoute(`/emilia/`)
       .get(`h1`)
       .within(() => {
         cy.findByText(/emilia/i)
@@ -68,7 +68,7 @@ describe(`gatsby-theme-emilia`, () => {
     cy.findByLabelText(/Visit Ars Aurea project page/i)
       .click()
       .waitForRouteChange()
-      .assertRoute(`/ars-aurea-goldene-kunst`)
+      .assertRoute(`/ars-aurea-goldene-kunst/`)
     cy.title().should(`eq`, `Ars Aurea | Emilia`)
   })
 })
