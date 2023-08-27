@@ -97,8 +97,8 @@ describe(`gatsby-theme-minimal-blog`, () => {
         cy.findByText(/Markdown Reference/i)
       })
     cy.findByText(/12.09.2022/i)
-    cy.get(`a[href='/tags/code']`).contains(`Code`)
-    cy.get(`a[href='/tags/markdown']`).contains(`Markdown`)
+    cy.get(`a[href='/tags/code/']`).contains(`Code`)
+    cy.get(`a[href='/tags/markdown/']`).contains(`Markdown`)
     cy.findByText(/7 min read/i)
     cy.findByText(
       /What follows from here is just a bunch of absolute nonsense I've written to dogfood the plugin itself./i
