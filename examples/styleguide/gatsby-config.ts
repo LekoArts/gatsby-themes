@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
     siteLanguage: `en`,
     author: `@lekoarts_de`,
   },
-  trailingSlash: `never`,
+  trailingSlash: `always`,
   plugins: [
     `gatsby-plugin-theme-ui`,
     {
