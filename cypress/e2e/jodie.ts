@@ -17,21 +17,21 @@ describe(`gatsby-theme-jodie`, () => {
         .click()
         .waitForRouteChange()
     })
-    cy.assertRoute(`/projects`)
+    cy.assertRoute(`/projects/`)
     cy.findByTestId(`page-title`)
     cy.should(`have.text`, `Projects`)
     cy.title().should(`eq`, `Projects | Jodie`)
     cy.get(`nav`).within(() => {
       cy.findByText(/art/i).click().waitForRouteChange()
     })
-    cy.assertRoute(`/art`)
+    cy.assertRoute(`/art/`)
     cy.findByTestId(`page-title`)
     cy.should(`have.text`, `Art`)
     cy.title().should(`eq`, `Art | Jodie`)
     cy.get(`nav`).within(() => {
       cy.findByText(/about/i).click().waitForRouteChange()
     })
-    cy.assertRoute(`/about`)
+    cy.assertRoute(`/about/`)
     cy.get(`h1`).first()
     cy.should(`have.text`, `About`)
     cy.title().should(`eq`, `About | Jodie`)
@@ -43,10 +43,10 @@ describe(`gatsby-theme-jodie`, () => {
     })
   })
   it(`should link to a custom page on index page`, () => {
-    cy.findByTestId(`About`).click().waitForRouteChange().assertRoute(`/about`)
+    cy.findByTestId(`About`).click().waitForRouteChange().assertRoute(`/about/`)
   })
   it(`should have a complete project page`, () => {
-    cy.findByTestId(`Color`).click().waitForRouteChange().assertRoute(`/color-in-all-its-glory`)
+    cy.findByTestId(`Color`).click().waitForRouteChange().assertRoute(`/color-in-all-its-glory/`)
     cy.get(`h1`).should(`have.text`, `Color - In all its glory`)
     cy.findByText(/street art/i)
     cy.findByText(/Very colorful./i)
@@ -55,7 +55,7 @@ describe(`gatsby-theme-jodie`, () => {
   })
   it(`should have items on projects page`, () => {
     cy.visit(`/projects`).waitForRouteChange()
-    cy.findByTestId(`Extreme Neon`).click().waitForRouteChange().assertRoute(`/extreme-neon-what-is-this-trend-about`)
+    cy.findByTestId(`Extreme Neon`).click().waitForRouteChange().assertRoute(`/extreme-neon-what-is-this-trend-about/`)
   })
   it(`should accept "custom" flag in frontmatter of pages`, () => {
     cy.visit(`/art`).waitForRouteChange()
