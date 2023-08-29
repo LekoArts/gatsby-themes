@@ -1,5 +1,11 @@
 # @lekoarts/themes-utils
 
+## 3.0.1
+
+### Patch Changes
+
+- [`5393b80b`](https://github.com/LekoArts/gatsby-themes/commit/5393b80b41b5291b35573a89926b8a8d1945e327) Thanks [@LekoArts](https://github.com/LekoArts)! - Update unified and unist-util-visit dependencies
+
 ## 3.0.0
 
 ### Major Changes

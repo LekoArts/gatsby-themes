@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.3
+
+### Patch Changes
+
+- [#1212](https://github.com/LekoArts/gatsby-themes/pull/1212) [`81ebf6d4`](https://github.com/LekoArts/gatsby-themes/commit/81ebf6d4dad4c85f90f22fd4b8462e0641334799) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-cara
+
 ## 5.1.2
 
 ### Patch Changes

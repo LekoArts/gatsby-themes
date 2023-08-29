@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.1.3
+
+### Patch Changes
+
+- [#1213](https://github.com/LekoArts/gatsby-themes/pull/1213) [`a7507b1b`](https://github.com/LekoArts/gatsby-themes/commit/a7507b1b238a0d0964e8a4e45624fc006b4a5718) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency gatsby-plugin-catch-links to ^5.12.0 for gatsby-theme-minimal-blog
+
+- Updated dependencies [[`7a703e77`](https://github.com/LekoArts/gatsby-themes/commit/7a703e77f723e64f9c0ccd249d2e645dadcf4860), [`5393b80b`](https://github.com/LekoArts/gatsby-themes/commit/5393b80b41b5291b35573a89926b8a8d1945e327)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@6.1.3
+  - @lekoarts/themes-utils@3.0.1
+
 ## 6.1.2
 
 ### Patch Changes

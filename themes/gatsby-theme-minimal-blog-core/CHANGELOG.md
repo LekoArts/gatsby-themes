@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.1.3
+
+### Patch Changes
+
+- [#1219](https://github.com/LekoArts/gatsby-themes/pull/1219) [`7a703e77`](https://github.com/LekoArts/gatsby-themes/commit/7a703e77f723e64f9c0ccd249d2e645dadcf4860) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-minimal-blog-core
+
+- Updated dependencies [[`5393b80b`](https://github.com/LekoArts/gatsby-themes/commit/5393b80b41b5291b35573a89926b8a8d1945e327)]:
+  - @lekoarts/rehype-meta-as-attributes@3.0.1
+  - @lekoarts/themes-utils@3.0.1
+
 ## 6.1.2
 
 ### Patch Changes
