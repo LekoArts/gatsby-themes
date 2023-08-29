@@ -1,14 +1,18 @@
 /**
- * @vitest-environment happy-dom
+ * @vitest-environment jsdom
  */
 
-import { describe, it, expect } from "vitest"
+import { describe, it, expect, afterEach } from "vitest"
 import * as React from "react"
-import { render } from "@testing-library/react"
+import { render, cleanup } from "@testing-library/react"
 import Table from "../table"
 
 // @ts-ignore
 global.IS_REACT_ACT_ENVIRONMENT = true
+
+afterEach(() => {
+  cleanup()
+})
 
 describe(`Table`, () => {
   it(`should render with default config`, () => {
