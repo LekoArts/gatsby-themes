@@ -13,7 +13,7 @@ const config = (themeOptions) => {
       siteTitle: `GraphQL Playground`,
       siteTitleAlt: `GraphQL Playground - @lekoarts/gatsby-theme-graphql-playground`,
       siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
-      siteUrl: `https://gatsbystartergraphqlplayground.gatsbyjs.io`,
+      siteUrl: `https://gatsby-starter-graphql-playground.netlify.app`,
       siteDescription: `GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).`,
       siteImage: `/banner.jpg`,
       siteLanguage: `en`,

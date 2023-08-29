@@ -8,7 +8,7 @@ const config: GatsbyConfig = {
     siteTitle: `Styleguide`,
     siteTitleAlt: `Theme UI Styleguide`,
     siteHeadline: `Styleguide - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://theme-ui-styleguide.netlify.com`,
+    siteUrl: `https://theme-ui-styleguide.netlify.app`,
     siteDescription: `Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,

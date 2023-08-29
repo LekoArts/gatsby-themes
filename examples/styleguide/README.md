@@ -24,7 +24,7 @@
 
 Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner. Using the Gatsby Theme [`@lekoarts/gatsby-theme-styleguide`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-styleguide).
 
-[**Demo Website**](https://theme-ui-styleguide.netlify.com)
+[**Demo Website**](https://theme-ui-styleguide.netlify.app)
 
 Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=styleguide&utm_medium=Starter).
 

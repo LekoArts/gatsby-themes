@@ -30,7 +30,7 @@
 
 Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner.
 
-[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://theme-ui-styleguide.netlify.com)
+[![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://theme-ui-styleguide.netlify.app)
 
 Read the [Source Code](https://github.com/LekoArts/gatsby-starter-styleguide).
 
