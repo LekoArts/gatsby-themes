@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "module": "CommonJS",
     "jsx": "react",
     "lib": ["dom", "es2020"],
@@ -10,7 +9,7 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "include": [
     "./packages/**/*",
@@ -20,5 +19,5 @@
     "./examples/**/src/**/*",
     "./vitest-setup.ts"
   ],
-  "exclude": ["node_modules", "themes/**/node_modules"],
+  "exclude": ["node_modules", "themes/**/node_modules"]
 }

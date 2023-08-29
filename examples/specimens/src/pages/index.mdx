@@ -80,7 +80,7 @@ render(
     <Alert type="warning">Gentle warning :)</Alert>
     <Alert type="info">Super helpful information goes here</Alert>
     <Alert type="danger">nooooooooo, not this way</Alert>
-  </React.Fragment>
+  </React.Fragment>,
 );
 ```
 
@@ -200,7 +200,7 @@ render(
     <ColorSwatch color="#2d3748" name="Blueish" />
     <ColorSwatch color="#667eea" name="Swift" minimal />
     <ColorSwatch color="#4fd1c5" name="4" prefix="Teal - " />
-  </React.Fragment>
+  </React.Fragment>,
 );
 ```
 
@@ -392,7 +392,7 @@ render(
       allowed: [`h1`, `h2`],
     })}
     config={theme}
-  />
+  />,
 );
 ```
 
@@ -440,7 +440,7 @@ render(
     />
     <h4>Orange</h4>
     <Palette colors={orange} />
-  </React.Fragment>
+  </React.Fragment>,
 );
 ```
 
@@ -481,7 +481,7 @@ render(
     colors={normalizeThemeUIColors({ colors: theme.colors })}
     minimal
     mode="swatch"
-  />
+  />,
 );
 ```
 
@@ -497,7 +497,7 @@ This theme also exposes a `Table` component. It is used in this case to showcase
 
 The `columns` prop is defining the `grid-template-columns` of the table in the fashion of Theme UI ([Responsive Styles](https://theme-ui.com/getting-started#responsive-styles)). The `titles` should be the same count as columns.
 
-So you can define the style for every breakpoint, e.g. `` [`120px 1fr`, `150px 1fr`] `` (120px for everything below the smallest breakpoint, 150px for everything above smallest breakpoint).
+So you can define the style for every breakpoint, e.g. ``[`120px 1fr`, `150px 1fr`]`` (120px for everything below the smallest breakpoint, 150px for everything above smallest breakpoint).
 
 You can format the data you want to show how you like but in the end you should have the amount of columns as defined above.
 
@@ -530,7 +530,7 @@ render(
         <div>{value}</div>
       </div>
     ))}
-  </Table>
+  </Table>,
 );
 ```
 

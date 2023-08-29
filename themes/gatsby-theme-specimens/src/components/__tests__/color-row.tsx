@@ -1,14 +1,18 @@
 /**
- * @vitest-environment happy-dom
+ * @vitest-environment jsdom
  */
 
-import { describe, it, expect, vi } from "vitest"
+import { describe, it, expect, vi, afterEach } from "vitest"
 import * as React from "react"
-import { render } from "@testing-library/react"
+import { render, cleanup } from "@testing-library/react"
 import ColorRow from "../color-row"
 
 // @ts-ignore
 global.IS_REACT_ACT_ENVIRONMENT = true
+
+afterEach(() => {
+  cleanup()
+})
 
 vi.mock(`../../hooks/useSpecimensConfig`, () => ({
   default: vi.fn(() => ({

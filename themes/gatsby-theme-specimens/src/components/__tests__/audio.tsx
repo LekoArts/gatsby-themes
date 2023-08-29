@@ -1,29 +1,33 @@
 /**
- * @vitest-environment happy-dom
+ * @vitest-environment jsdom
  */
 
-import { describe, it, expect } from "vitest"
+import { describe, it, expect, afterEach } from "vitest"
 import * as React from "react"
-import { render } from "@testing-library/react"
+import { render, cleanup } from "@testing-library/react"
 import Audio from "../audio"
 
 // @ts-ignore
 global.IS_REACT_ACT_ENVIRONMENT = true
+
+afterEach(() => {
+  cleanup()
+})
 
 describe(`Audio`, () => {
   it(`should display with standard values`, () => {
     const { getByLabelText, container } = render(<Audio src="sounds/wingardium-leviosa.mp3" />)
 
     expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`))
-    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`)).not.toHaveAttribute(`autoplay`)
-    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`)).not.toHaveAttribute(`loop`)
+    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`).getAttribute(`autoplay`)).toBe(null)
+    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`).getAttribute(`loop`)).toBe(null)
     expect(container.querySelector(`[data-name="audio-name"]`)).toBe(null)
   })
   it(`should take audio props`, () => {
     const { getByLabelText } = render(<Audio src="sounds/wingardium-leviosa.mp3" autoplay loop />)
 
-    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`)).toHaveAttribute(`autoplay`)
-    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`)).toHaveAttribute(`loop`)
+    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`).getAttribute(`autoplay`)).toBe(``)
+    expect(getByLabelText(`Audio file: sounds/wingardium-leviosa.mp3`).getAttribute(`loop`)).toBe(``)
   })
   it(`should take name and description props`, () => {
     const { getByText, getByLabelText } = render(
