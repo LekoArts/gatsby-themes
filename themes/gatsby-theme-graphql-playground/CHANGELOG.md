@@ -1,5 +1,16 @@
 # Change Log
 
+## 5.1.3
+
+### Patch Changes
+
+- [#1217](https://github.com/LekoArts/gatsby-themes/pull/1217) [`ae5a3477`](https://github.com/LekoArts/gatsby-themes/commit/ae5a3477d372f10f2e9973ef23cd912f2213441f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update minor and patch dependencies for gatsby-theme-graphql-playground
+
+- [`5393b80b`](https://github.com/LekoArts/gatsby-themes/commit/5393b80b41b5291b35573a89926b8a8d1945e327) Thanks [@LekoArts](https://github.com/LekoArts)! - Update unified and unist-util-visit dependencies
+
+- Updated dependencies [[`5393b80b`](https://github.com/LekoArts/gatsby-themes/commit/5393b80b41b5291b35573a89926b8a8d1945e327)]:
+  - @lekoarts/themes-utils@3.0.1
+
 ## 5.1.2
 
 ### Patch Changes
