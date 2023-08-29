@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.2.18
+
+### Patch Changes
+
+- [#1224](https://github.com/LekoArts/gatsby-themes/pull/1224) [`9be65d4f`](https://github.com/LekoArts/gatsby-themes/commit/9be65d4f39e02082763ffda763cb2537f93acf37) Thanks [@LekoArts](https://github.com/LekoArts)! - Update URLs of deployed example
+
+- Updated dependencies [[`9be65d4f`](https://github.com/LekoArts/gatsby-themes/commit/9be65d4f39e02082763ffda763cb2537f93acf37)]:
+  - @lekoarts/gatsby-theme-styleguide@5.1.1
+
 ## 0.2.17
 
 ### Patch Changes
