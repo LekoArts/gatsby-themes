@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "jsx": "preserve",
-    "lib": ["dom", "esnext"],
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
+    "jsx": "react",
+    "lib": ["dom", "es2020"],
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
