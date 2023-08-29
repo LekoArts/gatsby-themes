@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.4
+
+### Patch Changes
+
+- [#1224](https://github.com/LekoArts/gatsby-themes/pull/1224) [`9be65d4f`](https://github.com/LekoArts/gatsby-themes/commit/9be65d4f39e02082763ffda763cb2537f93acf37) Thanks [@LekoArts](https://github.com/LekoArts)! - Update URLs of deployed example
+
 ## 5.1.3
 
 ### Patch Changes
