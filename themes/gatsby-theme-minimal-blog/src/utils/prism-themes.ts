@@ -1,7 +1,7 @@
-import github from "prism-react-renderer/themes/github"
-import vsDark from "prism-react-renderer/themes/vsDark"
+import { themes } from "prism-react-renderer"
 import { themeWithCssVariables } from "./prism-utils"
 
+const { github, vsDark } = themes
 const { theme: lightTheme, variables: lightThemeVars } = themeWithCssVariables(github)
 const { theme: darkTheme, variables: darkThemeVars } = themeWithCssVariables(vsDark)
 
