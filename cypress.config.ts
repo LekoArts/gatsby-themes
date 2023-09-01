@@ -8,6 +8,6 @@ export default defineConfig({
     viewportWidth: 1440,
     chromeWebSecurity: false,
     projectId: `546tyx`,
-    videoUploadOnPasses: false,
+    video: false,
   },
 })
