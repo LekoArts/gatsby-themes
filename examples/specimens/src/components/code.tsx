@@ -1,8 +1,7 @@
 /* eslint react/destructuring-assignment: 0 */
 /** @jsx jsx */
 import { jsx, ThemeUIStyleObject } from "theme-ui"
-import Highlight, { defaultProps, Language } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/vsDark"
+import { Highlight, themes } from "prism-react-renderer"
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live"
 import { useMDXComponents } from "@mdx-js/react"
 import { normalizeThemeUIColors, filterStyles } from "@lekoarts/gatsby-theme-specimens"
@@ -50,7 +49,7 @@ const Code = ({ codeString, language, live, noInline }: ICodeProps) => {
     return (
       <LiveProvider
         code={codeString}
-        theme={theme}
+        theme={themes.vsDark}
         noInline={noInline || false}
         scope={{
           Alert,
@@ -82,7 +81,7 @@ const Code = ({ codeString, language, live, noInline }: ICodeProps) => {
     )
   }
   return (
-    <Highlight {...defaultProps} code={codeString} language={language} theme={theme}>
+    <Highlight code={codeString} language={language} theme={themes.vsDark}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={className} style={style}>
           {tokens.map((line, i) => (

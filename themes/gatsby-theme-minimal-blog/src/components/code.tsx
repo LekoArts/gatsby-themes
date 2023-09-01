@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useColorMode } from "theme-ui"
-import Highlight, { defaultProps } from "prism-react-renderer"
+import { Highlight } from "prism-react-renderer"
 import { calculateLinesToHighlight, getLanguage, GetLanguageInput } from "@lekoarts/themes-utils"
 import Copy from "./copy"
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
@@ -31,7 +31,6 @@ const Code = ({
 
   return (
     <Highlight
-      {...defaultProps}
       code={codeString}
       // @ts-ignore
       language={language}
