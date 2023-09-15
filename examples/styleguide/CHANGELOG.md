@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.2.19
+
+### Patch Changes
+
+- [`409bba45`](https://github.com/LekoArts/gatsby-themes/commit/409bba451d8637d04de2efc8199fa662a2595c68) Thanks [@LekoArts](https://github.com/LekoArts)! - Remove link to my Patreon page. To simplify things I disabled my Patreon. If you want to support my OSS work, please consider using GitHub sponsors or Ko-fi. Thanks!
+
+- Updated dependencies [[`409bba45`](https://github.com/LekoArts/gatsby-themes/commit/409bba451d8637d04de2efc8199fa662a2595c68)]:
+  - @lekoarts/gatsby-theme-styleguide@5.1.2
+
 ## 0.2.18
 
 ### Patch Changes
