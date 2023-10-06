@@ -23,7 +23,7 @@ jobs:
         containers: [cara, emilia, emma, graphql-playground, jodie, minimal-blog, status-dashboard, styleguide]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Cypress Test
         uses: cypress-io/github-action@v4
         with:
