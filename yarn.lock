@@ -3071,7 +3071,7 @@ __metadata:
   resolution: "@lekoarts/rehype-meta-as-attributes@workspace:packages/rehype-meta-as-attributes"
   dependencies:
     tsup: ^7.2.0
-    unified: ^11.0.2
+    unified: ^11.0.4
     unist-util-visit: ^5.0.0
   languageName: unknown
   linkType: soft
@@ -5722,13 +5722,6 @@ __metadata:
     "@typescript-eslint/types": 6.9.1
     eslint-visitor-keys: ^3.4.1
   checksum: 4262055a71d9f54d576df915a80050ad1ad01ef13301e67a1494ca34712a73b9f31f0d06830c582d8dd7483681368aa769575f9db03cb5a8e910efc435f0e78a
-  languageName: node
-  linkType: hard
-
-"@ungap/structured-clone@npm:^1.0.0":
-  version: 1.2.0
-  resolution: "@ungap/structured-clone@npm:1.2.0"
-  checksum: 4f656b7b4672f2ce6e272f2427d8b0824ed11546a601d8d5412b9d7704e83db38a8d9f402ecdf2b9063fc164af842ad0ec4a55819f621ed7e7ea4d1efcc74524
   languageName: node
   linkType: hard
 
@@ -22342,18 +22335,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unified@npm:^11.0.2":
-  version: 11.0.2
-  resolution: "unified@npm:11.0.2"
+"unified@npm:^11.0.4":
+  version: 11.0.4
+  resolution: "unified@npm:11.0.4"
   dependencies:
     "@types/unist": ^3.0.0
-    "@ungap/structured-clone": ^1.0.0
     bail: ^2.0.0
     devlop: ^1.0.0
+    extend: ^3.0.0
     is-plain-obj: ^4.0.0
     trough: ^2.0.0
     vfile: ^6.0.0
-  checksum: 51a7a61116d69a1ab74d15ebb2da3c9e7bc112e95242d88dc14bb8c025420a2eaf00416890670f755d1c157cdb54adb9be955f8f2813f8efb3e230e06d071d1b
+  checksum: cfb023913480ac2bd5e787ffb8c27782c43e6be4a55f8f1c288233fce46a7ebe7718ccc5adb80bf8d56b7ef85f5fc32239c7bfccda006f9f2382e0cc2e2a77e4
   languageName: node
   linkType: hard
 
