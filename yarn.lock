@@ -2621,9 +2621,9 @@ __metadata:
     "@react-spring/web": "npm:^9.7.3"
     "@theme-ui/mdx": "npm:~0.15.3"
     "@theme-ui/preset-tailwind": "npm:0.15.3"
-    gatsby-plugin-mdx: "npm:^5.12.0"
+    gatsby-plugin-mdx: "npm:^5.12.3"
     gatsby-plugin-theme-ui: "npm:~0.15.3"
-    gatsby-source-filesystem: "npm:^5.12.0"
+    gatsby-source-filesystem: "npm:^5.12.1"
     theme-ui: "npm:~0.15.3"
   peerDependencies:
     gatsby: ^5.5.0
@@ -11560,9 +11560,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-mdx@npm:^5.12.0":
-  version: 5.12.0
-  resolution: "gatsby-plugin-mdx@npm:5.12.0"
+"gatsby-plugin-mdx@npm:^5.12.0, gatsby-plugin-mdx@npm:^5.12.3":
+  version: 5.12.3
+  resolution: "gatsby-plugin-mdx@npm:5.12.3"
   dependencies:
     "@mdx-js/mdx": "npm:^2.3.0"
     acorn: "npm:^8.8.2"
@@ -11571,8 +11571,8 @@ __metadata:
     deepmerge: "npm:^4.3.1"
     estree-util-build-jsx: "npm:^2.2.2"
     fs-extra: "npm:^11.1.1"
-    gatsby-core-utils: "npm:^4.12.0"
-    gatsby-plugin-utils: "npm:^4.12.0"
+    gatsby-core-utils: "npm:^4.12.1"
+    gatsby-plugin-utils: "npm:^4.12.3"
     gray-matter: "npm:^4.0.3"
     mdast-util-mdx: "npm:^2.0.1"
     mdast-util-to-hast: "npm:^10.2.0"
@@ -11589,7 +11589,7 @@ __metadata:
     gatsby-source-filesystem: ^5.0.0-next
     react: ^18.0.0 || ^0.0.0
     react-dom: ^18.0.0 || ^0.0.0
-  checksum: fa6468d717651ea1d3fdc01eb7dcd3b288acd173d952d0e1002834162f94df5b1a1f106c352543988983027d6088a812db643d1a3d119df4e7f85d54d44a7d3b
+  checksum: 7abf51c093526a79f89a7d53657c85f525bf8e6d3c4d5f85a6cc0ce0d098d523eb7f61230d8e3f83da59528b19c8af933cf1156f3db2277019afdbfce34874f3
   languageName: node
   linkType: hard
 
@@ -11782,22 +11782,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^5.12.0":
-  version: 5.12.0
-  resolution: "gatsby-source-filesystem@npm:5.12.0"
+"gatsby-source-filesystem@npm:^5.12.0, gatsby-source-filesystem@npm:^5.12.1":
+  version: 5.12.1
+  resolution: "gatsby-source-filesystem@npm:5.12.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     chokidar: "npm:^3.5.3"
     file-type: "npm:^16.5.4"
     fs-extra: "npm:^11.1.1"
-    gatsby-core-utils: "npm:^4.12.0"
+    gatsby-core-utils: "npm:^4.12.1"
     mime: "npm:^3.0.0"
     pretty-bytes: "npm:^5.6.0"
     valid-url: "npm:^1.0.9"
     xstate: "npm:^4.38.0"
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 9e07335bb7dea2eef26002c1da3a373e7232d7a8ffbe851b5340e41a21703d0696fbc9d5fcf08e07b40bd50ac4ca74b8185b1fc1f27749effce19e30ce647607
+  checksum: 3109267e9fa295a71d1e1a7305c5b166a07f2c5dde071aec657f25a49f16fade257fb7fa7964fa9dae1c2ee994661f3d150708bb25c3106c2f19f79ceab2ec5d
   languageName: node
   linkType: hard
 
