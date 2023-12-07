@@ -61,7 +61,7 @@ const buttonBaseStyles = {
 } as const
 
 const FallbackIcon = () => (
-  <button type="button" sx={buttonBaseStyles}>
+  <button type="button" sx={buttonBaseStyles} aria-label="Color mode toggle">
     <div
       sx={{
         ...iconBaseStyles,

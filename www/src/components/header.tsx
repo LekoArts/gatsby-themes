@@ -47,7 +47,7 @@ const Header = () => {
                 ml: 4,
                 "&:hover,&:focus": { boxShadow: `0 0 0 2px` },
               }}
-              title="Change color mode"
+              aria-label="Change color mode"
               onClick={cycleMode}
             >
               <ThemeSwitch />
