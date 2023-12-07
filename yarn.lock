@@ -2760,7 +2760,7 @@ __metadata:
     "@lekoarts/gatsby-theme-jodie-core": "npm:^5.1.4"
     "@theme-ui/mdx": "npm:~0.15.3"
     "@theme-ui/preset-tailwind": "npm:0.15.3"
-    gatsby-plugin-image: "npm:^3.12.0"
+    gatsby-plugin-image: "npm:^3.12.3"
     gatsby-plugin-theme-ui: "npm:~0.15.3"
     polished: "npm:^4.2.2"
     react-helmet: "npm:^6.1.0"
@@ -6570,6 +6570,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"b4a@npm:^1.6.4":
+  version: 1.6.4
+  resolution: "b4a@npm:1.6.4"
+  checksum: a0af707430c3643fd8d9418c732849d3626f1c9281489e021fcad969fb4808fb9f67b224de36b59c9c3b5a13d853482fee0c0eb53f7aec12d540fa67f63648b6
+  languageName: node
+  linkType: hard
+
 "babel-code-frame@npm:^6.26.0":
   version: 6.26.0
   resolution: "babel-code-frame@npm:6.26.0"
@@ -6679,17 +6686,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-remove-graphql-queries@npm:^5.12.0":
-  version: 5.12.0
-  resolution: "babel-plugin-remove-graphql-queries@npm:5.12.0"
+"babel-plugin-remove-graphql-queries@npm:^5.12.0, babel-plugin-remove-graphql-queries@npm:^5.12.1":
+  version: 5.12.1
+  resolution: "babel-plugin-remove-graphql-queries@npm:5.12.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     "@babel/types": "npm:^7.20.7"
-    gatsby-core-utils: "npm:^4.12.0"
+    gatsby-core-utils: "npm:^4.12.1"
   peerDependencies:
     "@babel/core": ^7.0.0
     gatsby: ^5.0.0-next
-  checksum: 585cfd1421d4bc69b02696c7ed55a3c2f9b2ecada043e09860c07d335f85ed3ec6e96e4d912349dce31d6ddeb0b45888363d9b1e9eec22ea4ef5694c544c92df
+  checksum: 74c9593fd8ee2441f85a8f96f101131baddcc717aac542d21a91b72e54af8bd309055814f927f8edcbfc5bd5b0e7e1f02e59c8cf5a49bc8b4a2d5cf4f31a1b92
   languageName: node
   linkType: hard
 
@@ -8979,10 +8986,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-libc@npm:^2.0.0, detect-libc@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "detect-libc@npm:2.0.1"
-  checksum: 153009d0ce4073ea885a97641aa1cc0327ff168b971fa3c770958345ad3ead4618f3747334435dc8edff32c0f56d8ba16dcf5271543c99b24af532b1cf84a61d
+"detect-libc@npm:^2.0.0, detect-libc@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "detect-libc@npm:2.0.2"
+  checksum: a9f4ffcd2701525c589617d98afe5a5d0676c8ea82bcc4ed6f3747241b79f781d36437c59a5e855254c864d36a3e9f8276568b6b531c28d6e53b093a15703f11
   languageName: node
   linkType: hard
 
@@ -10678,6 +10685,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-fifo@npm:^1.1.0, fast-fifo@npm:^1.2.0":
+  version: 1.3.2
+  resolution: "fast-fifo@npm:1.3.2"
+  checksum: d53f6f786875e8b0529f784b59b4b05d4b5c31c651710496440006a398389a579c8dbcd2081311478b5bf77f4b0b21de69109c5a4eabea9d8e8783d1eb864e4c
+  languageName: node
+  linkType: hard
+
 "fast-glob@npm:^3.2.9, fast-glob@npm:^3.3.0":
   version: 3.3.1
   resolution: "fast-glob@npm:3.3.1"
@@ -11340,9 +11354,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^4.12.0":
-  version: 4.12.0
-  resolution: "gatsby-core-utils@npm:4.12.0"
+"gatsby-core-utils@npm:^4.12.0, gatsby-core-utils@npm:^4.12.1":
+  version: 4.12.1
+  resolution: "gatsby-core-utils@npm:4.12.1"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     ci-info: "npm:2.0.0"
@@ -11360,7 +11374,7 @@ __metadata:
     resolve-from: "npm:^5.0.0"
     tmp: "npm:^0.2.1"
     xdg-basedir: "npm:^4.0.0"
-  checksum: 139eee962cbf883cf651c144ab1e5dac2e6bfedfab1b2d18ec5fe20067d7c75aa8703e6e0b0b1acee462f4119e9d01bc5816d7c232ecea7251480aef1c663946
+  checksum: d81a07e0413e651a4491fa9380b84cfff615633639393fe46498c235a8c5737f6e32236412b9766701c824f07278c942e4ac0316c888e818629836394d6952e6
   languageName: node
   linkType: hard
 
@@ -11490,22 +11504,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-image@npm:^3.12.0":
-  version: 3.12.0
-  resolution: "gatsby-plugin-image@npm:3.12.0"
+"gatsby-plugin-image@npm:^3.12.0, gatsby-plugin-image@npm:^3.12.3":
+  version: 3.12.3
+  resolution: "gatsby-plugin-image@npm:3.12.3"
   dependencies:
     "@babel/code-frame": "npm:^7.18.6"
     "@babel/parser": "npm:^7.20.13"
     "@babel/runtime": "npm:^7.20.13"
     "@babel/traverse": "npm:^7.20.13"
     babel-jsx-utils: "npm:^1.1.0"
-    babel-plugin-remove-graphql-queries: "npm:^5.12.0"
+    babel-plugin-remove-graphql-queries: "npm:^5.12.1"
     camelcase: "npm:^6.3.0"
     chokidar: "npm:^3.5.3"
     common-tags: "npm:^1.8.2"
     fs-extra: "npm:^11.1.1"
-    gatsby-core-utils: "npm:^4.12.0"
-    gatsby-plugin-utils: "npm:^4.12.0"
+    gatsby-core-utils: "npm:^4.12.1"
+    gatsby-plugin-utils: "npm:^4.12.3"
     objectFitPolyfill: "npm:^2.3.5"
     prop-types: "npm:^15.8.1"
   peerDependencies:
@@ -11520,7 +11534,7 @@ __metadata:
       optional: true
     gatsby-source-filesystem:
       optional: true
-  checksum: 8ec8ba8e8388b9b8f373de5fb9118931714fc86b59f77134b4c7df30b6892e14dba1729675e7c998a679b123d1f1fa9de242b7b0a8cd3f8403bc3f879e808fbd
+  checksum: 34424dc638cb736d7a4b0e362bc8e3ede320f38e036972bc4600b53f6f0f3d844719e0bc5df320c09c36abd743e23e63705290cc8259feb70664655faffb2c3f
   languageName: node
   linkType: hard
 
@@ -11664,15 +11678,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-utils@npm:^4.12.0":
-  version: 4.12.0
-  resolution: "gatsby-plugin-utils@npm:4.12.0"
+"gatsby-plugin-utils@npm:^4.12.0, gatsby-plugin-utils@npm:^4.12.3":
+  version: 4.12.3
+  resolution: "gatsby-plugin-utils@npm:4.12.3"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     fastq: "npm:^1.15.0"
     fs-extra: "npm:^11.1.1"
-    gatsby-core-utils: "npm:^4.12.0"
-    gatsby-sharp: "npm:^1.12.0"
+    gatsby-core-utils: "npm:^4.12.1"
+    gatsby-sharp: "npm:^1.12.1"
     graphql-compose: "npm:^9.0.10"
     import-from: "npm:^4.0.0"
     joi: "npm:^17.9.2"
@@ -11680,7 +11694,7 @@ __metadata:
   peerDependencies:
     gatsby: ^5.0.0-next
     graphql: ^16.0.0
-  checksum: 604cded5e27244e401207f5257624fc7b8843a7011bdba995164fcb83230ad2282cda9c44f43b683e7f45d2e8bb02be377aac7ddf2cd7feffffac04905eca4af
+  checksum: 99ba5095dba027f188674cd017da2ee713922330cfd3682034245bcbb763ec6fcfb4679c97681aa20e80b4eef89603e3d4c98cab725b91d2cf6abf19b5fafc49
   languageName: node
   linkType: hard
 
@@ -11741,12 +11755,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-sharp@npm:^1.12.0":
-  version: 1.12.0
-  resolution: "gatsby-sharp@npm:1.12.0"
+"gatsby-sharp@npm:^1.12.0, gatsby-sharp@npm:^1.12.1":
+  version: 1.12.1
+  resolution: "gatsby-sharp@npm:1.12.1"
   dependencies:
-    sharp: "npm:^0.32.1"
-  checksum: d00d2de36aadfc0fb92058eb1e7f92cf7cd2d489cdebc658505943ba61a610864d6d6290fa16ddfa231f0daaffb737843c6d8076cc16fcbd25d0bf239fc3aa24
+    sharp: "npm:^0.32.6"
+  checksum: 3840133ec2bc78052dfdc6e93b6d5576af41e8a826ae1486a16afe451fca6daec00c0e0385fe99783344215f2df72cc985b4c7cd8d23b9fe3d7765c0afe83f88
   languageName: node
   linkType: hard
 
@@ -19051,6 +19065,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"queue-tick@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "queue-tick@npm:1.0.1"
+  checksum: 0db998e2c9b15215317dbcf801e9b23e6bcde4044e115155dae34f8e7454b9a783f737c9a725528d677b7a66c775eb7a955cf144fe0b87f62b575ce5bfd515a9
+  languageName: node
+  linkType: hard
+
 "quick-lru@npm:^4.0.1":
   version: 4.0.1
   resolution: "quick-lru@npm:4.0.1"
@@ -20256,7 +20277,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.0, semver@npm:^7.5.3, semver@npm:^7.5.4":
+"semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.3, semver@npm:^7.5.4":
   version: 7.5.4
   resolution: "semver@npm:7.5.4"
   dependencies:
@@ -20366,20 +20387,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.32.1":
-  version: 0.32.1
-  resolution: "sharp@npm:0.32.1"
+"sharp@npm:^0.32.1, sharp@npm:^0.32.6":
+  version: 0.32.6
+  resolution: "sharp@npm:0.32.6"
   dependencies:
     color: "npm:^4.2.3"
-    detect-libc: "npm:^2.0.1"
+    detect-libc: "npm:^2.0.2"
     node-addon-api: "npm:^6.1.0"
     node-gyp: "npm:latest"
     prebuild-install: "npm:^7.1.1"
-    semver: "npm:^7.5.0"
+    semver: "npm:^7.5.4"
     simple-get: "npm:^4.0.1"
-    tar-fs: "npm:^2.1.1"
+    tar-fs: "npm:^3.0.4"
     tunnel-agent: "npm:^0.6.0"
-  checksum: ada9b557fd1b51d37ee69a02a36c2d5fca390355005ef80193e26df732ee542319d40b5e3acb4401d36615c3e471d76a7eb8aafb4b9ef101d677601814b8a508
+  checksum: f6a756fec5051ef2f9341e0543cde1da4e822982dd5398010baad92e2262bd177e08b753eb19b2fbee30f2fcb0e8756f24088fafc48293a364e9a8f8dc65a300
   languageName: node
   linkType: hard
 
@@ -21037,6 +21058,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"streamx@npm:^2.15.0":
+  version: 2.15.5
+  resolution: "streamx@npm:2.15.5"
+  dependencies:
+    fast-fifo: "npm:^1.1.0"
+    queue-tick: "npm:^1.0.1"
+  checksum: 7998d1fa3324131ed94efc4a4e8b22e0f60267b21d8f8fac8c605eaa1a6d6358adbc38c35b407be0eb8cc09a223c641962afb0db29ecbe92118242118946d93c
+  languageName: node
+  linkType: hard
+
 "strict-uri-encode@npm:^2.0.0":
   version: 2.0.0
   resolution: "strict-uri-encode@npm:2.0.0"
@@ -21586,7 +21617,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar-fs@npm:^2.0.0, tar-fs@npm:^2.1.1":
+"tar-fs@npm:^2.0.0":
   version: 2.1.1
   resolution: "tar-fs@npm:2.1.1"
   dependencies:
@@ -21595,6 +21626,17 @@ __metadata:
     pump: "npm:^3.0.0"
     tar-stream: "npm:^2.1.4"
   checksum: 871d26a934bfb7beeae4c4d8a09689f530b565f79bd0cf489823ff0efa3705da01278160da10bb006d1a793fa0425cf316cec029b32a9159eacbeaff4965fb6d
+  languageName: node
+  linkType: hard
+
+"tar-fs@npm:^3.0.4":
+  version: 3.0.4
+  resolution: "tar-fs@npm:3.0.4"
+  dependencies:
+    mkdirp-classic: "npm:^0.5.2"
+    pump: "npm:^3.0.0"
+    tar-stream: "npm:^3.1.5"
+  checksum: 120f026d891e5b4f7147a5ae5816e3a9b7f2c5b4ca61714dab3fe1244961607dccca40c11cafc584e625838c57d1308da5bb28b13d70b85ab566bc4c9f1c88b1
   languageName: node
   linkType: hard
 
@@ -21608,6 +21650,17 @@ __metadata:
     inherits: "npm:^2.0.3"
     readable-stream: "npm:^3.1.1"
   checksum: 2f4c910b3ee7196502e1ff015a7ba321ec6ea837667220d7bcb8d0852d51cb04b87f7ae471008a6fb8f5b1a1b5078f62f3a82d30c706f20ada1238ac797e7692
+  languageName: node
+  linkType: hard
+
+"tar-stream@npm:^3.1.5":
+  version: 3.1.6
+  resolution: "tar-stream@npm:3.1.6"
+  dependencies:
+    b4a: "npm:^1.6.4"
+    fast-fifo: "npm:^1.2.0"
+    streamx: "npm:^2.15.0"
+  checksum: 7d52d1a56eb25b8434c9544becb737eb6c4f0ed19d205e739fdd2537ad8d1d623a6c93f7f8e58d9028cb0cdf86c0d8b67164e070cd1702cc78b8ab7cba0f3702
   languageName: node
   linkType: hard
 
