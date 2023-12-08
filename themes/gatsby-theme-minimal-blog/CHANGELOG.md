@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.2.2
+
+### Patch Changes
+
+- [#1246](https://github.com/LekoArts/gatsby-themes/pull/1246) [`514274d`](https://github.com/LekoArts/gatsby-themes/commit/514274d0baccf65d1a4b1c948fb2b855efa1a87b) Thanks [@renovate](https://github.com/apps/renovate)! - Update dependency prism-react-renderer to `^2.3.0`
+
+- Updated dependencies [[`397a2b7`](https://github.com/LekoArts/gatsby-themes/commit/397a2b70b406abbc217339135c0774d3eb54c539)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@6.2.2
+
 ## 6.2.1
 
 ### Patch Changes
