@@ -9,7 +9,7 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
   },
   "include": [
     "./packages/**/*",
@@ -17,7 +17,7 @@
     "./themes/**/src/**/*",
     "./www/src/**/*",
     "./examples/**/src/**/*",
-    "./vitest-setup.ts"
+    "./vitest-setup.ts",
   ],
-  "exclude": ["node_modules", "themes/**/node_modules"]
+  "exclude": ["node_modules", "themes/**/node_modules"],
 }
