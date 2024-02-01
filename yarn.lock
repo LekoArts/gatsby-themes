@@ -2884,7 +2884,7 @@ __metadata:
     "@types/chroma-js": "npm:^2.4.3"
     "@types/fs-extra": "npm:^11.0.4"
     "@types/loadable__component": "npm:^5.13.8"
-    "@types/node": "npm:^18.19.13"
+    "@types/node": "npm:^20.11.15"
     "@types/react": "npm:^18.2.51"
     "@types/react-dom": "npm:^18.2.18"
     "@types/styled-system": "npm:^5.1.22"
@@ -5110,12 +5110,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^18.0.0, @types/node@npm:^18.19.13, @types/node@npm:^18.19.3":
-  version: 18.19.13
-  resolution: "@types/node@npm:18.19.13"
+"@types/node@npm:*, @types/node@npm:>=10.0.0, @types/node@npm:^20.11.15":
+  version: 20.11.15
+  resolution: "@types/node@npm:20.11.15"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/3b909fdf4795f90e59cefd0787db065f11f1ef10983754661202e62e0d76de3668f8b8af00187941134bb2658e71b91a2f7cf0fb35f4f0a1e3fdad2e9006969e
+  checksum: 10c0/7dfab4208fedc02e9584c619551906f46ade7955bb929b1e32e354a50522eb532d6bfb2844fdaad2c8dca03be84a590674460c64cb101e1a33bb318e1ec448d4
   languageName: node
   linkType: hard
 
@@ -5130,6 +5130,15 @@ __metadata:
   version: 17.0.45
   resolution: "@types/node@npm:17.0.45"
   checksum: 10c0/0db377133d709b33a47892581a21a41cd7958f22723a3cc6c71d55ac018121382de42fbfc7970d5ae3e7819dbe5f40e1c6a5174aedf7e7964e9cb8fa72b580b0
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.0.0, @types/node@npm:^18.19.3":
+  version: 18.19.13
+  resolution: "@types/node@npm:18.19.13"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/3b909fdf4795f90e59cefd0787db065f11f1ef10983754661202e62e0d76de3668f8b8af00187941134bb2658e71b91a2f7cf0fb35f4f0a1e3fdad2e9006969e
   languageName: node
   linkType: hard
 
