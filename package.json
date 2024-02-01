@@ -28,7 +28,7 @@
     "version-packages": "changeset version",
     "version-packages:ci": "changeset version && yarn install --mode update-lockfile",
     "release": "yarn packages:build && changeset publish",
-    "prepare": "husky install",
+    "prepare": "husky",
     "update-renovate": "node -r @swc-node/register ./scripts/renovate-config-generator.ts",
     "postinstall": "yarn packages:build"
   },
