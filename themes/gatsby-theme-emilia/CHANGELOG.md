@@ -1,5 +1,14 @@
 # Change Log
 
+## 5.1.6
+
+### Patch Changes
+
+- [#1287](https://github.com/LekoArts/gatsby-themes/pull/1287) [`3a94d50`](https://github.com/LekoArts/gatsby-themes/commit/3a94d5004c50682802b49c12f42827281809284c) Thanks [@renovate](https://github.com/apps/renovate)! - update dependency gatsby-plugin-image
+
+- Updated dependencies [[`134ae5c`](https://github.com/LekoArts/gatsby-themes/commit/134ae5c430ebb9b3cace4bc41bef291a9073eb41)]:
+  - @lekoarts/gatsby-theme-emilia-core@5.1.6
+
 ## 5.1.5
 
 ### Patch Changes
