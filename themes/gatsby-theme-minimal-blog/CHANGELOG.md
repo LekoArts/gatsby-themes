@@ -1,5 +1,14 @@
 # Change Log
 
+## 6.2.3
+
+### Patch Changes
+
+- [#1295](https://github.com/LekoArts/gatsby-themes/pull/1295) [`6412b70`](https://github.com/LekoArts/gatsby-themes/commit/6412b70da2bd886afd6cdff9069cb20a8e03cd46) Thanks [@renovate](https://github.com/apps/renovate)! - update minor and patch dependencies
+
+- Updated dependencies [[`7ab8014`](https://github.com/LekoArts/gatsby-themes/commit/7ab8014ce66e9fef2855780d9a09d708b707842c)]:
+  - @lekoarts/gatsby-theme-minimal-blog-core@6.2.3
+
 ## 6.2.2
 
 ### Patch Changes

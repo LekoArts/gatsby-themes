@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.6
+
+### Patch Changes
+
+- [#1289](https://github.com/LekoArts/gatsby-themes/pull/1289) [`53e20b5`](https://github.com/LekoArts/gatsby-themes/commit/53e20b57f349283d7b838e0a7a708a878d1fb83b) Thanks [@renovate](https://github.com/apps/renovate)! - update minor and patch dependencies
+
 ## 5.1.5
 
 ### Patch Changes
