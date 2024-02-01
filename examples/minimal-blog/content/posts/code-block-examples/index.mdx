@@ -5,7 +5,7 @@ tags:
   - Code
 ---
 
-import SpotifyPlayer from "./SpotifyPlayer";
+import SpotifyPlayer from "./SpotifyPlayer"
 
 Here will a React component go:
 
@@ -49,25 +49,25 @@ A code block with a JSDoc comment, short, and long comment:
  */
 const getValue = (input, rootFontSize = 16) => {
   if (typeof input === `number`) {
-    return input / rootFontSize;
+    return input / rootFontSize
   }
 
-  const isPxValue = input.slice(-2) === `px`;
+  const isPxValue = input.slice(-2) === `px`
 
   if (isPxValue) {
-    return parseFloat(input.slice(0, -2));
+    return parseFloat(input.slice(0, -2))
   }
 
-  return parseFloat(input.slice(0, -3));
-};
+  return parseFloat(input.slice(0, -3))
+}
 
 // This is a little helper function
-const helper = (a, b) => a + b;
+const helper = (a, b) => a + b
 
 // This is also a little helper function but this time with a really long one-line comment that should show some more details
-const morehelper = (a, b) => a * b;
+const morehelper = (a, b) => a * b
 
-export { getValue, helper, morehelper };
+export { getValue, helper, morehelper }
 ```
 
 Normal block without language:
@@ -87,7 +87,7 @@ export default Layout
 Code block with code highlighting:
 
 ```jsx title=src/components/post.jsx highlight=5-7,10
-import * as React from "react";
+import * as React from "react"
 
 const Post = ({ data: { post } }) => (
   <Layout>
@@ -120,9 +120,9 @@ const Post = ({ data: { post } }) => (
       <MDXRenderer>{post.body}</MDXRenderer>
     </section>
   </Layout>
-);
+)
 
-export default Post;
+export default Post
 ```
 
 Code block without title:
@@ -158,11 +158,11 @@ const scream = (input) => window.alert(input)
 Line highlighting without code title:
 
 ```js highlight=2,4-5
-const test = 3;
-const foo = "bar";
-const harry = "potter";
-const hermione = "granger";
-const ron = "weasley";
+const test = 3
+const foo = "bar"
+const harry = "potter"
+const hermione = "granger"
+const ron = "weasley"
 ```
 
 Here will `inline code` go, just inside the text. Wow!
@@ -172,10 +172,10 @@ Code block with line numbers, highlighting, language, and title:
 <div data-testid="code-block">
 
 ```tsx title=src/components/blog.tsx highlight=7-8,19,21 withLineNumbers
-import * as React from "react";
+import * as React from "react"
 
 const Blog = ({ posts }: PostsProps) => {
-  const { tagsPath, basePath } = useSiteMetadata();
+  const { tagsPath, basePath } = useSiteMetadata()
 
   return (
     <Layout>
@@ -183,20 +183,16 @@ const Blog = ({ posts }: PostsProps) => {
         <Heading variant="h2" as="h2">
           Blog
         </Heading>
-        <Styled.a
-          as={Link}
-          sx={{ variant: `links.secondary` }}
-          to={`/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`)}
-        >
+        <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={`/${basePath}/${tagsPath}`.replace(/\/\/+/g, `/`)}>
           View all tags
         </Styled.a>
       </Flex>
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
     </Layout>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
 ```
 
 </div>
