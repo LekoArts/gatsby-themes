@@ -6,8 +6,8 @@ export const withDefaults = (themeOptions) => {
   const pagesPath = themeOptions.pagesPath || `content/pages`
   const formatString = themeOptions.formatString || `DD.MM.YYYY`
   const navigation = themeOptions.navigation || []
-  const homepagePageLimit = themeOptions.homepagePageLimit || 9999
-  const homepageProjectLimit = themeOptions.homepageProjectLimit || 3
+  const homepagePageLimit = themeOptions.homepagePageLimit ?? 9999
+  const homepageProjectLimit = themeOptions.homepageProjectLimit ?? 3
   const mdx = typeof themeOptions.mdx === `undefined` ? true : themeOptions.mdx
   const sharp = typeof themeOptions.sharp === `undefined` ? true : themeOptions.sharp
 
