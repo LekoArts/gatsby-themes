@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.7
+
+### Patch Changes
+
+- [#1311](https://github.com/LekoArts/gatsby-themes/pull/1311) [`93f8009`](https://github.com/LekoArts/gatsby-themes/commit/93f8009199e7db9bd159c33a20839388f6c45dc0) Thanks [@vhermecz](https://github.com/vhermecz)! - Allow `0` for `homepagePageLimit` and `homepageProjectLimit` theme options. Previously that value would have no effect and the default value was used.
+
 ## 5.1.6
 
 ### Patch Changes
