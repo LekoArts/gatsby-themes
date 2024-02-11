@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.8
+
+### Patch Changes
+
+- [`3cc2d8c`](https://github.com/LekoArts/gatsby-themes/commit/3cc2d8c2482a3ad00ae59b4e96b97c10c8cbfa19) Thanks [@LekoArts](https://github.com/LekoArts)! - Fix bug preventing someone from setting the `mdx` option to `false`
+
 ## 5.1.7
 
 ### Patch Changes
