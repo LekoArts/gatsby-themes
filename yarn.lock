@@ -2842,7 +2842,7 @@ __metadata:
   resolution: "@lekoarts/gatsby-theme-status-dashboard@workspace:themes/gatsby-theme-status-dashboard"
   dependencies:
     "@emotion/react": "npm:^11.11.4"
-    "@mdx-js/react": "npm:^2.3.0"
+    "@mdx-js/react": "npm:^3.0.1"
     "@theme-ui/mdx": "npm:~0.15.3"
     "@theme-ui/preset-tailwind": "npm:0.15.3"
     gatsby-plugin-theme-ui: "npm:~0.15.3"
@@ -3129,6 +3129,18 @@ __metadata:
   peerDependencies:
     react: ">=16"
   checksum: 10c0/6d647115703dbe258f7fe372499fa8c6fe17a053ff0f2a208111c9973a71ae738a0ed376770445d39194d217e00e1a015644b24f32c2f7cb4f57988de0649b15
+  languageName: node
+  linkType: hard
+
+"@mdx-js/react@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@mdx-js/react@npm:3.0.1"
+  dependencies:
+    "@types/mdx": "npm:^2.0.0"
+  peerDependencies:
+    "@types/react": ">=16"
+    react: ">=16"
+  checksum: 10c0/d210d926ef488d39ad65f04d821936b668eadcdde3b6421e94ec4200ca7ad17f17d24c5cbc543882586af9f08b10e2eea715c728ce6277487945e05c5199f532
   languageName: node
   linkType: hard
 
