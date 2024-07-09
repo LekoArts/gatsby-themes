@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, useColorMode, get, ThemeUICSSObject } from "theme-ui"
 import { Suspense } from "react"
-import { Canvas } from "react-three-fiber"
+import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Shadow } from "@react-three/drei"
 import Model from "../webgl/model"
 

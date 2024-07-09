@@ -19,7 +19,5 @@
 - [Theme UI](https://theme-ui.com/)
 - [Gatsby](https://www.gatsbyjs.com/)
 - [react-responsive](https://github.com/contra/react-responsive)
-- [react-share](https://github.com/nygardk/react-share)
-- [react-three-fiber](https://github.com/drcmda/react-three-fiber)
+- [@react-three/fiber](https://github.com/pmndrs/react-three-fiber)
 - [three](http://threejs.org)
-- [Gatsby Cloud](https://gatsbyjs.com) for CI/CD and Hosting (powered by Fastly)
