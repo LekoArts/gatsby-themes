@@ -1,5 +1,11 @@
 # Change Log
 
+## 5.1.8
+
+### Patch Changes
+
+- [#1340](https://github.com/LekoArts/gatsby-themes/pull/1340) [`5d9c32d`](https://github.com/LekoArts/gatsby-themes/commit/5d9c32dbb2716b9fd8b2ac6d0a64e3c5ea57d1f8) Thanks [@LekoArts](https://github.com/LekoArts)! - Update polished and re-resizable dependency
+
 ## 5.1.6
 
 ### Patch Changes
