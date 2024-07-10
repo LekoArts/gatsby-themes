@@ -3,7 +3,11 @@ title: Query Variables
 ---
 
 ```graphql preview
-query GetBlogPosts($limit: Int, $filter: MarkdownRemarkFilterInput, $sort: MarkdownRemarkSortInput) {
+query GetBlogPosts(
+  $limit: Int
+  $filter: MarkdownRemarkFilterInput
+  $sort: MarkdownRemarkSortInput
+) {
   allMarkdownRemark(limit: $limit, filter: $filter, sort: $sort) {
     edges {
       node {

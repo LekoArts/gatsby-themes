@@ -1,9 +1,9 @@
-import PageLayout from "../components/layout"
-import TableOfContents from "../components/table-of-contents"
-import Seo from "../components/seo"
+import PageLayout from "../components/layout";
+import TableOfContents from "../components/table-of-contents";
+import Seo from "../components/seo";
 
-export const Head = () => <Seo />
-export default PageLayout
+export const Head = () => <Seo />;
+export default PageLayout;
 
 # Specimens for Design Systems
 
@@ -80,8 +80,8 @@ render(
     <Alert type="warning">Gentle warning :)</Alert>
     <Alert type="info">Super helpful information goes here</Alert>
     <Alert type="danger">nooooooooo, not this way</Alert>
-  </React.Fragment>
-)
+  </React.Fragment>,
+);
 ```
 
 ### Audio
@@ -129,9 +129,9 @@ const radii = {
   none: "0",
   sm: "0.5rem",
   md: "1rem",
-}
+};
 
-render(<BorderRadius radii={radii} />)
+render(<BorderRadius radii={radii} />);
 ```
 
 ### Color Families
@@ -163,9 +163,9 @@ const colors = {
     300: `#fdba74`,
     400: `#fb923c`,
   },
-}
+};
 
-render(<ColorFamilies colors={colors} />)
+render(<ColorFamilies colors={colors} />);
 ```
 
 ### Color Row
@@ -200,8 +200,8 @@ render(
     <ColorSwatch color="#2d3748" name="Blueish" />
     <ColorSwatch color="#667eea" name="Swift" minimal />
     <ColorSwatch color="#4fd1c5" name="4" prefix="Teal - " />
-  </React.Fragment>
-)
+  </React.Fragment>,
+);
 ```
 
 ### Download
@@ -249,9 +249,9 @@ const fonts = {
   sans: '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
   serif: 'Georgia, Cambria, "Times New Roman", Times, serif',
   mono: 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
-}
+};
 
-render(<FontFamily fonts={fonts} />)
+render(<FontFamily fonts={fonts} />);
 ```
 
 ### Font Size
@@ -271,9 +271,9 @@ fontSizes: string[] | number[]
 ---
 
 ```jsx live noInline
-const fontSizes = ["0.875rem", "1rem", "1.25rem", "1.5rem"]
+const fontSizes = ["0.875rem", "1rem", "1.25rem", "1.5rem"];
 
-render(<FontSize fontSizes={fontSizes} />)
+render(<FontSize fontSizes={fontSizes} />);
 ```
 
 ### Font Weight
@@ -302,9 +302,9 @@ const fontWeights = {
   semibold: "600",
   bold: "700",
   black: "900",
-}
+};
 
-render(<FontWeight fontWeights={fontWeights} />)
+render(<FontWeight fontWeights={fontWeights} />);
 ```
 
 ### Heading
@@ -323,7 +323,17 @@ You can filter which keys to show by using the helper function `filterStyles({ i
 
 ```jsx live noInline
 const theme = {
-  fontSizes: ["0.875rem", "1rem", "1.25rem", "1.5rem", "1.875rem", "2.25rem", "3rem", "4rem", "4.5rem"],
+  fontSizes: [
+    "0.875rem",
+    "1rem",
+    "1.25rem",
+    "1.5rem",
+    "1.875rem",
+    "2.25rem",
+    "3rem",
+    "4rem",
+    "4.5rem",
+  ],
   lineHeights: {
     heading: "1.25",
   },
@@ -373,7 +383,7 @@ const theme = {
       m: 3,
     },
   },
-}
+};
 
 render(
   <Heading
@@ -382,8 +392,8 @@ render(
       allowed: [`h1`, `h2`],
     })}
     config={theme}
-  />
-)
+  />,
+);
 ```
 
 ### Palette: Color Rows
@@ -409,7 +419,7 @@ const theme = {
   colors: {
     indigo: [null, "#ebf4ff", "#c3dafe", "#a3bffa", "#7f9cf5", "#667eea"],
   },
-}
+};
 
 const orange = [
   {
@@ -420,15 +430,18 @@ const orange = [
     name: "2",
     color: "#fbd38d",
   },
-]
+];
 
 render(
   <React.Fragment>
-    <Palette colors={normalizeThemeUIColors({ colors: theme.colors.indigo })} prefix="Indigo - " />
+    <Palette
+      colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
+      prefix="Indigo - "
+    />
     <h4>Orange</h4>
     <Palette colors={orange} />
-  </React.Fragment>
-)
+  </React.Fragment>,
+);
 ```
 
 ### Palette: Color Swatches
@@ -461,9 +474,15 @@ const theme = {
     text: `#2d3748`,
     indigo: [null, "#ebf4ff", "#c3dafe", "#a3bffa", "#7f9cf5", "#667eea"],
   },
-}
+};
 
-render(<Palette colors={normalizeThemeUIColors({ colors: theme.colors })} minimal mode="swatch" />)
+render(
+  <Palette
+    colors={normalizeThemeUIColors({ colors: theme.colors })}
+    minimal
+    mode="swatch"
+  />,
+);
 ```
 
 ### Sizes
@@ -497,18 +516,22 @@ const sizes = {
   10: "2.5rem",
   12: "3rem",
   16: "4rem",
-}
+};
 
 render(
-  <Table columns={[`120px 1fr`]} titles={[`Token`, `Value`]} className="sizes-table">
+  <Table
+    columns={[`120px 1fr`]}
+    titles={[`Token`, `Value`]}
+    className="sizes-table"
+  >
     {Object.entries(sizes).map(([key, value]) => (
       <div key={key}>
         <div>{key}</div>
         <div>{value}</div>
       </div>
     ))}
-  </Table>
-)
+  </Table>,
+);
 ```
 
 ### Shadows
@@ -534,9 +557,9 @@ const shadows = {
   default: `0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)`,
   xl: `0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)`,
   "2xl": `0 25px 50px -12px rgba(0, 0, 0, 0.25)`,
-}
+};
 
-render(<Shadow shadows={shadows} />)
+render(<Shadow shadows={shadows} />);
 ```
 
 ### Space
@@ -554,9 +577,9 @@ space: string[] | number[]
 ---
 
 ```jsx live noInline
-const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`]
+const space = [0, `0.25rem`, `0.5rem`, `1rem`, `2rem`, `4rem`, `8rem`];
 
-render(<Space space={space} />)
+render(<Space space={space} />);
 ```
 
 ### Video
@@ -573,5 +596,9 @@ Available props:
 - autoplay (`boolean`) (optional) (Default: false)
 
 ```jsx live
-<Video name="LekoArts Themes Model" src="videos/themes_model.mp4" poster="videos/themes_model_poster.png" />
+<Video
+  name="LekoArts Themes Model"
+  src="videos/themes_model.mp4"
+  poster="videos/themes_model_poster.png"
+/>
 ```

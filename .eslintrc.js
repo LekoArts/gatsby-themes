@@ -138,6 +138,7 @@ module.exports = {
         "import/no-named-as-default-member": 0,
         "@typescript-eslint/no-unused-vars": 0,
         "react/no-children-prop": 0,
+        "prettier/prettier": 0,
       },
     },
   ],

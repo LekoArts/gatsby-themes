@@ -1,10 +1,13 @@
-import { normalizeThemeUIColors, filterStyles } from "@lekoarts/gatsby-theme-specimens"
-import { theme } from "../../theme"
-import PageLayout from "../components/layout"
-import Seo from "../components/seo"
+import {
+  normalizeThemeUIColors,
+  filterStyles,
+} from "@lekoarts/gatsby-theme-specimens";
+import { theme } from "../../theme";
+import PageLayout from "../components/layout";
+import Seo from "../components/seo";
 
-export const Head = () => <Seo />
-export default PageLayout
+export const Head = () => <Seo />;
+export default PageLayout;
 
 # Specimens for Design Systems (Preview)
 
@@ -79,15 +82,27 @@ Go back to the [**homepage**](/) to see installation and usage instructions of [
 
 ## Palette: Color Rows
 
-<Palette colors={normalizeThemeUIColors({ colors: theme.colors.indigo })} prefix="Indigo - " />
+<Palette
+  colors={normalizeThemeUIColors({ colors: theme.colors.indigo })}
+  prefix="Indigo - "
+/>
 
 ## Palette: Color Swatches
 
-<Palette colors={normalizeThemeUIColors({ colors: theme.colors })} single minimal mode="swatch" />
+<Palette
+  colors={normalizeThemeUIColors({ colors: theme.colors })}
+  single
+  minimal
+  mode="swatch"
+/>
 
 ## Sizes
 
-<Table columns={[`120px 1fr`]} titles={[`Token`, `Value`]} className="sizes-table">
+<Table
+  columns={[`120px 1fr`]}
+  titles={[`Token`, `Value`]}
+  className="sizes-table"
+>
   {Object.entries(theme.sizes).map(([key, value]) => (
     <div key={key}>
       <div>{key}</div>
@@ -106,4 +121,8 @@ Go back to the [**homepage**](/) to see installation and usage instructions of [
 
 ## Video
 
-<Video name="LekoArts Intro" src="../videos/intro.mp4" poster="../videos/intro_poster.jpg" />
+<Video
+  name="LekoArts Intro"
+  src="../videos/intro.mp4"
+  poster="../videos/intro_poster.jpg"
+/>
