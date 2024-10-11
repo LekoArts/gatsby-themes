@@ -46,6 +46,10 @@ const config = (themeOptions) => {
                 backgroundColor: `transparent`,
               },
             },
+            {
+              resolve: `gatsby-remark-copy-linked-files`,
+              options: { destinationDir: `static`, },
+            },
           ],
         },
       },
