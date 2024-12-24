@@ -64,7 +64,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
   })
   it(`should have social media links`, () => {
     cy.get(`header`).within(() => {
-      cy.findByText(/Twitter/i).should(`have.attr`, `href`, `https://twitter.com/lekoarts_de`)
+      cy.findByText(/Bluesky/i).should(`have.attr`, `href`, `https://bsky.app/profile/lekoarts.de`)
     })
   })
   it(`should render the hero`, () => {
