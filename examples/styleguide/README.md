@@ -17,9 +17,9 @@
   <a href="https://www.lekoarts.de?utm_source=styleguide&utm_medium=Starter">
     <img alt="Website" src="https://img.shields.io/badge/-website-blue">
   </a>
-  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-    <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-  </a>
+<a href="https://bsky.app/profile/lekoarts.de">
+  <img src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff" alt="Follow @lekoarts.de" />
+</a>
 </p>
 
 Instantly create a styleguide page based on your Theme UI configuration. Zero-config — just install the theme and see your Theme UI config displayed in a beautiful manner. Using the Gatsby Theme [`@lekoarts/gatsby-theme-styleguide`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-styleguide).
@@ -96,6 +96,6 @@ To learn more about Gatsby themes specifically, I recommend checking out the [th
 
 ## 🌟 Supporting me
 
-Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Bluesky](https://bsky.app/profile/lekoarts.de) and share the project with me.
 
 Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!
