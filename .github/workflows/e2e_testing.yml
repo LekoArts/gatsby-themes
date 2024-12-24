@@ -41,3 +41,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CIRCLECI_KEY: ${{ secrets.CIRCLECI_KEY }}
           NETLIFY_ACCESS_KEY: ${{ secrets.NETLIFY_ACCESS_KEY }}
+          CYPRESS_INSTALL_BINARY: 0
