@@ -1,5 +1,13 @@
 # Change Log
 
+## 6.1.3
+
+### Patch Changes
+
+- [#1371](https://github.com/LekoArts/gatsby-themes/pull/1371) [`9e5be42`](https://github.com/LekoArts/gatsby-themes/commit/9e5be42b48990319d3059d9045ddc1801226c3cb) Thanks [@LekoArts](https://github.com/LekoArts)! - Update dependencies
+
+- [#1369](https://github.com/LekoArts/gatsby-themes/pull/1369) [`af17a18`](https://github.com/LekoArts/gatsby-themes/commit/af17a18dfbef47300928fb3b9379a60096fae4e2) Thanks [@LekoArts](https://github.com/LekoArts)! - Replace Twitter with Bluesky
+
 ## 6.1.2
 
 ### Patch Changes
