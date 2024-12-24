@@ -33,7 +33,7 @@ describe(`gatsby-theme-cara`, () => {
     cy.findByText(/winky face./i)
   })
   it(`should render contact content`, () => {
-    cy.findByText(/LinkedIn/i)
+    cy.findByText(/Bluesky/i)
   })
   it(`should render the light/dark mode toggle`, () => {
     cy.findByTestId(`color-mode-toggle`)
