@@ -23,9 +23,9 @@
   <a href="https://www.lekoarts.de?utm_source=cara&utm_medium=Theme">
     <img alt="Website" src="https://img.shields.io/badge/-website-blue">
   </a>
-  <a href="https://twitter.com/intent/follow?screen_name=lekoarts_de">
-      <img src="https://img.shields.io/twitter/follow/lekoarts_de.svg?label=Follow%20@lekoarts_de" alt="Follow @lekoarts_de" />
-    </a>
+<a href="https://bsky.app/profile/lekoarts.de">
+  <img src="https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff" alt="Follow @lekoarts.de" />
+</a>
 </p>
 
 Playful and Colorful One-Page portfolio featuring Parallax effects and animations. Especially designers and/or photographers will love this theme! Built with [MDX](https://mdxjs.com/) and [Theme UI](https://theme-ui.com/).
@@ -157,6 +157,6 @@ If you have general questions or need help with Gatsby, please go to one of the 
 
 ## 🌟 Supporting me
 
-Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Twitter](https://twitter.com/lekoarts_de) and share the project with me.
+Thanks for using this project! I'm always interested in seeing what people do with my projects, so don't hesitate to tag me on [Bluesky](https://bsky.app/profile/lekoarts.de) and share the project with me.
 
 Please star this project, share it on Social Media or consider supporting me on [GitHub Sponsors](https://github.com/sponsors/LekoArts)!

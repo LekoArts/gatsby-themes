@@ -140,7 +140,7 @@ export const sourceNodes = (
     name = `LekoArts`,
     location = `Germany`,
     socialMedia = [
-      { title: `Twitter`, href: `https://twitter.com/lekoarts_de` },
+      { title: `Bluesky`, href: `https://bsky.app/profile/lekoarts.de` },
       { title: `Homepage`, href: `https://www.lekoarts.de?utm_source=emilia&utm_medium=Theme` },
     ],
     showThemeAuthor = true,

@@ -35,8 +35,8 @@ const config: GatsbyConfig = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            name: `Bluesky`,
+            url: `https://bsky.app/profile/lekoarts.de`,
           },
           {
             name: `Homepage`,

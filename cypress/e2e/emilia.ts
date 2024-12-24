@@ -21,7 +21,7 @@ describe(`gatsby-theme-emilia`, () => {
   })
   it(`should render the social links in the header`, () => {
     cy.findByTestId(`social-header`).within(() => {
-      cy.findByText(/Twitter/i).should(`have.attr`, `href`, `https://twitter.com/lekoarts_de`)
+      cy.findByText(/Bluesky/i).should(`have.attr`, `href`, `https://bsky.app/profile/lekoarts.de`)
       cy.findByText(/Homepage/i).should(
         `have.attr`,
         `href`,
