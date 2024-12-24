@@ -1,5 +1,11 @@
 # @lekoarts/rehype-meta-as-attributes
 
+## 3.0.2
+
+### Patch Changes
+
+- [#1371](https://github.com/LekoArts/gatsby-themes/pull/1371) [`9e5be42`](https://github.com/LekoArts/gatsby-themes/commit/9e5be42b48990319d3059d9045ddc1801226c3cb) Thanks [@LekoArts](https://github.com/LekoArts)! - Update dependencies
+
 ## 3.0.1
 
 ### Patch Changes
