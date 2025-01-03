@@ -14,9 +14,6 @@ jobs:
   e2e_tests:
     timeout-minutes: 10
     runs-on: ubuntu-latest
-    container:
-      image: cypress/browsers:node-18.20.3-chrome-125.0.6422.141-1-ff-126.0.1-edge-125.0.2535.85-1
-      options: --user 1001
     strategy:
       fail-fast: false
       matrix:
@@ -41,4 +38,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CIRCLECI_KEY: ${{ secrets.CIRCLECI_KEY }}
           NETLIFY_ACCESS_KEY: ${{ secrets.NETLIFY_ACCESS_KEY }}
-          CYPRESS_INSTALL_BINARY: 0
