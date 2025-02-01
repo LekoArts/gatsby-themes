@@ -128,10 +128,11 @@
       ],
       "matchPackageNames": [
         "eslint",
-        "prettier"
+        "@antfu/eslint-config"
       ],
       "matchPackagePatterns": [
-        "^eslint-"
+        "^eslint-",
+        "^@eslint-react/"
       ],
       "matchUpdateTypes": [
         "major",
@@ -153,7 +154,6 @@
         "typescript"
       ],
       "matchPackagePatterns": [
-        "^@typescript-eslint/",
         "^@types"
       ],
       "matchUpdateTypes": [
@@ -250,7 +250,7 @@
       "groupSlug": "gatsby-theme-cara-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -267,7 +267,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -287,7 +287,7 @@
       "groupSlug": "gatsby-theme-cara-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -304,7 +304,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -325,7 +325,7 @@
       "groupSlug": "gatsby-theme-emilia-core-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -342,7 +342,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -362,7 +362,7 @@
       "groupSlug": "gatsby-theme-emilia-core-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -379,7 +379,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -400,7 +400,7 @@
       "groupSlug": "gatsby-theme-emilia-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -417,7 +417,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -437,7 +437,7 @@
       "groupSlug": "gatsby-theme-emilia-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -454,7 +454,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -475,7 +475,7 @@
       "groupSlug": "gatsby-theme-emma-core-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -492,7 +492,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -512,7 +512,7 @@
       "groupSlug": "gatsby-theme-emma-core-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -529,7 +529,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -550,7 +550,7 @@
       "groupSlug": "gatsby-theme-emma-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -567,7 +567,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -587,7 +587,7 @@
       "groupSlug": "gatsby-theme-emma-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -604,7 +604,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -625,7 +625,7 @@
       "groupSlug": "gatsby-theme-graphql-playground-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -642,7 +642,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -662,7 +662,7 @@
       "groupSlug": "gatsby-theme-graphql-playground-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -679,7 +679,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -700,7 +700,7 @@
       "groupSlug": "gatsby-theme-jodie-core-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -717,7 +717,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -737,7 +737,7 @@
       "groupSlug": "gatsby-theme-jodie-core-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -754,7 +754,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -775,7 +775,7 @@
       "groupSlug": "gatsby-theme-jodie-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -792,7 +792,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -812,7 +812,7 @@
       "groupSlug": "gatsby-theme-jodie-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -829,7 +829,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -850,7 +850,7 @@
       "groupSlug": "gatsby-theme-minimal-blog-core-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -867,7 +867,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -887,7 +887,7 @@
       "groupSlug": "gatsby-theme-minimal-blog-core-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -904,7 +904,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -925,7 +925,7 @@
       "groupSlug": "gatsby-theme-minimal-blog-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -942,7 +942,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -962,7 +962,7 @@
       "groupSlug": "gatsby-theme-minimal-blog-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -979,7 +979,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -1000,7 +1000,7 @@
       "groupSlug": "gatsby-theme-specimens-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -1017,7 +1017,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -1037,7 +1037,7 @@
       "groupSlug": "gatsby-theme-specimens-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -1054,7 +1054,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -1075,7 +1075,7 @@
       "groupSlug": "gatsby-theme-status-dashboard-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -1092,7 +1092,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -1112,7 +1112,7 @@
       "groupSlug": "gatsby-theme-status-dashboard-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -1129,7 +1129,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -1150,7 +1150,7 @@
       "groupSlug": "gatsby-theme-styleguide-prod-minor",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -1167,7 +1167,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
@@ -1187,7 +1187,7 @@
       "groupSlug": "gatsby-theme-styleguide-prod-major",
       "excludePackageNames": [
         "eslint",
-        "prettier",
+        "@antfu/eslint-config",
         "typescript",
         "@theme-ui/color",
         "@theme-ui/mdx",
@@ -1204,7 +1204,7 @@
       ],
       "excludePackagePatterns": [
         "^eslint-",
-        "^@typescript-eslint/",
+        "^@eslint-react/",
         "^@types",
         "^@testing-library/"
       ],
