@@ -1,5 +1,7 @@
-const config = () => ({
-  plugins: [],
-})
+function config() {
+	return {
+		plugins: [],
+	}
+}
 
 export default config

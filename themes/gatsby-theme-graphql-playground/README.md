@@ -95,29 +95,29 @@ In addition to the theme options, there are a handful of items you can customize
 ```js
 // gatsby-config.mjs
 const config = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `GraphQL Playground`,
-    // Default title of the page
-    siteTitleAlt: `GraphQL Playground - @lekoarts/gatsby-theme-graphql-playground`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://gatsby-starter-graphql-playground.netlify.app`,
-    // Used for SEO
-    siteDescription: `Stub description for graphql-playground`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Set the default "lang" attribute on "html" element
-    siteLanguage: `en`,
-    // Twitter Handle
-    author: `@lekoarts_de`,
-    // Will be the root URL for the iFrame
-    graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
-  },
-};
+	siteMetadata: {
+		// Used for the title template on pages other than the index site
+		siteTitle: `GraphQL Playground`,
+		// Default title of the page
+		siteTitleAlt: `GraphQL Playground - @lekoarts/gatsby-theme-graphql-playground`,
+		// Can be used for e.g. JSONLD
+		siteHeadline: `GraphQL Playground - Gatsby Theme from @lekoarts`,
+		// Will be used to generate absolute URLs for og:image etc.
+		siteUrl: `https://gatsby-starter-graphql-playground.netlify.app`,
+		// Used for SEO
+		siteDescription: `Stub description for graphql-playground`,
+		// Used for og:image and must be placed inside the `static` folder
+		siteImage: `/banner.jpg`,
+		// Set the default "lang" attribute on "html" element
+		siteLanguage: `en`,
+		// Twitter Handle
+		author: `@lekoarts_de`,
+		// Will be the root URL for the iFrame
+		graphiQLUrl: `https://711808k40x.sse.codesandbox.io/___graphql`,
+	},
+}
 
-export default config;
+export default config
 ```
 
 ### Shadowing

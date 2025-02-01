@@ -79,20 +79,20 @@ The usage of `content/pages` is optional. If no page/MDX file is found the navig
 ```js
 // gatsby-config.mjs
 const config = {
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-emma`,
-      options: {
-        // basePath defaults to `/`
-        basePath: `/sideproject`,
-        // projectsPath defaults to `content/projects`
-        projectsPath: `content/cool-projects`,
-      },
-    },
-  ],
-};
+	plugins: [
+		{
+			resolve: `@lekoarts/gatsby-theme-emma`,
+			options: {
+				// basePath defaults to `/`
+				basePath: `/sideproject`,
+				// projectsPath defaults to `content/projects`
+				projectsPath: `content/cool-projects`,
+			},
+		},
+	],
+}
 
-export default config;
+export default config
 ```
 
 #### Additional configuration
@@ -102,27 +102,27 @@ In addition to the theme options, there are a handful of items you can customize
 ```js
 // gatsby-config.mjs
 const config = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Emma`,
-    // Default title of the page
-    siteTitleAlt: `Emma - @lekoarts/gatsby-theme-emma`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://emma.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Set the default "lang" attribute on "html" element
-    siteLanguage: `en`,
-    // Twitter Handle
-    author: `@lekoarts_de`,
-  },
-};
+	siteMetadata: {
+		// Used for the title template on pages other than the index site
+		siteTitle: `Emma`,
+		// Default title of the page
+		siteTitleAlt: `Emma - @lekoarts/gatsby-theme-emma`,
+		// Can be used for e.g. JSONLD
+		siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
+		// Will be used to generate absolute URLs for og:image etc.
+		siteUrl: `https://emma.lekoarts.de`,
+		// Used for SEO
+		siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
+		// Used for og:image and must be placed inside the `static` folder
+		siteImage: `/banner.jpg`,
+		// Set the default "lang" attribute on "html" element
+		siteLanguage: `en`,
+		// Twitter Handle
+		author: `@lekoarts_de`,
+	},
+}
 
-export default config;
+export default config
 ```
 
 ### Shadowing

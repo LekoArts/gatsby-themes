@@ -1,22 +1,22 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type useJodieConfigProps = {
-  jodieConfig: {
-    projectsPrefix: string
-    basePath: string
-    formatString: string
-    navigation: {
-      name: string
-      slug: string
-    }[]
-    pagesPath: string
-    projectsPath: string
-    projectsUrl: string
-  }
+interface useJodieConfigProps {
+	jodieConfig: {
+		projectsPrefix: string
+		basePath: string
+		formatString: string
+		navigation: {
+			name: string
+			slug: string
+		}[]
+		pagesPath: string
+		projectsPath: string
+		projectsUrl: string
+	}
 }
 
-const useJodieConfig = () => {
-  const data = useStaticQuery<useJodieConfigProps>(graphql`
+function useJodieConfig() {
+	const data = useStaticQuery<useJodieConfigProps>(graphql`
     query {
       jodieConfig {
         projectsPrefix
@@ -33,7 +33,7 @@ const useJodieConfig = () => {
     }
   `)
 
-  return data.jodieConfig
+	return data.jodieConfig
 }
 
 export default useJodieConfig

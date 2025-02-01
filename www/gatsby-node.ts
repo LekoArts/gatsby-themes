@@ -1,9 +1,9 @@
 import type { GatsbyNode } from "gatsby"
 
-export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] = ({ actions }) => {
-  const { createTypes } = actions
+export const createSchemaCustomization: GatsbyNode[`createSchemaCustomization`] = ({ actions }) => {
+	const { createTypes } = actions
 
-  createTypes(`
+	createTypes(`
     type GithubData implements Node {
       data: GithubDataData
     }

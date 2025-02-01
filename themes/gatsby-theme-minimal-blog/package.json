@@ -1,53 +1,53 @@
 {
-  "name": "@lekoarts/gatsby-theme-minimal-blog",
-  "version": "6.2.4",
-  "author": "LekoArts",
-  "description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.",
-  "license": "MIT",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "clean": "gatsby clean"
-  },
-  "peerDependencies": {
-    "gatsby": "^5.5.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@lekoarts/gatsby-theme-minimal-blog-core": "^6.2.4",
-    "@lekoarts/themes-utils": "^3.0.2",
-    "@mdx-js/react": "^2.3.0",
-    "@theme-ui/color": "~0.15.3",
-    "@theme-ui/mdx": "~0.15.3",
-    "@theme-ui/preset-tailwind": "0.15.3",
-    "gatsby-plugin-catch-links": "^5.14.0",
-    "gatsby-plugin-theme-ui": "~0.15.3",
-    "prism-react-renderer": "^2.4.1",
-    "theme-ui": "~0.15.3"
-  },
-  "keywords": [
-    "gatsby",
-    "gatsby-theme",
-    "gatsby-plugin",
-    "lekoarts"
-  ],
-  "bugs": {
-    "url": "https://github.com/LekoArts/gatsby-themes/issues"
-  },
-  "homepage": "https://themes.lekoarts.de",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LekoArts/gatsby-themes.git",
-    "directory": "themes/gatsby-theme-minimal-blog"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+	"name": "@lekoarts/gatsby-theme-minimal-blog",
+	"version": "6.2.4",
+	"description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.",
+	"author": "LekoArts",
+	"license": "MIT",
+	"homepage": "https://themes.lekoarts.de",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LekoArts/gatsby-themes.git",
+		"directory": "themes/gatsby-theme-minimal-blog"
+	},
+	"bugs": {
+		"url": "https://github.com/LekoArts/gatsby-themes/issues"
+	},
+	"keywords": [
+		"gatsby",
+		"gatsby-theme",
+		"gatsby-plugin",
+		"lekoarts"
+	],
+	"main": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"start": "gatsby develop",
+		"clean": "gatsby clean"
+	},
+	"peerDependencies": {
+		"gatsby": "^5.5.0",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@lekoarts/gatsby-theme-minimal-blog-core": "^6.2.4",
+		"@lekoarts/themes-utils": "^3.0.2",
+		"@mdx-js/react": "^2.3.0",
+		"@theme-ui/color": "~0.15.3",
+		"@theme-ui/mdx": "~0.15.3",
+		"@theme-ui/preset-tailwind": "0.15.3",
+		"gatsby-plugin-catch-links": "^5.14.0",
+		"gatsby-plugin-theme-ui": "~0.15.3",
+		"prism-react-renderer": "^2.4.1",
+		"theme-ui": "~0.15.3"
+	}
 }

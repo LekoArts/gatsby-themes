@@ -15,15 +15,15 @@ jobs:
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: '18'
       - name: Install Dependencies
         uses: ./.github/actions/yarn-install
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
-          commit: "chore(release): Publish"
-          title: "Changesets: Version Packages"
+          commit: 'chore(release): Publish'
+          title: 'Changesets: Version Packages'
           publish: yarn release
           # Workaround for https://github.com/changesets/changesets/issues/421
           version: yarn version-packages:ci
@@ -40,6 +40,6 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_EMAIL: "lekoarts@gmail.com"
+          GITHUB_EMAIL: lekoarts@gmail.com
         with:
           args: examples LekoArts starter-name master

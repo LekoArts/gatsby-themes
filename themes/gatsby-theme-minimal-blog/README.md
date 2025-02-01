@@ -87,37 +87,37 @@ npx gatsby new gatsby-starter-minimal-blog https://github.com/LekoArts/gatsby-st
 ```js
 // gatsby-config.mjs
 const config = {
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
-      options: {
-        showLineNumbers: true,
-        navigation: [
-          {
-            title: `Blog`,
-            slug: `/blog`,
-          },
-          {
-            title: `About`,
-            slug: `/about`,
-          },
-        ],
-        externalLinks: [
-          {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Homepage`,
-            url: `https://www.lekoarts.de`,
-          },
-        ],
-      },
-    },
-  ],
-};
+	plugins: [
+		{
+			resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+			options: {
+				showLineNumbers: true,
+				navigation: [
+					{
+						title: `Blog`,
+						slug: `/blog`,
+					},
+					{
+						title: `About`,
+						slug: `/about`,
+					},
+				],
+				externalLinks: [
+					{
+						name: `Twitter`,
+						url: `https://twitter.com/lekoarts_de`,
+					},
+					{
+						name: `Homepage`,
+						url: `https://www.lekoarts.de`,
+					},
+				],
+			},
+		},
+	],
+}
 
-export default config;
+export default config
 ```
 
 #### Additional configuration
@@ -127,27 +127,27 @@ In addition to the theme options, there are a handful of items you can customize
 ```js
 // gatsby-config.mjs
 const config = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Lupin`,
-    // Default title of the page
-    siteTitleAlt: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://minimal-blog.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Set the default "lang" attribute on "html" element
-    siteLanguage: `en`,
-    // Twitter Handle
-    author: `@lekoarts_de`,
-  },
-};
+	siteMetadata: {
+		// Used for the title template on pages other than the index site
+		siteTitle: `Lupin`,
+		// Default title of the page
+		siteTitleAlt: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
+		// Can be used for e.g. JSONLD
+		siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
+		// Will be used to generate absolute URLs for og:image etc.
+		siteUrl: `https://minimal-blog.lekoarts.de`,
+		// Used for SEO
+		siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
+		// Used for og:image and must be placed inside the `static` folder
+		siteImage: `/banner.jpg`,
+		// Set the default "lang" attribute on "html" element
+		siteLanguage: `en`,
+		// Twitter Handle
+		author: `@lekoarts_de`,
+	},
+}
 
-export default config;
+export default config
 ```
 
 If you want to add additional items to the navigation or external links (left and right side of header), add objects in the shape shown above to the arrays.

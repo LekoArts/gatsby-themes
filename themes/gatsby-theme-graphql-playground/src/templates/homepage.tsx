@@ -4,11 +4,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Index from "../data/index.mdx"
 
-const Homepage = () => (
-  <Layout>
-    <Index />
-  </Layout>
-)
+function Homepage() {
+	return (
+		<Layout>
+			<Index />
+		</Layout>
+	)
+}
 
 export default Homepage
 

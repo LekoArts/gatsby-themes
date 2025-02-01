@@ -1,9 +1,9 @@
 import * as React from "react"
 
-type LayoutProps = {
-  children: React.ReactNode
+interface LayoutProps {
+	children: React.ReactNode
 }
 
-const Layout = ({ children }: LayoutProps) => <React.Fragment>{children}</React.Fragment>
+const Layout = ({ children }: LayoutProps) => <>{children}</>
 
 export default Layout

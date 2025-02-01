@@ -1,6 +1,6 @@
+import { css, keyframes } from "@emotion/react"
 /** @jsx jsx */
 import * as React from "react"
-import { keyframes, css, jsx } from "@emotion/react"
 
 const wave = keyframes`
   0% {
@@ -41,9 +41,9 @@ const upDownWideAnimation = css`
 `
 
 export function UpDown({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      css={css`
+	return (
+		<div
+			css={css`
         animation: ${upDownAnimation};
         position: absolute;
         top: 0;
@@ -51,16 +51,16 @@ export function UpDown({ children }: { children: React.ReactNode }) {
         right: 0;
         bottom: 0;
       `}
-    >
-      {children}
-    </div>
-  )
+		>
+			{children}
+		</div>
+	)
 }
 
 export function UpDownWide({ children }: { children: React.ReactNode }) {
-  return (
-    <div
-      css={css`
+	return (
+		<div
+			css={css`
         animation: ${upDownWideAnimation};
         position: absolute;
         top: 0;
@@ -68,10 +68,10 @@ export function UpDownWide({ children }: { children: React.ReactNode }) {
         right: 0;
         bottom: 0;
       `}
-    >
-      {children}
-    </div>
-  )
+		>
+			{children}
+		</div>
+	)
 }
 
 export const waveAnimation = (length: string) => `${wave} ${length} linear infinite alternate`

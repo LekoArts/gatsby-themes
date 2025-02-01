@@ -1,56 +1,56 @@
 {
-  "name": "@lekoarts/gatsby-theme-graphql-playground",
-  "version": "5.1.10",
-  "author": "LekoArts",
-  "description": "GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).",
-  "license": "MIT",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "clean": "gatsby clean"
-  },
-  "peerDependencies": {
-    "gatsby": "^5.5.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@lekoarts/themes-utils": "^3.0.2",
-    "@mapbox/rehype-prism": "^0.9.0",
-    "@mdx-js/react": "^2.3.0",
-    "@theme-ui/mdx": "~0.15.3",
-    "@theme-ui/preset-tailwind": "0.15.3",
-    "@theme-ui/sidenav": "~0.15.3",
-    "gatsby-plugin-mdx": "^5.14.0",
-    "gatsby-plugin-theme-ui": "~0.15.3",
-    "gatsby-source-filesystem": "^5.14.0",
-    "is-absolute-url": "^4.0.1",
-    "re-resizable": "^6.10.3",
-    "theme-ui": "~0.15.3",
-    "unist-util-visit": "^5.0.0"
-  },
-  "keywords": [
-    "gatsby",
-    "gatsby-theme",
-    "gatsby-plugin",
-    "lekoarts"
-  ],
-  "bugs": {
-    "url": "https://github.com/LekoArts/gatsby-themes/issues"
-  },
-  "homepage": "https://themes.lekoarts.de",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LekoArts/gatsby-themes.git",
-    "directory": "themes/gatsby-theme-graphql-playground"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+	"name": "@lekoarts/gatsby-theme-graphql-playground",
+	"version": "5.1.10",
+	"description": "GraphQL Playground to showcase the power of GraphQL. Write your queries and documentation with MDX and display queries in an interactive GraphiQL window. It can source from your localhost or a remote URL (e.g. Codesandbox).",
+	"author": "LekoArts",
+	"license": "MIT",
+	"homepage": "https://themes.lekoarts.de",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LekoArts/gatsby-themes.git",
+		"directory": "themes/gatsby-theme-graphql-playground"
+	},
+	"bugs": {
+		"url": "https://github.com/LekoArts/gatsby-themes/issues"
+	},
+	"keywords": [
+		"gatsby",
+		"gatsby-theme",
+		"gatsby-plugin",
+		"lekoarts"
+	],
+	"main": "index.js",
+	"publishConfig": {
+		"access": "public"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"start": "gatsby develop",
+		"clean": "gatsby clean"
+	},
+	"peerDependencies": {
+		"gatsby": "^5.5.0",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@lekoarts/themes-utils": "^3.0.2",
+		"@mapbox/rehype-prism": "^0.9.0",
+		"@mdx-js/react": "^2.3.0",
+		"@theme-ui/mdx": "~0.15.3",
+		"@theme-ui/preset-tailwind": "0.15.3",
+		"@theme-ui/sidenav": "~0.15.3",
+		"gatsby-plugin-mdx": "^5.14.0",
+		"gatsby-plugin-theme-ui": "~0.15.3",
+		"gatsby-source-filesystem": "^5.14.0",
+		"is-absolute-url": "^4.0.1",
+		"re-resizable": "^6.10.3",
+		"theme-ui": "~0.15.3",
+		"unist-util-visit": "^5.0.0"
+	}
 }

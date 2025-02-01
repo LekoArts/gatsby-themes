@@ -1,36 +1,36 @@
 {
-  "private": true,
-  "name": "minimal-blog",
-  "description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.",
-  "version": "1.3.17",
-  "author": "LekoArts",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-minimal-blog",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@lekoarts/gatsby-theme-minimal-blog": "^6.2.4",
-    "gatsby": "^5.14.1",
-    "gatsby-plugin-feed": "^5.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-sitemap": "^6.14.0",
-    "gatsby-plugin-webpack-statoscope": "^1.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.17.16",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "ajv": "^8.17.1",
-    "cross-env": "^7.0.3",
-    "typescript": "^5.7.3"
-  }
+	"name": "minimal-blog",
+	"version": "1.3.17",
+	"private": true,
+	"description": "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.",
+	"author": "LekoArts",
+	"license": "0BSD",
+	"starter-name": "gatsby-starter-minimal-blog",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+		"build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+		"start": "gatsby develop",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean"
+	},
+	"dependencies": {
+		"@lekoarts/gatsby-theme-minimal-blog": "^6.2.4",
+		"gatsby": "^5.14.1",
+		"gatsby-plugin-feed": "^5.14.0",
+		"gatsby-plugin-manifest": "^5.14.0",
+		"gatsby-plugin-sitemap": "^6.14.0",
+		"gatsby-plugin-webpack-statoscope": "^1.0.3",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.16",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"ajv": "^8.17.1",
+		"cross-env": "^7.0.3",
+		"typescript": "^5.7.3"
+	}
 }

@@ -96,17 +96,17 @@ For the sake of this explanation it's assumed that you replaced "Work Sans" with
 Change the file `src/gatsby-plugin-theme-ui/index.js` with the following contents:
 
 ```js
+import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index"
 // Inside src/gatsby-plugin-theme-ui/index.js
-import { merge } from "theme-ui";
-import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index";
+import { merge } from "theme-ui"
 
 const theme = merge(originalTheme, {
-  fonts: {
-    body: `"Roboto Mono", monospace`,
-  },
-});
+	fonts: {
+		body: `"Roboto Mono", monospace`,
+	},
+})
 
-export default theme;
+export default theme
 ```
 
 As defined in the [Theme Specification](https://theme-ui.com/theme-spec#typography) `body` is the default body font family.
@@ -116,17 +116,17 @@ As defined in the [Theme Specification](https://theme-ui.com/theme-spec#typograp
 Then you'd not overwrite `body` but add a `heading` key:
 
 ```js
+import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index"
 // Inside src/gatsby-plugin-theme-ui/index.js
-import { merge } from "theme-ui";
-import originalTheme from "@lekoarts/gatsby-theme-jodie/src/gatsby-plugin-theme-ui/index";
+import { merge } from "theme-ui"
 
 const theme = merge(originalTheme, {
-  fonts: {
-    heading: `"Roboto Mono", monospace`,
-  },
-});
+	fonts: {
+		heading: `"Roboto Mono", monospace`,
+	},
+})
 
-export default theme;
+export default theme
 ```
 
 ### Customizing the homepage
@@ -152,9 +152,9 @@ _All code snippets are placed inside `src/@lekoarts/gatsby-theme-jodie/utils/mod
 **Default behavior:**
 
 ```js
-const modifyGrid = (data) => data;
+const modifyGrid = data => data
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 I've also created some resolver templates that you can use. They are exported in [`resolver-templates.ts`](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/src/utils/resolver-templates.ts). They cover the most common use cases and can give you an idea on what to do with the resolver.
@@ -163,34 +163,34 @@ I've also created some resolver templates that you can use. They are exported in
 
 ```js
 import {
-  onlyPages,
-  onlyProjects,
-} from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+	onlyPages,
+	onlyProjects,
+} from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates"
 
-const modifyGrid = (data) => onlyPages(data);
+const modifyGrid = data => onlyPages(data)
 // const modifyGrid = (data) => onlyProjects(data)
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 **Filter by slug:**
 
 ```js
-import { filterBySlug } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+import { filterBySlug } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates"
 
-const modifyGrid = (data) => filterBySlug(data, ["/about"]);
+const modifyGrid = data => filterBySlug(data, [`/about`])
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 **Shuffle:**
 
 ```js
-import { shuffle } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+import { shuffle } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates"
 
-const modifyGrid = (data) => shuffle(data);
+const modifyGrid = data => shuffle(data)
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 ### Change your `static` folder

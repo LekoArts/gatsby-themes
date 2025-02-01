@@ -1,40 +1,40 @@
 {
-  "name": "@lekoarts/themes-utils",
-  "description": "Utilities to build my themes",
-  "version": "3.0.2",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "author": "LekoArts",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist/*"
-  ],
-  "scripts": {
-    "package:build": "tsup",
-    "package:watch": "yarn package:build --watch",
-    "prepare": "yarn package:build"
-  },
-  "dependencies": {
-    "lodash.kebabcase": "^4.1.1"
-  },
-  "devDependencies": {
-    "@types/lodash.kebabcase": "^4.1.9",
-    "tsup": "^8.3.6"
-  },
-  "bugs": {
-    "url": "https://github.com/LekoArts/gatsby-themes/issues"
-  },
-  "homepage": "https://themes.lekoarts.de",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/LekoArts/gatsby-themes.git",
-    "directory": "packages/themes-utils"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+	"name": "@lekoarts/themes-utils",
+	"type": "module",
+	"version": "3.0.2",
+	"description": "Utilities to build my themes",
+	"author": "LekoArts",
+	"license": "MIT",
+	"homepage": "https://themes.lekoarts.de",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/LekoArts/gatsby-themes.git",
+		"directory": "packages/themes-utils"
+	},
+	"bugs": {
+		"url": "https://github.com/LekoArts/gatsby-themes/issues"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"dist/*"
+	],
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"scripts": {
+		"package:build": "tsup",
+		"package:watch": "yarn package:build --watch",
+		"prepare": "yarn package:build"
+	},
+	"dependencies": {
+		"lodash.kebabcase": "^4.1.1"
+	},
+	"devDependencies": {
+		"@types/lodash.kebabcase": "^4.1.9",
+		"tsup": "^8.3.6"
+	}
 }

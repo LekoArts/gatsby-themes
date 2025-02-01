@@ -1,11 +1,12 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import { Themed } from "@theme-ui/mdx"
+/** @jsx jsx */
 
-const Header = () => (
-  <header sx={{ my: 4 }}>
-    <Themed.h1>Style Guide</Themed.h1>
-  </header>
-)
+function Header() {
+	return (
+		<header sx={{ my: 4 }}>
+			<Themed.h1>Style Guide</Themed.h1>
+		</header>
+	)
+}
 
 export default Header

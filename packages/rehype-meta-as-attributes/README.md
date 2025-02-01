@@ -35,19 +35,19 @@ const hello = "world";
 Then use it in your pipeline as following:
 
 ```js
-import { read } from "to-vfile";
-import { unified } from "unified";
-import remarkRehype from "remark-rehype";
-import rehypeMetaAsAttributes from "@lekoarts/rehype-meta-as-attributes";
+import rehypeMetaAsAttributes from "@lekoarts/rehype-meta-as-attributes"
+import remarkRehype from "remark-rehype"
+import { read } from "to-vfile"
+import { unified } from "unified"
 
-main();
+main()
 
 async function main() {
-  const file = await unified()
-    .use(remarkRehype)
-    .use(rehypeMetaAsAttributes)
-    .process(await read("example.md"));
+	const file = await unified()
+		.use(remarkRehype)
+		.use(rehypeMetaAsAttributes)
+		.process(await read(`example.md`))
 
-  console.log(String(file));
+	console.log(String(file))
 }
 ```

@@ -1,44 +1,44 @@
 {
-  "name": "www",
-  "version": "1.0.0",
-  "description": "Website for LekoArts' free & open source Gatsby Themes",
-  "author": "LekoArts",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "clean": "gatsby clean",
-    "serve": "gatsby serve"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@mdx-js/react": "^2.3.0",
-    "@react-three/drei": "^9.121.4",
-    "@react-three/fiber": "^8.17.14",
-    "@theme-ui/mdx": "~0.17.1",
-    "@theme-ui/preset-tailwind": "~0.17.1",
-    "gatsby": "^5.14.1",
-    "gatsby-adapter-netlify": "^1.2.0",
-    "gatsby-plugin-catch-links": "^5.14.0",
-    "gatsby-plugin-image": "^3.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-plugin-sitemap": "^6.14.0",
-    "gatsby-plugin-theme-ui": "~0.17.1",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-source-github-api": "^1.0.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "gatsby-transformer-yaml": "^5.14.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-responsive": "^10.0.0",
-    "theme-ui": "~0.17.1",
-    "three": "^0.173.0"
-  },
-  "devDependencies": {
-    "ajv": "^8.17.1",
-    "gatsby-plugin-webpack-statoscope": "^1.0.3"
-  }
+	"name": "www",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Website for LekoArts' free & open source Gatsby Themes",
+	"author": "LekoArts",
+	"license": "MIT",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"start": "gatsby develop",
+		"clean": "gatsby clean",
+		"serve": "gatsby serve"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@mdx-js/react": "^2.3.0",
+		"@react-three/drei": "^9.121.4",
+		"@react-three/fiber": "^8.17.14",
+		"@theme-ui/mdx": "~0.17.1",
+		"@theme-ui/preset-tailwind": "~0.17.1",
+		"gatsby": "^5.14.1",
+		"gatsby-adapter-netlify": "^1.2.0",
+		"gatsby-plugin-catch-links": "^5.14.0",
+		"gatsby-plugin-image": "^3.14.0",
+		"gatsby-plugin-manifest": "^5.14.0",
+		"gatsby-plugin-sharp": "^5.14.0",
+		"gatsby-plugin-sitemap": "^6.14.0",
+		"gatsby-plugin-theme-ui": "~0.17.1",
+		"gatsby-source-filesystem": "^5.14.0",
+		"gatsby-source-github-api": "^1.0.0",
+		"gatsby-transformer-sharp": "^5.14.0",
+		"gatsby-transformer-yaml": "^5.14.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-responsive": "^10.0.0",
+		"theme-ui": "~0.17.1",
+		"three": "^0.173.0"
+	},
+	"devDependencies": {
+		"ajv": "^8.17.1",
+		"gatsby-plugin-webpack-statoscope": "^1.0.3"
+	}
 }

@@ -73,18 +73,18 @@ npx gatsby new gatsby-starter-portfolio-cara https://github.com/LekoArts/gatsby-
 ```js
 // gatsby-config.mjs
 const config = {
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-cara`,
-      options: {
-        // basePath defaults to `/`
-        basePath: `/sideproject`,
-      },
-    },
-  ],
-};
+	plugins: [
+		{
+			resolve: `@lekoarts/gatsby-theme-cara`,
+			options: {
+				// basePath defaults to `/`
+				basePath: `/sideproject`,
+			},
+		},
+	],
+}
 
-export default config;
+export default config
 ```
 
 #### Additional configuration
@@ -94,27 +94,27 @@ In addition to the theme options, there are a handful of items you can customize
 ```js
 // gatsby-config.mjs
 const config = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Cara`,
-    // Default title of the page
-    siteTitleAlt: `Cara - @lekoarts/gatsby-theme-cara`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://cara.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Set the default "lang" attribute on "html" element
-    siteLanguage: `en`,
-    // Twitter Handle
-    author: `@lekoarts_de`,
-  },
-};
+	siteMetadata: {
+		// Used for the title template on pages other than the index site
+		siteTitle: `Cara`,
+		// Default title of the page
+		siteTitleAlt: `Cara - @lekoarts/gatsby-theme-cara`,
+		// Can be used for e.g. JSONLD
+		siteHeadline: `Cara - Gatsby Theme from @lekoarts`,
+		// Will be used to generate absolute URLs for og:image etc.
+		siteUrl: `https://cara.lekoarts.de`,
+		// Used for SEO
+		siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+		// Used for og:image and must be placed inside the `static` folder
+		siteImage: `/banner.jpg`,
+		// Set the default "lang" attribute on "html" element
+		siteLanguage: `en`,
+		// Twitter Handle
+		author: `@lekoarts_de`,
+	},
+}
 
-export default config;
+export default config
 ```
 
 ### Shadowing

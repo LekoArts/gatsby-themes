@@ -1,24 +1,28 @@
-import * as React from "react"
-import { HeadFC, Link, PageProps } from "gatsby"
-import { Container, Link as TLink } from "theme-ui"
-import { Themed } from "@theme-ui/mdx"
+import type { HeadFC, PageProps } from "gatsby"
 import Layout from "@lekoarts/gatsby-theme-emma/src/components/layout"
 import Seo from "@lekoarts/gatsby-theme-emma/src/components/seo"
+import { Themed } from "@theme-ui/mdx"
+import { Link } from "gatsby"
+import * as React from "react"
+import { Container, Link as TLink } from "theme-ui"
 
-const NotFound = (_props: PageProps) => (
-  <Layout>
-    <Container>
-      <Themed.p>
-        Oh, no!
-        <br />
-        You found a page that doesn't exist.{` `}
-        <TLink as={Link} to="/">
-          Do you want to visit the homepage?
-        </TLink>
-      </Themed.p>
-    </Container>
-  </Layout>
-)
+function NotFound(_props: PageProps) {
+	return (
+		<Layout>
+			<Container>
+				<Themed.p>
+					Oh, no!
+					<br />
+					You found a page that doesn't exist.
+					{` `}
+					<TLink as={Link} to="/">
+						Do you want to visit the homepage?
+					</TLink>
+				</Themed.p>
+			</Container>
+		</Layout>
+	)
+}
 
 export default NotFound
 

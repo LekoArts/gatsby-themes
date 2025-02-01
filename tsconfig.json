@@ -1,23 +1,23 @@
 {
-  "compilerOptions": {
-    "module": "CommonJS",
-    "jsx": "react",
-    "lib": ["dom", "es2020"],
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noEmit": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
-  },
-  "include": [
-    "./packages/**/*",
-    "./scripts/*",
-    "./themes/**/src/**/*",
-    "./www/src/**/*",
-    "./examples/**/src/**/*",
-    "./vitest-setup.ts"
-  ],
-  "exclude": ["node_modules", "themes/**/node_modules"]
+	"compilerOptions": {
+		"jsx": "react",
+		"lib": ["dom", "es2020"],
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"strict": true,
+		"noEmit": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true
+	},
+	"include": [
+		"./packages/**/*",
+		"./scripts/*",
+		"./themes/**/src/**/*",
+		"./www/src/**/*",
+		"./examples/**/src/**/*",
+		"./vitest-setup.ts"
+	],
+	"exclude": ["node_modules", "themes/**/node_modules"]
 }

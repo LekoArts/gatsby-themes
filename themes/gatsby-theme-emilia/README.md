@@ -110,27 +110,27 @@ In addition to the theme options, there are a handful of items you can customize
 ```js
 // gatsby-config.mjs
 const config = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Emilia`,
-    // Default title of the page
-    siteTitleAlt: `Emilia - @lekoarts/gatsby-theme-emilia`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://emilia.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Set the default "lang" attribute on "html" element
-    siteLanguage: `en`,
-    // Twitter Handle
-    author: `@lekoarts_de`,
-  },
-};
+	siteMetadata: {
+		// Used for the title template on pages other than the index site
+		siteTitle: `Emilia`,
+		// Default title of the page
+		siteTitleAlt: `Emilia - @lekoarts/gatsby-theme-emilia`,
+		// Can be used for e.g. JSONLD
+		siteHeadline: `Emilia - Gatsby Theme from @lekoarts`,
+		// Will be used to generate absolute URLs for og:image etc.
+		siteUrl: `https://emilia.lekoarts.de`,
+		// Used for SEO
+		siteDescription: `Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.`,
+		// Used for og:image and must be placed inside the `static` folder
+		siteImage: `/banner.jpg`,
+		// Set the default "lang" attribute on "html" element
+		siteLanguage: `en`,
+		// Twitter Handle
+		author: `@lekoarts_de`,
+	},
+}
 
-export default config;
+export default config
 ```
 
 ### Shadowing

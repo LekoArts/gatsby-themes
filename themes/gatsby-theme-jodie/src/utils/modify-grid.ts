@@ -1,22 +1,22 @@
 import type { IGatsbyImageData } from "gatsby-plugin-image"
 
 export interface IGridItem {
-  slug: string
-  title: string
-  cover: {
-    childImageSharp: {
-      gatsbyImageData: IGatsbyImageData
-    }
-  }
-  __typename: "MdxProject" | "MdxPage"
+	slug: string
+	title: string
+	cover: {
+		childImageSharp: {
+			gatsbyImageData: IGatsbyImageData
+		}
+	}
+	__typename: `MdxProject` | `MdxPage`
 }
 
 function defaultResolver(data: IGridItem[]): IGridItem[] {
-  return data
+	return data
 }
 
 function modifyGrid(data: IGridItem[], resolver = defaultResolver): IGridItem[] {
-  return resolver(data)
+	return resolver(data)
 }
 
 /**

@@ -1,35 +1,35 @@
 {
-  "private": true,
-  "name": "emilia",
-  "description": "Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.",
-  "version": "0.3.16",
-  "author": "LekoArts",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-portfolio-emilia",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@lekoarts/gatsby-theme-emilia": "^5.1.8",
-    "gatsby": "^5.14.1",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-sitemap": "^6.14.0",
-    "gatsby-plugin-webpack-statoscope": "^1.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.17.16",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "ajv": "^8.17.1",
-    "cross-env": "^7.0.3",
-    "typescript": "^5.7.3"
-  }
+	"name": "emilia",
+	"version": "0.3.16",
+	"private": true,
+	"description": "Minimalistic portfolio/photography site with masonry grid, page transitions and big images. Themeable with Theme UI. Includes Light/Dark mode.",
+	"author": "LekoArts",
+	"license": "0BSD",
+	"starter-name": "gatsby-starter-portfolio-emilia",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+		"build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+		"start": "gatsby develop",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean"
+	},
+	"dependencies": {
+		"@lekoarts/gatsby-theme-emilia": "^5.1.8",
+		"gatsby": "^5.14.1",
+		"gatsby-plugin-manifest": "^5.14.0",
+		"gatsby-plugin-sitemap": "^6.14.0",
+		"gatsby-plugin-webpack-statoscope": "^1.0.3",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.16",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"ajv": "^8.17.1",
+		"cross-env": "^7.0.3",
+		"typescript": "^5.7.3"
+	}
 }

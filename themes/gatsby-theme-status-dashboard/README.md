@@ -73,20 +73,20 @@ npx gatsby new gatsby-status-dashboard https://github.com/LekoArts/gatsby-status
 ```js
 // gatsby-config.mjs
 const config = {
-  plugins: [
-    {
-      resolve: `@lekoarts/gatsby-theme-status-dashboard`,
-      options: {
-        // netlifyOptions defaults to `{}`
-        netlifyOptions: {
-          userAgent: `netlify/js-client`,
-        },
-      },
-    },
-  ],
-};
+	plugins: [
+		{
+			resolve: `@lekoarts/gatsby-theme-status-dashboard`,
+			options: {
+				// netlifyOptions defaults to `{}`
+				netlifyOptions: {
+					userAgent: `netlify/js-client`,
+				},
+			},
+		},
+	],
+}
 
-export default config;
+export default config
 ```
 
 ### Environment variables
@@ -112,20 +112,20 @@ This theme doesn't set up an individual page but rather exposes two React compon
 Import the components into your file and use them like normal React components (see [example](https://github.com/LekoArts/gatsby-themes/tree/main/examples/status-dashboard/src/pages/index.jsx)):
 
 ```jsx
-import * as React from "react";
+import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard"
 
-import { Grid, Info } from "@lekoarts/gatsby-theme-status-dashboard";
+import * as React from "react"
 
-const Index = () => {
-  return (
-    <main>
-      <Info />
-      <Grid />
-    </main>
-  );
-};
+function Index() {
+	return (
+		<main>
+			<Info />
+			<Grid />
+		</main>
+	)
+}
 
-export default Index;
+export default Index
 ```
 
 ### Formatters

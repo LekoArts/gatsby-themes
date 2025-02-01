@@ -1,22 +1,21 @@
-/* eslint-disable camelcase */
 import { graphql, useStaticQuery } from "gatsby"
 
-type UseNetlifyProps = {
-  sites: {
-    totalCount: number
-    nodes: {
-      build_settings: {
-        repo_url: string
-      }
-      name: string
-      netlify_id: string
-      url: string
-    }[]
-  }
+interface UseNetlifyProps {
+	sites: {
+		totalCount: number
+		nodes: {
+			build_settings: {
+				repo_url: string
+			}
+			name: string
+			netlify_id: string
+			url: string
+		}[]
+	}
 }
 
-const useNetlify = () => {
-  const data = useStaticQuery<UseNetlifyProps>(graphql`
+function useNetlify() {
+	const data = useStaticQuery<UseNetlifyProps>(graphql`
     {
       sites: allNetlifySites(filter: { build_settings: { public_repo: { eq: true } } }, sort: { name: ASC }) {
         totalCount
@@ -32,10 +31,10 @@ const useNetlify = () => {
     }
   `)
 
-  return {
-    count: data.sites.totalCount,
-    netlify: data.sites.nodes,
-  }
+	return {
+		count: data.sites.totalCount,
+		netlify: data.sites.nodes,
+	}
 }
 
 export default useNetlify

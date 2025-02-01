@@ -1,33 +1,33 @@
 {
-  "private": true,
-  "name": "graphql-playground",
-  "description": "Stub description for graphql-playground",
-  "version": "0.2.18",
-  "author": "LekoArts",
-  "license": "0BSD",
-  "starter-name": "gatsby-starter-graphql-playground",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
-    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "dependencies": {
-    "@lekoarts/gatsby-theme-graphql-playground": "^5.1.10",
-    "gatsby": "^5.14.1",
-    "gatsby-plugin-webpack-statoscope": "^1.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.17.16",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "ajv": "^8.17.1",
-    "cross-env": "^7.0.3",
-    "typescript": "^5.7.3"
-  }
+	"name": "graphql-playground",
+	"version": "0.2.18",
+	"private": true,
+	"description": "Stub description for graphql-playground",
+	"author": "LekoArts",
+	"license": "0BSD",
+	"starter-name": "gatsby-starter-graphql-playground",
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+		"build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+		"start": "gatsby develop",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean"
+	},
+	"dependencies": {
+		"@lekoarts/gatsby-theme-graphql-playground": "^5.1.10",
+		"gatsby": "^5.14.1",
+		"gatsby-plugin-webpack-statoscope": "^1.0.3",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.16",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"ajv": "^8.17.1",
+		"cross-env": "^7.0.3",
+		"typescript": "^5.7.3"
+	}
 }

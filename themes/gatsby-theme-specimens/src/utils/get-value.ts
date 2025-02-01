@@ -7,20 +7,22 @@
  * @return {number} Number without last three characters
  * @example removeLastThree('6rem') => 6
  */
-const getValue = (input: string | number | undefined, rootFontSize = 16) => {
-  if (typeof input === `undefined`) return 16
-  if (typeof input === `number` && input === 0) return 0
-  if (typeof input === `number`) {
-    return input / rootFontSize
-  }
+function getValue(input: string | number | undefined, rootFontSize = 16) {
+	if (typeof input === `undefined`)
+		return 16
+	if (typeof input === `number` && input === 0)
+		return 0
+	if (typeof input === `number`) {
+		return input / rootFontSize
+	}
 
-  const isPxValue = input.slice(-2) === `px`
+	const isPxValue = input.slice(-2) === `px`
 
-  if (isPxValue) {
-    return parseFloat(input.slice(0, -2))
-  }
+	if (isPxValue) {
+		return Number.parseFloat(input.slice(0, -2))
+	}
 
-  return parseFloat(input.slice(0, -3))
+	return Number.parseFloat(input.slice(0, -3))
 }
 
 export default getValue

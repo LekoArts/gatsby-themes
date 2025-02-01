@@ -1,22 +1,24 @@
 import * as React from "react"
-import Layout from "./layout"
-import Header from "./header"
 import Colors from "./colors"
-import Typography from "./typography"
 import Footer from "./footer"
+import Header from "./header"
+import Layout from "./layout"
 import Space from "./space"
+import Typography from "./typography"
 
-const Template = () => (
-  <Layout>
-    <Header />
-    <main>
-      <Colors />
-      <Typography />
-      <Space />
-    </main>
-    <Footer />
-  </Layout>
-)
+function Template() {
+	return (
+		<Layout>
+			<Header />
+			<main>
+				<Colors />
+				<Typography />
+				<Space />
+			</main>
+			<Footer />
+		</Layout>
+	)
+}
 
 export default Template
 

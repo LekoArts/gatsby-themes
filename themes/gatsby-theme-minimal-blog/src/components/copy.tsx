@@ -1,51 +1,51 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
 import { useState } from "react"
+/** @jsx jsx */
 
-import copyToClipboard from "../utils/copy-to-clipboard"
 import { visuallyHidden } from "../styles/utils"
+import copyToClipboard from "../utils/copy-to-clipboard"
 
-const delay = (duration: number) =>
-  new Promise((resolve) => {
-    setTimeout(resolve, duration)
-  })
-
-type CopyProps = {
-  content: string
-  duration?: number
-  fileName?: string
-  trim?: boolean
+function delay(duration: number) {
+	return new Promise((resolve) => {
+		setTimeout(resolve, duration)
+	})
 }
 
-const Copy = ({ content, duration = 5000, fileName = ``, trim = false }: CopyProps) => {
-  const [copied, setCopied] = useState(false)
+interface CopyProps {
+	content: string
+	duration?: number
+	fileName?: string
+	trim?: boolean
+}
 
-  const label = copied
-    ? `${fileName ? `${fileName} ` : ``}copied to clipboard`
-    : `${fileName ? `${fileName}: ` : ``}copy code to clipboard`
+function Copy({ content, duration = 5000, fileName = ``, trim = false }: CopyProps) {
+	const [copied, setCopied] = useState(false)
 
-  return (
-    <button
-      type="button"
-      name={label}
-      disabled={copied}
-      className="code-copy-button"
-      sx={{
-        variant: `copyButton`,
-      }}
-      onClick={async () => {
-        await copyToClipboard(trim ? content.trim() : content)
-        setCopied(true)
-        await delay(duration)
-        setCopied(false)
-      }}
-    >
-      {copied ? `Copied` : `Copy`}
-      <span sx={visuallyHidden} aria-roledescription="status">
-        {label}
-      </span>
-    </button>
-  )
+	const label = copied
+		? `${fileName ? `${fileName} ` : ``}copied to clipboard`
+		: `${fileName ? `${fileName}: ` : ``}copy code to clipboard`
+
+	return (
+		<button
+			type="button"
+			name={label}
+			disabled={copied}
+			className="code-copy-button"
+			sx={{
+				variant: `copyButton`,
+			}}
+			onClick={async () => {
+				await copyToClipboard(trim ? content.trim() : content)
+				setCopied(true)
+				await delay(duration)
+				setCopied(false)
+			}}
+		>
+			{copied ? `Copied` : `Copy`}
+			<span sx={visuallyHidden} aria-roledescription="status">
+				{label}
+			</span>
+		</button>
+	)
 }
 
 export default Copy

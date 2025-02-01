@@ -1,27 +1,27 @@
 import { graphql, useStaticQuery } from "gatsby"
 
-type UseMinimalBlogConfigProps = {
-  minimalBlogConfig: {
-    basePath: string
-    blogPath: string
-    postsPath: string
-    pagesPath: string
-    tagsPath: string
-    externalLinks: {
-      name: string
-      url: string
-    }[]
-    navigation: {
-      title: string
-      slug: string
-    }[]
-    showLineNumbers: boolean
-    showCopyButton: boolean
-  }
+interface UseMinimalBlogConfigProps {
+	minimalBlogConfig: {
+		basePath: string
+		blogPath: string
+		postsPath: string
+		pagesPath: string
+		tagsPath: string
+		externalLinks: {
+			name: string
+			url: string
+		}[]
+		navigation: {
+			title: string
+			slug: string
+		}[]
+		showLineNumbers: boolean
+		showCopyButton: boolean
+	}
 }
 
-const useMinimalBlogConfig = () => {
-  const data = useStaticQuery<UseMinimalBlogConfigProps>(graphql`
+function useMinimalBlogConfig() {
+	const data = useStaticQuery<UseMinimalBlogConfigProps>(graphql`
     query {
       minimalBlogConfig {
         basePath
@@ -43,7 +43,7 @@ const useMinimalBlogConfig = () => {
     }
   `)
 
-  return data.minimalBlogConfig
+	return data.minimalBlogConfig
 }
 
 export default useMinimalBlogConfig

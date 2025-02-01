@@ -1,15 +1,15 @@
-import { createRequire } from "module"
+import { createRequire } from "node:module"
 
 const require = createRequire(import.meta.url)
 const standardBasePath = `/`
 
-export const createPages = async ({ actions }, themeOptions) => {
-  const { createPage } = actions
+export async function createPages({ actions }, themeOptions) {
+	const { createPage } = actions
 
-  const basePath = themeOptions.basePath || standardBasePath
+	const basePath = themeOptions.basePath || standardBasePath
 
-  createPage({
-    path: basePath,
-    component: require.resolve(`./src/templates/cara.tsx`),
-  })
+	createPage({
+		path: basePath,
+		component: require.resolve(`./src/templates/cara.tsx`),
+	})
 }

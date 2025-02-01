@@ -108,27 +108,27 @@ In addition to the theme options, there are a handful of items you can customize
 ```js
 // gatsby-config.mjs
 const config = {
-  siteMetadata: {
-    // Used for the title template on pages other than the index site
-    siteTitle: `Jodie`,
-    // Default title of the page
-    siteTitleAlt: `Jodie - @lekoarts/gatsby-theme-jodie`,
-    // Can be used for e.g. JSONLD
-    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
-    // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://jodie.lekoarts.de`,
-    // Used for SEO
-    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/banner.jpg`,
-    // Set the default "lang" attribute on "html" element
-    siteLanguage: `en`,
-    // Twitter Handle
-    author: `@lekoarts_de`,
-  },
-};
+	siteMetadata: {
+		// Used for the title template on pages other than the index site
+		siteTitle: `Jodie`,
+		// Default title of the page
+		siteTitleAlt: `Jodie - @lekoarts/gatsby-theme-jodie`,
+		// Can be used for e.g. JSONLD
+		siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
+		// Will be used to generate absolute URLs for og:image etc.
+		siteUrl: `https://jodie.lekoarts.de`,
+		// Used for SEO
+		siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+		// Used for og:image and must be placed inside the `static` folder
+		siteImage: `/banner.jpg`,
+		// Set the default "lang" attribute on "html" element
+		siteLanguage: `en`,
+		// Twitter Handle
+		author: `@lekoarts_de`,
+	},
+}
 
-export default config;
+export default config
 ```
 
 ### Customizing the homepage
@@ -154,9 +154,9 @@ _All code snippets are placed inside `src/@lekoarts/gatsby-theme-jodie/utils/mod
 **Default behavior:**
 
 ```js
-const modifyGrid = (data) => data;
+const modifyGrid = data => data
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 I've also created some resolver templates that you can use. They are exported in [`resolver-templates.ts`](https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/src/utils/resolver-templates.ts). They cover the most common use cases and can give you an idea on what to do with the resolver.
@@ -165,34 +165,34 @@ I've also created some resolver templates that you can use. They are exported in
 
 ```js
 import {
-  onlyPages,
-  onlyProjects,
-} from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+	onlyPages,
+	onlyProjects,
+} from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates"
 
-const modifyGrid = (data) => onlyPages(data);
+const modifyGrid = data => onlyPages(data)
 // const modifyGrid = (data) => onlyProjects(data)
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 **Filter by slug:**
 
 ```js
-import { filterBySlug } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+import { filterBySlug } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates"
 
-const modifyGrid = (data) => filterBySlug(data, ["/about"]);
+const modifyGrid = data => filterBySlug(data, [`/about`])
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 **Shuffle:**
 
 ```js
-import { shuffle } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates";
+import { shuffle } from "@lekoarts/gatsby-theme-jodie/src/utils/resolver-templates"
 
-const modifyGrid = (data) => shuffle(data);
+const modifyGrid = data => shuffle(data)
 
-export default modifyGrid;
+export default modifyGrid
 ```
 
 ### Shadowing

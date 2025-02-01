@@ -1,5 +1,5 @@
 declare namespace React {
-  interface MetaHTMLAttributes {
-    value?: string
-  }
+	interface MetaHTMLAttributes {
+		value?: string
+	}
 }

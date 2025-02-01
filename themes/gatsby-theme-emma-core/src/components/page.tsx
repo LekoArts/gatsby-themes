@@ -1,7 +1,7 @@
 import * as React from "react"
 
 export default function Page({ data }: { data: any }) {
-  return <pre>{JSON.stringify(data, null, 2)}</pre>
+	return <pre>{JSON.stringify(data, null, 2)}</pre>
 }
 
 export const Head = () => <title>Page</title>

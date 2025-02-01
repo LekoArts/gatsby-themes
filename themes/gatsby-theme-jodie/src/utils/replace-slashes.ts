@@ -5,5 +5,5 @@
  * @return {string} - Sanitized string
  */
 export function replaceSlashes(input: string): string {
-  return input.replace(/\/\/+/g, `/`)
+	return input.replace(/\/{2,}/g, `/`)
 }
