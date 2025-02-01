@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.1.4
+
+### Patch Changes
+
+- [`e4544f9`](https://github.com/LekoArts/gatsby-themes/commit/e4544f9912178f24f477859cb0f3c92084aea944) Thanks [@LekoArts](https://github.com/LekoArts)! - Bump internal dependency chroma-js to v3
+
 ## 6.1.3
 
 ### Patch Changes
