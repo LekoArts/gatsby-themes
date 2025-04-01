@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js 18.x
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "18.20.8"
       - name: Install Dependencies
         uses: ./.github/actions/yarn-install
       - name: Create Release Pull Request or Publish to npm
