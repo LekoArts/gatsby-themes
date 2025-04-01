@@ -1810,9 +1810,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/request@npm:^3.0.6":
-  version: 3.0.6
-  resolution: "@cypress/request@npm:3.0.6"
+"@cypress/request@npm:^3.0.8":
+  version: 3.0.8
+  resolution: "@cypress/request@npm:3.0.8"
   dependencies:
     aws-sign2: "npm:~0.7.0"
     aws4: "npm:^1.8.0"
@@ -1827,12 +1827,12 @@ __metadata:
     json-stringify-safe: "npm:~5.0.1"
     mime-types: "npm:~2.1.19"
     performance-now: "npm:^2.1.0"
-    qs: "npm:6.13.0"
+    qs: "npm:6.14.0"
     safe-buffer: "npm:^5.1.2"
     tough-cookie: "npm:^5.0.0"
     tunnel-agent: "npm:^0.6.0"
     uuid: "npm:^8.3.2"
-  checksum: 10c0/24671e655768ef09b099e93fdef5bab58f501a050ddb833d0bf13a44d146e5b3359d71658daecd183d2cb37a1e56cf8aed8a736e3730a23e2383263bd87b2305
+  checksum: 10c0/76cabf6ad64df224bab9b66869f71c4fb63315f9775ef1769da9da6c8d6d470899bee7f5b800379020efb6c7f37fd16a4a8e25c61319e14cd720bd3f606a38fd
   languageName: node
   linkType: hard
 
@@ -7818,10 +7818,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-info@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "ci-info@npm:4.0.0"
-  checksum: 10c0/ecc003e5b60580bd081d83dd61d398ddb8607537f916313e40af4667f9c92a1243bd8e8a591a5aa78e418afec245dbe8e90a0e26e39ca0825129a99b978dd3f9
+"ci-info@npm:^4.0.0, ci-info@npm:^4.1.0":
+  version: 4.2.0
+  resolution: "ci-info@npm:4.2.0"
+  checksum: 10c0/37a2f4b6a213a5cf835890eb0241f0d5b022f6cfefde58a69e9af8e3a0e71e06d6ad7754b0d4efb9cd2613e58a7a33996d71b56b0d04242722e86666f3f3d058
   languageName: node
   linkType: hard
 
@@ -7891,16 +7891,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cli-table3@npm:~0.6.1":
-  version: 0.6.2
-  resolution: "cli-table3@npm:0.6.2"
+"cli-table3@npm:~0.6.5":
+  version: 0.6.5
+  resolution: "cli-table3@npm:0.6.5"
   dependencies:
     "@colors/colors": "npm:1.5.0"
     string-width: "npm:^4.2.0"
   dependenciesMeta:
     "@colors/colors":
       optional: true
-  checksum: 10c0/aaa87929d86ba36e651e0280ab34cc28660e13da9dd2b6f8aa36e800c40e331c32bff53597cb9126e8a2e88e7a9025aff9c240350fe69876207d51ba452ef5e0
+  checksum: 10c0/d7cc9ed12212ae68241cc7a3133c52b844113b17856e11f4f81308acc3febcea7cc9fd298e70933e294dd642866b29fd5d113c2c098948701d0c35f09455de78
   languageName: node
   linkType: hard
 
@@ -8673,11 +8673,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^14.0.1":
-  version: 14.0.1
-  resolution: "cypress@npm:14.0.1"
+"cypress@npm:^14.2.1":
+  version: 14.2.1
+  resolution: "cypress@npm:14.2.1"
   dependencies:
-    "@cypress/request": "npm:^3.0.6"
+    "@cypress/request": "npm:^3.0.8"
     "@cypress/xvfb": "npm:^1.2.4"
     "@types/sinonjs__fake-timers": "npm:8.1.1"
     "@types/sizzle": "npm:^2.3.2"
@@ -8688,9 +8688,9 @@ __metadata:
     cachedir: "npm:^2.3.0"
     chalk: "npm:^4.1.0"
     check-more-types: "npm:^2.24.0"
-    ci-info: "npm:^4.0.0"
+    ci-info: "npm:^4.1.0"
     cli-cursor: "npm:^3.1.0"
-    cli-table3: "npm:~0.6.1"
+    cli-table3: "npm:~0.6.5"
     commander: "npm:^6.2.1"
     common-tags: "npm:^1.8.0"
     dayjs: "npm:^1.10.4"
@@ -8714,7 +8714,7 @@ __metadata:
     process: "npm:^0.11.10"
     proxy-from-env: "npm:1.0.0"
     request-progress: "npm:^3.0.0"
-    semver: "npm:^7.5.3"
+    semver: "npm:^7.7.1"
     supports-color: "npm:^8.1.1"
     tmp: "npm:~0.2.3"
     tree-kill: "npm:1.2.2"
@@ -8722,7 +8722,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10c0/6601a5b8260c496c96234b3a569a157d9ee08beafb3f1dd500c9cdbf9a1534a3eb13b18fe67d6417e8d06226d109139cb3208e7eebdc789000816075f9a42430
+  checksum: 10c0/d6fb64193098a9d4e55c42d81f427c42eaf1fc015179a4d17706f8c808fe672e1f400bdac90ea280dc8da7c3c80feaf58aa3b230e90877e04199e3c1394381be
   languageName: node
   linkType: hard
 
@@ -18792,12 +18792,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"qs@npm:6.13.0, qs@npm:^6.9.6":
+"qs@npm:6.13.0":
   version: 6.13.0
   resolution: "qs@npm:6.13.0"
   dependencies:
     side-channel: "npm:^1.0.6"
   checksum: 10c0/62372cdeec24dc83a9fb240b7533c0fdcf0c5f7e0b83343edd7310f0ab4c8205a5e7c56406531f2e47e1b4878a3821d652be4192c841de5b032ca83619d8f860
+  languageName: node
+  linkType: hard
+
+"qs@npm:6.14.0, qs@npm:^6.9.6":
+  version: 6.14.0
+  resolution: "qs@npm:6.14.0"
+  dependencies:
+    side-channel: "npm:^1.1.0"
+  checksum: 10c0/8ea5d91bf34f440598ee389d4a7d95820e3b837d3fd9f433871f7924801becaa0cd3b3b4628d49a7784d06a8aea9bc4554d2b6d8d584e2d221dc06238a42909c
   languageName: node
   linkType: hard
 
@@ -19988,12 +19997,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0":
-  version: 7.6.2
-  resolution: "semver@npm:7.6.2"
+"semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0, semver@npm:^7.7.1":
+  version: 7.7.1
+  resolution: "semver@npm:7.7.1"
   bin:
     semver: bin/semver.js
-  checksum: 10c0/97d3441e97ace8be4b1976433d1c32658f6afaff09f143e52c593bae7eef33de19e3e369c88bd985ce1042c6f441c80c6803078d1de2a9988080b66684cbb30c
+  checksum: 10c0/fd603a6fb9c399c6054015433051bdbe7b99a940a8fb44b85c2b524c4004b023d7928d47cb22154f8d054ea7ee8597f586605e05b52047f048278e4ac56ae958
   languageName: node
   linkType: hard
 
