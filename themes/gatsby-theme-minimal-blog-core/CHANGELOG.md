@@ -1,5 +1,11 @@
 # Change Log
 
+## 6.2.5
+
+### Patch Changes
+
+- [`22f7a9b`](https://github.com/LekoArts/gatsby-themes/commit/22f7a9bb07bb5fb9cd69b89f9f700d0469a12ba2) Thanks [@LekoArts](https://github.com/LekoArts)! - Update gatsby and gatsby-plugin-mdx dependencies
+
 ## 6.2.4
 
 ### Patch Changes
