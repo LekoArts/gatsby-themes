@@ -1,5 +1,11 @@
 # @lekoarts/themes-utils
 
+## 3.0.3
+
+### Patch Changes
+
+- [`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f) Thanks [@LekoArts](https://github.com/LekoArts)! - Update internal dependencies
+
 ## 3.0.2
 
 ### Patch Changes
