@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.3.23
+
+### Patch Changes
+
+- [`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f) Thanks [@LekoArts](https://github.com/LekoArts)! - Update internal dependencies
+
+- Updated dependencies [[`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f)]:
+  - @lekoarts/rehype-meta-as-attributes@3.0.3
+  - @lekoarts/themes-utils@3.0.3
+
 ## 0.3.22
 
 ### Patch Changes

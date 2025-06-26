@@ -1,5 +1,15 @@
 # Change Log
 
+## 6.2.6
+
+### Patch Changes
+
+- [`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f) Thanks [@LekoArts](https://github.com/LekoArts)! - Update internal dependencies
+
+- Updated dependencies [[`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f)]:
+  - @lekoarts/rehype-meta-as-attributes@3.0.3
+  - @lekoarts/themes-utils@3.0.3
+
 ## 6.2.5
 
 ### Patch Changes
@@ -101,7 +111,6 @@
 - [#1045](https://github.com/LekoArts/gatsby-themes/pull/1045) [`02872400`](https://github.com/LekoArts/gatsby-themes/commit/0287240022c308a7d1fcc8af348ee7d21bca0dd5) Thanks [@LekoArts](https://github.com/LekoArts)! - Update to [Gatsby 5](https://www.gatsbyjs.com/gatsby-5/). [Gatsby 5 Migration Guide](https://gatsbyjs.com/docs/reference/release-notes/migrating-from-v4-to-v5/).
 
   **Breaking Changes:**
-
   - Minimal Node.js version 18.0.0
   - Minimal required React version is 18
 
@@ -450,7 +459,6 @@ All Gatsby related packages were also upgraded to their latest new major version
 - [#597](https://github.com/LekoArts/gatsby-themes/pull/597) [`e1aec09`](https://github.com/LekoArts/gatsby-themes/commit/e1aec0984a39e834ae81001bf41bb2813a30bf33) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update packages
 
   Renovate Bot updates:
-
   - `@react-spring/parallax` ^9.1.2 -> ^9.2.3
   - `@react-spring/web` ^9.1.2 -> ^9.2.3
   - `gatsby-plugin-catch-links` ^3.6.0 -> ^3.7.0

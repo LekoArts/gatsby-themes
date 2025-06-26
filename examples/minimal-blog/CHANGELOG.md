@@ -1,5 +1,14 @@
 # Change Log
 
+## 1.3.18
+
+### Patch Changes
+
+- [`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f) Thanks [@LekoArts](https://github.com/LekoArts)! - Update internal dependencies
+
+- Updated dependencies [[`5b15df4`](https://github.com/LekoArts/gatsby-themes/commit/5b15df41d262bc2e7428878a70932e36fd70db2f)]:
+  - @lekoarts/gatsby-theme-minimal-blog@6.2.6
+
 ## 1.3.17
 
 ### Patch Changes
