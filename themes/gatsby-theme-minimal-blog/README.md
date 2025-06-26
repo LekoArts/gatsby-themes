@@ -28,6 +28,8 @@
 </a>
 </p>
 
+**Looking for an Astro alternative?** Check out [Astro Theme Minimal Blog](https://github.com/LekoArts/astro-theme-minimal-blog)!
+
 Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.
 
 [![Live Preview](https://img.lekoarts.de/gatsby/preview.svg)](https://minimal-blog.lekoarts.de) [![View Design on Figma](https://img.lekoarts.de/gatsby/view_design.svg)](https://www.figma.com/file/sq2VwMy8579ioDTXjUdlYr/gatsby-theme-minimal-blog?node-id=0%3A1)

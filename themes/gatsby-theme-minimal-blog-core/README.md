@@ -28,6 +28,8 @@
 </a>
 </p>
 
+**Looking for an Astro alternative?** Check out [Astro Theme Minimal Blog](https://github.com/LekoArts/astro-theme-minimal-blog)!
+
 Core Theme for [`@lekoarts/gatsby-theme-minimal-blog`](https://github.com/LekoArts/gatsby-themes/tree/main/themes/gatsby-theme-minimal-blog). This theme implements the `Post` and `Page` node interfaces and exports templates (+ queries) which you can shadow.
 
 Also be sure to check out other [Free & Open Source Gatsby Themes](https://themes.lekoarts.de) and my [Personal Website](https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Theme).
