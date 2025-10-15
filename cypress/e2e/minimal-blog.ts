@@ -68,7 +68,7 @@ describe(`gatsby-theme-minimal-blog`, () => {
     })
   })
   it(`should render the hero`, () => {
-    cy.findByText(/I'm passionate about open source & teaching/i)
+    cy.findByText(/I'm LekoArts, your theme creator./i)
   })
   it(`should render the latest posts`, () => {
     cy.findByText(/Latest Posts/i)

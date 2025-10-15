@@ -48,8 +48,9 @@ const Index = ({
           border: 0;
           margin: 0;
           padding: 0;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-            "Helvetica Neue", sans-serif;
+          font-family:
+            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+            sans-serif;
           color: #24242d;
           background: #f0f2fd;
           flex-grow: 1;
@@ -90,8 +91,9 @@ const Index = ({
         text-align: center;
         margin-top: 4rem;
         color: #525f74;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-          "Helvetica Neue", sans-serif;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+          sans-serif;
         font-weight: 400;
       `}
     >
