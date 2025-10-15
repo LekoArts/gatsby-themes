@@ -1,4 +1,7 @@
 name: Release
+permissions:
+  id-token: write
+  contents: read
 on:
   push:
     branches:
@@ -29,7 +32,6 @@ jobs:
           version: yarn version-packages:ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Wait for NPM package propagation
         if: steps.changesets.outputs.published == 'true'
         run: sleep 30s
